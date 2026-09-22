@@ -30,7 +30,7 @@ export function App() {
   const [mirageLayout, setMirageLayout] = useState(readMirageLayout);
   const [mirageLastKey, setMirageLastKey] = useState(readMirageLastKey);
   const [preparation, setPreparation] = useState(0);
-  const [display, setDisplay] = useState({ guide: true, hideRecordedInput: true, hideIcons: false });
+  const [display, setDisplay] = useState({ guide: true, hideRecordedInput: true, hideGameInput: false, hideIcons: false });
   const baseContent = skills.find(skill => skill.id === selected)!;
   const availableEntries = baseContent.entryOptions ?? [];
   const entryKey = availableEntries.find(option => option.key === entryChoices[selected])?.key

@@ -5,6 +5,13 @@ import { kusarikkuPattern, kusarikkuRecording } from './kusarikku-patterns';
 import { mirageArcherUnitPattern, mirageArcherUnitRecording, mirageLastRmbWindowMs, mirageRmbRecording } from './mirage-archer-unit-patterns';
 import { cuesForRecording, vesperPatterns, vesperRecordings, vesperSpaceEntries } from './vesper-patterns';
 
+// The six 1280×720 recordings share these dodge/support HUD positions.
+// Include the key captions and activation rings, without modifying the media.
+const gameInputMasks = [
+  { x: 976 / 1280 * 100, y: 588 / 720 * 100, width: 132 / 1280 * 100, height: 128 / 720 * 100 },
+  { x: 1134 / 1280 * 100, y: 588 / 720 * 100, width: 108 / 1280 * 100, height: 128 / 720 * 100 },
+] as const;
+
 function vesperContent(key: keyof typeof vesperPatterns, number: string): PracticeContent {
   const recording = vesperRecordings[key];
   const content: PracticeContent = {
@@ -13,6 +20,7 @@ function vesperContent(key: keyof typeof vesperPatterns, number: string): Practi
     video: `media/vesper-execute-${number}.mp4`, poster: `media/vesper-execute-${number}.jpg`,
     duration: (recording.endSourceFrameExclusive - recording.firstSourceFrame) / 60,
     cues: cuesForRecording(vesperPatterns[key], (recording.originSourceFrame - recording.firstSourceFrame) / 60),
+    gameInputMasks,
     recordedInputMasks: [{ x: 0, y: 560 / 720 * 100, width: 315 / 1280 * 100, height: 160 / 720 * 100 }],
   };
   const offset = (recording.originSourceFrame - recording.firstSourceFrame) / 60;
@@ -35,6 +43,7 @@ export const girtablulluExecute01: PracticeContent = {
   video: 'media/girtablullu-stagnant-execute-01.mp4', poster: 'media/girtablullu-stagnant-execute-01.jpg',
   duration: (girtablulluRecording.endSourceFrameExclusive - girtablulluRecording.firstSourceFrame) / 60,
   cues: girCues,
+  gameInputMasks,
   entryOptions: [{ key: 'MouseRight', start: girCues[0].start, end: girCues[0].end, reference: girCues[0].reference }],
   recordedInputMasks: [{ x: 0, y: 560 / 720 * 100, width: 315 / 1280 * 100, height: 160 / 720 * 100 }],
 };
@@ -46,6 +55,7 @@ export const kusarikkuExecute01: PracticeContent = {
   video: 'media/kusarikku-execute-01.mp4', poster: 'media/kusarikku-execute-01.jpg',
   duration: kusaClipTime(kusarikkuRecording.endSourceFrameExclusive),
   cues: kusaCues,
+  gameInputMasks,
   entryOptions: [{ key: 'MouseRight', start: kusaCues[0].start, end: kusaCues[0].end, reference: kusaCues[0].reference }],
   preparation: {
     end: kusaClipTime(623),
@@ -70,6 +80,7 @@ export const mirageArcherUnitAttack09: PracticeContent = {
   video: 'media/mirage-archer-unit-attack-09.mp4', poster: 'media/mirage-archer-unit-attack-09.jpg',
   duration: mirageClipTime(mirageArcherUnitRecording.endSourceFrameExclusive),
   cues: mirageCues,
+  gameInputMasks,
   entryOptions: [{ key: 'MouseRight', start: mirageCues[0].start, end: mirageCues[0].end, reference: mirageCues[0].reference }],
   recordedInputMasks: [{ x: 0, y: 560 / 720 * 100, width: 315 / 1280 * 100, height: 160 / 720 * 100 }],
 };

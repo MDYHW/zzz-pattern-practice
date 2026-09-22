@@ -25,6 +25,8 @@ export interface PracticeContent {
   };
   /** Recorded input overlay rectangles as percentages of the video frame. */
   recordedInputMasks?: readonly { x: number; y: number; width: number; height: number }[];
+  /** In-game dodge/support HUD rectangles as percentages of the video frame. */
+  gameInputMasks?: readonly { x: number; y: number; width: number; height: number }[];
 }
 
 export type Phase = 'loading' | 'ready' | 'starting' | 'running' | 'paused' | 'resuming' | 'finished' | 'interrupted' | 'error';

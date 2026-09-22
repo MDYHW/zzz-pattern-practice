@@ -28,13 +28,13 @@ function ControlIcon({ kind }: { kind: 'play' | 'pause' | 'restart' }) {
 export function Practice({ content, choices = [content], onSelect, onEntryChange, onPrepareEntry, display, onDisplayChange, laneLayout = 'selected', onLaneLayoutChange, onLastKeyChange }: {
   content: PracticeContent; choices?: readonly PracticeContent[]; onSelect?: (id: string) => void;
   onEntryChange: (key: PracticeKey) => void; onPrepareEntry: () => void;
-  display: { guide: boolean; hideRecordedInput: boolean; hideIcons: boolean };
-  onDisplayChange: (value: { guide: boolean; hideRecordedInput: boolean; hideIcons: boolean }) => void;
+  display: { guide: boolean; hideRecordedInput: boolean; hideGameInput: boolean; hideIcons: boolean };
+  onDisplayChange: (value: { guide: boolean; hideRecordedInput: boolean; hideGameInput: boolean; hideIcons: boolean }) => void;
   laneLayout?: 'selected' | 'overlap'; onLaneLayoutChange?: (layout: 'selected' | 'overlap') => void;
   onLastKeyChange?: (key: PracticeKey) => void;
 }) {
   const session = usePracticeSession(content);
-  const { guide, hideRecordedInput } = display;
+  const { guide, hideRecordedInput, hideGameInput } = display;
   const active = session.phase === 'running' || session.phase === 'starting' || session.phase === 'resuming';
   const paused = session.phase === 'paused';
   const finished = session.phase === 'finished';
@@ -85,6 +85,10 @@ export function Practice({ content, choices = [content], onSelect, onEntryChange
               onDisplayChange({ ...display, hideRecordedInput: !hideRecordedInput });
               if (active) session.surfaceRef.current?.focus({ preventScroll: true });
             }}>녹화 입력 가리기 <span>{hideRecordedInput ? '켜짐' : '꺼짐'}</span></button>}
+            {!!content.gameInputMasks?.length && <button className="quiet" aria-pressed={hideGameInput} onClick={() => {
+              onDisplayChange({ ...display, hideGameInput: !hideGameInput });
+              if (active) session.surfaceRef.current?.focus({ preventScroll: true });
+            }}>인게임 입력 가리기 <span>{hideGameInput ? '켜짐' : '꺼짐'}</span></button>}
           </div>
         </div>
       </header>
@@ -94,6 +98,8 @@ export function Practice({ content, choices = [content], onSelect, onEntryChange
           <video ref={session.videoRef} src={`${import.meta.env.BASE_URL}${content.video}`} poster={`${import.meta.env.BASE_URL}${content.poster}`}
             preload="auto" playsInline disablePictureInPicture aria-label="성공 대응 참고 영상" />
           {hideRecordedInput && content.recordedInputMasks?.map((mask, index) => <div key={index} className="recorded-input-mask" aria-hidden="true"
+            style={{ left: `${mask.x}%`, top: `${mask.y}%`, width: `${mask.width}%`, height: `${mask.height}%` }} />)}
+          {hideGameInput && content.gameInputMasks?.map((mask, index) => <div key={index} className="game-input-mask" aria-hidden="true"
             style={{ left: `${mask.x}%`, top: `${mask.y}%`, width: `${mask.width}%`, height: `${mask.height}%` }} />)}
           <span className="video-label">{onLastKeyChange
             ? `참고 영상: 우클릭 진입 · 마지막 ${content.recordedFinalKey === 'MouseRight' ? '우클릭 → QTE' : 'Space'}`
@@ -145,6 +151,7 @@ export function Practice({ content, choices = [content], onSelect, onEntryChange
         <div id="input-help">
           <p><ActionIcon action="dodge" /><kbd>우클릭</kbd> <span className="separator">/</span> <ActionIcon action="assist" /><kbd>Space</kbd></p>
           <ul>
+            <li>인게임 입력 가리기는 영상 오른쪽 아래의 Space·우클릭 아이콘과 키 표시를 가립니다. 녹화 입력 가리기와 따로 켜고 끌 수 있습니다.</li>
             {onLaneLayoutChange && <li>A는 마지막 대응을 미리 고르고, B는 Space 단색·우클릭 내부 사선 무늬를 함께 표시합니다. 진입은 측정된 우클릭만 제공합니다. 일시정지·종료 상태에서도 상단에서 A/B를 바로 바꿀 수 있으며, 전환하면 새 연습을 처음부터 준비합니다.</li>}
             <li>{responseSummary ?? (hasEntryChoice ? <>진입은 시작 전에 선택한 {entryName}, 이후 대응은 Space를 사용합니다. 선택은 패턴별로 기억합니다.</> : <>진입은 {entryName}, 이후 대응은 Space를 사용합니다.</>)}</li>
             <li>타일의 구간 띠가 고정 입력선과 겹치는 동안 해당 키를 한 번 누르세요. 아이콘 중앙을 맞출 필요는 없습니다.</li>

@@ -28,7 +28,7 @@ select { background: #202222; border: 1px solid var(--line); color: #f3f0e6; fon
 .video-stage { position: relative; background: #080c14; width: var(--stage-width); margin: 0 auto; aspect-ratio: 16/9; overflow: hidden; }
 .practice.expanded { --stage-width: min(100%, calc(100dvh * 16 / 9)); }
 video { display: block; width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
-.recorded-input-mask { position: absolute; background: #080c14; pointer-events: none; }
+.recorded-input-mask, .game-input-mask { position: absolute; background: #080c14; pointer-events: none; }
 .video-label { position: absolute; left: 10px; top: 10px; font-size: 10px; color: #fff; background: #090b0acc; padding: 4px 6px; pointer-events: none; }
 .video-cover { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 20px; background: #090b0ade; }
 .cover-title { margin: 0; font-size: clamp(19px, 3vw, 30px); font-weight: 900; text-align: center; }
