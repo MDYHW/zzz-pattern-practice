@@ -73,7 +73,7 @@ export function Practice({ content, choices = [content], onSelect, onEntryChange
             <label>제어스킬<select aria-label="제어스킬" value={content.id} disabled={active} onChange={event => onSelect?.(event.target.value)}>{bossSkills.map(choice => <option key={choice.id} value={choice.id}>{choice.title}</option>)}</select></label>
           </div>
           <div className="display-options">
-            {onLaneLayoutChange && <label className="lane-choice">입력 레인<select aria-label="입력 레인" value={laneLayout} disabled={active}
+            {onLaneLayoutChange && <label className="lane-choice">tile type<select aria-label="tile type" value={laneLayout} disabled={active}
               onChange={event => { if (!active) onLaneLayoutChange(event.target.value as 'selected' | 'overlap'); }}>
               <option value="selected">A · 대응 선택</option><option value="overlap">B · 겹침 레인</option>
             </select></label>}

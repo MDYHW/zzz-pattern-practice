@@ -70,7 +70,7 @@ test('Mirage B shows key-specific windows and recovers an early Space with final
   test.setTimeout(50_000);
   await page.goto('./');
   await page.getByRole('combobox', { name: '보스' }).selectOption(content.bossId!);
-  const layout = page.getByRole('combobox', { name: '입력 레인', exact: true });
+  const layout = page.getByRole('combobox', { name: 'tile type', exact: true });
   await layout.selectOption('overlap');
   await expect(surface(page)).toHaveAttribute('data-phase', 'ready');
   await expect(page.locator('.cue')).toHaveCount(5);
