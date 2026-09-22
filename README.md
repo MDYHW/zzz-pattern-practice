@@ -20,6 +20,8 @@
 
 다섯 패턴을 [zzz-pattern-practice.github.io](https://zzz-pattern-practice.github.io/)에서 연습할 수 있습니다. [배포 저장소](https://github.com/zzz-pattern-practice/zzz-pattern-practice.github.io)에서 소스 커밋을 지정해 수동 배포합니다. 환영의 화살 유닛 진입 SPACE 추가 측정은 현재 공개 조건이 아닙니다.
 
+환영의 화살 유닛 진입·3타는 사용자 체감에 따라 웹 판정의 양 끝을25ms씩 임시 확대했습니다. 추가 구간의 실제 게임 검증은 아직 남아 있으며 [조정 근거와 검증 계획](docs/experiments/arrow-unit-control-skill.md#공개-후-임시-서비스-판정-조정--2026-09-22)을 따릅니다.
+
 데스크톱 Chromium과 키보드·마우스를 기준으로 확인했습니다. 모바일 터치 연습은 지원하지 않습니다. 표시하는 구간은 관측 조건에 맞춘 보수적인 연습 구간이며, 게임의 전체 허용 범위나 학습 효과를 수치로 입증한 것은 아닙니다.
 
 ## 실행

@@ -19,6 +19,10 @@ const profilesDirectory = resolve('tools/experiment/profiles');
 const bundledProfiles: BundledProfile[] = readdirSync(profilesDirectory).filter(name => name.endsWith('.json')).sort()
   .map(name => JSON.parse(readFileSync(resolve(profilesDirectory, name), 'utf8').replace(/^\uFEFF/, '')));
 
+// The temporary web-only allowance must not rewrite measured windows or bundled experiment profiles.
+const serviceAllowanceMs = (contentId: string, index: number) =>
+  contentId === 'mirage-archer-unit-attack-09' && (index === 0 || index === 3) ? 25 : 0;
+
 function assertReviewedContent(content: PracticeContent, recordings: typeof evidence.recordings, profiles: BundledProfile[]) {
   const matches = recordings.filter(item => item.contentId === content.id);
   expect(matches, `${content.id}: one representative recording`).toHaveLength(1);
@@ -32,12 +36,13 @@ function assertReviewedContent(content: PracticeContent, recordings: typeof evid
   expect(profile.Actions).toHaveLength(content.cues.length);
   content.cues.forEach((cue, index) => {
     const [start, end] = recording.windowsMs[index];
+    const allowance = serviceAllowanceMs(content.id, index);
     const action = profile.Actions[index];
     expect([action.Timing.EarlyMs, action.Timing.LateMs]).toEqual([start, end]);
     expect(cue.key).toBe(action.Key === 'RMB' ? 'MouseRight' : action.Key);
     expect(cue.alternateKey).toBeUndefined();
-    expect(cue.start - recording.patternTimeZeroAtClipTime).toBeCloseTo(start / 1000, 10);
-    expect(cue.end - cue.start).toBeCloseTo((end - start) / 1000, 10);
+    expect(cue.start - recording.patternTimeZeroAtClipTime).toBeCloseTo((start - allowance) / 1000, 10);
+    expect(cue.end - cue.start).toBeCloseTo((end - start + 2 * allowance) / 1000, 10);
     const recorded = (recording.sourceOverlayDownFrames[index] - recording.firstSourceFrame) / recording.fps;
     expect(Math.abs(cue.reference - recorded)).toBeLessThanOrEqual(2 / recording.fps + 1e-10);
     expect(recorded).toBeGreaterThanOrEqual(cue.start);
@@ -100,8 +105,9 @@ test('Mirage final choices preserve the five attacks and use the reviewed final-
     expect(resolved.recordedFinalKey).toBe('MouseRight');
     expect(() => validateCues(resolved.cues, resolved.duration)).not.toThrow();
     resolved.cues.forEach((cue, i) => {
-      expect(cue.start - 2).toBeCloseTo(recording.windowsMs[i][0] / 1000, 10);
-      expect(cue.end - 2).toBeCloseTo(recording.windowsMs[i][1] / 1000, 10);
+      const allowance = serviceAllowanceMs(resolved.id, i);
+      expect(cue.start - 2).toBeCloseTo((recording.windowsMs[i][0] - allowance) / 1000, 10);
+      expect(cue.end - 2).toBeCloseTo((recording.windowsMs[i][1] + allowance) / 1000, 10);
       expect(cue.reference).toBeCloseTo((recording.sourceOverlayDownFrames[i] - recording.firstSourceFrame) / 60);
       if (i < 4) expect({ key: cue.key, start: cue.start, end: cue.end })
         .toEqual({ key: space.cues[i].key, start: space.cues[i].start, end: space.cues[i].end });
@@ -118,6 +124,25 @@ test('Mirage final choices preserve the five attacks and use the reviewed final-
   const recovered = press(both.cues, early, 'MouseRight', 13.95);
   expect(recovered.results[4].status).toBe('success');
   expect(recovered.extras).toBe(1);
+});
+
+test('Mirage accepts the temporary 25ms edge extensions in every route but rejects outside them', () => {
+  for (const layout of ['selected', 'overlap'] as const) {
+    for (const key of ['Space', 'MouseRight'] as const) {
+      const content = withEntryKey(withMirageLastResponse(layout, key), 'MouseRight');
+      // Notice-relative 4125–4375 and 9375–9725ms, with the unchanged 2s clip origin.
+      for (const [index, start, end] of [[0, 6.125, 6.375], [3, 11.375, 11.725]]) {
+        const cue = content.cues[index];
+        expect([cue.start, cue.end]).toEqual([start, end]);
+        for (const time of [start, start + .0125, end - .0125, end])
+          expect(press(content.cues, createAttempt(content.cues), cue.key, time).results[index].status).toBe('success');
+        const early = press(content.cues, createAttempt(content.cues), cue.key, start - .001);
+        expect(early.results[index].status).toBe('pending');
+        expect(early.extras).toBe(1);
+        expect(press(content.cues, createAttempt(content.cues), cue.key, end + .001).results[index].status).toBe('miss');
+      }
+    }
+  }
 });
 
 test('missing or duplicate published connections fail without requiring media for research candidates', () => {
@@ -151,7 +176,7 @@ test('historical EX01 upper endpoints fail while different experiment and video 
 
 for (const content of skills) {
   const recording = evidence.recordings.find(item => item.contentId === content.id)!;
-  test(`${content.id} preserves experimentally chosen widths and aligns with recorded inputs`, () => {
+  test(`${content.id} preserves measured evidence with only explicit service allowances and aligns with recorded inputs`, () => {
     assertReviewedContent(content, evidence.recordings, bundledProfiles);
   });
   test(`${content.id} ships the reviewed trimmed asset`, () => {
