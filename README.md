@@ -18,7 +18,7 @@
 
 ## 현재 상태
 
-다섯 패턴의 로컬 구현·수용을 마치고 첫 공개를 준비하고 있습니다. 공개 예정 주소는 [zzz-pattern-practice.github.io](https://zzz-pattern-practice.github.io/)이며, 배포 완료 전에는 접속할 수 없습니다. [배포 저장소](https://github.com/zzz-pattern-practice/zzz-pattern-practice.github.io)에서 소스 커밋을 지정해 수동 배포합니다. 환영의 화살 유닛 진입 SPACE 추가 측정은 현재 공개 조건이 아닙니다.
+다섯 패턴을 [zzz-pattern-practice.github.io](https://zzz-pattern-practice.github.io/)에서 연습할 수 있습니다. [배포 저장소](https://github.com/zzz-pattern-practice/zzz-pattern-practice.github.io)에서 소스 커밋을 지정해 수동 배포합니다. 환영의 화살 유닛 진입 SPACE 추가 측정은 현재 공개 조건이 아닙니다.
 
 데스크톱 Chromium과 키보드·마우스를 기준으로 확인했습니다. 모바일 터치 연습은 지원하지 않습니다. 표시하는 구간은 관측 조건에 맞춘 보수적인 연습 구간이며, 게임의 전체 허용 범위나 학습 효과를 수치로 입증한 것은 아닙니다.
 
