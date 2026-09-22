@@ -75,7 +75,16 @@ test('Mirage B shows key-specific windows and recovers an early Space with final
   await expect(surface(page)).toHaveAttribute('data-phase', 'ready');
   await expect(page.locator('.cue')).toHaveCount(5);
   await expect(page.locator('.cue-window-base')).toHaveCount(4);
-  await expect(page.locator('[data-window-key="MouseRight"]')).toHaveCount(1);
+  await expect(page.locator('[data-window-key="MouseRight"]')).toHaveCount(2);
+  const entryTile = page.locator('[data-cue-id="entry"]');
+  await expect(entryTile.locator('.cue-window-base')).toHaveCount(0);
+  const entryShape = await entryTile.locator('.cue-window-hatched').evaluate(element => ({
+    left: (element as HTMLElement).style.left, width: (element as HTMLElement).style.width,
+    background: getComputedStyle(element).backgroundImage,
+  }));
+  expect(entryShape.left).toBe('0%');
+  expect(entryShape.width).toBe('100%');
+  expect(entryShape.background).toContain('repeating-linear-gradient');
   const lastTile = page.locator('.cue').last();
   await expect(lastTile.locator('.cue-symbol')).toHaveCount(1);
   const shape = await lastTile.locator('.cue-window-hatched').evaluate(element => ({ left: (element as HTMLElement).style.left, width: (element as HTMLElement).style.width }));
@@ -87,6 +96,7 @@ test('Mirage B shows key-specific windows and recovers an early Space with final
   await page.getByRole('button', { name: '레인 아이콘 표시' }).click();
   await expect(page.locator('.cue-symbol')).toHaveCount(0);
   await expect(page.locator('.cue > span')).toHaveCount(0);
+  await expect(entryTile.locator('.cue-window-hatched')).toHaveCount(1);
   await expect(page.locator('.cue-window-base')).toHaveCount(4);
   await page.getByRole('button', { name: '레인 아이콘 표시' }).click();
   await expect(page.locator('.cue-symbol')).toHaveCount(5);

@@ -34,7 +34,7 @@ export function RhythmGuide({ cues, attempt, time, preparation, hideIcons = fals
         const windows = cueWindows(cue);
         const bounds = cueEnvelope(cue);
         const dual = !!cue.alternateWindow;
-        const baseTile = layout === 'overlap' && (cue.key === 'Space' || dual);
+        const baseTile = layout === 'overlap';
         const current = windows.some(window => time >= window.start && time <= window.end) && result.status === 'pending';
         const age = result.status === 'success' && result.inputTime !== undefined
           ? Math.max(0, time - result.inputTime) : current ? time - bounds.start : Infinity;
