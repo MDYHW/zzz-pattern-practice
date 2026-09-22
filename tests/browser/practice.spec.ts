@@ -336,7 +336,7 @@ test('Escape and video controls pause, prepare resume, and restart without losin
 test('burned-in video pixels and moving tile edges remain within 50ms of the fixed line', async ({ page }, info) => {
   const mediaEvents: unknown[] = [];
   await page.exposeFunction('recordMediaEvent', (event: unknown) => mediaEvents.push(event));
-  await page.route('**/media/vesper-execute-02-audio033.mp4', route => route.fulfill({
+  await page.route('**/media/vesper-execute-02-lufs26.mp4', route => route.fulfill({
     path: fileURLToPath(new URL('../fixtures/video-clock.mp4', import.meta.url)), contentType: 'video/mp4',
   }));
   await page.setViewportSize({ width: 1280, height: 1080 });

@@ -16,7 +16,7 @@ function vesperContent(key: keyof typeof vesperPatterns, number: string): Practi
   const content: PracticeContent = {
     bossId: 'vesper', bossLabel: '베스퍼',
     id: `vesper-execute-${number}`, title: `Execute_${number}`,
-    video: `media/vesper-execute-${number}-audio033.mp4`, poster: `media/vesper-execute-${number}.jpg`,
+    video: `media/vesper-execute-${number}-lufs26.mp4`, poster: `media/vesper-execute-${number}.jpg`,
     duration: (recording.endSourceFrameExclusive - recording.firstSourceFrame) / 60,
     cues: cuesForRecording(vesperPatterns[key], (recording.originSourceFrame - recording.firstSourceFrame) / 60),
     gameInputMasks,
@@ -39,7 +39,7 @@ const girOffset = (girtablulluRecording.originSourceFrame - girtablulluRecording
 const girCues = cuesForRecording(girtablulluPattern, girOffset);
 export const girtablulluExecute01: PracticeContent = {
   id: 'girtablullu-stagnant-execute-01', bossId: 'gir-reborn', bossLabel: '기르타블리르·퇴행 변종', title: 'Execute_01',
-  video: 'media/girtablullu-stagnant-execute-01-audio033.mp4', poster: 'media/girtablullu-stagnant-execute-01.jpg',
+  video: 'media/girtablullu-stagnant-execute-01-lufs26.mp4', poster: 'media/girtablullu-stagnant-execute-01.jpg',
   duration: (girtablulluRecording.endSourceFrameExclusive - girtablulluRecording.firstSourceFrame) / 60,
   cues: girCues,
   gameInputMasks,
@@ -51,7 +51,7 @@ const kusaClipTime = (frame: number) => (frame - kusarikkuRecording.firstSourceF
 const kusaCues = cuesForRecording(kusarikkuPattern, kusaClipTime(kusarikkuRecording.originSourceFrame));
 export const kusarikkuExecute01: PracticeContent = {
   id: 'kusarikku-execute-01', bossId: 'larval', bossLabel: '쿠사리쿠', title: 'Execute_01',
-  video: 'media/kusarikku-execute-01-audio033.mp4', poster: 'media/kusarikku-execute-01.jpg',
+  video: 'media/kusarikku-execute-01-lufs26.mp4', poster: 'media/kusarikku-execute-01.jpg',
   duration: kusaClipTime(kusarikkuRecording.endSourceFrameExclusive),
   cues: kusaCues,
   gameInputMasks,
@@ -76,7 +76,7 @@ const mirageCues = cuesForRecording(mirageArcherUnitPattern,
 export const mirageArcherUnitAttack09: PracticeContent = {
   id: 'mirage-archer-unit-attack-09', bossId: 'mirage-archer-unit', bossLabel: '환영의 화살 유닛', title: 'Attack_09',
   recordedFinalKey: 'Space',
-  video: 'media/mirage-archer-unit-attack-09-audio033.mp4', poster: 'media/mirage-archer-unit-attack-09.jpg',
+  video: 'media/mirage-archer-unit-attack-09-lufs26.mp4', poster: 'media/mirage-archer-unit-attack-09.jpg',
   duration: mirageClipTime(mirageArcherUnitRecording.endSourceFrameExclusive),
   cues: mirageCues,
   gameInputMasks,
@@ -100,7 +100,7 @@ export function withMirageLastResponse(layout: 'selected' | 'overlap', key: Prac
       ...(layout === 'overlap' ? { alternateWindow: { key: 'Space' as const, start: cue.start, end: cue.end, reference: cue.reference } } : {}) };
   });
   const resolved: PracticeContent = { ...base, cues, recordedFinalKey: 'MouseRight',
-    video: 'media/mirage-archer-unit-attack-09-rmb-audio033.mp4', poster: 'media/mirage-archer-unit-attack-09-rmb.jpg',
+    video: 'media/mirage-archer-unit-attack-09-rmb-lufs26.mp4', poster: 'media/mirage-archer-unit-attack-09-rmb.jpg',
     duration: clipTime(recording.endSourceFrameExclusive) };
   validateCues(resolved.cues, resolved.duration);
   return resolved;
