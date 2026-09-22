@@ -151,7 +151,7 @@ export function Practice({ content, choices = [content], onSelect, onEntryChange
         <div id="input-help">
           <p><ActionIcon action="dodge" /><kbd>우클릭</kbd> <span className="separator">/</span> <ActionIcon action="assist" /><kbd>Space</kbd></p>
           <ul>
-            <li>인게임 입력 가리기는 영상 오른쪽 아래의 Space·우클릭 아이콘과 키 표시를 가립니다. 녹화 입력 가리기와 따로 켜고 끌 수 있습니다.</li>
+            <li>인게임 입력 가리기는 영상 오른쪽 아래 입력 아이콘 줄 전체를 하나의 직사각형으로 가립니다. 녹화 입력 가리기와 따로 켜고 끌 수 있습니다.</li>
             {onLaneLayoutChange && <li>A는 마지막 대응을 미리 고르고, B는 Space 단색·우클릭 내부 사선 무늬를 함께 표시합니다. 진입은 측정된 우클릭만 제공합니다. 일시정지·종료 상태에서도 상단에서 A/B를 바로 바꿀 수 있으며, 전환하면 새 연습을 처음부터 준비합니다.</li>}
             <li>{responseSummary ?? (hasEntryChoice ? <>진입은 시작 전에 선택한 {entryName}, 이후 대응은 Space를 사용합니다. 선택은 패턴별로 기억합니다.</> : <>진입은 {entryName}, 이후 대응은 Space를 사용합니다.</>)}</li>
             <li>타일의 구간 띠가 고정 입력선과 겹치는 동안 해당 키를 한 번 누르세요. 아이콘 중앙을 맞출 필요는 없습니다.</li>

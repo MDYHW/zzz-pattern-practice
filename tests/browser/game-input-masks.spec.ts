@@ -12,10 +12,10 @@ test('in-game input masks stay independent, cover all recordings, and preserve p
   await expect(gameToggle).toHaveAttribute('aria-pressed', 'false');
   await expect(page.locator('.game-input-mask')).toHaveCount(0);
   await gameToggle.click();
-  await expect(page.locator('.game-input-mask')).toHaveCount(2);
+  await expect(page.locator('.game-input-mask')).toHaveCount(1);
   await recordedToggle.click();
   await expect(page.locator('.recorded-input-mask')).toHaveCount(0);
-  await expect(page.locator('.game-input-mask')).toHaveCount(2);
+  await expect(page.locator('.game-input-mask')).toHaveCount(1);
   await recordedToggle.click();
 
   for (const content of skills) {
@@ -23,12 +23,12 @@ test('in-game input masks stay independent, cover all recordings, and preserve p
     await page.getByRole('combobox', { name: '제어스킬', exact: true }).selectOption(content.id);
     await expect(surface).toHaveAttribute('data-phase', 'ready');
     await expect(gameToggle).toHaveAttribute('aria-pressed', 'true');
-    await expect(page.locator('.game-input-mask')).toHaveCount(2);
+    await expect(page.locator('.game-input-mask')).toHaveCount(1);
     await page.screenshot({ path: info.outputPath(`masked-${content.id}.png`), fullPage: true });
   }
   await page.getByRole('combobox', { name: '마지막 대응', exact: true }).selectOption('MouseRight');
   await expect(surface).toHaveAttribute('data-phase', 'ready');
-  await expect(page.locator('.game-input-mask')).toHaveCount(2);
+  await expect(page.locator('.game-input-mask')).toHaveCount(1);
   await page.getByRole('combobox', { name: 'tile type', exact: true }).selectOption('overlap');
   await expect(surface).toHaveAttribute('data-phase', 'ready');
   await page.screenshot({ path: info.outputPath('masked-mirage-rmb.png'), fullPage: true });
@@ -54,12 +54,12 @@ test('in-game input masks stay independent, cover all recordings, and preserve p
   await expect(page.locator('.game-input-mask')).toHaveCount(0);
   expect(await page.locator('video').evaluate((v: HTMLVideoElement) => v.currentTime)).toBeGreaterThanOrEqual(before);
   await gameToggle.click();
-  await expect(page.locator('.game-input-mask')).toHaveCount(2);
+  await expect(page.locator('.game-input-mask')).toHaveCount(1);
   await expect(surface).not.toHaveAttribute('data-last-input-time');
   await page.keyboard.press('Escape');
   await expect(surface).toHaveAttribute('data-phase', 'paused');
   await page.getByRole('button', { name: '처음부터', exact: true }).click();
   await expect(surface).toHaveAttribute('data-phase', 'running');
   await expect(gameToggle).toHaveAttribute('aria-pressed', 'true');
-  await expect(page.locator('.game-input-mask')).toHaveCount(2);
+  await expect(page.locator('.game-input-mask')).toHaveCount(1);
 });

@@ -5,11 +5,10 @@ import { kusarikkuPattern, kusarikkuRecording } from './kusarikku-patterns';
 import { mirageArcherUnitPattern, mirageArcherUnitRecording, mirageLastRmbWindowMs, mirageRmbRecording } from './mirage-archer-unit-patterns';
 import { cuesForRecording, vesperPatterns, vesperRecordings, vesperSpaceEntries } from './vesper-patterns';
 
-// The six 1280×720 recordings share these dodge/support HUD positions.
-// Include the key captions and activation rings, without modifying the media.
+// Cover the full lower input-icon row in all six 1280×720 recordings.
+// Start above the small Q key circle (below the large skill icon) and reach the frame edges.
 const gameInputMasks = [
-  { x: 976 / 1280 * 100, y: 588 / 720 * 100, width: 132 / 1280 * 100, height: 128 / 720 * 100 },
-  { x: 1134 / 1280 * 100, y: 588 / 720 * 100, width: 108 / 1280 * 100, height: 128 / 720 * 100 },
+  { x: 928 / 1280 * 100, y: 580 / 720 * 100, width: 352 / 1280 * 100, height: 140 / 720 * 100 },
 ] as const;
 
 function vesperContent(key: keyof typeof vesperPatterns, number: string): PracticeContent {
