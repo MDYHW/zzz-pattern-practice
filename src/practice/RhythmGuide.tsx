@@ -41,7 +41,7 @@ export function RhythmGuide({ cues, attempt, time, preparation, hideIcons = fals
         const lift = age < .22 ? Math.sin(age / .22 * Math.PI) * (result.status === 'success' ? 3 : 2) : 0;
         return <div key={cue.id} data-cue-id={cue.id} className={`cue cue-${result.status}${current ? ' cue-current' : ''}${baseTile ? ' cue-base-tile' : ''}${hideIcons ? ' cue-hide-icon' : ''}`}
           style={{ left: `${20 + (bounds.start - time) / GUIDE_SECONDS * 100}%`, width: `${(bounds.end - bounds.start) / GUIDE_SECONDS * 100}%` }}>
-          <span>{dual || cue.alternateKey ? 'Space 또는 우클릭' : cue.key === 'MouseRight' ? '우클릭' : 'Space'}</span>
+          {!hideIcons && <span>{dual || cue.alternateKey ? 'Space 또는 우클릭' : cue.key === 'MouseRight' ? '우클릭' : 'Space'}</span>}
           {baseTile && [...windows].sort((a, b) => Number(a.key === 'MouseRight') - Number(b.key === 'MouseRight')).map(window => <div key={window.key} data-window-key={window.key}
             className={`cue-window ${window.key === 'Space' ? 'cue-window-base' : 'cue-window-hatched'}`}
             style={{ left: `${(window.start - bounds.start) / (bounds.end - bounds.start || 1) * 100}%`, width: `${(window.end - window.start) / (bounds.end - bounds.start || 1) * 100}%` }}

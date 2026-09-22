@@ -86,9 +86,11 @@ test('Mirage B shows key-specific windows and recovers an early Space with final
   await expect(page.getByRole('combobox', { name: '마지막 대응' })).toHaveCount(0);
   await page.getByRole('button', { name: '레인 아이콘 표시' }).click();
   await expect(page.locator('.cue-symbol')).toHaveCount(0);
+  await expect(page.locator('.cue > span')).toHaveCount(0);
   await expect(page.locator('.cue-window-base')).toHaveCount(4);
   await page.getByRole('button', { name: '레인 아이콘 표시' }).click();
   await expect(page.locator('.cue-symbol')).toHaveCount(5);
+  await expect(page.locator('.cue > span')).toHaveCount(5);
   await page.setViewportSize({ width: 390, height: 844 });
   expect(await page.locator('.practice-scroll').evaluate(element => element.scrollWidth <= element.clientWidth)).toBe(true);
   await page.screenshot({ path: info.outputPath('mirage-b-narrow.png'), fullPage: true });
