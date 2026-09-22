@@ -1,0 +1,33 @@
+{
+  "purpose": "Read-only judgment resume questions, not proof of implementation or harness effectiveness. Select relevant cases; use canonical evidence. No game inputs or edits. Evaluation criteria and baseline/candidate comparison are in docs/research.md. No keyword scoring. These published cases are practice/regression material, not an unseen test set.",
+  "cases": [
+    {
+      "id": "transfer",
+      "prompt": "기르타블리르·퇴행 변종으로 확장하기 전에 지금 자료만으로 예측할 수 있는 위치·폭의 차이와 다음 행동을 제안하라. 새 로컬 영상은 없다. 수치 또는 상대적 예측의 근거·적용 조건·반례와, 추가 자료가 바꿀 결정을 설명하라."
+    },
+    {
+      "id": "counterexample",
+      "prompt": "베스퍼 Execute_02 3타를 다른 보스의 폭 비교에 사용할 때 어떤 값을 어떤 목적으로 사용할 것인가? 서비스 채택과 원인 해석에 같은 값을 써야 하는가?"
+    },
+    {
+      "id": "retrospective",
+      "prompt": "동료가 화면 반응 사이의 평균 속도에 내부 지원 구간 길이를 곱해 새 보스 폭을 정하자고 제안했다. 베스퍼의 기존 자료에 실제로 대조해 제안을 평가하고 다음 행동을 정하라."
+    },
+    {
+      "id": "reopen",
+      "prompt": "새로운 신뢰할 만한 입력·결과 자료가 추가되었다. A는 채택 구간 밖의 성공, B는 채택 구간 안의 실패다. 각각 기존 서비스 결정과 연구 가설, 다음 실험에 어떤 영향을 주는가? 필요한 조건을 밝혀라."
+    },
+    {
+      "id": "product-impact",
+      "prompt": "같은 웹 연습 화면에서 두 요청을 받았다. A: 아이콘 배치 후보의 식별성과 영상 공간 비용을 비교하고 싶다. B: 실제 영상과 입력 안내의 시각이 어긋나는지 확인하고 싶다. 각 요청의 결정할 질문·필요한 역할·표현 또는 실행 범위를 정하고, 생략하면 판단할 수 없게 되는 것과 생략 가능한 것을 설명하라. 실제 제품 전체의 복제나 최소 요소 수를 목표로 삼지 말고 범위의 근거를 제시하라. 비교 제공과 기본값 채택도 구별하라."
+    },
+    {
+      "id": "display-state",
+      "prompt": "사용자가 같은 입력 시도 중 안내를 숨겼다가 다시 켜고, 일시정지한 채 표시 후보를 바꿔 비교하려 한다. 무엇이 바뀌고 무엇이 유지되어야 하는가? 화면·시간·판정·결과의 연결을 근거로 확인 방법을 제안하라."
+    },
+    {
+      "id": "new-playback-proposal",
+      "prompt": "새 제안: 사용자가 재생 속도를 낮춰 같은 패턴을 연습하도록 하자. 구현 승인은 아직 없다. 현재 제품에서 새로 결정해야 할 점과 이미 합의된 점을 구별하고, 안내·입력 판정·결과·학습 주장에 미치는 영향을 분석하라. 기능 구현이나 전체 제품 재인터뷰 없이 다음 행동을 제시하라."
+    }
+  ]
+}

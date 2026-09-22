@@ -1,0 +1,85 @@
+{
+  "SchemaVersion": 1,
+  "Id": "girtablullu-stagnant-execute-01",
+  "BossId": "gir-reborn",
+  "BossLabel": "기르타블리르·퇴행 변종",
+  "Skill": "Execute_01",
+  "Conditions": "한국어 · 16:9 · 최소1280×720 / OFF 채택 구간 · 시작 아리아",
+  "MinimumSpacingMs": 250,
+  "Detector": {
+    "Id": "gir-reborn-korean-local-yellow-shape-v1",
+    "Template": "../notice-template-girtablullu.png",
+    "ReferenceWidth": 1280,
+    "ReferenceHeight": 720,
+    "X": 368,
+    "Y": 136,
+    "Width": 528,
+    "Height": 28,
+    "MinimumClientWidth": 1280,
+    "Threshold": 0.68,
+    "PollMs": 8,
+    "AbsentMs": 100,
+    "ConfirmationMs": 40,
+    "TimeoutMs": 60000
+  },
+  "Actions": [
+    {
+      "Id": "entry",
+      "Label": "진입 회피",
+      "Key": "RMB",
+      "Group": "A",
+      "SelectedTiming": "baseline",
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 3300,
+        "BaselineMs": 3400,
+        "LateMs": 3550
+      }
+    },
+    {
+      "Id": "hit-1",
+      "Label": "1타",
+      "Key": "Space",
+      "Group": "B",
+      "SelectedTiming": "baseline",
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 4850,
+        "BaselineMs": 5050,
+        "LateMs": 5250
+      }
+    },
+    {
+      "Id": "hit-2",
+      "Label": "2타",
+      "Key": "Space",
+      "Group": "A",
+      "SelectedTiming": "baseline",
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 6050,
+        "BaselineMs": 6250,
+        "LateMs": 6450
+      }
+    },
+    {
+      "Id": "hit-3",
+      "Label": "3타",
+      "Key": "Space",
+      "Group": "B",
+      "SelectedTiming": "baseline",
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 7450,
+        "BaselineMs": 7650,
+        "LateMs": 7850
+      }
+    }
+  ],
+  "Party": "레미엘 → 벨리나 → 아리아",
+  "StartCharacter": "아리아"
+}

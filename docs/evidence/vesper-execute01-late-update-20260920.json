@@ -1,0 +1,38 @@
+{
+  "date": "2026-09-20",
+  "scope": "User-approved web-only late endpoint extension, no origin shift.",
+  "judgment": [
+    {
+      "index": 3,
+      "start": 9.533333333333333,
+      "end": 9.933333333333334,
+      "reference": 9.683333333333334,
+      "inside": "success",
+      "outside": "miss"
+    },
+    {
+      "index": 4,
+      "start": 10.833333333333334,
+      "end": 11.333333333333334,
+      "reference": 11.033333333333333,
+      "inside": "success",
+      "outside": "miss"
+    }
+  ],
+  "widths": [
+    {
+      "index": 3,
+      "milliseconds": 399.969362745098
+    },
+    {
+      "index": 4,
+      "milliseconds": 500
+    }
+  ],
+  "checks": {
+    "types": true,
+    "unitTests": 65,
+    "build": true
+  },
+  "screenshot": "vesper-execute01-late-update-20260920.png"
+}

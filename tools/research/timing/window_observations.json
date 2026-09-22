@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-09-17",
+  "scope": "Existing first-skill R1/R2 successes and R3 second-hit failure. Recorded overlay/UI/scene observations, not physical key boundaries.",
+  "frame_convention": "Zero-based sequential decoded frames. overlay_onset is [last unfilled, first filled]; overlay_release is first unfilled after the press. These are display annotations, not OS event timestamps.",
+  "reference_recording": "R2",
+  "recording_fps": 60,
+  "reference_trim_frame": 330,
+  "baseline_clip_windows": [[2.7585648148148154,3.4770833333333333],[4.352777777777777,5.048333333333333],[5.949166666666668,6.5792124542124535],[7.707417582417582,8.352106227106226]],
+  "reference_ready_brackets": {"2":[590,591],"3":[688,689],"4":[793,794]},
+  "recordings": [
+    {"id":"R1","file":"ZZZ_2026-09-15_22-13-13.mp4","sha256":"56f2d3d821fe444ab36808f3103409d1bcca8c80dec95df69379b262e51ee465","decoded_frames":1630},
+    {"id":"R2","file":"ZZZ_2026-09-15_22-14-28.mp4","sha256":"0c5e508c4e19d85680a10b5dd8925a11e5a92477799e2df56897094919d97806","decoded_frames":1415},
+    {"id":"R3","file":"ZZZ_2026-09-15_22-43-04.mp4","sha256":"95ff3beaa9e3e615fb188ebdd5789b076defc9ef16b06736ec8abc310bda9158","decoded_frames":1454}
+  ],
+  "observations": [
+    {"case":"R1","attack":1,"overlay_onset":[686,687],"overlay_release":693,"button_at_press":"ordinary_ready","outcome":"success","alignment":{"kind":"translation","event":"first_effect","source":[686,695],"reference":[522,527]},"evidence":"Sampled scene has no first sweep at686 and has it at695; later score875. Coarse bracket intentionally retained."},
+    {"case":"R1","attack":2,"overlay_onset":[775,776],"overlay_release":782,"button_at_press":"ordinary_ready","outcome":"success","alignment":{"kind":"translation","event":"ordinary_ready_2","source":[764,765],"reference":[590,591]},"evidence":"Gray764, solid yellow765; score875 to1750 in sampled scenes."},
+    {"case":"R1","attack":3,"overlay_onset":[873,874],"overlay_release":879,"button_at_press":"ordinary_ready","outcome":"success","alignment":{"kind":"translation","event":"ordinary_ready_3","source":[862,863],"reference":[688,689]},"evidence":"Gray862, solid yellow863; score1750 to2625 in sampled scenes."},
+    {"case":"R1","attack":4,"overlay_onset":[982,983],"overlay_release":989,"button_at_press":"ordinary_ready","outcome":"success","alignment":{"kind":"translation","event":"ordinary_ready_4","source":[969,970],"reference":[793,794]},"evidence":"Gray969, solid yellow970; final response and break, score9017 at1073; final award is not isolated hit timing."},
+    {"case":"R2","attack":1,"overlay_onset":[517,518],"overlay_release":524,"button_at_press":"ordinary_ready","outcome":"success","alignment":{"kind":"identity"},"evidence":"Visible switch/response; later score875. Ready onset left-censored, already yellow at494."},
+    {"case":"R2","attack":2,"overlay_onset":[605,606],"overlay_release":612,"button_at_press":"ordinary_ready","outcome":"success","alignment":{"kind":"identity"},"evidence":"Gray590, solid yellow591; later score1750."},
+    {"case":"R2","attack":3,"overlay_onset":[703,704],"overlay_release":709,"button_at_press":"ordinary_ready","outcome":"success","alignment":{"kind":"identity"},"evidence":"Gray688, solid yellow689; later score2625."},
+    {"case":"R2","attack":4,"overlay_onset":[813,814],"overlay_release":819,"button_at_press":"ordinary_ready","outcome":"success","alignment":{"kind":"identity"},"evidence":"Gray793, solid yellow794; final response/break and score9017 at854."},
+    {"case":"R3","attack":1,"overlay_onset":[678,679],"overlay_release":684,"button_at_press":"ordinary_ready","outcome":"success","alignment":{"kind":"translation","event":"first_effect","source":[708,710],"reference":[522,527]},"evidence":"First sweep absent708/709, present710; repeated-scene sensitivity retained in R2[522,527]. Switch at687, contact-like effect724, score875 later."},
+    {"case":"R3","attack":2,"overlay_onset":[767,768],"overlay_release":773,"button_at_press":"gray","outcome":"failure","alignment":{"kind":"translation","event":"ordinary_ready_2","source":[774,775],"reference":[590,591]},"evidence":"Overlay filled768-772, unfilled773; button gray through774, solid yellow775; later damage and score remains875."},
+    {"case":"R3","attack":3,"overlay_onset":[864,865],"overlay_release":870,"button_at_press":"ordinary_ready","outcome":"success","alignment":{"kind":"excluded","reason":"Prior attack failed; do not merge the changed response path into the all-success reference."},"evidence":"Later visible response and score1750; ordinary-ready state persisted after preceding failed input."},
+    {"case":"R3","attack":4,"overlay_onset":[974,975],"overlay_release":980,"button_at_press":"ordinary_ready","outcome":"success","alignment":{"kind":"excluded","reason":"Earlier failure changed response/party path; no validated alignment to R2."},"evidence":"Later visible response and score2625; no all-hit success bonus."}
+  ],
+  "limits": [
+    "Translation aligns matching displayed events only, assumes equal local time scale, and is a conditional diagnostic; it is not a verified whole-video time warp.",
+    "Bracket ranges propagate annotation endpoints. They omit unknown differences between input-overlay and game display latency; they are not confidence intervals or proven engine bounds.",
+    "Repeated images widen first-Effect uncertainty. First-hit readiness onset and all late input failure boundaries are unobserved.",
+    "Ordinary solid-yellow readiness is distinct from contact/recovery gold/orange pulses and is not a proven physical-key gate.",
+    "Button gray after a successful press may be caused by that action. It cannot establish the latest acceptable press without another observation.",
+    "The baseline windows are a snapshot of the provisional R2 service chart, not recovered game windows. Mean width is an unadopted comparison only."
+  ]
+}

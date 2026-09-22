@@ -1,0 +1,504 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-21",
+  "scope": "Final compact findings from49 v3.8 trials. All historical raw trials removed after final representative adoption; aggregate and former crossed observations remain.",
+  "count": 49,
+  "wholeSequence11111Count": 23,
+  "resultCounts": {
+    "10000": 3,
+    "10001": 1,
+    "10010": 1,
+    "10101": 6,
+    "11011": 4,
+    "11101": 6,
+    "11110": 3,
+    "11111": 23,
+    "01111": 2
+  },
+  "proposedWindowsMs": [
+    [
+      3950,
+      4250
+    ],
+    [
+      6700,
+      7050
+    ],
+    [
+      7700,
+      8150
+    ],
+    [
+      9450,
+      9850
+    ],
+    [
+      10550,
+      11000
+    ]
+  ],
+  "currentBaselineMs": [
+    4100,
+    6850,
+    7900,
+    9650,
+    10750
+  ],
+  "conditions": {
+    "version": "3.8.0",
+    "party": "엽빛나 → 수나 → 자오",
+    "startCharacter": "엽빛나",
+    "startLmbMs": [
+      500,
+      1050,
+      1700,
+      2300,
+      3100
+    ],
+    "startHoldMs": 100,
+    "preparationRmbMs": [
+      1250,
+      2650
+    ],
+    "preparationHoldMs": 150,
+    "mainHoldMs": [
+      100,
+      150,
+      200,
+      250,
+      200
+    ],
+    "manualMovementAllowed": false,
+    "recording": "All49 F8UNKNOWN→policyOFF; no fresh OBS OFF assertion",
+    "preparation": "Empty notes; no no-damage claim"
+  },
+  "normalMainPathObservations": [
+    {
+      "action": 0,
+      "rangeMs": [
+        3950,
+        4250
+      ],
+      "observations": [
+        {
+          "ms": 3900,
+          "success": 0,
+          "failure": 1
+        },
+        {
+          "ms": 3950,
+          "success": 1,
+          "failure": 0
+        },
+        {
+          "ms": 4000,
+          "success": 17,
+          "failure": 0
+        },
+        {
+          "ms": 4100,
+          "success": 22,
+          "failure": 0
+        },
+        {
+          "ms": 4200,
+          "success": 6,
+          "failure": 0
+        },
+        {
+          "ms": 4250,
+          "success": 1,
+          "failure": 0
+        },
+        {
+          "ms": 4300,
+          "success": 0,
+          "failure": 1
+        }
+      ]
+    },
+    {
+      "action": 1,
+      "rangeMs": [
+        6700,
+        7050
+      ],
+      "observations": [
+        {
+          "ms": 6600,
+          "success": 0,
+          "failure": 1
+        },
+        {
+          "ms": 6650,
+          "success": 2,
+          "failure": 1
+        },
+        {
+          "ms": 6700,
+          "success": 2,
+          "failure": 0
+        },
+        {
+          "ms": 6750,
+          "success": 1,
+          "failure": 0
+        },
+        {
+          "ms": 6850,
+          "success": 3,
+          "failure": 0
+        },
+        {
+          "ms": 6900,
+          "success": 14,
+          "failure": 0
+        },
+        {
+          "ms": 7050,
+          "success": 3,
+          "failure": 0
+        },
+        {
+          "ms": 7100,
+          "success": 5,
+          "failure": 2
+        },
+        {
+          "ms": 7150,
+          "success": 6,
+          "failure": 3
+        },
+        {
+          "ms": 7200,
+          "success": 0,
+          "failure": 2
+        },
+        {
+          "ms": 7250,
+          "success": 0,
+          "failure": 2
+        }
+      ]
+    },
+    {
+      "action": 2,
+      "rangeMs": [
+        7700,
+        8150
+      ],
+      "observations": [
+        {
+          "ms": 7650,
+          "success": 0,
+          "failure": 1
+        },
+        {
+          "ms": 7700,
+          "success": 8,
+          "failure": 0
+        },
+        {
+          "ms": 7800,
+          "success": 1,
+          "failure": 0
+        },
+        {
+          "ms": 7850,
+          "success": 4,
+          "failure": 0
+        },
+        {
+          "ms": 7950,
+          "success": 9,
+          "failure": 0
+        },
+        {
+          "ms": 8000,
+          "success": 5,
+          "failure": 0
+        },
+        {
+          "ms": 8050,
+          "success": 1,
+          "failure": 0
+        },
+        {
+          "ms": 8150,
+          "success": 1,
+          "failure": 0
+        },
+        {
+          "ms": 8200,
+          "success": 3,
+          "failure": 1
+        },
+        {
+          "ms": 8250,
+          "success": 0,
+          "failure": 2
+        }
+      ]
+    },
+    {
+      "action": 3,
+      "rangeMs": [
+        9450,
+        9850
+      ],
+      "observations": [
+        {
+          "ms": 9400,
+          "success": 0,
+          "failure": 1
+        },
+        {
+          "ms": 9450,
+          "success": 3,
+          "failure": 0
+        },
+        {
+          "ms": 9600,
+          "success": 1,
+          "failure": 0
+        },
+        {
+          "ms": 9650,
+          "success": 15,
+          "failure": 0
+        },
+        {
+          "ms": 9750,
+          "success": 1,
+          "failure": 0
+        },
+        {
+          "ms": 9800,
+          "success": 1,
+          "failure": 0
+        },
+        {
+          "ms": 9850,
+          "success": 3,
+          "failure": 0
+        },
+        {
+          "ms": 9900,
+          "success": 2,
+          "failure": 4
+        },
+        {
+          "ms": 9950,
+          "success": 0,
+          "failure": 1
+        }
+      ]
+    },
+    {
+      "action": 4,
+      "rangeMs": [
+        10550,
+        11000
+      ],
+      "observations": [
+        {
+          "ms": 10500,
+          "success": 0,
+          "failure": 1
+        },
+        {
+          "ms": 10550,
+          "success": 4,
+          "failure": 0
+        },
+        {
+          "ms": 10650,
+          "success": 3,
+          "failure": 0
+        },
+        {
+          "ms": 10750,
+          "success": 3,
+          "failure": 0
+        },
+        {
+          "ms": 10800,
+          "success": 10,
+          "failure": 0
+        },
+        {
+          "ms": 10850,
+          "success": 1,
+          "failure": 0
+        },
+        {
+          "ms": 11000,
+          "success": 2,
+          "failure": 0
+        },
+        {
+          "ms": 11050,
+          "success": 0,
+          "failure": 2
+        }
+      ]
+    }
+  ],
+  "conditionComparisons": {
+    "entry": {
+      "otherActionsMs": [
+        6850,
+        7950,
+        9650,
+        10750
+      ],
+      "points": [
+        {
+          "ms": 3900,
+          "bits": "01111"
+        },
+        {
+          "ms": 3950,
+          "bits": "11111"
+        },
+        {
+          "ms": 4250,
+          "bits": "11111"
+        },
+        {
+          "ms": 4300,
+          "bits": "01111"
+        }
+      ]
+    },
+    "mixed": [
+      {
+        "delaysMs": [
+          4000,
+          7150,
+          7700,
+          9900,
+          10550
+        ],
+        "resultCounts": {
+          "10101": 1,
+          "11101": 2,
+          "11111": 1
+        }
+      },
+      {
+        "delaysMs": [
+          4100,
+          7150,
+          8200,
+          9650,
+          10800
+        ],
+        "resultCounts": {
+          "10000": 1,
+          "11111": 1
+        }
+      }
+    ],
+    "lateHit2": {
+      "delaysMs": [
+        4200,
+        6700,
+        8150,
+        9450,
+        11000
+      ],
+      "bits": "11111",
+      "limitation": "8150 observed in crossed condition, not single-row endpoint with current baseline."
+    }
+  },
+  "observedCrosses": [
+    {
+      "delaysMs": [
+        4000,
+        7050,
+        7700,
+        9850,
+        10550
+      ],
+      "wholeSuccessCount": 2
+    },
+    {
+      "delaysMs": [
+        4200,
+        6700,
+        8150,
+        9450,
+        11000
+      ],
+      "wholeSuccessCount": 1
+    }
+  ],
+  "retainedTrials": [
+    {
+      "trialId": "19a8e2e403fb4ca5a882ae779c085f73",
+      "sequence": 41,
+      "delaysMs": [
+        4000,
+        7050,
+        7700,
+        9850,
+        10550
+      ],
+      "bits": "11111",
+      "role": "Former crossed representative summarized; raw/result/image removed at final closure."
+    },
+    {
+      "trialId": "f5d0ca4362b6463b9671750357ff5cfe",
+      "sequence": 45,
+      "delaysMs": [
+        4200,
+        6700,
+        8150,
+        9450,
+        11000
+      ],
+      "bits": "11111",
+      "role": "Former crossed representative summarized; raw/result/image removed at final closure."
+    }
+  ],
+  "limitations": [
+    "Per-value counts combine different preceding settings; not a success probability or independent window measurement.",
+    "All ten endpoint values have whole-sequence success; no normal-main-path failure at those endpoints.",
+    "Subsequent failures after earlier failure are excluded from normal-main-path counts.",
+    "No exact current-baseline7900 combination or cross with final entry3950/4250 was observed.",
+    "Game perfect may include01111; five results retain their separate meanings.",
+    "Historical deleted raw data cannot be replayed; this is a reviewed summary, not reconstructable raw evidence."
+  ],
+  "retention": {
+    "status": "completed",
+    "originalTrials": 49,
+    "retainedRawTrials": 2,
+    "removedRawTrials": 47,
+    "removedFiles": 141,
+    "removedBytes": 4466762,
+    "archiveCreated": false,
+    "sourceSetDigest": "e6d795fea402b81b01af3137408b3ab3331ebc55f4b59535e24ff0ff25acd203",
+    "digestMeaning": "Audit fingerprint only; not a means to restore or reverify deleted raw files.",
+    "userApproval": "47회 영구 삭제 승인; exact47 trials/141 files and no-backup effect explicitly confirmed",
+    "protectedFileHashesVerified": 45,
+    "finalClosure": {
+      "remainingRawTrialsFrom49": 0,
+      "additionalRemovedTrials": 2,
+      "summaryPreserved": true,
+      "archiveCreated": false
+    }
+  },
+  "adoption": {
+    "date": "2026-09-21",
+    "status": "user-approved-service-windows",
+    "baselineMs": [
+      4100,
+      6850,
+      7900,
+      9650,
+      10750
+    ],
+    "basis": "User selected final manual movement no-damage representative and requested website adoption/closure. Earlier untested combinations are historical limits, not a new acceptance gate."
+  }
+}

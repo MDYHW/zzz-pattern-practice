@@ -1,0 +1,105 @@
+{
+  "SchemaVersion": 1,
+  "Id": "vesper-execute-01",
+  "BossId": "vesper",
+  "BossLabel": "베스퍼",
+  "Skill": "Execute_01",
+  "Conditions": "한국어 · 16:9 · 최소 1280×720 / 아리아 → 남궁우 → 수나 / 시작 아리아",
+  "MinimumSpacingMs": 250,
+  "Detector": {
+    "Id": "execute01-korean-entry-yellow-shape-v2",
+    "Template": "../notice-template.png",
+    "ReferenceWidth": 1280,
+    "ReferenceHeight": 720,
+    "X": 368,
+    "Y": 136,
+    "Width": 528,
+    "Height": 28,
+    "MinimumClientWidth": 1280,
+    "Threshold": 0.68,
+    "PollMs": 8,
+    "AbsentMs": 100,
+    "ConfirmationMs": 40,
+    "TimeoutMs": 60000
+  },
+  "Actions": [
+    {
+      "Id": "entry",
+      "Label": "진입 회피",
+      "Key": "RMB",
+      "Group": "A",
+      "MinimumMs": 100,
+      "MaximumMs": 6000,
+      "Timing": {
+        "EarlyMs": 4100,
+        "BaselineMs": 4200,
+        "LateMs": 4300
+      }
+    },
+    {
+      "Id": "hit-1",
+      "Label": "1타",
+      "Key": "Space",
+      "Group": "B",
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 6250,
+        "BaselineMs": 6400,
+        "LateMs": 6600
+      }
+    },
+    {
+      "Id": "hit-2",
+      "Label": "2타",
+      "Key": "Space",
+      "Group": "A",
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 7500,
+        "BaselineMs": 7700,
+        "LateMs": 7950
+      }
+    },
+    {
+      "Id": "hit-3",
+      "Label": "3타",
+      "Key": "Space",
+      "Group": "B",
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 9350,
+        "BaselineMs": 9500,
+        "LateMs": 9750
+      }
+    },
+    {
+      "Id": "hit-4",
+      "Label": "4타",
+      "Key": "Space",
+      "Group": "A",
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 10650,
+        "BaselineMs": 10850,
+        "LateMs": 11150
+      }
+    },
+    {
+      "Id": "hit-5",
+      "Label": "5타",
+      "Key": "Space",
+      "Group": "B",
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 12950,
+        "BaselineMs": 13200,
+        "LateMs": 13450
+      }
+    }
+  ]
+}

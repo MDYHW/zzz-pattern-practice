@@ -1,0 +1,213 @@
+{
+  "Date": "2026-09-20",
+  "Status": "completed",
+  "Scope": "Only individually verified identical copies, structurally identical JSON copies and stopped-server logs. No recursive directory deletion.",
+  "Files": [
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\lane-verifier-src\\사용법.md",
+      "Canonical": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\tools\\lane-verifier\\사용법.md",
+      "Proof": "SHA256 identical",
+      "Sha256": "F6E80E61D3ABA1CA590659E73C42F6FC91DEF77BC0544E75B4670013B6C35AF9",
+      "Bytes": 2873
+    },
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\lane-verifier-src\\Build.ps1",
+      "Canonical": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\tools\\lane-verifier\\Build.ps1",
+      "Proof": "SHA256 identical",
+      "Sha256": "EE87CCC67B6972835C3D2E2E385F738D4D9E4C7B63AAAB22B53055AA56397B3C",
+      "Bytes": 1993
+    },
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\lane-verifier-src\\check.mjs",
+      "Canonical": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\tools\\lane-verifier\\check.mjs",
+      "Proof": "SHA256 identical",
+      "Sha256": "AC5872494BDA213EF7A0CD195493FF1B2D77B65581C2CC40FA222785D105459E",
+      "Bytes": 1641
+    },
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\lane-verifier-src\\LaneForm.cs",
+      "Canonical": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\tools\\lane-verifier\\LaneForm.cs",
+      "Proof": "SHA256 identical",
+      "Sha256": "5D139FB218F21EDC42487379400AC14B797749D69F03F9906F9C4ABC1814671B",
+      "Bytes": 16545
+    },
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\lane-verifier-src\\LaneModel.cs",
+      "Canonical": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\tools\\lane-verifier\\LaneModel.cs",
+      "Proof": "SHA256 identical",
+      "Sha256": "6BC30D01F41E8CE0F005C7975B09521A1E76810F0E78F9B459C37DC435AC5720",
+      "Bytes": 3914
+    },
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\lane-verifier-src\\LaneNative.cs",
+      "Canonical": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\tools\\lane-verifier\\LaneNative.cs",
+      "Proof": "SHA256 identical",
+      "Sha256": "075C7818A082DD224398EFA79296F620C9BCE8B02C5452B91E4202A8E1FAE28B",
+      "Bytes": 1224
+    },
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\lane-verifier-src\\LaneTests.cs",
+      "Canonical": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\tools\\lane-verifier\\LaneTests.cs",
+      "Proof": "SHA256 identical",
+      "Sha256": "FE0FFF22852E1C238D3CB1DABB8D402AB895470249D7B0DD7D37A449BE4010E4",
+      "Bytes": 14918
+    },
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\lane-verifier-src\\Program.cs",
+      "Canonical": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\tools\\lane-verifier\\Program.cs",
+      "Proof": "SHA256 identical",
+      "Sha256": "41CE4729A8DA2087AA1C3E8B100B7832E520133F3F4A16495DB37FA67B752F0C",
+      "Bytes": 1532
+    },
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\lane-analysis-20260920\\log-statistics.json",
+      "Canonical": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\docs\\evidence\\vesper-live-lane-20260920.json#$.statistics",
+      "Proof": "Parsed JSON fully equal to canonical subtree",
+      "Sha256": "1E45A6817CD81AD2BFA8645AC43B5439C6CD1F69D5461BDEC6E012C228F13324",
+      "Bytes": 44851
+    },
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\lane-analysis-20260920\\obs-recording-evidence.json",
+      "Canonical": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\docs\\evidence\\vesper-live-lane-20260920.json#$.obs",
+      "Proof": "Parsed JSON fully equal to canonical subtree",
+      "Sha256": "B3A3A0F9B91293B135ECB17BB5C902115618EEC58C61E338DB4FA2BCAE5F5348",
+      "Bytes": 2756
+    },
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\lane-analysis-20260920\\origin-comparison.json",
+      "Canonical": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\docs\\evidence\\vesper-execute01-origin-followup-20260920.json#$.noticeComparison",
+      "Proof": "Parsed JSON fully equal to canonical subtree",
+      "Sha256": "8696CA58B271931A6532C29E2BAF69BB5F1E6B6CE1BD2031E0A5135615BD24BE",
+      "Bytes": 7518
+    },
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\lane-analysis-20260920\\video-alignment.json",
+      "Canonical": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\docs\\evidence\\vesper-live-lane-20260920.json#$.videoAlignment",
+      "Proof": "Parsed JSON fully equal to canonical subtree",
+      "Sha256": "EE5E856A99131650596994BD863288584A5DD647FCF2D0968A68147E98145191",
+      "Bytes": 10903
+    },
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\lane-analysis-20260920\\recorded-followup\\independent-log-evidence.json",
+      "Canonical": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\docs\\evidence\\vesper-execute01-recorded-followup-20260920.json#$.logAndObsReview",
+      "Proof": "Parsed JSON fully equal to canonical subtree",
+      "Sha256": "917CFCF501B298BC0325B6DE588A2C021FF018792317913C86AA1C0930717BA4",
+      "Bytes": 14294
+    },
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\dev-server-logs\\20260920-162017.err.log",
+      "Canonical": "",
+      "Proof": "Stopped temporary dev server startup output; no trial/game data",
+      "Sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "Bytes": 0
+    },
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\dev-server-logs\\20260920-162017.out.log",
+      "Canonical": "",
+      "Proof": "Stopped temporary dev server startup output; no trial/game data",
+      "Sha256": "6C6901350AA2E56311DDBF2E93F74B537902EF815BABCA02725882AB448694B8",
+      "Bytes": 404
+    },
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\actual-media-sync\\server.err.log",
+      "Canonical": "",
+      "Proof": "Stopped temporary dev server startup output; no trial/game data",
+      "Sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "Bytes": 0
+    },
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\actual-media-sync\\server.out.log",
+      "Canonical": "",
+      "Proof": "Stopped temporary dev server startup output; no trial/game data",
+      "Sha256": "6E97F4C772DB995B3207DC3C6E3D4A17FD9E5486836E24EAA70243CED2CE90F9",
+      "Bytes": 246
+    },
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\lane-verifier-src\\finish_delivery.py",
+      "Canonical": "Existing project source/docs/evidence",
+      "Proof": "One-time delivery/document writer; delivered app, canonical README, source and lane-verifier evidence exist.",
+      "Sha256": "BB9A9C39AFDABB7A99A8FEAF69EF4D9F36FCB0FA991285211F9A66795F61C8B8",
+      "Bytes": 4728
+    },
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\lane-verifier-src\\refactor_detection.py",
+      "Canonical": "Existing project source/docs/evidence",
+      "Proof": "Completed one-time source splitter; NoticeDetection.cs and shared build references verified in canonical source.",
+      "Sha256": "649EE52DEFA4DF29AFA5AAB770EE5CAC2D72D01DF2DE4BA2BB57F979700C5E53",
+      "Bytes": 1496
+    },
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\lane-verifier-src\\wire_build.py",
+      "Canonical": "Existing project source/docs/evidence",
+      "Proof": "Completed one-time package wiring; lane build/check commands verified in canonical package.json/tools.ps1.",
+      "Sha256": "DBF83878F0030FC228B70DE25527865CF738CC922EB8478E76A59817F28B0AA7",
+      "Bytes": 630
+    },
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\actual-media-sync\\save_evidence.py",
+      "Canonical": "Existing project source/docs/evidence",
+      "Proof": "Completed one-time report writer; full report and36-sample evidence verified; rerun would append duplicates.",
+      "Sha256": "37F15A73271E8DDB6B4A57B38E5C6179C564253681BE951782A0CEE6871103FF",
+      "Bytes": 7379
+    },
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\lane-analysis-20260920\\save_auto_findings.py",
+      "Canonical": "Existing project source/docs/evidence",
+      "Proof": "Completed one-time exporter; vesper-execute01-auto-followup evidence and report exist.",
+      "Sha256": "B061F4BAB02C9D97BD1069961049736FA3B389A2254B2E3248D958F58C81D869",
+      "Bytes": 5568
+    },
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\lane-analysis-20260920\\save_followup.py",
+      "Canonical": "Existing project source/docs/evidence",
+      "Proof": "Completed one-time exporter; vesper-execute01-origin-followup evidence and report exist.",
+      "Sha256": "772F8A36AA475BA98F425C37A951327DCF278C6C02F8993E231BB3C6129DF056",
+      "Bytes": 3975
+    },
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\lane-analysis-20260920\\save_recorded_followup.py",
+      "Canonical": "Existing project source/docs/evidence",
+      "Proof": "Completed one-time exporter; vesper-execute01-recorded-followup evidence and report exist.",
+      "Sha256": "D07023056287A6DE7CA3A0A42818CA358EAF7FC2A44B0C47D9F97F86AA67A59B",
+      "Bytes": 7720
+    },
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\lane-analysis-20260920\\write_report.py",
+      "Canonical": "Existing project source/docs/evidence",
+      "Proof": "Completed one-time report exporter; vesper-live-lane report and evidence exist.",
+      "Sha256": "745C0FB9911AD0DA07CEC52AA6817894873D5DD406C7AC3620CE74FF096BD813",
+      "Bytes": 11631
+    },
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\verify-derived-duplicates.py",
+      "Canonical": "docs/evidence/derived-cleanup-20260920.json and vesper-origin-anchor-audit-20260920.json",
+      "Proof": "Temporary verifier/exporter or receipt copy from this completed turn; final canonical files verified.",
+      "Sha256": "A63D3EE438256D71A20EA17BE1EB4FBF6E2F77D2694F109D12122C932DD5095A",
+      "Bytes": 1476
+    },
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\verified-derived-duplicates.json",
+      "Canonical": "docs/evidence/derived-cleanup-20260920.json and vesper-origin-anchor-audit-20260920.json",
+      "Proof": "Temporary verifier/exporter or receipt copy from this completed turn; final canonical files verified.",
+      "Sha256": "072260044627EF2528E20D3B3682FB94FEBCA8CA3EA2C5CC81A1B50EDFF7EC1A",
+      "Bytes": 1756
+    },
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\verified-cleanup-receipt.json",
+      "Canonical": "docs/evidence/derived-cleanup-20260920.json and vesper-origin-anchor-audit-20260920.json",
+      "Proof": "Temporary verifier/exporter or receipt copy from this completed turn; final canonical files verified.",
+      "Sha256": "C1EA347C3AD367E159B656DD87224A5B08846565E0336B02B73EE6084A5D9109",
+      "Bytes": 9882
+    },
+    {
+      "Path": "<PRIVATE_HOME>\\Documents\\Codex\\finalize-origin-audit.py",
+      "Canonical": "docs/evidence/derived-cleanup-20260920.json and vesper-origin-anchor-audit-20260920.json",
+      "Proof": "Temporary verifier/exporter or receipt copy from this completed turn; final canonical files verified.",
+      "Sha256": "47A36B05894C88A5BA84608EA5101B17A34D42589ED020B115B3983F71CE5309",
+      "Bytes": 9382
+    }
+  ],
+  "RemovedCount": 29,
+  "RemovedBytes": 191235.0,
+  "VerifiedAbsent": true
+}

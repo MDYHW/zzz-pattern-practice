@@ -1,0 +1,721 @@
+{
+  "date": "2026-09-20",
+  "scope": "Three user-performed recorded automatic Execute_01 trials",
+  "logAndObsReview": {
+    "runs": [
+      {
+        "file": "trial-0f4218f0ad9d498388839dd57567b864.json",
+        "rawSha256": "f4b95311a2883377db45399a17120220bc6c7b9a201255ec008186a72af4ffff",
+        "rawHashMatchesResult": true,
+        "rawTrialId": "55f37d338f0a4a3784bb9dafe601eb2b",
+        "trialIdMatchesResult": true,
+        "bits": "111111",
+        "profileHash": "119931b66ad682d5fc9a7521436539e1d6621e627892624b0822e1e92b5b5ae9",
+        "templateHash": "b5495ce64753def2898c8bd66490797357448da30c1f05ed66425e0380aaf185",
+        "party": "아리아 → 남궁우 → 수나",
+        "startCharacter": "아리아",
+        "clientSize": [
+          1920,
+          1080
+        ],
+        "recordingAtF8": "ON",
+        "recordingObservationState": "ON",
+        "recordingObservationAgeMs": 1420.106,
+        "recordingPath": "<PRIVATE_HOME>/Videos/ZZZ_2026-09-20_15-39-20.mp4",
+        "recordingStatesDuringRun": [
+          "ON"
+        ],
+        "StartedUtc": "2026-09-20T06:39:27.8633483Z",
+        "EndedUtc": "2026-09-20T06:39:45.8863083Z",
+        "firstMatch": {
+          "CaptureBeginMs": 4694.8,
+          "CaptureEndMs": 4729.2174,
+          "AnalysisEndMs": 4729.7831,
+          "Score": 0.8068965517241379,
+          "Present": true
+        },
+        "previousAbsent": {
+          "CaptureBeginMs": 4664.232,
+          "CaptureEndMs": 4687.0655,
+          "AnalysisEndMs": 4688.2688,
+          "Score": 0.15859030837004406,
+          "Present": false
+        },
+        "confirmed": {
+          "CaptureBeginMs": 4741.6547,
+          "CaptureEndMs": 4782.0123,
+          "AnalysisEndMs": 4782.7562,
+          "Score": 0.8547400611620795,
+          "Present": true
+        },
+        "confirmationEndAfterOriginMs": 53.538799999999355,
+        "inputs": [
+          {
+            "attack": 0,
+            "plannedMs": 4200,
+            "beginMs": 4200.930599999999,
+            "endMs": 4244.8317,
+            "startLatenessMs": 0.9305999999978667,
+            "sendDurationMs": 43.90110000000095,
+            "holdBeginToBeginMs": 123.91370000000097,
+            "releaseBeginMs": 4324.8443
+          },
+          {
+            "attack": 1,
+            "plannedMs": 6400,
+            "beginMs": 6400.0109,
+            "endMs": 6401.474299999999,
+            "startLatenessMs": 0.01089999999931024,
+            "sendDurationMs": 1.4633999999987282,
+            "holdBeginToBeginMs": 81.52429999999913,
+            "releaseBeginMs": 6481.535199999999
+          },
+          {
+            "attack": 2,
+            "plannedMs": 7700,
+            "beginMs": 7700.0179,
+            "endMs": 7701.9883,
+            "startLatenessMs": 0.017899999998917338,
+            "sendDurationMs": 1.9704000000001543,
+            "holdBeginToBeginMs": 84.22839999999997,
+            "releaseBeginMs": 7784.2463
+          },
+          {
+            "attack": 3,
+            "plannedMs": 9750,
+            "beginMs": 9750.0144,
+            "endMs": 9751.830299999998,
+            "startLatenessMs": 0.014399999998204294,
+            "sendDurationMs": 1.8158999999996013,
+            "holdBeginToBeginMs": 81.81910000000062,
+            "releaseBeginMs": 9831.8335
+          },
+          {
+            "attack": 4,
+            "plannedMs": 10850,
+            "beginMs": 10850.032500000001,
+            "endMs": 10851.843799999999,
+            "startLatenessMs": 0.032499999999345164,
+            "sendDurationMs": 1.8112999999993917,
+            "holdBeginToBeginMs": 81.8148000000001,
+            "releaseBeginMs": 10931.847300000001
+          },
+          {
+            "attack": 5,
+            "plannedMs": 13200,
+            "beginMs": 13200.010599999998,
+            "endMs": 13201.3881,
+            "startLatenessMs": 0.01059999999779393,
+            "sendDurationMs": 1.3775000000023283,
+            "holdBeginToBeginMs": 81.48670000000129,
+            "releaseBeginMs": 13281.497299999999
+          }
+        ],
+        "allOsSubmissionsSucceeded": true,
+        "status": "submitted-not-game-verified",
+        "error": ""
+      },
+      {
+        "file": "trial-7a987782682f4eb491a2fc9ab6b1e7b9.json",
+        "rawSha256": "88d7c5544cb7c90e54cd7cee8d581267ec1276d01b41266df0febbb4c6ee60a2",
+        "rawHashMatchesResult": true,
+        "rawTrialId": "aa96f5157a1f40de963905db6dfadfb7",
+        "trialIdMatchesResult": true,
+        "bits": "111111",
+        "profileHash": "119931b66ad682d5fc9a7521436539e1d6621e627892624b0822e1e92b5b5ae9",
+        "templateHash": "b5495ce64753def2898c8bd66490797357448da30c1f05ed66425e0380aaf185",
+        "party": "아리아 → 남궁우 → 수나",
+        "startCharacter": "아리아",
+        "clientSize": [
+          1920,
+          1080
+        ],
+        "recordingAtF8": "ON",
+        "recordingObservationState": "ON",
+        "recordingObservationAgeMs": 1146.784,
+        "recordingPath": "<PRIVATE_HOME>/Videos/ZZZ_2026-09-20_15-41-54.mp4",
+        "recordingStatesDuringRun": [
+          "ON"
+        ],
+        "StartedUtc": "2026-09-20T06:41:57.5371495Z",
+        "EndedUtc": "2026-09-20T06:42:19.1680018Z",
+        "firstMatch": {
+          "CaptureBeginMs": 8313.3527,
+          "CaptureEndMs": 8339.0221,
+          "AnalysisEndMs": 8339.6518,
+          "Score": 0.7838948233360723,
+          "Present": true
+        },
+        "previousAbsent": {
+          "CaptureBeginMs": 8282.2595,
+          "CaptureEndMs": 8308.778,
+          "AnalysisEndMs": 8309.3634,
+          "Score": 0.33464052287581697,
+          "Present": false
+        },
+        "confirmed": {
+          "CaptureBeginMs": 8376.2329,
+          "CaptureEndMs": 8407.29,
+          "AnalysisEndMs": 8407.9598,
+          "Score": 0.8545454545454545,
+          "Present": true
+        },
+        "confirmationEndAfterOriginMs": 68.9377000000004,
+        "inputs": [
+          {
+            "attack": 0,
+            "plannedMs": 4200,
+            "beginMs": 4201.8444,
+            "endMs": 4220.3874,
+            "startLatenessMs": 1.8443999999999505,
+            "sendDurationMs": 18.542999999999665,
+            "holdBeginToBeginMs": 98.54960000000028,
+            "releaseBeginMs": 4300.394
+          },
+          {
+            "attack": 1,
+            "plannedMs": 6400,
+            "beginMs": 6400.0267,
+            "endMs": 6403.4851,
+            "startLatenessMs": 0.026700000000346336,
+            "sendDurationMs": 3.4583999999995285,
+            "holdBeginToBeginMs": 83.46119999999974,
+            "releaseBeginMs": 6483.4879
+          },
+          {
+            "attack": 2,
+            "plannedMs": 7700,
+            "beginMs": 7700.010899999999,
+            "endMs": 7701.327499999999,
+            "startLatenessMs": 0.01089999999931024,
+            "sendDurationMs": 1.3166000000001077,
+            "holdBeginToBeginMs": 81.31960000000072,
+            "releaseBeginMs": 7781.3305
+          },
+          {
+            "attack": 3,
+            "plannedMs": 9750,
+            "beginMs": 9750.161900000001,
+            "endMs": 9751.507800000001,
+            "startLatenessMs": 0.16189999999915017,
+            "sendDurationMs": 1.3459000000002561,
+            "holdBeginToBeginMs": 82.84779999999955,
+            "releaseBeginMs": 9833.0097
+          },
+          {
+            "attack": 4,
+            "plannedMs": 10850,
+            "beginMs": 10850.017300000001,
+            "endMs": 10852.441700000001,
+            "startLatenessMs": 0.017299999999522697,
+            "sendDurationMs": 2.4243999999998778,
+            "holdBeginToBeginMs": 82.42640000000029,
+            "releaseBeginMs": 10932.443700000002
+          },
+          {
+            "attack": 5,
+            "plannedMs": 13200,
+            "beginMs": 13200.028100000001,
+            "endMs": 13202.546,
+            "startLatenessMs": 0.02809999999954016,
+            "sendDurationMs": 2.5178999999989173,
+            "holdBeginToBeginMs": 82.5219999999972,
+            "releaseBeginMs": 13282.550099999999
+          }
+        ],
+        "allOsSubmissionsSucceeded": true,
+        "status": "submitted-not-game-verified",
+        "error": ""
+      },
+      {
+        "file": "trial-55a885f544584c7184f51f6609c0ed5d.json",
+        "rawSha256": "425dab7219a15133f7ba4c6f028ef7e62c23d9736795e02392310c1f6330a08f",
+        "rawHashMatchesResult": true,
+        "rawTrialId": "c37f6a6123f5472f86c096b35705722e",
+        "trialIdMatchesResult": true,
+        "bits": "111111",
+        "profileHash": "fdefa6b0d4d38f6ae62e2807d46553f5de7cbe65a2c0efca0c30997e8e7a9950",
+        "templateHash": "b5495ce64753def2898c8bd66490797357448da30c1f05ed66425e0380aaf185",
+        "party": "아리아 → 남궁우 → 수나",
+        "startCharacter": "아리아",
+        "clientSize": [
+          1920,
+          1080
+        ],
+        "recordingAtF8": "ON",
+        "recordingObservationState": "ON",
+        "recordingObservationAgeMs": 540.861,
+        "recordingPath": "<PRIVATE_HOME>/Videos/ZZZ_2026-09-20_15-44-37.mp4",
+        "recordingStatesDuringRun": [
+          "ON"
+        ],
+        "StartedUtc": "2026-09-20T06:44:44.9682130Z",
+        "EndedUtc": "2026-09-20T06:45:12.8411144Z",
+        "firstMatch": {
+          "CaptureBeginMs": 14301.0579,
+          "CaptureEndMs": 14332.5702,
+          "AnalysisEndMs": 14334.6406,
+          "Score": 0.8615136876006442,
+          "Present": true
+        },
+        "previousAbsent": {
+          "CaptureBeginMs": 14253.906,
+          "CaptureEndMs": 14287.7675,
+          "AnalysisEndMs": 14288.709,
+          "Score": 0.16398243045387995,
+          "Present": false
+        },
+        "confirmed": {
+          "CaptureBeginMs": 14348.8086,
+          "CaptureEndMs": 14378.1813,
+          "AnalysisEndMs": 14378.7269,
+          "Score": 0.8669871794871795,
+          "Present": true
+        },
+        "confirmationEndAfterOriginMs": 46.156699999999546,
+        "inputs": [
+          {
+            "attack": 0,
+            "plannedMs": 4200,
+            "beginMs": 4200.104000000001,
+            "endMs": 4216.7695,
+            "startLatenessMs": 0.10399999999935972,
+            "sendDurationMs": 16.665499999999156,
+            "holdBeginToBeginMs": 96.66699999999764,
+            "releaseBeginMs": 4296.770999999999
+          },
+          {
+            "attack": 1,
+            "plannedMs": 6400,
+            "beginMs": 6400.024800000001,
+            "endMs": 6401.611500000001,
+            "startLatenessMs": 0.02479999999923166,
+            "sendDurationMs": 1.586699999999837,
+            "holdBeginToBeginMs": 81.58859999999913,
+            "releaseBeginMs": 6481.6134
+          },
+          {
+            "attack": 2,
+            "plannedMs": 7700,
+            "beginMs": 7700.017300000001,
+            "endMs": 7701.891399999999,
+            "startLatenessMs": 0.017299999999522697,
+            "sendDurationMs": 1.87409999999727,
+            "holdBeginToBeginMs": 81.93229999999676,
+            "releaseBeginMs": 7781.949599999998
+          },
+          {
+            "attack": 3,
+            "plannedMs": 9750,
+            "beginMs": 9750.387400000001,
+            "endMs": 9752.1903,
+            "startLatenessMs": 0.38739999999961583,
+            "sendDurationMs": 1.8028999999987718,
+            "holdBeginToBeginMs": 83.65339999999924,
+            "releaseBeginMs": 9834.0408
+          },
+          {
+            "attack": 4,
+            "plannedMs": 11150,
+            "beginMs": 11150.0139,
+            "endMs": 11151.423099999998,
+            "startLatenessMs": 0.01389999999810243,
+            "sendDurationMs": 1.4091999999982363,
+            "holdBeginToBeginMs": 81.41210000000137,
+            "releaseBeginMs": 11231.426000000001
+          },
+          {
+            "attack": 5,
+            "plannedMs": 13450,
+            "beginMs": 13450.143900000001,
+            "endMs": 13451.7063,
+            "startLatenessMs": 0.14389999999912106,
+            "sendDurationMs": 1.5623999999988882,
+            "holdBeginToBeginMs": 81.564699999999,
+            "releaseBeginMs": 13531.7086
+          }
+        ],
+        "allOsSubmissionsSucceeded": true,
+        "status": "submitted-not-game-verified",
+        "error": ""
+      }
+    ],
+    "obsLog": "<PRIVATE_HOME>\\Documents\\Codex\\2026-09-14\\zzz-boss-pattern-feasibility\\outputs\\녹화환경\\OBS\\config\\obs-studio\\logs\\2026-09-20 15-33-49.txt",
+    "obsEvidence": [
+      {
+        "line": 1509,
+        "text": "15:39:20.613: ==== Recording Start ==============================================="
+      },
+      {
+        "line": 1510,
+        "text": "15:39:20.613: [mp4 output: 'simple_file_output'] Writing Hybrid MP4/MOV file '<PRIVATE_HOME>/Videos/ZZZ_2026-09-20_15-39-20.mp4'..."
+      },
+      {
+        "line": 1708,
+        "text": "15:39:52.374: Output 'simple_file_output': Total frames output: 1897"
+      },
+      {
+        "line": 1709,
+        "text": "15:39:52.374: Output 'simple_file_output': Total drawn frames: 1905 (1906 attempted)"
+      },
+      {
+        "line": 1710,
+        "text": "15:39:52.374: Output 'simple_file_output': Number of lagged frames due to rendering lag/stalls: 1 (0.1%)"
+      },
+      {
+        "line": 1713,
+        "text": "15:39:52.406: ==== Recording Stop ================================================"
+      },
+      {
+        "line": 3217,
+        "text": "15:41:54.602: ==== Recording Start ==============================================="
+      },
+      {
+        "line": 3218,
+        "text": "15:41:54.602: [mp4 output: 'simple_file_output'] Writing Hybrid MP4/MOV file '<PRIVATE_HOME>/Videos/ZZZ_2026-09-20_15-41-54.mp4'..."
+      },
+      {
+        "line": 4232,
+        "text": "15:42:27.418: Output 'simple_file_output': Total frames output: 1960"
+      },
+      {
+        "line": 4233,
+        "text": "15:42:27.418: Output 'simple_file_output': Total drawn frames: 1969"
+      },
+      {
+        "line": 4235,
+        "text": "15:42:27.421: ==== Recording Stop ================================================"
+      },
+      {
+        "line": 5268,
+        "text": "15:44:37.994: ==== Recording Start ==============================================="
+      },
+      {
+        "line": 5269,
+        "text": "15:44:37.994: [mp4 output: 'simple_file_output'] Writing Hybrid MP4/MOV file '<PRIVATE_HOME>/Videos/ZZZ_2026-09-20_15-44-37.mp4'..."
+      },
+      {
+        "line": 7067,
+        "text": "15:45:18.814: Output 'simple_file_output': Total frames output: 2439"
+      },
+      {
+        "line": 7068,
+        "text": "15:45:18.814: Output 'simple_file_output': Total drawn frames: 2449"
+      },
+      {
+        "line": 7071,
+        "text": "15:45:18.816: ==== Recording Stop ================================================"
+      }
+    ],
+    "obsPauseWordCount": 0,
+    "obsEncodingLagWarningCount": 0
+  },
+  "videos": [
+    {
+      "log": "trial-0f4218f0ad9d498388839dd57567b864.json",
+      "video": "ZZZ_2026-09-20_15-39-20.mp4",
+      "firstThreshold": {
+        "frame": 722,
+        "sec": 12.033333333333333,
+        "score": 0.8854961832061069,
+        "Space": 0,
+        "RMB": 0
+      },
+      "keyEdges": {
+        "RMB": [
+          {
+            "frame": 975,
+            "sec": 16.25
+          }
+        ],
+        "Space": [
+          {
+            "frame": 1104,
+            "sec": 18.4
+          },
+          {
+            "frame": 1182,
+            "sec": 19.7
+          },
+          {
+            "frame": 1305,
+            "sec": 21.75
+          },
+          {
+            "frame": 1371,
+            "sec": 22.85
+          },
+          {
+            "frame": 1512,
+            "sec": 25.2
+          }
+        ]
+      },
+      "alignment": {
+        "originSec": 11.9999856,
+        "residualMs": [
+          0.003499999998268777,
+          -0.0035000000000451337,
+          0.0,
+          -0.0181000000001319,
+          0.003800000001774606
+        ],
+        "originMinusFirstThresholdMs": -33.34773333333274,
+        "basis": "median translation from support key overlay first yellow frames and input API begin times; includes OBS overlay and submission path latency",
+        "inputs": [
+          {
+            "frame": 1104,
+            "sec": 18.4,
+            "attack": 1,
+            "settingMs": 6400,
+            "relativeBeginMs": 6400.0109
+          },
+          {
+            "frame": 1182,
+            "sec": 19.7,
+            "attack": 2,
+            "settingMs": 7700,
+            "relativeBeginMs": 7700.0179
+          },
+          {
+            "frame": 1305,
+            "sec": 21.75,
+            "attack": 3,
+            "settingMs": 9750,
+            "relativeBeginMs": 9750.0144
+          },
+          {
+            "frame": 1371,
+            "sec": 22.85,
+            "attack": 4,
+            "settingMs": 10850,
+            "relativeBeginMs": 10850.032500000001
+          },
+          {
+            "frame": 1512,
+            "sec": 25.2,
+            "attack": 5,
+            "settingMs": 13200,
+            "relativeBeginMs": 13200.010599999998
+          }
+        ]
+      },
+      "videoSha256": "c897a12548e7598815bb0a6047057e7c37fc579a8cbe0d07e0a6abf65ba349fd",
+      "hit3KeyRelativeToNoticeThresholdMs": 9716.666666666666,
+      "entryKeyRelativeToAlignedOriginMs": 4250.014399999999
+    },
+    {
+      "log": "trial-7a987782682f4eb491a2fc9ab6b1e7b9.json",
+      "video": "ZZZ_2026-09-20_15-41-54.mp4",
+      "firstThreshold": {
+        "frame": 679,
+        "sec": 11.316666666666666,
+        "score": 0.8631921824104235,
+        "Space": 0,
+        "RMB": 0
+      },
+      "keyEdges": {
+        "RMB": [
+          {
+            "frame": 930,
+            "sec": 15.5
+          }
+        ],
+        "Space": [
+          {
+            "frame": 1061,
+            "sec": 17.683333333333334
+          },
+          {
+            "frame": 1139,
+            "sec": 18.983333333333334
+          },
+          {
+            "frame": 1262,
+            "sec": 21.033333333333335
+          },
+          {
+            "frame": 1328,
+            "sec": 22.133333333333333
+          },
+          {
+            "frame": 1469,
+            "sec": 24.483333333333334
+          }
+        ]
+      },
+      "alignment": {
+        "originSec": 11.283306633333332,
+        "residualMs": [
+          0.0,
+          0.01580000000345194,
+          -0.13519999999722643,
+          0.009399999999715192,
+          -0.001399999998596968
+        ],
+        "originMinusFirstThresholdMs": -33.36003333333437,
+        "basis": "median translation from support key overlay first yellow frames and input API begin times; includes OBS overlay and submission path latency",
+        "inputs": [
+          {
+            "frame": 1061,
+            "sec": 17.683333333333334,
+            "attack": 1,
+            "settingMs": 6400,
+            "relativeBeginMs": 6400.0267
+          },
+          {
+            "frame": 1139,
+            "sec": 18.983333333333334,
+            "attack": 2,
+            "settingMs": 7700,
+            "relativeBeginMs": 7700.010899999999
+          },
+          {
+            "frame": 1262,
+            "sec": 21.033333333333335,
+            "attack": 3,
+            "settingMs": 9750,
+            "relativeBeginMs": 9750.161900000001
+          },
+          {
+            "frame": 1328,
+            "sec": 22.133333333333333,
+            "attack": 4,
+            "settingMs": 10850,
+            "relativeBeginMs": 10850.017300000001
+          },
+          {
+            "frame": 1469,
+            "sec": 24.483333333333334,
+            "attack": 5,
+            "settingMs": 13200,
+            "relativeBeginMs": 13200.028100000001
+          }
+        ]
+      },
+      "videoSha256": "695baed0afc6bac18e01aaee9c61b3f54be5b23a2cf1c754045a229451e45a95",
+      "hit3KeyRelativeToNoticeThresholdMs": 9716.666666666668,
+      "entryKeyRelativeToAlignedOriginMs": 4216.693366666668
+    },
+    {
+      "log": "trial-55a885f544584c7184f51f6609c0ed5d.json",
+      "video": "ZZZ_2026-09-20_15-44-37.mp4",
+      "firstThreshold": {
+        "frame": 1278,
+        "sec": 21.3,
+        "score": 0.8848484848484849,
+        "Space": 0,
+        "RMB": 0
+      },
+      "keyEdges": {
+        "RMB": [
+          {
+            "frame": 1532,
+            "sec": 25.533333333333335
+          }
+        ],
+        "Space": [
+          {
+            "frame": 1663,
+            "sec": 27.716666666666665
+          },
+          {
+            "frame": 1741,
+            "sec": 29.016666666666666
+          },
+          {
+            "frame": 1864,
+            "sec": 31.066666666666666
+          },
+          {
+            "frame": 1948,
+            "sec": 32.46666666666667
+          },
+          {
+            "frame": 2086,
+            "sec": 34.766666666666666
+          }
+        ]
+      },
+      "alignment": {
+        "originSec": 21.316641866666664,
+        "residualMs": [
+          0.0,
+          0.007499999998827889,
+          -0.3625999999989915,
+          0.010900000006586197,
+          -0.11909999999915044
+        ],
+        "originMinusFirstThresholdMs": 16.641866666663674,
+        "basis": "median translation from support key overlay first yellow frames and input API begin times; includes OBS overlay and submission path latency",
+        "inputs": [
+          {
+            "frame": 1663,
+            "sec": 27.716666666666665,
+            "attack": 1,
+            "settingMs": 6400,
+            "relativeBeginMs": 6400.024800000001
+          },
+          {
+            "frame": 1741,
+            "sec": 29.016666666666666,
+            "attack": 2,
+            "settingMs": 7700,
+            "relativeBeginMs": 7700.017300000001
+          },
+          {
+            "frame": 1864,
+            "sec": 31.066666666666666,
+            "attack": 3,
+            "settingMs": 9750,
+            "relativeBeginMs": 9750.387400000001
+          },
+          {
+            "frame": 1948,
+            "sec": 32.46666666666667,
+            "attack": 4,
+            "settingMs": 11150,
+            "relativeBeginMs": 11150.0139
+          },
+          {
+            "frame": 2086,
+            "sec": 34.766666666666666,
+            "attack": 5,
+            "settingMs": 13450,
+            "relativeBeginMs": 13450.143900000001
+          }
+        ]
+      },
+      "videoSha256": "abcd97955f2dffb0a0614cee383af4414e0ed685f7136ebefc8538d9b5ed8ddf",
+      "hit3KeyRelativeToNoticeThresholdMs": 9766.666666666666,
+      "entryKeyRelativeToAlignedOriginMs": 4216.691466666671
+    }
+  ],
+  "rawFilesUnmodified": true,
+  "visualReview": {
+    "perfectResponseObservedAtVideoSec": [
+      26.5,
+      25.783,
+      35.817
+    ],
+    "hit3PreInputBossPoseRelativeSecApprox": [
+      9.1,
+      9.25
+    ],
+    "samplingMs": 50,
+    "limits": "Pose crossing is subjective/continuous; cannot resolve 50ms cause. Old OFF failure has no video."
+  },
+  "interpretation": [
+    "All three new runs perfect; identical mixed profile previously failed so configuration does not imply inevitable failure.",
+    "Across previous four plus new three automatic trials, hit3 at9750 succeeds4 and fails1; not a statistical success-rate estimate.",
+    "Measured first-video-notice-threshold to hit3 key-overlay interval differs by3 video frames (50ms) between first two and third. This is not isolated detector latency or a monitor/physical-input latency measurement.",
+    "No large support input scheduling error or cumulative video input-spacing drift seen.",
+    "No new service boundary adopted and no further identical repeats requested."
+  ],
+  "retention": {
+    "date": "2026-09-21",
+    "status": "summarized originals retired after user-approved closure",
+    "inventory": "experiment-cleanup.json#current",
+    "meaning": "Historical raw log, source video and scratch paths describe provenance; only current.retainedOriginals are promised to remain. Conditions, outcomes, counterexamples and measurement limits stay in this evidence."
+  }
+}

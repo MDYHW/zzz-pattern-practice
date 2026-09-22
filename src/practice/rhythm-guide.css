@@ -1,0 +1,51 @@
+.guide { width: var(--stage-width); margin: 0 auto; padding: 6px 12px; background: #151617; border-top: 1px solid #494b4a; border-bottom: 1px solid #363837; }
+.timeline { position: relative; height: 104px; overflow: hidden; background: linear-gradient(to bottom, transparent 58px, #292c2c 58px, #292c2c 86px, transparent 86px); }
+.timeline::before { content: ''; position: absolute; top: 72px; left: 0; right: 0; height: 1px; background: #4e5351; }
+.preparation-dodge { position: absolute; top: 0; width: 0; height: 52px; z-index: 3; color: #c3c7c3; font-size: 12px; font-weight: 700; line-height: 16px; text-align: center; pointer-events: none; }
+.preparation-label { position: absolute; left: 50%; transform: translateX(-50%); white-space: nowrap; }
+.preparation-dodge kbd { position: absolute; top: 17px; left: 50%; transform: translateX(-50%); padding: 1px 4px; border: 1px solid #a8aeaa; border-radius: 2px; background: #151617; color: #d6dad4; font: 700 10px/12px ui-monospace, monospace; white-space: nowrap; }
+.preparation-dodge i { position: absolute; top: 38px; left: -5px; width: 10px; height: 10px; border: 2px solid #a8aeaa; background: #151617; transform: rotate(45deg); }
+.preparation-movement { position: absolute; top: 94px; height: 6px; min-width: 10px; border-top: 2px solid #737a75; border-bottom: 2px solid #737a75; background: #303532; z-index: 1; pointer-events: none; }
+.preparation-movement kbd { position: absolute; top: -4px; left: 50%; transform: translate(-50%, -100%); padding: 1px 4px; border: 1px solid #737a75; border-radius: 2px; background: #151617; color: #d6dad4; font: 700 11px/14px ui-monospace, monospace; }
+.preparation-note { margin: 3px 0 0; color: #b8bdb8; font-size: 12px; line-height: 16px; text-align: center; }
+.cue { position: absolute; top: 0; height: 104px; text-align: center; z-index: 2; }
+.cue > span { position: absolute; top: 0; left: 50%; transform: translateX(-50%); white-space: nowrap; font-size: 13px; font-weight: 800; line-height: 18px; color: #ebeee8; }
+.cue i { position: absolute; inset: 0; font-style: normal; }
+.cue i::before { content: ''; position: absolute; top: 58px; left: 0; right: 0; height: 28px; background: #7e848c; border-left: 3px solid #f0f3e9; border-right: 3px solid #f0f3e9; box-shadow: inset 0 2px #ffffff26, inset 0 -3px #00000026; }
+/* The connector groups the input icon and its full valid window. */
+.cue i::after { content: ''; position: absolute; top: 52px; left: 50%; width: 2px; height: 6px; background: #7e848c; transform: translateX(-50%); }
+.cue-symbol { display: grid; place-items: center; position: absolute; top: 21px; left: 50%; transform: translateX(-50%); width: 34px; height: 34px; border: 2px solid #7e848c; background: #111313; border-radius: 3px 3px 10px 3px; }
+.cue .action-icon { width: 28px; height: 28px; margin: 0; }
+.cue-choice, .cue-choice-icon { display: flex; align-items: center; justify-content: center; }
+/* Entry alternatives share one timing window; each keeps its complete icon. */
+.cue-symbol-dual { display: flex; width: 76px; border: 0; background: transparent; gap: 8px; }
+.cue-symbol-dual .cue-choice-icon { width: 34px; height: 34px; border: 2px solid #7e848c; border-radius: 3px 3px 10px 3px; background: #111313; }
+.cue-current .cue-symbol-dual .cue-choice-icon { border-color: var(--accent); background: #30371b; }
+.cue-success .cue-symbol-dual .cue-choice-icon { border-color: var(--outcome-success-fill); }
+.cue-miss .cue-symbol-dual .cue-choice-icon { border-color: var(--outcome-miss-fill); }
+.cue-current i::before { background: var(--accent); border-color: #f0ffb0; }
+.cue-current .cue-symbol:not(.cue-symbol-dual) { border-color: var(--accent); background: #30371b; }
+.cue-current i::after { background: var(--accent); }
+.cue-success i::before { background: var(--outcome-success-fill); }
+.cue-success .cue-symbol { border-color: var(--outcome-success-fill); }
+.cue-success i::after { background: var(--outcome-success-fill); }
+.cue-miss i::before { background: var(--outcome-miss-fill); }
+.cue-miss .cue-symbol { border-color: var(--outcome-miss-fill); }
+.cue-miss i::after { background: var(--outcome-miss-fill); }
+.cue-base-tile i::before, .cue-hide-icon i::after { display: none; }
+/* Both shapes keep their own exact horizontal timing bounds within one belt. */
+.cue-window { position: absolute; top: 58px; left: 0; width: 100%; height: 28px; overflow: visible; }
+.cue-window-base { background: #7e848c; border: 1px solid #f0f3e9; }
+.cue-current .cue-window-base { background: var(--accent); border-color: #f0ffb0; }
+.cue-success .cue-window-base { background: var(--outcome-success-fill); }
+.cue-miss .cue-window-base { background: var(--outcome-miss-fill); }
+.cue-window-hatched { border: 1px solid #f0f3e9; background: repeating-linear-gradient(135deg, transparent 0, transparent 8px, #f0f3e9 8px, #f0f3e9 10px); }
+/* The timing line and tile edges never pulse, scale or ease. */
+.playhead { position: absolute; left: 20%; top: 2px; bottom: 2px; width: 3px; transform: translateX(-50%); background: linear-gradient(to bottom, transparent 6px, var(--accent) 6px, var(--accent) calc(100% - 6px), transparent calc(100% - 6px)); pointer-events: none; z-index: 1; }
+.playhead::before, .playhead::after { content: ''; position: absolute; left: 50%; width: 12px; height: 6px; background: var(--accent); clip-path: polygon(0 0, 100% 0, 50% 100%); }
+.playhead::before { top: 0; transform: translateX(-50%); }
+.playhead::after { bottom: 0; transform: translateX(-50%) rotate(180deg); }
+.input-pulse { position: absolute; left: 20%; top: 56px; width: 24px; height: 32px; margin-left: -12px; border: 2px solid var(--outcome-success-fill); border-radius: 3px 3px 8px 3px; z-index: 4; pointer-events: none; }
+.input-pulse-extra { border-color: var(--outcome-miss-fill); }
+@media (prefers-reduced-motion: reduce) { .cue-symbol { translate: none !important; } .input-pulse { scale: none !important; } }
+@media (max-width: 760px) { .guide { padding-inline: 8px; } }

@@ -1,0 +1,39 @@
+{
+  "version": "1.1.0",
+  "executable_sha256": "2e622495b662cb2d2d7d9518dd9968aee7ed53baddaa48433737a756d45a6ee4",
+  "source_sha256": {
+    "app.manifest": "231cc9e9f39b2213e5c4c332aaf8aed5d5e4f41da1d07c38640acd837ed98cb7",
+    "Build.ps1": "d0ef3228f05da68aad89da395a04b34835701e43eb11c61f1ca8c05dd5ee381e",
+    "CoreTests.cs": "9668baf56ec3ec4622cdcff25914a41b0f46dab8cc38742be32a9e066c1882ff",
+    "ExperimentCore.cs": "2394c1845cba78e1c08f2c891241c4f6d32fcda45daf4be2207ba2bdb27ab072",
+    "ExperimentForm.cs": "4919e3d089fd6d365fd0b06bbb6b9f95c3fb5eb3c5e4a62dc509f178b80b4bdf",
+    "NativeInput.cs": "e97df29e5d8a3f50338dd8d8b1576765db828a9975834aa3fd4e758a7e7c4977",
+    "Program.cs": "dee5fab9fbcf1d2b97572fa10dc4687b68891a17f2fa233a9d30df9d9b6b6d52",
+    "ReadyProbe.cs": "8fc31ad133a6c3781982eba8dd481ff2b78ee759b334b450b3641549ec5d465b",
+    "사용법.md": "a5eb51c28fac3cf54c6e43605dc5af21f7a8aa1d1883cbbc5dc719713ca5a2b2"
+  },
+  "self_tests": {
+    "passed": 41,
+    "failed": 0
+  },
+  "dry_ready": {
+    "status": "completed",
+    "input_events": 8,
+    "fourth_outcome": "미실행",
+    "capture_samples": 32,
+    "max_down_lateness_ms": 21.235599999999977
+  },
+  "recorded_roi_replay": {
+    "cases": 4,
+    "frames": 400,
+    "all_expected_onsets_matched": true,
+    "black_rejected": true
+  },
+  "ui": "DrawToBitmap visually checked; native ComboBox selection text is omitted by this capture method, selected indices verified in source.",
+  "independent_review": "Two issues fixed and regression-tested: dry/live probe mismatch; dynamic minimum gap. Follow-up review found no additional required fixes.",
+  "limitations": [
+    "No live game capture or game input was performed by the agent.",
+    "Recorded clips are development data, not independent detector validation.",
+    "First live cue-relative trial must be recorded to validate capture and actual input phase."
+  ]
+}

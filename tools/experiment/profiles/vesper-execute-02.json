@@ -1,0 +1,92 @@
+{
+  "SchemaVersion": 1,
+  "Id": "vesper-execute-02",
+  "BossId": "vesper",
+  "BossLabel": "베스퍼",
+  "Skill": "Execute_02",
+  "Conditions": "한국어 · 16:9 · 최소 1280×720 / 아리아 → 남궁우 → 수나 / 시작 아리아",
+  "MinimumSpacingMs": 250,
+  "Detector": {
+    "Id": "korean-entry-yellow-shape-v1",
+    "Template": "../notice-template-execute02.png",
+    "ReferenceWidth": 1280,
+    "ReferenceHeight": 720,
+    "X": 368,
+    "Y": 136,
+    "Width": 528,
+    "Height": 28,
+    "MinimumClientWidth": 1280,
+    "Threshold": 0.68,
+    "PollMs": 8,
+    "AbsentMs": 100,
+    "ConfirmationMs": 40,
+    "TimeoutMs": 60000
+  },
+  "Actions": [
+    {
+      "Id": "entry",
+      "Label": "진입 회피",
+      "Key": "RMB",
+      "Group": "A",
+      "MinimumMs": 100,
+      "MaximumMs": 6000,
+      "Timing": {
+        "EarlyMs": 3050,
+        "BaselineMs": 3150,
+        "LateMs": 3300
+      }
+    },
+    {
+      "Id": "hit-1",
+      "Label": "1타",
+      "Key": "Space",
+      "Group": "B",
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 4200,
+        "BaselineMs": 4450,
+        "LateMs": 4700
+      }
+    },
+    {
+      "Id": "hit-2",
+      "Label": "2타",
+      "Key": "Space",
+      "Group": "A",
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 5750,
+        "BaselineMs": 5950,
+        "LateMs": 6200
+      }
+    },
+    {
+      "Id": "hit-3",
+      "Label": "3타",
+      "Key": "Space",
+      "Group": "B",
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 7400,
+        "BaselineMs": 7600,
+        "LateMs": 7850
+      }
+    },
+    {
+      "Id": "hit-4",
+      "Label": "4타",
+      "Key": "Space",
+      "Group": "A",
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 9150,
+        "BaselineMs": 9350,
+        "LateMs": 9600
+      }
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "skill": 1,
+    "case": "R2",
+    "source_video": "ZZZ_2026-09-15_22-14-28.mp4",
+    "fps": 60,
+    "successful_overlay_notes": [
+      {
+        "event": "entry",
+        "key": "rmb",
+        "source_frame": 434,
+        "source_video_seconds": 7.233333333333333
+      },
+      {
+        "event": "attack1",
+        "key": "space",
+        "source_frame": 518,
+        "source_video_seconds": 8.633333333333333
+      },
+      {
+        "event": "attack2",
+        "key": "space",
+        "source_frame": 606,
+        "source_video_seconds": 10.1
+      },
+      {
+        "event": "attack3",
+        "key": "space",
+        "source_frame": 704,
+        "source_video_seconds": 11.733333333333333
+      },
+      {
+        "event": "attack4",
+        "key": "space",
+        "source_frame": 814,
+        "source_video_seconds": 13.566666666666666
+      }
+    ],
+    "use": "Successful input reference in the original video timeline. Adjust timestamps by any trim start; synchronize to playback time. This is a reference point, not measured acceptance-window endpoints."
+  },
+  {
+    "skill": 2,
+    "case": "U2",
+    "source_video": "ZZZ_2026-09-15_23-44-50.mp4",
+    "fps": 60,
+    "successful_overlay_notes": [
+      {
+        "event": "entry",
+        "key": "rmb",
+        "source_frame": 364,
+        "source_video_seconds": 6.066666666666666
+      },
+      {
+        "event": "attack1",
+        "key": "space",
+        "source_frame": 501,
+        "source_video_seconds": 8.35
+      },
+      {
+        "event": "attack2",
+        "key": "space",
+        "source_frame": 591,
+        "source_video_seconds": 9.85
+      },
+      {
+        "event": "attack3",
+        "key": "space",
+        "source_frame": 695,
+        "source_video_seconds": 11.583333333333334
+      },
+      {
+        "event": "attack4",
+        "key": "space",
+        "source_frame": 774,
+        "source_video_seconds": 12.9
+      },
+      {
+        "event": "attack5",
+        "key": "space",
+        "source_frame": 916,
+        "source_video_seconds": 15.266666666666667
+      }
+    ],
+    "use": "Successful input reference in the original video timeline. Adjust timestamps by any trim start; synchronize to playback time. This is a reference point, not measured acceptance-window endpoints."
+  }
+]

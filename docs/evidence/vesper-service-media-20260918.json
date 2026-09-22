@@ -1,0 +1,373 @@
+{
+  "date": "2026-09-18",
+  "alignment": "지원 입력 오버레이 출현 프레임에서 프로그램 기준값을 빼 얻은 공통 영상 원점. OS 입력 시각과 영상 시각의 직접 등치가 아닌 서비스용 정렬. 지원 9개는 기준 간격과 프레임 단위로 일치하며 진입 오버레이 잔차는 1~2프레임. 폭은 종료한 실험 그대로 보존.",
+  "recordings": [
+    {
+      "skill": "Execute_02",
+      "source": "ZZZ_2026-09-18_19-03-34.mp4",
+      "sourceSha256": "624f431d4bc7801ac55d7f29d916f3fe4a9e1cc9da91c4a7f651534ae0fcf21f",
+      "log": "20260918T100337560Z-8f7189f5.json",
+      "logSha256": "b57e681c5e6d8a6c7d4e84f666a3088c639cb49ce7b54702c714d6c57a4c3532",
+      "fps": 60,
+      "firstSourceFrame": 305,
+      "endSourceFrameExclusive": 990,
+      "patternOriginSourceFrame": 314,
+      "patternTimeZeroAtClipTime": 0.15,
+      "sourceOverlayDownFrames": [
+        504,
+        581,
+        671,
+        770,
+        878
+      ],
+      "overlayResidualMs": [
+        16.666666666666515,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "windowsMs": [
+        [
+          3050,
+          3250
+        ],
+        [
+          4200,
+          4650
+        ],
+        [
+          5750,
+          6150
+        ],
+        [
+          7400,
+          7800
+        ],
+        [
+          9150,
+          9600
+        ]
+      ],
+      "referenceMs": [
+        3150,
+        4450,
+        5950,
+        7600,
+        9400
+      ],
+      "clip": "media/vesper-execute-02.mp4",
+      "clipSha256": "ebaf58f3393d52a5e0a9747b0b2242bf536a61f510ade468bcca6f32bfe01082",
+      "firstMatch": {
+        "CaptureBeginMs": 2830.6628,
+        "CaptureEndMs": 2857.8275,
+        "AnalysisEndMs": 2858.8531,
+        "Score": 0.7366375121477162,
+        "Present": true
+      },
+      "inputs": [
+        {
+          "Action": "down",
+          "Key": "RMB",
+          "Attack": 0,
+          "DueMs": 6007.827499999999,
+          "BeginMs": 6007.8444,
+          "EndMs": 6035.7699,
+          "Inserted": 1,
+          "Win32Error": 0
+        },
+        {
+          "Action": "up",
+          "Key": "RMB",
+          "Attack": 0,
+          "DueMs": 6115.7704,
+          "BeginMs": 6115.7735,
+          "EndMs": 6116.2325,
+          "Inserted": 1,
+          "Win32Error": 0
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 1,
+          "DueMs": 7307.827499999999,
+          "BeginMs": 7307.8395,
+          "EndMs": 7309.5326,
+          "Inserted": 1,
+          "Win32Error": 0
+        },
+        {
+          "Action": "up",
+          "Key": "Space",
+          "Attack": 1,
+          "DueMs": 7389.5331,
+          "BeginMs": 7389.7317,
+          "EndMs": 7390.5911,
+          "Inserted": 1,
+          "Win32Error": 0
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 2,
+          "DueMs": 8807.8275,
+          "BeginMs": 8808.0375,
+          "EndMs": 8810.118,
+          "Inserted": 1,
+          "Win32Error": 0
+        },
+        {
+          "Action": "up",
+          "Key": "Space",
+          "Attack": 2,
+          "DueMs": 8890.1185,
+          "BeginMs": 8890.3891,
+          "EndMs": 8891.4976,
+          "Inserted": 1,
+          "Win32Error": 0
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 3,
+          "DueMs": 10457.8275,
+          "BeginMs": 10458.1275,
+          "EndMs": 10460.5699,
+          "Inserted": 1,
+          "Win32Error": 0
+        },
+        {
+          "Action": "up",
+          "Key": "Space",
+          "Attack": 3,
+          "DueMs": 10540.5708,
+          "BeginMs": 10540.5741,
+          "EndMs": 10545.7617,
+          "Inserted": 1,
+          "Win32Error": 0
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 4,
+          "DueMs": 12257.8275,
+          "BeginMs": 12257.8713,
+          "EndMs": 12260.7836,
+          "Inserted": 1,
+          "Win32Error": 0
+        },
+        {
+          "Action": "up",
+          "Key": "Space",
+          "Attack": 4,
+          "DueMs": 12340.7841,
+          "BeginMs": 12340.7874,
+          "EndMs": 12341.3782,
+          "Inserted": 1,
+          "Win32Error": 0
+        }
+      ],
+      "visualReview": "제어 문구 등장부터 마지막 완벽 대응 표시 이후까지, 설정창·F8 표시 없음. 마지막 지원의 자동 연출은 유지."
+    },
+    {
+      "skill": "Execute_01",
+      "source": "ZZZ_2026-09-18_19-09-08.mp4",
+      "sourceSha256": "e8cb87b24c2b3622b75db257692f536e1279e23bdf1d61199d3a845354f944b5",
+      "log": "20260918T100913858Z-e405bacb.json",
+      "logSha256": "77aec4080a7ad7bfeaa92f14e95854f287d2991e32adddbd350b402ed02d04f5",
+      "fps": 60,
+      "firstSourceFrame": 339,
+      "endSourceFrameExclusive": 1260,
+      "patternOriginSourceFrame": 343,
+      "patternTimeZeroAtClipTime": 0.06666666666666667,
+      "sourceOverlayDownFrames": [
+        597,
+        730,
+        805,
+        913,
+        994,
+        1135
+      ],
+      "overlayResidualMs": [
+        33.33333333333303,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "windowsMs": [
+        [
+          4100,
+          4250
+        ],
+        [
+          6250,
+          6600
+        ],
+        [
+          7500,
+          7900
+        ],
+        [
+          9350,
+          9650
+        ],
+        [
+          10650,
+          11050
+        ],
+        [
+          12950,
+          13400
+        ]
+      ],
+      "referenceMs": [
+        4200,
+        6450,
+        7700,
+        9500,
+        10850,
+        13200
+      ],
+      "clip": "media/vesper-execute-01.mp4",
+      "clipSha256": "dcc241feb52e78a7d3d61704a8902d39a7b77b15f492d8a2246f3cf8fccb41b4",
+      "firstMatch": {
+        "CaptureBeginMs": 475.4243,
+        "CaptureEndMs": 495.7887,
+        "AnalysisEndMs": 496.6026,
+        "Score": 0.8294314381270903,
+        "Present": true
+      },
+      "inputs": [
+        {
+          "Action": "down",
+          "Key": "RMB",
+          "Attack": 0,
+          "DueMs": 4695.7887,
+          "BeginMs": 4701.3996,
+          "EndMs": 4729.9281,
+          "Inserted": 1,
+          "Win32Error": 0
+        },
+        {
+          "Action": "up",
+          "Key": "RMB",
+          "Attack": 0,
+          "DueMs": 4809.9286,
+          "BeginMs": 4809.9391,
+          "EndMs": 4810.389,
+          "Inserted": 1,
+          "Win32Error": 0
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 1,
+          "DueMs": 6945.7887,
+          "BeginMs": 6946.3438,
+          "EndMs": 6948.4201,
+          "Inserted": 1,
+          "Win32Error": 0
+        },
+        {
+          "Action": "up",
+          "Key": "Space",
+          "Attack": 1,
+          "DueMs": 7028.4853,
+          "BeginMs": 7028.5399,
+          "EndMs": 7029.2429,
+          "Inserted": 1,
+          "Win32Error": 0
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 2,
+          "DueMs": 8195.7887,
+          "BeginMs": 8195.814,
+          "EndMs": 8198.1763,
+          "Inserted": 1,
+          "Win32Error": 0
+        },
+        {
+          "Action": "up",
+          "Key": "Space",
+          "Attack": 2,
+          "DueMs": 8278.1766,
+          "BeginMs": 8278.202,
+          "EndMs": 8278.9379,
+          "Inserted": 1,
+          "Win32Error": 0
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 3,
+          "DueMs": 9995.7887,
+          "BeginMs": 9995.8046,
+          "EndMs": 9997.4995,
+          "Inserted": 1,
+          "Win32Error": 0
+        },
+        {
+          "Action": "up",
+          "Key": "Space",
+          "Attack": 3,
+          "DueMs": 10077.5,
+          "BeginMs": 10077.5019,
+          "EndMs": 10077.8934,
+          "Inserted": 1,
+          "Win32Error": 0
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 4,
+          "DueMs": 11345.7887,
+          "BeginMs": 11345.8047,
+          "EndMs": 11347.5318,
+          "Inserted": 1,
+          "Win32Error": 0
+        },
+        {
+          "Action": "up",
+          "Key": "Space",
+          "Attack": 4,
+          "DueMs": 11427.5321,
+          "BeginMs": 11427.5357,
+          "EndMs": 11428.3971,
+          "Inserted": 1,
+          "Win32Error": 0
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 5,
+          "DueMs": 13695.7887,
+          "BeginMs": 13695.8246,
+          "EndMs": 13698.1416,
+          "Inserted": 1,
+          "Win32Error": 0
+        },
+        {
+          "Action": "up",
+          "Key": "Space",
+          "Attack": 5,
+          "DueMs": 13778.1423,
+          "BeginMs": 13778.1447,
+          "EndMs": 13778.7349,
+          "Inserted": 1,
+          "Win32Error": 0
+        }
+      ],
+      "visualReview": "제어 문구 등장부터 마지막 완벽 대응 표시 이후까지, 설정창·F8 표시 없음. 마지막 지원의 자동 연출은 유지."
+    }
+  ],
+  "retention": {
+    "date": "2026-09-21",
+    "status": "summarized originals retired after user-approved closure",
+    "inventory": "experiment-cleanup.json#current",
+    "meaning": "Historical raw log, source video and scratch paths describe provenance; only current.retainedOriginals are promised to remain. Conditions, outcomes, counterexamples and measurement limits stay in this evidence."
+  }
+}

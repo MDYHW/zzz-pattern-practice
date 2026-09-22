@@ -1,0 +1,4292 @@
+{
+  "date": "2026-09-20",
+  "question": "Does the actual Execute_01 web lane appear about100ms ahead of its displayed video, compared with Execute_02?",
+  "scope": "Actual unchanged video assets, same Vite dev server, Chromium153.0.8010.12 headless compositor. No game input or product timing changes.",
+  "runOrder": [
+    "02",
+    "01",
+    "01",
+    "02"
+  ],
+  "sampling": "Three samples about550/350/150ms before the early edge, at entry/first support/final support;18 per pattern. RMB entry, playbackRate1, viewport1280x1080, DPR1.",
+  "method": "Same compositor screenshot: central game pixels matched against EVERY decoded served-clip frame by full RGB MAE; tile leading edge and playhead center detected independently. guideTime=cueStart+(playheadCenter-leadingEdge)*3/timelineWidth. All timestamps are clip seconds.",
+  "summary": [
+    {
+      "pattern": "01",
+      "samples": 18,
+      "resolve100msCount": 18,
+      "medianLaneLeadMs": -9.558823529411953,
+      "minLaneLeadMs": -38.72549019607874,
+      "maxLaneLeadMs": 2.450980392157298,
+      "toleranceConditionedLeadRangeMs": [
+        -59.31372549019633,
+        22.549019607843075
+      ],
+      "sensitivityLeadRangeMs": [
+        -59.31372549019633,
+        22.549019607843075
+      ]
+    },
+    {
+      "pattern": "02",
+      "samples": 18,
+      "resolve100msCount": 18,
+      "medianLaneLeadMs": -8.333333333333748,
+      "minLaneLeadMs": -40.196078431373294,
+      "maxLaneLeadMs": 32.843137254904065,
+      "toleranceConditionedLeadRangeMs": [
+        -95.09803921568684,
+        63.23529411764686
+      ],
+      "sensitivityLeadRangeMs": [
+        -193.137254901961,
+        113.23529411764667
+      ]
+    }
+  ],
+  "uncertaintyNote": "Matching tolerances 0.8 and 1.5 MAE are empirical sensitivity thresholds, not statistical confidence bounds. Two-pixel allowance models edge rasterization. Identical/near-identical source frames are retained as alternatives.",
+  "calibrations": [
+    {
+      "pattern": "02",
+      "requestedTime": 4,
+      "frame": 242,
+      "videoTime": 4.033333333333333,
+      "mae": 2.530902777777778,
+      "topMatches": [
+        {
+          "frame": 242,
+          "mae": 2.530902777777778
+        },
+        {
+          "frame": 241,
+          "mae": 2.531412037037037
+        },
+        {
+          "frame": 240,
+          "mae": 2.531435185185185
+        },
+        {
+          "frame": 243,
+          "mae": 2.5316435185185187
+        },
+        {
+          "frame": 239,
+          "mae": 14.996157407407408
+        },
+        {
+          "frame": 238,
+          "mae": 21.847638888888888
+        },
+        {
+          "frame": 237,
+          "mae": 21.847939814814815
+        }
+      ],
+      "plausibleFrames": [
+        240,
+        241,
+        242,
+        243
+      ],
+      "plausibleToleranceMAE": 0.8,
+      "nearestDistantMatch": {
+        "frame": 236,
+        "mae": 21.84835648148148
+      },
+      "sixFrameComparators": [
+        {
+          "frame": 236,
+          "mae": 21.84835648148148
+        },
+        {
+          "frame": 248,
+          "mae": 32.337916666666665
+        }
+      ],
+      "resolves100ms": true,
+      "sensitivityFramesMAE15": [
+        240,
+        241,
+        242,
+        243
+      ]
+    },
+    {
+      "pattern": "01",
+      "requestedTime": 4,
+      "frame": 240,
+      "videoTime": 4.0,
+      "mae": 2.5635879629629628,
+      "topMatches": [
+        {
+          "frame": 240,
+          "mae": 2.5635879629629628
+        },
+        {
+          "frame": 241,
+          "mae": 2.5721296296296297
+        },
+        {
+          "frame": 239,
+          "mae": 8.665625
+        },
+        {
+          "frame": 243,
+          "mae": 9.003125
+        },
+        {
+          "frame": 242,
+          "mae": 9.003981481481482
+        },
+        {
+          "frame": 244,
+          "mae": 9.004282407407407
+        },
+        {
+          "frame": 238,
+          "mae": 10.453333333333333
+        }
+      ],
+      "plausibleFrames": [
+        240,
+        241
+      ],
+      "plausibleToleranceMAE": 0.8,
+      "nearestDistantMatch": {
+        "frame": 246,
+        "mae": 13.269953703703704
+      },
+      "sixFrameComparators": [
+        {
+          "frame": 234,
+          "mae": 14.698842592592593
+        },
+        {
+          "frame": 246,
+          "mae": 13.269953703703704
+        }
+      ],
+      "resolves100ms": true,
+      "sensitivityFramesMAE15": [
+        240,
+        241
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "pattern": "01",
+      "sha256": "ee3151f6af2f44b4a032fae9cd8ea409185a0b37a5ef71778533398f4173223b",
+      "frames": 1008
+    },
+    {
+      "pattern": "02",
+      "sha256": "9264da13b57d5c167bad0aca48945fccafc23b0e75c95682336f32a59e9c934f",
+      "frames": 738
+    }
+  ],
+  "conclusion": "The sampled real Execute_01 clip did not reproduce a persistent100ms lane lead. All18 EX01 samples retain the same -59.3..+22.55ms tolerance-conditioned range when tolerance is increased. This is not a guaranteed confidence interval or a50ms gate pass. EX02 entry is weakly discriminative: its broad sensitivity range crosses100ms and must not be used to certify a bound.",
+  "limits": [
+    "Headless compositor is not user monitor scanout or the users browser/hardware configuration.",
+    "These tests do not validate game timing windows or the physical/detection origin used to fit the recording.",
+    "Similar consecutive video frames prevent exact one-frame timing for some samples.",
+    "Repeated measurements sample only selected points, not every displayed frame."
+  ],
+  "review": "Read-only independent reviewer checked formula, crop, six annotated samples, scope. Corrected coarse-shortlist gap using exhaustive matching; added tolerance sensitivity. No retake required.",
+  "runs": [
+    {
+      "run": 1,
+      "pattern": "02",
+      "entryKey": "MouseRight",
+      "errors": [],
+      "quality": {
+        "droppedVideoFrames": 1,
+        "totalVideoFrames": 558
+      },
+      "playbackRate": 1,
+      "calibration": {
+        "filename": "calibration-ex02.png",
+        "requestedTime": 4,
+        "videoBox": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        }
+      }
+    },
+    {
+      "run": 2,
+      "pattern": "01",
+      "entryKey": "MouseRight",
+      "errors": [],
+      "quality": {
+        "droppedVideoFrames": 6,
+        "totalVideoFrames": 789
+      },
+      "playbackRate": 1,
+      "calibration": {
+        "filename": "calibration-ex01.png",
+        "requestedTime": 4,
+        "videoBox": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        }
+      }
+    },
+    {
+      "run": 3,
+      "pattern": "01",
+      "entryKey": "MouseRight",
+      "errors": [],
+      "quality": {
+        "droppedVideoFrames": 14,
+        "totalVideoFrames": 789
+      },
+      "playbackRate": 1
+    },
+    {
+      "run": 4,
+      "pattern": "02",
+      "entryKey": "MouseRight",
+      "errors": [],
+      "quality": {
+        "droppedVideoFrames": 0,
+        "totalVideoFrames": 561
+      },
+      "playbackRate": 1
+    }
+  ],
+  "artifactRoot": "<PRIVATE_HOME>\\Documents\\Codex\\actual-media-sync",
+  "artifacts": [
+    {
+      "path": "capture.cjs",
+      "sha256": "0f8ee383ba7f25d14c8ca3b63c888745018a84708b989e61d0ade5b75f6dfc14"
+    },
+    {
+      "path": "analyze.py",
+      "sha256": "671a60cfd934b420c781a6c61ccd27e3c0be7dcbe5cb7528dc346ddc0c3ba6ab"
+    },
+    {
+      "path": "capture\\capture.json",
+      "sha256": "00f0c2bc21440b871bc7da2ea270b44d10b0981f3440b6b37b876fb67963c008"
+    },
+    {
+      "path": "pixel-analysis.json",
+      "sha256": "17cdfabc051384e94d5fec3a0747b03190fee7d4f62598988c2454989456928b"
+    },
+    {
+      "path": "pixel-review.jpg",
+      "sha256": "2d0e687cf93c32268a708fb3075657d77dcf25ed9a209d9721a55880f5c5fc42"
+    }
+  ],
+  "samples": [
+    {
+      "run": 1,
+      "pattern": "02",
+      "cueId": "entry",
+      "cueStart": 3.233333333333333,
+      "filename": "run1-ex02-entry-550.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 166,
+        "videoTime": 2.7666666666666666,
+        "mae": 2.8542592592592593,
+        "topMatches": [
+          {
+            "frame": 166,
+            "mae": 2.8542592592592593
+          },
+          {
+            "frame": 167,
+            "mae": 2.8697685185185184
+          },
+          {
+            "frame": 168,
+            "mae": 2.8734027777777778
+          },
+          {
+            "frame": 169,
+            "mae": 3.6471064814814813
+          },
+          {
+            "frame": 170,
+            "mae": 3.660763888888889
+          },
+          {
+            "frame": 165,
+            "mae": 3.6721064814814817
+          },
+          {
+            "frame": 171,
+            "mae": 3.682199074074074
+          }
+        ],
+        "plausibleFrames": [
+          166,
+          167,
+          168,
+          169
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 172,
+          "mae": 3.8245833333333334
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 160,
+            "mae": 4.605833333333333
+          },
+          {
+            "frame": 172,
+            "mae": 3.8245833333333334
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          161,
+          162,
+          163,
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 479.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 2.7284313725490192,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -38.23529411764737,
+      "leadIntervalMs": [
+        -93.13725490196137,
+        -33.33333333333364
+      ],
+      "sensitivityLeadIntervalMs": [
+        -193.137254901961,
+        49.999999999999844
+      ],
+      "screenshotSha256": "fd994e711df38dc1d5c76c95c7ecbb2eadabea3f624c14bd46873568fddb92d5"
+    },
+    {
+      "run": 1,
+      "pattern": "02",
+      "cueId": "entry",
+      "cueStart": 3.233333333333333,
+      "filename": "run1-ex02-entry-350.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 177,
+        "videoTime": 2.95,
+        "mae": 2.848564814814815,
+        "topMatches": [
+          {
+            "frame": 177,
+            "mae": 2.848564814814815
+          },
+          {
+            "frame": 176,
+            "mae": 2.853310185185185
+          },
+          {
+            "frame": 178,
+            "mae": 2.8563657407407406
+          },
+          {
+            "frame": 179,
+            "mae": 3.1536574074074073
+          },
+          {
+            "frame": 175,
+            "mae": 3.2237037037037037
+          },
+          {
+            "frame": 180,
+            "mae": 3.607083333333333
+          },
+          {
+            "frame": 174,
+            "mae": 3.812361111111111
+          }
+        ],
+        "plausibleFrames": [
+          175,
+          176,
+          177,
+          178,
+          179,
+          180
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 183,
+          "mae": 4.166180555555556
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 171,
+            "mae": 4.266967592592593
+          },
+          {
+            "frame": 183,
+            "mae": 4.166180555555556
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178,
+          179,
+          180,
+          181,
+          182,
+          183
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 405.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 2.909803921568627,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -40.196078431373294,
+      "leadIntervalMs": [
+        -95.09803921568684,
+        -1.9607843137259096
+      ],
+      "sensitivityLeadIntervalMs": [
+        -145.09803921568667,
+        98.03921568627374
+      ],
+      "screenshotSha256": "1ede1b0d738de00c6f0025f5a581218a8866e62b1d03dbc60efa035c163f0193"
+    },
+    {
+      "run": 1,
+      "pattern": "02",
+      "cueId": "entry",
+      "cueStart": 3.233333333333333,
+      "filename": "run1-ex02-entry-150.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 188,
+        "videoTime": 3.1333333333333333,
+        "mae": 2.8712962962962965,
+        "topMatches": [
+          {
+            "frame": 188,
+            "mae": 2.8712962962962965
+          },
+          {
+            "frame": 189,
+            "mae": 4.783888888888889
+          },
+          {
+            "frame": 190,
+            "mae": 4.8275
+          },
+          {
+            "frame": 191,
+            "mae": 5.701087962962963
+          },
+          {
+            "frame": 192,
+            "mae": 5.719004629629629
+          },
+          {
+            "frame": 187,
+            "mae": 6.040092592592592
+          },
+          {
+            "frame": 184,
+            "mae": 6.052013888888889
+          }
+        ],
+        "plausibleFrames": [
+          188
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 194,
+          "mae": 6.407430555555556
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 182,
+            "mae": 6.460162037037037
+          },
+          {
+            "frame": 194,
+            "mae": 6.407430555555556
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          188
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 330.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 3.093627450980392,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -39.70588235294148,
+      "leadIntervalMs": [
+        -44.6078431372552,
+        -34.80392156862776
+      ],
+      "sensitivityLeadIntervalMs": [
+        -44.6078431372552,
+        -34.80392156862776
+      ],
+      "screenshotSha256": "7bdf8cfcd929eadb61e09182c2c4f057644a200ed48530b36463320193556919"
+    },
+    {
+      "run": 1,
+      "pattern": "02",
+      "cueId": "attack-1",
+      "cueStart": 4.383333333333334,
+      "filename": "run1-ex02-attack-1-550.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 232,
+        "videoTime": 3.8666666666666667,
+        "mae": 2.39875,
+        "topMatches": [
+          {
+            "frame": 232,
+            "mae": 2.39875
+          },
+          {
+            "frame": 233,
+            "mae": 2.399814814814815
+          },
+          {
+            "frame": 234,
+            "mae": 2.409212962962963
+          },
+          {
+            "frame": 235,
+            "mae": 19.38601851851852
+          },
+          {
+            "frame": 231,
+            "mae": 21.102847222222223
+          },
+          {
+            "frame": 238,
+            "mae": 27.273287037037036
+          },
+          {
+            "frame": 237,
+            "mae": 27.273680555555554
+          }
+        ],
+        "plausibleFrames": [
+          232,
+          233,
+          234
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 238,
+          "mae": 27.273287037037036
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 226,
+            "mae": 72.36949074074074
+          },
+          {
+            "frame": 238,
+            "mae": 27.273287037037036
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          232,
+          233,
+          234
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 500.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 3.8269607843137257,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -39.70588235294103,
+      "leadIntervalMs": [
+        -77.94117647058798,
+        -34.8039215686273
+      ],
+      "sensitivityLeadIntervalMs": [
+        -77.94117647058798,
+        -34.8039215686273
+      ],
+      "screenshotSha256": "9dbdf57f4e93e80e2e2253fc7b220bdccbf073d0be181cf5e3afb7b05631694e"
+    },
+    {
+      "run": 1,
+      "pattern": "02",
+      "cueId": "attack-1",
+      "cueStart": 4.383333333333334,
+      "filename": "run1-ex02-attack-1-350.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 243,
+        "videoTime": 4.05,
+        "mae": 2.5584953703703706,
+        "topMatches": [
+          {
+            "frame": 243,
+            "mae": 2.5584953703703706
+          },
+          {
+            "frame": 242,
+            "mae": 2.5586805555555556
+          },
+          {
+            "frame": 241,
+            "mae": 2.5588194444444445
+          },
+          {
+            "frame": 240,
+            "mae": 2.560277777777778
+          },
+          {
+            "frame": 239,
+            "mae": 14.980601851851851
+          },
+          {
+            "frame": 238,
+            "mae": 21.821620370370372
+          },
+          {
+            "frame": 237,
+            "mae": 21.821921296296296
+          }
+        ],
+        "plausibleFrames": [
+          240,
+          241,
+          242,
+          243
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 237,
+          "mae": 21.821921296296296
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 237,
+            "mae": 21.821921296296296
+          },
+          {
+            "frame": 249,
+            "mae": 32.30634259259259
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          240,
+          241,
+          242,
+          243
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 425.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 4.010784313725491,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -39.215686274508776,
+      "leadIntervalMs": [
+        -44.1176470588225,
+        15.686274509804772
+      ],
+      "sensitivityLeadIntervalMs": [
+        -44.1176470588225,
+        15.686274509804772
+      ],
+      "screenshotSha256": "f391f022d68a6556e031729cc5f9419e86dd4ea236e6b9056d412ec30614cb8e"
+    },
+    {
+      "run": 1,
+      "pattern": "02",
+      "cueId": "attack-1",
+      "cueStart": 4.383333333333334,
+      "filename": "run1-ex02-attack-1-150.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 255,
+        "videoTime": 4.25,
+        "mae": 2.5543518518518518,
+        "topMatches": [
+          {
+            "frame": 255,
+            "mae": 2.5543518518518518
+          },
+          {
+            "frame": 256,
+            "mae": 2.558611111111111
+          },
+          {
+            "frame": 257,
+            "mae": 2.5901157407407407
+          },
+          {
+            "frame": 254,
+            "mae": 10.61
+          },
+          {
+            "frame": 258,
+            "mae": 13.524375
+          },
+          {
+            "frame": 253,
+            "mae": 14.701412037037038
+          },
+          {
+            "frame": 252,
+            "mae": 14.794328703703703
+          }
+        ],
+        "plausibleFrames": [
+          255,
+          256,
+          257
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 261,
+          "mae": 15.642013888888888
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 249,
+            "mae": 20.416597222222222
+          },
+          {
+            "frame": 261,
+            "mae": 15.642013888888888
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          255,
+          256,
+          257
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 337.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 4.226470588235294,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -23.5294117647058,
+      "leadIntervalMs": [
+        -61.76470588235274,
+        -18.627450980392073
+      ],
+      "sensitivityLeadIntervalMs": [
+        -61.76470588235274,
+        -18.627450980392073
+      ],
+      "screenshotSha256": "64426b9edf0f4a14fddeee1297303d4c219de6139650af89e7845c65c4d4581a"
+    },
+    {
+      "run": 1,
+      "pattern": "02",
+      "cueId": "attack-4",
+      "cueStart": 9.333333333333334,
+      "filename": "run1-ex02-attack-4-550.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 529,
+        "videoTime": 8.816666666666666,
+        "mae": 2.801296296296296,
+        "topMatches": [
+          {
+            "frame": 529,
+            "mae": 2.801296296296296
+          },
+          {
+            "frame": 527,
+            "mae": 2.8181481481481483
+          },
+          {
+            "frame": 528,
+            "mae": 2.821435185185185
+          },
+          {
+            "frame": 526,
+            "mae": 20.963819444444443
+          },
+          {
+            "frame": 531,
+            "mae": 27.470717592592592
+          },
+          {
+            "frame": 530,
+            "mae": 27.470833333333335
+          },
+          {
+            "frame": 533,
+            "mae": 31.639444444444443
+          }
+        ],
+        "plausibleFrames": [
+          527,
+          528,
+          529
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 535,
+          "mae": 32.42252314814815
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 523,
+            "mae": 42.99090277777778
+          },
+          {
+            "frame": 535,
+            "mae": 32.42252314814815
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          527,
+          528,
+          529
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 486.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 8.811274509803923,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -5.392156862743747,
+      "leadIntervalMs": [
+        -10.294117647057472,
+        32.8431372549032
+      ],
+      "sensitivityLeadIntervalMs": [
+        -10.294117647057472,
+        32.8431372549032
+      ],
+      "screenshotSha256": "0e244f5a87733693f4939ee496ad327756a242b6ff511c65f8539d45e00e9c98"
+    },
+    {
+      "run": 1,
+      "pattern": "02",
+      "cueId": "attack-4",
+      "cueStart": 9.333333333333334,
+      "filename": "run1-ex02-attack-4-350.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 537,
+        "videoTime": 8.95,
+        "mae": 2.845763888888889,
+        "topMatches": [
+          {
+            "frame": 537,
+            "mae": 2.845763888888889
+          },
+          {
+            "frame": 538,
+            "mae": 2.847800925925926
+          },
+          {
+            "frame": 539,
+            "mae": 12.24224537037037
+          },
+          {
+            "frame": 540,
+            "mae": 17.038287037037037
+          },
+          {
+            "frame": 541,
+            "mae": 17.039050925925928
+          },
+          {
+            "frame": 542,
+            "mae": 17.041504629629628
+          },
+          {
+            "frame": 536,
+            "mae": 17.85611111111111
+          }
+        ],
+        "plausibleFrames": [
+          537,
+          538
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 543,
+          "mae": 24.27226851851852
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 531,
+            "mae": 31.02715277777778
+          },
+          {
+            "frame": 543,
+            "mae": 24.27226851851852
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          537,
+          538
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 416.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 8.982843137254903,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": 32.843137254904065,
+      "leadIntervalMs": [
+        11.274509803922843,
+        37.745098039217794
+      ],
+      "sensitivityLeadIntervalMs": [
+        11.274509803922843,
+        37.745098039217794
+      ],
+      "screenshotSha256": "1b29eb92478f78c5dd6f499aea02ae887f0289ad35a2a1251af767c3e834ef64"
+    },
+    {
+      "run": 1,
+      "pattern": "02",
+      "cueId": "attack-4",
+      "cueStart": 9.333333333333334,
+      "filename": "run1-ex02-attack-4-150.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 551,
+        "videoTime": 9.183333333333334,
+        "mae": 2.749050925925926,
+        "topMatches": [
+          {
+            "frame": 551,
+            "mae": 2.749050925925926
+          },
+          {
+            "frame": 550,
+            "mae": 2.7500925925925928
+          },
+          {
+            "frame": 549,
+            "mae": 23.535046296296297
+          },
+          {
+            "frame": 548,
+            "mae": 23.544583333333332
+          },
+          {
+            "frame": 552,
+            "mae": 25.517430555555556
+          },
+          {
+            "frame": 547,
+            "mae": 31.886319444444446
+          },
+          {
+            "frame": 545,
+            "mae": 31.894189814814816
+          }
+        ],
+        "plausibleFrames": [
+          550,
+          551
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 545,
+          "mae": 31.894189814814816
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 545,
+            "mae": 31.894189814814816
+          },
+          {
+            "frame": 557,
+            "mae": 43.43379629629629
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          550,
+          551
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 330.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 9.193627450980392,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": 10.294117647058343,
+      "leadIntervalMs": [
+        5.392156862744617,
+        31.862745098039564
+      ],
+      "sensitivityLeadIntervalMs": [
+        5.392156862744617,
+        31.862745098039564
+      ],
+      "screenshotSha256": "0d982d2dccf7dfe7027f94e6545c30d4cd14417c707be0a85873fb9c6dcbae54"
+    },
+    {
+      "run": 2,
+      "pattern": "01",
+      "cueId": "entry",
+      "cueStart": 4.283333333333333,
+      "filename": "run2-ex01-entry-550.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 226,
+        "videoTime": 3.7666666666666666,
+        "mae": 2.620787037037037,
+        "topMatches": [
+          {
+            "frame": 226,
+            "mae": 2.620787037037037
+          },
+          {
+            "frame": 227,
+            "mae": 2.623449074074074
+          },
+          {
+            "frame": 225,
+            "mae": 2.634074074074074
+          },
+          {
+            "frame": 223,
+            "mae": 7.939212962962963
+          },
+          {
+            "frame": 224,
+            "mae": 7.951412037037037
+          },
+          {
+            "frame": 228,
+            "mae": 8.709375
+          },
+          {
+            "frame": 222,
+            "mae": 10.211921296296296
+          }
+        ],
+        "plausibleFrames": [
+          225,
+          226,
+          227
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 220,
+          "mae": 11.124930555555556
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 220,
+            "mae": 11.124930555555556
+          },
+          {
+            "frame": 232,
+            "mae": 13.110416666666667
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          225,
+          226,
+          227
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 486.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 3.7612745098039215,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -5.392156862745079,
+      "leadIntervalMs": [
+        -26.960784313725412,
+        16.176470588235254
+      ],
+      "sensitivityLeadIntervalMs": [
+        -26.960784313725412,
+        16.176470588235254
+      ],
+      "screenshotSha256": "be1558a4a08c7a93357e617275640c5f011b0f931da22ef95f4fcf125fdd48d2"
+    },
+    {
+      "run": 2,
+      "pattern": "01",
+      "cueId": "entry",
+      "cueStart": 4.283333333333333,
+      "filename": "run2-ex01-entry-350.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 238,
+        "videoTime": 3.966666666666667,
+        "mae": 2.5507407407407405,
+        "topMatches": [
+          {
+            "frame": 238,
+            "mae": 2.5507407407407405
+          },
+          {
+            "frame": 237,
+            "mae": 2.553634259259259
+          },
+          {
+            "frame": 239,
+            "mae": 7.049189814814815
+          },
+          {
+            "frame": 235,
+            "mae": 7.054907407407407
+          },
+          {
+            "frame": 236,
+            "mae": 7.0715509259259255
+          },
+          {
+            "frame": 240,
+            "mae": 10.642060185185185
+          },
+          {
+            "frame": 241,
+            "mae": 10.644537037037036
+          }
+        ],
+        "plausibleFrames": [
+          237,
+          238
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 232,
+          "mae": 11.418009259259259
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 232,
+            "mae": 11.418009259259259
+          },
+          {
+            "frame": 244,
+            "mae": 12.637939814814814
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          237,
+          238
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 404.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 3.962254901960784,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -4.411764705882781,
+      "leadIntervalMs": [
+        -9.313725490196507,
+        17.156862745097552
+      ],
+      "sensitivityLeadIntervalMs": [
+        -9.313725490196507,
+        17.156862745097552
+      ],
+      "screenshotSha256": "3685f911fb76b7484e61a9654df3482ea33475eda117be3da66153e0a1d19662"
+    },
+    {
+      "run": 2,
+      "pattern": "01",
+      "cueId": "entry",
+      "cueStart": 4.283333333333333,
+      "filename": "run2-ex01-entry-150.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 249,
+        "videoTime": 4.15,
+        "mae": 2.5277314814814815,
+        "topMatches": [
+          {
+            "frame": 249,
+            "mae": 2.5277314814814815
+          },
+          {
+            "frame": 248,
+            "mae": 2.5388425925925926
+          },
+          {
+            "frame": 247,
+            "mae": 7.892407407407408
+          },
+          {
+            "frame": 251,
+            "mae": 7.951226851851852
+          },
+          {
+            "frame": 252,
+            "mae": 7.951967592592593
+          },
+          {
+            "frame": 250,
+            "mae": 7.952037037037037
+          },
+          {
+            "frame": 246,
+            "mae": 7.955949074074074
+          }
+        ],
+        "plausibleFrames": [
+          248,
+          249
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 243,
+          "mae": 11.862037037037037
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 243,
+            "mae": 11.862037037037037
+          },
+          {
+            "frame": 255,
+            "mae": 17.480393518518518
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          248,
+          249
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 330.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 4.143627450980392,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -6.372549019608265,
+      "leadIntervalMs": [
+        -11.27450980392199,
+        15.196078431372069
+      ],
+      "sensitivityLeadIntervalMs": [
+        -11.27450980392199,
+        15.196078431372069
+      ],
+      "screenshotSha256": "469f8b20d4d8b047f9ac101fd9e35f0842db433ed01c6dc5df74aa197d9f1515"
+    },
+    {
+      "run": 2,
+      "pattern": "01",
+      "cueId": "attack-1",
+      "cueStart": 6.433333333333334,
+      "filename": "run2-ex01-attack-1-550.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 354,
+        "videoTime": 5.9,
+        "mae": 3.4175925925925927,
+        "topMatches": [
+          {
+            "frame": 354,
+            "mae": 3.4175925925925927
+          },
+          {
+            "frame": 355,
+            "mae": 3.4209722222222223
+          },
+          {
+            "frame": 356,
+            "mae": 3.4375925925925928
+          },
+          {
+            "frame": 353,
+            "mae": 7.569305555555555
+          },
+          {
+            "frame": 357,
+            "mae": 7.951666666666667
+          },
+          {
+            "frame": 358,
+            "mae": 7.986319444444445
+          },
+          {
+            "frame": 351,
+            "mae": 11.064675925925926
+          }
+        ],
+        "plausibleFrames": [
+          354,
+          355,
+          356
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 348,
+          "mae": 13.387407407407407
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 348,
+            "mae": 13.387407407407407
+          },
+          {
+            "frame": 360,
+            "mae": 13.865370370370371
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          354,
+          355,
+          356
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 492.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 5.89656862745098,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -3.4313725490200397,
+      "leadIntervalMs": [
+        -41.666666666666984,
+        1.470588235293686
+      ],
+      "sensitivityLeadIntervalMs": [
+        -41.666666666666984,
+        1.470588235293686
+      ],
+      "screenshotSha256": "fc34b8e7a762bf6c4dff7e2f0284fd288d5440f3082814480f719384cc1c4b7b"
+    },
+    {
+      "run": 2,
+      "pattern": "01",
+      "cueId": "attack-1",
+      "cueStart": 6.433333333333334,
+      "filename": "run2-ex01-attack-1-350.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 369,
+        "videoTime": 6.15,
+        "mae": 3.3294907407407406,
+        "topMatches": [
+          {
+            "frame": 369,
+            "mae": 3.3294907407407406
+          },
+          {
+            "frame": 367,
+            "mae": 3.3533796296296297
+          },
+          {
+            "frame": 368,
+            "mae": 3.3791435185185184
+          },
+          {
+            "frame": 366,
+            "mae": 8.322430555555556
+          },
+          {
+            "frame": 370,
+            "mae": 9.017847222222223
+          },
+          {
+            "frame": 365,
+            "mae": 10.785810185185186
+          },
+          {
+            "frame": 363,
+            "mae": 12.769074074074075
+          }
+        ],
+        "plausibleFrames": [
+          367,
+          368,
+          369
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 363,
+          "mae": 12.769074074074075
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 363,
+            "mae": 12.769074074074075
+          },
+          {
+            "frame": 375,
+            "mae": 16.176643518518517
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          367,
+          368,
+          369
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 397.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 6.129411764705883,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -20.588235294117574,
+      "leadIntervalMs": [
+        -25.4901960784313,
+        17.647058823530255
+      ],
+      "sensitivityLeadIntervalMs": [
+        -25.4901960784313,
+        17.647058823530255
+      ],
+      "screenshotSha256": "8bb218f50744defcbbf7362c4b1388406553c79cc2dd230b2d94b6e698ff4612"
+    },
+    {
+      "run": 2,
+      "pattern": "01",
+      "cueId": "attack-1",
+      "cueStart": 6.433333333333334,
+      "filename": "run2-ex01-attack-1-150.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 379,
+        "videoTime": 6.316666666666666,
+        "mae": 3.3291898148148147,
+        "topMatches": [
+          {
+            "frame": 379,
+            "mae": 3.3291898148148147
+          },
+          {
+            "frame": 377,
+            "mae": 3.3294444444444444
+          },
+          {
+            "frame": 378,
+            "mae": 3.351087962962963
+          },
+          {
+            "frame": 376,
+            "mae": 12.778587962962963
+          },
+          {
+            "frame": 380,
+            "mae": 13.436990740740741
+          },
+          {
+            "frame": 375,
+            "mae": 14.679328703703703
+          },
+          {
+            "frame": 374,
+            "mae": 14.746689814814815
+          }
+        ],
+        "plausibleFrames": [
+          377,
+          378,
+          379
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 373,
+          "mae": 17.432662037037037
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 373,
+            "mae": 17.432662037037037
+          },
+          {
+            "frame": 385,
+            "mae": 22.811458333333334
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          377,
+          378,
+          379
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 336.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 6.278921568627451,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -37.74509803921511,
+      "leadIntervalMs": [
+        -42.64705882352884,
+        0.49019607843183266
+      ],
+      "sensitivityLeadIntervalMs": [
+        -42.64705882352884,
+        0.49019607843183266
+      ],
+      "screenshotSha256": "3435fde9c91956a474a439fb2589f3bc4b91c28eee0509e0990268bad09d8823"
+    },
+    {
+      "run": 2,
+      "pattern": "01",
+      "cueId": "attack-5",
+      "cueStart": 13.133333333333333,
+      "filename": "run2-ex01-attack-5-550.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 759,
+        "videoTime": 12.65,
+        "mae": 2.770115740740741,
+        "topMatches": [
+          {
+            "frame": 759,
+            "mae": 2.770115740740741
+          },
+          {
+            "frame": 758,
+            "mae": 2.9235416666666665
+          },
+          {
+            "frame": 757,
+            "mae": 2.9292824074074075
+          },
+          {
+            "frame": 760,
+            "mae": 5.0368055555555555
+          },
+          {
+            "frame": 761,
+            "mae": 8.096967592592593
+          },
+          {
+            "frame": 762,
+            "mae": 8.106157407407407
+          },
+          {
+            "frame": 756,
+            "mae": 8.73550925925926
+          }
+        ],
+        "plausibleFrames": [
+          757,
+          758,
+          759
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 765,
+          "mae": 10.119074074074074
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 753,
+            "mae": 11.518587962962963
+          },
+          {
+            "frame": 765,
+            "mae": 10.119074074074074
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          757,
+          758,
+          759
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 486.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 12.611274509803922,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -38.72549019607874,
+      "leadIntervalMs": [
+        -43.62745098039247,
+        -0.49019607843179713
+      ],
+      "sensitivityLeadIntervalMs": [
+        -43.62745098039247,
+        -0.49019607843179713
+      ],
+      "screenshotSha256": "b32889c9ff71f1b243b380178978e3c98dbc3602e08c6336b50f2938b20b0aa0"
+    },
+    {
+      "run": 2,
+      "pattern": "01",
+      "cueId": "attack-5",
+      "cueStart": 13.133333333333333,
+      "filename": "run2-ex01-attack-5-350.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 771,
+        "videoTime": 12.85,
+        "mae": 3.0541898148148148,
+        "topMatches": [
+          {
+            "frame": 771,
+            "mae": 3.0541898148148148
+          },
+          {
+            "frame": 772,
+            "mae": 3.058078703703704
+          },
+          {
+            "frame": 770,
+            "mae": 3.070462962962963
+          },
+          {
+            "frame": 769,
+            "mae": 3.0706481481481482
+          },
+          {
+            "frame": 773,
+            "mae": 5.660115740740741
+          },
+          {
+            "frame": 774,
+            "mae": 5.689537037037037
+          },
+          {
+            "frame": 767,
+            "mae": 6.67150462962963
+          }
+        ],
+        "plausibleFrames": [
+          769,
+          770,
+          771,
+          772
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 777,
+          "mae": 8.493171296296296
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 765,
+            "mae": 10.375902777777778
+          },
+          {
+            "frame": 777,
+            "mae": 8.493171296296296
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          769,
+          770,
+          771,
+          772
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 404.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 12.812254901960785,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -37.74509803921511,
+      "leadIntervalMs": [
+        -59.31372549019633,
+        0.49019607843183266
+      ],
+      "sensitivityLeadIntervalMs": [
+        -59.31372549019633,
+        0.49019607843183266
+      ],
+      "screenshotSha256": "3521e29250da214eeaeae68b4063223dac9b23e237513f9e9cc5af7ecae7fa4c"
+    },
+    {
+      "run": 2,
+      "pattern": "01",
+      "cueId": "attack-5",
+      "cueStart": 13.133333333333333,
+      "filename": "run2-ex01-attack-5-150.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 781,
+        "videoTime": 13.016666666666667,
+        "mae": 3.0215972222222223,
+        "topMatches": [
+          {
+            "frame": 781,
+            "mae": 3.0215972222222223
+          },
+          {
+            "frame": 780,
+            "mae": 3.2557638888888887
+          },
+          {
+            "frame": 779,
+            "mae": 3.7196527777777777
+          },
+          {
+            "frame": 783,
+            "mae": 4.756157407407407
+          },
+          {
+            "frame": 782,
+            "mae": 4.785902777777777
+          },
+          {
+            "frame": 777,
+            "mae": 5.875254629629629
+          },
+          {
+            "frame": 778,
+            "mae": 5.879513888888889
+          }
+        ],
+        "plausibleFrames": [
+          779,
+          780,
+          781
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 775,
+          "mae": 7.388101851851852
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 775,
+            "mae": 7.388101851851852
+          },
+          {
+            "frame": 787,
+            "mae": 9.154768518518518
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          779,
+          780,
+          781
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 328.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 12.998529411764705,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -18.137254901962052,
+      "leadIntervalMs": [
+        -23.039215686275778,
+        20.098039215686665
+      ],
+      "sensitivityLeadIntervalMs": [
+        -23.039215686275778,
+        20.098039215686665
+      ],
+      "screenshotSha256": "da960bdb757023d0c6b4d50da72b1e3e408121784ff5b6a41a68faf973ecf713"
+    },
+    {
+      "run": 3,
+      "pattern": "01",
+      "cueId": "entry",
+      "cueStart": 4.283333333333333,
+      "filename": "run3-ex01-entry-550.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 225,
+        "videoTime": 3.75,
+        "mae": 2.6235185185185186,
+        "topMatches": [
+          {
+            "frame": 225,
+            "mae": 2.6235185185185186
+          },
+          {
+            "frame": 226,
+            "mae": 2.631527777777778
+          },
+          {
+            "frame": 227,
+            "mae": 2.6319675925925927
+          },
+          {
+            "frame": 223,
+            "mae": 7.940462962962963
+          },
+          {
+            "frame": 224,
+            "mae": 7.954791666666667
+          },
+          {
+            "frame": 228,
+            "mae": 8.71511574074074
+          },
+          {
+            "frame": 222,
+            "mae": 10.20900462962963
+          }
+        ],
+        "plausibleFrames": [
+          225,
+          226,
+          227
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 219,
+          "mae": 12.081851851851852
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 219,
+            "mae": 12.081851851851852
+          },
+          {
+            "frame": 231,
+            "mae": 12.576481481481482
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          225,
+          226,
+          227
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 494.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 3.7416666666666667,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -8.333333333333304,
+      "leadIntervalMs": [
+        -46.568627450980244,
+        -3.431372549019578
+      ],
+      "sensitivityLeadIntervalMs": [
+        -46.568627450980244,
+        -3.431372549019578
+      ],
+      "screenshotSha256": "fb31f5978d1536351f1d0721d89cddd212eab5ef1e27fa090b48ca0a36b80d12"
+    },
+    {
+      "run": 3,
+      "pattern": "01",
+      "cueId": "entry",
+      "cueStart": 4.283333333333333,
+      "filename": "run3-ex01-entry-350.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 239,
+        "videoTime": 3.9833333333333334,
+        "mae": 2.5761574074074076,
+        "topMatches": [
+          {
+            "frame": 239,
+            "mae": 2.5761574074074076
+          },
+          {
+            "frame": 237,
+            "mae": 7.016203703703703
+          },
+          {
+            "frame": 238,
+            "mae": 7.020763888888889
+          },
+          {
+            "frame": 240,
+            "mae": 8.895185185185186
+          },
+          {
+            "frame": 241,
+            "mae": 8.900347222222223
+          },
+          {
+            "frame": 235,
+            "mae": 9.746689814814815
+          },
+          {
+            "frame": 236,
+            "mae": 9.765787037037038
+          }
+        ],
+        "plausibleFrames": [
+          239
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 233,
+          "mae": 12.902592592592592
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 233,
+            "mae": 12.902592592592592
+          },
+          {
+            "frame": 245,
+            "mae": 13.400347222222223
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          239
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 399.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 3.9745098039215687,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -8.823529411764675,
+      "leadIntervalMs": [
+        -13.7254901960784,
+        -3.9215686274509487
+      ],
+      "sensitivityLeadIntervalMs": [
+        -13.7254901960784,
+        -3.9215686274509487
+      ],
+      "screenshotSha256": "6aabc7fae8bb545015a400b8316d897daf511f9ca7b047f4d271544571809382"
+    },
+    {
+      "run": 3,
+      "pattern": "01",
+      "cueId": "entry",
+      "cueStart": 4.283333333333333,
+      "filename": "run3-ex01-entry-150.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 249,
+        "videoTime": 4.15,
+        "mae": 2.5277314814814815,
+        "topMatches": [
+          {
+            "frame": 249,
+            "mae": 2.5277314814814815
+          },
+          {
+            "frame": 248,
+            "mae": 2.5388425925925926
+          },
+          {
+            "frame": 247,
+            "mae": 7.892407407407408
+          },
+          {
+            "frame": 251,
+            "mae": 7.951226851851852
+          },
+          {
+            "frame": 252,
+            "mae": 7.951967592592593
+          },
+          {
+            "frame": 250,
+            "mae": 7.952037037037037
+          },
+          {
+            "frame": 246,
+            "mae": 7.955949074074074
+          }
+        ],
+        "plausibleFrames": [
+          248,
+          249
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 243,
+          "mae": 11.862037037037037
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 243,
+            "mae": 11.862037037037037
+          },
+          {
+            "frame": 255,
+            "mae": 17.480393518518518
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          248,
+          249
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 330.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 4.143627450980392,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -6.372549019608265,
+      "leadIntervalMs": [
+        -11.27450980392199,
+        15.196078431372069
+      ],
+      "sensitivityLeadIntervalMs": [
+        -11.27450980392199,
+        15.196078431372069
+      ],
+      "screenshotSha256": "622cf59fa930b2d036e1d72bfb78c0048eac4a0f3db790c9fc31aa8a6e936686"
+    },
+    {
+      "run": 3,
+      "pattern": "01",
+      "cueId": "attack-1",
+      "cueStart": 6.433333333333334,
+      "filename": "run3-ex01-attack-1-550.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 355,
+        "videoTime": 5.916666666666667,
+        "mae": 3.417800925925926,
+        "topMatches": [
+          {
+            "frame": 355,
+            "mae": 3.417800925925926
+          },
+          {
+            "frame": 354,
+            "mae": 3.4226157407407407
+          },
+          {
+            "frame": 356,
+            "mae": 3.434884259259259
+          },
+          {
+            "frame": 353,
+            "mae": 7.577152777777778
+          },
+          {
+            "frame": 357,
+            "mae": 7.950347222222222
+          },
+          {
+            "frame": 358,
+            "mae": 7.984537037037037
+          },
+          {
+            "frame": 351,
+            "mae": 11.071180555555555
+          }
+        ],
+        "plausibleFrames": [
+          354,
+          355,
+          356
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 349,
+          "mae": 13.354768518518519
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 349,
+            "mae": 13.354768518518519
+          },
+          {
+            "frame": 361,
+            "mae": 13.846643518518519
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          354,
+          355,
+          356
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 488.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 5.906372549019608,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -10.294117647059231,
+      "leadIntervalMs": [
+        -31.862745098039564,
+        11.274509803921102
+      ],
+      "sensitivityLeadIntervalMs": [
+        -31.862745098039564,
+        11.274509803921102
+      ],
+      "screenshotSha256": "b370716e617726866a96e8ed3af8ee1cbc55d4c284516ac90ef8875b3c2c9afa"
+    },
+    {
+      "run": 3,
+      "pattern": "01",
+      "cueId": "attack-1",
+      "cueStart": 6.433333333333334,
+      "filename": "run3-ex01-attack-1-350.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 369,
+        "videoTime": 6.15,
+        "mae": 3.3294907407407406,
+        "topMatches": [
+          {
+            "frame": 369,
+            "mae": 3.3294907407407406
+          },
+          {
+            "frame": 367,
+            "mae": 3.3533796296296297
+          },
+          {
+            "frame": 368,
+            "mae": 3.3791435185185184
+          },
+          {
+            "frame": 366,
+            "mae": 8.322430555555556
+          },
+          {
+            "frame": 370,
+            "mae": 9.017847222222223
+          },
+          {
+            "frame": 365,
+            "mae": 10.785810185185186
+          },
+          {
+            "frame": 363,
+            "mae": 12.769074074074075
+          }
+        ],
+        "plausibleFrames": [
+          367,
+          368,
+          369
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 363,
+          "mae": 12.769074074074075
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 363,
+            "mae": 12.769074074074075
+          },
+          {
+            "frame": 375,
+            "mae": 16.176643518518517
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          367,
+          368,
+          369
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 399.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 6.124509803921569,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -25.490196078431282,
+      "leadIntervalMs": [
+        -30.392156862745008,
+        12.745098039216547
+      ],
+      "sensitivityLeadIntervalMs": [
+        -30.392156862745008,
+        12.745098039216547
+      ],
+      "screenshotSha256": "bb873b305c5ee75686b3a32c18096187ee50627d88a29427c8c28ff1ac18d174"
+    },
+    {
+      "run": 3,
+      "pattern": "01",
+      "cueId": "attack-1",
+      "cueStart": 6.433333333333334,
+      "filename": "run3-ex01-attack-1-150.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 376,
+        "videoTime": 6.266666666666667,
+        "mae": 3.3105324074074076,
+        "topMatches": [
+          {
+            "frame": 376,
+            "mae": 3.3105324074074076
+          },
+          {
+            "frame": 375,
+            "mae": 9.175162037037037
+          },
+          {
+            "frame": 374,
+            "mae": 9.240625
+          },
+          {
+            "frame": 377,
+            "mae": 12.922268518518518
+          },
+          {
+            "frame": 379,
+            "mae": 12.934375
+          },
+          {
+            "frame": 378,
+            "mae": 12.94525462962963
+          },
+          {
+            "frame": 373,
+            "mae": 13.268726851851852
+          }
+        ],
+        "plausibleFrames": [
+          376
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 370,
+          "mae": 15.606875
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 370,
+            "mae": 15.606875
+          },
+          {
+            "frame": 382,
+            "mae": 19.398518518518518
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          376
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 340.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 6.269117647058824,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": 2.450980392157298,
+      "leadIntervalMs": [
+        -2.4509803921564277,
+        7.352941176471024
+      ],
+      "sensitivityLeadIntervalMs": [
+        -2.4509803921564277,
+        7.352941176471024
+      ],
+      "screenshotSha256": "089a334397b761aebdcb2c2bc0f3f60c398391578e8c537276aa2e761c47243b"
+    },
+    {
+      "run": 3,
+      "pattern": "01",
+      "cueId": "attack-5",
+      "cueStart": 13.133333333333333,
+      "filename": "run3-ex01-attack-5-550.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 759,
+        "videoTime": 12.65,
+        "mae": 2.7799074074074075,
+        "topMatches": [
+          {
+            "frame": 759,
+            "mae": 2.7799074074074075
+          },
+          {
+            "frame": 757,
+            "mae": 2.921851851851852
+          },
+          {
+            "frame": 758,
+            "mae": 2.9337962962962965
+          },
+          {
+            "frame": 760,
+            "mae": 5.047939814814815
+          },
+          {
+            "frame": 761,
+            "mae": 8.111851851851851
+          },
+          {
+            "frame": 762,
+            "mae": 8.120810185185185
+          },
+          {
+            "frame": 756,
+            "mae": 8.721273148148148
+          }
+        ],
+        "plausibleFrames": [
+          757,
+          758,
+          759
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 765,
+          "mae": 10.136180555555555
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 753,
+            "mae": 11.505416666666667
+          },
+          {
+            "frame": 765,
+            "mae": 10.136180555555555
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          757,
+          758,
+          759
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 484.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 12.616176470588234,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -33.82352941176592,
+      "leadIntervalMs": [
+        -38.72549019607965,
+        4.411764705881023
+      ],
+      "sensitivityLeadIntervalMs": [
+        -38.72549019607965,
+        4.411764705881023
+      ],
+      "screenshotSha256": "36ac752e3901283b13fe2f6aade16b2c495cded328836d9274c46098d53f94c8"
+    },
+    {
+      "run": 3,
+      "pattern": "01",
+      "cueId": "attack-5",
+      "cueStart": 13.133333333333333,
+      "filename": "run3-ex01-attack-5-350.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 767,
+        "videoTime": 12.783333333333333,
+        "mae": 3.0230787037037037,
+        "topMatches": [
+          {
+            "frame": 767,
+            "mae": 3.0230787037037037
+          },
+          {
+            "frame": 768,
+            "mae": 3.027060185185185
+          },
+          {
+            "frame": 766,
+            "mae": 3.0430092592592595
+          },
+          {
+            "frame": 771,
+            "mae": 6.163587962962963
+          },
+          {
+            "frame": 772,
+            "mae": 6.1656712962962965
+          },
+          {
+            "frame": 769,
+            "mae": 6.171759259259259
+          },
+          {
+            "frame": 770,
+            "mae": 6.171759259259259
+          }
+        ],
+        "plausibleFrames": [
+          766,
+          767,
+          768
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 773,
+          "mae": 8.43414351851852
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 761,
+            "mae": 10.367083333333333
+          },
+          {
+            "frame": 773,
+            "mae": 8.43414351851852
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          766,
+          767,
+          768
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 416.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 12.782843137254902,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -0.4901960784309267,
+      "leadIntervalMs": [
+        -22.058823529412148,
+        21.07843137254852
+      ],
+      "sensitivityLeadIntervalMs": [
+        -22.058823529412148,
+        21.07843137254852
+      ],
+      "screenshotSha256": "36ca7f79bcd68a8cf23329665d11c2d38a6db89c74af52b50a9dd8bb2d970406"
+    },
+    {
+      "run": 3,
+      "pattern": "01",
+      "cueId": "attack-5",
+      "cueStart": 13.133333333333333,
+      "filename": "run3-ex01-attack-5-150.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 781,
+        "videoTime": 13.016666666666667,
+        "mae": 2.912777777777778,
+        "topMatches": [
+          {
+            "frame": 781,
+            "mae": 2.912777777777778
+          },
+          {
+            "frame": 780,
+            "mae": 3.0301851851851853
+          },
+          {
+            "frame": 779,
+            "mae": 3.511898148148148
+          },
+          {
+            "frame": 782,
+            "mae": 4.715185185185185
+          },
+          {
+            "frame": 783,
+            "mae": 4.737013888888889
+          },
+          {
+            "frame": 777,
+            "mae": 5.661851851851852
+          },
+          {
+            "frame": 778,
+            "mae": 5.666620370370371
+          }
+        ],
+        "plausibleFrames": [
+          779,
+          780,
+          781
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 775,
+          "mae": 7.186180555555556
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 775,
+            "mae": 7.186180555555556
+          },
+          {
+            "frame": 787,
+            "mae": 9.272337962962963
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          779,
+          780,
+          781
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 327.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 13.000980392156862,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -15.686274509805642,
+      "leadIntervalMs": [
+        -20.588235294119368,
+        22.549019607843075
+      ],
+      "sensitivityLeadIntervalMs": [
+        -20.588235294119368,
+        22.549019607843075
+      ],
+      "screenshotSha256": "840af8f92eda97c6a807fc3d22ef06026967631c2064b21ebbab3b3ce624a943"
+    },
+    {
+      "run": 4,
+      "pattern": "02",
+      "cueId": "entry",
+      "cueStart": 3.233333333333333,
+      "filename": "run4-ex02-entry-550.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 162,
+        "videoTime": 2.7,
+        "mae": 2.8377777777777777,
+        "topMatches": [
+          {
+            "frame": 162,
+            "mae": 2.8377777777777777
+          },
+          {
+            "frame": 161,
+            "mae": 3.328402777777778
+          },
+          {
+            "frame": 163,
+            "mae": 3.4158564814814816
+          },
+          {
+            "frame": 164,
+            "mae": 3.4389583333333333
+          },
+          {
+            "frame": 160,
+            "mae": 3.70375
+          },
+          {
+            "frame": 159,
+            "mae": 3.7152777777777777
+          },
+          {
+            "frame": 165,
+            "mae": 3.7475694444444443
+          }
+        ],
+        "plausibleFrames": [
+          161,
+          162,
+          163,
+          164
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 168,
+          "mae": 3.9922916666666666
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 156,
+            "mae": 4.285486111111111
+          },
+          {
+            "frame": 168,
+            "mae": 3.9922916666666666
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166,
+          167,
+          168
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 494.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 2.6916666666666664,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -8.333333333333748,
+      "leadIntervalMs": [
+        -46.568627450980685,
+        13.23529411764703
+      ],
+      "sensitivityLeadIntervalMs": [
+        -113.23529411764713,
+        96.56862745098007
+      ],
+      "screenshotSha256": "7797ba1823c0fc677520cc06be815a1e2b1956b35aa18dc9f2f87d6c91648993"
+    },
+    {
+      "run": 4,
+      "pattern": "02",
+      "cueId": "entry",
+      "cueStart": 3.233333333333333,
+      "filename": "run4-ex02-entry-350.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 174,
+        "videoTime": 2.9,
+        "mae": 2.848587962962963,
+        "topMatches": [
+          {
+            "frame": 174,
+            "mae": 2.848587962962963
+          },
+          {
+            "frame": 173,
+            "mae": 2.8656712962962962
+          },
+          {
+            "frame": 175,
+            "mae": 3.312523148148148
+          },
+          {
+            "frame": 172,
+            "mae": 3.502060185185185
+          },
+          {
+            "frame": 176,
+            "mae": 3.714583333333333
+          },
+          {
+            "frame": 177,
+            "mae": 3.7221064814814815
+          },
+          {
+            "frame": 178,
+            "mae": 3.7285648148148147
+          }
+        ],
+        "plausibleFrames": [
+          172,
+          173,
+          174,
+          175
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 180,
+          "mae": 4.224930555555556
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 168,
+            "mae": 4.42875
+          },
+          {
+            "frame": 180,
+            "mae": 4.224930555555556
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178,
+          179,
+          180
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 412.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 2.892647058823529,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -7.352941176471006,
+      "leadIntervalMs": [
+        -28.92156862745134,
+        30.882352941175935
+      ],
+      "sensitivityLeadIntervalMs": [
+        -112.25490196078482,
+        80.88235294117575
+      ],
+      "screenshotSha256": "6030e1d0deadf0664b02559edd9a30be0f67785cb8a19848449dfac0546f7d56"
+    },
+    {
+      "run": 4,
+      "pattern": "02",
+      "cueId": "entry",
+      "cueStart": 3.233333333333333,
+      "filename": "run4-ex02-entry-150.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 187,
+        "videoTime": 3.1166666666666667,
+        "mae": 2.8261574074074076,
+        "topMatches": [
+          {
+            "frame": 187,
+            "mae": 2.8261574074074076
+          },
+          {
+            "frame": 185,
+            "mae": 2.852986111111111
+          },
+          {
+            "frame": 186,
+            "mae": 2.856990740740741
+          },
+          {
+            "frame": 184,
+            "mae": 3.4834027777777776
+          },
+          {
+            "frame": 183,
+            "mae": 3.619861111111111
+          },
+          {
+            "frame": 182,
+            "mae": 3.8537731481481483
+          },
+          {
+            "frame": 181,
+            "mae": 3.8831481481481482
+          }
+        ],
+        "plausibleFrames": [
+          183,
+          184,
+          185,
+          186,
+          187
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 181,
+          "mae": 3.8831481481481482
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 181,
+            "mae": 3.8831481481481482
+          },
+          {
+            "frame": 193,
+            "mae": 6.870486111111111
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          180,
+          181,
+          182,
+          183,
+          184,
+          185,
+          186,
+          187
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 324.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 3.108333333333333,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -8.333333333333748,
+      "leadIntervalMs": [
+        -13.235294117647474,
+        63.23529411764686
+      ],
+      "sensitivityLeadIntervalMs": [
+        -13.235294117647474,
+        113.23529411764667
+      ],
+      "screenshotSha256": "2e1f27be04ffbdb3c078c228a3465614826bc2791457a82abdb1a03f4112e0c5"
+    },
+    {
+      "run": 4,
+      "pattern": "02",
+      "cueId": "attack-1",
+      "cueStart": 4.383333333333334,
+      "filename": "run4-ex02-attack-1-550.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 232,
+        "videoTime": 3.8666666666666667,
+        "mae": 2.39875,
+        "topMatches": [
+          {
+            "frame": 232,
+            "mae": 2.39875
+          },
+          {
+            "frame": 233,
+            "mae": 2.399814814814815
+          },
+          {
+            "frame": 234,
+            "mae": 2.409212962962963
+          },
+          {
+            "frame": 235,
+            "mae": 19.38601851851852
+          },
+          {
+            "frame": 231,
+            "mae": 21.102847222222223
+          },
+          {
+            "frame": 238,
+            "mae": 27.273287037037036
+          },
+          {
+            "frame": 237,
+            "mae": 27.273680555555554
+          }
+        ],
+        "plausibleFrames": [
+          232,
+          233,
+          234
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 238,
+          "mae": 27.273287037037036
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 226,
+            "mae": 72.36949074074074
+          },
+          {
+            "frame": 238,
+            "mae": 27.273287037037036
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          232,
+          233,
+          234
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 487.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 3.858823529411765,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -7.843137254901489,
+      "leadIntervalMs": [
+        -46.07843137254844,
+        -2.941176470587763
+      ],
+      "sensitivityLeadIntervalMs": [
+        -46.07843137254844,
+        -2.941176470587763
+      ],
+      "screenshotSha256": "db0c2600ee1f4531857b65de7e96989bce4f86bb9e866c326b13ee0329588253"
+    },
+    {
+      "run": 4,
+      "pattern": "02",
+      "cueId": "attack-1",
+      "cueStart": 4.383333333333334,
+      "filename": "run4-ex02-attack-1-350.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 243,
+        "videoTime": 4.05,
+        "mae": 2.5584953703703706,
+        "topMatches": [
+          {
+            "frame": 243,
+            "mae": 2.5584953703703706
+          },
+          {
+            "frame": 242,
+            "mae": 2.5586805555555556
+          },
+          {
+            "frame": 241,
+            "mae": 2.5588194444444445
+          },
+          {
+            "frame": 240,
+            "mae": 2.560277777777778
+          },
+          {
+            "frame": 239,
+            "mae": 14.980601851851851
+          },
+          {
+            "frame": 238,
+            "mae": 21.821620370370372
+          },
+          {
+            "frame": 237,
+            "mae": 21.821921296296296
+          }
+        ],
+        "plausibleFrames": [
+          240,
+          241,
+          242,
+          243
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 237,
+          "mae": 21.821921296296296
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 237,
+            "mae": 21.821921296296296
+          },
+          {
+            "frame": 249,
+            "mae": 32.30634259259259
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          240,
+          241,
+          242,
+          243
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 412.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 4.04264705882353,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -7.352941176470118,
+      "leadIntervalMs": [
+        -12.254901960783844,
+        47.549019607843434
+      ],
+      "sensitivityLeadIntervalMs": [
+        -12.254901960783844,
+        47.549019607843434
+      ],
+      "screenshotSha256": "96b8a442bc5b6a655b788d8ffe1c3de052bb30ef626ea0493636f13b33f7c907"
+    },
+    {
+      "run": 4,
+      "pattern": "02",
+      "cueId": "attack-1",
+      "cueStart": 4.383333333333334,
+      "filename": "run4-ex02-attack-1-150.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 255,
+        "videoTime": 4.25,
+        "mae": 2.5543518518518518,
+        "topMatches": [
+          {
+            "frame": 255,
+            "mae": 2.5543518518518518
+          },
+          {
+            "frame": 256,
+            "mae": 2.558611111111111
+          },
+          {
+            "frame": 257,
+            "mae": 2.5901157407407407
+          },
+          {
+            "frame": 254,
+            "mae": 10.61
+          },
+          {
+            "frame": 258,
+            "mae": 13.524375
+          },
+          {
+            "frame": 253,
+            "mae": 14.701412037037038
+          },
+          {
+            "frame": 252,
+            "mae": 14.794328703703703
+          }
+        ],
+        "plausibleFrames": [
+          255,
+          256,
+          257
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 261,
+          "mae": 15.642013888888888
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 249,
+            "mae": 20.416597222222222
+          },
+          {
+            "frame": 261,
+            "mae": 15.642013888888888
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          255,
+          256,
+          257
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 324.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 4.258333333333334,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": 8.333333333333748,
+      "leadIntervalMs": [
+        -29.901960784313193,
+        13.235294117647474
+      ],
+      "sensitivityLeadIntervalMs": [
+        -29.901960784313193,
+        13.235294117647474
+      ],
+      "screenshotSha256": "d002b57aa9e5b64b4b8b380561caebef0fa030d1b4a4bf5c3ba200f970fc217d"
+    },
+    {
+      "run": 4,
+      "pattern": "02",
+      "cueId": "attack-4",
+      "cueStart": 9.333333333333334,
+      "filename": "run4-ex02-attack-4-550.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 529,
+        "videoTime": 8.816666666666666,
+        "mae": 2.79,
+        "topMatches": [
+          {
+            "frame": 529,
+            "mae": 2.79
+          },
+          {
+            "frame": 527,
+            "mae": 2.79037037037037
+          },
+          {
+            "frame": 528,
+            "mae": 2.7913425925925925
+          },
+          {
+            "frame": 526,
+            "mae": 20.94585648148148
+          },
+          {
+            "frame": 531,
+            "mae": 27.470347222222223
+          },
+          {
+            "frame": 530,
+            "mae": 27.470925925925926
+          },
+          {
+            "frame": 534,
+            "mae": 31.64287037037037
+          }
+        ],
+        "plausibleFrames": [
+          527,
+          528,
+          529
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 535,
+          "mae": 32.42951388888889
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 523,
+            "mae": 43.00400462962963
+          },
+          {
+            "frame": 535,
+            "mae": 32.42951388888889
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          527,
+          528,
+          529
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 494.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 8.791666666666668,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -24.99999999999858,
+      "leadIntervalMs": [
+        -29.901960784312305,
+        13.235294117648362
+      ],
+      "sensitivityLeadIntervalMs": [
+        -29.901960784312305,
+        13.235294117648362
+      ],
+      "screenshotSha256": "7f031d96c4de9252b6656155f8e85e291f0d6102f236f526488c3552bf85b089"
+    },
+    {
+      "run": 4,
+      "pattern": "02",
+      "cueId": "attack-4",
+      "cueStart": 9.333333333333334,
+      "filename": "run4-ex02-attack-4-350.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 539,
+        "videoTime": 8.983333333333333,
+        "mae": 2.73625,
+        "topMatches": [
+          {
+            "frame": 539,
+            "mae": 2.73625
+          },
+          {
+            "frame": 540,
+            "mae": 10.67664351851852
+          },
+          {
+            "frame": 541,
+            "mae": 10.677453703703703
+          },
+          {
+            "frame": 542,
+            "mae": 10.683425925925926
+          },
+          {
+            "frame": 537,
+            "mae": 12.22087962962963
+          },
+          {
+            "frame": 538,
+            "mae": 12.221851851851852
+          },
+          {
+            "frame": 536,
+            "mae": 20.690810185185185
+          }
+        ],
+        "plausibleFrames": [
+          539
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 533,
+          "mae": 29.998217592592592
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 533,
+            "mae": 29.998217592592592
+          },
+          {
+            "frame": 545,
+            "mae": 31.424282407407407
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          539
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 419.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 8.975490196078432,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -7.843137254900157,
+      "leadIntervalMs": [
+        -12.745098039213882,
+        -2.9411764705864307
+      ],
+      "sensitivityLeadIntervalMs": [
+        -12.745098039213882,
+        -2.9411764705864307
+      ],
+      "screenshotSha256": "37a43bbf6ed0b252cdd573d1c85a2bd4cfae049c0802bd64aed9d7caea5f53f2"
+    },
+    {
+      "run": 4,
+      "pattern": "02",
+      "cueId": "attack-4",
+      "cueStart": 9.333333333333334,
+      "filename": "run4-ex02-attack-4-150.jpg",
+      "boxes": {
+        "video": {
+          "x": 16,
+          "y": 0,
+          "width": 1248,
+          "height": 702
+        },
+        "timeline": {
+          "x": 28,
+          "y": 709,
+          "width": 1224,
+          "height": 104
+        }
+      },
+      "pixelFrame": {
+        "frame": 551,
+        "videoTime": 9.183333333333334,
+        "mae": 2.749050925925926,
+        "topMatches": [
+          {
+            "frame": 551,
+            "mae": 2.749050925925926
+          },
+          {
+            "frame": 550,
+            "mae": 2.7500925925925928
+          },
+          {
+            "frame": 549,
+            "mae": 23.535046296296297
+          },
+          {
+            "frame": 548,
+            "mae": 23.544583333333332
+          },
+          {
+            "frame": 552,
+            "mae": 25.517430555555556
+          },
+          {
+            "frame": 547,
+            "mae": 31.886319444444446
+          },
+          {
+            "frame": 545,
+            "mae": 31.894189814814816
+          }
+        ],
+        "plausibleFrames": [
+          550,
+          551
+        ],
+        "plausibleToleranceMAE": 0.8,
+        "nearestDistantMatch": {
+          "frame": 545,
+          "mae": 31.894189814814816
+        },
+        "sixFrameComparators": [
+          {
+            "frame": 545,
+            "mae": 31.894189814814816
+          },
+          {
+            "frame": 557,
+            "mae": 43.43379629629629
+          }
+        ],
+        "resolves100ms": true,
+        "sensitivityFramesMAE15": [
+          550,
+          551
+        ]
+      },
+      "pixelLane": {
+        "leadingEdgeX": 338.0,
+        "playheadCenterX": 273.0,
+        "timelineWidth": 1224,
+        "guideTime": 9.174019607843137,
+        "pixelUncertaintyMs": 4.901960784313726
+      },
+      "laneLeadMs": -9.31372549019649,
+      "leadIntervalMs": [
+        -14.215686274510215,
+        12.254901960784732
+      ],
+      "sensitivityLeadIntervalMs": [
+        -14.215686274510215,
+        12.254901960784732
+      ],
+      "screenshotSha256": "24a8a70d5d0516f161d0b5b6f3db48713ece4424e4bc4af503baa35d478c7570"
+    }
+  ],
+  "retiredBrowserProbe": {
+    "source": "zzz-input-latency-2026-09-20T03-15-55-756Z.json",
+    "sourceSha256": "0d3ffbe9b463d37b6fe93b733db02ce38f0f10701e55cbf0ad1ae47a0ecf87e8",
+    "scope": "Browser event creation to JS handling; actual app judgment media time; next-rAF is prepaint, not physical display latency. No physical device/USB/OS latency measured. Frame PTS is latest callback, not guaranteed displayed frame at input.",
+    "runs": [
+      {
+        "mode": "baseline",
+        "status": "complete",
+        "inputCount": 20,
+        "allTrusted": true,
+        "eventToCapture": {
+          "count": 20,
+          "medianMs": 1.300000011920929,
+          "maxMs": 3.099999964237213
+        },
+        "throughHandlers": {
+          "count": 20,
+          "medianMs": 0.20000004768371582,
+          "maxMs": 1.199999988079071
+        },
+        "nextRaf": {
+          "count": 20,
+          "medianMs": 1.2000000178813934,
+          "maxMs": 2.5
+        },
+        "inputs": [
+          {
+            "key": "MouseRight",
+            "judgedInputTime": null,
+            "mediaTimeAtCapture": null,
+            "guideTimeAtCapture": null
+          },
+          {
+            "key": "MouseRight",
+            "judgedInputTime": null,
+            "mediaTimeAtCapture": null,
+            "guideTimeAtCapture": null
+          },
+          {
+            "key": "MouseRight",
+            "judgedInputTime": null,
+            "mediaTimeAtCapture": null,
+            "guideTimeAtCapture": null
+          },
+          {
+            "key": "MouseRight",
+            "judgedInputTime": null,
+            "mediaTimeAtCapture": null,
+            "guideTimeAtCapture": null
+          },
+          {
+            "key": "MouseRight",
+            "judgedInputTime": null,
+            "mediaTimeAtCapture": null,
+            "guideTimeAtCapture": null
+          },
+          {
+            "key": "MouseRight",
+            "judgedInputTime": null,
+            "mediaTimeAtCapture": null,
+            "guideTimeAtCapture": null
+          },
+          {
+            "key": "MouseRight",
+            "judgedInputTime": null,
+            "mediaTimeAtCapture": null,
+            "guideTimeAtCapture": null
+          },
+          {
+            "key": "MouseRight",
+            "judgedInputTime": null,
+            "mediaTimeAtCapture": null,
+            "guideTimeAtCapture": null
+          },
+          {
+            "key": "MouseRight",
+            "judgedInputTime": null,
+            "mediaTimeAtCapture": null,
+            "guideTimeAtCapture": null
+          },
+          {
+            "key": "MouseRight",
+            "judgedInputTime": null,
+            "mediaTimeAtCapture": null,
+            "guideTimeAtCapture": null
+          },
+          {
+            "key": "Space",
+            "judgedInputTime": null,
+            "mediaTimeAtCapture": null,
+            "guideTimeAtCapture": null
+          },
+          {
+            "key": "Space",
+            "judgedInputTime": null,
+            "mediaTimeAtCapture": null,
+            "guideTimeAtCapture": null
+          },
+          {
+            "key": "Space",
+            "judgedInputTime": null,
+            "mediaTimeAtCapture": null,
+            "guideTimeAtCapture": null
+          },
+          {
+            "key": "Space",
+            "judgedInputTime": null,
+            "mediaTimeAtCapture": null,
+            "guideTimeAtCapture": null
+          },
+          {
+            "key": "Space",
+            "judgedInputTime": null,
+            "mediaTimeAtCapture": null,
+            "guideTimeAtCapture": null
+          },
+          {
+            "key": "Space",
+            "judgedInputTime": null,
+            "mediaTimeAtCapture": null,
+            "guideTimeAtCapture": null
+          },
+          {
+            "key": "Space",
+            "judgedInputTime": null,
+            "mediaTimeAtCapture": null,
+            "guideTimeAtCapture": null
+          },
+          {
+            "key": "Space",
+            "judgedInputTime": null,
+            "mediaTimeAtCapture": null,
+            "guideTimeAtCapture": null
+          },
+          {
+            "key": "Space",
+            "judgedInputTime": null,
+            "mediaTimeAtCapture": null,
+            "guideTimeAtCapture": null
+          },
+          {
+            "key": "Space",
+            "judgedInputTime": null,
+            "mediaTimeAtCapture": null,
+            "guideTimeAtCapture": null
+          }
+        ]
+      },
+      {
+        "mode": "video",
+        "status": "complete",
+        "inputCount": 6,
+        "allTrusted": true,
+        "eventToCapture": {
+          "count": 6,
+          "medianMs": 2.150000035762787,
+          "maxMs": 5.600000023841858
+        },
+        "throughHandlers": {
+          "count": 6,
+          "medianMs": 2.399999976158142,
+          "maxMs": 3.099999964237213
+        },
+        "nextRaf": {
+          "count": 6,
+          "medianMs": 14.249999970197678,
+          "maxMs": 15.699999988079071
+        },
+        "inputs": [
+          {
+            "key": "MouseRight",
+            "judgedInputTime": 4.58354,
+            "mediaTimeAtCapture": 4.583281,
+            "guideTimeAtCapture": "4.577367"
+          },
+          {
+            "key": "Space",
+            "judgedInputTime": 6.768428,
+            "mediaTimeAtCapture": 6.768244,
+            "guideTimeAtCapture": "6.761067"
+          },
+          {
+            "key": "Space",
+            "judgedInputTime": 8.097981,
+            "mediaTimeAtCapture": 8.09788,
+            "guideTimeAtCapture": "8.094641"
+          },
+          {
+            "key": "Space",
+            "judgedInputTime": 10.097601,
+            "mediaTimeAtCapture": 10.097492,
+            "guideTimeAtCapture": "10.094602"
+          },
+          {
+            "key": "Space",
+            "judgedInputTime": 11.400406,
+            "mediaTimeAtCapture": 11.400292,
+            "guideTimeAtCapture": "11.394434"
+          },
+          {
+            "key": "Space",
+            "judgedInputTime": 13.731085,
+            "mediaTimeAtCapture": 13.730964,
+            "guideTimeAtCapture": "13.727989"
+          }
+        ]
+      }
+    ],
+    "conclusion": "Observed event handling did not support a persistent 100ms processing delay. No physical device, game receipt or optical display latency measured."
+  },
+  "historicalScreenshotEstimate": [
+    {
+      "file": "기르타블리르ex01.png",
+      "scalePxPerMs": 0.315,
+      "rows": [
+        {
+          "action": "entry",
+          "windowPx": [
+            261,
+            333
+          ],
+          "inputPx": 336.0,
+          "lateDeltaMs": -12,
+          "referenceDeltaMs": 138,
+          "approxPatternInputMs": 3538
+        },
+        {
+          "action": "hit1",
+          "windowPx": [
+            584,
+            710
+          ],
+          "inputPx": 648.0,
+          "lateDeltaMs": -197,
+          "referenceDeltaMs": 3,
+          "approxPatternInputMs": 5053
+        },
+        {
+          "action": "hit2",
+          "windowPx": [
+            954,
+            1080
+          ],
+          "inputPx": 1091.0,
+          "lateDeltaMs": 35,
+          "referenceDeltaMs": 235,
+          "approxPatternInputMs": 6485
+        },
+        {
+          "action": "hit3",
+          "windowPx": [
+            1325,
+            1447
+          ],
+          "inputPx": 1450.0,
+          "lateDeltaMs": -3,
+          "referenceDeltaMs": 197,
+          "approxPatternInputMs": 7847
+        }
+      ]
+    },
+    {
+      "file": "베스퍼ex01.png",
+      "scalePxPerMs": 0.20857142857142857,
+      "rows": [
+        {
+          "action": "entry",
+          "windowPx": [
+            170,
+            212
+          ],
+          "inputPx": 220.0,
+          "lateDeltaMs": 40,
+          "referenceDeltaMs": 140,
+          "approxPatternInputMs": 4340
+        },
+        {
+          "action": "hit1",
+          "windowPx": [
+            374,
+            441
+          ],
+          "inputPx": 444.0,
+          "lateDeltaMs": -14,
+          "referenceDeltaMs": 186,
+          "approxPatternInputMs": 6586
+        },
+        {
+          "action": "hit2",
+          "windowPx": [
+            609,
+            703
+          ],
+          "inputPx": 727.0,
+          "lateDeltaMs": 116,
+          "referenceDeltaMs": 366,
+          "approxPatternInputMs": 8066
+        },
+        {
+          "action": "hit3",
+          "windowPx": [
+            865,
+            938
+          ],
+          "inputPx": 1001.0,
+          "lateDeltaMs": 302,
+          "referenceDeltaMs": 502,
+          "approxPatternInputMs": 10002
+        },
+        {
+          "action": "hit4",
+          "windowPx": [
+            1101,
+            1194
+          ],
+          "inputPx": 1226.0,
+          "lateDeltaMs": 149,
+          "referenceDeltaMs": 399,
+          "approxPatternInputMs": 11249
+        },
+        {
+          "action": "hit5",
+          "windowPx": [
+            1357,
+            1461
+          ],
+          "inputPx": 1493.0,
+          "lateDeltaMs": 152,
+          "referenceDeltaMs": 402,
+          "approxPatternInputMs": 13602
+        }
+      ]
+    },
+    {
+      "file": "베스퍼ex02.png",
+      "scalePxPerMs": 0.24,
+      "rows": [
+        {
+          "action": "entry",
+          "windowPx": [
+            223,
+            283
+          ],
+          "inputPx": 263.5,
+          "lateDeltaMs": -81,
+          "referenceDeltaMs": 69,
+          "approxPatternInputMs": 3219
+        },
+        {
+          "action": "hit1",
+          "windowPx": [
+            471,
+            588
+          ],
+          "inputPx": 591.0,
+          "lateDeltaMs": 0,
+          "referenceDeltaMs": 250,
+          "approxPatternInputMs": 4700
+        },
+        {
+          "action": "hit2",
+          "windowPx": [
+            780,
+            889
+          ],
+          "inputPx": 904.0,
+          "lateDeltaMs": 67,
+          "referenceDeltaMs": 317,
+          "approxPatternInputMs": 6267
+        },
+        {
+          "action": "hit3",
+          "windowPx": [
+            1077,
+            1185
+          ],
+          "inputPx": 1167.5,
+          "lateDeltaMs": -73,
+          "referenceDeltaMs": 177,
+          "approxPatternInputMs": 7777
+        },
+        {
+          "action": "hit4",
+          "windowPx": [
+            1373,
+            1482
+          ],
+          "inputPx": 1477.0,
+          "lateDeltaMs": -17,
+          "referenceDeltaMs": 183,
+          "approxPatternInputMs": 9583
+        }
+      ]
+    }
+  ],
+  "historicalInitialInvestigation": {
+    "status": "superseded exploratory diagnosis; not pending work",
+    "observationsAndLimits": "- 실제 서비스 MP4 3개를 원본과 별도로 디코딩했다. 모든 입력 표시 프레임은 원본 프레임에서 trim 시작 프레임을 뺀 값과 일치한다. 클립 PTS는 1/60초 등간격이다. 배속 변경·잘못된 trim을 뒷받침하는 증거가 없다.\n- 새 Chromium에서 실제 서비스 영상 3개를 정상 재생하며 requestVideoFrameCallback의 mediaTime, currentTime, 타일 data-time, 입력 표시 픽셀을 관측했다. playbackRate는 모두 1이었다.\n- 타일 표시 시간과 디코더 PTS 차이의 절댓값 중앙값/P95/최대는 V02 3.7/20.2/36.6ms, V01 18.1/27.1/99.8ms, Gir 24.7/34.1/54.9ms였다. 일부 프레임 누락이 있으나 전 동작의 지속적 어긋남은 재현되지 않았다. DOM/디코더 관측이며 사용자의 실제 브라우저 합성 화면이나 물리 디스플레이 지연의 측정은 아니다.\n- 실제 입력 표시가 켜졌을 때의 재생 시간은 모두 웹 허용 구간 안에 있었다. 원본 지원 입력은 타일 끝보다 V01 약183~250ms, V02 200~250ms, Gir 200ms 앞이다.\n- OBS는 게임 화면을 window_capture, 키 표시를 별도 input-overlay 소스로 합성한다. 현재 저장 설정에는 지연 필터가 없다. 서로 다른 수집 경로 사이의 상대 지연은 측정하지 않았다. 해당 세 영상의 OBS 로그에는 지속적 큰 렌더링 지연 증거가 없고, V02 렌더 누락 2프레임(0.2%), V01 5프레임(0.3%)가 기록됐다.\n\n## 확인된 검증 한계\n\n현재 영상 원점은 ‘녹화 입력 표시 프레임 − 실험 설정값’으로 역산한다. 이는 예약 입력 간격의 정렬 검사다. 실제 게임 화면과 입력 표시의 상대 지연, 녹화 OFF에서 얻은 구간을 녹화 ON 장면으로 옮겼을 때의 타당성을 독립적으로 증명하지 않는다. 이전의 ‘동기화 확인 완료’ 설명은 이 한계를 충분히 구분하지 않았다.\n\n새 영상에서 V02 1타 입력은 원본 f500, 첫 교대 잔상 f508, 강한 접촉형 섬광 f524이고 타일 끝은 f515다. Gir 1타 입력은 f634, 첫 명확한 교대 섬광 f647, 큰 접촉형 화면 변화 f658이고 타일 끝은 f646이다. Gir의 실제 접촉은 보스 몸에 가려 확정할 수 없다. 이런 연출 차이는 사실이지만, 공격 전조를 보고 입력했다는 이번 사용자 보고의 원인으로 확정할 수 없다.",
+    "probeInterpretation": "— 2026-09-20 12:15 KST\n\n원본: `<PRIVATE_HOME>/Downloads/zzz-input-latency-2026-09-20T03-15-55-756Z.json`. 영상 없음 20입력(두 키 각10), 실제 Vesper01 영상 6입력 모두 trusted, 완료 상태. 모든 영상 입력의 판정 시각을 처리 전후 미디어 시간 범위에서 연결했다. 기록의 entryKey는 null이지만 실제 첫 입력 MouseRight와 cue 키로 우클릭 진입을 확인한다. null 필드를 다른 값으로 수정하지 않았다.\n\n| 관측 | 영상 없음 중앙값 / 최대 | 영상 재생 중앙값 / 최대 |\n|---|---:|---:|\n| 브라우저 이벤트 생성 → capture 수신 | 1.30 / 3.10ms | 2.15 / 5.60ms |\n| capture → bubble 리스너 종료 | 0.20 / 1.20ms | 2.40 / 3.10ms |\n| 이벤트 생성 → bubble 리스너 종료 | 1.50 / 4.30ms | 4.55 / 8.70ms |\n| capture → 다음 rAF | 1.20 / 2.50ms | 14.25 / 15.70ms |\n\n입력 시각과 직전 타일 data-time의 차이는 3.0~7.4ms였다. 재생 배속1, droppedVideoFrames 증가0, 프레임 콜백1005개, 콜백 간격 중앙값16.7ms·최대33.4ms. 영상 재생 중 waiting 이벤트는 기록되지 않았다. 이번 실행의 측정된 브라우저 이벤트 처리에100ms 지연이 있다는 가설은 지지되지 않는다. rAF·rVFC는 광학적인 화면 표시 측정이 아니며 물리 장치→OS→이벤트 생성 이전 지연은 미측정이다.\n\n| 동작 | 판정에 사용한 영상 시각(s) | 늦은 끝 대비(ms) | 기준 입력 대비(ms) |\n|---|---:|---:|---:|\n| 진입 | 4.583540 | +100.2 | +200.2 |\n| 1타 | 6.768428 | −14.9 | +185.1 |\n| 2타 | 8.097981 | −35.4 | +214.6 |\n| 3타 | 10.097601 | +214.3 | +414.3 |\n| 4타 | 11.400406 | +117.1 | +367.1 |\n| 5타 | 13.731085 | +97.8 | +347.8 |\n\n이전 사용자의 수동 제공 영상 입력시각4.56/6.79/8.07/10.15/11.45/13.75와 이번 회차의 차이는 각 동작에서 약19~52ms다. 별도 회차에서도 전반은 기준보다약200ms,3타 이후는약350~410ms 늦는 구조가 재현됐다. 단일100ms 원점 보정 또는 측정 구간의 처리 부하로 설명하기 어렵다. 이 자료만으로 녹화 게임 장면의 상대 지연이나 인간 반응을 원인으로 단정하지 않는다.",
+    "currentDecision": "EX01 manual representative accepted by user. See vesper-latest-web-sync-20260920.json; no blanket offset or new experiment required."
+  },
+  "retention": {
+    "date": "2026-09-21",
+    "status": "summarized originals retired after user-approved closure",
+    "inventory": "experiment-cleanup.json#current",
+    "meaning": "Historical raw log, source video and scratch paths describe provenance; only current.retainedOriginals are promised to remain. Conditions, outcomes, counterexamples and measurement limits stay in this evidence."
+  }
+}

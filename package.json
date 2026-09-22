@@ -1,0 +1,49 @@
+{
+  "name": "zzz-pattern-practice",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "packageManager": "npm@11.13.0",
+  "engines": {
+    "node": ">=24.19.0 <25",
+    "npm": ">=11 <12"
+  },
+  "scripts": {
+    "dev": "vite",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "build": "vite build",
+    "check": "npm run typecheck && npm test && npm run build",
+    "preview": "vite preview",
+    "test:e2e": "playwright test",
+    "browsers": "node tools/install-browsers.mjs",
+    "make:video-clock": "python tools/make-video-clock.py",
+    "research:assets": "node tools/run-research.mjs assets",
+    "research:timing": "node tools/run-research.mjs timing",
+    "research:windows": "node tools/run-research.mjs windows",
+    "research:check": "node tools/run-research.mjs check",
+    "experiment:build": "powershell -NoProfile -File tools/experiment/Build.ps1",
+    "experiment:check": "node tools/experiment/check.mjs",
+    "experiment:records": "node tools/experiment/records.mjs",
+    "experiment:media": "node tools/experiment/media.mjs",
+    "lane:build": "powershell -NoProfile -File tools/lane-verifier/Build.ps1",
+    "lane:check": "node tools/lane-verifier/check.mjs"
+  },
+  "dependencies": {
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@testing-library/jest-dom": "7.0.1",
+    "@testing-library/react": "16.3.3",
+    "@types/node": "24.13.4",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.1",
+    "jsdom": "30.0.1",
+    "typescript": "7.0.2",
+    "vite": "8.3.0",
+    "vitest": "5.0.1"
+  }
+}

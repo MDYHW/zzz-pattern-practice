@@ -1,0 +1,1315 @@
+{
+  "date": "2026-09-21",
+  "scope": "Retained static game implementation evidence after Kusarikku service closure; completed deployment and video-analysis intermediates removed.",
+  "gameReadOnly": true,
+  "gameInputCalls": 0,
+  "method": {
+    "abilityBundleOffset": 1277714,
+    "abilityBundleSize": 49430,
+    "decoder": "Existing extract_curve.unpack_bundle with pinned AnimeStudio inputs; existing serialized.objects, Google flexbuffers, read_odin.Reader and odin_tree.tree.",
+    "replayLimit": "The single-curve unity_objects helper rejected this multi-object directory; the existing ability serialized.objects reader succeeded. No production parser was changed.",
+    "historicalManagerPayloadMatches": true,
+    "catalogLimit": "Preserved catalog used to locate Battle; located source block hash matches prior Gir Battle block. The full current catalog was not reread."
+  },
+  "aid": {
+    "source": {
+      "name": "Larval_AidTriggerControl",
+      "source": "Persistent\\Blocks\\Data\\3191559225.blk",
+      "blockSha256": "b34548afaec340f23b49575813dfc7ac508b6b7c2b28e60c4aa764dea9a1425a",
+      "offset": 1277714,
+      "size": 49430,
+      "objectId": "-8500164645839118333",
+      "payloadSha256": "f08d694499660cfc8cea971926275c31e7dba6e4d606e299a9f13268ec863e0f",
+      "serializedSha256": "2dcfc965bbe2686ef3d521969b646972262baa629f71c7238202e07df513ebab"
+    },
+    "gates": [
+      {
+        "pointer": "/AbilityMixins/4/ConfigList/10",
+        "config": {
+          "AnimatorStateName": "Attack_Execute_01_Pre",
+          "FrameCountHigh": 278,
+          "FrameCountLow": 248,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SetAidAttackExtraTargetRangeModifier",
+            "HeavyParryTagContralModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Execute"
+          ]
+        }
+      },
+      {
+        "pointer": "/AbilityMixins/4/ConfigList/11",
+        "config": {
+          "AnimatorStateName": "Attack_Execute_01_Combo",
+          "FrameCountHigh": 133,
+          "FrameCountLow": 103,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SetAidAttackExtraTargetRangeModifier",
+            "PowerStruggleTagContralModifier",
+            "LightParryTagContralModifier",
+            "ParryPriorityAddModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Wrestle"
+          ]
+        }
+      },
+      {
+        "pointer": "/AbilityMixins/4/ConfigList/12",
+        "config": {
+          "AnimatorStateName": "Attack_Execute_01_Combo",
+          "FrameCountHigh": 174,
+          "FrameCountLow": 144,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SetAidAttackExtraTargetRangeModifier",
+            "HeavyParryTagContralModifier",
+            "ParryPriorityAddModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect"
+          ]
+        }
+      },
+      {
+        "pointer": "/AbilityMixins/4/ConfigList/13",
+        "config": {
+          "AnimatorStateName": "Attack_Execute_01_Combo",
+          "FrameCountHigh": 256,
+          "FrameCountLow": 226,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SetAidAttackExtraTargetRangeModifier",
+            "LightParryTagContralModifier",
+            "ParryPriorityAddModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect"
+          ]
+        }
+      },
+      {
+        "pointer": "/AbilityMixins/4/ConfigList/14",
+        "config": {
+          "AnimatorStateName": "Attack_Execute_01_Combo",
+          "FrameCountHigh": 303,
+          "FrameCountLow": 273,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SetAidAttackExtraTargetRangeModifier",
+            "HeavyParryTagContralModifier",
+            "ParryPriorityAddModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect"
+          ]
+        }
+      }
+    ]
+  },
+  "manager": {
+    "source": {
+      "name": "Larval_Execute_Manager",
+      "source": "Persistent\\Blocks\\Data\\3191559225.blk",
+      "blockSha256": "b34548afaec340f23b49575813dfc7ac508b6b7c2b28e60c4aa764dea9a1425a",
+      "offset": 1277714,
+      "size": 49430,
+      "objectId": "3590562796939119088",
+      "payloadSha256": "0b553e1c7499824d5f1f26a7c46b62615971434b5c8ae411cb7a48c3980c3a64",
+      "serializedSha256": "2dcfc965bbe2686ef3d521969b646972262baa629f71c7238202e07df513ebab"
+    },
+    "modifiers": {
+      "Execute_LastAttack_Evade_Detect_Modifier": {
+        "OnDodgeSuccess": [
+          {
+            "$type": "ApplyModifier",
+            "ModifierName": "Execute_RealTimeQTE",
+            "Predicates": [
+              {
+                "$type": "ByNot",
+                "Predicates": [
+                  {
+                    "$type": "ByIsInZoneTags",
+                    "Tags": [
+                      "Execution_Success"
+                    ],
+                    "Target": "Caster"
+                  }
+                ],
+                "Target": "Caster"
+              }
+            ]
+          },
+          {
+            "$type": "RemoveModifier",
+            "ModifierName": "Execute_LastAttack_Evade_Detect_Modifier"
+          }
+        ],
+        "OnSkillStart": [
+          {
+            "$type": "BranchOperator",
+            "Conditions": [
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "EvadeAid"
+              }
+            ],
+            "SuccessActions": [
+              {
+                "$type": "ApplyModifier",
+                "ModifierName": "Execute_RealTimeQTE_Timer",
+                "Predicates": [
+                  {
+                    "$type": "ByNot",
+                    "Predicates": [
+                      {
+                        "$type": "ByIsInZoneTags",
+                        "Tags": [
+                          "Execution_Success"
+                        ],
+                        "Target": "Caster"
+                      }
+                    ],
+                    "Target": "Caster"
+                  }
+                ]
+              },
+              {
+                "$type": "RemoveModifier",
+                "ModifierName": "Execute_LastAttack_Evade_Detect_Modifier"
+              }
+            ]
+          }
+        ]
+      },
+      "Execute_RealTimeQTE": {
+        "ModifierMixins": [
+          {
+            "$type": "ListenRealtimeQTEMixin",
+            "CustomTag": "Common_Monsterr_Execute_RealTimeQTE",
+            "OnFail": [],
+            "OnFinish": [
+              {
+                "$type": "RemoveModifier",
+                "ModifierName": "Execute_RealTimeQTE"
+              }
+            ],
+            "OnStart": [
+              {
+                "$type": "RemoveModifier",
+                "ModifierName": "Execute_Evade_DelayQTE_InputMute_Modifier",
+                "Target": "TeamAvatars"
+              }
+            ],
+            "OnSuccess": [
+              {
+                "$type": "ApplyModifier",
+                "ModifierName": "Execute_Counter_Modifier",
+                "Target": "TeamAvatars"
+              },
+              {
+                "$type": "SetAnimCtrlerParamAction",
+                "BoolVal": true,
+                "ParamName": "Trigger_PressAttackA",
+                "ParamType": 1,
+                "Target": "LocalAvatar"
+              }
+            ]
+          }
+        ],
+        "OnAdded": [
+          {
+            "$type": "StartRealtimeQTEAction",
+            "ConfigKey": "Common_Monsterr_Execute_RealTimeQTE"
+          }
+        ]
+      },
+      "Execute_RealTimeQTE_Timer": {
+        "DelayHandlers": [
+          {
+            "DelayTime": 0.4,
+            "IgnoreTimeScale": false,
+            "TimeUpActions": [
+              {
+                "$type": "ApplyModifier",
+                "ModifierName": "Execute_RealTimeQTE"
+              }
+            ]
+          }
+        ],
+        "OnAdded": [
+          {
+            "$type": "ApplyModifier",
+            "ModifierName": "Execute_Evade_DelayQTE_InputMute_Modifier",
+            "Predicates": [
+              {
+                "$type": "ByNot",
+                "Predicates": [
+                  {
+                    "$type": "ByIsInZoneTags",
+                    "Tags": [
+                      "Execution_Success"
+                    ],
+                    "Target": "Caster"
+                  }
+                ],
+                "Target": "Caster"
+              }
+            ],
+            "Target": "TeamAvatars"
+          }
+        ]
+      },
+      "Execute_ParryHit_Modifier": {
+        "Duration": -1,
+        "ModifierStacking": "Unique",
+        "OnAdded": [
+          {
+            "$type": "HandleAnimatorZoneTagsAction",
+            "AnimatorStateTags": [
+              "IgnoreParry"
+            ],
+            "IsAdd": true,
+            "Target": "Self"
+          },
+          {
+            "$type": "ApplyModifier",
+            "ModifierName": "Execute_LastAttack_Evade_Detect_Modifier",
+            "Target": "TeamAvatars"
+          }
+        ],
+        "OnBeingHitPre": [
+          {
+            "$type": "BranchOperator",
+            "Conditions": [
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "ParryAid"
+                ]
+              },
+              {
+                "$type": "ByNot",
+                "Predicates": [
+                  {
+                    "$type": "ByIsInZoneTags",
+                    "Tags": [
+                      "Execution_Success"
+                    ],
+                    "Target": "Self"
+                  }
+                ]
+              }
+            ],
+            "SuccessActions": [
+              {
+                "$type": "BranchOperator",
+                "Conditions": [
+                  {
+                    "$type": "ByNot",
+                    "Predicates": [
+                      {
+                        "$type": "ByIsInZoneTags",
+                        "Tags": [
+                          "Execution_BeingHit"
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "SuccessActions": [
+                  {
+                    "$type": "HandleAnimatorZoneTagsAction",
+                    "AnimatorStateTags": [
+                      "IgnoreParry"
+                    ],
+                    "IsAdd": false,
+                    "Target": "Self"
+                  },
+                  {
+                    "$type": "DamageByAttackPropertyAction",
+                    "AnimEventID": "#Monster_Common_Execute_PerfectCounter_AttackProperty_01",
+                    "Target": "Self"
+                  }
+                ]
+              },
+              {
+                "$type": "RemoveModifier",
+                "ModifierName": "Execute_ParryHit_Modifier"
+              }
+            ]
+          }
+        ],
+        "OnRemoved": [
+          {
+            "$type": "HandleAnimatorZoneTagsAction",
+            "AnimatorStateTags": [
+              "IgnoreParry"
+            ],
+            "IsAdd": false,
+            "Target": "Self"
+          },
+          {
+            "$type": "RemoveModifier",
+            "ModifierName": "Execute_LastAttack_Evade_Detect_Modifier",
+            "Target": "TeamAvatars"
+          }
+        ]
+      }
+    }
+  },
+  "battle": {
+    "source": {
+      "path": "Assets/NapResources/Data/ScriptConfig/AnimatorEvents/Battle/AnimatorEventPattern_Monster_Larval_Battle.asset",
+      "assetHash": "17942609384731050370",
+      "catalog": "catalog-persist.bin",
+      "bundleIndex": 69936,
+      "bundleHash": "17942609384731050370",
+      "secondaryHash": "920484151481613352",
+      "source": "StreamingAssets\\Blocks\\134424642.blk",
+      "offset": 3342463,
+      "size": 8974,
+      "location": 5,
+      "objectId": "-2560348162876485985",
+      "objectName": "AnimatorEventPattern_Monster_Larval_Battle",
+      "payloadSha256": "60771ee110fa8d607d089309327c8c1ee493a3ec6e70f9543fe6e390309534e4",
+      "serializedSha256": "72b7807528de8004f7a159a7b4f722e9e4a1e961b595069af2261ac57ab9e8e4",
+      "gameBlockSha256": "89ec2b6d9d82f56be66090d4f58cde26c7a2a5ed12988145bf2733c0e9180082"
+    },
+    "pattern": "Monster_Larval_Attack_Execute_01_Combo",
+    "events": [
+      {
+        "frame": 134,
+        "event": "Monster_Larval_Attack_Execute_01_Combo_AttackProperty_01"
+      },
+      {
+        "frame": 175,
+        "event": "Monster_Larval_Attack_Execute_01_Combo_AttackProperty_02"
+      },
+      {
+        "frame": 257,
+        "event": "Monster_Larval_Attack_Execute_01_Combo_AttackProperty_03"
+      },
+      {
+        "frame": 304,
+        "event": "Monster_Larval_Attack_Execute_01_Combo_AttackProperty_04"
+      }
+    ]
+  },
+  "interpretation": {
+    "normalComboAttackEventCount": 4,
+    "requiredResponseCount": 4,
+    "requiredResponseCountBasis": "User directly checked and confirmed four attacks after entry dodge on 2026-09-21. This count excludes entry; the basic sequence has five response positions including entry.",
+    "responseCountCorrection": "The previous inference from event count alone was withdrawn. The subsequent user observation establishes entry plus four attacks; it does not retrospectively validate the earlier inference or establish physical input timing.",
+    "firstSupportHasPowerStruggle": true,
+    "testOnlyPatternExcluded": true,
+    "finalParryAndEvadeQtePathsAreDistinct": true,
+    "externalPartyBasis": "Uploader states Ellen/Norma/Rina; user accepted description and observed switches as sufficient for analysis.",
+    "preparatoryAvoidance": "Local recordings establish projectile avoidance before the existing entry response. Number/direction of preparatory keydowns varies; entry plus four combo attacks remains unchanged."
+  },
+  "preparationInternalReview": {
+    "date": "2026-09-21",
+    "method": "Controller and independent read-only reviewer inspected existing extracted ability JSON and source metadata. No fresh original-block extraction/hash check; no game input.",
+    "sourceDirectory": "<PRIVATE_HOME>/.codex/worktrees/f873/zzz-pattern-practice/.local/kusarikku-static/",
+    "astel": {
+      "name": "Larval_Exectue_AstelMeteorite",
+      "source": {
+        "name": "Larval_Exectue_AstelMeteorite",
+        "source": "C:\\Program Files\\Epic Games\\ZenlessZoneZero\\games\\ZenlessZoneZero Game\\ZenlessZoneZero_Data\\Persistent\\Blocks\\Data\\3191559225.blk",
+        "blockSha256": "b34548afaec340f23b49575813dfc7ac508b6b7c2b28e60c4aa764dea9a1425a",
+        "offset": 1277714,
+        "size": 49430,
+        "objectId": "6640822817511748223",
+        "payloadSha256": "67c2113d4366a535228d472ee5f82bd2978250800ca8b4dc9c4bc2c3ae64ba2a",
+        "serializedSha256": "2dcfc965bbe2686ef3d521969b646972262baa629f71c7238202e07df513ebab"
+      },
+      "reviewedJsonSha256": "9e411d6f09d23c1e62c07a9d5e9041d55a2b526c30e12a99b854f65a90c5c89b",
+      "stateBindingPointer": "/AbilityMixins/0/ConfigList/0",
+      "stateBinding": {
+        "ActionList": [
+          {
+            "$type": "ApplyModifier",
+            "ModifierName": "Modifier_AstelMeteorite_CreateCreviseEffect"
+          }
+        ],
+        "AnimatorStateName": "Attack_Execute_01_Pre",
+        "ForceTriggerOnTransitionIn": true,
+        "ForceTriggerOnTransitionOut": true,
+        "Frame": 0
+      },
+      "attachPointSetupPointer": "/AbilityMixins/0/ConfigList/1",
+      "attachPointSetup": {
+        "ActionList": [
+          {
+            "$type": "ApplyModifier",
+            "ModifierName": "Modifier_AstelMeteorite_AttachPoints_InitPosRot"
+          },
+          {
+            "$type": "ApplyModifier",
+            "ModifierName": "Modifier_AstelMeteorite_AttachPoints_HitPosRot"
+          }
+        ],
+        "AnimatorStateName": "Attack_Execute_01_Pre",
+        "ForceTriggerOnTransitionIn": true,
+        "ForceTriggerOnTransitionOut": true,
+        "Frame": 112
+      },
+      "registrationsPointer": "/DefaultModifier/OnAdded",
+      "registrations": [
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Larval_Execute_Pre_Bullet_01",
+          "IsAutoTrigger": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Larval_Execute_Pre_Bullet_02",
+          "IsAutoTrigger": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Larval_Execute_Pre_Bullet_03",
+          "IsAutoTrigger": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Larval_Execute_Pre_Bullet_04",
+          "IsAutoTrigger": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Larval_Execute_Pre_Bullet_05",
+          "IsAutoTrigger": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Larval_Execute_Pre_Bullet_06",
+          "IsAutoTrigger": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Larval_Execute_Pre_Bullet_07",
+          "IsAutoTrigger": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Larval_Execute_Pre_Bullet_08",
+          "IsAutoTrigger": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Larval_Execute_Pre_Bullet_09",
+          "IsAutoTrigger": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Larval_Execute_Pre_Bullet_10",
+          "IsAutoTrigger": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Larval_Execute_Pre_Bullet_11",
+          "IsAutoTrigger": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Larval_Execute_Pre_Bullet_12",
+          "IsAutoTrigger": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Larval_Execute_Pre_Bullet_13",
+          "IsAutoTrigger": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Larval_Execute_Pre_Bullet_14",
+          "IsAutoTrigger": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Larval_Execute_Pre_Bullet_15",
+          "IsAutoTrigger": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Larval_Execute_Pre_Bullet_16",
+          "IsAutoTrigger": false,
+          "Target": "Self"
+        }
+      ]
+    },
+    "bullets": [
+      {
+        "name": "Larval_Execute_Pre_Bullet_01",
+        "source": {
+          "name": "Larval_Execute_Pre_Bullet_01",
+          "source": "C:\\Program Files\\Epic Games\\ZenlessZoneZero\\games\\ZenlessZoneZero Game\\ZenlessZoneZero_Data\\Persistent\\Blocks\\Data\\3191559225.blk",
+          "blockSha256": "b34548afaec340f23b49575813dfc7ac508b6b7c2b28e60c4aa764dea9a1425a",
+          "offset": 1277714,
+          "size": 49430,
+          "objectId": "-4678749693984543220",
+          "payloadSha256": "8a56dc0df3e2219280ed4a5398df0796a43d6c732d9a5037895e39c698df5d5a",
+          "serializedSha256": "2dcfc965bbe2686ef3d521969b646972262baa629f71c7238202e07df513ebab"
+        },
+        "reviewedJsonSha256": "addbe12376fba885711c50af3d6256ca553a58e6825fa70d03a9c93a221dd201",
+        "triggerPointer": "/Modifiers/Modifier_AstelMeteorite_CreateCreviseEffect/ModifierMixins/1/ConfigList/0",
+        "trigger": {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Larval_Execute_Pre_Bullet_01",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Execute_01_Pre",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 119
+        },
+        "bulletMixinPointer": "/AbilityMixins/0",
+        "settings": {
+          "BulletInitTargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "AttachPoint_AstelMeteorite_01",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": false,
+            "OffsetReferTarget": "Caster"
+          },
+          "RotationType": "ConfigRotationToTarget",
+          "TargetUpdateMode": "OnStart",
+          "RotationTargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "OffsetReferTarget": "LocalAvatar"
+          },
+          "RandomPositionRange": {
+            "x": 3,
+            "y": 0,
+            "z": 3
+          },
+          "MovementType": "ConfigMovementSimple",
+          "InitVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 60
+          },
+          "AliveDuration": 2,
+          "ExplodeAnimEventID": "Monster_Larval_Attack_Execute_01_Pre_Bullet_AttackProperty_01",
+          "HitExplodeRadius": 4,
+          "BulletColliderType": "Capsule",
+          "DodgeColliderType": "Capsule"
+        }
+      },
+      {
+        "name": "Larval_Execute_Pre_Bullet_02",
+        "source": {
+          "name": "Larval_Execute_Pre_Bullet_02",
+          "source": "C:\\Program Files\\Epic Games\\ZenlessZoneZero\\games\\ZenlessZoneZero Game\\ZenlessZoneZero_Data\\Persistent\\Blocks\\Data\\3191559225.blk",
+          "blockSha256": "b34548afaec340f23b49575813dfc7ac508b6b7c2b28e60c4aa764dea9a1425a",
+          "offset": 1277714,
+          "size": 49430,
+          "objectId": "-7988750929557674938",
+          "payloadSha256": "e4a08e67572038562aef896413a122e2217788abcf3b38f53ebea9decdcd296e",
+          "serializedSha256": "2dcfc965bbe2686ef3d521969b646972262baa629f71c7238202e07df513ebab"
+        },
+        "reviewedJsonSha256": "d76e4b94e6ba22fcf010421f2a61211a7464bdabfc3815e542bd63bf84d78941",
+        "triggerPointer": "/Modifiers/Modifier_AstelMeteorite_CreateCreviseEffect/ModifierMixins/1/ConfigList/1",
+        "trigger": {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Larval_Execute_Pre_Bullet_02",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Execute_01_Pre",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 126
+        },
+        "bulletMixinPointer": "/AbilityMixins/0",
+        "settings": {
+          "BulletInitTargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "AttachPoint_AstelMeteorite_02",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": false,
+            "OffsetReferTarget": "Caster"
+          },
+          "RotationType": "ConfigRotationToTarget",
+          "TargetUpdateMode": "OnStart",
+          "RotationTargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "AttachPoint_HitPoint_02",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": false,
+            "OffsetReferTarget": "Caster"
+          },
+          "RandomPositionRange": {
+            "x": 5,
+            "y": 0,
+            "z": 5
+          },
+          "MovementType": "ConfigMovementSimple",
+          "InitVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 60
+          },
+          "AliveDuration": 2,
+          "ExplodeAnimEventID": "Monster_Larval_Attack_Execute_01_Pre_Bullet_AttackProperty_01",
+          "HitExplodeRadius": 4,
+          "BulletColliderType": "Capsule",
+          "DodgeColliderType": "Capsule"
+        }
+      },
+      {
+        "name": "Larval_Execute_Pre_Bullet_03",
+        "source": {
+          "name": "Larval_Execute_Pre_Bullet_03",
+          "source": "C:\\Program Files\\Epic Games\\ZenlessZoneZero\\games\\ZenlessZoneZero Game\\ZenlessZoneZero_Data\\Persistent\\Blocks\\Data\\3191559225.blk",
+          "blockSha256": "b34548afaec340f23b49575813dfc7ac508b6b7c2b28e60c4aa764dea9a1425a",
+          "offset": 1277714,
+          "size": 49430,
+          "objectId": "2906721407025864330",
+          "payloadSha256": "4b1be2f1df304db5b3b2a2def2be3704c2cf8297de2743bfa60eaa81eec5d675",
+          "serializedSha256": "2dcfc965bbe2686ef3d521969b646972262baa629f71c7238202e07df513ebab"
+        },
+        "reviewedJsonSha256": "fa35e98424068722514bbf0d4fbcf234d2e4563dda0c066f13f776b5add52e8b",
+        "triggerPointer": "/Modifiers/Modifier_AstelMeteorite_CreateCreviseEffect/ModifierMixins/1/ConfigList/2",
+        "trigger": {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Larval_Execute_Pre_Bullet_03",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Execute_01_Pre",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 132
+        },
+        "bulletMixinPointer": "/AbilityMixins/0",
+        "settings": {
+          "BulletInitTargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "AttachPoint_AstelMeteorite_03",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": false,
+            "OffsetReferTarget": "Caster"
+          },
+          "RotationType": "ConfigRotationToTarget",
+          "TargetUpdateMode": "OnStart",
+          "RotationTargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "AttachPoint_HitPoint_05",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": false,
+            "OffsetReferTarget": "Caster"
+          },
+          "RandomPositionRange": {
+            "x": 5,
+            "y": 0,
+            "z": 5
+          },
+          "MovementType": "ConfigMovementSimple",
+          "InitVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 60
+          },
+          "AliveDuration": 2,
+          "ExplodeAnimEventID": "Monster_Larval_Attack_Execute_01_Pre_Bullet_AttackProperty_01",
+          "HitExplodeRadius": 4,
+          "BulletColliderType": "Capsule",
+          "DodgeColliderType": "Capsule"
+        }
+      },
+      {
+        "name": "Larval_Execute_Pre_Bullet_05",
+        "source": {
+          "name": "Larval_Execute_Pre_Bullet_05",
+          "source": "C:\\Program Files\\Epic Games\\ZenlessZoneZero\\games\\ZenlessZoneZero Game\\ZenlessZoneZero_Data\\Persistent\\Blocks\\Data\\3191559225.blk",
+          "blockSha256": "b34548afaec340f23b49575813dfc7ac508b6b7c2b28e60c4aa764dea9a1425a",
+          "offset": 1277714,
+          "size": 49430,
+          "objectId": "1240340759065320994",
+          "payloadSha256": "b7185e233cc5957627d213d98bf05c504ace22c59b10d494c175e6e1fc3b3edb",
+          "serializedSha256": "2dcfc965bbe2686ef3d521969b646972262baa629f71c7238202e07df513ebab"
+        },
+        "reviewedJsonSha256": "5f428ce7cc9ca80d5cf575db2f63e6e3d059d6af3ac7668614bb56a5a0bc0af8",
+        "triggerPointer": "/Modifiers/Modifier_AstelMeteorite_CreateCreviseEffect/ModifierMixins/1/ConfigList/3",
+        "trigger": {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Larval_Execute_Pre_Bullet_05",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Execute_01_Pre",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 144
+        },
+        "bulletMixinPointer": "/AbilityMixins/0",
+        "settings": {
+          "BulletInitTargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "AttachPoint_AstelMeteorite_05",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": false,
+            "OffsetReferTarget": "Caster"
+          },
+          "RotationType": "ConfigRotationToTarget",
+          "TargetUpdateMode": "OnStart",
+          "RotationTargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "OffsetReferTarget": "LocalAvatar"
+          },
+          "RandomPositionRange": {
+            "x": 3,
+            "y": 0,
+            "z": 3
+          },
+          "MovementType": "ConfigMovementSimple",
+          "InitVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 60
+          },
+          "AliveDuration": 2,
+          "ExplodeAnimEventID": "Monster_Larval_Attack_Execute_01_Pre_Bullet_AttackProperty_01",
+          "HitExplodeRadius": 4,
+          "BulletColliderType": "Capsule",
+          "DodgeColliderType": "Capsule"
+        }
+      },
+      {
+        "name": "Larval_Execute_Pre_Bullet_06",
+        "source": {
+          "name": "Larval_Execute_Pre_Bullet_06",
+          "source": "C:\\Program Files\\Epic Games\\ZenlessZoneZero\\games\\ZenlessZoneZero Game\\ZenlessZoneZero_Data\\Persistent\\Blocks\\Data\\3191559225.blk",
+          "blockSha256": "b34548afaec340f23b49575813dfc7ac508b6b7c2b28e60c4aa764dea9a1425a",
+          "offset": 1277714,
+          "size": 49430,
+          "objectId": "7096192142819273148",
+          "payloadSha256": "e2515bb163655736012f96bca6f2ba97599faa7485f16aab229a2a61d0c8902e",
+          "serializedSha256": "2dcfc965bbe2686ef3d521969b646972262baa629f71c7238202e07df513ebab"
+        },
+        "reviewedJsonSha256": "6f775f017499d20c499b348393e06590b38f0fd587fd69aec1762526bcae4951",
+        "triggerPointer": "/Modifiers/Modifier_AstelMeteorite_CreateCreviseEffect/ModifierMixins/1/ConfigList/4",
+        "trigger": {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Larval_Execute_Pre_Bullet_06",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Execute_01_Pre",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 152
+        },
+        "bulletMixinPointer": "/AbilityMixins/0",
+        "settings": {
+          "BulletInitTargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "AttachPoint_AstelMeteorite_06",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": false,
+            "OffsetReferTarget": "Caster"
+          },
+          "RotationType": "ConfigRotationToTarget",
+          "TargetUpdateMode": "OnStart",
+          "RotationTargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "AttachPoint_HitPoint_03",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": false,
+            "OffsetReferTarget": "Caster"
+          },
+          "RandomPositionRange": {
+            "x": 5,
+            "y": 0,
+            "z": 5
+          },
+          "MovementType": "ConfigMovementSimple",
+          "InitVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 60
+          },
+          "AliveDuration": 2,
+          "ExplodeAnimEventID": "Monster_Larval_Attack_Execute_01_Pre_Bullet_AttackProperty_01",
+          "HitExplodeRadius": 4,
+          "BulletColliderType": "Capsule",
+          "DodgeColliderType": "Capsule"
+        }
+      },
+      {
+        "name": "Larval_Execute_Pre_Bullet_08",
+        "source": {
+          "name": "Larval_Execute_Pre_Bullet_08",
+          "source": "C:\\Program Files\\Epic Games\\ZenlessZoneZero\\games\\ZenlessZoneZero Game\\ZenlessZoneZero_Data\\Persistent\\Blocks\\Data\\3191559225.blk",
+          "blockSha256": "b34548afaec340f23b49575813dfc7ac508b6b7c2b28e60c4aa764dea9a1425a",
+          "offset": 1277714,
+          "size": 49430,
+          "objectId": "8431257090482768372",
+          "payloadSha256": "a958eb90a91a0fd844a7567defe45b37fd86c68b453001555743f2ad9712bc74",
+          "serializedSha256": "2dcfc965bbe2686ef3d521969b646972262baa629f71c7238202e07df513ebab"
+        },
+        "reviewedJsonSha256": "1ae3489c521bc50df1bc2dd342d078dc37f1aada5b44d532263e958819a294a1",
+        "triggerPointer": "/Modifiers/Modifier_AstelMeteorite_CreateCreviseEffect/ModifierMixins/1/ConfigList/5",
+        "trigger": {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Larval_Execute_Pre_Bullet_08",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Execute_01_Pre",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 169
+        },
+        "bulletMixinPointer": "/AbilityMixins/0",
+        "settings": {
+          "BulletInitTargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "AttachPoint_AstelMeteorite_08",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": false,
+            "OffsetReferTarget": "Caster"
+          },
+          "RotationType": "ConfigRotationToTarget",
+          "TargetUpdateMode": "OnStart",
+          "RotationTargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "AttachPoint_HitPoint_06",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": false,
+            "OffsetReferTarget": "Caster"
+          },
+          "RandomPositionRange": {
+            "x": 5,
+            "y": 0,
+            "z": 5
+          },
+          "MovementType": "ConfigMovementSimple",
+          "InitVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 60
+          },
+          "AliveDuration": 2,
+          "ExplodeAnimEventID": "Monster_Larval_Attack_Execute_01_Pre_Bullet_AttackProperty_01",
+          "HitExplodeRadius": 4,
+          "BulletColliderType": "Capsule",
+          "DodgeColliderType": "Capsule"
+        }
+      },
+      {
+        "name": "Larval_Execute_Pre_Bullet_10",
+        "source": {
+          "name": "Larval_Execute_Pre_Bullet_10",
+          "source": "C:\\Program Files\\Epic Games\\ZenlessZoneZero\\games\\ZenlessZoneZero Game\\ZenlessZoneZero_Data\\Persistent\\Blocks\\Data\\3191559225.blk",
+          "blockSha256": "b34548afaec340f23b49575813dfc7ac508b6b7c2b28e60c4aa764dea9a1425a",
+          "offset": 1277714,
+          "size": 49430,
+          "objectId": "1342771252231242907",
+          "payloadSha256": "276e7400fe04004822c4381c8e45790078b815373c03c2b8f183701b0e5ad7e9",
+          "serializedSha256": "2dcfc965bbe2686ef3d521969b646972262baa629f71c7238202e07df513ebab"
+        },
+        "reviewedJsonSha256": "a4a0326b3543ea58827041214514ca7ccbfde9bccb64cad879ce4e8682920332",
+        "triggerPointer": "/Modifiers/Modifier_AstelMeteorite_CreateCreviseEffect/ModifierMixins/1/ConfigList/6",
+        "trigger": {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Larval_Execute_Pre_Bullet_10",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Execute_01_Pre",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 188
+        },
+        "bulletMixinPointer": "/AbilityMixins/0",
+        "settings": {
+          "BulletInitTargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "AttachPoint_AstelMeteorite_10",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": false,
+            "OffsetReferTarget": "Caster"
+          },
+          "RotationType": "ConfigRotationToTarget",
+          "TargetUpdateMode": "OnStart",
+          "RotationTargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "AttachPoint_HitPoint_02",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": false,
+            "OffsetReferTarget": "Caster"
+          },
+          "RandomPositionRange": {
+            "x": 5,
+            "y": 0,
+            "z": 5
+          },
+          "MovementType": "ConfigMovementSimple",
+          "InitVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 60
+          },
+          "AliveDuration": 2,
+          "ExplodeAnimEventID": "Monster_Larval_Attack_Execute_01_Pre_Bullet_AttackProperty_01",
+          "HitExplodeRadius": 4,
+          "BulletColliderType": "Capsule",
+          "DodgeColliderType": "Capsule"
+        }
+      },
+      {
+        "name": "Larval_Execute_Pre_Bullet_11",
+        "source": {
+          "name": "Larval_Execute_Pre_Bullet_11",
+          "source": "C:\\Program Files\\Epic Games\\ZenlessZoneZero\\games\\ZenlessZoneZero Game\\ZenlessZoneZero_Data\\Persistent\\Blocks\\Data\\3191559225.blk",
+          "blockSha256": "b34548afaec340f23b49575813dfc7ac508b6b7c2b28e60c4aa764dea9a1425a",
+          "offset": 1277714,
+          "size": 49430,
+          "objectId": "-7642409151877042941",
+          "payloadSha256": "2c00dead49e7c0b4fb0fb2bf88966c3b659f9055893f7d387b9a113c8b8a5d35",
+          "serializedSha256": "2dcfc965bbe2686ef3d521969b646972262baa629f71c7238202e07df513ebab"
+        },
+        "reviewedJsonSha256": "ce8124371772b7b55ea0845c22db4753c457e0c1af90a856145b3026a3c502da",
+        "triggerPointer": "/Modifiers/Modifier_AstelMeteorite_CreateCreviseEffect/ModifierMixins/1/ConfigList/7",
+        "trigger": {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Larval_Execute_Pre_Bullet_11",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Execute_01_Pre",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 196
+        },
+        "bulletMixinPointer": "/AbilityMixins/0",
+        "settings": {
+          "BulletInitTargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "AttachPoint_AstelMeteorite_11",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": false,
+            "OffsetReferTarget": "Caster"
+          },
+          "RotationType": "ConfigRotationToTarget",
+          "TargetUpdateMode": "OnStart",
+          "RotationTargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "OffsetReferTarget": "LocalAvatar"
+          },
+          "RandomPositionRange": {
+            "x": 3,
+            "y": 0,
+            "z": 3
+          },
+          "MovementType": "ConfigMovementSimple",
+          "InitVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 60
+          },
+          "AliveDuration": 2,
+          "ExplodeAnimEventID": "Monster_Larval_Attack_Execute_01_Pre_Bullet_AttackProperty_01",
+          "HitExplodeRadius": 4,
+          "BulletColliderType": "Capsule",
+          "DodgeColliderType": "Capsule"
+        }
+      },
+      {
+        "name": "Larval_Execute_Pre_Bullet_13",
+        "source": {
+          "name": "Larval_Execute_Pre_Bullet_13",
+          "source": "C:\\Program Files\\Epic Games\\ZenlessZoneZero\\games\\ZenlessZoneZero Game\\ZenlessZoneZero_Data\\Persistent\\Blocks\\Data\\3191559225.blk",
+          "blockSha256": "b34548afaec340f23b49575813dfc7ac508b6b7c2b28e60c4aa764dea9a1425a",
+          "offset": 1277714,
+          "size": 49430,
+          "objectId": "-4383615622876378970",
+          "payloadSha256": "c6e51d8d9595e9e9a7711b6bd42c9e6ff7b320d9003460abdfbf9cbcc3a51681",
+          "serializedSha256": "2dcfc965bbe2686ef3d521969b646972262baa629f71c7238202e07df513ebab"
+        },
+        "reviewedJsonSha256": "5cc08358c03e05f25589f5c63ff8f10aee12d59760c0adeec689a240fb9506b3",
+        "triggerPointer": "/Modifiers/Modifier_AstelMeteorite_CreateCreviseEffect/ModifierMixins/1/ConfigList/8",
+        "trigger": {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Larval_Execute_Pre_Bullet_13",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Execute_01_Pre",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 212
+        },
+        "bulletMixinPointer": "/AbilityMixins/0",
+        "settings": {
+          "BulletInitTargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "AttachPoint_AstelMeteorite_13",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": false,
+            "OffsetReferTarget": "Caster"
+          },
+          "RotationType": "ConfigRotationToTarget",
+          "TargetUpdateMode": "OnStart",
+          "RotationTargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "AttachPoint_HitPoint_05",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": false,
+            "OffsetReferTarget": "Caster"
+          },
+          "RandomPositionRange": {
+            "x": 5,
+            "y": 0,
+            "z": 5
+          },
+          "MovementType": "ConfigMovementSimple",
+          "InitVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 60
+          },
+          "AliveDuration": 2,
+          "ExplodeAnimEventID": "Monster_Larval_Attack_Execute_01_Pre_Bullet_AttackProperty_01",
+          "HitExplodeRadius": 4,
+          "BulletColliderType": "Capsule",
+          "DodgeColliderType": "Capsule"
+        }
+      },
+      {
+        "name": "Larval_Execute_Pre_Bullet_14",
+        "source": {
+          "name": "Larval_Execute_Pre_Bullet_14",
+          "source": "C:\\Program Files\\Epic Games\\ZenlessZoneZero\\games\\ZenlessZoneZero Game\\ZenlessZoneZero_Data\\Persistent\\Blocks\\Data\\3191559225.blk",
+          "blockSha256": "b34548afaec340f23b49575813dfc7ac508b6b7c2b28e60c4aa764dea9a1425a",
+          "offset": 1277714,
+          "size": 49430,
+          "objectId": "8337612891044654504",
+          "payloadSha256": "9c0c1f10209c7d5bdb226960e1b520f93059d613663c120054ff275fdc5f6fbb",
+          "serializedSha256": "2dcfc965bbe2686ef3d521969b646972262baa629f71c7238202e07df513ebab"
+        },
+        "reviewedJsonSha256": "1fa2d9bdbcf7f23acc4e7bbc2f08f6a90a6952c3623ebd1b12fff6db3a15c21f",
+        "triggerPointer": "/Modifiers/Modifier_AstelMeteorite_CreateCreviseEffect/ModifierMixins/1/ConfigList/9",
+        "trigger": {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Larval_Execute_Pre_Bullet_14",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Execute_01_Pre",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 220
+        },
+        "bulletMixinPointer": "/AbilityMixins/0",
+        "settings": {
+          "BulletInitTargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "AttachPoint_AstelMeteorite_14",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": false,
+            "OffsetReferTarget": "Caster"
+          },
+          "RotationType": "ConfigRotationToTarget",
+          "TargetUpdateMode": "OnStart",
+          "RotationTargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "OffsetReferTarget": "LocalAvatar"
+          },
+          "RandomPositionRange": {
+            "x": 3,
+            "y": 0,
+            "z": 3
+          },
+          "MovementType": "ConfigMovementSimple",
+          "InitVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 60
+          },
+          "AliveDuration": 2,
+          "ExplodeAnimEventID": "Monster_Larval_Attack_Execute_01_Pre_Bullet_AttackProperty_01",
+          "HitExplodeRadius": 4,
+          "BulletColliderType": "Capsule",
+          "DodgeColliderType": "Capsule"
+        }
+      },
+      {
+        "name": "Larval_Execute_Pre_Bullet_16",
+        "source": {
+          "name": "Larval_Execute_Pre_Bullet_16",
+          "source": "C:\\Program Files\\Epic Games\\ZenlessZoneZero\\games\\ZenlessZoneZero Game\\ZenlessZoneZero_Data\\Persistent\\Blocks\\Data\\3191559225.blk",
+          "blockSha256": "b34548afaec340f23b49575813dfc7ac508b6b7c2b28e60c4aa764dea9a1425a",
+          "offset": 1277714,
+          "size": 49430,
+          "objectId": "-5178006571736887453",
+          "payloadSha256": "c30939e3b9f069799316347be3cdf0143bd98df5b91064c60687c55deb629978",
+          "serializedSha256": "2dcfc965bbe2686ef3d521969b646972262baa629f71c7238202e07df513ebab"
+        },
+        "reviewedJsonSha256": "f15652da54881d05c7f1c987b1603e2db5413a679b67cf4063760d88513d501e",
+        "triggerPointer": "/Modifiers/Modifier_AstelMeteorite_CreateCreviseEffect/ModifierMixins/1/ConfigList/10",
+        "trigger": {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Larval_Execute_Pre_Bullet_16",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Execute_01_Pre",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 235
+        },
+        "bulletMixinPointer": "/AbilityMixins/0",
+        "settings": {
+          "BulletInitTargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "AttachPoint_AstelMeteorite_16",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": false,
+            "OffsetReferTarget": "Caster"
+          },
+          "RotationType": "ConfigRotationToTarget",
+          "TargetUpdateMode": "OnStart",
+          "RotationTargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "AttachPoint_HitPoint_06",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": false,
+            "OffsetReferTarget": "Caster"
+          },
+          "RandomPositionRange": {
+            "x": 5,
+            "y": 0,
+            "z": 5
+          },
+          "MovementType": "ConfigMovementSimple",
+          "InitVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 60
+          },
+          "AliveDuration": 2,
+          "ExplodeAnimEventID": "Monster_Larval_Attack_Execute_01_Pre_Bullet_AttackProperty_01",
+          "HitExplodeRadius": 4,
+          "BulletColliderType": "Capsule",
+          "DodgeColliderType": "Capsule"
+        }
+      }
+    ],
+    "entry": {
+      "source": {
+        "name": "Larval_Execute_Manager",
+        "source": "C:\\Program Files\\Epic Games\\ZenlessZoneZero\\games\\ZenlessZoneZero Game\\ZenlessZoneZero_Data\\Persistent\\Blocks\\Data\\3191559225.blk",
+        "blockSha256": "b34548afaec340f23b49575813dfc7ac508b6b7c2b28e60c4aa764dea9a1425a",
+        "offset": 1277714,
+        "size": 49430,
+        "objectId": "3590562796939119088",
+        "payloadSha256": "0b553e1c7499824d5f1f26a7c46b62615971434b5c8ae411cb7a48c3980c3a64",
+        "serializedSha256": "2dcfc965bbe2686ef3d521969b646972262baa629f71c7238202e07df513ebab"
+      },
+      "reviewedJsonSha256": "d7b81b57b4a94d1a308ac46e14e380a857126b1324c0219fcb7d6866b9ca2423",
+      "pointer": "/AbilityMixins/0/ConfigList/2",
+      "binding": {
+        "AnimatorStateName": "Attack_Execute_01_Pre",
+        "FrameCountHigh": 290,
+        "FrameCountLow": 250,
+        "LayerIndex": 0,
+        "MaxFrameCountHigh": false,
+        "MaxFrameCountLow": false,
+        "ModifierNameList": [
+          "Execute_01_ListenEvade_Modifier"
+        ]
+      }
+    },
+    "conclusions": [
+      "The static configuration explicitly binds preparatory projectile triggers to Attack_Execute_01_Pre before its later entry dodge listener. Pre is not synonymous with the single entry response.",
+      "Preparation and PreparationPress are experiment input-plan terms; they do not identify a separate game state. Preparation dodge 1/2 label the chosen player response route, not official attack names or projectile counts.",
+      "The eleven trigger entries differ from sixteen registered abilities and from required player keydowns. Do not infer eleven dodges or a measured onscreen projectile count.",
+      "Triggered bullets 01/05/11/14 reference LocalAvatar; others reference caster HitPoints. All reviewed rotation settings specify TargetUpdateMode OnStart. Continuous player tracking is not established."
+    ],
+    "limits": [
+      "Current encounter entity-to-ability loading remains unverified.",
+      "Runtime trigger execution and individual video-projectile alignment remain unverified.",
+      "Internal frame coordinates and engine settings are not physical input ms, success windows, or proof that the automatic A/D/A route succeeds."
+    ]
+  },
+  "perfectSemantics": {
+    "userObservation": "01111 can receive game-perfect; do not rewrite to11111",
+    "directVideoCounterexample": "16-05-18 preparation10906; entryRMB380 thenHP9773/red1133 f390; perfect/+2000 f840",
+    "internal": {
+      "asset": "Larval_Execute_Manager",
+      "block": "3191559225.blk",
+      "blockSha256": "b34548afaec340f23b49575813dfc7ac508b6b7c2b28e60c4aa764dea9a1425a",
+      "offset": 1277714,
+      "size": 49430,
+      "objectId": "3590562796939119088",
+      "payloadSha256": "0b553e1c7499824d5f1f26a7c46b62615971434b5c8ae411cb7a48c3980c3a64",
+      "reading": "Pre dodge path and ExecuteHit_Check hit path both set progression bool. Combo0 clears bool/tag. PerfectCounter attack receiver emits score event without observed entry-success guard.",
+      "limit": "Static preserved JSON inspected, block not re-extracted in this review; upper score receiver to+2000 complete mapping not recovered. Does not prove last-hit-only sufficiency or unchanged post-failure timing."
+    }
+  },
+  "limits": [
+    "Internal coordinates are not physical input milliseconds.",
+    "Static ability bindings do not prove every current encounter runtime transition.",
+    "Game perfect may include01111; score receiver mapping is incomplete."
+  ]
+}

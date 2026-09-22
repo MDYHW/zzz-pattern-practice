@@ -1,0 +1,912 @@
+{
+  "date": "2026-09-20",
+  "bossId": "gir-reborn",
+  "profileId": "girtablullu-stagnant-execute-01",
+  "party": "레미엘 → 벨리나 → 아리아",
+  "startCharacter": "아리아",
+  "decision": {
+    "windowsMs": [
+      [
+        3300,
+        3550
+      ],
+      [
+        4850,
+        5250
+      ],
+      [
+        6050,
+        6450
+      ],
+      [
+        7450,
+        7850
+      ]
+    ],
+    "baselineMs": [
+      3400,
+      5050,
+      6250,
+      7650
+    ],
+    "keys": [
+      "RMB",
+      "Space",
+      "Space",
+      "Space"
+    ],
+    "status": "adopted-conservative-practice-windows",
+    "crosses": [
+      [
+        3300,
+        5250,
+        6050,
+        7850
+      ],
+      [
+        3550,
+        4850,
+        6450,
+        7450
+      ]
+    ],
+    "baselineOutcome": {
+      "bits": "1111",
+      "source": "user confirmation in conversation; trial not saved"
+    },
+    "limits": [
+      "Not all endpoint combinations or all interior points tested.",
+      "Later scheduled actions cannot cause an earlier entry failure.",
+      "Failures following an earlier failure are not independent endpoint evidence.",
+      "OFF includes UNKNOWN classified OFF under user policy."
+    ]
+  },
+  "trials": [
+    {
+      "rawFile": "trial-a5d7284893f44cd5b17b7d00b0bd46e0.json",
+      "rawSha256": "22f42fa396f2404c0eef16347971fb054e668ae65eac4f4095757d9ec3c43f15",
+      "resultSha256": "8f890904d3fc41f0e72ec33c5e3d17e4590f3b8abc622531281f240f9b052504",
+      "f8Utc": "2026-09-19T19:51:26.7144303Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3500,
+        4850,
+        6300,
+        7700
+      ],
+      "bits": "1111"
+    },
+    {
+      "rawFile": "trial-8fe6955b05ea417c83722755990d2410.json",
+      "rawSha256": "7ef06c77b4db729af941505bf6742eb87de81fc1f1824c13672c7f9ec5d55fd4",
+      "resultSha256": "8e5d14595b4d7e8aec0076efa970221ab01ae999e200607646402c4fd49cd888",
+      "f8Utc": "2026-09-19T19:54:36.6628032Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3500,
+        4700,
+        6300,
+        7700
+      ],
+      "bits": "1000"
+    },
+    {
+      "rawFile": "trial-2d7bca79f51341efbc1a8898717f8871.json",
+      "rawSha256": "13b6d5b9280eb8047b939c1ea3ad8f84516fe9f103b47ac1c0a6ea9975656fbe",
+      "resultSha256": "82f5877f3c7906ba31879d4ce6bd51bae726d6ae6b0e20134d876e1c7407f66c",
+      "f8Utc": "2026-09-19T19:58:56.2717352Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3500,
+        4700,
+        6300,
+        7700
+      ],
+      "bits": "1000"
+    },
+    {
+      "rawFile": "trial-bfff5b45c1814d67b185e5a218b155f0.json",
+      "rawSha256": "657ff554c0d48f55f1ed5e65baf9d203b9ada54ec478b9ba89fef6f0bc0cedb1",
+      "resultSha256": "de48a81bca7cd36bf7dcfa5c1d2f92f22b6c59b60ae20354b5f5c957d529df99",
+      "f8Utc": "2026-09-19T20:00:33.2422135Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3500,
+        4750,
+        6300,
+        7700
+      ],
+      "bits": "1000"
+    },
+    {
+      "rawFile": "trial-d7ea571d0b674c0fb29d5453914dab9e.json",
+      "rawSha256": "68ef0e088dbb0fc7c752eaa864b0759bdb3061578b2b826f98f067bf6bbf3f18",
+      "resultSha256": "800cdd88d1a71ff32aabb7ec000e8d4b5a372072f63a2a0bcf5ce8967be50cd7",
+      "f8Utc": "2026-09-19T20:01:58.6879199Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3500,
+        4800,
+        6300,
+        7700
+      ],
+      "bits": "1000"
+    },
+    {
+      "rawFile": "trial-c7c2522c06d54ca38d506d5a4d6024f6.json",
+      "rawSha256": "00c6305dfd9b4745e25be9127e5b3d34fb18908de44cb97be8052fead76ca281",
+      "resultSha256": "253bf9542e00174e84642d9543214304a975180f0d8cccec647edbc14443f732",
+      "f8Utc": "2026-09-19T20:03:23.8378239Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3500,
+        4800,
+        6300,
+        7700
+      ],
+      "bits": "1000"
+    },
+    {
+      "rawFile": "trial-2f1d6a83ee924e33bff73c1fa6816f13.json",
+      "rawSha256": "32d956bc62e2078784369551700f0ab4fb3fb4b4549f920e921d6f0984e98cf4",
+      "resultSha256": "b8338eb3477a53d7436896413e221b699fd9617ddb916771f2a3780a0a2bdac9",
+      "f8Utc": "2026-09-19T20:04:52.6538789Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3500,
+        5000,
+        6300,
+        7700
+      ],
+      "bits": "1111"
+    },
+    {
+      "rawFile": "trial-cc868a622bf741db985fa4e37ad6408d.json",
+      "rawSha256": "2592cb643a5e223c19f25fbf088237fa66749bbf3f458168e94b01746eaa2cfb",
+      "resultSha256": "61408b1efe968881dd5145e853ef702fe5fdb423bf2647f418bf62602e6cb15c",
+      "f8Utc": "2026-09-19T20:06:22.2839969Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3500,
+        5050,
+        6300,
+        7700
+      ],
+      "bits": "1111"
+    },
+    {
+      "rawFile": "trial-b560a10438c543148b65938dbf094f5f.json",
+      "rawSha256": "d2542781f474b97abb2e31751551484f828f6f58224d5a9769b0f65c280c2bea",
+      "resultSha256": "404f2f2aaa7bc25f4f117524f5f25f1ed6f08d9bcb7012c9013161847eb8d387",
+      "f8Utc": "2026-09-19T20:07:47.8057896Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3500,
+        5100,
+        6300,
+        7700
+      ],
+      "bits": "1111"
+    },
+    {
+      "rawFile": "trial-c4de35d888324b7db620319e791c7132.json",
+      "rawSha256": "4cac777052862eb6f703e9e205b547aab7d5edad8922160081731e408d3b17bd",
+      "resultSha256": "12d5b50075afbf94e9684e14cc2b6d4d6dad3a3f3fec83d8815cf5b14a2c6b54",
+      "f8Utc": "2026-09-19T20:09:21.4766536Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3500,
+        5150,
+        6300,
+        7700
+      ],
+      "bits": "1111"
+    },
+    {
+      "rawFile": "trial-5a7f53a9bff1441a86bbb5115b2dfc4e.json",
+      "rawSha256": "89afa086ac04d8f42c2a1069fa73c7ce61df45ce31d8ac94c7cf17822e64a74c",
+      "resultSha256": "4a8c8ccda12f8ed5a6cffb7799592a44253196bde9a085747ee11304fd1a6d9e",
+      "f8Utc": "2026-09-19T20:10:48.4497857Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3500,
+        5200,
+        6300,
+        7700
+      ],
+      "bits": "1111"
+    },
+    {
+      "rawFile": "trial-205c210493f64f50a96c3d776e34c9d1.json",
+      "rawSha256": "128e32f7a564519ab6c53aca629fe71b2586d001147b8beef7b7ab55f33c4e8d",
+      "resultSha256": "226466d6339ba167ec2c565362edb6133374a4520a47703a20a088d895ff06ed",
+      "f8Utc": "2026-09-19T20:12:16.7444105Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3500,
+        5250,
+        6300,
+        7700
+      ],
+      "bits": "1111"
+    },
+    {
+      "rawFile": "trial-a6684d40bc2247a698f9d19620d83909.json",
+      "rawSha256": "4fc671be17fe0e7609781e60a87613251062095ccc52ea6f3cf1a50d5227b751",
+      "resultSha256": "9f569122fb3a9a87925b1db201f26c6c3ff2e1429e40e913cd95a64207c089fb",
+      "f8Utc": "2026-09-19T20:13:42.1514522Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3500,
+        5300,
+        6300,
+        7700
+      ],
+      "bits": "1111"
+    },
+    {
+      "rawFile": "trial-46bac4546a794cda886bc6e2692baf99.json",
+      "rawSha256": "d79379499491695b5a0463cc86b685554193662bc447b3a8266141dbbe6352b2",
+      "resultSha256": "d3c29f9889075719459d871292248af2dddbb857ca58e6f802b64ac43e88df70",
+      "f8Utc": "2026-09-19T20:15:31.2318259Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3500,
+        5350,
+        6300,
+        7700
+      ],
+      "bits": "1000"
+    },
+    {
+      "rawFile": "trial-431b10491e514670a31b04d0b71a59d4.json",
+      "rawSha256": "0f3d57e01592a6f98e25dc88e2745da7f43280955d39b5d71399ee8bc74c4f0b",
+      "resultSha256": "decdda56491c927c68d6b96781bf974570497fc62e94b44f687588b54a538920",
+      "f8Utc": "2026-09-19T20:17:32.0076316Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3400,
+        5050,
+        6300,
+        7700
+      ],
+      "bits": "1111"
+    },
+    {
+      "rawFile": "trial-30aefee491924ad7b8ccfd8d38a38b39.json",
+      "rawSha256": "26cad074dffacc71246713be43baa8c4974769ec35f8cb3c1d853aef35167e51",
+      "resultSha256": "f705f183cfad2d4bf9c67de932595025512d082b8e55c061a7848861c9967aab",
+      "f8Utc": "2026-09-19T20:19:06.9171522Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3300,
+        5050,
+        6300,
+        7700
+      ],
+      "bits": "1111"
+    },
+    {
+      "rawFile": "trial-b4c0329ecdde4532a669df3c5a052765.json",
+      "rawSha256": "d4d26345abf74f8a5213b7692629dd79585cb0d1f3fda2c5b15fcfeb480acd8a",
+      "resultSha256": "7cd0eae0adbd0f935ffb762017673ea96b3c557936baf8fc30ba67cd226f9188",
+      "f8Utc": "2026-09-19T20:20:28.3613205Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3250,
+        5050,
+        6300,
+        7700
+      ],
+      "bits": "0111"
+    },
+    {
+      "rawFile": "trial-d6378f0c07974280a2c8c3b1c661266d.json",
+      "rawSha256": "fb05264cfb6e9ba1533d36ea764703ba79506ddbd30e13a94d127a03d68c72b2",
+      "resultSha256": "b0d9330b95760d480a80de322741643fdd50c6690d4841010914d203681b7d8f",
+      "f8Utc": "2026-09-19T20:21:54.3440844Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3600,
+        5050,
+        6300,
+        7700
+      ],
+      "bits": "1111"
+    },
+    {
+      "rawFile": "trial-9b8ef37b713b4f50afb9072537c5facf.json",
+      "rawSha256": "4c22c6f69c3bfc1e2a028a1b9a61e912728914a731ffb7b7213ffc5f92375d57",
+      "resultSha256": "5392b5b8d01a5b5e33b1862acbaf0037227bf8cc95f2411d5da0452ae3a20e31",
+      "f8Utc": "2026-09-19T20:23:15.7394940Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3650,
+        5050,
+        6300,
+        7700
+      ],
+      "bits": "0111"
+    },
+    {
+      "rawFile": "trial-a5f98c70b2f740c99776470c5bdf96eb.json",
+      "rawSha256": "66b7fa4b506a0d8381193ff938a86d2550239b89a0df1cc5cfa28de69da91146",
+      "resultSha256": "eff04592a5c45847399df1eb0d2cfabf761db0f27a50d2425f448fe173cf105b",
+      "f8Utc": "2026-09-19T20:25:12.8295668Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3450,
+        5050,
+        6150,
+        7700
+      ],
+      "bits": "1111"
+    },
+    {
+      "rawFile": "trial-afc2db594b374124ad863622b16c43cc.json",
+      "rawSha256": "52b2bd2e4bb3f6d0b7e87b8ef3e417e0c03f999ca4fa55d979d09f4c9936b092",
+      "resultSha256": "d03c537711347d9c73e73e0f975a77ab850d773f05aa19a0719e95d45dc3e27a",
+      "f8Utc": "2026-09-19T20:27:06.6103796Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3450,
+        5050,
+        6050,
+        7700
+      ],
+      "bits": "1111"
+    },
+    {
+      "rawFile": "trial-6d1a3f8982484ce0ba3269079c4f0681.json",
+      "rawSha256": "f4d6cf0fe65d13dc1c36e30a4b41721bbe262079ba796560254d1bd6c2d4a2ea",
+      "resultSha256": "810b0dfbce6830c50021660c69a28a5010797962edd64f094c7569a10fae61ec",
+      "f8Utc": "2026-09-19T20:28:56.1539803Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3450,
+        5050,
+        6500,
+        7700
+      ],
+      "bits": "1100"
+    },
+    {
+      "rawFile": "trial-9095f87e321c4f9c8b7d6be29687ce0f.json",
+      "rawSha256": "289ef9ea3216f8d0b4de23443c4207c8d7a6f8b2f244dfdb0636d2f3aee92c46",
+      "resultSha256": "1f7a4ff8a4444e53e0fee8b410b2bb38ab1e6eeb931c5f3ba73057bde52dfa47",
+      "f8Utc": "2026-09-19T20:30:45.9504957Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3450,
+        5050,
+        6050,
+        7700
+      ],
+      "bits": "1111"
+    },
+    {
+      "rawFile": "trial-a0010984fae04a4aa598f00266e90cd9.json",
+      "rawSha256": "6abca3780cbe976f0d8423987f31abfefa4003b44d4b1001158c85bf75230254",
+      "resultSha256": "c3f543f7742a305b8ed1c3bd65e5e384ccf2be0e0b14062dc2abd823c51769bb",
+      "f8Utc": "2026-09-19T20:31:59.1356114Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3450,
+        5050,
+        6450,
+        7700
+      ],
+      "bits": "1111"
+    },
+    {
+      "rawFile": "trial-d431563827344267a6763eef55d04392.json",
+      "rawSha256": "630f3a423b0ab17cdde1d5afd31b68e247acbed59a94173f91917c478244fea9",
+      "resultSha256": "a74a08d8d26cf605267d658b34cf435956a224741a4650403b3182c4a673fb66",
+      "f8Utc": "2026-09-19T20:33:26.7558955Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3450,
+        5050,
+        6000,
+        7700
+      ],
+      "bits": "1100"
+    },
+    {
+      "rawFile": "trial-9a2a76414bd64a43ac2fe3fac2b87a33.json",
+      "rawSha256": "f98fffadb5384cc1b148ba410391d321aa61348ca85661bed0e821968817723d",
+      "resultSha256": "d349a6efc0263941fec5017d438ef59f46184d28d865cce51feaafd702c6577e",
+      "f8Utc": "2026-09-19T20:34:53.0082114Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3450,
+        5050,
+        6250,
+        7500
+      ],
+      "bits": "1111"
+    },
+    {
+      "rawFile": "trial-b73fbc7b14054d29812cbb8f1e86bb18.json",
+      "rawSha256": "20408bfed3c2b65258fedbf304caf6a8eff4728c47c4276a0f83578ec09c9892",
+      "resultSha256": "cf34a4e9e693421b4fc758929ef92dc05f867b6522b5bd9328a86954e48e9a98",
+      "f8Utc": "2026-09-19T20:36:13.4831703Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3450,
+        5050,
+        6250,
+        7900
+      ],
+      "bits": "1111"
+    },
+    {
+      "rawFile": "trial-5392f87e26304b33b20fd2bf8d7fdc7c.json",
+      "rawSha256": "061f3d957f79a207de7d4218d7ac8b2064ade0098608e779acff4d06002bd1fb",
+      "resultSha256": "a6506c0baca6d292c71cf528fbcee18561d53bfa44aca3e425bf2046cc636f8c",
+      "f8Utc": "2026-09-19T20:37:37.8678552Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3450,
+        5050,
+        6250,
+        7400
+      ],
+      "bits": "1110"
+    },
+    {
+      "rawFile": "trial-b4ad3bc7491e421f84ccdb4ef56774f8.json",
+      "rawSha256": "cdddbf9d7861177c27a0880685adeffceb2edaefe6ebdd44d2b41bbc312665fc",
+      "resultSha256": "9a5406368f60dcb88882560ba8d91b4fb1ed731ade5f8b97d0cf82712bae3004",
+      "f8Utc": "2026-09-19T20:39:01.7624837Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3450,
+        5050,
+        6250,
+        7450
+      ],
+      "bits": "1111"
+    },
+    {
+      "rawFile": "trial-1b0026136df24994a0763e9cf97853de.json",
+      "rawSha256": "664dadab7337e636bcfa8de02ad7570d0b2a226678987bde43fc7cdb58422985",
+      "resultSha256": "fa1e5748d9f8252477d8c2816faa5c3845948f66794becc087798d427779c8e0",
+      "f8Utc": "2026-09-19T20:40:22.0848118Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3450,
+        5050,
+        6250,
+        8000
+      ],
+      "bits": "1110"
+    },
+    {
+      "rawFile": "trial-3a8a54fcc02d400c949465f42629a0cf.json",
+      "rawSha256": "150803d27b9b11de31d8639b4dd175aa186a2a17fd8592bb1f8e27f06d7eb8d8",
+      "resultSha256": "1c0e3d1c415db9f6d9ac59ba499bd57938d7a685ceae9c4d7264141f612d8253",
+      "f8Utc": "2026-09-19T20:43:15.6827157Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3450,
+        5050,
+        6250,
+        7950
+      ],
+      "bits": "1110"
+    },
+    {
+      "rawFile": "trial-6c32c476a5aa4b03816b3b11923ad854.json",
+      "rawSha256": "a68d3d0b04fa8dba88e368b1795bad675d7b4dae58b75e4e2858bb49b05e527a",
+      "resultSha256": "029e340cbca5b9c1b41fc8e79df2e84ba97403d356fca3cfbabe39f16bcaae91",
+      "f8Utc": "2026-09-19T20:44:49.4447744Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3450,
+        5050,
+        6250,
+        7950
+      ],
+      "bits": "1110"
+    },
+    {
+      "rawFile": "trial-ec5d6b6979be4b7d959e0cb05b465427.json",
+      "rawSha256": "bc94cd1e25378919fecb943e4be7d36e0b81e37cba93bcf61b55ceacdd0f50b2",
+      "resultSha256": "5bec8b28ff7d821e333409f5ce8bef69a7747ab62ebbd7417779210cf4272b89",
+      "f8Utc": "2026-09-19T20:46:20.7790732Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3300,
+        5300,
+        6050,
+        7900
+      ],
+      "bits": "1010"
+    },
+    {
+      "rawFile": "trial-472e033e7c784b078110af331c0bf6b6.json",
+      "rawSha256": "ba4ba44450933bf25c18ea7c672b3978f0859a716b62801efa0891cec1a6db86",
+      "resultSha256": "42a079609513ac05230714c18cc7cd1aeb0443ae3338dfd2381271de4fe22996",
+      "f8Utc": "2026-09-19T20:48:04.9412550Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3300,
+        5250,
+        6050,
+        7900
+      ],
+      "bits": "1110"
+    },
+    {
+      "rawFile": "trial-998b57c82cf640ab99d41b309bf07fc2.json",
+      "rawSha256": "1b11d465a20e755adb47ec8646b779eb9edc139c159557eff255182d5824bd8b",
+      "resultSha256": "e183928849d39eb46339137723edda105a502dfdf2de8c6b28eb280c2b00273e",
+      "f8Utc": "2026-09-19T20:49:38.7685327Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3300,
+        5250,
+        6050,
+        7850
+      ],
+      "bits": "1111"
+    },
+    {
+      "rawFile": "trial-0424ec3cc69844b98731043dd1512b2d.json",
+      "rawSha256": "4884429d435c128667632d3520788ef8daa34b8defe038518e9dddaf95d3187d",
+      "resultSha256": "ea6995947684f7c1490d5b81c968cf7c9260d2c0e5d64368877fb37d4053fcce",
+      "f8Utc": "2026-09-19T20:52:27.9107305Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3600,
+        4850,
+        6450,
+        7450
+      ],
+      "bits": "0100"
+    },
+    {
+      "rawFile": "trial-5263c84f13634e86ae1a3ec17ad68a8f.json",
+      "rawSha256": "66c6462018677b9f4f7c6fd7b02eef566002dee1ed250b76ea5e4947f6920c33",
+      "resultSha256": "881ddeb85552a5a1e484765e2aff9160555c2bb24ee0313a0908a298af3fdce4",
+      "f8Utc": "2026-09-19T20:55:59.1504804Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3550,
+        4850,
+        6400,
+        7450
+      ],
+      "bits": "1111"
+    },
+    {
+      "rawFile": "trial-7af326389022467799c21e0cb47c5d80.json",
+      "rawSha256": "911501e414fa8af305780a615b0e37ab14ee4723c2a064d5a35cf4b3b5596366",
+      "resultSha256": "a61b334ccb1d7e60ab1a7e04934fa9c888cfe0a451e86440816d1be37f48fb22",
+      "f8Utc": "2026-09-19T20:57:19.7297611Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3600,
+        4850,
+        6400,
+        7450
+      ],
+      "bits": "0100"
+    },
+    {
+      "rawFile": "trial-4853e5bce6b5494f8592904a0c14383d.json",
+      "rawSha256": "1762f9cab1f469d18bba93cea786715b645c27fcf6b257191e7a2a3c7536bd85",
+      "resultSha256": "b44264bf481c832e8edb2c3bd01a209a3165209885a6f6ec175561b5454ab0fb",
+      "f8Utc": "2026-09-19T20:58:40.3549064Z",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3550,
+        4850,
+        6450,
+        7450
+      ],
+      "bits": "1111"
+    },
+    {
+      "rawFile": "trial-e4fbc95a5f3949e896cb5279e9336704.json",
+      "rawSha256": "c59e6f21c9c64d3ce86543636aaeffc764d5266231dadd42ccc2056c2a1cdb2d",
+      "resultSha256": "6eea0bb58b3d4c8e41c60156b48164a1e07c2f63368a89df63ce0406732d9708",
+      "f8Utc": "2026-09-19T21:23:20.1082693Z",
+      "recording": "ON",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        3400,
+        5050,
+        6250,
+        7650
+      ],
+      "bits": "1111"
+    }
+  ],
+  "retention": {
+    "date": "2026-09-21",
+    "status": "summarized originals retired after user-approved closure",
+    "inventory": "experiment-cleanup.json#current",
+    "meaning": "Historical raw log, source video and scratch paths describe provenance; only current.retainedOriginals are promised to remain. Conditions, outcomes, counterexamples and measurement limits stay in this evidence."
+  }
+}

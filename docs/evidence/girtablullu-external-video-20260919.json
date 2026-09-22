@@ -1,0 +1,364 @@
+{
+  "date": "2026-09-19",
+  "target": "GirReborn / Girtablullu - Stagnant Aberrant",
+  "internal_evidence": "boss-control-patterns-20260918.json",
+  "method": {
+    "frame_convention": "Zero-based decoded frames of the named retained file; FFmpeg showinfo PTS in seconds. Nominal YouTube fps is not used to compute timestamps.",
+    "media_processing": "First two HLS downloads remuxed without re-encoding to indexed MP4; third downloaded chapter 219-476s. Sequential decoding, select by frame index, no seek for measurement.",
+    "response": "Entry: blue slow effect and action locks. Supports: HUD response with character switch. Screen reactions are not physical input timestamps.",
+    "bracket": "Last sampled pre-response / first sampled response; 5 frames at 59.94fps or 3 frames at 30fps. Sampling uncertainty only, not success width or confidence interval.",
+    "anchor": "One manually chosen readable prompt frame per source, with fade-in ambiguity. No cross-device detector or latency calibration.",
+    "formula": "relative_seconds = response_decoded_PTS - manual_anchor_decoded_PTS",
+    "tools": {
+      "yt_dlp": "2026.8.19",
+      "imageio_ffmpeg": "0.6.0",
+      "FFmpeg": "Bundled imageio-ffmpeg binary; sequential showinfo and raw RGB extraction"
+    },
+    "selected_frame_extraction": "ffmpeg -i <decoded_video> -vf select=eq(n\\,<f1>)+eq(n\\,<f2>)+...,showinfo,scale=640:360 -frames:v <N> -fps_mode vfr -pix_fmt rgb24 -f rawvideo -"
+  },
+  "sources": [
+    {
+      "id": "JtB07dlEw_k",
+      "url": "https://www.youtube.com/watch?v=JtB07dlEw_k",
+      "title": "Deadly Assault - 3.2.1 - Girtablullu Stagnant Aberrant - Remielle Dan - 3 Stars",
+      "uploader": "Flound",
+      "upload_date": "20260911",
+      "download_section_seconds": [
+        null,
+        null
+      ],
+      "decoded_video": ".local/girtablullu-research/JtB07dlEw_k-indexed.mp4",
+      "sha256": "fa78bb3744249b7936c5969bdc8c79510c7612a308e6a6466dcfb02719d29f89",
+      "evidence_image": "girtablullu-external-success-20260919.jpg",
+      "evidence_sha256": "4498e4d93974c68da639c5e226099d67f35d0ec3e5a65ca07b379082403c6233",
+      "selected_frames": [
+        {
+          "frame": 6246,
+          "pts_seconds": 104.2041
+        },
+        {
+          "frame": 6500,
+          "pts_seconds": 108.441667
+        },
+        {
+          "frame": 6590,
+          "pts_seconds": 109.943167
+        },
+        {
+          "frame": 6655,
+          "pts_seconds": 111.027589
+        },
+        {
+          "frame": 6740,
+          "pts_seconds": 112.445667
+        },
+        {
+          "frame": 6760,
+          "pts_seconds": 112.779333
+        }
+      ],
+      "manual_notice_anchor": {
+        "frame": 6246,
+        "pts_seconds": 104.2041,
+        "meaning": "Selected legible prompt frame during fade-in; not first onset or detector trigger."
+      },
+      "responses": [
+        {
+          "action": "entry_screen_response",
+          "frame_bracket": [
+            6495,
+            6500
+          ],
+          "pts_seconds": [
+            108.358256,
+            108.441667
+          ],
+          "seconds_after_manual_anchor": [
+            4.154156,
+            4.237567
+          ],
+          "physical_input_ms": null,
+          "success_window_ms": null
+        },
+        {
+          "action": "support_response_1",
+          "frame_bracket": [
+            6585,
+            6590
+          ],
+          "pts_seconds": [
+            109.859756,
+            109.943167
+          ],
+          "seconds_after_manual_anchor": [
+            5.655656,
+            5.739067
+          ],
+          "physical_input_ms": null,
+          "success_window_ms": null
+        },
+        {
+          "action": "support_response_2",
+          "frame_bracket": [
+            6650,
+            6655
+          ],
+          "pts_seconds": [
+            110.944167,
+            111.027589
+          ],
+          "seconds_after_manual_anchor": [
+            6.740067,
+            6.823489
+          ],
+          "physical_input_ms": null,
+          "success_window_ms": null
+        },
+        {
+          "action": "support_response_3",
+          "frame_bracket": [
+            6735,
+            6740
+          ],
+          "pts_seconds": [
+            112.362256,
+            112.445667
+          ],
+          "seconds_after_manual_anchor": [
+            8.158156,
+            8.241567
+          ],
+          "physical_input_ms": null,
+          "success_window_ms": null
+        }
+      ],
+      "decoded_rate": "60000/1001",
+      "language": "Thai",
+      "mode": "Deadly Assault 3.2.1",
+      "party_order": [
+        "Remielle Dan",
+        "Velina",
+        "Promeia"
+      ],
+      "entry_character": "Promeia",
+      "observed_support_character_sequence": null,
+      "support_character_note": "Portrait changes observed; per-hit character names and actual switch keys are not assigned from the displayed party order.",
+      "outcome": "Full sequence visually supported by entry, three support responses and SHUTDOWN.",
+      "shutdown_observed": {
+        "frame": 6760,
+        "pts_seconds": 112.779333
+      },
+      "role": "Primary reference for approximate screen response locations; not physical timing or window validation."
+    },
+    {
+      "id": "EjOtsszBewo",
+      "url": "https://www.youtube.com/watch?v=EjOtsszBewo",
+      "title": "Deadly Assault - 3.1.2 - Girtablullu Stagnant Aberrant - Remielle Dan - 3 Stars",
+      "uploader": "Flound",
+      "upload_date": "20260814",
+      "download_section_seconds": [
+        null,
+        null
+      ],
+      "decoded_video": ".local/girtablullu-research/EjOtsszBewo-indexed.mp4",
+      "sha256": "1d38795a99eeb06506cdbc89e3a586008b2776af79e31dc605ffaa8012f27f54",
+      "evidence_image": "girtablullu-external-comparison-20260919.jpg",
+      "evidence_sha256": "b572cc41b5fb13ef507e17d3cb49ff240a1b3918b4e4d95274945367b6b0207c",
+      "selected_frames": [
+        {
+          "frame": 3857,
+          "pts_seconds": 128.566667
+        },
+        {
+          "frame": 3990,
+          "pts_seconds": 133.0
+        },
+        {
+          "frame": 4026,
+          "pts_seconds": 134.2
+        },
+        {
+          "frame": 4068,
+          "pts_seconds": 135.6
+        },
+        {
+          "frame": 4116,
+          "pts_seconds": 137.2
+        },
+        {
+          "frame": 4160,
+          "pts_seconds": 138.666667
+        }
+      ],
+      "manual_notice_anchor": {
+        "frame": 3857,
+        "pts_seconds": 128.566667,
+        "meaning": "Selected legible prompt frame during fade-in; not first onset or detector trigger."
+      },
+      "responses": [
+        {
+          "action": "entry_screen_response",
+          "frame_bracket": [
+            3987,
+            3990
+          ],
+          "pts_seconds": [
+            132.9,
+            133.0
+          ],
+          "seconds_after_manual_anchor": [
+            4.333333,
+            4.433333
+          ],
+          "physical_input_ms": null,
+          "success_window_ms": null
+        },
+        {
+          "action": "support_response_1",
+          "frame_bracket": [
+            4023,
+            4026
+          ],
+          "pts_seconds": [
+            134.1,
+            134.2
+          ],
+          "seconds_after_manual_anchor": [
+            5.533333,
+            5.633333
+          ],
+          "physical_input_ms": null,
+          "success_window_ms": null
+        },
+        {
+          "action": "support_response_2",
+          "frame_bracket": [
+            4065,
+            4068
+          ],
+          "pts_seconds": [
+            135.5,
+            135.6
+          ],
+          "seconds_after_manual_anchor": [
+            6.933333,
+            7.033333
+          ],
+          "physical_input_ms": null,
+          "success_window_ms": null
+        },
+        {
+          "action": "support_response_3",
+          "frame_bracket": [
+            4113,
+            4116
+          ],
+          "pts_seconds": [
+            137.1,
+            137.2
+          ],
+          "seconds_after_manual_anchor": [
+            8.533333,
+            8.633333
+          ],
+          "physical_input_ms": null,
+          "success_window_ms": null
+        }
+      ],
+      "decoded_rate": "30/1",
+      "language": "Thai",
+      "mode": "Deadly Assault 3.1.2",
+      "party_order": [
+        "Remielle Dan",
+        "Velina",
+        "Aria"
+      ],
+      "entry_character": "Aria",
+      "outcome": "Full sequence success unconfirmed: no SHUTDOWN observed after the sampled responses.",
+      "role": "Comparison only; excluded from full-success set and failure-boundary inference.",
+      "excluded_sequence": "232-251.5s is a Corruptive Barrier sequence, not an additional Execute success."
+    },
+    {
+      "id": "oRMiteZP62M",
+      "url": "https://www.youtube.com/watch?v=oRMiteZP62M",
+      "title": "명전 레미엘 | 명전 클라렛 | 2돌 미야비 [위험한 강습전 - S45]",
+      "uploader": "카뱅",
+      "upload_date": "20260911",
+      "download_section_seconds": [
+        219,
+        476
+      ],
+      "decoded_video": ".local/girtablullu-research/oRMiteZP62M-gir.mp4",
+      "sha256": "b0b5bae42b07ddfda90c1e97e5c5dafa0b2948995cfaf4a39f521b1ea1e7da74",
+      "evidence_image": "girtablullu-external-korean-20260919.jpg",
+      "evidence_sha256": "631a74139dd64cb503f3bceb442111a77f7a2855c7792f5ffbf43d4ec55eed5f",
+      "selected_frames": [
+        {
+          "frame": 6600,
+          "pts_seconds": 110.0
+        },
+        {
+          "frame": 6800,
+          "pts_seconds": 113.333333
+        },
+        {
+          "frame": 6910,
+          "pts_seconds": 115.166667
+        },
+        {
+          "frame": 7050,
+          "pts_seconds": 117.5
+        },
+        {
+          "frame": 7240,
+          "pts_seconds": 120.666667
+        },
+        {
+          "frame": 15360,
+          "pts_seconds": 256.0
+        }
+      ],
+      "decoded_rate": "60/1",
+      "language": "Korean",
+      "mode": "Deadly Assault S45",
+      "party_order": [
+        "Remielle Dan",
+        "Aria",
+        "Velina"
+      ],
+      "entry_character": null,
+      "outcome": "Full sequence success unconfirmed in inspected control sequence.",
+      "role": "Korean prompt and boss-form reference only; no timing proxy entered.",
+      "time_mapping": "Segment decoded frame indices and PTS start at 0; source chapter requested at 219s. PTS+219 is a navigation aid, not independently frame-verified original YouTube timing.",
+      "excluded_sequence": "Original video 0-219s is Kusarikku; not included in GirReborn measurements."
+    }
+  ],
+  "conclusions": {
+    "full_success_reference_count": 1,
+    "creators_inspected": 2,
+    "approx_screen_responses_seconds_after_selected_prompt": [
+      4.2,
+      5.7,
+      6.8,
+      8.2
+    ],
+    "next_needed": "Historical local-validation need, not a prerequisite for analysis: local mode/party/entry and an input-to-result link. Select the needed observation after applying existing evidence; current decisions are maintained in docs/research.md and docs/boss-control-patterns.md.",
+    "physical_input_times": "unmeasured",
+    "success_widths": "unmeasured",
+    "local_recording_effect": "unmeasured",
+    "executable_profile_created": false,
+    "actual_game_inputs": 0
+  },
+  "preservation": {
+    "raw_and_indexed_media": "Retained in this checkout .local/girtablullu-research, ignored by Git. Not promised available on a fresh checkout.",
+    "tracked": "This JSON and three role-specific representative evidence sheets.",
+    "diagnostics": "Temporary contact sheets not referenced here are not canonical evidence. Early scan labels used nominal/default fps and are excluded; only showinfo PTS records are used above.",
+    "service_media": "No external footage incorporated into the product."
+  },
+  "retention": {
+    "date": "2026-09-21",
+    "status": "summarized originals retired after user-approved closure",
+    "inventory": "experiment-cleanup.json#current",
+    "meaning": "Historical raw log, source video and scratch paths describe provenance; only current.retainedOriginals are promised to remain. Conditions, outcomes, counterexamples and measurement limits stay in this evidence."
+  }
+}

@@ -1,0 +1,572 @@
+{
+  "date": "2026-09-20",
+  "scope": "Four user-performed automatic Execute_01 trials following manual-lane anomaly; no agent game input",
+  "trials": [
+    {
+      "rawFile": "trial-df3fdf320fee4c55b3127f37e26cf0cb.json",
+      "rawSha256": "755595c06d0117aa2fcb75e499bacd8bf34d03b8b1e1bb2736d6920bb16a74b5",
+      "resultSha256": "72e66313847a6528ab60eb4de3a76bb8639a9b975f87577076f464a777df455e",
+      "trialId": "c97a2e82efe34a46bf247e3e34d44421",
+      "startedUtc": "2026-09-20T06:14:45.4715044Z",
+      "localStart": "15:14:45",
+      "party": "아리아 → 남궁우 → 수나",
+      "startCharacter": "아리아",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "recordingAtF8": {
+        "AtUtc": "/Date(1789884307777)/",
+        "State": "UNKNOWN",
+        "RecordingId": null,
+        "OutputPath": null,
+        "Detail": "OBS status has not been refreshed for over 3 seconds"
+      },
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        4200,
+        6400,
+        7700,
+        9750,
+        10850,
+        13200
+      ],
+      "bits": "111111",
+      "firstFailedAction": null,
+      "profileHash": "e28e3d07f65e7db9dcae933e9e77e1f00367c5625c6ecf4e6aaad681c7261cdf",
+      "templateHash": "b5495ce64753def2898c8bd66490797357448da30c1f05ed66425e0380aaf185",
+      "clientSize": [
+        1920,
+        1080
+      ],
+      "previousAbsent": {
+        "CaptureBeginMs": 12581.232,
+        "CaptureEndMs": 12604.589,
+        "AnalysisEndMs": 12605.6951,
+        "Score": 0.492379835873388,
+        "Present": false
+      },
+      "firstMatch": {
+        "CaptureBeginMs": 12611.87,
+        "CaptureEndMs": 12636.7894,
+        "AnalysisEndMs": 12637.7533,
+        "Score": 0.8558282208588958,
+        "Present": true
+      },
+      "inputs": [
+        {
+          "Action": "down",
+          "Key": "RMB",
+          "Attack": 0,
+          "DueMs": 16836.7894,
+          "BeginMs": 16840.7306,
+          "EndMs": 16859.7465,
+          "Inserted": 1,
+          "Win32Error": 0,
+          "relativeBeginMs": 4203.941199999999,
+          "relativeEndMs": 4222.957100000001,
+          "latenessMs": 3.9411999999974796
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 1,
+          "DueMs": 19036.7894,
+          "BeginMs": 19036.8514,
+          "EndMs": 19037.2571,
+          "Inserted": 1,
+          "Win32Error": 0,
+          "relativeBeginMs": 6400.062,
+          "relativeEndMs": 6400.467699999999,
+          "latenessMs": 0.06199999999807915
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 2,
+          "DueMs": 20336.7894,
+          "BeginMs": 20336.8495,
+          "EndMs": 20337.7818,
+          "Inserted": 1,
+          "Win32Error": 0,
+          "relativeBeginMs": 7700.060100000001,
+          "relativeEndMs": 7700.992400000001,
+          "latenessMs": 0.06009999999878346
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 3,
+          "DueMs": 22386.7894,
+          "BeginMs": 22386.8221,
+          "EndMs": 22387.3233,
+          "Inserted": 1,
+          "Win32Error": 0,
+          "relativeBeginMs": 9750.032700000002,
+          "relativeEndMs": 9750.5339,
+          "latenessMs": 0.03269999999974971
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 4,
+          "DueMs": 23486.7894,
+          "BeginMs": 23487.3586,
+          "EndMs": 23489.5074,
+          "Inserted": 1,
+          "Win32Error": 0,
+          "relativeBeginMs": 10850.5692,
+          "relativeEndMs": 10852.717999999999,
+          "latenessMs": 0.5691999999980908
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 5,
+          "DueMs": 25836.7894,
+          "BeginMs": 25836.8025,
+          "EndMs": 25837.2155,
+          "Inserted": 1,
+          "Win32Error": 0,
+          "relativeBeginMs": 13200.013100000002,
+          "relativeEndMs": 13200.426099999999,
+          "latenessMs": 0.013100000000122236
+        }
+      ],
+      "allInputApiCallsSucceeded": true
+    },
+    {
+      "rawFile": "trial-94e4336c0e35433e890babf044018ce3.json",
+      "rawSha256": "540bc786f42e4e574b60c098089d18ebb7ea287f26bb429d502d7cab98488d89",
+      "resultSha256": "bfc1fd5f987e2c2bbb3b9e52425f81a6cd9b4b6e4f061580d675df9de2cc5207",
+      "trialId": "959ad174b47e4249ad5af27180f5dc0d",
+      "startedUtc": "2026-09-20T06:18:02.5210707Z",
+      "localStart": "15:18:02",
+      "party": "아리아 → 남궁우 → 수나",
+      "startCharacter": "아리아",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "recordingAtF8": {
+        "AtUtc": "/Date(1789884307777)/",
+        "State": "UNKNOWN",
+        "RecordingId": null,
+        "OutputPath": null,
+        "Detail": "OBS status has not been refreshed for over 3 seconds"
+      },
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        4200,
+        6400,
+        7700,
+        9500,
+        11150,
+        13200
+      ],
+      "bits": "111111",
+      "firstFailedAction": null,
+      "profileHash": "4c58341c61d6a1ace1be0e1e9baba76e154dbe03b322048e491973cbae4194c4",
+      "templateHash": "b5495ce64753def2898c8bd66490797357448da30c1f05ed66425e0380aaf185",
+      "clientSize": [
+        1920,
+        1080
+      ],
+      "previousAbsent": {
+        "CaptureBeginMs": 6934.4389,
+        "CaptureEndMs": 6954.3887,
+        "AnalysisEndMs": 6954.8591,
+        "Score": 0.22841225626740946,
+        "Present": false
+      },
+      "firstMatch": {
+        "CaptureBeginMs": 6965.6079,
+        "CaptureEndMs": 6987.3243,
+        "AnalysisEndMs": 6987.9569,
+        "Score": 0.8165938864628821,
+        "Present": true
+      },
+      "inputs": [
+        {
+          "Action": "down",
+          "Key": "RMB",
+          "Attack": 0,
+          "DueMs": 11187.3243,
+          "BeginMs": 11187.3926,
+          "EndMs": 11195.8662,
+          "Inserted": 1,
+          "Win32Error": 0,
+          "relativeBeginMs": 4200.068299999999,
+          "relativeEndMs": 4208.5419,
+          "latenessMs": 0.06829999999899883
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 1,
+          "DueMs": 13387.3243,
+          "BeginMs": 13387.5439,
+          "EndMs": 13388.1407,
+          "Inserted": 1,
+          "Win32Error": 0,
+          "relativeBeginMs": 6400.2196,
+          "relativeEndMs": 6400.8164,
+          "latenessMs": 0.21960000000035507
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 2,
+          "DueMs": 14687.3243,
+          "BeginMs": 14687.3678,
+          "EndMs": 14687.6781,
+          "Inserted": 1,
+          "Win32Error": 0,
+          "relativeBeginMs": 7700.0435,
+          "relativeEndMs": 7700.353799999999,
+          "latenessMs": 0.04349999999976717
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 3,
+          "DueMs": 16487.3243,
+          "BeginMs": 16487.3333,
+          "EndMs": 16487.5746,
+          "Inserted": 1,
+          "Win32Error": 0,
+          "relativeBeginMs": 9500.008999999998,
+          "relativeEndMs": 9500.2503,
+          "latenessMs": 0.008999999998195563
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 4,
+          "DueMs": 18137.3243,
+          "BeginMs": 18137.3362,
+          "EndMs": 18137.6775,
+          "Inserted": 1,
+          "Win32Error": 0,
+          "relativeBeginMs": 11150.011900000001,
+          "relativeEndMs": 11150.353200000001,
+          "latenessMs": 0.011900000001332955
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 5,
+          "DueMs": 20187.3243,
+          "BeginMs": 20187.3371,
+          "EndMs": 20187.7343,
+          "Inserted": 1,
+          "Win32Error": 0,
+          "relativeBeginMs": 13200.0128,
+          "relativeEndMs": 13200.41,
+          "latenessMs": 0.012800000000424916
+        }
+      ],
+      "allInputApiCallsSucceeded": true
+    },
+    {
+      "rawFile": "trial-b04c66e218604435aaab9d4e4480178f.json",
+      "rawSha256": "3bafd24b5234534721c6b4a9fff53c74a3b566129efe170f2a645ef169e20611",
+      "resultSha256": "26767a230509dd9ebdfac8fec0f04f0efd4c155cbb9fb1a9d6f2eb2acad21a66",
+      "trialId": "f40602afcbfe4e269cfbf68ff7c0eb58",
+      "startedUtc": "2026-09-20T06:20:36.9017667Z",
+      "localStart": "15:20:36",
+      "party": "아리아 → 남궁우 → 수나",
+      "startCharacter": "아리아",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "recordingAtF8": {
+        "AtUtc": "/Date(1789884307777)/",
+        "State": "UNKNOWN",
+        "RecordingId": null,
+        "OutputPath": null,
+        "Detail": "OBS status has not been refreshed for over 3 seconds"
+      },
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        4200,
+        6400,
+        7700,
+        9500,
+        10850,
+        13550
+      ],
+      "bits": "111110",
+      "firstFailedAction": 5,
+      "profileHash": "f00d22550de76bee845a9c6370cf2e658f040b7b60fb79c78da4438188567f64",
+      "templateHash": "b5495ce64753def2898c8bd66490797357448da30c1f05ed66425e0380aaf185",
+      "clientSize": [
+        1920,
+        1080
+      ],
+      "previousAbsent": {
+        "CaptureBeginMs": 1704.2107,
+        "CaptureEndMs": 1725.5031,
+        "AnalysisEndMs": 1726.0941,
+        "Score": 0.6426364572605562,
+        "Present": false
+      },
+      "firstMatch": {
+        "CaptureBeginMs": 1736.2869,
+        "CaptureEndMs": 1754.8394,
+        "AnalysisEndMs": 1755.6651,
+        "Score": 0.8372827804107424,
+        "Present": true
+      },
+      "inputs": [
+        {
+          "Action": "down",
+          "Key": "RMB",
+          "Attack": 0,
+          "DueMs": 5954.8394,
+          "BeginMs": 5954.8519,
+          "EndMs": 5968.6847,
+          "Inserted": 1,
+          "Win32Error": 0,
+          "relativeBeginMs": 4200.0125,
+          "relativeEndMs": 4213.8453,
+          "latenessMs": 0.012499999999818101
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 1,
+          "DueMs": 8154.8394,
+          "BeginMs": 8155.1837,
+          "EndMs": 8155.5258,
+          "Inserted": 1,
+          "Win32Error": 0,
+          "relativeBeginMs": 6400.3443,
+          "relativeEndMs": 6400.6864000000005,
+          "latenessMs": 0.34429999999974825
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 2,
+          "DueMs": 9454.8394,
+          "BeginMs": 9454.8494,
+          "EndMs": 9455.1275,
+          "Inserted": 1,
+          "Win32Error": 0,
+          "relativeBeginMs": 7700.009999999999,
+          "relativeEndMs": 7700.288100000001,
+          "latenessMs": 0.00999999999839929
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 3,
+          "DueMs": 11254.8394,
+          "BeginMs": 11254.8485,
+          "EndMs": 11255.1129,
+          "Inserted": 1,
+          "Win32Error": 0,
+          "relativeBeginMs": 9500.0091,
+          "relativeEndMs": 9500.2735,
+          "latenessMs": 0.009099999999307329
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 4,
+          "DueMs": 12604.8394,
+          "BeginMs": 12604.8495,
+          "EndMs": 12605.0752,
+          "Inserted": 1,
+          "Win32Error": 0,
+          "relativeBeginMs": 10850.0101,
+          "relativeEndMs": 10850.235799999999,
+          "latenessMs": 0.010099999999511056
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 5,
+          "DueMs": 15304.8394,
+          "BeginMs": 15304.854,
+          "EndMs": 15305.2247,
+          "Inserted": 1,
+          "Win32Error": 0,
+          "relativeBeginMs": 13550.014599999999,
+          "relativeEndMs": 13550.3853,
+          "latenessMs": 0.014599999998608837
+        }
+      ],
+      "allInputApiCallsSucceeded": true
+    },
+    {
+      "rawFile": "trial-f1ad453654ce4b48ba124499f04d319f.json",
+      "rawSha256": "163f4ae94d96b304941642135e7442135c2a9c702c384d789c67c4bfd0687557",
+      "resultSha256": "8f540286b6ae4d8978448c58faeb11a290ad9c2398ee8dfc890e8957b6a430d1",
+      "trialId": "0ba87b2ea7d443e2adc9ef6b8b1ec549",
+      "startedUtc": "2026-09-20T06:22:58.0350122Z",
+      "localStart": "15:22:58",
+      "party": "아리아 → 남궁우 → 수나",
+      "startCharacter": "아리아",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "recordingAtF8": {
+        "AtUtc": "/Date(1789884307777)/",
+        "State": "UNKNOWN",
+        "RecordingId": null,
+        "OutputPath": null,
+        "Detail": "OBS status has not been refreshed for over 3 seconds"
+      },
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        4200,
+        6400,
+        7700,
+        9750,
+        11150,
+        13450
+      ],
+      "bits": "111000",
+      "firstFailedAction": 3,
+      "profileHash": "fdefa6b0d4d38f6ae62e2807d46553f5de7cbe65a2c0efca0c30997e8e7a9950",
+      "templateHash": "b5495ce64753def2898c8bd66490797357448da30c1f05ed66425e0380aaf185",
+      "clientSize": [
+        1920,
+        1080
+      ],
+      "previousAbsent": {
+        "CaptureBeginMs": 3693.9899,
+        "CaptureEndMs": 3709.1901,
+        "AnalysisEndMs": 3709.8106,
+        "Score": 0.35309278350515466,
+        "Present": false
+      },
+      "firstMatch": {
+        "CaptureBeginMs": 3725.3994,
+        "CaptureEndMs": 3746.8039,
+        "AnalysisEndMs": 3748.0864,
+        "Score": 0.8414442700156985,
+        "Present": true
+      },
+      "inputs": [
+        {
+          "Action": "down",
+          "Key": "RMB",
+          "Attack": 0,
+          "DueMs": 7946.8039,
+          "BeginMs": 7946.8126,
+          "EndMs": 7954.4061,
+          "Inserted": 1,
+          "Win32Error": 0,
+          "relativeBeginMs": 4200.0087,
+          "relativeEndMs": 4207.6022,
+          "latenessMs": 0.008700000000317232
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 1,
+          "DueMs": 10146.803899999999,
+          "BeginMs": 10146.8178,
+          "EndMs": 10147.4377,
+          "Inserted": 1,
+          "Win32Error": 0,
+          "relativeBeginMs": 6400.013900000001,
+          "relativeEndMs": 6400.6338000000005,
+          "latenessMs": 0.013900000001740409
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 2,
+          "DueMs": 11446.803899999999,
+          "BeginMs": 11446.8141,
+          "EndMs": 11447.1689,
+          "Inserted": 1,
+          "Win32Error": 0,
+          "relativeBeginMs": 7700.0102,
+          "relativeEndMs": 7700.365000000001,
+          "latenessMs": 0.010200000000622822
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 3,
+          "DueMs": 13496.803899999999,
+          "BeginMs": 13496.8273,
+          "EndMs": 13497.1688,
+          "Inserted": 1,
+          "Win32Error": 0,
+          "relativeBeginMs": 9750.023400000002,
+          "relativeEndMs": 9750.3649,
+          "latenessMs": 0.023400000001856824
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 4,
+          "DueMs": 14896.803899999999,
+          "BeginMs": 14897.0408,
+          "EndMs": 14898.3957,
+          "Inserted": 1,
+          "Win32Error": 0,
+          "relativeBeginMs": 11150.2369,
+          "relativeEndMs": 11151.591799999998,
+          "latenessMs": 0.23690000000169675
+        },
+        {
+          "Action": "down",
+          "Key": "Space",
+          "Attack": 5,
+          "DueMs": 17196.8039,
+          "BeginMs": 17196.8135,
+          "EndMs": 17197.1199,
+          "Inserted": 1,
+          "Win32Error": 0,
+          "relativeBeginMs": 13450.009600000001,
+          "relativeEndMs": 13450.316000000003,
+          "latenessMs": 0.009600000001228182
+        }
+      ],
+      "allInputApiCallsSucceeded": true
+    }
+  ],
+  "findings": [
+    "9750 hit3 and11150 hit4 each succeeded with other timings baseline.",
+    "13550 hit5 failed once after successful predecessors.",
+    "Combined trial used13450 for hit5, not the proposed13550.",
+    "Trials1 and4 have identical planned inputs through hit3, but hit3 differs success/failure. Later inputs cannot by themselves explain that earlier failure.",
+    "A later failure after hit3 does not independently establish hit4 or hit5 bounds.",
+    "No raw source/profile/game/website settings changed."
+  ],
+  "retention": {
+    "date": "2026-09-21",
+    "status": "summarized originals retired after user-approved closure",
+    "inventory": "experiment-cleanup.json#current",
+    "meaning": "Historical raw log, source video and scratch paths describe provenance; only current.retainedOriginals are promised to remain. Conditions, outcomes, counterexamples and measurement limits stay in this evidence."
+  }
+}

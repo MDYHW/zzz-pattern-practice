@@ -1,0 +1,402 @@
+{
+  "date": "2026-09-20",
+  "status": "local-video-based-experiment-candidates-not-adopted-windows",
+  "party": "레미엘 → 벨리나 → 아리아",
+  "start_character": "아리아",
+  "method": {
+    "source": "3 user local OBS recordings, sequential FFmpeg decode, selected-frame showinfo PTS, visual input highlight review",
+    "input_resolution_ms": 16.666666666666668,
+    "uncertainty": "60fps frame quantization plus unmeasured input-overlay and real-time capture latency; not a confidence interval",
+    "zero": "First sustained match frame under the local template. Runtime schedules from first sustained-match capture end; confirmation is not a40ms offset to add/subtract.",
+    "template_source": {
+      "video": 2,
+      "frame": 400,
+      "roi": [
+        368,
+        136,
+        528,
+        28
+      ],
+      "sha256": "39194a973610342fb85047e35ec976235b1102ede77ca13a68eb2b752e0fc8cb"
+    },
+    "cross_video_validation": "Template from video2 frame400 also detects video1/video3. Not independent devices or detector accuracy guarantee.",
+    "native_input_calls": 0
+  },
+  "videos": [
+    {
+      "file": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_04-06-47.mp4",
+      "sha256": "69fa9fbcd05515ef058248e1a571abb81486e182cd206d2f44ecf525bf19a98d",
+      "index": 1,
+      "frame_count": 1105,
+      "fps": 60,
+      "width": 1280,
+      "height": 720,
+      "recording": "ON (OBS media)",
+      "outcome_source": "user report; final perfect-response text visually confirmed for videos2/3",
+      "outcomes": [
+        1,
+        0,
+        0,
+        null
+      ],
+      "visual_perfect_response_frame": null,
+      "detector": {
+        "first_frame": 362,
+        "confirmed_frame": 365,
+        "first_pts_seconds": 6.033333333333333,
+        "first_matching_frame": 362,
+        "last_matching_frame": 837,
+        "max_score": 0.9016253207869974,
+        "passed": true
+      },
+      "external_template_max_score": 0.17966101694915254,
+      "input_overlay_events": [
+        {
+          "key": "RMB",
+          "first_frame": 572,
+          "last_held_frame": 576,
+          "pts_seconds": 9.533333333333333,
+          "after_detector_ms": 3500.0
+        },
+        {
+          "key": "Space",
+          "first_frame": 642,
+          "last_held_frame": 650,
+          "pts_seconds": 10.7,
+          "after_detector_ms": 4666.667
+        },
+        {
+          "key": "Space",
+          "first_frame": 686,
+          "last_held_frame": 694,
+          "pts_seconds": 11.433333333333334,
+          "after_detector_ms": 5400.0
+        },
+        {
+          "key": "Space",
+          "first_frame": 743,
+          "last_held_frame": 750,
+          "pts_seconds": 12.383333333333333,
+          "after_detector_ms": 6350.0
+        },
+        {
+          "key": "Space",
+          "first_frame": 798,
+          "last_held_frame": 806,
+          "pts_seconds": 13.3,
+          "after_detector_ms": 7266.667
+        }
+      ],
+      "caveat": "Video1 has four Space downs after entry; do not force them into three actions or use later inputs as independent hit2/3 boundaries."
+    },
+    {
+      "file": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_04-08-20.mp4",
+      "sha256": "ebe711fbbab4dfd193f8306b6aab922be4076fe2589c95bb644cf443d9f88749",
+      "index": 2,
+      "frame_count": 1139,
+      "fps": 60,
+      "width": 1280,
+      "height": 720,
+      "recording": "ON (OBS media)",
+      "outcome_source": "user report; final perfect-response text visually confirmed for videos2/3",
+      "outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "visual_perfect_response_frame": 885,
+      "detector": {
+        "first_frame": 355,
+        "confirmed_frame": 358,
+        "first_pts_seconds": 5.916666666666667,
+        "first_matching_frame": 355,
+        "last_matching_frame": 840,
+        "max_score": 1,
+        "passed": true
+      },
+      "external_template_max_score": 0.18505942275042445,
+      "input_overlay_events": [
+        {
+          "key": "RMB",
+          "first_frame": 567,
+          "last_held_frame": 570,
+          "pts_seconds": 9.45,
+          "after_detector_ms": 3533.333
+        },
+        {
+          "key": "Space",
+          "first_frame": 648,
+          "last_held_frame": 655,
+          "pts_seconds": 10.8,
+          "after_detector_ms": 4883.333
+        },
+        {
+          "key": "Space",
+          "first_frame": 734,
+          "last_held_frame": 741,
+          "pts_seconds": 12.233333333333333,
+          "after_detector_ms": 6316.667
+        },
+        {
+          "key": "Space",
+          "first_frame": 818,
+          "last_held_frame": 825,
+          "pts_seconds": 13.633333333333333,
+          "after_detector_ms": 7716.667
+        }
+      ],
+      "caveat": "One RMB and three Space downs. Overlay display timestamps, not hardware or SendInput telemetry."
+    },
+    {
+      "file": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_04-09-57.mp4",
+      "sha256": "0f6145f9e779f87c326f090ea02a877f793d8ce160d89c471d1b29788f6dddc6",
+      "index": 3,
+      "frame_count": 1143,
+      "fps": 60,
+      "width": 1280,
+      "height": 720,
+      "recording": "ON (OBS media)",
+      "outcome_source": "user report; final perfect-response text visually confirmed for videos2/3",
+      "outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "visual_perfect_response_frame": 885,
+      "detector": {
+        "first_frame": 358,
+        "confirmed_frame": 361,
+        "first_pts_seconds": 5.966666666666667,
+        "first_matching_frame": 358,
+        "last_matching_frame": 843,
+        "max_score": 0.9087779690189329,
+        "passed": true
+      },
+      "external_template_max_score": 0.18181818181818182,
+      "input_overlay_events": [
+        {
+          "key": "RMB",
+          "first_frame": 565,
+          "last_held_frame": 568,
+          "pts_seconds": 9.416666666666666,
+          "after_detector_ms": 3450.0
+        },
+        {
+          "key": "Space",
+          "first_frame": 645,
+          "last_held_frame": 652,
+          "pts_seconds": 10.75,
+          "after_detector_ms": 4783.333
+        },
+        {
+          "key": "Space",
+          "first_frame": 738,
+          "last_held_frame": 745,
+          "pts_seconds": 12.3,
+          "after_detector_ms": 6333.333
+        },
+        {
+          "key": "Space",
+          "first_frame": 818,
+          "last_held_frame": 830,
+          "pts_seconds": 13.633333333333333,
+          "after_detector_ms": 7666.667
+        }
+      ],
+      "caveat": "One RMB and three Space downs. Overlay display timestamps, not hardware or SendInput telemetry."
+    }
+  ],
+  "comparison": {
+    "internal": {
+      "entry_pre": [
+        199,
+        230
+      ],
+      "support_combo": [
+        [
+          18,
+          48
+        ],
+        [
+          70,
+          100
+        ],
+        [
+          134,
+          164
+        ]
+      ],
+      "support_attack_events": [
+        49,
+        101,
+        166
+      ],
+      "gaps": [
+        22,
+        34
+      ],
+      "units": "state-local coordinates, not realtime frames or detector milliseconds"
+    },
+    "vesper_current_support_widths_ms": {
+      "execute02": [
+        500,
+        450,
+        450,
+        450
+      ],
+      "execute01": [
+        350,
+        450,
+        350,
+        450,
+        500
+      ]
+    },
+    "rule": "No30/32 ratio, no450ms universal maximum, no constant state-coordinate-to-ms conversion. Widths200/300/350/400 are test hypotheses, not measured boundaries."
+  },
+  "proposed_profile": {
+    "path": "tools/experiment/profiles/girtablullu-stagnant-execute-01.json",
+    "sha256": "b86b5429e46448417c57caee828f382940323a29592b38e16c9b5f43c8aff606",
+    "party": "레미엘 → 벨리나 → 아리아",
+    "start_character": "아리아",
+    "actions": [
+      {
+        "Id": "entry",
+        "Label": "진입 회피",
+        "Key": "RMB",
+        "Group": "A",
+        "SelectedTiming": "baseline",
+        "MinimumMs": 100,
+        "MaximumMs": 20000,
+        "Timing": {
+          "EarlyMs": 3400,
+          "BaselineMs": 3500,
+          "LateMs": 3600
+        }
+      },
+      {
+        "Id": "hit-1",
+        "Label": "1타",
+        "Key": "Space",
+        "Group": "B",
+        "SelectedTiming": "baseline",
+        "MinimumMs": 100,
+        "MaximumMs": 20000,
+        "Timing": {
+          "EarlyMs": 4700,
+          "BaselineMs": 4850,
+          "LateMs": 5000
+        }
+      },
+      {
+        "Id": "hit-2",
+        "Label": "2타",
+        "Key": "Space",
+        "Group": "A",
+        "SelectedTiming": "baseline",
+        "MinimumMs": 100,
+        "MaximumMs": 20000,
+        "Timing": {
+          "EarlyMs": 6150,
+          "BaselineMs": 6300,
+          "LateMs": 6500
+        }
+      },
+      {
+        "Id": "hit-3",
+        "Label": "3타",
+        "Key": "Space",
+        "Group": "B",
+        "SelectedTiming": "baseline",
+        "MinimumMs": 100,
+        "MaximumMs": 20000,
+        "Timing": {
+          "EarlyMs": 7500,
+          "BaselineMs": 7700,
+          "LateMs": 7900
+        }
+      }
+    ],
+    "baseline_basis": "Nearest50ms to midpoint of the two complete-success overlay observations; ties earlier. Entry also supported by video1.",
+    "scope": "RMB entry and Space supports only. ON video supplies origin/observations, OFF tests determine adopted windows. No generic ON/OFF correction."
+  },
+  "next_batch": [
+    {
+      "test": "baseline",
+      "delays_ms": [
+        3500,
+        4850,
+        6300,
+        7700
+      ]
+    },
+    {
+      "test": "hit1-early",
+      "delays_ms": [
+        3500,
+        4700,
+        6300,
+        7700
+      ]
+    },
+    {
+      "test": "hit1-late",
+      "delays_ms": [
+        3500,
+        5000,
+        6300,
+        7700
+      ]
+    },
+    {
+      "test": "entry-early",
+      "delays_ms": [
+        3400,
+        4850,
+        6300,
+        7700
+      ]
+    },
+    {
+      "test": "entry-late",
+      "delays_ms": [
+        3600,
+        4850,
+        6300,
+        7700
+      ]
+    },
+    {
+      "test": "hit2-early",
+      "delays_ms": [
+        3500,
+        4850,
+        6150,
+        7700
+      ]
+    }
+  ],
+  "stop_rule": "Baseline failure stops endpoint tests. Repeat only failing/mixed condition; do not treat downstream failures after an upstream failure as independent boundaries. Finish remaining endpoints then two representative crossing combinations.",
+  "preserved": "Original videos untouched; Vesper runtime profiles untouched; historical external candidate evidence retained as historical.",
+  "verification": {
+    "native_checks_passed": 78,
+    "selected_profile_combinations_passed": 9,
+    "native_input_calls": 0,
+    "local_video_detector_replays_passed": 3,
+    "ui_smoke_file": ".local/girtablullu-local-review/candidate-ui.png",
+    "pipeline": "experiment:check now includes Gir candidate profile and evidence consistency; new profile checks were run independently in this task.",
+    "review": "Independent arithmetic/provenance/conditions review: no blocking findings."
+  },
+  "visual_evidence": {
+    "file": "girtablullu-local-success-20260920.jpg",
+    "sha256": "3af5addc981442cb09faaa3c813a5eebba8e9aa6697f700d1dcd215bb4cf33fc"
+  },
+  "retention": {
+    "date": "2026-09-21",
+    "status": "summarized originals retired after user-approved closure",
+    "inventory": "experiment-cleanup.json#current",
+    "meaning": "Historical raw log, source video and scratch paths describe provenance; only current.retainedOriginals are promised to remain. Conditions, outcomes, counterexamples and measurement limits stay in this evidence."
+  }
+}

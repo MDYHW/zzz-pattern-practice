@@ -1,0 +1,334 @@
+{
+  "schemaVersion": 1,
+  "analysisId": "mirage-recovery-distance-20260922",
+  "scope": "Saved-video and immutable raw/result analysis; no game inputs or app/window changes.",
+  "trials": [
+    {
+      "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-aff05ef8c4924598b0c1d4318845383d.json",
+      "trialId": "09481193fe654d089c7c28e87b3cc339",
+      "startedUtc": "2026-09-22T04:40:55.6954974Z",
+      "recording": "ON",
+      "bits": "11110",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delays": [
+        4250,
+        6400,
+        8150,
+        9550,
+        11950
+      ],
+      "status": "submitted-not-game-verified",
+      "inputMaxLate": 7.3177999999998065,
+      "rawSha256": "f8a3289b9707da214ee047746394214dadef2817c1317d705822acabb74ca754",
+      "resultSha256": "1398e46a53592ad0ae24befed77b5ce74ad41fcdbe6711de330d9de64299ef0b",
+      "auxiliarySpaceMs": 11200,
+      "auxiliaryHoldMs": 100
+    },
+    {
+      "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-4aed7aff2d7d409ca0ab24ca2c67aff2.json",
+      "trialId": "f0ef0f89899741b282aaf610046316be",
+      "startedUtc": "2026-09-22T04:50:13.3748078Z",
+      "recording": "ON",
+      "bits": "11111",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "RMB"
+      ],
+      "delays": [
+        4250,
+        6400,
+        8150,
+        9550,
+        11950
+      ],
+      "status": "submitted-not-game-verified",
+      "inputMaxLate": 0.38219999999910215,
+      "rawSha256": "51e2e5a1223f66af44a368471c3a62c9b893709f11f9e4918074ca51354b0680",
+      "resultSha256": "022f169182c75e785a1a9e0e949f6997d6d22bbc2f6c1a3f828d341a4a21ea61",
+      "auxiliarySpaceMs": 11200,
+      "auxiliaryHoldMs": 100
+    },
+    {
+      "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-5167e023f53042198b4a21519a355c17.json",
+      "trialId": "96a7196b8dbb4beeb85986d4a85f391e",
+      "startedUtc": "2026-09-22T04:51:53.6918227Z",
+      "recording": "OFF",
+      "bits": "11110",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "RMB"
+      ],
+      "delays": [
+        4250,
+        6400,
+        8150,
+        9550,
+        11800
+      ],
+      "status": "submitted-not-game-verified",
+      "inputMaxLate": 1.4744000000009692,
+      "rawSha256": "47430114fb6ab2afd70158eb9e89fd87511d1aadbaa66f230feca56e717c3f53",
+      "resultSha256": "bcca33c2b40f7f5ca0d4f2f7cdf60f5a39ca75eec361a62fa6f17d2d81f55969",
+      "auxiliarySpaceMs": 11200,
+      "auxiliaryHoldMs": 100
+    },
+    {
+      "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-7ed116440b434201b65fbc9eb0f632a0.json",
+      "trialId": "82e1a881e8e34a9fb56cbfb22fb7a298",
+      "startedUtc": "2026-09-22T04:53:30.5960055Z",
+      "recording": "OFF",
+      "bits": "11110",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "RMB"
+      ],
+      "delays": [
+        4250,
+        6400,
+        8150,
+        9550,
+        11850
+      ],
+      "status": "submitted-not-game-verified",
+      "inputMaxLate": 0.017899999998917338,
+      "rawSha256": "ee610e13185c51be57aa2e41f7b6a2d1f74688d95997f709fdc48877310becb9",
+      "resultSha256": "f992e21eb2dbc8f629611425cdfa3e8531335d437ae43b586326a7cf980c1427",
+      "auxiliarySpaceMs": 11200,
+      "auxiliaryHoldMs": 100
+    },
+    {
+      "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-fe00a7a8d948495b81df9a559b1196cd.json",
+      "trialId": "bb476d33850b4e58b9e450af3b81ecb6",
+      "startedUtc": "2026-09-22T04:55:04.0096835Z",
+      "recording": "OFF",
+      "bits": "11111",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "RMB"
+      ],
+      "delays": [
+        4250,
+        6400,
+        8150,
+        9550,
+        11900
+      ],
+      "status": "submitted-not-game-verified",
+      "inputMaxLate": 0.19549999999799184,
+      "rawSha256": "bad49a27e2dfec62800c4d915c9ae81ada29648abc7e76d02254c9b7c756a9c2",
+      "resultSha256": "80b0d3bcf33328b9bc7c63da359a1c8f7b9f5e61f14beed03fdb6291801a68df",
+      "auxiliarySpaceMs": 11200,
+      "auxiliaryHoldMs": 100
+    },
+    {
+      "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-f0296e3a65c6483d9c4a84d9d6f4855a.json",
+      "trialId": "f06f3bf9a5884644b3bd5b2c5af56ba9",
+      "startedUtc": "2026-09-22T04:57:49.9275577Z",
+      "recording": "OFF",
+      "bits": "11110",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "RMB"
+      ],
+      "delays": [
+        4250,
+        6400,
+        8150,
+        9550,
+        12050
+      ],
+      "status": "submitted-not-game-verified",
+      "inputMaxLate": 0.5729999999985012,
+      "rawSha256": "15094efdd18882263afad9987274121d2ef97e6c18d14d67dc001ee90e6086b1",
+      "resultSha256": "95f9541fa79f9707be68e4d699e2964e22d652d6101e71a6fdf6524308a8371e",
+      "auxiliarySpaceMs": 11200,
+      "auxiliaryHoldMs": 100
+    },
+    {
+      "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-2a6e39c771bc4f499b90933f9550ca23.json",
+      "trialId": "7c7ae4453be44b8ca2ff11806bc91da6",
+      "startedUtc": "2026-09-22T04:59:08.1390194Z",
+      "recording": "OFF",
+      "bits": "11111",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "RMB"
+      ],
+      "delays": [
+        4250,
+        6400,
+        8150,
+        9550,
+        12000
+      ],
+      "status": "submitted-not-game-verified",
+      "inputMaxLate": 8.746999999999389,
+      "rawSha256": "189a64aa37530eec6a44860ddbdf31836c439172aca4e63ce85dfc3d1a380e2e",
+      "resultSha256": "b7c4a253180f85af95c4595815eccee3fe39aaa7eafd6a4b5ab036a34d1eb8eb",
+      "auxiliarySpaceMs": 11200,
+      "auxiliaryHoldMs": 100
+    },
+    {
+      "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-ee2390bcd7834b1d88f0d9956cdeb60f.json",
+      "trialId": "8d98a62d11614d2995d49bba32c0cf08",
+      "startedUtc": "2026-09-22T05:01:54.8247600Z",
+      "recording": "OFF",
+      "bits": "11111",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "RMB"
+      ],
+      "delays": [
+        4350,
+        6250,
+        8350,
+        9400,
+        12050
+      ],
+      "status": "submitted-not-game-verified",
+      "inputMaxLate": 0.0183999999990192,
+      "rawSha256": "3376d1ab5191edfa11d308fd678289bbe0440a7e8c0bf21d96fd164d002de5b9",
+      "resultSha256": "5f86e334416b6a1c5df9f1d0a6ef396d95eaad803699bd3caee41ae902503543",
+      "auxiliarySpaceMs": 11200,
+      "auxiliaryHoldMs": 100
+    }
+  ],
+  "video": {
+    "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-22_13-50-10.mp4",
+    "sha256": "7bfe8f96de0c5ec1f58ae7bcd2fa4ed0c71eecaa586d69e0d6fa647d7f0b7aa1",
+    "frames": 1435,
+    "fps": 60,
+    "noticeFirstFrame": 361,
+    "noticeConfirmedFrame": 364,
+    "noticeReplayPassed": true,
+    "noticeReplayNativeInputCalls": 0,
+    "noticeBracketReview": "Initial coarse bound [240,360] missed threshold onset at361 by one frame. Direct frame350/360/370 review established [350,370]; detector/template unchanged.",
+    "responseFrames": [
+      616,
+      745,
+      850,
+      934,
+      1078
+    ],
+    "auxiliarySpaceFrame": 1033,
+    "responseNoticeMs": [
+      4250,
+      6400,
+      8150,
+      9550,
+      11950
+    ],
+    "auxiliarySpaceNoticeMs": 11200,
+    "visualChecks": {
+      "switchAfterAuxiliarySpace": [
+        1033,
+        1050
+      ],
+      "rmbThenQte": [
+        1078,
+        1100
+      ],
+      "perfectCounterBanner": 1240
+    },
+    "excludedOverlayCandidate": {
+      "frames": [
+        997,
+        1003
+      ],
+      "reason": "Yellow effect near overlay, no matching RMB in raw input log; not counted as input"
+    },
+    "matchingTrialId": "f0ef0f89899741b282aaf610046316be"
+  },
+  "observations": [
+    "Additional Space11200 then RMB11950 has recorded11111 and visually verified QTE/perfect-counter banner.",
+    "RMB12050 with auxiliarySpace11200 failed under4250/6400/8150/9550 and succeeded under4350/6250/8350/9400; distance is not logged.",
+    "RMB11850 failed after auxiliarySpace11200, while prior normal-prefix RMB11850 succeeded; changed path is a conditional counterexample to unconditional timing reuse."
+  ],
+  "decision": {
+    "recommendation": "Keep current adopted service windows; user proposes maintenance; no app/profile numeric edits.",
+    "entryRmb": [
+      4150,
+      4350
+    ],
+    "spaceHits": [
+      [
+        6250,
+        6550
+      ],
+      [
+        7950,
+        8350
+      ],
+      [
+        9400,
+        9700
+      ],
+      [
+        11650,
+        12050
+      ]
+    ],
+    "finalRmb": [
+      11850,
+      12050
+    ],
+    "meaning": "Practice windows supported by representative and measured paths, not guaranteed physical boundaries across all distances and transitions.",
+    "distanceCausality": "Unresolved; window shift vs width change vs other path/clock changes not isolated.",
+    "nextExperimentRequired": false
+  },
+  "classification": {
+    "localEvidence": "docs/evidence/arrow-unit-control-20260921.json",
+    "monsterRow": 31442,
+    "field": "EKGMLMMEJOJ",
+    "value": [
+      "Bios",
+      "Small",
+      "Boss",
+      ""
+    ],
+    "external": "https://zenless-zone-zero.fandom.com/wiki/A-H0L0_Type_Intelligent_Tactical_Construct_-_Mirage_Archer_Unit",
+    "caveat": "No claim about a separate encounter/UI rank taxonomy."
+  },
+  "sourceAvailability": {
+    "asOf": "2026-09-22",
+    "inventory": "docs/evidence/experiment-cleanup.json#/current",
+    "retainedOriginals": [
+      "ZZZ_2026-09-22_03-02-21.mp4",
+      "ZZZ_2026-09-22_12-08-35.mp4",
+      "ZZZ_2026-09-22_13-50-10.mp4"
+    ],
+    "retainedTrialIds": [
+      "f458ddae93024a70974794805167e726",
+      "f0ef0f89899741b282aaf610046316be",
+      "53581e707ac6420a8f50491b5ace86e0"
+    ],
+    "rule": "Only listed representative originals/trials remain. Other historical paths and hashes are provenance for summarized observations, not replayable files. Derived contact sheets/replay output were removed; final values, frame annotations and limitations remain here."
+  }
+}

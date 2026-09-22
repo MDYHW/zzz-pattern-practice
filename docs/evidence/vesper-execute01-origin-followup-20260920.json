@@ -1,0 +1,377 @@
+{
+  "scope": "Read-only Execute_01 comparison using existing recordings; no new game trial",
+  "noticeComparison": [
+    {
+      "name": "reference",
+      "originSec": 0.18333333333333332,
+      "firstThreshold": {
+        "timeSec": 0.21666666666666667,
+        "score": 0.7746883988494727
+      },
+      "originMinusFirstThresholdMs": -33.33333333333336,
+      "series": [
+        {
+          "timeSec": 0.0,
+          "score": 0.0
+        },
+        {
+          "timeSec": 0.016666666666666666,
+          "score": 0.0
+        },
+        {
+          "timeSec": 0.03333333333333333,
+          "score": 0.0
+        },
+        {
+          "timeSec": 0.05,
+          "score": 0.0
+        },
+        {
+          "timeSec": 0.06666666666666667,
+          "score": 0.0
+        },
+        {
+          "timeSec": 0.08333333333333333,
+          "score": 0.06359300476947535
+        },
+        {
+          "timeSec": 0.1,
+          "score": 0.06359300476947535
+        },
+        {
+          "timeSec": 0.11666666666666667,
+          "score": 0.06359300476947535
+        },
+        {
+          "timeSec": 0.13333333333333333,
+          "score": 0.13677811550151975
+        },
+        {
+          "timeSec": 0.15,
+          "score": 0.13677811550151975
+        },
+        {
+          "timeSec": 0.16666666666666666,
+          "score": 0.20028612303290416
+        },
+        {
+          "timeSec": 0.18333333333333332,
+          "score": 0.20028612303290416
+        },
+        {
+          "timeSec": 0.2,
+          "score": 0.20028612303290416
+        },
+        {
+          "timeSec": 0.21666666666666667,
+          "score": 0.7746883988494727
+        },
+        {
+          "timeSec": 0.23333333333333334,
+          "score": 0.8695652173913043
+        },
+        {
+          "timeSec": 0.25,
+          "score": 0.8688387635756056
+        },
+        {
+          "timeSec": 0.26666666666666666,
+          "score": 0.8688387635756056
+        },
+        {
+          "timeSec": 0.2833333333333333,
+          "score": 0.8673894912427023
+        },
+        {
+          "timeSec": 0.3,
+          "score": 0.8783333333333333
+        },
+        {
+          "timeSec": 0.31666666666666665,
+          "score": 0.8748964374482188
+        },
+        {
+          "timeSec": 0.3333333333333333,
+          "score": 0.8739635157545605
+        },
+        {
+          "timeSec": 0.35,
+          "score": 0.8739635157545605
+        },
+        {
+          "timeSec": 0.36666666666666664,
+          "score": 0.8765534382767192
+        },
+        {
+          "timeSec": 0.38333333333333336,
+          "score": 0.8765534382767192
+        },
+        {
+          "timeSec": 0.4,
+          "score": 0.8710743801652893
+        },
+        {
+          "timeSec": 0.4166666666666667,
+          "score": 0.8717948717948718
+        },
+        {
+          "timeSec": 0.43333333333333335,
+          "score": 0.8632974316487159
+        },
+        {
+          "timeSec": 0.45,
+          "score": 0.8632974316487159
+        },
+        {
+          "timeSec": 0.4666666666666667,
+          "score": 0.8688387635756056
+        },
+        {
+          "timeSec": 0.48333333333333334,
+          "score": 0.8697095435684647
+        },
+        {
+          "timeSec": 0.5,
+          "score": 0.8689883913764511
+        },
+        {
+          "timeSec": 0.5166666666666667,
+          "score": 0.8697095435684647
+        },
+        {
+          "timeSec": 0.5333333333333333,
+          "score": 0.8774834437086093
+        },
+        {
+          "timeSec": 0.55,
+          "score": 0.8742810188989318
+        },
+        {
+          "timeSec": 0.5666666666666667,
+          "score": 0.8742810188989318
+        },
+        {
+          "timeSec": 0.5833333333333334,
+          "score": 0.8742810188989318
+        },
+        {
+          "timeSec": 0.6,
+          "score": 0.8790658882402002
+        },
+        {
+          "timeSec": 0.6166666666666667,
+          "score": 0.8790658882402002
+        },
+        {
+          "timeSec": 0.6333333333333333,
+          "score": 0.8790658882402002
+        }
+      ]
+    },
+    {
+      "name": "new",
+      "originSec": 12.9504473,
+      "firstThreshold": {
+        "timeSec": 12.983333333333333,
+        "score": 0.7753554502369668
+      },
+      "originMinusFirstThresholdMs": -32.886033333332065,
+      "series": [
+        {
+          "timeSec": 12.7,
+          "score": 0.0
+        },
+        {
+          "timeSec": 12.716666666666667,
+          "score": 0.0
+        },
+        {
+          "timeSec": 12.733333333333333,
+          "score": 0.0
+        },
+        {
+          "timeSec": 12.75,
+          "score": 0.0
+        },
+        {
+          "timeSec": 12.766666666666666,
+          "score": 0.0
+        },
+        {
+          "timeSec": 12.783333333333333,
+          "score": 0.0
+        },
+        {
+          "timeSec": 12.799999999999999,
+          "score": 0.0
+        },
+        {
+          "timeSec": 12.816666666666666,
+          "score": 0.0
+        },
+        {
+          "timeSec": 12.833333333333332,
+          "score": 0.0
+        },
+        {
+          "timeSec": 12.85,
+          "score": 0.03864734299516908
+        },
+        {
+          "timeSec": 12.866666666666665,
+          "score": 0.03864734299516908
+        },
+        {
+          "timeSec": 12.883333333333333,
+          "score": 0.13169984686064318
+        },
+        {
+          "timeSec": 12.899999999999999,
+          "score": 0.13169984686064318
+        },
+        {
+          "timeSec": 12.916666666666666,
+          "score": 0.13169984686064318
+        },
+        {
+          "timeSec": 12.933333333333332,
+          "score": 0.639412997903564
+        },
+        {
+          "timeSec": 12.95,
+          "score": 0.639412997903564
+        },
+        {
+          "timeSec": 12.966666666666667,
+          "score": 0.639412997903564
+        },
+        {
+          "timeSec": 12.983333333333333,
+          "score": 0.7753554502369668
+        },
+        {
+          "timeSec": 13.0,
+          "score": 0.8831385642737897
+        },
+        {
+          "timeSec": 13.016666666666666,
+          "score": 0.8822055137844611
+        },
+        {
+          "timeSec": 13.033333333333333,
+          "score": 0.8861180382377389
+        },
+        {
+          "timeSec": 13.049999999999999,
+          "score": 0.8859283930058285
+        },
+        {
+          "timeSec": 13.066666666666666,
+          "score": 0.8829701372074253
+        },
+        {
+          "timeSec": 13.083333333333332,
+          "score": 0.8829701372074253
+        },
+        {
+          "timeSec": 13.1,
+          "score": 0.8946938775510204
+        },
+        {
+          "timeSec": 13.116666666666665,
+          "score": 0.8946938775510204
+        },
+        {
+          "timeSec": 13.133333333333333,
+          "score": 0.8946938775510204
+        },
+        {
+          "timeSec": 13.149999999999999,
+          "score": 0.8822095857026807
+        },
+        {
+          "timeSec": 13.166666666666666,
+          "score": 0.8822095857026807
+        },
+        {
+          "timeSec": 13.183333333333332,
+          "score": 0.8908941755537325
+        },
+        {
+          "timeSec": 13.2,
+          "score": 0.8908941755537325
+        },
+        {
+          "timeSec": 13.216666666666667,
+          "score": 0.889253486464315
+        },
+        {
+          "timeSec": 13.233333333333333,
+          "score": 0.8887070376432079
+        },
+        {
+          "timeSec": 13.25,
+          "score": 0.8876127973748975
+        },
+        {
+          "timeSec": 13.266666666666666,
+          "score": 0.8787632221318145
+        },
+        {
+          "timeSec": 13.283333333333333,
+          "score": 0.8809135399673735
+        },
+        {
+          "timeSec": 13.299999999999999,
+          "score": 0.8783673469387755
+        },
+        {
+          "timeSec": 13.316666666666666,
+          "score": 0.8874388254486134
+        },
+        {
+          "timeSec": 13.333333333333332,
+          "score": 0.889795918367347
+        }
+      ]
+    }
+  ],
+  "bossLandmarks": [
+    {
+      "landmark": "hit1 weapon descends through horizontal; before the corresponding manual/automatic input",
+      "referenceRelativeSeconds": [
+        6.15,
+        6.2
+      ],
+      "newRelativeSeconds": [
+        6.1,
+        6.15
+      ]
+    },
+    {
+      "landmark": "hit3 raised weapon crosses vertical; before the corresponding manual/automatic input",
+      "referenceRelativeSeconds": [
+        9.25,
+        9.3
+      ],
+      "newRelativeSeconds": [
+        9.2,
+        9.25
+      ]
+    }
+  ],
+  "landmarkPrecision": "50ms contact-sheet spacing; approximately one-sample and subjective pose uncertainty, not exact game collision timing",
+  "previousOffTrialMaximumSettingsMs": [
+    4300,
+    6650,
+    7950,
+    9700,
+    11100,
+    13450
+  ],
+  "limits": [
+    "Only hit1/hit3 pre-input boss poses compared; later hit/collision timing and hit4/hit5 not independently established.",
+    "Native lane absent from saved recordings; cannot determine compositor-visible guide delay from these videos.",
+    "Do not equate adopted conservative endpoints with observed failure bounds."
+  ]
+}

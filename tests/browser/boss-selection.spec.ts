@@ -1,0 +1,110 @@
+import { expect, test } from '@playwright/test';
+import type { Page } from '@playwright/test';
+import { girtablulluExecute01, vesperExecute01, vesperExecute02 } from '../../src/content/skills';
+
+const surface = (page: Page) => page.getByRole('region', { name: '연습 입력 영역' });
+const at = async (page: Page, seconds: number) => {
+  const outcome = await page.waitForFunction(time => {
+    const video = document.querySelector('video')!;
+    const phase = document.querySelector<HTMLElement>('[data-phase]')?.dataset.phase;
+    if (video.currentTime >= time) return { reached: true };
+    if (!['paused', 'interrupted', 'error', 'finished'].includes(phase ?? '')) return null;
+    return { reached: false, phase, time: video.currentTime, readyState: video.readyState };
+  }, seconds);
+  expect(await outcome.jsonValue(), `Playback must reach ${seconds}s`).toMatchObject({ reached: true });
+};
+
+test('boss switching resets a paused attempt, preserves display choices and completes Gir with four inputs', async ({ page }, info) => {
+  test.setTimeout(60_000);
+  const errors: string[] = [];
+  page.on('pageerror', error => errors.push(error.message));
+  page.on('response', response => { if (response.status() >= 400) errors.push(`${response.status()} ${response.url()}`); });
+  await page.addInitScript(({ gir, vesper }) => {
+    localStorage.setItem('zzz-entry-choices', JSON.stringify({ [gir]: 'Space', [vesper]: 'Space' }));
+  }, { gir: girtablulluExecute01.id, vesper: vesperExecute01.id });
+  await page.setViewportSize({ width: 1280, height: 1080 });
+  await page.goto('./');
+  await expect(surface(page)).toHaveAttribute('data-phase', 'ready');
+  const boss = page.getByRole('combobox', { name: '보스', exact: true });
+  const skill = page.getByRole('combobox', { name: '제어스킬', exact: true });
+  await expect(boss).toHaveValue('vesper');
+  await expect(boss.locator('option')).toHaveCount(4);
+  await expect(skill.locator('option')).toHaveCount(2);
+  await page.getByRole('button', { name: '연습 시작' }).click();
+  await expect(surface(page)).toHaveAttribute('data-phase', 'running');
+  await expect(boss).toBeDisabled();
+  await at(page, vesperExecute02.cues[0].reference);
+  await surface(page).click({ button: 'right', position: { x: 10, y: 10 } });
+  await expect(page.locator('.cue-success')).toHaveCount(1);
+  await page.keyboard.press('Escape');
+  await expect(surface(page)).toHaveAttribute('data-phase', 'paused');
+  await page.screenshot({ path: info.outputPath('vesper-before-boss-switch-paused.png'), fullPage: true });
+  await page.getByRole('button', { name: '리듬 안내 표시' }).click();
+  await page.getByRole('button', { name: '녹화 입력 가리기' }).click();
+  const oldVideo = await page.locator('video').elementHandle();
+  await boss.selectOption('gir-reborn');
+  await expect(surface(page)).toHaveAttribute('data-phase', 'ready');
+  expect(await oldVideo!.evaluate(video => video.isConnected)).toBe(false);
+  await expect(skill).toHaveValue(girtablulluExecute01.id);
+  await expect(skill.locator('option')).toHaveCount(1);
+  await expect(surface(page)).not.toHaveAttribute('data-last-input-time');
+  await expect(page.locator('.cue-success, .results, .guide, .recorded-input-mask')).toHaveCount(0);
+  await expect(page.getByRole('button', { name: '리듬 안내 표시' })).toHaveAttribute('aria-pressed', 'false');
+  await expect(page.getByRole('button', { name: '녹화 입력 가리기' })).toHaveAttribute('aria-pressed', 'false');
+  await expect(page.getByRole('combobox', { name: '진입 입력' })).toHaveCount(0);
+  await expect(page.locator('.entry-selection')).toHaveText('진입은 우클릭, 이후 대응은 Space입니다.');
+  await expect(page.locator('#input-help')).toContainText('기르타블리르·퇴행 변종 Execute_01의 진입과 3타');
+  await expect(page.locator('#input-help')).not.toContainText('Space 진입');
+  const media = await page.locator('video').evaluate((video: HTMLVideoElement) => ({
+    time: video.currentTime, duration: video.duration, width: video.videoWidth, paused: video.paused,
+  }));
+  expect(media).toMatchObject({ time: 0, width: 1280, paused: true });
+  expect(media.duration).toBeCloseTo(girtablulluExecute01.duration, 2);
+  await page.getByRole('button', { name: '리듬 안내 표시' }).click();
+  await expect(page.locator('.cue')).toHaveCount(4);
+  await page.screenshot({ path: info.outputPath('gir-ready.png'), fullPage: true });
+  await page.setViewportSize({ width: 390, height: 844 });
+  await boss.focus();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  expect(await page.locator('.practice-scroll').evaluate(element => element.scrollWidth <= element.clientWidth)).toBe(true);
+  await page.screenshot({ path: info.outputPath('gir-ready-narrow.png'), fullPage: true });
+  await page.setViewportSize({ width: 1280, height: 1080 });
+  await page.getByRole('button', { name: '연습 시작' }).click();
+  await expect(surface(page)).toHaveAttribute('data-phase', 'running');
+  await expect(boss).toBeDisabled();
+  await expect(skill).toBeDisabled();
+  await page.keyboard.press('Escape');
+  await expect(surface(page)).toHaveAttribute('data-phase', 'paused');
+  await expect(page.getByRole('combobox', { name: '진입 입력' })).toHaveCount(0);
+  await page.screenshot({ path: info.outputPath('gir-paused.png'), fullPage: true });
+  await page.getByRole('button', { name: '이어서 하기' }).click();
+  await expect(surface(page)).toHaveAttribute('data-phase', 'running');
+  await page.screenshot({ path: info.outputPath('gir-running.png'), fullPage: true });
+  const videoBox = (await page.locator('.video-stage').boundingBox())!;
+  for (const cue of girtablulluExecute01.cues) {
+    await at(page, cue.reference);
+    if (cue.key === 'MouseRight') await page.mouse.click(videoBox.x + videoBox.width / 2, videoBox.y + videoBox.height / 2, { button: 'right' });
+    else await page.keyboard.press('Space');
+  }
+  await expect(surface(page)).toHaveAttribute('data-phase', 'finished', { timeout: 6_000 });
+  await expect(page.getByRole('heading', { name: '전체 대응 성공' })).toBeVisible();
+  await expect(page.locator('.result-hit')).toHaveCount(4);
+  await expect(page.getByTestId('extras')).toHaveText('0');
+  await expect(page.getByRole('button', { name: '입력 선택으로' })).toHaveCount(0);
+  await page.screenshot({ path: info.outputPath('gir-complete.png'), fullPage: true });
+  await boss.selectOption('vesper');
+  await expect(surface(page)).toHaveAttribute('data-phase', 'ready');
+  await expect(skill.locator('option')).toHaveCount(2);
+  await expect(skill).toHaveValue(vesperExecute01.id);
+  const entry = page.getByRole('combobox', { name: '진입 입력' });
+  await expect(entry.locator('option')).toHaveCount(2);
+  await expect(entry).toHaveValue('Space');
+  await expect(page.locator('.cue')).toHaveCount(6);
+  await expect(page.locator('.results')).toHaveCount(0);
+  await expect(page.getByRole('button', { name: '녹화 입력 가리기' })).toHaveAttribute('aria-pressed', 'false');
+  await skill.selectOption(vesperExecute02.id);
+  await expect(surface(page)).toHaveAttribute('data-phase', 'ready');
+  await expect(entry).toHaveValue('MouseRight');
+  await expect(page.locator('.cue')).toHaveCount(5);
+  expect(errors).toEqual([]);
+});

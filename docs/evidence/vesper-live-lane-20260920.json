@@ -1,0 +1,2289 @@
+{
+  "date": "2026-09-20",
+  "scope": "9 saved manual-lane trials; 6 OBS recordings, 5 matched and 1 without a saved trial",
+  "gameOutcomeSource": "User-entered 0/1. Selected full-perfect and damage scenes visually cross-checked; not inferred from lane acceptance.",
+  "statistics": {
+    "runs": [
+      {
+        "file": "20260920-140228-vesper-execute-02-fe66957a.json",
+        "startUtc": "2026-09-20T05:01:50.6422953Z",
+        "endUtc": "2026-09-20T05:02:07.1744598Z",
+        "profile": "vesper-execute-02",
+        "outcome": "11111",
+        "lane": "11111",
+        "actionRows": [
+          {
+            "id": "entry",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 3050,
+              "BaselineMs": 3150,
+              "LateMs": 3300
+            },
+            "inputs": [
+              {
+                "key": "RMB",
+                "ms": 3106.98,
+                "inside": true,
+                "lateDiff": -193.02,
+                "earlyDiff": 56.98,
+                "hookUI": 16.0526,
+                "osHook": 0,
+                "sincePrevious": null,
+                "paintAge": 16.719
+              }
+            ]
+          },
+          {
+            "id": "hit-1",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 4200,
+              "BaselineMs": 4450,
+              "LateMs": 4700
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 4353.75,
+                "inside": true,
+                "lateDiff": -346.25,
+                "earlyDiff": 153.75,
+                "hookUI": 22.3505,
+                "osHook": 0,
+                "sincePrevious": 1246.77,
+                "paintAge": 6.414
+              }
+            ]
+          },
+          {
+            "id": "hit-2",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 5750,
+              "BaselineMs": 5950,
+              "LateMs": 6200
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 5982.05,
+                "inside": true,
+                "lateDiff": -217.95,
+                "earlyDiff": 232.05,
+                "hookUI": 15.4381,
+                "osHook": 0,
+                "sincePrevious": 1628.3,
+                "paintAge": 13.766
+              }
+            ]
+          },
+          {
+            "id": "hit-3",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 7400,
+              "BaselineMs": 7600,
+              "LateMs": 7850
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 7636.13,
+                "inside": true,
+                "lateDiff": -213.87,
+                "earlyDiff": 236.13,
+                "hookUI": 30.5026,
+                "osHook": 0,
+                "sincePrevious": 1654.08,
+                "paintAge": 13.705
+              }
+            ]
+          },
+          {
+            "id": "hit-4",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 9150,
+              "BaselineMs": 9350,
+              "LateMs": 9600
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 9311.12,
+                "inside": true,
+                "lateDiff": -288.88,
+                "earlyDiff": 161.12,
+                "hookUI": 28.6975,
+                "osHook": 0,
+                "sincePrevious": 1674.98,
+                "paintAge": 16.307
+              }
+            ]
+          }
+        ],
+        "inputCount": 5,
+        "hookUI": {
+          "n": 5,
+          "min": 15.438,
+          "median": 22.351,
+          "p95": 30.142,
+          "max": 30.503
+        },
+        "osHook": {
+          "n": 5,
+          "min": 0,
+          "median": 0,
+          "p95": 0.0,
+          "max": 0
+        },
+        "paintCost": {
+          "n": 398,
+          "min": 1.44,
+          "median": 3.263,
+          "p95": 6.205,
+          "max": 71.672
+        },
+        "paintGap": {
+          "n": 397,
+          "min": 5.62,
+          "median": 29.665,
+          "p95": 33.947,
+          "max": 77.09
+        },
+        "capture": {
+          "n": 175,
+          "min": 9.649,
+          "median": 25.431,
+          "p95": 37.93,
+          "max": 59.803
+        },
+        "originMs": 6716.1436,
+        "firstMatchCapture": {
+          "CaptureBeginMs": 6689.4938,
+          "CaptureEndMs": 6716.1436,
+          "AnalysisEndMs": 6716.7579,
+          "Score": 0.6847918436703483,
+          "Present": true
+        },
+        "priorSample": {
+          "CaptureBeginMs": 6658.4717,
+          "CaptureEndMs": 6685.5321,
+          "AnalysisEndMs": 6686.0427,
+          "Score": 0.6780238500851788,
+          "Present": false
+        },
+        "confirmed": {
+          "CaptureBeginMs": 6752.2078,
+          "CaptureEndMs": 6784.5922,
+          "AnalysisEndMs": 6785.1817,
+          "Score": 0.6857142857142857,
+          "Present": true
+        },
+        "confirmDelay": 69.038,
+        "firstPaint": 144.55049999999937,
+        "paintGapsOver50": 2,
+        "paintGapsOver100": 0
+      },
+      {
+        "file": "20260920-140459-vesper-execute-01-97068741.json",
+        "startUtc": "2026-09-20T05:04:29.5461815Z",
+        "endUtc": "2026-09-20T05:04:45.2763620Z",
+        "profile": "vesper-execute-01",
+        "outcome": "011111",
+        "lane": "011111",
+        "actionRows": [
+          {
+            "id": "entry",
+            "game": "0",
+            "lane": false,
+            "timing": {
+              "EarlyMs": 4100,
+              "BaselineMs": 4200,
+              "LateMs": 4300
+            },
+            "inputs": [
+              {
+                "key": "RMB",
+                "ms": 3967.83,
+                "inside": false,
+                "lateDiff": -332.17,
+                "earlyDiff": -132.17,
+                "hookUI": 2.391,
+                "osHook": 0,
+                "sincePrevious": null,
+                "paintAge": 25.985
+              }
+            ]
+          },
+          {
+            "id": "hit-1",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 6250,
+              "BaselineMs": 6400,
+              "LateMs": 6600
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 6369.96,
+                "inside": true,
+                "lateDiff": -230.04,
+                "earlyDiff": 119.96,
+                "hookUI": 11.7813,
+                "osHook": 0,
+                "sincePrevious": 2402.13,
+                "paintAge": 18.4
+              }
+            ]
+          },
+          {
+            "id": "hit-2",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 7500,
+              "BaselineMs": 7700,
+              "LateMs": 7950
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 7782.97,
+                "inside": true,
+                "lateDiff": -167.03,
+                "earlyDiff": 282.97,
+                "hookUI": 19.5154,
+                "osHook": 0,
+                "sincePrevious": 1413.01,
+                "paintAge": 10.321
+              }
+            ]
+          },
+          {
+            "id": "hit-3",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 9350,
+              "BaselineMs": 9500,
+              "LateMs": 9700
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 9462.4,
+                "inside": true,
+                "lateDiff": -237.6,
+                "earlyDiff": 112.4,
+                "hookUI": 7.9145,
+                "osHook": 0,
+                "sincePrevious": 1679.43,
+                "paintAge": 15.922
+              }
+            ]
+          },
+          {
+            "id": "hit-4",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 10650,
+              "BaselineMs": 10850,
+              "LateMs": 11100
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 10874.01,
+                "inside": true,
+                "lateDiff": -225.99,
+                "earlyDiff": 224.01,
+                "hookUI": 11.2221,
+                "osHook": 0,
+                "sincePrevious": 1411.6,
+                "paintAge": 17.399
+              }
+            ]
+          },
+          {
+            "id": "hit-5",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 12950,
+              "BaselineMs": 13200,
+              "LateMs": 13450
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 13229.01,
+                "inside": true,
+                "lateDiff": -220.99,
+                "earlyDiff": 279.01,
+                "hookUI": 4.1372,
+                "osHook": 0,
+                "sincePrevious": 2355.0,
+                "paintAge": 9.074
+              }
+            ]
+          }
+        ],
+        "inputCount": 6,
+        "hookUI": {
+          "n": 6,
+          "min": 2.391,
+          "median": 9.568,
+          "p95": 17.582,
+          "max": 19.515
+        },
+        "osHook": {
+          "n": 6,
+          "min": 0,
+          "median": 0.0,
+          "p95": 0.0,
+          "max": 0
+        },
+        "paintCost": {
+          "n": 547,
+          "min": 2.232,
+          "median": 4.267,
+          "p95": 12.385,
+          "max": 43.41
+        },
+        "paintGap": {
+          "n": 546,
+          "min": 5.604,
+          "median": 27.756,
+          "p95": 39.011,
+          "max": 83.448
+        },
+        "capture": {
+          "n": 42,
+          "min": 12.049,
+          "median": 35.161,
+          "p95": 52.496,
+          "max": 72.66
+        },
+        "originMs": 1814.9215,
+        "firstMatchCapture": {
+          "CaptureBeginMs": 1795.31,
+          "CaptureEndMs": 1814.9215,
+          "AnalysisEndMs": 1815.7064,
+          "Score": 0.7542033626901521,
+          "Present": true
+        },
+        "priorSample": {
+          "CaptureBeginMs": 1747.9026,
+          "CaptureEndMs": 1782.4452,
+          "AnalysisEndMs": 1783.0996,
+          "Score": 0.14029850746268657,
+          "Present": false
+        },
+        "confirmed": {
+          "CaptureBeginMs": 1874.3982,
+          "CaptureEndMs": 1915.9509,
+          "AnalysisEndMs": 1916.7317,
+          "Score": 0.7568954457985888,
+          "Present": true
+        },
+        "confirmDelay": 101.81,
+        "firstPaint": 123.08780000000002,
+        "paintGapsOver50": 4,
+        "paintGapsOver100": 0
+      },
+      {
+        "file": "20260920-140636-vesper-execute-02-702c63fa.json",
+        "startUtc": "2026-09-20T05:06:12.2412780Z",
+        "endUtc": "2026-09-20T05:06:22.6927159Z",
+        "profile": "vesper-execute-02",
+        "outcome": "11111",
+        "lane": "11110",
+        "actionRows": [
+          {
+            "id": "entry",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 3050,
+              "BaselineMs": 3150,
+              "LateMs": 3300
+            },
+            "inputs": [
+              {
+                "key": "RMB",
+                "ms": 3204.05,
+                "inside": true,
+                "lateDiff": -95.95,
+                "earlyDiff": 154.05,
+                "hookUI": 0.6855,
+                "osHook": 0,
+                "sincePrevious": null,
+                "paintAge": 30.838
+              }
+            ]
+          },
+          {
+            "id": "hit-1",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 4200,
+              "BaselineMs": 4450,
+              "LateMs": 4700
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 4485.05,
+                "inside": true,
+                "lateDiff": -214.95,
+                "earlyDiff": 285.05,
+                "hookUI": 13.8851,
+                "osHook": 15,
+                "sincePrevious": 1281.0,
+                "paintAge": 16.554
+              }
+            ]
+          },
+          {
+            "id": "hit-2",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 5750,
+              "BaselineMs": 5950,
+              "LateMs": 6200
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 6009.31,
+                "inside": true,
+                "lateDiff": -190.69,
+                "earlyDiff": 259.31,
+                "hookUI": 9.8241,
+                "osHook": 0,
+                "sincePrevious": 1524.26,
+                "paintAge": 4.273
+              }
+            ]
+          },
+          {
+            "id": "hit-3",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 7400,
+              "BaselineMs": 7600,
+              "LateMs": 7850
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 7661.11,
+                "inside": true,
+                "lateDiff": -188.89,
+                "earlyDiff": 261.11,
+                "hookUI": 14.2899,
+                "osHook": 0,
+                "sincePrevious": 1651.8,
+                "paintAge": 7.608
+              }
+            ]
+          },
+          {
+            "id": "hit-4",
+            "game": "1",
+            "lane": false,
+            "timing": {
+              "EarlyMs": 9150,
+              "BaselineMs": 9350,
+              "LateMs": 9600
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 9601.73,
+                "inside": false,
+                "lateDiff": 1.73,
+                "earlyDiff": 451.73,
+                "hookUI": 0.6654,
+                "osHook": 0,
+                "sincePrevious": 1940.62,
+                "paintAge": 12.108
+              }
+            ]
+          }
+        ],
+        "inputCount": 5,
+        "hookUI": {
+          "n": 5,
+          "min": 0.665,
+          "median": 9.824,
+          "p95": 14.209,
+          "max": 14.29
+        },
+        "osHook": {
+          "n": 5,
+          "min": 0,
+          "median": 0,
+          "p95": 12.0,
+          "max": 15
+        },
+        "paintCost": {
+          "n": 403,
+          "min": 1.257,
+          "median": 2.379,
+          "p95": 4.137,
+          "max": 17.289
+        },
+        "paintGap": {
+          "n": 402,
+          "min": 4.314,
+          "median": 29.646,
+          "p95": 33.745,
+          "max": 45.544
+        },
+        "capture": {
+          "n": 7,
+          "min": 32.04,
+          "median": 35.937,
+          "p95": 49.157,
+          "max": 51.041
+        },
+        "originMs": 363.327,
+        "firstMatchCapture": {
+          "CaptureBeginMs": 329.2332,
+          "CaptureEndMs": 363.327,
+          "AnalysisEndMs": 364.5768,
+          "Score": 0.7507109004739336,
+          "Present": true
+        },
+        "priorSample": {
+          "CaptureBeginMs": 282.5457,
+          "CaptureEndMs": 316.1763,
+          "AnalysisEndMs": 317.3068,
+          "Score": 0.22857142857142856,
+          "Present": false
+        },
+        "confirmed": {
+          "CaptureBeginMs": 376.3618,
+          "CaptureEndMs": 408.4019,
+          "AnalysisEndMs": 409.6221,
+          "Score": 0.7416587225929456,
+          "Present": true
+        },
+        "confirmDelay": 46.295,
+        "firstPaint": 63.929700000000025,
+        "paintGapsOver50": 0,
+        "paintGapsOver100": 0
+      },
+      {
+        "file": "20260920-140758-vesper-execute-02-2f196c7a.json",
+        "startUtc": "2026-09-20T05:07:13.4039483Z",
+        "endUtc": "2026-09-20T05:07:36.1573428Z",
+        "profile": "vesper-execute-02",
+        "outcome": "11111",
+        "lane": "11111",
+        "actionRows": [
+          {
+            "id": "entry",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 3050,
+              "BaselineMs": 3150,
+              "LateMs": 3300
+            },
+            "inputs": [
+              {
+                "key": "RMB",
+                "ms": 3190.65,
+                "inside": true,
+                "lateDiff": -109.35,
+                "earlyDiff": 140.65,
+                "hookUI": 29.4471,
+                "osHook": 0,
+                "sincePrevious": null,
+                "paintAge": 0.502
+              }
+            ]
+          },
+          {
+            "id": "hit-1",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 4200,
+              "BaselineMs": 4450,
+              "LateMs": 4700
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 4520.96,
+                "inside": true,
+                "lateDiff": -179.04,
+                "earlyDiff": 320.96,
+                "hookUI": 6.0008,
+                "osHook": 0,
+                "sincePrevious": 1330.3,
+                "paintAge": 8.007
+              }
+            ]
+          },
+          {
+            "id": "hit-2",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 5750,
+              "BaselineMs": 5950,
+              "LateMs": 6200
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 6043.72,
+                "inside": true,
+                "lateDiff": -156.28,
+                "earlyDiff": 293.72,
+                "hookUI": 23.2688,
+                "osHook": 0,
+                "sincePrevious": 1522.76,
+                "paintAge": 5.547
+              }
+            ]
+          },
+          {
+            "id": "hit-3",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 7400,
+              "BaselineMs": 7600,
+              "LateMs": 7850
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 7721.25,
+                "inside": true,
+                "lateDiff": -128.75,
+                "earlyDiff": 321.25,
+                "hookUI": 10.4417,
+                "osHook": 0,
+                "sincePrevious": 1677.53,
+                "paintAge": 3.38
+              }
+            ]
+          },
+          {
+            "id": "hit-4",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 9150,
+              "BaselineMs": 9350,
+              "LateMs": 9600
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 9218.88,
+                "inside": true,
+                "lateDiff": -381.12,
+                "earlyDiff": 68.88,
+                "hookUI": 1.0233,
+                "osHook": 0,
+                "sincePrevious": 1497.63,
+                "paintAge": 29.737
+              }
+            ]
+          }
+        ],
+        "inputCount": 5,
+        "hookUI": {
+          "n": 5,
+          "min": 1.023,
+          "median": 10.442,
+          "p95": 28.211,
+          "max": 29.447
+        },
+        "osHook": {
+          "n": 5,
+          "min": 0,
+          "median": 0,
+          "p95": 0.0,
+          "max": 0
+        },
+        "paintCost": {
+          "n": 401,
+          "min": 1.408,
+          "median": 3.031,
+          "p95": 5.824,
+          "max": 9.07
+        },
+        "paintGap": {
+          "n": 400,
+          "min": 5.567,
+          "median": 28.912,
+          "p95": 35.565,
+          "max": 50.872
+        },
+        "capture": {
+          "n": 249,
+          "min": 16.661,
+          "median": 41.274,
+          "p95": 54.619,
+          "max": 68.823
+        },
+        "originMs": 12713.1472,
+        "firstMatchCapture": {
+          "CaptureBeginMs": 12669.7095,
+          "CaptureEndMs": 12713.1472,
+          "AnalysisEndMs": 12714.4818,
+          "Score": 0.7447619047619047,
+          "Present": true
+        },
+        "priorSample": {
+          "CaptureBeginMs": 12623.2417,
+          "CaptureEndMs": 12659.0766,
+          "AnalysisEndMs": 12661.6718,
+          "Score": 0.1814814814814815,
+          "Present": false
+        },
+        "confirmed": {
+          "CaptureBeginMs": 12716.8273,
+          "CaptureEndMs": 12750.7521,
+          "AnalysisEndMs": 12751.943,
+          "Score": 0.7490566037735849,
+          "Present": true
+        },
+        "confirmDelay": 38.796,
+        "firstPaint": 54.129399999999805,
+        "paintGapsOver50": 1,
+        "paintGapsOver100": 0
+      },
+      {
+        "file": "20260920-141040-vesper-execute-02-7a14a8bb.json",
+        "startUtc": "2026-09-20T05:09:55.2212620Z",
+        "endUtc": "2026-09-20T05:10:06.0271459Z",
+        "profile": "vesper-execute-02",
+        "outcome": "10110",
+        "lane": "10110",
+        "actionRows": [
+          {
+            "id": "entry",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 3050,
+              "BaselineMs": 3150,
+              "LateMs": 3300
+            },
+            "inputs": [
+              {
+                "key": "RMB",
+                "ms": 3164.68,
+                "inside": true,
+                "lateDiff": -135.32,
+                "earlyDiff": 114.68,
+                "hookUI": 5.1713,
+                "osHook": 0,
+                "sincePrevious": null,
+                "paintAge": 18.645
+              }
+            ]
+          },
+          {
+            "id": "hit-1",
+            "game": "0",
+            "lane": false,
+            "timing": {
+              "EarlyMs": 4200,
+              "BaselineMs": 4450,
+              "LateMs": 4700
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 4723.14,
+                "inside": false,
+                "lateDiff": 23.14,
+                "earlyDiff": 523.14,
+                "hookUI": 27.4282,
+                "osHook": 0,
+                "sincePrevious": 1558.47,
+                "paintAge": 3.631
+              }
+            ]
+          },
+          {
+            "id": "hit-2",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 5750,
+              "BaselineMs": 5950,
+              "LateMs": 6200
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 5855.69,
+                "inside": true,
+                "lateDiff": -344.31,
+                "earlyDiff": 105.69,
+                "hookUI": 17.9559,
+                "osHook": 0,
+                "sincePrevious": 1132.55,
+                "paintAge": 12.088
+              }
+            ]
+          },
+          {
+            "id": "hit-3",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 7400,
+              "BaselineMs": 7600,
+              "LateMs": 7850
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 7457.75,
+                "inside": true,
+                "lateDiff": -392.25,
+                "earlyDiff": 57.75,
+                "hookUI": 11.5815,
+                "osHook": 0,
+                "sincePrevious": 1602.06,
+                "paintAge": 17.735
+              }
+            ]
+          },
+          {
+            "id": "hit-4",
+            "game": "0",
+            "lane": false,
+            "timing": {
+              "EarlyMs": 9150,
+              "BaselineMs": 9350,
+              "LateMs": 9600
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 9138.05,
+                "inside": false,
+                "lateDiff": -461.95,
+                "earlyDiff": -11.95,
+                "hookUI": 0.719,
+                "osHook": 16,
+                "sincePrevious": 1680.3,
+                "paintAge": 14.706
+              }
+            ]
+          }
+        ],
+        "inputCount": 5,
+        "hookUI": {
+          "n": 5,
+          "min": 0.719,
+          "median": 11.582,
+          "p95": 25.534,
+          "max": 27.428
+        },
+        "osHook": {
+          "n": 5,
+          "min": 0,
+          "median": 0,
+          "p95": 12.8,
+          "max": 16
+        },
+        "paintCost": {
+          "n": 401,
+          "min": 0.956,
+          "median": 2.341,
+          "p95": 4.74,
+          "max": 10.633
+        },
+        "paintGap": {
+          "n": 400,
+          "min": 4.137,
+          "median": 29.192,
+          "p95": 35.179,
+          "max": 45.446
+        },
+        "capture": {
+          "n": 16,
+          "min": 20.636,
+          "median": 33.653,
+          "p95": 49.661,
+          "max": 53.369
+        },
+        "originMs": 701.9318,
+        "firstMatchCapture": {
+          "CaptureBeginMs": 674.4283,
+          "CaptureEndMs": 701.9318,
+          "AnalysisEndMs": 703.0596,
+          "Score": 0.7221664994984955,
+          "Present": true
+        },
+        "priorSample": {
+          "CaptureBeginMs": 611.5953,
+          "CaptureEndMs": 660.0202,
+          "AnalysisEndMs": 660.875,
+          "Score": 0.19101123595505617,
+          "Present": false
+        },
+        "confirmed": {
+          "CaptureBeginMs": 737.3428,
+          "CaptureEndMs": 783.6675,
+          "AnalysisEndMs": 784.6346,
+          "Score": 0.7379375591296121,
+          "Present": true
+        },
+        "confirmDelay": 82.703,
+        "firstPaint": 95.93540000000007,
+        "paintGapsOver50": 0,
+        "paintGapsOver100": 0
+      },
+      {
+        "file": "20260920-141247-vesper-execute-02-2cf6f93f.json",
+        "startUtc": "2026-09-20T05:11:06.9920587Z",
+        "endUtc": "2026-09-20T05:11:19.8379425Z",
+        "profile": "vesper-execute-02",
+        "outcome": "11000",
+        "lane": "11111",
+        "actionRows": [
+          {
+            "id": "entry",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 3050,
+              "BaselineMs": 3150,
+              "LateMs": 3300
+            },
+            "inputs": [
+              {
+                "key": "RMB",
+                "ms": 3212.36,
+                "inside": true,
+                "lateDiff": -87.64,
+                "earlyDiff": 162.36,
+                "hookUI": 17.885,
+                "osHook": 0,
+                "sincePrevious": null,
+                "paintAge": 19.417
+              }
+            ]
+          },
+          {
+            "id": "hit-1",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 4200,
+              "BaselineMs": 4450,
+              "LateMs": 4700
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 4498.5,
+                "inside": true,
+                "lateDiff": -201.5,
+                "earlyDiff": 298.5,
+                "hookUI": 23.9631,
+                "osHook": 0,
+                "sincePrevious": 1286.13,
+                "paintAge": 4.007
+              }
+            ]
+          },
+          {
+            "id": "hit-2",
+            "game": "0",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 5750,
+              "BaselineMs": 5950,
+              "LateMs": 6200
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 6186.01,
+                "inside": true,
+                "lateDiff": -13.99,
+                "earlyDiff": 436.01,
+                "hookUI": 2.1114,
+                "osHook": 0,
+                "sincePrevious": 1687.52,
+                "paintAge": 5.696
+              }
+            ]
+          },
+          {
+            "id": "hit-3",
+            "game": "0",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 7400,
+              "BaselineMs": 7600,
+              "LateMs": 7850
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 7728.61,
+                "inside": true,
+                "lateDiff": -121.39,
+                "earlyDiff": 328.61,
+                "hookUI": 1.2914,
+                "osHook": 0,
+                "sincePrevious": 1542.59,
+                "paintAge": 31.612
+              }
+            ]
+          },
+          {
+            "id": "hit-4",
+            "game": "0",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 9150,
+              "BaselineMs": 9350,
+              "LateMs": 9600
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 9485.45,
+                "inside": true,
+                "lateDiff": -114.55,
+                "earlyDiff": 335.45,
+                "hookUI": 4.9602,
+                "osHook": 16,
+                "sincePrevious": 1756.84,
+                "paintAge": 9.149
+              }
+            ]
+          }
+        ],
+        "inputCount": 5,
+        "hookUI": {
+          "n": 5,
+          "min": 1.291,
+          "median": 4.96,
+          "p95": 22.747,
+          "max": 23.963
+        },
+        "osHook": {
+          "n": 5,
+          "min": 0,
+          "median": 0,
+          "p95": 12.8,
+          "max": 16
+        },
+        "paintCost": {
+          "n": 387,
+          "min": 1.959,
+          "median": 4.292,
+          "p95": 9.663,
+          "max": 76.372
+        },
+        "paintGap": {
+          "n": 386,
+          "min": 7.059,
+          "median": 28.828,
+          "p95": 38.152,
+          "max": 124.508
+        },
+        "capture": {
+          "n": 48,
+          "min": 23.393,
+          "median": 45.82,
+          "p95": 62.583,
+          "max": 66.497
+        },
+        "originMs": 2803.2972,
+        "firstMatchCapture": {
+          "CaptureBeginMs": 2766.8027,
+          "CaptureEndMs": 2803.2972,
+          "AnalysisEndMs": 2805.638,
+          "Score": 0.7316602316602316,
+          "Present": true
+        },
+        "priorSample": {
+          "CaptureBeginMs": 2690.2878,
+          "CaptureEndMs": 2753.5334,
+          "AnalysisEndMs": 2755.4853,
+          "Score": 0.4378698224852071,
+          "Present": false
+        },
+        "confirmed": {
+          "CaptureBeginMs": 2813.6237,
+          "CaptureEndMs": 2866.444,
+          "AnalysisEndMs": 2868.4538,
+          "Score": 0.7457627118644068,
+          "Present": true
+        },
+        "confirmDelay": 65.157,
+        "firstPaint": 86.96250000000009,
+        "paintGapsOver50": 2,
+        "paintGapsOver100": 1
+      },
+      {
+        "file": "20260920-141504-vesper-execute-02-a56ea40e.json",
+        "startUtc": "2026-09-20T05:14:26.0517583Z",
+        "endUtc": "2026-09-20T05:14:38.5252049Z",
+        "profile": "vesper-execute-02",
+        "outcome": "11111",
+        "lane": "11111",
+        "actionRows": [
+          {
+            "id": "entry",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 3050,
+              "BaselineMs": 3150,
+              "LateMs": 3300
+            },
+            "inputs": [
+              {
+                "key": "RMB",
+                "ms": 3238.78,
+                "inside": true,
+                "lateDiff": -61.22,
+                "earlyDiff": 188.78,
+                "hookUI": 17.6574,
+                "osHook": 0,
+                "sincePrevious": null,
+                "paintAge": 11.226
+              }
+            ]
+          },
+          {
+            "id": "hit-1",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 4200,
+              "BaselineMs": 4450,
+              "LateMs": 4700
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 4554.38,
+                "inside": true,
+                "lateDiff": -145.62,
+                "earlyDiff": 354.38,
+                "hookUI": 2.1074,
+                "osHook": 16,
+                "sincePrevious": 1315.6,
+                "paintAge": 12.722
+              }
+            ]
+          },
+          {
+            "id": "hit-2",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 5750,
+              "BaselineMs": 5950,
+              "LateMs": 6200
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 6126.26,
+                "inside": true,
+                "lateDiff": -73.74,
+                "earlyDiff": 376.26,
+                "hookUI": 5.8806,
+                "osHook": 0,
+                "sincePrevious": 1571.88,
+                "paintAge": 2.807
+              }
+            ]
+          },
+          {
+            "id": "hit-3",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 7400,
+              "BaselineMs": 7600,
+              "LateMs": 7850
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 7754.06,
+                "inside": true,
+                "lateDiff": -95.94,
+                "earlyDiff": 354.06,
+                "hookUI": 9.8014,
+                "osHook": 0,
+                "sincePrevious": 1627.81,
+                "paintAge": 6.805
+              }
+            ]
+          },
+          {
+            "id": "hit-4",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 9150,
+              "BaselineMs": 9350,
+              "LateMs": 9600
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 9510.6,
+                "inside": true,
+                "lateDiff": -89.4,
+                "earlyDiff": 360.6,
+                "hookUI": 29.8194,
+                "osHook": 0,
+                "sincePrevious": 1756.54,
+                "paintAge": 0.671
+              }
+            ]
+          }
+        ],
+        "inputCount": 5,
+        "hookUI": {
+          "n": 5,
+          "min": 2.107,
+          "median": 9.801,
+          "p95": 27.387,
+          "max": 29.819
+        },
+        "osHook": {
+          "n": 5,
+          "min": 0,
+          "median": 0,
+          "p95": 12.8,
+          "max": 16
+        },
+        "paintCost": {
+          "n": 397,
+          "min": 1.171,
+          "median": 2.611,
+          "p95": 4.852,
+          "max": 23.93
+        },
+        "paintGap": {
+          "n": 396,
+          "min": 4.262,
+          "median": 28.61,
+          "p95": 36.908,
+          "max": 42.944
+        },
+        "capture": {
+          "n": 57,
+          "min": 13.381,
+          "median": 31.442,
+          "p95": 40.105,
+          "max": 45.268
+        },
+        "originMs": 2374.3708,
+        "firstMatchCapture": {
+          "CaptureBeginMs": 2341.1421,
+          "CaptureEndMs": 2374.3708,
+          "AnalysisEndMs": 2375.6116,
+          "Score": 0.7330049261083744,
+          "Present": true
+        },
+        "priorSample": {
+          "CaptureBeginMs": 2294.4755,
+          "CaptureEndMs": 2325.269,
+          "AnalysisEndMs": 2326.2817,
+          "Score": 0.18114602587800369,
+          "Present": false
+        },
+        "confirmed": {
+          "CaptureBeginMs": 2388.8307,
+          "CaptureEndMs": 2419.4285,
+          "AnalysisEndMs": 2420.712,
+          "Score": 0.7511563367252544,
+          "Present": true
+        },
+        "confirmDelay": 46.341,
+        "firstPaint": 57.9985999999999,
+        "paintGapsOver50": 0,
+        "paintGapsOver100": 0
+      },
+      {
+        "file": "20260920-141559-vesper-execute-02-72b31034.json",
+        "startUtc": "2026-09-20T05:15:25.1369615Z",
+        "endUtc": "2026-09-20T05:15:43.6781237Z",
+        "profile": "vesper-execute-02",
+        "outcome": "11111",
+        "lane": "11010",
+        "actionRows": [
+          {
+            "id": "entry",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 3050,
+              "BaselineMs": 3150,
+              "LateMs": 3300
+            },
+            "inputs": [
+              {
+                "key": "RMB",
+                "ms": 3172.99,
+                "inside": true,
+                "lateDiff": -127.01,
+                "earlyDiff": 122.99,
+                "hookUI": 14.8634,
+                "osHook": 0,
+                "sincePrevious": null,
+                "paintAge": 17.215
+              }
+            ]
+          },
+          {
+            "id": "hit-1",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 4200,
+              "BaselineMs": 4450,
+              "LateMs": 4700
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 4266.92,
+                "inside": true,
+                "lateDiff": -433.08,
+                "earlyDiff": 66.92,
+                "hookUI": 13.3293,
+                "osHook": 0,
+                "sincePrevious": 1093.92,
+                "paintAge": 17.96
+              }
+            ]
+          },
+          {
+            "id": "hit-2",
+            "game": "1",
+            "lane": false,
+            "timing": {
+              "EarlyMs": 5750,
+              "BaselineMs": 5950,
+              "LateMs": 6200
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 5738.29,
+                "inside": false,
+                "lateDiff": -461.71,
+                "earlyDiff": -11.71,
+                "hookUI": 24.2055,
+                "osHook": 0,
+                "sincePrevious": 1471.37,
+                "paintAge": 6.956
+              }
+            ]
+          },
+          {
+            "id": "hit-3",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 7400,
+              "BaselineMs": 7600,
+              "LateMs": 7850
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 7423.53,
+                "inside": true,
+                "lateDiff": -426.47,
+                "earlyDiff": 23.53,
+                "hookUI": 21.593,
+                "osHook": 0,
+                "sincePrevious": 1685.24,
+                "paintAge": 19.167
+              }
+            ]
+          },
+          {
+            "id": "hit-4",
+            "game": "1",
+            "lane": false,
+            "timing": {
+              "EarlyMs": 9150,
+              "BaselineMs": 9350,
+              "LateMs": 9600
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 9146.2,
+                "inside": false,
+                "lateDiff": -453.8,
+                "earlyDiff": -3.8,
+                "hookUI": 9.0043,
+                "osHook": 0,
+                "sincePrevious": 1722.67,
+                "paintAge": 7.214
+              }
+            ]
+          }
+        ],
+        "inputCount": 5,
+        "hookUI": {
+          "n": 5,
+          "min": 9.004,
+          "median": 14.863,
+          "p95": 23.683,
+          "max": 24.206
+        },
+        "osHook": {
+          "n": 5,
+          "min": 0,
+          "median": 0,
+          "p95": 0.0,
+          "max": 0
+        },
+        "paintCost": {
+          "n": 399,
+          "min": 1.01,
+          "median": 2.218,
+          "p95": 4.21,
+          "max": 9.085
+        },
+        "paintGap": {
+          "n": 398,
+          "min": 5.51,
+          "median": 28.931,
+          "p95": 36.621,
+          "max": 43.088
+        },
+        "capture": {
+          "n": 191,
+          "min": 18.011,
+          "median": 34.153,
+          "p95": 44.96,
+          "max": 48.878
+        },
+        "originMs": 8451.3287,
+        "firstMatchCapture": {
+          "CaptureBeginMs": 8411.1404,
+          "CaptureEndMs": 8451.3287,
+          "AnalysisEndMs": 8452.4048,
+          "Score": 0.7598499061913696,
+          "Present": true
+        },
+        "priorSample": {
+          "CaptureBeginMs": 8364.4076,
+          "CaptureEndMs": 8398.2203,
+          "AnalysisEndMs": 8399.2212,
+          "Score": 0.31864406779661014,
+          "Present": false
+        },
+        "confirmed": {
+          "CaptureBeginMs": 8458.6329,
+          "CaptureEndMs": 8498.8181,
+          "AnalysisEndMs": 8499.6869,
+          "Score": 0.7548928238583411,
+          "Present": true
+        },
+        "confirmDelay": 48.358,
+        "firstPaint": 55.43289999999979,
+        "paintGapsOver50": 0,
+        "paintGapsOver100": 0
+      },
+      {
+        "file": "20260920-141824-vesper-execute-01-a625978d.json",
+        "startUtc": "2026-09-20T05:17:44.3727552Z",
+        "endUtc": "2026-09-20T05:18:08.2832542Z",
+        "profile": "vesper-execute-01",
+        "outcome": "111111",
+        "lane": "111000",
+        "actionRows": [
+          {
+            "id": "entry",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 4100,
+              "BaselineMs": 4200,
+              "LateMs": 4300
+            },
+            "inputs": [
+              {
+                "key": "RMB",
+                "ms": 4172.88,
+                "inside": true,
+                "lateDiff": -127.12,
+                "earlyDiff": 72.88,
+                "hookUI": 15.7348,
+                "osHook": 0,
+                "sincePrevious": null,
+                "paintAge": 12.174
+              }
+            ]
+          },
+          {
+            "id": "hit-1",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 6250,
+              "BaselineMs": 6400,
+              "LateMs": 6600
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 6253.85,
+                "inside": true,
+                "lateDiff": -346.15,
+                "earlyDiff": 3.85,
+                "hookUI": 13.4348,
+                "osHook": 0,
+                "sincePrevious": 2080.97,
+                "paintAge": 33.049
+              }
+            ]
+          },
+          {
+            "id": "hit-2",
+            "game": "1",
+            "lane": true,
+            "timing": {
+              "EarlyMs": 7500,
+              "BaselineMs": 7700,
+              "LateMs": 7950
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 7728.9,
+                "inside": true,
+                "lateDiff": -221.1,
+                "earlyDiff": 228.9,
+                "hookUI": 10.2394,
+                "osHook": 0,
+                "sincePrevious": 1475.04,
+                "paintAge": 9.747
+              }
+            ]
+          },
+          {
+            "id": "hit-3",
+            "game": "1",
+            "lane": false,
+            "timing": {
+              "EarlyMs": 9350,
+              "BaselineMs": 9500,
+              "LateMs": 9700
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 9770.21,
+                "inside": false,
+                "lateDiff": 70.21,
+                "earlyDiff": 420.21,
+                "hookUI": 0.4725,
+                "osHook": 0,
+                "sincePrevious": 2041.31,
+                "paintAge": 28.46
+              }
+            ]
+          },
+          {
+            "id": "hit-4",
+            "game": "1",
+            "lane": false,
+            "timing": {
+              "EarlyMs": 10650,
+              "BaselineMs": 10850,
+              "LateMs": 11100
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 11174.13,
+                "inside": false,
+                "lateDiff": 74.13,
+                "earlyDiff": 524.13,
+                "hookUI": 16.9644,
+                "osHook": 0,
+                "sincePrevious": 1403.92,
+                "paintAge": 11.275
+              }
+            ]
+          },
+          {
+            "id": "hit-5",
+            "game": "1",
+            "lane": false,
+            "timing": {
+              "EarlyMs": 12950,
+              "BaselineMs": 13200,
+              "LateMs": 13450
+            },
+            "inputs": [
+              {
+                "key": "Space",
+                "ms": 13587.71,
+                "inside": false,
+                "lateDiff": 137.71,
+                "earlyDiff": 637.71,
+                "hookUI": 7.6837,
+                "osHook": 0,
+                "sincePrevious": 2413.58,
+                "paintAge": 21.975
+              }
+            ]
+          }
+        ],
+        "inputCount": 6,
+        "hookUI": {
+          "n": 6,
+          "min": 0.472,
+          "median": 11.837,
+          "p95": 16.657,
+          "max": 16.964
+        },
+        "osHook": {
+          "n": 6,
+          "min": 0,
+          "median": 0.0,
+          "p95": 0.0,
+          "max": 0
+        },
+        "paintCost": {
+          "n": 549,
+          "min": 1.035,
+          "median": 2.332,
+          "p95": 4.451,
+          "max": 10.055
+        },
+        "paintGap": {
+          "n": 548,
+          "min": 4.611,
+          "median": 29.282,
+          "p95": 36.599,
+          "max": 44.69
+        },
+        "capture": {
+          "n": 226,
+          "min": 16.51,
+          "median": 32.348,
+          "p95": 49.622,
+          "max": 59.896
+        },
+        "originMs": 9967.0105,
+        "firstMatchCapture": {
+          "CaptureBeginMs": 9930.9494,
+          "CaptureEndMs": 9967.0105,
+          "AnalysisEndMs": 9967.9033,
+          "Score": 0.8009478672985783,
+          "Present": true
+        },
+        "priorSample": {
+          "CaptureBeginMs": 9885.3414,
+          "CaptureEndMs": 9916.4868,
+          "AnalysisEndMs": 9917.5357,
+          "Score": 0.12654320987654322,
+          "Present": false
+        },
+        "confirmed": {
+          "CaptureBeginMs": 9978.0912,
+          "CaptureEndMs": 10017.4487,
+          "AnalysisEndMs": 10018.249,
+          "Score": 0.8605015673981191,
+          "Present": true
+        },
+        "confirmDelay": 51.238,
+        "firstPaint": 65.85119999999915,
+        "paintGapsOver50": 0,
+        "paintGapsOver100": 0
+      }
+    ],
+    "aggregate": {
+      "hookUI": {
+        "n": 47,
+        "min": 0.472,
+        "median": 11.781,
+        "p95": 29.222,
+        "max": 30.503
+      },
+      "osHook": {
+        "n": 47,
+        "min": 0,
+        "median": 0,
+        "p95": 15.7,
+        "max": 16
+      },
+      "paintCost": {
+        "n": 3882,
+        "min": 0.956,
+        "median": 2.897,
+        "p95": 6.645,
+        "max": 76.372
+      },
+      "paintGap": {
+        "n": 3873,
+        "min": 4.137,
+        "median": 28.969,
+        "p95": 36.476,
+        "max": 124.508
+      },
+      "capture": {
+        "n": 1011,
+        "min": 9.649,
+        "median": 34.414,
+        "p95": 50.065,
+        "max": 72.66
+      }
+    }
+  },
+  "videoAlignment": [
+    {
+      "video": "ZZZ_2026-09-20_14-07-09.mp4",
+      "matchedLog": "20260920-140758-vesper-execute-02-2f196c7a.json",
+      "logSha256": "e8038cca3f9eceab19590c6b37b4c11227da2dc43681cc51de99113aefe91556",
+      "noticeFirstLowScoreSec": 15.683333333333334,
+      "noticeFirstThresholdSec": 15.783333333333333,
+      "estimatedLogOriginOnVideoSec": 15.7811228,
+      "originMinusFirstThresholdMs": -2.210533333332876,
+      "alignmentResidualMs": [
+        11.555833333332885,
+        -2.07970000000023,
+        8.488733333332675,
+        -2.3706000000011045,
+        0.0
+      ],
+      "maxAbsResidualMs": 11.555833333332885,
+      "events": [
+        {
+          "frame": 1139,
+          "seconds": 18.983333333333334,
+          "down": true,
+          "yellowPixels": 176,
+          "key": "RMB",
+          "action": "entry",
+          "logMs": 3190.654700000001,
+          "residualMs": 11.555833333332885,
+          "gameOutcome": "1"
+        },
+        {
+          "frame": 1218,
+          "seconds": 20.3,
+          "down": true,
+          "yellowPixels": 2125,
+          "key": "Space",
+          "action": "hit-1",
+          "logMs": 4520.956900000001,
+          "residualMs": -2.07970000000023,
+          "gameOutcome": "1"
+        },
+        {
+          "frame": 1310,
+          "seconds": 21.833333333333332,
+          "down": true,
+          "yellowPixels": 2125,
+          "key": "Space",
+          "action": "hit-2",
+          "logMs": 6043.721799999999,
+          "residualMs": 8.488733333332675,
+          "gameOutcome": "1"
+        },
+        {
+          "frame": 1410,
+          "seconds": 23.5,
+          "down": true,
+          "yellowPixels": 2125,
+          "key": "Space",
+          "action": "hit-3",
+          "logMs": 7721.247800000001,
+          "residualMs": -2.3706000000011045,
+          "gameOutcome": "1"
+        },
+        {
+          "frame": 1500,
+          "seconds": 25.0,
+          "down": true,
+          "yellowPixels": 2125,
+          "key": "Space",
+          "action": "hit-4",
+          "logMs": 9218.877199999999,
+          "residualMs": 0.0,
+          "gameOutcome": "1"
+        }
+      ]
+    },
+    {
+      "video": "ZZZ_2026-09-20_14-09-51.mp4",
+      "matchedLog": "20260920-141040-vesper-execute-02-7a14a8bb.json",
+      "logSha256": "11454fddedd764c93cdc31f48fa84b6727e70525a06d306c5fd92417ac7f2ace",
+      "noticeFirstLowScoreSec": 3.55,
+      "noticeFirstThresholdSec": 3.65,
+      "estimatedLogOriginOnVideoSec": 3.610973866666667,
+      "originMinusFirstThresholdMs": -39.02613333333305,
+      "alignmentResidualMs": [
+        7.683766666666088,
+        -0.7825333333330491,
+        0.0,
+        -2.0595000000002983,
+        0.9723333333331539
+      ],
+      "maxAbsResidualMs": 7.683766666666088,
+      "events": [
+        {
+          "frame": 407,
+          "seconds": 6.783333333333333,
+          "down": true,
+          "yellowPixels": 366,
+          "key": "RMB",
+          "action": "entry",
+          "logMs": 3164.6757000000002,
+          "residualMs": 7.683766666666088,
+          "gameOutcome": "1"
+        },
+        {
+          "frame": 500,
+          "seconds": 8.333333333333334,
+          "down": true,
+          "yellowPixels": 2125,
+          "key": "Space",
+          "action": "hit-1",
+          "logMs": 4723.142,
+          "residualMs": -0.7825333333330491,
+          "gameOutcome": "0"
+        },
+        {
+          "frame": 568,
+          "seconds": 9.466666666666667,
+          "down": true,
+          "yellowPixels": 2125,
+          "key": "Space",
+          "action": "hit-2",
+          "logMs": 5855.6928,
+          "residualMs": 0.0,
+          "gameOutcome": "1"
+        },
+        {
+          "frame": 664,
+          "seconds": 11.066666666666666,
+          "down": true,
+          "yellowPixels": 2125,
+          "key": "Space",
+          "action": "hit-3",
+          "logMs": 7457.7523,
+          "residualMs": -2.0595000000002983,
+          "gameOutcome": "1"
+        },
+        {
+          "frame": 765,
+          "seconds": 12.75,
+          "down": true,
+          "yellowPixels": 2125,
+          "key": "Space",
+          "action": "hit-4",
+          "logMs": 9138.0538,
+          "residualMs": 0.9723333333331539,
+          "gameOutcome": "0"
+        }
+      ]
+    },
+    {
+      "video": "ZZZ_2026-09-20_14-11-03.mp4",
+      "matchedLog": "20260920-141247-vesper-execute-02-2cf6f93f.json",
+      "logSha256": "ab9cc77673da0289deee435f80f71089142dcce5559e5af1211537d247d2e1d4",
+      "noticeFirstLowScoreSec": 6.133333333333334,
+      "noticeFirstThresholdSec": 6.25,
+      "estimatedLogOriginOnVideoSec": 6.266362783333334,
+      "originMinusFirstThresholdMs": 16.362783333334185,
+      "alignmentResidualMs": [
+        4.605549999998402,
+        1.8079833333331408,
+        -2.375483333335069,
+        -1.8079833333340503
+      ],
+      "maxAbsResidualMs": 4.605549999998402,
+      "events": [
+        {
+          "frame": 569,
+          "seconds": 9.483333333333333,
+          "down": true,
+          "yellowPixels": 279,
+          "key": "RMB",
+          "action": "entry",
+          "logMs": 3212.365,
+          "residualMs": 4.605549999998402,
+          "gameOutcome": "1"
+        },
+        {
+          "frame": 646,
+          "seconds": 10.766666666666667,
+          "down": true,
+          "yellowPixels": 2125,
+          "key": "Space",
+          "action": "hit-1",
+          "logMs": 4498.4959,
+          "residualMs": 1.8079833333331408,
+          "gameOutcome": "1"
+        },
+        {
+          "frame": 747,
+          "seconds": 12.45,
+          "down": true,
+          "yellowPixels": 2125,
+          "key": "Space",
+          "action": "hit-2",
+          "logMs": 6186.0127,
+          "residualMs": -2.375483333335069,
+          "gameOutcome": "0"
+        },
+        {
+          "frame": 945,
+          "seconds": 15.75,
+          "down": true,
+          "yellowPixels": 416,
+          "key": "Space",
+          "action": "hit-4",
+          "logMs": 9485.445199999998,
+          "residualMs": -1.8079833333340503,
+          "gameOutcome": "0"
+        }
+      ]
+    },
+    {
+      "video": "ZZZ_2026-09-20_14-13-39.mp4",
+      "matchedLog": null,
+      "reason": "No saved run overlaps recording wall time; do not assign nearest filename",
+      "edges": [
+        {
+          "frame": 679,
+          "seconds": 11.316666666666666,
+          "down": true,
+          "yellowPixels": 2125,
+          "key": "Space"
+        },
+        {
+          "frame": 775,
+          "seconds": 12.916666666666666,
+          "down": true,
+          "yellowPixels": 2125,
+          "key": "Space"
+        },
+        {
+          "frame": 865,
+          "seconds": 14.416666666666666,
+          "down": true,
+          "yellowPixels": 1183,
+          "key": "Space"
+        },
+        {
+          "frame": 965,
+          "seconds": 16.083333333333332,
+          "down": true,
+          "yellowPixels": 2125,
+          "key": "Space"
+        }
+      ]
+    },
+    {
+      "video": "ZZZ_2026-09-20_14-15-21.mp4",
+      "matchedLog": "20260920-141559-vesper-execute-02-72b31034.json",
+      "logSha256": "346ba0cd0e64edec45e2bedf9a1de56cc40dc60bab80a70fccddf104e15aa681",
+      "noticeFirstLowScoreSec": 11.1,
+      "noticeFirstThresholdSec": 11.233333333333333,
+      "estimatedLogOriginOnVideoSec": 11.240135,
+      "originMinusFirstThresholdMs": 6.801666666667927,
+      "alignmentResidualMs": [
+        -7.050900000000183,
+        4.907933333333858,
+        2.999466666668013,
+        -2.999466666668013
+      ],
+      "maxAbsResidualMs": 7.050900000000183,
+      "events": [
+        {
+          "frame": 930,
+          "seconds": 15.5,
+          "down": true,
+          "yellowPixels": 2125,
+          "key": "Space",
+          "action": "hit-1",
+          "logMs": 4266.9159,
+          "residualMs": -7.050900000000183,
+          "gameOutcome": "1"
+        },
+        {
+          "frame": 1019,
+          "seconds": 16.983333333333334,
+          "down": true,
+          "yellowPixels": 2125,
+          "key": "Space",
+          "action": "hit-2",
+          "logMs": 5738.2904,
+          "residualMs": 4.907933333333858,
+          "gameOutcome": "1"
+        },
+        {
+          "frame": 1120,
+          "seconds": 18.666666666666668,
+          "down": true,
+          "yellowPixels": 2125,
+          "key": "Space",
+          "action": "hit-3",
+          "logMs": 7423.5322,
+          "residualMs": 2.999466666668013,
+          "gameOutcome": "1"
+        },
+        {
+          "frame": 1223,
+          "seconds": 20.383333333333333,
+          "down": true,
+          "yellowPixels": 2125,
+          "key": "Space",
+          "action": "hit-4",
+          "logMs": 9146.1978,
+          "residualMs": -2.999466666668013,
+          "gameOutcome": "1"
+        }
+      ]
+    },
+    {
+      "video": "ZZZ_2026-09-20_14-17-41.mp4",
+      "matchedLog": "20260920-141824-vesper-execute-01-a625978d.json",
+      "logSha256": "b295f57e630dd71ec7bc473ff91f002eb38a06e09f8bcc16d11d99a38781419b",
+      "noticeFirstLowScoreSec": 12.883333333333333,
+      "noticeFirstThresholdSec": 12.983333333333333,
+      "estimatedLogOriginOnVideoSec": 12.9504473,
+      "originMinusFirstThresholdMs": -32.886033333332065,
+      "alignmentResidualMs": [
+        10.001433333332898,
+        -4.300400000000991,
+        3.9903333333322735,
+        -3.990333333335002,
+        8.757433333332301,
+        -4.822166666666817
+      ],
+      "maxAbsResidualMs": 10.001433333332898,
+      "events": [
+        {
+          "frame": 1028,
+          "seconds": 17.133333333333333,
+          "down": true,
+          "yellowPixels": 402,
+          "key": "RMB",
+          "action": "entry",
+          "logMs": 4172.884599999999,
+          "residualMs": 10.001433333332898,
+          "gameOutcome": "1"
+        },
+        {
+          "frame": 1152,
+          "seconds": 19.2,
+          "down": true,
+          "yellowPixels": 2124,
+          "key": "Space",
+          "action": "hit-1",
+          "logMs": 6253.8531,
+          "residualMs": -4.300400000000991,
+          "gameOutcome": "1"
+        },
+        {
+          "frame": 1241,
+          "seconds": 20.683333333333334,
+          "down": true,
+          "yellowPixels": 2125,
+          "key": "Space",
+          "action": "hit-2",
+          "logMs": 7728.895700000001,
+          "residualMs": 3.9903333333322735,
+          "gameOutcome": "1"
+        },
+        {
+          "frame": 1363,
+          "seconds": 22.716666666666665,
+          "down": true,
+          "yellowPixels": 2125,
+          "key": "Space",
+          "action": "hit-3",
+          "logMs": 9770.2097,
+          "residualMs": -3.990333333335002,
+          "gameOutcome": "1"
+        },
+        {
+          "frame": 1448,
+          "seconds": 24.133333333333333,
+          "down": true,
+          "yellowPixels": 2125,
+          "key": "Space",
+          "action": "hit-4",
+          "logMs": 11174.1286,
+          "residualMs": 8.757433333332301,
+          "gameOutcome": "1"
+        },
+        {
+          "frame": 1592,
+          "seconds": 26.533333333333335,
+          "down": true,
+          "yellowPixels": 2125,
+          "key": "Space",
+          "action": "hit-5",
+          "logMs": 13587.708200000001,
+          "residualMs": -4.822166666666817,
+          "gameOutcome": "1"
+        }
+      ]
+    }
+  ],
+  "obs": {
+    "source": "<PRIVATE_HOME>\\Documents\\Codex\\2026-09-14\\zzz-boss-pattern-feasibility\\outputs\\녹화환경\\OBS\\config\\obs-studio\\logs\\2026-09-20 14-05-39.txt",
+    "records": [
+      {
+        "start": "14:07:10.303",
+        "startLine": 772,
+        "renderLagCount": 3,
+        "pauseEvents": [],
+        "file": "ZZZ_2026-09-20_14-07-09.mp4",
+        "framesOutput": 2113,
+        "drawnFrames": "2119 (2122 attempted)",
+        "renderLagPercent": 0.1,
+        "renderLagLine": 1565,
+        "stop": "14:07:45.668",
+        "stopLine": 1567
+      },
+      {
+        "start": "14:09:52.294",
+        "startLine": 3008,
+        "renderLagCount": 0,
+        "pauseEvents": [],
+        "file": "ZZZ_2026-09-20_14-09-51.mp4",
+        "framesOutput": 1305,
+        "drawnFrames": "1314",
+        "stop": "14:10:14.205",
+        "stopLine": 3106
+      },
+      {
+        "start": "14:11:03.454",
+        "startLine": 3339,
+        "renderLagCount": 16,
+        "pauseEvents": [],
+        "file": "ZZZ_2026-09-20_14-11-03.mp4",
+        "framesOutput": 1723,
+        "drawnFrames": "1719 (1735 attempted)",
+        "renderLagPercent": 0.9,
+        "renderLagLine": 3468,
+        "stop": "14:11:32.406",
+        "stopLine": 3471
+      },
+      {
+        "start": "14:13:39.989",
+        "startLine": 3847,
+        "renderLagCount": 1,
+        "pauseEvents": [],
+        "file": "ZZZ_2026-09-20_14-13-39.mp4",
+        "framesOutput": 1413,
+        "drawnFrames": "1422 (1423 attempted)",
+        "renderLagPercent": 0.1,
+        "renderLagLine": 4008,
+        "stop": "14:14:03.699",
+        "stopLine": 4010
+      },
+      {
+        "start": "14:15:22.328",
+        "startLine": 4227,
+        "renderLagCount": 3,
+        "pauseEvents": [],
+        "file": "ZZZ_2026-09-20_14-15-21.mp4",
+        "framesOutput": 1766,
+        "drawnFrames": "1773 (1776 attempted)",
+        "renderLagPercent": 0.2,
+        "renderLagLine": 4324,
+        "stop": "14:15:51.933",
+        "stopLine": 4326
+      },
+      {
+        "start": "14:17:41.372",
+        "startLine": 5031,
+        "renderLagCount": 2,
+        "pauseEvents": [],
+        "file": "ZZZ_2026-09-20_14-17-41.mp4",
+        "framesOutput": 2081,
+        "drawnFrames": "2088 (2090 attempted)",
+        "renderLagPercent": 0.1,
+        "renderLagLine": 5144,
+        "stop": "14:18:16.201",
+        "stopLine": 5146
+      }
+    ],
+    "pauseWordCount": 0,
+    "encodingLagLineCount": 0,
+    "notes": [
+      "OBS session starts 14:05:39; previous session ended06:35:51.056",
+      "14:13:39 clip ends14:14:03.699, before saved trial a56ea40e starts14:14:26.051; no corresponding saved log",
+      "No pause/resume or encoding-lag/skipped-frame messages in session; rendering lag is separate and listed per clip",
+      "Do not use file save timestamp as execution timestamp"
+    ]
+  },
+  "hashes": {
+    "20260920-140228-vesper-execute-02-fe66957a.json": "5bfa97e27443fc357a545f205ffbe64177b62b02e01ed4aa6d3c623f607ec521",
+    "20260920-140459-vesper-execute-01-97068741.json": "4dd1e220558bffc82eefed0f2131677cefc972921f590a8237b52b377bb3368a",
+    "20260920-140636-vesper-execute-02-702c63fa.json": "bb59df35bc2428bc0b6dadbf63decb04fac6bbda73a7e27200cce77b1933ed99",
+    "20260920-140758-vesper-execute-02-2f196c7a.json": "e8038cca3f9eceab19590c6b37b4c11227da2dc43681cc51de99113aefe91556",
+    "20260920-141040-vesper-execute-02-7a14a8bb.json": "11454fddedd764c93cdc31f48fa84b6727e70525a06d306c5fd92417ac7f2ace",
+    "20260920-141247-vesper-execute-02-2cf6f93f.json": "ab9cc77673da0289deee435f80f71089142dcce5559e5af1211537d247d2e1d4",
+    "20260920-141504-vesper-execute-02-a56ea40e.json": "10c6e8e99a603773e4689a9971098099cc1924b80b1a06477c3bc900ae756da0",
+    "20260920-141559-vesper-execute-02-72b31034.json": "346ba0cd0e64edec45e2bedf9a1de56cc40dc60bab80a70fccddf104e15aa681",
+    "20260920-141824-vesper-execute-01-a625978d.json": "b295f57e630dd71ec7bc473ff91f002eb38a06e09f8bcc16d11d99a38781419b",
+    "ZZZ_2026-09-20_14-07-09.mp4": "b4f2022e23ddf49b4504c33054136dfb9d03aa41d46e5b9f3a8dae9bb8dfe641",
+    "ZZZ_2026-09-20_14-09-51.mp4": "b7fe2299f40a1cd6487ecc20224742650b1a70439c3fb3478ecb8ab710d09ce8",
+    "ZZZ_2026-09-20_14-11-03.mp4": "6733bdbeeaaa382940758d3df53457de2d5028549a93fe00c9f975c56db61f9f",
+    "ZZZ_2026-09-20_14-13-39.mp4": "d9745eb693ebf49ed383ecd65d60847ec316e6ab4caa7f7d4ab55df818b5b5a0",
+    "ZZZ_2026-09-20_14-15-21.mp4": "215fdf9426682c5f4b8f05ef9e4be1af617aad42983e537ef2357e55e1c57993",
+    "ZZZ_2026-09-20_14-17-41.mp4": "8677f904c869d6e87444293255087ce3ce36cf242c6b3d95a6b08050ae8a8835"
+  },
+  "limitations": [
+    "OBS contains game capture and input overlay, not the native guide overlay.",
+    "Video-key markers align relative timing; they do not measure physical key or game receipt time.",
+    "First two runs use a 1280x720 client; remaining seven use 1920x1080. Window mode is not recorded.",
+    "One ON first-failure does not by itself change OFF-derived conservative windows.",
+    "No automatic-input/website values, profiles, raw logs or videos were changed."
+  ],
+  "retention": {
+    "date": "2026-09-21",
+    "status": "summarized originals retired after user-approved closure",
+    "inventory": "experiment-cleanup.json#current",
+    "meaning": "Historical raw log, source video and scratch paths describe provenance; only current.retainedOriginals are promised to remain. Conditions, outcomes, counterexamples and measurement limits stay in this evidence."
+  }
+}

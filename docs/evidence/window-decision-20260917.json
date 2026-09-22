@@ -1,0 +1,464 @@
+{
+  "method": "R2 clip seconds; union envelope across ready2/ready3 alignment, not confidence/engine boundary. N2 anchor inconsistency retained.",
+  "rows": [
+    {
+      "id": "R1",
+      "outcome": "success",
+      "clip": [
+        6.133333333333334,
+        6.183333333333334
+      ]
+    },
+    {
+      "id": "R2",
+      "outcome": "success",
+      "clip": [
+        6.216666666666667,
+        6.233333333333333
+      ]
+    },
+    {
+      "id": "N1",
+      "outcome": "success",
+      "input": [
+        781,
+        782
+      ],
+      "offset2": [
+        75,
+        77
+      ],
+      "offset3": [
+        76,
+        78
+      ],
+      "clip2": [
+        6.233333333333333,
+        6.283333333333333
+      ],
+      "clip3": [
+        6.216666666666667,
+        6.266666666666667
+      ],
+      "clip": [
+        6.216666666666667,
+        6.283333333333333
+      ],
+      "ready3_ms": [
+        250,
+        283.3333333333333
+      ],
+      "offsets_overlap": true
+    },
+    {
+      "id": "N2",
+      "outcome": "failure",
+      "input": [
+        770,
+        771
+      ],
+      "offset2": [
+        45,
+        47
+      ],
+      "offset3": [
+        48,
+        50
+      ],
+      "clip2": [
+        6.55,
+        6.6
+      ],
+      "clip3": [
+        6.5,
+        6.55
+      ],
+      "clip": [
+        6.5,
+        6.6
+      ],
+      "ready3_ms": [
+        533.3333333333334,
+        566.6666666666666
+      ],
+      "offsets_overlap": false
+    },
+    {
+      "id": "N3",
+      "outcome": "success",
+      "input": [
+        825,
+        826
+      ],
+      "offset2": [
+        133,
+        135
+      ],
+      "offset3": [
+        132,
+        134
+      ],
+      "clip2": [
+        6,
+        6.05
+      ],
+      "clip3": [
+        6.016666666666667,
+        6.066666666666666
+      ],
+      "clip": [
+        6,
+        6.066666666666666
+      ],
+      "ready3_ms": [
+        50,
+        83.33333333333333
+      ],
+      "offsets_overlap": true
+    },
+    {
+      "id": "N4",
+      "outcome": "failure",
+      "input": [
+        666,
+        667
+      ],
+      "offset2": [
+        -56,
+        -54
+      ],
+      "offset3": [
+        -57,
+        -55
+      ],
+      "clip2": [
+        6.5,
+        6.55
+      ],
+      "clip3": [
+        6.516666666666667,
+        6.566666666666666
+      ],
+      "clip": [
+        6.5,
+        6.566666666666666
+      ],
+      "ready3_ms": [
+        550,
+        583.3333333333334
+      ],
+      "offsets_overlap": true
+    }
+  ],
+  "current": [
+    5.949166666666668,
+    6.5792124542124535
+  ],
+  "observational_separation_only": {
+    "inclusive_min_end": 6.283333333333333,
+    "exclusive_max_end": 6.5,
+    "width_ms": [
+      334.1666666666656,
+      550.8333333333323
+    ],
+    "removed_tail_ms": [
+      79.21245421245348,
+      295.87912087912025
+    ],
+    "unobserved_gap_ms": 216.6666666666668
+  },
+  "mean_width_candidate_end": 6.600290623728124,
+  "mean_end_extension_ms": 21.078169515670098,
+  "N4_inside_margin_ms": [
+    12.545787545787057,
+    79.21245421245348
+  ],
+  "reviewed_on": "2026-09-17",
+  "scope": "Analysis only: existing annotations, selected preserved video frames and public primary sources. No product code changes, game execution, new input experiment, or live capture validation.",
+  "provenance": {
+    "repository": "<PRIVATE_HOME>/Documents/Codex/2026-09-14/zzz-pattern-practice",
+    "head": "805fd86",
+    "preexisting_modified_files": [
+      "AGENTS.md",
+      "README.md",
+      "docs/research.md"
+    ],
+    "primary_inputs": [
+      "docs/evidence/baseline-20260917.json",
+      "docs/evidence/repeat-270-20260917.json",
+      "tools/research/timing/window_observations.json",
+      "docs/evidence/comparison-270-20260917.json",
+      "docs/evidence/control-0-20260917.json"
+    ],
+    "reproduction": "Map overlay bracket [i0,i1] by ready-event offset [s0-r1,s1-r0]; mapped clip=[(i0-offsetHigh-330)/60,(i1-offsetLow-330)/60]. Union ready2/ready3 results as sensitivity, not probability.",
+    "input_sha256": {
+      "docs/evidence/baseline-20260917.json": "9e0d42e9faa09d2a65f21b4a33bd57fa8ab50643e001c4cb6df9abbc9408d3bf",
+      "docs/evidence/repeat-270-20260917.json": "0a2380ead8ee924cb13c0b2b335c538867803395c2106b2eb7a3650cbf83ec3d",
+      "tools/research/timing/window_observations.json": "1cf0c0dc063e360bd3d577927b0e84c4e3aa0c4b0677c1a29ada68ba68b114d9",
+      "docs/evidence/comparison-270-20260917.json": "625b1beeee7a4b4cabea41f6fa4fc2816fbb494b73fbe75113edfbc391bcd7cf",
+      "docs/evidence/control-0-20260917.json": "f4e9c3958510ea5aa2983e35d1f2adff9940978f8acebf7b95c49ceec1085c73"
+    },
+    "clip_extraction": {
+      "tool": "Existing imageio bundled FFmpeg7.1; Pillow",
+      "filter": "trim=start_frame={originalStart-manifestOffset}:end_frame={originalStop-manifestOffset}; -vsync 0 -f rawvideo -pix_fmt rgb24",
+      "no_rescale_before_classification": true,
+      "resolution": [
+        1280,
+        720
+      ],
+      "roi": [
+        1158,
+        621,
+        1214,
+        670
+      ],
+      "yellow_candidate_only": "R>180 G>155 B<110 G-B>65; ratio crosses0.30; transitions manually checked",
+      "sources": [
+        {
+          "id": "T1",
+          "source": "<PRIVATE_HOME>\\Documents\\Codex\\2026-09-14\\zzz-boss-pattern-feasibility\\outputs\\보존영상\\T1_ZZZ_2026-09-15_02-01-07_clip.mp4",
+          "sha256": "8b6db70c5fe0531265b5087d7b5f3164951ae23a45312010cc2ce24fb41e743d",
+          "original_frame_range": [
+            257,
+            518
+          ],
+          "yellow_transition_candidates": [
+            342,
+            438
+          ]
+        },
+        {
+          "id": "T3",
+          "source": "<PRIVATE_HOME>\\Documents\\Codex\\2026-09-14\\zzz-boss-pattern-feasibility\\outputs\\보존영상\\T3_ZZZ_2026-09-15_02-03-03_clip.mp4",
+          "sha256": "fd110792f53ccdc4e0b5b77af15ca566209d5b18d28f8afc496274c5e6b178b5",
+          "original_frame_range": [
+            288,
+            553
+          ],
+          "yellow_transition_candidates": [
+            363,
+            459
+          ]
+        },
+        {
+          "id": "T4",
+          "source": "<PRIVATE_HOME>\\Documents\\Codex\\2026-09-14\\zzz-boss-pattern-feasibility\\outputs\\보존영상\\T4_ZZZ_2026-09-15_02-04-00_clip.mp4",
+          "sha256": "5d469d9bf0911521dc77deb3e035266e7338392298670a2efed8ff1b73fd45a9",
+          "original_frame_range": [
+            292,
+            575
+          ],
+          "yellow_transition_candidates": [
+            362,
+            461,
+            516
+          ]
+        },
+        {
+          "id": "C",
+          "source": "<PRIVATE_HOME>\\Documents\\Codex\\2026-09-14\\zzz-boss-pattern-feasibility\\outputs\\보존영상\\C_ZZZ_2026-09-15_00-36-38_clip.mp4",
+          "sha256": "6a943591607b76cb5da4366b8681eeac4bcec5c56cdb478253a8424a935dd43a",
+          "original_frame_range": [
+            716,
+            1007
+          ],
+          "yellow_transition_candidates": [
+            790,
+            888,
+            946
+          ]
+        }
+      ]
+    }
+  },
+  "supplemental_review": [
+    {
+      "id": "T1",
+      "ready2": [
+        341,
+        342
+      ],
+      "ready3": [
+        437,
+        438
+      ],
+      "input3": [
+        432,
+        433
+      ],
+      "release3_first_unfilled": 440,
+      "outcome": "success",
+      "score_before": 1878,
+      "score_after": 2753,
+      "score_after_frame": 517,
+      "interpretation": "Ready3 transition occurs AFTER target input onset and before release. Not an independent pre-input alignment anchor. Supports display/physical-gate distinction; does not prove buffering or physical early acceptance.",
+      "pool_with_primary": false,
+      "visual_evidence": "window-decision-t1-20260917.jpg"
+    },
+    {
+      "id": "T3",
+      "ready2": [
+        362,
+        363
+      ],
+      "ready3": [
+        458,
+        459
+      ],
+      "input3": [
+        467,
+        468
+      ],
+      "outcome": "success",
+      "score_before": 1796,
+      "score_after": 2671,
+      "score_after_frame": 533,
+      "interpretation": "Earlier than current latest success; does not fill late-success gap. Prior entry success is historical annotation, not re-reviewed here. Different on-field agent from N4; kept as a separate-condition success reference, not pooled.",
+      "pool_with_primary": false,
+      "conditional_clip_range": [
+        6.066666666666666,
+        6.15
+      ],
+      "ready3_to_input_ms": [
+        133.33333333333334,
+        166.66666666666666
+      ],
+      "visual_evidence": "window-decision-t3-20260917.jpg"
+    },
+    {
+      "id": "T4",
+      "ready2": [
+        361,
+        362
+      ],
+      "ready3": [
+        460,
+        461
+      ],
+      "input2": [
+        356,
+        357
+      ],
+      "input3": [
+        489,
+        490
+      ],
+      "outcome": "failure",
+      "score_before": 1750,
+      "score_after": 1750,
+      "score_after_frame": 555,
+      "interpretation": "Ready2 after second input, Ready3 before third input. Earlier late-failure candidate than N4; prior entry not re-reviewed, different on-field agent before third attack. Keep separate rather than treating as identical-condition boundary.",
+      "pool_with_primary": false,
+      "conditional_clip_range": [
+        6.433333333333334,
+        6.5
+      ],
+      "ready3_to_input_ms": [
+        466.6666666666667,
+        500
+      ],
+      "visual_evidence": "window-decision-t4-20260917.jpg"
+    },
+    {
+      "id": "C",
+      "ready2": [
+        789,
+        790
+      ],
+      "ready3": [
+        887,
+        888
+      ],
+      "input3": [
+        921,
+        922
+      ],
+      "outcome": "failure",
+      "score_before": 1750,
+      "score_after": 1750,
+      "score_after_frame": 987,
+      "hp_before": 12608,
+      "hp_after": 12062,
+      "interpretation": "Original annotation records Entry hit; pre-existing injury also visible. Not pooled with successful-entry reference.",
+      "pool_with_primary": false,
+      "conditional_clip_range": [
+        6.516666666666667,
+        6.566666666666666
+      ],
+      "ready3_to_input_ms": [
+        550,
+        583.3333333333334
+      ],
+      "visual_evidence": "window-decision-c-20260917.jpg"
+    }
+  ],
+  "decision": {
+    "adopt_new_numeric_window": false,
+    "mean_width": "Does not resolve late-input false-positive concern; extends third late edge by21.078ms.",
+    "right_edge": "Priority comparison target. An exact physical cutoff is not established, but a conservative service cutoff may be chosen from existing evidence and product goals; no numeric change made in this correction.",
+    "keep_current": "Temporary unchanged implementation, not validation of current window.",
+    "next_evidence_question": "First choose a useful practice position and width from existing success/failure observations, cues and rhythm. Seek additional evidence only for a concrete unresolved problem whose outcome would materially change that product choice. Recovering every valid edge input is not required.",
+    "product_policy": "2026-09-17 user correction: a conservative practice window may exclude some valid game edge inputs. Exact boundary uncertainty alone does not block a product decision. Apply the same evidence standard to keeping and changing the current window.",
+    "no_default_experiment": "No 400ms target, specific new shift, fixed trial count, or live-detection method adopted.",
+    "limitations": [
+      "Selected frames not full independent re-review of all attempts.",
+      "No calibrated overlay/game display latency or verified equal local timescale.",
+      "Observed success preservation does not quantify loss of unobserved valid inputs.",
+      "No continuous success interval or monotone physical boundary established.",
+      "Older clips have condition/character/hold differences; do not silently pool."
+    ]
+  },
+  "external_sources": [
+    {
+      "url": "https://github.com/v-immanuel/BossTrainer/tree/8e1be2f859d24fc04d0ef185af396d5e2e726aa6",
+      "kind": "direct analogous implementation",
+      "verified": "README plus src/main.py and worker.py via GitHub connector; keypress uses player.position; fixed50/100/150ms grades; no game-window derivation; not run."
+    },
+    {
+      "url": "https://github.com/susy-bakaa/ffxiv-raid-sim",
+      "kind": "adjacent isolated-mechanic practice",
+      "verified": "Creator README/API; not run."
+    },
+    {
+      "url": "https://github.com/nikhil-RGB/One-Mind-Trainer",
+      "kind": "in-game single-pattern repetition mod",
+      "verified": "Creator repository description; not installed; not proposed for project."
+    },
+    {
+      "url": "https://www.nexusmods.com/clairobscurexpedition33/mods/636",
+      "kind": "in-game learning/QTE mod",
+      "verified": "Creator description only; beta; not installed."
+    },
+    {
+      "url": "https://www.reddit.com/r/ZenlessZoneZero/comments/1r1hgbu/26_boss_control_skill_phase_tutorial/",
+      "kind": "control-skill author tutorial",
+      "verified": "Text read; readiness cue advice and second-pattern final-hit exception; no measured window."
+    },
+    {
+      "url": "https://www.reddit.com/r/ZenlessZoneZero/comments/1hk2yrt/how_to_swap_cancel_without_getting_hit_in_battle/",
+      "kind": "author observation of swap vulnerability",
+      "verified": "Text read; general combat; video not independently measured; not control-skill boundary."
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1JtftYvEVP/",
+      "kind": "author description of safe/unsafe swap tests",
+      "verified": "Researcher read indexed creator description; parent fetch412; success/failure evidence asymmetry; full source and video not remeasured."
+    },
+    {
+      "url": "https://www.reddit.com/r/ZenlessZoneZero/comments/1e2ba85/bug_or_intended_2x_daze_technique_i_came_up_with/",
+      "kind": "multi-input tech discussion",
+      "verified": "Researcher read full thread;3frames/0.05s is commenter approximation, not measured parry acceptance window."
+    }
+  ],
+  "independent_review": {
+    "primary": "Independent agent checked source JSON, arithmetic, conditional separation and missing T1/C limitations.",
+    "supplemental": "Independent agent viewed four generated montage images and checked frame brackets, score changes and mapping. Did not independently decode full videos or check source hashes.",
+    "scope": "Not independent full-video or live-game validation."
+  },
+  "visual_sha256": {
+    "window-decision-t1-20260917.jpg": "590e42d26faa1eb9b8f09731e9bbf46e1231e0b610dbbc596dbfcb67fad319de",
+    "window-decision-t3-20260917.jpg": "53830ca3789f37f10972df1374de732ac2dee50ff32353148eb39cc680600de5",
+    "window-decision-t4-20260917.jpg": "bd16b39a092b4dcb83d4e3e474ea6ca801f54bb3a0087fbe5ea51f37d583f973",
+    "window-decision-c-20260917.jpg": "d7388fb55fe0e8d138c3d08ad10a66d0cc0aac7af36ac3a3715f2f0cfe181798"
+  }
+}

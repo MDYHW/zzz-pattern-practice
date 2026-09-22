@@ -1,0 +1,2356 @@
+{
+  "date": "2026-09-20",
+  "video": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_19-10-45.mp4",
+  "videoSha256": "ca6d618b89d2195b8af4388c1b7486771edd33179bb393f07f75d84aa19f9021",
+  "nativeLog": "<PRIVATE_HOME>\\Documents\\Codex\\입력 레인 검증\\results\\20260920-180328-vesper-execute-01-948f9e3a.json",
+  "nativeLogSha256": "c1b2ba2efe77560feb1eb20f27af66c1ed24ae143b9acab92505958fc3d1cebd",
+  "version": "Current Vite served vesper-patterns.ts read at127.0.0.1:5187; media pixels match current 1008-frame EX01 clip. Previous old-version explanation does not explain this recording.",
+  "reportedInputPrecisionMs": 5,
+  "comparison": [
+    {
+      "action": "entry",
+      "webReportedClipSeconds": 4.49,
+      "webInNativeOriginMsApprox": 4306.666666666667,
+      "nativeInputMs": 4036.3363999999983,
+      "differenceMsApprox": 270.33026666666865,
+      "nativePositionPercent": -31.83180000000084,
+      "webPositionPercentApprox": 103.33333333333348
+    },
+    {
+      "action": "hit-1",
+      "webReportedClipSeconds": 6.79,
+      "webInNativeOriginMsApprox": 6606.666666666667,
+      "nativeInputMs": 6232.177099999999,
+      "differenceMsApprox": 374.489566666668,
+      "nativePositionPercent": -5.092257142857436,
+      "webPositionPercentApprox": 101.904761904762
+    },
+    {
+      "action": "hit-2",
+      "webReportedClipSeconds": 8.06,
+      "webInNativeOriginMsApprox": 7876.666666666668,
+      "nativeInputMs": 7601.3902,
+      "differenceMsApprox": 275.27646666666806,
+      "nativePositionPercent": 22.531155555555515,
+      "webPositionPercentApprox": 83.70370370370398
+    },
+    {
+      "action": "hit-3",
+      "webReportedClipSeconds": 10.01,
+      "webInNativeOriginMsApprox": 9826.666666666666,
+      "nativeInputMs": 9548.5224,
+      "differenceMsApprox": 278.1442666666662,
+      "nativePositionPercent": 49.63059999999996,
+      "webPositionPercentApprox": 119.16666666666652
+    },
+    {
+      "action": "hit-4",
+      "webReportedClipSeconds": 11.35,
+      "webInNativeOriginMsApprox": 11166.666666666666,
+      "nativeInputMs": 10881.660299999998,
+      "differenceMsApprox": 285.0063666666683,
+      "nativePositionPercent": 46.332059999999544,
+      "webPositionPercentApprox": 103.33333333333321
+    },
+    {
+      "action": "hit-5",
+      "webReportedClipSeconds": 13.66,
+      "webInNativeOriginMsApprox": 13476.666666666666,
+      "nativeInputMs": 13226.3912,
+      "differenceMsApprox": 250.27546666666603,
+      "nativePositionPercent": 55.278240000000004,
+      "webPositionPercentApprox": 105.33333333333321
+    }
+  ],
+  "excludingFirstSupportDifferenceMs": {
+    "min": 250.27546666666603,
+    "median": 275.27646666666806,
+    "max": 285.0063666666683
+  },
+  "pixelComparison": {
+    "asset": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\public\\media\\vesper-execute-01.mp4",
+    "sha256": "ee3151f6af2f44b4a032fae9cd8ea409185a0b37a5ef71778533398f4173223b",
+    "frames": 1008,
+    "measurements": [
+      {
+        "recordingSec": 4,
+        "matchedFrame": 105,
+        "clipSec": 1.75,
+        "mae": 2.5122916666666666,
+        "nearFrames": [
+          104,
+          105
+        ],
+        "tiles": []
+      },
+      {
+        "recordingSec": 5,
+        "matchedFrame": 159,
+        "clipSec": 2.65,
+        "mae": 2.4093518518518517,
+        "nearFrames": [
+          159
+        ],
+        "tiles": [
+          {
+            "action": 0,
+            "left": 874,
+            "right": 928,
+            "laneTimeSec": 2.578592927012792,
+            "leadMs": -71.40707298720805,
+            "candidateLeadRangeMs": [
+              -71.40707298720805,
+              -71.40707298720805
+            ]
+          }
+        ]
+      },
+      {
+        "recordingSec": 6,
+        "matchedFrame": 226,
+        "clipSec": 3.7666666666666666,
+        "mae": 2.856759259259259,
+        "nearFrames": [
+          225,
+          226,
+          227
+        ],
+        "tiles": [
+          {
+            "action": 0,
+            "left": 542,
+            "right": 595,
+            "laneTimeSec": 3.7044394281414603,
+            "leadMs": -62.22723852520629,
+            "candidateLeadRangeMs": [
+              -78.89390519187289,
+              -45.560571858539674
+            ]
+          }
+        ]
+      },
+      {
+        "recordingSec": 7,
+        "matchedFrame": 287,
+        "clipSec": 4.783333333333333,
+        "mae": 3.0732175925925924,
+        "nearFrames": [
+          286,
+          287,
+          288,
+          289,
+          290,
+          291,
+          292,
+          293,
+          294,
+          295,
+          296,
+          297,
+          298,
+          299,
+          300
+        ],
+        "tiles": [
+          {
+            "action": 1,
+            "left": 876,
+            "right": 977,
+            "laneTimeSec": 4.717249811888638,
+            "leadMs": -66.08352144469532,
+            "candidateLeadRangeMs": [
+              -282.7501881113621,
+              -49.41685477802871
+            ]
+          }
+        ]
+      },
+      {
+        "recordingSec": 8,
+        "matchedFrame": 345,
+        "clipSec": 5.75,
+        "mae": 3.2621296296296296,
+        "nearFrames": [
+          344,
+          345,
+          346
+        ],
+        "tiles": [
+          {
+            "action": 1,
+            "left": 591,
+            "right": 692,
+            "laneTimeSec": 5.682261098570354,
+            "leadMs": -67.73890142964589,
+            "candidateLeadRangeMs": [
+              -84.40556809631249,
+              -51.072234762979285
+            ]
+          }
+        ]
+      },
+      {
+        "recordingSec": 9,
+        "matchedFrame": 407,
+        "clipSec": 6.783333333333333,
+        "mae": 3.420462962962963,
+        "nearFrames": [
+          406,
+          407,
+          408
+        ],
+        "tiles": [
+          {
+            "action": 1,
+            "left": 284,
+            "right": 382,
+            "laneTimeSec": 6.7268434913468775,
+            "leadMs": -56.48984198645568,
+            "candidateLeadRangeMs": [
+              -73.15650865312229,
+              -39.82317531978907
+            ]
+          },
+          {
+            "action": 2,
+            "left": 650,
+            "right": 784,
+            "laneTimeSec": 6.726617757712566,
+            "leadMs": -56.71557562076757,
+            "candidateLeadRangeMs": [
+              -73.38224228743417,
+              -40.04890895410096
+            ]
+          }
+        ]
+      },
+      {
+        "recordingSec": 10,
+        "matchedFrame": 465,
+        "clipSec": 7.75,
+        "mae": 3.1636574074074075,
+        "nearFrames": [
+          465,
+          466
+        ],
+        "tiles": [
+          {
+            "action": 2,
+            "left": 366,
+            "right": 492,
+            "laneTimeSec": 7.701787057938299,
+            "leadMs": -48.212942061701014,
+            "candidateLeadRangeMs": [
+              -64.87960872836763,
+              -48.212942061701014
+            ]
+          },
+          {
+            "action": 3,
+            "left": 911,
+            "right": 1023,
+            "laneTimeSec": 7.7051166290443955,
+            "leadMs": -44.88337095560446,
+            "candidateLeadRangeMs": [
+              -61.55003762227107,
+              -44.88337095560446
+            ]
+          }
+        ]
+      },
+      {
+        "recordingSec": 11,
+        "matchedFrame": 525,
+        "clipSec": 8.75,
+        "mae": 3.1977314814814815,
+        "nearFrames": [
+          524,
+          525,
+          526,
+          527
+        ],
+        "tiles": [
+          {
+            "action": 3,
+            "left": 612,
+            "right": 732,
+            "laneTimeSec": 8.703987960872837,
+            "leadMs": -46.01203912716301,
+            "candidateLeadRangeMs": [
+              -79.34537246049622,
+              -29.34537246049551
+            ]
+          }
+        ]
+      },
+      {
+        "recordingSec": 12,
+        "matchedFrame": 586,
+        "clipSec": 9.766666666666667,
+        "mae": 2.832314814814815,
+        "nearFrames": [
+          586
+        ],
+        "tiles": [
+          {
+            "action": 3,
+            "left": 320,
+            "right": 432,
+            "laneTimeSec": 9.706245297215952,
+            "leadMs": -60.42136945071519,
+            "candidateLeadRangeMs": [
+              -60.42136945071519,
+              -60.42136945071519
+            ]
+          },
+          {
+            "action": 4,
+            "left": 703,
+            "right": 848,
+            "laneTimeSec": 9.703536493604215,
+            "leadMs": -63.1301730624525,
+            "candidateLeadRangeMs": [
+              -63.1301730624525,
+              -63.1301730624525
+            ]
+          }
+        ]
+      },
+      {
+        "recordingSec": 13,
+        "matchedFrame": 644,
+        "clipSec": 10.733333333333333,
+        "mae": 3.0525925925925925,
+        "nearFrames": [
+          644,
+          645
+        ],
+        "tiles": [
+          {
+            "action": 4,
+            "left": 419,
+            "right": 561,
+            "laneTimeSec": 10.670240782543265,
+            "leadMs": -63.09255079006704,
+            "candidateLeadRangeMs": [
+              -79.75921745673453,
+              -63.09255079006704
+            ]
+          }
+        ]
+      },
+      {
+        "recordingSec": 14,
+        "matchedFrame": 705,
+        "clipSec": 11.75,
+        "mae": 2.6211342592592595,
+        "nearFrames": [
+          705
+        ],
+        "tiles": [
+          {
+            "action": 5,
+            "left": 794,
+            "right": 940,
+            "laneTimeSec": 11.693717080511663,
+            "leadMs": -56.28291948833741,
+            "candidateLeadRangeMs": [
+              -56.28291948833741,
+              -56.28291948833741
+            ]
+          }
+        ]
+      },
+      {
+        "recordingSec": 15,
+        "matchedFrame": 767,
+        "clipSec": 12.783333333333333,
+        "mae": 2.992777777777778,
+        "nearFrames": [
+          766,
+          767,
+          768
+        ],
+        "tiles": [
+          {
+            "action": 5,
+            "left": 494,
+            "right": 639,
+            "laneTimeSec": 12.711211437170805,
+            "leadMs": -72.12189616252829,
+            "candidateLeadRangeMs": [
+              -88.78856282919578,
+              -55.45522949586257
+            ]
+          }
+        ]
+      },
+      {
+        "recordingSec": 16,
+        "matchedFrame": 826,
+        "clipSec": 13.766666666666667,
+        "mae": 3.0526157407407406,
+        "nearFrames": [
+          825,
+          826
+        ],
+        "tiles": []
+      },
+      {
+        "recordingSec": 17,
+        "matchedFrame": 887,
+        "clipSec": 14.783333333333333,
+        "mae": 3.7622916666666666,
+        "nearFrames": [
+          887,
+          888,
+          889
+        ],
+        "tiles": []
+      }
+    ]
+  },
+  "poseComparison": {
+    "anchor": "First yellow notice Dice>=0.68 at reference clip frame13 and live frame996. This is a repeatable compressed-video criterion, not exact live detector origin.",
+    "referenceNoticeSeconds": 0.21666666666666667,
+    "liveNoticeSeconds": 16.6,
+    "observation": "Reference boss weapon pose progresses later at first/third support. About0.2s displacement supported by coarse200ms and follow-up100ms contact sheets. First-support difference may be nearer200-300ms; exact alignment not fitted.",
+    "independentReadOnlyReview": "Second reviewer agreed on first/third weapon direction, rejected fourth-hit slash effects and fifth-hit sustained posture as decisive evidence.",
+    "followupSheets": [
+      "pose-first-200ms.jpg",
+      "pose-third-200ms.jpg"
+    ],
+    "scope": "Not proof of equal offset at every hit, or of capture method/hitstop/game settings as cause."
+  },
+  "conclusion": "Latest web still produces systematically later recorded inputs for user-reported similar rhythm. Evidence points toward mapping experimental times onto representative clip game cues; no +100ms renderer lead in sampled actual Chrome screenshots. A roughly+200ms EX01 video-alignment comparison is a candidate, not an applied correction or confirmed exact constant.",
+  "unchanged": [
+    "game success windows",
+    "native profiles",
+    "web alignment",
+    "server process"
+  ],
+  "artifactRoot": "<PRIVATE_HOME>\\Documents\\Codex\\lane-capture-analysis-20260920\\latest-web",
+  "replacementCandidateReview": {
+    "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_18-02-44.mp4",
+    "sourceSha256": "bd5fbd768dcc791b99146c4ac84731fd8317a137507804b284bf5bd8efb1dd9b",
+    "gameOutcome": "111111",
+    "laneOutcome": "001111",
+    "clip": "<PRIVATE_HOME>\\Documents\\Codex\\lane-capture-analysis-20260920\\replacement-review\\vesper-ex01-comparison-only.mp4",
+    "clipSha256": "94c94befa0f7db8519106c196bff2b4f31df53cd15084c3c8911c02beac40eb5",
+    "firstSourceFrame": 978,
+    "endSourceFrameExclusive": 1938,
+    "fps": 60,
+    "crop": [
+      0,
+      0,
+      1280,
+      612
+    ],
+    "padding": [
+      0,
+      54,
+      0,
+      54
+    ],
+    "noticeAtClipSec": 0.3000000000000007,
+    "estimatedLaneOriginAtClipSec": 0.3152243589743584,
+    "alignmentScope": "Existing lane-pixel regression, not physical input or exact game origin; uncertainty retained from source evidence.",
+    "actions": [
+      {
+        "index": 0,
+        "actualHookMs": 4036.3363999999983,
+        "windowMs": [
+          4100,
+          4300
+        ],
+        "baselineMs": 4200,
+        "inputInsideWindow": false,
+        "baselineMinusActualMs": 163.66360000000168,
+        "approximateClipInputSec": 4.351560758974356
+      },
+      {
+        "index": 1,
+        "actualHookMs": 6232.177099999999,
+        "windowMs": [
+          6250,
+          6600
+        ],
+        "baselineMs": 6400,
+        "inputInsideWindow": false,
+        "baselineMinusActualMs": 167.82290000000103,
+        "approximateClipInputSec": 6.547401458974357
+      },
+      {
+        "index": 2,
+        "actualHookMs": 7601.3902,
+        "windowMs": [
+          7500,
+          7950
+        ],
+        "baselineMs": 7700,
+        "inputInsideWindow": true,
+        "baselineMinusActualMs": 98.60980000000018,
+        "approximateClipInputSec": 7.916614558974358
+      },
+      {
+        "index": 3,
+        "actualHookMs": 9548.5224,
+        "windowMs": [
+          9350,
+          9750
+        ],
+        "baselineMs": 9500,
+        "inputInsideWindow": true,
+        "baselineMinusActualMs": -48.522399999999834,
+        "approximateClipInputSec": 9.863746758974358
+      },
+      {
+        "index": 4,
+        "actualHookMs": 10881.660299999998,
+        "windowMs": [
+          10650,
+          11150
+        ],
+        "baselineMs": 10850,
+        "inputInsideWindow": true,
+        "baselineMinusActualMs": -31.660299999997733,
+        "approximateClipInputSec": 11.196884658974357
+      },
+      {
+        "index": 5,
+        "actualHookMs": 13226.3912,
+        "windowMs": [
+          12950,
+          13450
+        ],
+        "baselineMs": 13200,
+        "inputInsideWindow": true,
+        "baselineMinusActualMs": -26.391200000000026,
+        "approximateClipInputSec": 13.541615558974359
+      }
+    ],
+    "decision": "comparison-only; do not replace website media",
+    "reasons": [
+      "Baked-in lane removal loses bottom 108px (15% of original image); HUD incomplete.",
+      "First two actual successful inputs remain outside conservative service windows.",
+      "A success-fitting origin or replacing manual input times with baseline settings is not independent alignment."
+    ],
+    "unchanged": [
+      "website media",
+      "website cues",
+      "native profiles",
+      "source video",
+      "source log"
+    ],
+    "additionalCleanCandidate": {
+      "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_15-41-54.mp4",
+      "sha256": "695baed0afc6bac18e01aaee9c61b3f54be5b23a2cf1c754045a229451e45a95",
+      "noticeThresholdFrame": 679,
+      "settingsMs": [
+        4200,
+        6400,
+        7700,
+        9750,
+        10850,
+        13200
+      ],
+      "gameOutcome": "111111",
+      "evidence": "docs/evidence/vesper-execute01-recorded-followup-20260920.json",
+      "visualComparison": "<PRIVATE_HOME>\\Documents\\Codex\\lane-capture-analysis-20260920\\replacement-review\\other-candidate-cues.jpg",
+      "observation": "At notice+5.9/6.1 and9.05/9.25, weapon progression resembles current automatic representative more than the earlier manual success. Qualitative samples; not a precise all-hit alignment.",
+      "decision": "Usable visual quality, but no evidence replacement alone resolves reported cue alignment."
+    },
+    "cropReview": "16 one-second contact samples retain boss cues and final outcome; bottom108px=15% removed, losing HUD and portions of player feet. Comparison only, not full-image service replacement.",
+    "independentReview": "Read-only web_clock_compare: preserve actual manual timestamps; do not success-fit origin; comparison-only recommendation. Clean candidate is intermediate between current and manual at +6.1/+9.25, not identical to current. Possible pre-entry cue differences prevent attributing the whole difference to later entry input.",
+    "nextDecision": "Compare existing automatic and manual cue progression before adopting a new media origin. Fresh recording with unchanged baseline is not an established fix."
+  },
+  "preEntryCueReview": {
+    "scope": "Three existing videos; assess differences before entry and after entry. Analysis only; no fresh gameplay or runtime edits.",
+    "sources": [
+      {
+        "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\public\\media\\vesper-execute-01.mp4",
+        "sha256": "ee3151f6af2f44b4a032fae9cd8ea409185a0b37a5ef71778533398f4173223b"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_15-41-54.mp4",
+        "sha256": "695baed0afc6bac18e01aaee9c61b3f54be5b23a2cf1c754045a229451e45a95"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_18-02-44.mp4",
+        "sha256": "bd5fbd768dcc791b99146c4ac84731fd8317a137507804b284bf5bd8efb1dd9b"
+      }
+    ],
+    "method": {
+      "frameTime": "Explicit fps=60 normalization, trim then reset timestamps, passthrough output;150-frame assertion per entry crop. Frame indices are CFR timeline positions.",
+      "crop": [
+        240,
+        160,
+        800,
+        400
+      ],
+      "scaledCrop": [
+        480,
+        240
+      ],
+      "flashCriterion": "Max per-row bright magenta pixels R>170 B>170 G>80 R-G>15 B-G>15; first 180/220/260/300 pixel crossing. Visually confirmed newly appearing horizontal+vertical boss cross; not physical input marker.",
+      "postEntryRoomCriterion": "First three consecutive frames with red fraction>.2/.3/.4 in central 320x110 region; qualitative cross-check only, because fade and camera differ."
+    },
+    "noticeAnchorReview": [
+      {
+        "name": "current",
+        "anchor": 13,
+        "rows": [
+          {
+            "frame": 0,
+            "relativeFrame": -13,
+            "dice": 0.0,
+            "yellowPixels": 0
+          },
+          {
+            "frame": 1,
+            "relativeFrame": -12,
+            "dice": 0.0,
+            "yellowPixels": 0
+          },
+          {
+            "frame": 2,
+            "relativeFrame": -11,
+            "dice": 0.0,
+            "yellowPixels": 0
+          },
+          {
+            "frame": 3,
+            "relativeFrame": -10,
+            "dice": 0.0,
+            "yellowPixels": 0
+          },
+          {
+            "frame": 4,
+            "relativeFrame": -9,
+            "dice": 0.0,
+            "yellowPixels": 0
+          },
+          {
+            "frame": 5,
+            "relativeFrame": -8,
+            "dice": 0.06359300476947535,
+            "yellowPixels": 26
+          },
+          {
+            "frame": 6,
+            "relativeFrame": -7,
+            "dice": 0.06359300476947535,
+            "yellowPixels": 26
+          },
+          {
+            "frame": 7,
+            "relativeFrame": -6,
+            "dice": 0.06359300476947535,
+            "yellowPixels": 26
+          },
+          {
+            "frame": 8,
+            "relativeFrame": -5,
+            "dice": 0.13677811550151975,
+            "yellowPixels": 55
+          },
+          {
+            "frame": 9,
+            "relativeFrame": -4,
+            "dice": 0.13677811550151975,
+            "yellowPixels": 55
+          },
+          {
+            "frame": 10,
+            "relativeFrame": -3,
+            "dice": 0.20028612303290416,
+            "yellowPixels": 96
+          },
+          {
+            "frame": 11,
+            "relativeFrame": -2,
+            "dice": 0.20028612303290416,
+            "yellowPixels": 96
+          },
+          {
+            "frame": 12,
+            "relativeFrame": -1,
+            "dice": 0.20028612303290416,
+            "yellowPixels": 96
+          },
+          {
+            "frame": 13,
+            "relativeFrame": 0,
+            "dice": 0.7746883988494727,
+            "yellowPixels": 440
+          },
+          {
+            "frame": 14,
+            "relativeFrame": 1,
+            "dice": 0.8695652173913043,
+            "yellowPixels": 593
+          },
+          {
+            "frame": 15,
+            "relativeFrame": 2,
+            "dice": 0.8688387635756056,
+            "yellowPixels": 594
+          },
+          {
+            "frame": 16,
+            "relativeFrame": 3,
+            "dice": 0.8688387635756056,
+            "yellowPixels": 594
+          },
+          {
+            "frame": 17,
+            "relativeFrame": 4,
+            "dice": 0.8673894912427023,
+            "yellowPixels": 596
+          }
+        ],
+        "firstCrossings": {
+          "0.05": -8,
+          "0.1": -5,
+          "0.2": -3,
+          "0.3": 0,
+          "0.4": 0,
+          "0.5": 0,
+          "0.6": 0,
+          "0.68": 0,
+          "0.7": 0,
+          "0.75": 0,
+          "0.8": 1
+        }
+      },
+      {
+        "name": "auto1541",
+        "anchor": 679,
+        "rows": [
+          {
+            "frame": 659,
+            "relativeFrame": -20,
+            "dice": 0.0,
+            "yellowPixels": 0
+          },
+          {
+            "frame": 660,
+            "relativeFrame": -19,
+            "dice": 0.0,
+            "yellowPixels": 0
+          },
+          {
+            "frame": 661,
+            "relativeFrame": -18,
+            "dice": 0.0,
+            "yellowPixels": 0
+          },
+          {
+            "frame": 662,
+            "relativeFrame": -17,
+            "dice": 0.0,
+            "yellowPixels": 0
+          },
+          {
+            "frame": 663,
+            "relativeFrame": -16,
+            "dice": 0.0,
+            "yellowPixels": 0
+          },
+          {
+            "frame": 664,
+            "relativeFrame": -15,
+            "dice": 0.0,
+            "yellowPixels": 0
+          },
+          {
+            "frame": 665,
+            "relativeFrame": -14,
+            "dice": 0.0,
+            "yellowPixels": 0
+          },
+          {
+            "frame": 666,
+            "relativeFrame": -13,
+            "dice": 0.0,
+            "yellowPixels": 0
+          },
+          {
+            "frame": 667,
+            "relativeFrame": -12,
+            "dice": 0.0,
+            "yellowPixels": 0
+          },
+          {
+            "frame": 668,
+            "relativeFrame": -11,
+            "dice": 0.0,
+            "yellowPixels": 0
+          },
+          {
+            "frame": 669,
+            "relativeFrame": -10,
+            "dice": 0.0,
+            "yellowPixels": 0
+          },
+          {
+            "frame": 670,
+            "relativeFrame": -9,
+            "dice": 0.0,
+            "yellowPixels": 0
+          },
+          {
+            "frame": 671,
+            "relativeFrame": -8,
+            "dice": 0.032520325203252036,
+            "yellowPixels": 12
+          },
+          {
+            "frame": 672,
+            "relativeFrame": -7,
+            "dice": 0.032520325203252036,
+            "yellowPixels": 12
+          },
+          {
+            "frame": 673,
+            "relativeFrame": -6,
+            "dice": 0.11764705882352941,
+            "yellowPixels": 43
+          },
+          {
+            "frame": 674,
+            "relativeFrame": -5,
+            "dice": 0.11764705882352941,
+            "yellowPixels": 43
+          },
+          {
+            "frame": 675,
+            "relativeFrame": -4,
+            "dice": 0.14749262536873156,
+            "yellowPixels": 75
+          },
+          {
+            "frame": 676,
+            "relativeFrame": -3,
+            "dice": 0.6170442286947141,
+            "yellowPixels": 324
+          },
+          {
+            "frame": 677,
+            "relativeFrame": -2,
+            "dice": 0.6170442286947141,
+            "yellowPixels": 324
+          },
+          {
+            "frame": 678,
+            "relativeFrame": -1,
+            "dice": 0.6170442286947141,
+            "yellowPixels": 324
+          },
+          {
+            "frame": 679,
+            "relativeFrame": 0,
+            "dice": 0.8631921824104235,
+            "yellowPixels": 625
+          },
+          {
+            "frame": 680,
+            "relativeFrame": 1,
+            "dice": 0.8631921824104235,
+            "yellowPixels": 625
+          },
+          {
+            "frame": 681,
+            "relativeFrame": 2,
+            "dice": 0.8727569331158238,
+            "yellowPixels": 623
+          },
+          {
+            "frame": 682,
+            "relativeFrame": 3,
+            "dice": 0.8747967479674796,
+            "yellowPixels": 627
+          },
+          {
+            "frame": 683,
+            "relativeFrame": 4,
+            "dice": 0.8738812042310822,
+            "yellowPixels": 626
+          }
+        ],
+        "firstCrossings": {
+          "0.05": -6,
+          "0.1": -6,
+          "0.2": -3,
+          "0.3": -3,
+          "0.4": -3,
+          "0.5": -3,
+          "0.6": -3,
+          "0.68": 0,
+          "0.7": 0,
+          "0.75": 0,
+          "0.8": 0
+        }
+      },
+      {
+        "name": "manual1802",
+        "anchor": 996,
+        "rows": [
+          {
+            "frame": 976,
+            "relativeFrame": -20,
+            "dice": 0.0,
+            "yellowPixels": 0
+          },
+          {
+            "frame": 977,
+            "relativeFrame": -19,
+            "dice": 0.0,
+            "yellowPixels": 0
+          },
+          {
+            "frame": 978,
+            "relativeFrame": -18,
+            "dice": 0.0,
+            "yellowPixels": 0
+          },
+          {
+            "frame": 979,
+            "relativeFrame": -17,
+            "dice": 0.0,
+            "yellowPixels": 0
+          },
+          {
+            "frame": 980,
+            "relativeFrame": -16,
+            "dice": 0.0,
+            "yellowPixels": 0
+          },
+          {
+            "frame": 981,
+            "relativeFrame": -15,
+            "dice": 0.0,
+            "yellowPixels": 0
+          },
+          {
+            "frame": 982,
+            "relativeFrame": -14,
+            "dice": 0.0,
+            "yellowPixels": 0
+          },
+          {
+            "frame": 983,
+            "relativeFrame": -13,
+            "dice": 0.0,
+            "yellowPixels": 0
+          },
+          {
+            "frame": 984,
+            "relativeFrame": -12,
+            "dice": 0.0,
+            "yellowPixels": 0
+          },
+          {
+            "frame": 985,
+            "relativeFrame": -11,
+            "dice": 0.0,
+            "yellowPixels": 0
+          },
+          {
+            "frame": 986,
+            "relativeFrame": -10,
+            "dice": 0.0,
+            "yellowPixels": 0
+          },
+          {
+            "frame": 987,
+            "relativeFrame": -9,
+            "dice": 0.026058631921824105,
+            "yellowPixels": 11
+          },
+          {
+            "frame": 988,
+            "relativeFrame": -8,
+            "dice": 0.026058631921824105,
+            "yellowPixels": 11
+          },
+          {
+            "frame": 989,
+            "relativeFrame": -7,
+            "dice": 0.026058631921824105,
+            "yellowPixels": 11
+          },
+          {
+            "frame": 990,
+            "relativeFrame": -6,
+            "dice": 0.136986301369863,
+            "yellowPixels": 54
+          },
+          {
+            "frame": 991,
+            "relativeFrame": -5,
+            "dice": 0.1337386018237082,
+            "yellowPixels": 55
+          },
+          {
+            "frame": 992,
+            "relativeFrame": -4,
+            "dice": 0.1375186846038864,
+            "yellowPixels": 66
+          },
+          {
+            "frame": 993,
+            "relativeFrame": -3,
+            "dice": 0.1375186846038864,
+            "yellowPixels": 66
+          },
+          {
+            "frame": 994,
+            "relativeFrame": -2,
+            "dice": 0.23163841807909605,
+            "yellowPixels": 105
+          },
+          {
+            "frame": 995,
+            "relativeFrame": -1,
+            "dice": 0.22913719943422914,
+            "yellowPixels": 104
+          },
+          {
+            "frame": 996,
+            "relativeFrame": 0,
+            "dice": 0.8817777777777778,
+            "yellowPixels": 522
+          },
+          {
+            "frame": 997,
+            "relativeFrame": 1,
+            "dice": 0.8672413793103448,
+            "yellowPixels": 557
+          },
+          {
+            "frame": 998,
+            "relativeFrame": 2,
+            "dice": 0.8654173764906303,
+            "yellowPixels": 571
+          },
+          {
+            "frame": 999,
+            "relativeFrame": 3,
+            "dice": 0.8668941979522184,
+            "yellowPixels": 569
+          },
+          {
+            "frame": 1000,
+            "relativeFrame": 4,
+            "dice": 0.8654173764906303,
+            "yellowPixels": 571
+          }
+        ],
+        "firstCrossings": {
+          "0.05": -6,
+          "0.1": -6,
+          "0.2": -2,
+          "0.3": 0,
+          "0.4": 0,
+          "0.5": 0,
+          "0.6": 0,
+          "0.68": 0,
+          "0.7": 0,
+          "0.75": 0,
+          "0.8": 0
+        }
+      }
+    ],
+    "firstVisibleNoticeFrames": [
+      5,
+      671,
+      987
+    ],
+    "noticeThresholdFrames": [
+      13,
+      679,
+      996
+    ],
+    "firstVisibleToThresholdMs": [
+      133.33333333333334,
+      133.33333333333334,
+      150.0
+    ],
+    "flash": [
+      {
+        "label": "current",
+        "markers": {
+          "180": {
+            "relativeFrame": 247,
+            "relativeSec": 4.116666666666666,
+            "cfrFrame": 260
+          },
+          "220": {
+            "relativeFrame": 247,
+            "relativeSec": 4.116666666666666,
+            "cfrFrame": 260
+          },
+          "260": {
+            "relativeFrame": 247,
+            "relativeSec": 4.116666666666666,
+            "cfrFrame": 260
+          },
+          "300": {
+            "relativeFrame": 249,
+            "relativeSec": 4.15,
+            "cfrFrame": 262
+          }
+        }
+      },
+      {
+        "label": "auto1541",
+        "markers": {
+          "180": {
+            "relativeFrame": 257,
+            "relativeSec": 4.283333333333333,
+            "cfrFrame": 936
+          },
+          "220": {
+            "relativeFrame": 257,
+            "relativeSec": 4.283333333333333,
+            "cfrFrame": 936
+          },
+          "260": {
+            "relativeFrame": 257,
+            "relativeSec": 4.283333333333333,
+            "cfrFrame": 936
+          },
+          "300": {
+            "relativeFrame": 257,
+            "relativeSec": 4.283333333333333,
+            "cfrFrame": 936
+          }
+        }
+      },
+      {
+        "label": "manual1802",
+        "markers": {
+          "180": {
+            "relativeFrame": 234,
+            "relativeSec": 3.9,
+            "cfrFrame": 1230
+          },
+          "220": {
+            "relativeFrame": 234,
+            "relativeSec": 3.9,
+            "cfrFrame": 1230
+          },
+          "260": {
+            "relativeFrame": 234,
+            "relativeSec": 3.9,
+            "cfrFrame": 1230
+          },
+          "300": {
+            "relativeFrame": 234,
+            "relativeSec": 3.9,
+            "cfrFrame": 1230
+          }
+        }
+      }
+    ],
+    "entryInputRelativeToNoticeSec": {
+      "currentOverlay": 4.183333333333334,
+      "auto1541Overlay": 4.183333333333334,
+      "manual1802HookMappedViaLanePixels": 4.05156075897436
+    },
+    "flashCurrentMinusManualMsRange": [
+      216.6666667,
+      250.0
+    ],
+    "postEntryRoom": [
+      {
+        "label": "current",
+        "thresholds": {
+          "0.2": 5.283333333333333,
+          "0.3": 5.316666666666666,
+          "0.4": 5.316666666666666
+        }
+      },
+      {
+        "label": "auto1541",
+        "thresholds": {
+          "0.2": 5.233333333333333,
+          "0.3": 5.25,
+          "0.4": 5.3
+        }
+      },
+      {
+        "label": "manual1802",
+        "thresholds": {
+          "0.2": 4.983333333333333,
+          "0.3": 5.033333333333333,
+          "0.4": 5.033333333333333
+        }
+      }
+    ],
+    "postEntryWeaponReview": "100ms sequence: first-support near-horizontal sword current~6.2 / auto~6.1 / manual~5.9; third-support near-vertical sword current~9.2 / auto~9.1 / manual~9.0. Continuous poses/camera angle prevent exact event timestamps. All selected markers precede that support input.",
+    "independentReview": "web_clock_compare reviewed notice first visibility and cross onset. Agrees current/manual difference precedes recorded entry; auto cross occurs after entry and cannot isolate entry effects.",
+    "conclusions": [
+      "At manual notice+3.9s the cross is visible while current has not reached it; both are before entry in the aligned records. Earlier manual entry cannot cause the entire initial cue difference.",
+      "Changing threshold anchor to first visible notice changes relative comparison by~one frame, not~200ms.",
+      "Current/manual post-entry differences remain roughly200-300ms at sampled room/weapon events; no consistent accumulation or universal fixed correction is proven.",
+      "Automatic15:41/manual flash383ms is not a pure pre-input or detector measurement: automatic flash is after input.",
+      "Displayed game progression relative to notice differs between recorded runs; cause within game/recording paths remains unresolved. No global100/200ms correction or wider windows adopted."
+    ],
+    "artifacts": {
+      "crossSequence": "<PRIVATE_HOME>\\Documents\\Codex\\lane-capture-analysis-20260920\\pre-entry-review\\flash-onset-frames.jpg",
+      "noticeSequence": "<PRIVATE_HOME>\\Documents\\Codex\\lane-capture-analysis-20260920\\pre-entry-review\\notice-anchor-review.jpg",
+      "roomSequence": "<PRIVATE_HOME>\\Documents\\Codex\\lane-capture-analysis-20260920\\pre-entry-review\\room-transition.jpg",
+      "firstSupport": "<PRIVATE_HOME>\\Documents\\Codex\\lane-capture-analysis-20260920\\pre-entry-review\\post-first.jpg",
+      "thirdSupport": "<PRIVATE_HOME>\\Documents\\Codex\\lane-capture-analysis-20260920\\pre-entry-review\\post-third.jpg"
+    },
+    "limits": [
+      "Only three successful runs, different camera/preceding combat state and input schedules.",
+      "Video pixels, hook, input overlay and physical game receipt are distinct clocks.",
+      "No inference that all boss windows share this shift or that automatic injection causes game slowdown."
+    ],
+    "unchanged": [
+      "website media",
+      "website windows/origin",
+      "experiment profiles",
+      "original videos/logs"
+    ]
+  },
+  "crossAlignedFollowup": {
+    "question": "After aligning the first purple cross, is subsequent boss progression identical?",
+    "sampling": {
+      "clips": [
+        {
+          "label": "current",
+          "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\public\\media\\vesper-execute-01.mp4",
+          "crossFrame": 260,
+          "sha256": "ee3151f6af2f44b4a032fae9cd8ea409185a0b37a5ef71778533398f4173223b"
+        },
+        {
+          "label": "auto1541",
+          "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_15-41-54.mp4",
+          "crossFrame": 936,
+          "sha256": "695baed0afc6bac18e01aaee9c61b3f54be5b23a2cf1c754045a229451e45a95"
+        },
+        {
+          "label": "manual1802",
+          "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_18-02-44.mp4",
+          "crossFrame": 1230,
+          "sha256": "bd5fbd768dcc791b99146c4ac84731fd8317a137507804b284bf5bd8efb1dd9b"
+        }
+      ],
+      "fps": 60,
+      "sampleStrideFrames": 3,
+      "groups": {
+        "entry": [
+          0,
+          0.15,
+          0.3,
+          0.45,
+          0.6,
+          0.75
+        ],
+        "room": [
+          0.8,
+          0.9,
+          1,
+          1.1,
+          1.2,
+          1.3
+        ],
+        "hit1": [
+          1.7,
+          1.8,
+          1.9,
+          2,
+          2.1,
+          2.2
+        ],
+        "hit2": [
+          3,
+          3.1,
+          3.2,
+          3.3,
+          3.4,
+          3.5,
+          3.6,
+          3.7
+        ],
+        "hit3": [
+          4.7,
+          4.8,
+          4.9,
+          5,
+          5.1,
+          5.2,
+          5.3,
+          5.4
+        ],
+        "hit4": [
+          6,
+          6.1,
+          6.2,
+          6.3,
+          6.4,
+          6.5,
+          6.6,
+          6.7,
+          6.8
+        ],
+        "hit5": [
+          8.3,
+          8.4,
+          8.5,
+          8.6,
+          8.7,
+          8.8,
+          8.9,
+          9,
+          9.1,
+          9.2,
+          9.3,
+          9.4
+        ]
+      }
+    },
+    "inspection": "50ms sampled frames; selected100ms contact sequences through entry and all5hits inspected by root. Reviewer independently inspected2/4/5, room transition and input-time arithmetic.",
+    "observations": [
+      {
+        "action": "entry/room",
+        "currentVsManual": "Main progression is similar after cross alignment, with residual fade/transition differences. Same red-fraction threshold gives current67-83ms later.",
+        "autoVsOthers": "Room transition ahead of manual117-167ms; auxiliary marker only."
+      },
+      {
+        "action": "hit1",
+        "currentVsManual": "Sword rotation broadly aligns, but current is slightly behind near CROSS+1.9..2.1s; does not establish exact equality.",
+        "autoVsOthers": "Sword visibly more rotated toward horizontal/up at+1.8..2.0s, before its input+2.083s."
+      },
+      {
+        "action": "hit2",
+        "currentVsManual": "Sword lift similar at+3.2..3.5s.",
+        "autoVsOthers": "More advanced lift at+3.2..3.3s, before auto input+3.383s. Large changes+3.6 are input-confounded."
+      },
+      {
+        "action": "hit3",
+        "currentVsManual": "Near-vertical sword progression closely resembles each other around+5.0..5.2s.",
+        "autoVsOthers": "Sword rotation and approaching clone more advanced at+4.9..5.2s, before auto input+5.433s."
+      },
+      {
+        "action": "hit4",
+        "currentVsManual": "Sword direction broadly similar+6.4..6.8s; player effects differ.",
+        "autoVsOthers": "Rotation further advanced+6.5s; later+6.6..6.8 may be input-confounded by auto input+6.533s."
+      },
+      {
+        "action": "hit5",
+        "currentVsManual": "Similar held preparation pose; manual clone begins slightly before current. Held poses cannot establish precise time equality.",
+        "autoVsOthers": "Clone movement begins earlier around+8.6..8.8s, before auto input+8.883s. Exclude post-input+9.1 onward for exact boss timing."
+      }
+    ],
+    "inputAndRoomReview": {
+      "scope": "Read-only derived calculation from previously inspected footage/records; inputs are not boss cue timings.",
+      "room": [
+        {
+          "name": "current",
+          "redFractionThresholdToCrossSeconds": {
+            "0.2": 1.166667,
+            "0.3": 1.2,
+            "0.4": 1.2
+          }
+        },
+        {
+          "name": "auto1541",
+          "redFractionThresholdToCrossSeconds": {
+            "0.2": 0.95,
+            "0.3": 0.966667,
+            "0.4": 1.016667
+          }
+        },
+        {
+          "name": "manual1802",
+          "redFractionThresholdToCrossSeconds": {
+            "0.2": 1.083333,
+            "0.3": 1.133333,
+            "0.4": 1.133333
+          }
+        }
+      ],
+      "inputs": {
+        "current": {
+          "basis": "First OBS input overlay frame, not game receipt",
+          "crossRelativeSeconds": [
+            0.06666666666666732,
+            2.25,
+            3.5500000000000007,
+            5.366666666666666,
+            6.7,
+            9.05
+          ]
+        },
+        "auto1541": {
+          "basis": "First OBS input overlay frame, not game receipt",
+          "crossRelativeSeconds": [
+            -0.09999999999999964,
+            2.083333333333334,
+            3.3833333333333346,
+            5.433333333333335,
+            6.533333333333333,
+            8.883333333333335
+          ]
+        },
+        "manual1802": {
+          "basis": "Native hook QPC mapped using median lane-pixel alignment; includes visual alignment uncertainty; not physical/game receipt",
+          "crossRelativeSeconds": [
+            0.15156075897435528,
+            2.347401458974357,
+            3.71661455897436,
+            5.663746758974359,
+            6.996884658974359,
+            9.341615558974361
+          ]
+        }
+      },
+      "limits": [
+        "Room color transition depends on fade/camera; use as supporting observation.",
+        "Different input time bases prohibit treating small differences as physical latency.",
+        "Unequal post-cross input timing does not prove unequal boss attack timing.",
+        "Three successful runs cannot establish invariant timing after the cross."
+      ]
+    },
+    "conclusion": "Current representative/manual success largely align after cross, but not proven exactly identical. Other automatic success remains more advanced at multiple pre-input cues; cross-only translation does not universally align all runs.",
+    "limits": [
+      "Different input timing and render/capture paths; do not infer boss timing from key times.",
+      "Camera, fade, held poses, clones and post-input reactions limit precise event matching.",
+      "No per-hit success-window boundary measurement; no universal fixed offset claim."
+    ],
+    "comparisonVideo": {
+      "path": "<PRIVATE_HOME>\\Documents\\Codex\\lane-capture-analysis-20260920\\cross-aligned-review\\vesper-ex01-cross-aligned-comparison.mp4",
+      "sha256": "be608c6516a91e687e00036ff632cc5595c075908f53b62fa1bc827acb4cb0ea",
+      "fps": 20,
+      "durationSeconds": 11,
+      "frames": 220,
+      "speed": 1,
+      "audio": false,
+      "purpose": "Three-column analytical preview; source60fps. Not website replacement."
+    },
+    "runtimeChanges": false,
+    "originalEvidenceChanged": false
+  },
+  "additionalRecordings": {
+    "scope": "Seven additional user recordings: EX01 five, EX02 two. Analysis only; no product/profile/original changes.",
+    "userReport": "No felt lag in seven; EX02 both perfect; EX01 last three perfect. Individual failures in earlier EX01 clips unspecified.",
+    "inventory": [
+      {
+        "stamp": "22-45-08",
+        "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_22-45-08.mp4",
+        "bytes": 15331050,
+        "sha256": "ea3b2368d0d494f925ae919b3956e0a985ce152e9cd7d6fb4c736bd8a7430262"
+      },
+      {
+        "stamp": "22-47-53",
+        "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_22-47-53.mp4",
+        "bytes": 24557504,
+        "sha256": "6d003f31b52c0076f0190250c9eda3789a69cce8245b47a54d1713ba9a0df1ee"
+      },
+      {
+        "stamp": "22-50-44",
+        "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_22-50-44.mp4",
+        "bytes": 14906068,
+        "sha256": "3a176cb574a406cd5b0c04b039993ac37ae60a61ab523cc87309457fc7ffe453"
+      },
+      {
+        "stamp": "22-52-23",
+        "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_22-52-23.mp4",
+        "bytes": 22255228,
+        "sha256": "8c6507142a63953db64e65a4de439fac672a058e078e61f6c04f4a7276a08f15"
+      },
+      {
+        "stamp": "22-54-41",
+        "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_22-54-41.mp4",
+        "bytes": 21766398,
+        "sha256": "42cacc1da23ba7953fe6e5aa706dc1bb678c6f3ac39047441f920eae38281a72"
+      },
+      {
+        "stamp": "22-59-30",
+        "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_22-59-30.mp4",
+        "bytes": 19489386,
+        "sha256": "91b61390922e0d7d97ee14f8f290effe8aadaf6883dd006e74097f89e4216a6d"
+      },
+      {
+        "stamp": "23-01-39",
+        "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_23-01-39.mp4",
+        "bytes": 33500445,
+        "sha256": "3802f1eceebd5fea33b3cd71553b85d33b278b09d63796c002b03f494518d90f"
+      }
+    ],
+    "measurement": {
+      "timeline": "Zero-based CFR60 frame /60 seconds; original files report1280x720,60fps. Not native hook or game-receipt time.",
+      "notice": "Correct pattern yellow template, Dice>=0.68; crop528x28@368,136; lower threshold0.1 sensitivity separately recorded.",
+      "cross": "First strong magenta horizontal and vertical cross from boss; crop800x400@240,160 scaled480x240. Row thresholds180/220/260 checked;300 sensitivity retained.",
+      "postCross": "Frames sampled every3 CFR frames=50ms; selected pre-input boss postures manually compared. This is sampling resolution, not established posture timing accuracy.",
+      "inputs": "Rendered OBS key/mouse overlay onset. Not assumed exact physical/game-receipt times. No new native hook log matched."
+    },
+    "execute01": [
+      {
+        "stamp": "22-47-53",
+        "notice": {
+          "0.05": 266,
+          "0.1": 422,
+          "0.4": 424,
+          "0.6": 425,
+          "0.68": 425,
+          "0.7": 425,
+          "0.75": 425
+        },
+        "noticeFrame": 425,
+        "cross": {
+          "180": 664,
+          "220": 664,
+          "260": 664,
+          "300": 664
+        },
+        "crossFrame": 664,
+        "noticeToCrossMs": 3983.3333333333335,
+        "userReportedPerfect": false,
+        "outcomeSource": "User: no felt lag; EX01 last three perfect, earlier two not perfect.",
+        "overlayEdges": {
+          "RMB": [
+            {
+              "frame": 673,
+              "seconds": 11.216666666666667,
+              "noticeRelativeMs": 4133.333333333334,
+              "crossRelativeMs": 150.0
+            }
+          ],
+          "Space": [
+            {
+              "frame": 800,
+              "seconds": 13.333333333333334,
+              "noticeRelativeMs": 6250.0,
+              "crossRelativeMs": 2266.6666666666665
+            },
+            {
+              "frame": 878,
+              "seconds": 14.633333333333333,
+              "noticeRelativeMs": 7550.0,
+              "crossRelativeMs": 3566.666666666667
+            },
+            {
+              "frame": 1009,
+              "seconds": 16.816666666666666,
+              "noticeRelativeMs": 9733.333333333332,
+              "crossRelativeMs": 5750.0
+            },
+            {
+              "frame": 1059,
+              "seconds": 17.65,
+              "noticeRelativeMs": 10566.666666666666,
+              "crossRelativeMs": 6583.333333333333
+            },
+            {
+              "frame": 1186,
+              "seconds": 19.766666666666666,
+              "noticeRelativeMs": 12683.333333333334,
+              "crossRelativeMs": 8700.0
+            }
+          ]
+        },
+        "earlierThresholdToCrossMs": 4033.333333333333
+      },
+      {
+        "stamp": "22-52-23",
+        "notice": {
+          "0.05": 290,
+          "0.1": 291,
+          "0.4": 296,
+          "0.6": 296,
+          "0.68": 296,
+          "0.7": 296,
+          "0.75": 296
+        },
+        "noticeFrame": 296,
+        "cross": {
+          "180": 532,
+          "220": 532,
+          "260": 532,
+          "300": 535
+        },
+        "crossFrame": 532,
+        "noticeToCrossMs": 3933.333333333333,
+        "userReportedPerfect": false,
+        "outcomeSource": "User: no felt lag; EX01 last three perfect, earlier two not perfect.",
+        "overlayEdges": {
+          "RMB": [
+            {
+              "frame": 541,
+              "seconds": 9.016666666666667,
+              "noticeRelativeMs": 4083.333333333333,
+              "crossRelativeMs": 150.0
+            }
+          ],
+          "Space": [
+            {
+              "frame": 642,
+              "seconds": 10.7,
+              "noticeRelativeMs": 5766.666666666667,
+              "crossRelativeMs": 1833.3333333333333
+            },
+            {
+              "frame": 676,
+              "seconds": 11.266666666666667,
+              "noticeRelativeMs": 6333.333333333333,
+              "crossRelativeMs": 2400.0
+            },
+            {
+              "frame": 735,
+              "seconds": 12.25,
+              "noticeRelativeMs": 7316.666666666666,
+              "crossRelativeMs": 3383.3333333333335
+            },
+            {
+              "frame": 845,
+              "seconds": 14.083333333333334,
+              "noticeRelativeMs": 9150.0,
+              "crossRelativeMs": 5216.666666666667
+            },
+            {
+              "frame": 914,
+              "seconds": 15.233333333333333,
+              "noticeRelativeMs": 10300.0,
+              "crossRelativeMs": 6366.666666666666
+            },
+            {
+              "frame": 1065,
+              "seconds": 17.75,
+              "noticeRelativeMs": 12816.666666666666,
+              "crossRelativeMs": 8883.333333333332
+            }
+          ]
+        },
+        "earlierThresholdToCrossMs": 4016.6666666666665
+      },
+      {
+        "stamp": "22-54-41",
+        "notice": {
+          "0.05": 398,
+          "0.1": 398,
+          "0.4": 405,
+          "0.6": 405,
+          "0.68": 405,
+          "0.7": 405,
+          "0.75": 405
+        },
+        "noticeFrame": 405,
+        "cross": {
+          "180": 642,
+          "220": 642,
+          "260": 642,
+          "300": 642
+        },
+        "crossFrame": 642,
+        "noticeToCrossMs": 3950.0,
+        "userReportedPerfect": true,
+        "outcomeSource": "User: no felt lag; EX01 last three perfect, earlier two not perfect.",
+        "overlayEdges": {
+          "RMB": [
+            {
+              "frame": 649,
+              "seconds": 10.816666666666666,
+              "noticeRelativeMs": 4066.6666666666665,
+              "crossRelativeMs": 116.66666666666667
+            }
+          ],
+          "Space": [
+            {
+              "frame": 781,
+              "seconds": 13.016666666666667,
+              "noticeRelativeMs": 6266.666666666667,
+              "crossRelativeMs": 2316.666666666667
+            },
+            {
+              "frame": 848,
+              "seconds": 14.133333333333333,
+              "noticeRelativeMs": 7383.333333333334,
+              "crossRelativeMs": 3433.333333333333
+            },
+            {
+              "frame": 969,
+              "seconds": 16.15,
+              "noticeRelativeMs": 9400.0,
+              "crossRelativeMs": 5450.0
+            },
+            {
+              "frame": 1045,
+              "seconds": 17.416666666666668,
+              "noticeRelativeMs": 10666.666666666666,
+              "crossRelativeMs": 6716.666666666667
+            },
+            {
+              "frame": 1201,
+              "seconds": 20.016666666666666,
+              "noticeRelativeMs": 13266.666666666668,
+              "crossRelativeMs": 9316.666666666666
+            }
+          ]
+        },
+        "earlierThresholdToCrossMs": 4066.6666666666665
+      },
+      {
+        "stamp": "22-59-30",
+        "notice": {
+          "0.05": 292,
+          "0.1": 292,
+          "0.4": 297,
+          "0.6": 297,
+          "0.68": 297,
+          "0.7": 297,
+          "0.75": 297
+        },
+        "noticeFrame": 297,
+        "cross": {
+          "180": 531,
+          "220": 531,
+          "260": 531,
+          "300": 533
+        },
+        "crossFrame": 531,
+        "noticeToCrossMs": 3900.0,
+        "userReportedPerfect": true,
+        "outcomeSource": "User: no felt lag; EX01 last three perfect, earlier two not perfect.",
+        "overlayEdges": {
+          "RMB": [
+            {
+              "frame": 544,
+              "seconds": 9.066666666666666,
+              "noticeRelativeMs": 4116.666666666666,
+              "crossRelativeMs": 216.66666666666669
+            }
+          ],
+          "Space": [
+            {
+              "frame": 670,
+              "seconds": 11.166666666666666,
+              "noticeRelativeMs": 6216.666666666667,
+              "crossRelativeMs": 2316.666666666667
+            },
+            {
+              "frame": 742,
+              "seconds": 12.366666666666667,
+              "noticeRelativeMs": 7416.666666666667,
+              "crossRelativeMs": 3516.6666666666665
+            },
+            {
+              "frame": 861,
+              "seconds": 14.35,
+              "noticeRelativeMs": 9400.0,
+              "crossRelativeMs": 5500.0
+            },
+            {
+              "frame": 937,
+              "seconds": 15.616666666666667,
+              "noticeRelativeMs": 10666.666666666666,
+              "crossRelativeMs": 6766.666666666667
+            },
+            {
+              "frame": 1089,
+              "seconds": 18.15,
+              "noticeRelativeMs": 13200.0,
+              "crossRelativeMs": 9300.0
+            }
+          ]
+        },
+        "earlierThresholdToCrossMs": 3983.3333333333335
+      },
+      {
+        "stamp": "23-01-39",
+        "notice": {
+          "0.05": 1013,
+          "0.1": 1014,
+          "0.4": 1020,
+          "0.6": 1020,
+          "0.68": 1020,
+          "0.7": 1020,
+          "0.75": 1020
+        },
+        "noticeFrame": 1020,
+        "cross": {
+          "180": 1258,
+          "220": 1258,
+          "260": 1258,
+          "300": 1258
+        },
+        "crossFrame": 1258,
+        "noticeToCrossMs": 3966.666666666667,
+        "userReportedPerfect": true,
+        "outcomeSource": "User: no felt lag; EX01 last three perfect, earlier two not perfect.",
+        "overlayEdges": {
+          "RMB": [
+            {
+              "frame": 1272,
+              "seconds": 21.2,
+              "noticeRelativeMs": 4200.0,
+              "crossRelativeMs": 233.33333333333334
+            }
+          ],
+          "Space": [
+            {
+              "frame": 1395,
+              "seconds": 23.25,
+              "noticeRelativeMs": 6250.0,
+              "crossRelativeMs": 2283.333333333333
+            },
+            {
+              "frame": 1472,
+              "seconds": 24.533333333333335,
+              "noticeRelativeMs": 7533.333333333333,
+              "crossRelativeMs": 3566.666666666667
+            },
+            {
+              "frame": 1590,
+              "seconds": 26.5,
+              "noticeRelativeMs": 9500.0,
+              "crossRelativeMs": 5533.333333333333
+            },
+            {
+              "frame": 1662,
+              "seconds": 27.7,
+              "noticeRelativeMs": 10700.0,
+              "crossRelativeMs": 6733.333333333333
+            },
+            {
+              "frame": 1815,
+              "seconds": 30.25,
+              "noticeRelativeMs": 13250.0,
+              "crossRelativeMs": 9283.333333333334
+            }
+          ]
+        },
+        "earlierThresholdToCrossMs": 4066.6666666666665
+      }
+    ],
+    "execute01Current": {
+      "noticeFrame": 13,
+      "faintThreshold01Frame": 8,
+      "crossFrame": 260,
+      "noticeToCrossMs": 4116.666666666666,
+      "adoptedServiceOriginFrame": 11,
+      "note": "Visual comparison anchor13 differs from historical service origin11; original coordinate not redefined."
+    },
+    "execute01Conclusions": [
+      "All five new notice-to-cross intervals3900..3983.3ms, versus current4116.7ms. Perfect three3900..3966.7ms, current earlier-vs-new difference150..216.7ms.",
+      "Using faint threshold0.1, current4200ms versus new perfect3983.3..4066.7ms;133.3..216.7ms difference remains. Lower threshold is not independently established first visible pixel.",
+      "Three new perfect runs form broadly similar post-cross visual progression; exact invariant timing is not proved.",
+      "Current reference lags new successes in pre-input sword rotation at cross+1.85..2.00 and+4.7..4.9. No exact per-action shift inferred.",
+      "Small differences at2/4;5 has prolonged preparation and slight clone variation. Player parry/switch flashes excluded from cue proof.",
+      "Earlier two non-perfect runs not pooled into normal downstream flow;22-52 has an additional Space onset. Their pre-entry markers remain separately recorded."
+    ],
+    "execute02": [
+      {
+        "stamp": "22-45-08",
+        "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_22-45-08.mp4",
+        "notice": {
+          "0.05": 100,
+          "0.1": 100,
+          "0.4": 106,
+          "0.6": 106,
+          "0.68": 106,
+          "0.7": 106,
+          "0.75": 121
+        },
+        "noticeFrame": 106,
+        "cross": {
+          "180": 287,
+          "220": 287,
+          "260": 287,
+          "300": 287
+        },
+        "crossFrame": 287,
+        "noticeToCrossMs": 3016.6666666666665,
+        "inputOverlayOnsets": {
+          "Space": [
+            {
+              "frame": 374,
+              "sec": 6.233333333333333,
+              "crossRelativeSec": 1.45,
+              "noticeRelativeSec": 4.466666666666667
+            },
+            {
+              "frame": 467,
+              "sec": 7.783333333333333,
+              "crossRelativeSec": 3.0,
+              "noticeRelativeSec": 6.016666666666667
+            },
+            {
+              "frame": 554,
+              "sec": 9.233333333333333,
+              "crossRelativeSec": 4.45,
+              "noticeRelativeSec": 7.466666666666667
+            },
+            {
+              "frame": 679,
+              "sec": 11.316666666666666,
+              "crossRelativeSec": 6.533333333333333,
+              "noticeRelativeSec": 9.55
+            }
+          ],
+          "RMB": [
+            {
+              "frame": 302,
+              "sec": 5.033333333333333,
+              "crossRelativeSec": 0.25,
+              "noticeRelativeSec": 3.2666666666666666
+            }
+          ]
+        },
+        "gameOutcomeSource": "user reports perfect response and no felt lag for both new EX02 videos",
+        "timingBasis": "ffmpeg fps=60 normalized video clock; zero-based frame; input overlay onset is not physical switch/game-receipt time",
+        "preInputPoseReview": {
+          "hit1": {
+            "crossRelativeSec": [
+              1.1,
+              1.2,
+              1.3,
+              1.4
+            ],
+            "description": "sword below-left -> raised upper-right; broadly corresponding stages",
+            "sheet": "hit1-pre.jpg"
+          },
+          "hit2": {
+            "crossRelativeSec": [
+              2.6,
+              2.7,
+              2.8,
+              2.9
+            ],
+            "description": "sword raised from upper-right to vertical and turns to upper-left; camera/player position differs",
+            "sheet": "hit2-pre.jpg"
+          },
+          "hit3": {
+            "crossRelativeSec": [
+              4.0,
+              4.1,
+              4.2,
+              4.3
+            ],
+            "description": "boss brings sword from low-left to upright; corresponding stages in all three",
+            "sheet": "hit3-pre.jpg"
+          },
+          "hit4": {
+            "crossRelativeSec": [
+              6.0,
+              6.1,
+              6.2,
+              6.3
+            ],
+            "description": "boss ascends and prepares descending slash; camera and trajectories differ, no precise pose threshold assigned",
+            "sheet": "hit4-pre.jpg"
+          }
+        }
+      },
+      {
+        "stamp": "22-50-44",
+        "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_22-50-44.mp4",
+        "notice": {
+          "0.05": 119,
+          "0.1": 119,
+          "0.4": 127,
+          "0.6": 127,
+          "0.68": 127,
+          "0.7": 127,
+          "0.75": 127
+        },
+        "noticeFrame": 127,
+        "cross": {
+          "180": 305,
+          "220": 305,
+          "260": 305,
+          "300": 305
+        },
+        "crossFrame": 305,
+        "noticeToCrossMs": 2966.666666666667,
+        "inputOverlayOnsets": {
+          "Space": [
+            {
+              "frame": 396,
+              "sec": 6.6,
+              "crossRelativeSec": 1.5166666666666666,
+              "noticeRelativeSec": 4.483333333333333
+            },
+            {
+              "frame": 486,
+              "sec": 8.1,
+              "crossRelativeSec": 3.0166666666666666,
+              "noticeRelativeSec": 5.983333333333333
+            },
+            {
+              "frame": 572,
+              "sec": 9.533333333333333,
+              "crossRelativeSec": 4.45,
+              "noticeRelativeSec": 7.416666666666667
+            },
+            {
+              "frame": 690,
+              "sec": 11.5,
+              "crossRelativeSec": 6.416666666666667,
+              "noticeRelativeSec": 9.383333333333333
+            }
+          ],
+          "RMB": [
+            {
+              "frame": 318,
+              "sec": 5.3,
+              "crossRelativeSec": 0.21666666666666667,
+              "noticeRelativeSec": 3.183333333333333
+            }
+          ]
+        },
+        "gameOutcomeSource": "user reports perfect response and no felt lag for both new EX02 videos",
+        "timingBasis": "ffmpeg fps=60 normalized video clock; zero-based frame; input overlay onset is not physical switch/game-receipt time",
+        "preInputPoseReview": {
+          "hit1": {
+            "crossRelativeSec": [
+              1.1,
+              1.2,
+              1.3,
+              1.4
+            ],
+            "description": "sword below-left -> raised upper-right; broadly corresponding stages",
+            "sheet": "hit1-pre.jpg"
+          },
+          "hit2": {
+            "crossRelativeSec": [
+              2.6,
+              2.7,
+              2.8,
+              2.9
+            ],
+            "description": "sword raised from upper-right to vertical and turns to upper-left; camera/player position differs",
+            "sheet": "hit2-pre.jpg"
+          },
+          "hit3": {
+            "crossRelativeSec": [
+              4.0,
+              4.1,
+              4.2,
+              4.3
+            ],
+            "description": "boss brings sword from low-left to upright; corresponding stages in all three",
+            "sheet": "hit3-pre.jpg"
+          },
+          "hit4": {
+            "crossRelativeSec": [
+              6.0,
+              6.1,
+              6.2,
+              6.3
+            ],
+            "description": "boss ascends and prepares descending slash; camera and trajectories differ, no precise pose threshold assigned",
+            "sheet": "hit4-pre.jpg"
+          }
+        }
+      },
+      {
+        "stamp": "current",
+        "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\public\\media\\vesper-execute-02.mp4",
+        "notice": {
+          "0.05": 4,
+          "0.1": 4,
+          "0.4": 10,
+          "0.6": 11,
+          "0.68": 11,
+          "0.7": 11,
+          "0.75": 13
+        },
+        "noticeFrame": 11,
+        "cross": {
+          "180": 188,
+          "220": 188,
+          "260": 188,
+          "300": 188
+        },
+        "crossFrame": 188,
+        "noticeToCrossMs": 2950.0,
+        "inputOverlayOnsets": {
+          "Space": [
+            {
+              "frame": 278,
+              "sec": 4.633333333333334,
+              "crossRelativeSec": 1.5,
+              "noticeRelativeSec": 4.45
+            },
+            {
+              "frame": 368,
+              "sec": 6.133333333333334,
+              "crossRelativeSec": 3.0,
+              "noticeRelativeSec": 5.95
+            },
+            {
+              "frame": 467,
+              "sec": 7.783333333333333,
+              "crossRelativeSec": 4.65,
+              "noticeRelativeSec": 7.6
+            },
+            {
+              "frame": 575,
+              "sec": 9.583333333333334,
+              "crossRelativeSec": 6.45,
+              "noticeRelativeSec": 9.4
+            }
+          ],
+          "RMB": [
+            {
+              "frame": 202,
+              "sec": 3.3666666666666667,
+              "crossRelativeSec": 0.23333333333333334,
+              "noticeRelativeSec": 3.183333333333333
+            }
+          ]
+        },
+        "gameOutcomeSource": "existing representative video",
+        "timingBasis": "ffmpeg fps=60 normalized video clock; zero-based frame; input overlay onset is not physical switch/game-receipt time",
+        "preInputPoseReview": {
+          "hit1": {
+            "crossRelativeSec": [
+              1.1,
+              1.2,
+              1.3,
+              1.4
+            ],
+            "description": "sword below-left -> raised upper-right; broadly corresponding stages",
+            "sheet": "hit1-pre.jpg"
+          },
+          "hit2": {
+            "crossRelativeSec": [
+              2.6,
+              2.7,
+              2.8,
+              2.9
+            ],
+            "description": "sword raised from upper-right to vertical and turns to upper-left; camera/player position differs",
+            "sheet": "hit2-pre.jpg"
+          },
+          "hit3": {
+            "crossRelativeSec": [
+              4.0,
+              4.1,
+              4.2,
+              4.3
+            ],
+            "description": "boss brings sword from low-left to upright; corresponding stages in all three",
+            "sheet": "hit3-pre.jpg"
+          },
+          "hit4": {
+            "crossRelativeSec": [
+              6.0,
+              6.1,
+              6.2,
+              6.3
+            ],
+            "description": "boss ascends and prepares descending slash; camera and trajectories differ, no precise pose threshold assigned",
+            "sheet": "hit4-pre.jpg"
+          }
+        }
+      }
+    ],
+    "execute02Conclusion": "Both user-confirmed perfect. Notice-to-cross3016.7/2966.7ms versus current2950ms. New pair50ms spread shrinks to16.7ms at faint threshold0.1. Broadly corresponding pre-input postures, no clear accumulating wholesale drift; no exact invariant claim.",
+    "recommendation": {
+      "candidate": "ZZZ_2026-09-20_23-01-39.mp4",
+      "status": "User approved23:01:39 replacement; installed for manual website review. Prior analysis labels current refer to superseded06:35 video.",
+      "why": "One intact, user-confirmed natural success from recurring three-run cue group; clear full game view and six key edges. Not a synthetic median timeline and not claimed uniquely representative.",
+      "next": "Review EX01 candidate clip and independent notice/cue alignment with existing widths. One global offset first; local correction only if independently needed. EX02 unchanged. No more blanket recordings or window-boundary exploration needed for this decision.",
+      "limits": "Do not choose an origin solely to make successful inputs fit; overlay matching or one successful input does not validate interval boundaries. Engine cause per recording remains unknown."
+    },
+    "independentReview": {
+      "ex01": "web_clock_compare reviewed six aligned contact sheets and confirmed qualitative residuals; exact ms not justified.",
+      "ex02": "six_lane_logs measured correct-template markers and pre-input postures; parent reviewed reported source sheets."
+    },
+    "artifacts": {
+      "root": "<PRIVATE_HOME>\\Documents\\Codex\\lane-capture-analysis-20260920\\additional-recordings",
+      "comparisonVideo": "<PRIVATE_HOME>\\Documents\\Codex\\lane-capture-analysis-20260920\\additional-recordings\\ex01-current-and-new-cross-aligned.mp4",
+      "comparisonVideoSeconds": 11,
+      "comparisonVideoFps": 20,
+      "comparisonVideoColumns": [
+        "current",
+        "22-54-41",
+        "23-01-39"
+      ],
+      "comparisonPlayback": "1x, silent; cross-aligned, not service media"
+    },
+    "validation": {
+      "sourceHashesMatched": true,
+      "jsonParsed": true,
+      "comparisonDecodeErrors": 0
+    },
+    "unchanged": [
+      "website media",
+      "website timing windows",
+      "native experiment profiles",
+      "original videos",
+      "original logs"
+    ]
+  },
+  "mediaReplacement": {
+    "status": "installed for user manual review",
+    "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_23-01-39.mp4",
+    "firstSourceFrame": 1008,
+    "endSourceFrameExclusive": 1980,
+    "originSourceFrame": 1020,
+    "originBasis": "Independently measured notice template threshold, not an input fit; native recognition origin was not measured in this recording.",
+    "durationSeconds": 16.2,
+    "clipOffsetSeconds": 0.2,
+    "sourceSha256": "3802f1eceebd5fea33b3cd71553b85d33b278b09d63796c002b03f494518d90f",
+    "clipSha256": "5d26d6fbbc825d569431f988aedf97fc9baede44558f3e06a9be9be75b9c3e22",
+    "posterSha256": "cca594f61237e30e97dbd7acabf896ac99c37ae110cbc9ae10ccfaae698839d8",
+    "referenceMs": [
+      4200.0,
+      6250.0,
+      7533.333333333333,
+      9500.0,
+      10700.0,
+      13250.0
+    ],
+    "windowWidthsMs": [
+      200,
+      350,
+      450,
+      400,
+      500,
+      500
+    ],
+    "unchanged": [
+      "EX01 adopted interval endpoints and inter-action gaps in experiment coordinates",
+      "EX02",
+      "Girtablullu",
+      "experiment profiles",
+      "original recordings"
+    ],
+    "previousRecording": {
+      "contentId": "vesper-execute-01",
+      "bossId": "vesper",
+      "skill": "Execute_01",
+      "source": "ZZZ_2026-09-20_06-35-04.mp4",
+      "sourceSha256": "ad9fd1ef1532d4fd6753a115d19bb3efb12e937a7d7d0a66656800a7e579bba8",
+      "fps": 60,
+      "firstSourceFrame": 252,
+      "endSourceFrameExclusive": 1260,
+      "patternOriginSourceFrame": 263,
+      "patternTimeZeroAtClipTime": 0.18333333333333332,
+      "sourceOverlayDownFrames": [
+        516,
+        647,
+        725,
+        834,
+        914,
+        1055
+      ],
+      "windowsMs": [
+        [
+          4100,
+          4300
+        ],
+        [
+          6250,
+          6600
+        ],
+        [
+          7500,
+          7950
+        ],
+        [
+          9350,
+          9700
+        ],
+        [
+          10650,
+          11100
+        ],
+        [
+          12950,
+          13450
+        ]
+      ],
+      "referenceMs": [
+        4200,
+        6400,
+        7700,
+        9500,
+        10850,
+        13200
+      ],
+      "clip": "media/vesper-execute-01.mp4",
+      "clipSha256": "ee3151f6af2f44b4a032fae9cd8ea409185a0b37a5ef71778533398f4173223b",
+      "posterSha256": "947233e3090249b0da872a63bb8844f9179e6251c1e0c450ff009e6a8dad9abb",
+      "outcomeReviewSourceFrame": 1140,
+      "overlayResidualFrames": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "visualReview": "source setting screens excluded; full pattern and final success retained; see retained source contact sheet",
+      "referenceBasis": "recording input overlay alignment; not a new physical-input or game-window measurement"
+    },
+    "reviewContact": "<PRIVATE_HOME>\\Documents\\Codex\\lane-capture-analysis-20260920\\additional-recordings\\replacement\\trim-review.jpg",
+    "validation": {
+      "fullClipDecodeErrors": 0,
+      "sourceHashMatched": true,
+      "webManualReview": "accepted by user: 실제 게임 체감과 거의 차이가 없다. 적절하다.",
+      "automatedChecks": "passed",
+      "typecheck": "passed",
+      "unitTests": 65,
+      "build": "passed",
+      "mediaTests": 4,
+      "browser": {
+        "url": "http://127.0.0.1:5187/",
+        "duration": 16.2,
+        "resolution": [
+          1280,
+          720
+        ],
+        "playedToEnd": true,
+        "mediaError": null,
+        "resultActions": 6
+      }
+    }
+  },
+  "currentDecision": {
+    "date": "2026-09-21",
+    "status": "closed-user-accepted",
+    "serviceSource": "ZZZ_2026-09-20_23-01-39.mp4",
+    "userReview": "실제 게임 체감과 거의 차이가 없다. 적절하다.",
+    "uniformRetakeRequired": false,
+    "futureBaselineRule": "Nearest 50ms point to midpoint, ties earlier (450ms width -> early+200ms); a default recording target, not a video acceptance requirement.",
+    "nextBoss": "쿠사리쿠",
+    "rawRetention": "See experiment-cleanup.json.current; historical artifact paths are not promises of retained files."
+  },
+  "retention": {
+    "date": "2026-09-21",
+    "status": "summarized originals retired after user-approved closure",
+    "inventory": "experiment-cleanup.json#current",
+    "meaning": "Historical raw log, source video and scratch paths describe provenance; only current.retainedOriginals are promised to remain. Conditions, outcomes, counterexamples and measurement limits stay in this evidence."
+  },
+  "staticInvestigation": {
+    "sourceReport": "<PRIVATE_HOME>\\.codex\\worktrees\\34cf\\zzz-pattern-practice\\docs\\investigations\\vesper-ex01-static-20260920\\report.md",
+    "sha256": "de1ab23536c2148e4ac8cf0e863f285c35f19f57e0700408dd3f07968c8c650a",
+    "status": "completed; actual per-run cause unresolved",
+    "sourceEvidenceFiles": [
+      "source-verification.json",
+      "cue-evidence.json",
+      "halt-evidence.json",
+      "summary.json"
+    ],
+    "findings": [
+      "TipID100022 requested on EX01 Pre activation; CrossLight_4 candidate requested in Pre coordinates244..274. UI/VFX first visible clocks and final Korean text identity remain unlinked.",
+      "Pre/Combo share clip38, destination coordinate280. Fixed destination does not prove fixed wall-clock transition time.",
+      "Bool_IsExecuteSuccess also becomes true via OnHitOther; entering Combo alone is not evidence of entry success.",
+      "Original attacks1..4 halt0/0, backup3/3; attack5 halt21/21, backup11/11. Actual affected entities, selected branches and overlap with parry global slow remain unmeasured."
+    ],
+    "counterexamples": [
+      "Brightness threshold alone changes comparison about one frame, insufficient for the earlier217ms discrepancy.",
+      "An entry-success branch cannot alone explain differences already present before entry; a parry halt cannot explain differences before contact."
+    ],
+    "productDecision": "Retain empirical windows and per-video independent alignment. No blanket100/200ms correction, no summing halt and global-slow durations. Accepted natural EX01 video closes investigation; no further engine reconstruction is a release prerequisite."
+  }
+}

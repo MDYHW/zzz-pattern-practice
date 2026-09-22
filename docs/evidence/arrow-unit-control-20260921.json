@@ -1,0 +1,868 @@
+{
+  "date": "2026-09-21",
+  "status": "preliminary-research-complete-awaiting-local-play-observation",
+  "party": [
+    "아리아",
+    "남궁우",
+    "수나"
+  ],
+  "startCharacter": "아리아",
+  "internal": {
+    "method": {
+      "gameReadOnly": true,
+      "runtimeGameInput": false,
+      "coordinateUnit": "Animator-state coordinate; not wall-clock milliseconds",
+      "independentReview": "Completed read-only by arrow_reviewer; identity, windows, QTE, hit-count limit, and timing limits agreed."
+    },
+    "displayAndEntityIdentity": {
+      "publicMonsterTable": {
+        "path": "<PRIVATE_HOME>\\Documents\\Codex\\2026-09-14\\zzz-pattern-practice\\.local\\research-assets\\MonsterConfigTemplateTb-public.json",
+        "sha256": "8c9e210bcfcc93771f211576e5ba92d5b9e5e83cb74ed64f59439b9615b69206",
+        "releaseLimit": "Existing public release snapshot resolves identities; current installed entity/manager/aid/battle payloads were reread. Display-name join uses exact icon/prefab identifiers, not an unrecovered TextMap hash field.",
+        "rows": [
+          {
+            "jsonPointer": "/IAEFFFFLKNB/2962",
+            "PFOAJKNPCHL": 31441,
+            "DDNBBJKLOKK": "Monster_ObsoleteAndroid",
+            "FEKFJBFGANO": "ObsoleteAndroid",
+            "CAFDJOOCKOC": "Assets/NapResources/UI/Sprite/A1DynamicLoad/IconBossGeneral/UnPacker/IconMonster_PinkBowTrooper.png",
+            "DFNOPAHBHIJ": 30014,
+            "JPALCECGBHN": 314401,
+            "KIALNADKHKI": "Assets/NapResources/Char/Monster/Monster_ObsoleteAndroid/Monster_ObsoleteAndroid_MainStory_LOD3.prefab",
+            "JLCBAMILBGP": "5570967783172260718",
+            "DMOJOGPAMPA": "1992999520810711628",
+            "EKGMLMMEJOJ": [
+              "Bios",
+              "Small",
+              "Boss",
+              "MainStoryBoss",
+              ""
+            ]
+          },
+          {
+            "jsonPointer": "/IAEFFFFLKNB/2963",
+            "PFOAJKNPCHL": 31442,
+            "DDNBBJKLOKK": "Monster_ObsoleteAndroid",
+            "FEKFJBFGANO": "ObsoleteAndroid",
+            "CAFDJOOCKOC": "Assets/NapResources/UI/Sprite/A1DynamicLoad/IconBossGeneral/UnPacker/IconMonster_ObsoleteAndroid.png",
+            "DFNOPAHBHIJ": 30015,
+            "JPALCECGBHN": 314401,
+            "KIALNADKHKI": "Assets/NapResources/Char/Monster/Monster_ObsoleteAndroid/Monster_ObsoleteAndroid_LOD3.prefab",
+            "JLCBAMILBGP": "5570967783172260718",
+            "DMOJOGPAMPA": "1284520647692562601",
+            "EKGMLMMEJOJ": [
+              "Bios",
+              "Small",
+              "Boss",
+              ""
+            ]
+          }
+        ]
+      },
+      "officialNames": {
+        "source": "https://git.mero.moe/dimbreath/ZenlessData/src/commit/3767adeb56/TextMap/",
+        "fileSha256": {
+          "text-en-base.json": "d78dc7af89c7432fc75c89c755a47364c29cad9b6d010859f8b8abd7a00d1f99",
+          "text-ko-base.json": "c8a1656c97502c610391dff12939b3ccb49836e9a3ecfe82da0aacb18b30c91a",
+          "text-en.json": "91ece05978d122c9adf33b09cebc449745fcfbbf68c92097d859c637f5a89711"
+        },
+        "evidencePointers": [
+          "/names/7",
+          "/names/8"
+        ],
+        "rows": [
+          {
+            "key": "OfficialName_Monster_ObsoleteAndroid",
+            "en": "A-H0L0 Type Intelligent Tactical Construct - Mirage Archer Unit",
+            "ko": "「A-H0L0」형 스마트 전술 구조체·환영의 화살 유닛"
+          },
+          {
+            "key": "OfficialName_Monster_PinkBowTrooper",
+            "en": "Wishful Finale - Aria",
+            "ko": "염원의 피날레·아리아"
+          }
+        ],
+        "mappingBasis": "OfficialName keys give the two display strings; row 31441/31442 association is made by their exact PinkBowTrooper/ObsoleteAndroid icon identifiers and prefab variant.",
+        "limit": "The retained obfuscated monster row has no literal OfficialName key or numeric TextMap string hash. Do not present a direct row-to-TextMap field join that was not recovered."
+      }
+    },
+    "installedSources": {
+      "abilityBundle": {
+        "source": "C:\\Program Files\\Epic Games\\ZenlessZoneZero\\games\\ZenlessZoneZero Game\\ZenlessZoneZero_Data\\Persistent\\Blocks\\Data\\3191559225.blk",
+        "blockSha256": "b34548afaec340f23b49575813dfc7ac508b6b7c2b28e60c4aa764dea9a1425a",
+        "offset": 1798610,
+        "size": 18373,
+        "objects": [
+          {
+            "name": "ObsoleteAndroid_Execute_Manager",
+            "objectId": "-8097723299484660992",
+            "payloadSha256": "1b5412daa5e3bc32fffa5a3ab0da3f84a5560b564ef14eb6faeecd680866ecfa"
+          },
+          {
+            "name": "ObsoleteAndroid_Execute_RealTimeQTE_Manager",
+            "objectId": "-448222138985412812",
+            "payloadSha256": "8950a32438fd2ca8901407f9d6127ea348e03da432f55ea7d4ac6820e462c726"
+          },
+          {
+            "name": "ObsoleteAndroid_ATK09_HitCount",
+            "objectId": "1665151963578473391",
+            "payloadSha256": "5223f55f276d601e348a5e64914091cb838b63b76d190d04127a24f788d2ce5e"
+          },
+          {
+            "name": "ObsoleteAndroid_AidTriggerControl",
+            "objectId": "4803162010232832111",
+            "payloadSha256": "e8f63e6caeb356cb9b88c6ed8c6c6b5a4f0ac4b3ada08bddc2421eab75775a94"
+          }
+        ]
+      },
+      "entityConfig": {
+        "index": 74995,
+        "hash": "5570967783172260718",
+        "secondary_hash": "1954333747914009100",
+        "block_index": 1344,
+        "location": 5,
+        "block_id": 3033291495,
+        "offset": 4135877,
+        "size": 10985,
+        "source": "C:\\Program Files\\Epic Games\\ZenlessZoneZero\\games\\ZenlessZoneZero Game\\ZenlessZoneZero_Data\\StreamingAssets\\Blocks\\3033291495.blk",
+        "gameBlockSha256": "c0e735ed0a3fab6bdbc16bded5d4c4e0593fcac5044e9d3ef2cbc75edaa22d64",
+        "serializedNode": "CAB-62b01a045c0d78510282ad01d4cbebf9",
+        "serializedSha256": "1841bae530d2201b457bd32eed4186f187370d75e56edbe71d4ece91c53de21e",
+        "objectId": "-1554373286270863590",
+        "objectName": "Monster_ObsoleteAndroid",
+        "payloadSha256": "ddc7a363170fae5c65784028b2f32e563e51db5f182af53a66d7cc67341607c3"
+      },
+      "battleAsset": {
+        "path": "Assets/NapResources/Data/ScriptConfig/AnimatorEvents/Battle/AnimatorEventPattern_Monster_ObsoleteAndroid_Battle.asset",
+        "assetHash": "9272581152471421726",
+        "catalog": "catalog-persist.bin",
+        "bundleIndex": 69970,
+        "bundleHash": "9272581152471421726",
+        "secondaryHash": "17488742466594799931",
+        "source": "C:\\Program Files\\Epic Games\\ZenlessZoneZero\\games\\ZenlessZoneZero Game\\ZenlessZoneZero_Data\\StreamingAssets\\Blocks\\134424642.blk",
+        "offset": 3588818,
+        "size": 6590,
+        "location": 5,
+        "gameBlockSha256": "89ec2b6d9d82f56be66090d4f58cde26c7a2a5ed12988145bf2733c0e9180082",
+        "serializedNode": "CAB-e7a6dd20b4fce4c5d062d607238cc549",
+        "serializedSha256": "698641e53302dd35c5797d930e072de4aeca5446a7cc69c97e7fe100ec2574af",
+        "objectId": "-9087639935540908157",
+        "objectName": "AnimatorEventPattern_Monster_ObsoleteAndroid_Battle",
+        "payloadSha256": "e5e9bdd7ea6a94556beacd0b5fe63bc055a3ea150ee4254c36d06a81fac72ad9"
+      }
+    },
+    "objects": {
+      "ObsoleteAndroid_Execute_Manager": {
+        "name": "ObsoleteAndroid_Execute_Manager",
+        "objectId": "-8097723299484660992",
+        "payloadSha256": "1b5412daa5e3bc32fffa5a3ab0da3f84a5560b564ef14eb6faeecd680866ecfa"
+      },
+      "ObsoleteAndroid_Execute_RealTimeQTE_Manager": {
+        "name": "ObsoleteAndroid_Execute_RealTimeQTE_Manager",
+        "objectId": "-448222138985412812",
+        "payloadSha256": "8950a32438fd2ca8901407f9d6127ea348e03da432f55ea7d4ac6820e462c726"
+      },
+      "ObsoleteAndroid_AidTriggerControl": {
+        "name": "ObsoleteAndroid_AidTriggerControl",
+        "objectId": "4803162010232832111",
+        "payloadSha256": "e8f63e6caeb356cb9b88c6ed8c6c6b5a4f0ac4b3ada08bddc2421eab75775a94"
+      },
+      "ObsoleteAndroid_ATK09_HitCount": {
+        "name": "ObsoleteAndroid_ATK09_HitCount",
+        "objectId": "1665151963578473391",
+        "payloadSha256": "5223f55f276d601e348a5e64914091cb838b63b76d190d04127a24f788d2ce5e"
+      }
+    },
+    "executeManager": {
+      "entryListener": {
+        "jsonPointer": "/AbilityMixins/0/ConfigList/1",
+        "value": {
+          "AnimatorStateName": "Attack_09_01",
+          "FrameCountHigh": 285,
+          "FrameCountLow": 210,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Execute_01_ListenEvade_Modifier"
+          ]
+        }
+      },
+      "stateCoverage": [
+        {
+          "jsonPointer": "/AbilityMixins/0/ConfigList/0",
+          "state": "Attack_09_01",
+          "low": 0,
+          "high": 0,
+          "modifiers": [
+            "ForceCameraLock_Modifier",
+            "Execute_ExSwitchInputMute_Modifier",
+            "Execute_01_Modifier",
+            "Execute_01_LockStunElement_Modifier",
+            "Execute_OverrideSpecialEffectIgnoreTimeScale_Modifier",
+            "ExecuteSkillTag_Modifier",
+            "Execute_UnlimitedSwitchPoint_Modifier"
+          ]
+        },
+        {
+          "jsonPointer": "/AbilityMixins/0/ConfigList/1",
+          "state": "Attack_09_01",
+          "low": 210,
+          "high": 285,
+          "modifiers": [
+            "Execute_01_ListenEvade_Modifier"
+          ]
+        },
+        {
+          "jsonPointer": "/AbilityMixins/0/ConfigList/2",
+          "state": "Attack_09_02",
+          "low": 0,
+          "high": 0,
+          "modifiers": [
+            "Execute_UnlimitedSwitchPoint_Modifier",
+            "Execute_VFX_Modifier",
+            "Execute_WitchSlow_Modifier",
+            "ForceCameraLock_Modifier",
+            "Execute_ExSwitchInputMute_Modifier",
+            "Execute_02_LockStunElement_Modifier"
+          ]
+        },
+        {
+          "jsonPointer": "/AbilityMixins/0/ConfigList/3",
+          "state": "Attack_09_03",
+          "low": 0,
+          "high": 0,
+          "modifiers": [
+            "Execute_UnlimitedSwitchPoint_Modifier",
+            "Execute_VFX_Modifier",
+            "Execute_WitchSlow_Modifier",
+            "ForceCameraLock_Modifier",
+            "Execute_ExSwitchInputMute_Modifier",
+            "Execute_02_LockStunElement_Modifier"
+          ]
+        },
+        {
+          "jsonPointer": "/AbilityMixins/0/ConfigList/4",
+          "state": "Attack_09_04",
+          "low": 0,
+          "high": 0,
+          "modifiers": [
+            "Execute_UnlimitedSwitchPoint_Modifier",
+            "Execute_VFX_Modifier",
+            "Execute_WitchSlow_Modifier",
+            "ForceCameraLock_Modifier",
+            "Execute_ExSwitchInputMute_Modifier",
+            "Execute_02_LockStunElement_Modifier"
+          ]
+        },
+        {
+          "jsonPointer": "/AbilityMixins/0/ConfigList/5",
+          "state": "Attack_09_05",
+          "low": 0,
+          "high": 373,
+          "modifiers": [
+            "Execute_UnlimitedSwitchPoint_Modifier",
+            "Execute_VFX_Modifier",
+            "Execute_WitchSlow_Modifier",
+            "ForceCameraLock_Modifier",
+            "Execute_ExSwitchInputMute_Modifier",
+            "Execute_02_LockStunElement_Modifier"
+          ]
+        },
+        {
+          "jsonPointer": "/AbilityMixins/0/ConfigList/6",
+          "state": "Attack_09_02",
+          "low": 0,
+          "high": 0,
+          "modifiers": [
+            "Execute_Tag_Modifier",
+            "Execute_OverrideSpecialEffectIgnoreTimeScale_Modifier",
+            "ExecuteSkillTag_Modifier"
+          ]
+        },
+        {
+          "jsonPointer": "/AbilityMixins/0/ConfigList/7",
+          "state": "Attack_09_03",
+          "low": 0,
+          "high": 0,
+          "modifiers": [
+            "Execute_Tag_Modifier",
+            "Execute_OverrideSpecialEffectIgnoreTimeScale_Modifier",
+            "ExecuteSkillTag_Modifier"
+          ]
+        },
+        {
+          "jsonPointer": "/AbilityMixins/0/ConfigList/8",
+          "state": "Attack_09_04",
+          "low": 0,
+          "high": 0,
+          "modifiers": [
+            "Execute_Tag_Modifier",
+            "Execute_OverrideSpecialEffectIgnoreTimeScale_Modifier",
+            "ExecuteSkillTag_Modifier"
+          ]
+        },
+        {
+          "jsonPointer": "/AbilityMixins/0/ConfigList/9",
+          "state": "Attack_09_05",
+          "low": 0,
+          "high": 0,
+          "modifiers": [
+            "Execute_Tag_Modifier",
+            "Execute_OverrideSpecialEffectIgnoreTimeScale_Modifier",
+            "ExecuteSkillTag_Modifier"
+          ]
+        },
+        {
+          "jsonPointer": "/AbilityMixins/0/ConfigList/10",
+          "state": "Attack_09_05",
+          "low": 0,
+          "high": 373,
+          "modifiers": [
+            "Execute_ParryHit_Modifier"
+          ]
+        }
+      ],
+      "postSuccessAIWrite": {
+        "jsonPointer": "/DefaultModifier/OnCustomEventReceived/0",
+        "value": {
+          "$type": "BranchOperator",
+          "Conditions": [
+            {
+              "$type": "ByCustomEvent",
+              "EventKey": "Execute_Check_SuccessHit"
+            }
+          ],
+          "SuccessActions": [
+            {
+              "$type": "WriteAIParamAction",
+              "FloatParamValue": 0,
+              "ParamName": "Weight_13_Current",
+              "Target": "Self"
+            }
+          ]
+        }
+      },
+      "entrySuccessTransitionSignal": {
+        "eventPointer": "/Modifiers/Modifier_ListenEvadeSuccess/OnDodgeSuccess/1",
+        "handlerPointer": "/Modifiers/Execute_01_Modifier/OnCustomEventReceived/0",
+        "setTruePointer": "/Modifiers/Execute_01_Modifier/OnCustomEventReceived/0/SuccessActions/5",
+        "setTrueValue": {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsExecuteSuccess",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        "followupEntryResetPointer": "/AbilityMixins/1/ConfigList/2/ActionList/0",
+        "followupEntryResetValue": {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsExecuteSuccess",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      },
+      "perfectCounterStunRecovery": {
+        "specialPointer": "/AbilitySpecials/AS_StunRecoverPercentage/Value",
+        "specialValue": 0.15,
+        "actionPointer": "/DefaultModifier/OnIndirectBeingHit/0/SuccessActions/2",
+        "actionValue": {
+          "$type": "RecoverStunAction",
+          "Percentage": "%AS_StunRecoverPercentage",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "#Monster_Common_Execute_PerfectCounter_AttackProperty_01"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        "limit": "This is a consequence when hit by the common perfect-counter attack property, not an Attack_09 activation predicate."
+      },
+      "finalParry": {
+        "jsonPointer": "/Modifiers/Execute_ParryHit_Modifier",
+        "value": {
+          "Duration": -1,
+          "ModifierStacking": "Unique",
+          "OnAdded": [
+            {
+              "$type": "HandleAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "IgnoreParry"
+              ],
+              "IsAdd": true,
+              "Target": "Self"
+            },
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "Execute_LastAttack_Evade_Detect_Modifier",
+              "Target": "TeamAvatars"
+            }
+          ],
+          "OnBeingHitPre": [
+            {
+              "$type": "BranchOperator",
+              "Conditions": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "ParryAid"
+                  ]
+                },
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByIsInZoneTags",
+                      "Tags": [
+                        "Execution_Success"
+                      ],
+                      "Target": "Self"
+                    }
+                  ]
+                }
+              ],
+              "SuccessActions": [
+                {
+                  "$type": "DamageByAttackPropertyAction",
+                  "AnimEventID": "#Monster_Common_Execute_PerfectCounter_AttackProperty_01",
+                  "Predicates": [
+                    {
+                      "$type": "ByNot",
+                      "Predicates": [
+                        {
+                          "$type": "ByIsInZoneTags",
+                          "Tags": [
+                            "Execution_BeingHit"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "Target": "Self"
+                },
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "Execute_ParryHit_Modifier"
+                }
+              ]
+            }
+          ],
+          "OnRemoved": [
+            {
+              "$type": "HandleAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "IgnoreParry"
+              ],
+              "IsAdd": false,
+              "Target": "Self"
+            },
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "Execute_LastAttack_Evade_Detect_Modifier",
+              "Target": "TeamAvatars"
+            }
+          ]
+        }
+      }
+    },
+    "aidWindows": [
+      {
+        "jsonPointer": "/AbilityMixins/3/ConfigList/0",
+        "state": "Attack_09_01",
+        "low": 244,
+        "high": 274,
+        "width": 30,
+        "modifiers": [
+          "SetAidAttackExtraTargetRangeModifier",
+          "HeavyParryTagContralModifier",
+          "EvadeTagContralModifier",
+          "SwitchTagContralModifier",
+          "FireAttackWarningEffect_Execute"
+        ]
+      },
+      {
+        "jsonPointer": "/AbilityMixins/3/ConfigList/1",
+        "state": "Attack_09_02",
+        "low": 341,
+        "high": 371,
+        "width": 30,
+        "modifiers": [
+          "SetAidAttackExtraTargetRangeModifier",
+          "HeavyParryTagContralModifier",
+          "ParryPriorityAddModifier",
+          "EvadeTagContralModifier",
+          "SwitchTagContralModifier",
+          "FireAttackWarningEffect"
+        ]
+      },
+      {
+        "jsonPointer": "/AbilityMixins/3/ConfigList/2",
+        "state": "Attack_09_03",
+        "low": 341,
+        "high": 371,
+        "width": 30,
+        "modifiers": [
+          "SetAidAttackExtraTargetRangeModifier",
+          "HeavyParryTagContralModifier",
+          "ParryPriorityAddModifier",
+          "EvadeTagContralModifier",
+          "SwitchTagContralModifier",
+          "FireAttackWarningEffect"
+        ]
+      },
+      {
+        "jsonPointer": "/AbilityMixins/3/ConfigList/3",
+        "state": "Attack_09_04",
+        "low": 341,
+        "high": 371,
+        "width": 30,
+        "modifiers": [
+          "SetAidAttackExtraTargetRangeModifier",
+          "HeavyParryTagContralModifier",
+          "ParryPriorityAddModifier",
+          "EvadeTagContralModifier",
+          "SwitchTagContralModifier",
+          "FireAttackWarningEffect"
+        ]
+      },
+      {
+        "jsonPointer": "/AbilityMixins/3/ConfigList/4",
+        "state": "Attack_09_05",
+        "low": 341,
+        "high": 371,
+        "width": 30,
+        "modifiers": [
+          "SetAidAttackExtraTargetRangeModifier",
+          "HeavyParryTagContralModifier",
+          "EvadePriorityAddModifier",
+          "EvadeTagContralModifier",
+          "SwitchTagContralModifier",
+          "FireAttackWarningEffect"
+        ]
+      }
+    ],
+    "stateBindings": [
+      {
+        "jsonPointer": "/bindings/0",
+        "$type": "SkillCharacterScriptConfig+PatternPair",
+        "stateName": "Attack_09",
+        "pattern": "Monster_ObsoleteAndroid_Attack_09"
+      },
+      {
+        "jsonPointer": "/bindings/1",
+        "$type": "SkillCharacterScriptConfig+PatternPair",
+        "stateName": "Attack_09_01",
+        "pattern": "Monster_ObsoleteAndroid_Attack_09_01"
+      },
+      {
+        "jsonPointer": "/bindings/2",
+        "$type": "SkillCharacterScriptConfig+PatternPair",
+        "stateName": "Attack_09_02",
+        "pattern": "Monster_ObsoleteAndroid_Attack_09_02"
+      },
+      {
+        "jsonPointer": "/bindings/3",
+        "$type": "SkillCharacterScriptConfig+PatternPair",
+        "stateName": "Attack_09_03",
+        "pattern": "Monster_ObsoleteAndroid_Attack_09_03"
+      },
+      {
+        "jsonPointer": "/bindings/4",
+        "$type": "SkillCharacterScriptConfig+PatternPair",
+        "stateName": "Attack_09_04",
+        "pattern": "Monster_ObsoleteAndroid_Attack_09_04"
+      },
+      {
+        "jsonPointer": "/bindings/5",
+        "$type": "SkillCharacterScriptConfig+PatternPair",
+        "stateName": "Attack_09_05",
+        "pattern": "Monster_ObsoleteAndroid_Attack_09_05"
+      }
+    ],
+    "battleTimeline": [
+      {
+        "name": "Monster_ObsoleteAndroid_Attack_09",
+        "entries": [
+          {
+            "jsonPointer": "/patterns/0/entries/0",
+            "type": "AnimatorEventSkillStartEntry",
+            "frame": 0,
+            "normalizedTime": 0.0,
+            "StartedSkillName": "Monster_ObsoleteAndroid_Attack_09"
+          },
+          {
+            "jsonPointer": "/patterns/0/entries/1",
+            "type": "AnimatorEventAnimPatternEntry",
+            "frame": 266,
+            "normalizedTime": 0.0,
+            "AnimEventID": "Monster_ObsoleteAndroid_AttackProperty_09_01_Predicate"
+          },
+          {
+            "jsonPointer": "/patterns/0/entries/2",
+            "type": "AnimatorEventAnimEventHandlerEntry",
+            "frame": 275,
+            "normalizedTime": 0.0,
+            "AnimEventID": "Monster_ObsoleteAndroid_AttackProperty_09_01"
+          },
+          {
+            "jsonPointer": "/patterns/0/entries/3",
+            "type": "AnimatorEventAnimPatternEntry",
+            "frame": 360,
+            "normalizedTime": 0.0,
+            "AnimEventID": "Monster_ObsoleteAndroid_AttackProperty_09_02_Predicate"
+          },
+          {
+            "jsonPointer": "/patterns/0/entries/4",
+            "type": "AnimatorEventAnimEventHandlerEntry",
+            "frame": 372,
+            "normalizedTime": 0.0,
+            "AnimEventID": "Monster_ObsoleteAndroid_AttackProperty_09_02"
+          }
+        ]
+      },
+      {
+        "name": "Monster_ObsoleteAndroid_Attack_09_01",
+        "entries": [
+          {
+            "jsonPointer": "/patterns/1/entries/0",
+            "type": "AnimatorEventSkillStartEntry",
+            "frame": 0,
+            "normalizedTime": 0.0,
+            "StartedSkillName": "Monster_ObsoleteAndroid_Attack_09_01"
+          },
+          {
+            "jsonPointer": "/patterns/1/entries/1",
+            "type": "AnimatorEventAnimPatternEntry",
+            "frame": 263,
+            "normalizedTime": 0.0,
+            "AnimEventID": "Monster_ObsoleteAndroid_AttackProperty_Execute_01_Predicate"
+          },
+          {
+            "jsonPointer": "/patterns/1/entries/2",
+            "type": "AnimatorEventAnimEventHandlerEntry",
+            "frame": 275,
+            "normalizedTime": 0.0,
+            "AnimEventID": "Monster_ObsoleteAndroid_AttackProperty_Execute_Check"
+          }
+        ]
+      },
+      {
+        "name": "Monster_ObsoleteAndroid_Attack_09_02",
+        "entries": [
+          {
+            "jsonPointer": "/patterns/2/entries/0",
+            "type": "AnimatorEventSkillStartEntry",
+            "frame": 0,
+            "normalizedTime": 0.0,
+            "StartedSkillName": "Monster_ObsoleteAndroid_Attack_09_02"
+          },
+          {
+            "jsonPointer": "/patterns/2/entries/1",
+            "type": "AnimatorEventAnimEventHandlerEntry",
+            "frame": 372,
+            "normalizedTime": 0.0,
+            "AnimEventID": "Monster_ObsoleteAndroid_AttackProperty_Execute_02_01"
+          }
+        ]
+      },
+      {
+        "name": "Monster_ObsoleteAndroid_Attack_09_03",
+        "entries": [
+          {
+            "jsonPointer": "/patterns/3/entries/0",
+            "type": "AnimatorEventSkillStartEntry",
+            "frame": 0,
+            "normalizedTime": 0.0,
+            "StartedSkillName": "Monster_ObsoleteAndroid_Attack_09_03"
+          },
+          {
+            "jsonPointer": "/patterns/3/entries/1",
+            "type": "AnimatorEventAnimEventHandlerEntry",
+            "frame": 372,
+            "normalizedTime": 0.0,
+            "AnimEventID": "Monster_ObsoleteAndroid_AttackProperty_Execute_02_02"
+          }
+        ]
+      },
+      {
+        "name": "Monster_ObsoleteAndroid_Attack_09_04",
+        "entries": [
+          {
+            "jsonPointer": "/patterns/4/entries/0",
+            "type": "AnimatorEventSkillStartEntry",
+            "frame": 0,
+            "normalizedTime": 0.0,
+            "StartedSkillName": "Monster_ObsoleteAndroid_Attack_09_04"
+          },
+          {
+            "jsonPointer": "/patterns/4/entries/1",
+            "type": "AnimatorEventAnimEventHandlerEntry",
+            "frame": 372,
+            "normalizedTime": 0.0,
+            "AnimEventID": "Monster_ObsoleteAndroid_AttackProperty_Execute_02_03"
+          }
+        ]
+      },
+      {
+        "name": "Monster_ObsoleteAndroid_Attack_09_05",
+        "entries": [
+          {
+            "jsonPointer": "/patterns/5/entries/0",
+            "type": "AnimatorEventSkillStartEntry",
+            "frame": 0,
+            "normalizedTime": 0.0,
+            "StartedSkillName": "Monster_ObsoleteAndroid_Attack_09_05"
+          },
+          {
+            "jsonPointer": "/patterns/5/entries/1",
+            "type": "AnimatorEventAnimEventHandlerEntry",
+            "frame": 372,
+            "normalizedTime": 0.0,
+            "AnimEventID": "Monster_ObsoleteAndroid_AttackProperty_Execute_02_04"
+          }
+        ]
+      }
+    ],
+    "animationTransitionScope": {
+      "AnimatorStateClipNameDic": {
+        "comparer": {},
+        "$items": []
+      },
+      "allSkillStartEntries": "frame=0, normalizedTime=0.0, forceTriggerOnTransitionIn=true",
+      "result": "No start offset, playback speed, jump-to-frame, or shared-clip mapping is present in the scoped entity config and battle patterns.",
+      "successCoupling": "Entry dodge/evade-aid success immediately sends Execute_01_DodgeSuccess and sets Bool_IsExecuteSuccess=true; Attack_09_02 transition-in resets it to false. No explicit follow-up success callback or next-state action for _02..05 appears in the execute manager or aid controller. The animator transition graph was not recovered, so fixed animation-end versus response-immediate transitions remain unresolved."
+    },
+    "entityExecuteControl": {
+      "jsonPointer": "/ClickControls/$items/14/$v",
+      "value": {
+        "$type": "AnimatorButtonControl",
+        "activeSkillName": "Execute",
+        "animatorParamControl": {
+          "$type": "AnimatorParamControl",
+          "triggerDict": {
+            "comparer": {},
+            "$items": [
+              {
+                "$k": "Trigger_PressAttackA",
+                "$v": true
+              }
+            ]
+          },
+          "integerDict": {
+            "comparer": {},
+            "$items": [
+              {
+                "$k": "Int_AttackIndex",
+                "$v": 15
+              }
+            ]
+          },
+          "booleanDict": {
+            "comparer": {},
+            "$items": []
+          }
+        },
+        "dictionaryKey": 91
+      },
+      "limit": "This maps Execute to animator inputs; it is not an AI attack-selection condition."
+    },
+    "qte": {
+      "finalDetectInstallPointer": "/Modifiers/Execute_ParryHit_Modifier/OnAdded/1",
+      "perfectDodgePointer": "/Modifiers/Execute_LastAttack_Evade_Detect_Modifier/OnDodgeSuccess/0",
+      "evadeAidPointers": [
+        "/Modifiers/Execute_LastAttack_Evade_Detect_Modifier/OnSkillStart/0",
+        "/Modifiers/Execute_LastAttack_Evade_Detect_Modifier/OnSkillStart/1"
+      ],
+      "qteStartPointers": [
+        "/Modifiers/Vessel_Execute_RealTimeQTE/OnAdded/0",
+        "/Modifiers/Vessel_Execute_RealTimeQTE_Delay/DelayHandlers/0"
+      ],
+      "configKey": "Common_Monsterr_Execute_RealTimeQTE",
+      "delayConfigSeconds": 0.4,
+      "limit": "The shared QTE follows final Perfect Dodge/Evasive Assist; it is not an additional boss hit or response."
+    },
+    "hitCount": {
+      "jsonPointer": "/DefaultModifier/OnAttackLanded",
+      "sourcePresent": true,
+      "threshold": 4,
+      "appliesTo": [
+        "Monster_ObsoleteAndroid_AttackProperty_09_01",
+        "Monster_ObsoleteAndroid_AttackProperty_09_02",
+        "Monster_ObsoleteAndroid_AttackProperty_Execute_02_04"
+      ],
+      "limit": "Per-target landed-event damage aggregation; not attack count or player-input count."
+    }
+  },
+  "external": [
+    {
+      "url": "https://www.bilibili.com/opus/1166057863949320209",
+      "author": "绝区零 official",
+      "date": "2026-02-06",
+      "claim": "Lists Wishful Finale and A-H0L0 Mirage Archer Unit as separate enemies; does not decide implementation sharing."
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1sw8y6yE4M/",
+      "author": "Benny-ACT",
+      "date": "2026-08-22",
+      "durationSeconds": 436,
+      "observedChapter": "02:52–06:20",
+      "observation": "Caption: activates immediately after stun recovery; dodge or switch when purple cross disappears.",
+      "limit": "Creator explanation, not recovered internal AI predicate or measured physical input timing."
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV15MKQ6nEjN/",
+      "author": "冷焰火LKSX",
+      "date": "2026-06-29",
+      "durationSeconds": 25,
+      "observations": [
+        "~4s purple cross and dodge instruction",
+        "~7s hit example",
+        "~10s switch as rush starts",
+        "~13s after first follow-up, continue responses",
+        "~16s second and third response caption",
+        "~18–19s final: wait until highest, switch or dodge",
+        "~21s counter result"
+      ],
+      "supports": "Entry plus four follow-up roles and different final cadence, in conjunction with five internal response states.",
+      "limit": "Edited explanatory footage with freeze frames and hit example; no physical key overlay or fixed-party proof. Not an uninterrupted no-damage demonstration and not a millisecond chart."
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1CD7V64E9d/",
+      "author": "苏打豆汁er37",
+      "date": "2026-06-26",
+      "durationSeconds": 29,
+      "observation": "First stun end trigger caption and purple light-sword cue",
+      "limit": "Playback later restricted; not used to count responses or establish success."
+    }
+  ],
+  "decision": {
+    "roleModel": "entry plus four follow-ups; actual key/avatar sequence pending fixed-party local footage",
+    "candidateInput": "RMB then Space x4; no game-success or timing adoption",
+    "timingMilliseconds": null,
+    "detectorValidated": false,
+    "profileCreated": false,
+    "preparation": "No separate preparation path found in scoped sources; do not copy Kusarikku LMB5/preparation inputs.",
+    "nextObservation": "One whole manual recording from before first stun recovery through final response, including key overlay and party HUD. Reuse it for notice detection, actual switches and visible timing anchors.",
+    "transitionComparison": "Once successful responses are available, compare early/late legal first follow-up and movement of second follow-up cue; reuse existing recordings before requesting extras."
+  },
+  "review": {
+    "internalIndependentReadOnly": "completed by internal researcher with separate reviewer",
+    "controller": "Compared actual AidTriggerControl five gates and final ParryHit modifier; inspected dedicated creator video",
+    "nativeGameInputCalls": 0,
+    "gameSourceWrites": 0,
+    "remoteMediaDownloaded": false
+  },
+  "canonicalReport": "docs/experiments/arrow-unit-control-skill.md",
+  "retention": {
+    "retained": "Canonical report and focused source evidence only",
+    "removedCompletedIntermediateFiles": 20,
+    "removedBytes": 259990,
+    "archiveCreated": false,
+    "scope": "This checkout .local/arrow-internal and .local/arrow-external after integration"
+  }
+}

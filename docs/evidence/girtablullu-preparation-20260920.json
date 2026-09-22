@@ -1,0 +1,97 @@
+{
+  "date": "2026-09-20",
+  "status": "external-detector-and-four-action-preparation-only",
+  "user_local_recording": "User confirmed no local recording yet. Local detector origin and actual success schedule remain unverified.",
+  "source": {
+    "evidence": "girtablullu-external-video-20260919.json",
+    "id": "oRMiteZP62M",
+    "file": ".local/girtablullu-research/oRMiteZP62M-gir.mp4",
+    "sha256": "b0b5bae42b07ddfda90c1e97e5c5dafa0b2948995cfaf4a39f521b1ea1e7da74",
+    "language": "Korean",
+    "fps": 60,
+    "width": 1280,
+    "height": 720
+  },
+  "template": {
+    "source_decoded_frame": 6600,
+    "roi_xywh": [
+      368,
+      136,
+      528,
+      28
+    ],
+    "threshold": 0.68,
+    "local_validation": false
+  },
+  "replay": {
+    "source_decoded_frames_inclusive": [
+      6000,
+      7500
+    ],
+    "frames": 1501,
+    "matched_frames": 552,
+    "first_matching_source_frame": 6504,
+    "sustained_first_source_frame": 6508,
+    "confirmed_source_frame": 6511,
+    "last_matching_source_frame": 7057,
+    "verified_interval_relative": [
+      490,
+      515,
+      1069
+    ],
+    "passed": true,
+    "native_input_calls": 0,
+    "inspection": "Prompt visible at source6500 and7058; absent at6480 and7070. Original assumed last bound6900 failed because real prompt remained visible. Visual review corrected the test bound to7069 without changing detector threshold/code. This interval review is not an independent accuracy dataset.",
+    "time_origin": "Runner schedules relative to the first frame of the sustained confirmed match, not the confirmation frame. Replay60fps sampling is not live8ms polling latency. Do not subtract a universal40ms."
+  },
+  "profile": {
+    "actions": 4,
+    "keys": [
+      "RMB",
+      "Space",
+      "Space",
+      "Space"
+    ],
+    "party": "Aria -> Namgungwoo -> Sunna; proposed comparison condition, not a confirmed Gir route",
+    "candidate_evidence": "girtablullu-candidates-20260919.json",
+    "candidate_basis": "Historical foreign manual-prompt anchor. Values are copied only to a separate no-input draft fixture; NOT local detector-relative input timings. No published runtime profile or adopted success window.",
+    "baseline_fixture_ms": [
+      4000,
+      5600,
+      6650,
+      8100
+    ]
+  },
+  "verification": {
+    "native_checks_passed": 78,
+    "selected_profile_combinations_passed": 9,
+    "native_input_calls": 0,
+    "ui_smoke": "four-action grid and uniform key selection inspected",
+    "existing_last_profile_unchanged": true
+  },
+  "artifacts": [
+    {
+      "path": ".local/girtablullu-preparation/girtablullu-detector-draft.json",
+      "sha256": "3a8719c5212fcf282122b5c45002def89a919706815912991b5eac6a6ac58f72"
+    },
+    {
+      "path": ".local/girtablullu-preparation/notice-template-girtablullu.png",
+      "sha256": "a8ba0b8e87fb6cc3748e8564222f1a89d201146f167c1e97f0f1b417a86a7f0e"
+    },
+    {
+      "path": ".local/girtablullu-preparation/context-verified.json",
+      "sha256": "9aa58d0f65eef8e2525d39f61c6d6fb8e2914f74883512538c08e21d2386b3df"
+    },
+    {
+      "path": ".local/girtablullu-preparation/four-action-test.json",
+      "sha256": "7545d3cdf1e81750acc17398291e6d7fd8fd69cff6e4dee00c8a5ca40fe1c52b"
+    }
+  ],
+  "next": "One user local manual-play recording, from before the prompt through the last response/result, preferably current party starting Aria. No experiment F8 or automatic input needed. Analyze local prompt and path before creating live candidate settings. Full success not required to inspect prompt; failures do not establish later success windows.",
+  "retention": {
+    "date": "2026-09-21",
+    "status": "summarized originals retired after user-approved closure",
+    "inventory": "experiment-cleanup.json#current",
+    "meaning": "Historical raw log, source video and scratch paths describe provenance; only current.retainedOriginals are promised to remain. Conditions, outcomes, counterexamples and measurement limits stay in this evidence."
+  }
+}

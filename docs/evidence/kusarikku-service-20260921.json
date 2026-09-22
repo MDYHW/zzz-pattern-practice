@@ -1,0 +1,206 @@
+{
+  "date": "2026-09-21",
+  "status": "completed",
+  "authorization": "User selected the latest manual-WASD no-damage perfect response, adopted measured windows, and requested Kusarikku closure/cleanup before Arrow Unit research.",
+  "representative": {
+    "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-21_21-12-19.mp4",
+    "sha256": "0796e27ecab9738aac1c6b54ee82e7084b144b300f8af285b5dc7d8855be3e8c",
+    "containerCreationTimeUtc": "2026-09-21T12:12:19Z",
+    "width": 1280,
+    "height": 720,
+    "fps": 60,
+    "decodedFrameCount": 1307,
+    "decodedDurationSeconds": 21.783333333333335,
+    "trial": {
+      "rawFile": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-6ced000c8efe45289fe7fef918cf0068.json",
+      "rawSha256": "b9902b313f8e83033c0c0cdb6c6d9833d412b87ae0435b1d28e6abc44be8846a",
+      "resultFile": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-6ced000c8efe45289fe7fef918cf0068.json.result.json",
+      "resultSha256": "ab034f00848ae7c292ff674ea6178aa014686f3f71870adeb3b48d6b92a999fe",
+      "detectedImageSha256": "1e0c2fb69afb79889b814c9f3121476689673d79db2315e333afbcf6bec24362",
+      "trialId": "2d776364eca0473496aabc25413466e6",
+      "version": "3.9.0",
+      "status": "submitted-not-game-verified",
+      "resultBits": "11111",
+      "resultSource": "user direct entry after the trial",
+      "preparationNote": "",
+      "f8Utc": "2026-09-21T12:12:20.9738642Z",
+      "startedUtc": "2026-09-21T12:12:21.3205523Z",
+      "endedUtc": "2026-09-21T12:12:38.1835403Z",
+      "profileHash": "e046df209df99e5a98b85b2d49f0bc7dccece82e53fbd43f7cdbdb6c1ec68251",
+      "sourceProfileHash": "e7dd57d400f554c311a3a04bff98a761ff93e2c3bc5e254e75ce3c50df5efa52",
+      "templateHash": "39194a973610342fb85047e35ec976235b1102ede77ca13a68eb2b752e0fc8cb",
+      "profileSnapshotComparison": "Structurally identical to the 21-09-08 trial snapshot despite the different ProfileHash; all adopted timings, holds, detector settings, party, start character, and manual-movement permission match."
+    },
+    "recordingConnection": {
+      "conclusion": "confirmed source-to-trial pairing",
+      "basis": "MP4 creation second and trial F8/start/end interval agree, then five LMB, two preparation RMB, entry RMB, and four Space overlay events preserve the logged order, holds, and notice-relative schedule.",
+      "obsLedger": "No fresh OBS RecordingId or OutputPath links this file. RecordingAtF8 was stale UNKNOWN with null identifiers and policy-classified OFF.",
+      "recordingAtF8State": "UNKNOWN",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "loggedRecordingClassification": "OFF",
+      "interpretation": "The OFF label is an UNKNOWN-to-OFF operating policy, not direct evidence that OBS was not recording and not a contradiction of the source file."
+    }
+  },
+  "decision": {
+    "representative": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-21_21-12-19.mp4",
+    "sourceSha256": "0796e27ecab9738aac1c6b54ee82e7084b144b300f8af285b5dc7d8855be3e8c",
+    "selection": "adopt",
+    "basis": [
+      "latest of the two user-approved manual-WASD, no-damage, perfect-response takes",
+      "matching result sidecar records 11111",
+      "exact LMB5, preparation RMB, entry RMB, and four Space overlay sequence aligns with the matching v3.9.0 trial",
+      "all three party members are shown at current HP equal to maximum HP during or after the sequence",
+      "manual D and W fills are directly visible; the selected take has the cleaner continuous D observation"
+    ],
+    "clip": {
+      "startFrame": 330,
+      "endFrameExclusive": 1230,
+      "startSeconds": 5.5,
+      "endSeconds": 20.5,
+      "durationFrames": 900,
+      "durationSeconds": 15,
+      "patternOriginSourceFrame": 455,
+      "patternTimeZeroAtClipTimeSeconds": 2.0833333333333335,
+      "outcomeReviewSourceFrame": 1200,
+      "startBasis": "Fifth LMB overlay release is complete before the clip: its final filled frame is295 and frame296 is first absent. The clip begins34 source frames after first absence and125 frames before the detector first match.",
+      "endBasis": "The final Space response and its visible result resolve before the exclusive frame1230 boundary.",
+      "motionCaveat": "A separate full-animation-completion frame is not safely observable. Chained LMB5 damage and residual effects continue up to the control-notice onset, so the clip start is described as after LMB5 input release, not after complete animation recovery."
+    }
+  },
+  "detector": {
+    "method": "actual local f815 ControlExperiment.exe --profile kusarikku-execute-01.json --notice-replay over full-video RGB24 ROI; no native input",
+    "roi": [
+      368,
+      136,
+      528,
+      28
+    ],
+    "threshold": 0.68,
+    "firstMatchFrame": 455,
+    "firstMatchSourceSeconds": 7.583333333333333,
+    "confirmedFrame": 458,
+    "confirmedSourceSeconds": 7.633333333333334,
+    "lastMatchingFrame": 789,
+    "matchingFrameCount": 331,
+    "nativeInputCalls": 0,
+    "passed": true,
+    "runnerFirstMatchCaptureEndMs": 5874.3206,
+    "runnerConfirmedCaptureEndMs": 5899.0912,
+    "runnerFirstScore": 0.8265486725663717,
+    "warning": "Runner milliseconds are not source-video seconds."
+  },
+  "hpAndOutcome": {
+    "userReport": "manual WASD plus automatic combat-input, no-damage perfect video approved for representative adoption",
+    "resultBits": "11111",
+    "hpChecks": [
+      {
+        "frame": 0,
+        "character": "엽빛나",
+        "current": 10906,
+        "maximum": 10906
+      },
+      {
+        "frame": 900,
+        "character": "수나",
+        "current": 11746,
+        "maximum": 11746
+      },
+      {
+        "frame": 1020,
+        "character": "자오",
+        "current": 30506,
+        "maximum": 30506
+      },
+      {
+        "frame": 1080,
+        "character": "엽빛나",
+        "current": 10906,
+        "maximum": 10906
+      },
+      {
+        "frame": 1200,
+        "character": "수나",
+        "current": 11746,
+        "maximum": 11746
+      }
+    ],
+    "interpretation": "The explicit user no-damage report is corroborated by every party member appearing at maximum HP during the reviewed flow. The empty preparationNote alone is not treated as proof."
+  },
+  "alternate": {
+    "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-21_21-09-08.mp4",
+    "sha256": "944f48db179dff866369cb5bd58b787f68a134c98e934d382dfb70da90ba2449",
+    "trial": {
+      "rawFile": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-225b9db31c7f4daabcaf2e5dd8085fff.json",
+      "rawSha256": "ad1eba6501d37650af7c8e6302826924ce43b0149223457823ceadaa0587f68e",
+      "resultFileSha256": "a8d4eaa9183282326741a0ad7fa0c01265da9fbf3d2aab25f2546597d32a31b3",
+      "detectedImageSha256": "88455ca63f80250e8b0673d2831b75a5345c062d13cedf110bd2010da95b4a59",
+      "trialId": "6f30084e776944b4b3e87c5f13fb54ab",
+      "version": "3.9.0",
+      "status": "submitted-not-game-verified",
+      "resultBits": "11111",
+      "f8Utc": "2026-09-21T12:09:10.4113268Z",
+      "startedUtc": "2026-09-21T12:09:10.7670802Z",
+      "endedUtc": "2026-09-21T12:09:27.6304443Z",
+      "recordingAtF8State": "UNKNOWN",
+      "loggedRecordingClassification": "OFF",
+      "recordingInterpretation": "same stale UNKNOWN-to-OFF policy caveat as the selected take"
+    },
+    "decision": "Same baseline11111; replaced by latest take, original and raw trial deleted after summary."
+  },
+  "alignment": "service-media-20260920.json / kusarikku-execute-01 contains the single translation and all service input/direction frames.",
+  "validation": {
+    "typecheck": "passed",
+    "webUnitTests": 72,
+    "productionBuild": "passed",
+    "browserCoverage": "All12 scenarios passed across initial run and focused correction reruns; boss-count expectation updated from2 to3; narrow preparation labels visually reviewed.",
+    "independentReview": "No significant issue found; input end boundary and five scored cues confirmed.",
+    "nativeGameInputCalls": 0,
+    "runnerCheck": {
+      "status": "passed",
+      "nodeTests": 42,
+      "profiles": [
+        {
+          "id": "girtablullu-stagnant-execute-01",
+          "checks": 148,
+          "combinations": 9,
+          "nativeInputCalls": 0
+        },
+        {
+          "id": "kusarikku-execute-01",
+          "checks": 148,
+          "combinations": 9,
+          "nativeInputCalls": 0
+        },
+        {
+          "id": "vesper-execute-01",
+          "checks": 148,
+          "combinations": 9,
+          "nativeInputCalls": 0
+        },
+        {
+          "id": "vesper-execute-02",
+          "checks": 148,
+          "combinations": 9,
+          "nativeInputCalls": 0
+        }
+      ],
+      "mediaAlignment": "all4 recordings passed; Kusarikku overlay residual0frames for all5 cues"
+    },
+    "decodedClip": {
+      "frames": 900,
+      "width": 1280,
+      "height": 720,
+      "durationSeconds": 15,
+      "audio": "AAC stereo48000Hz, preserved at1x",
+      "decode": "ffmpeg complete without error"
+    }
+  },
+  "limits": [
+    "Input overlays show rendered key state, not physical switch or OS injection latency.",
+    "Offline notice replay reproduces the profile matcher on video frames; it does not reproduce live capture delay.",
+    "11111 is the user's game-outcome entry for entry plus four responses; it does not itself encode preparation damage.",
+    "The explicit user no-damage report and video HP review supply the no-damage evidence.",
+    "Manual WASD intervals are unscored route evidence, not measured dodge windows or spatial-success boundaries."
+  ],
+  "cleanup": "experiment-cleanup.json.current"
+}

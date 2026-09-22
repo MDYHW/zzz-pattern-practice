@@ -1,0 +1,958 @@
+{
+  "date": "2026-09-20",
+  "purpose": "Six single-display recordings with native lane; analyze relative visual timing, not physical switch/game input latency.",
+  "method": {
+    "videoFps": 60,
+    "gameClient": [
+      1920,
+      1080
+    ],
+    "output": [
+      1280,
+      720
+    ],
+    "laneX": 16,
+    "laneWidth": 1248,
+    "inputX": 265.6,
+    "rowY": 670,
+    "formula": "displayMs=(earlyMs+lateMs)/2 - (tileCenterX-inputX)/laneWidth*3000",
+    "notice": "RGB yellow-shape Dice >= 0.68 on 528x28 crop at368,136. Compressed video criterion, not exact live first match.",
+    "alignment": "median(videoPTS - pixel-reconstructed lane time); includes compositor/capture delay. Not a pure detection origin.",
+    "laneSampleFilter": "Full uncut colored runs, bridge gaps <=3px, expected width within6px, alignment proximity300ms to initial notice+80ms; robust150ms median exclusion.",
+    "webNoticeRelativeToAdoptedOriginMs": {
+      "vesper-execute-01": 33.3333333333333,
+      "vesper-execute-02": 0
+    },
+    "limitations": [
+      "No physical switch or game receive timestamp.",
+      "Same display capture does not eliminate different game/overlay rendering paths.",
+      "RGB criterion affected by compression and display scaling.",
+      "Game results are user-recorded; green is only lane acceptance.",
+      "No claim that every boss cue is aligned exactly."
+    ],
+    "ptsVerification": [
+      {
+        "stamp": "17-42-36",
+        "frames": 1602,
+        "firstPts": 0.0,
+        "lastPts": 26.7,
+        "maxErrorFromFrameOver60Ms": 16.66666666666572,
+        "stepMinMs": 16.665999999997183,
+        "stepMaxMs": 33.33299999999895
+      },
+      {
+        "stamp": "17-44-47",
+        "frames": 1693,
+        "firstPts": 0.0,
+        "lastPts": 28.2,
+        "maxErrorFromFrameOver60Ms": 0.00033333333604446125,
+        "stepMinMs": 16.665999999997183,
+        "stepMaxMs": 16.667000000001764
+      },
+      {
+        "stamp": "17-57-40",
+        "frames": 1223,
+        "firstPts": 0.0,
+        "lastPts": 20.366667,
+        "maxErrorFromFrameOver60Ms": 0.00033333333604446125,
+        "stepMinMs": 16.665999999997183,
+        "stepMaxMs": 16.667000000001764
+      },
+      {
+        "stamp": "17-59-39",
+        "frames": 1629,
+        "firstPts": 0.0,
+        "lastPts": 27.133333,
+        "maxErrorFromFrameOver60Ms": 0.00033333333604446125,
+        "stepMinMs": 16.665999999997183,
+        "stepMaxMs": 16.667000000001764
+      },
+      {
+        "stamp": "18-01-05",
+        "frames": 1243,
+        "firstPts": 0.0,
+        "lastPts": 20.7,
+        "maxErrorFromFrameOver60Ms": 0.00033333333604446125,
+        "stepMinMs": 16.665999999997183,
+        "stepMaxMs": 16.667000000001764
+      },
+      {
+        "stamp": "18-02-44",
+        "frames": 2190,
+        "firstPts": 0.0,
+        "lastPts": 36.5,
+        "maxErrorFromFrameOver60Ms": 16.66666666666572,
+        "stepMinMs": 16.665999999997183,
+        "stepMaxMs": 33.33299999999895
+      }
+    ],
+    "cfrVerification": [
+      {
+        "stamp": "17-42-36",
+        "usedFrames": 1603,
+        "explicitCfrFrames": 1603,
+        "differentFrames": []
+      },
+      {
+        "stamp": "18-02-44",
+        "usedFrames": 2191,
+        "explicitCfrFrames": 2191,
+        "differentFrames": []
+      }
+    ],
+    "videoTimeBasis": "Decoded CFR60 timeline. Two source recordings have one missing frame; decoded rows exactly match explicit fps=60 normalization, including the duplicated frame. Other four source timelines are CFR60."
+  },
+  "runs": [
+    {
+      "stamp": "17-42-36",
+      "log": "20260920-174312-vesper-execute-02-1fd9b455.json",
+      "logSha256": "72494bf841c91cef1e8178d6ea163fa5b7ebd8d4e77c8a6c44dfad77c38825b2",
+      "video": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_17-42-36.mp4",
+      "videoSha256": "b72ac4e38d65e5d1d884fefe8af97325be03ab07d635b9b10fbc640f6bf442e0",
+      "pattern": "vesper-execute-02",
+      "gameOutcome": "11111",
+      "noticeThresholdFrame": 609,
+      "noticeThresholdSec": 10.15,
+      "laneAlignmentSec": 10.145833333333334,
+      "alignmentMinusNoticeMs": -4.16666666666643,
+      "laneRate": 0.9995364037157151,
+      "alignmentPercentilesMs": [
+        10107.05128205128,
+        10123.71794871795,
+        10145.833333333334,
+        10178.998397435898,
+        10203.926282051281
+      ],
+      "sameFrameTimeSpreadMaxMs": 3.846153846154266,
+      "sampleCount": 775,
+      "filterAudit": {
+        "beforeRobustCount": 775,
+        "afterRobustCount": 775,
+        "removed": 0,
+        "preFilterLaneRate": 0.9995364037157151,
+        "preFilterMedianSec": 10.145833333333334,
+        "uniqueFrames": 532,
+        "perFrameMedianAlignmentSec": 10.145833333333334
+      },
+      "startedUtc": "2026-09-20T08:42:40.4193557Z",
+      "endedUtc": "2026-09-20T08:42:57.4199802Z",
+      "laneOutcome": "11111",
+      "inputs": [
+        {
+          "Key": "RMB",
+          "ActionId": "entry",
+          "NearestActionId": "entry",
+          "HookQpc": 4151478151742,
+          "TimeMs": 3252.7216000000008,
+          "HookToUiMs": 14.9285,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -47.27839999999924,
+          "InsideWindow": true,
+          "Accepted": true
+        },
+        {
+          "Key": "Space",
+          "ActionId": "hit-1",
+          "NearestActionId": "hit-1",
+          "HookQpc": 4151491006425,
+          "TimeMs": 4538.189899999999,
+          "HookToUiMs": 24.9924,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -161.8101000000006,
+          "InsideWindow": true,
+          "Accepted": true
+        },
+        {
+          "Key": "Space",
+          "ActionId": "hit-2",
+          "NearestActionId": "hit-2",
+          "HookQpc": 4151506098575,
+          "TimeMs": 6047.4048999999995,
+          "HookToUiMs": 19.5418,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -152.59510000000046,
+          "InsideWindow": true,
+          "Accepted": true
+        },
+        {
+          "Key": "Space",
+          "ActionId": "hit-3",
+          "NearestActionId": "hit-3",
+          "HookQpc": 4151520666843,
+          "TimeMs": 7504.2317,
+          "HookToUiMs": 16.1116,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -345.7682999999997,
+          "InsideWindow": true,
+          "Accepted": true
+        },
+        {
+          "Key": "Space",
+          "ActionId": "hit-4",
+          "NearestActionId": "hit-4",
+          "HookQpc": 4151539930676,
+          "TimeMs": 9430.615,
+          "HookToUiMs": 9.1787,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -169.38500000000022,
+          "InsideWindow": true,
+          "Accepted": true
+        }
+      ],
+      "firstCaptureDurationMs": 41.50450000000001,
+      "paintIntervalMedianMs": 28.60885000000053,
+      "paintIntervalMaxMs": 49.738100000000486,
+      "greenFeedback": [
+        {
+          "actionId": "entry",
+          "hookMs": 3252.7216000000008,
+          "firstGreenFrame": 805,
+          "greenDrawnTimeMs": 3282.2115384615386,
+          "drawTimeMinusHookMs": 29.489938461537804,
+          "hookToUiMs": 14.9285
+        },
+        {
+          "actionId": "hit-1",
+          "hookMs": 4538.189899999999,
+          "firstGreenFrame": 884,
+          "greenDrawnTimeMs": 4610.096153846154,
+          "drawTimeMinusHookMs": 71.90625384615487,
+          "hookToUiMs": 24.9924
+        },
+        {
+          "actionId": "hit-2",
+          "hookMs": 6047.4048999999995,
+          "firstGreenFrame": 972,
+          "greenDrawnTimeMs": 6068.990384615385,
+          "drawTimeMinusHookMs": 21.585484615385212,
+          "hookToUiMs": 19.5418
+        },
+        {
+          "actionId": "hit-3",
+          "hookMs": 7504.2317,
+          "firstGreenFrame": 1061,
+          "greenDrawnTimeMs": 7536.298076923077,
+          "drawTimeMinusHookMs": 32.06637692307686,
+          "hookToUiMs": 16.1116
+        },
+        {
+          "actionId": "hit-4",
+          "hookMs": 9430.615,
+          "firstGreenFrame": 1174,
+          "greenDrawnTimeMs": 9440.14423076923,
+          "drawTimeMinusHookMs": 9.529230769230708,
+          "hookToUiMs": 9.1787
+        }
+      ]
+    },
+    {
+      "stamp": "17-44-47",
+      "log": "20260920-174704-vesper-execute-01-3fe1a14f.json",
+      "logSha256": "f87cddd8f4b24afdeb9e3c996130c652fa635a039132cb3a1ecfd199220d9094",
+      "video": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_17-44-47.mp4",
+      "videoSha256": "e25fa687c790d5499a3660e089665f750d07407ac5ac111be9d18c3e6b83e31e",
+      "pattern": "vesper-execute-01",
+      "gameOutcome": "101111",
+      "noticeThresholdFrame": 525,
+      "noticeThresholdSec": 8.75,
+      "laneAlignmentSec": 8.849839743589744,
+      "alignmentMinusNoticeMs": 99.83974358974379,
+      "laneRate": 1.0008374545864396,
+      "alignmentPercentilesMs": [
+        8768.509615384615,
+        8816.169871794871,
+        8849.639423076922,
+        8930.95753205128,
+        8992.067307692309
+      ],
+      "sameFrameTimeSpreadMaxMs": 4.567307692306713,
+      "sampleCount": 898,
+      "filterAudit": {
+        "beforeRobustCount": 909,
+        "afterRobustCount": 898,
+        "removed": 11,
+        "preFilterLaneRate": 1.0008945674078922,
+        "preFilterMedianSec": 8.849839743589744,
+        "uniqueFrames": 687,
+        "perFrameMedianAlignmentSec": 8.849439102564101
+      },
+      "startedUtc": "2026-09-20T08:44:51.5374539Z",
+      "endedUtc": "2026-09-20T08:45:10.8273309Z",
+      "laneOutcome": "100101",
+      "inputs": [
+        {
+          "Key": "RMB",
+          "ActionId": "entry",
+          "NearestActionId": "entry",
+          "HookQpc": 4152783547265,
+          "TimeMs": 4232.2919,
+          "HookToUiMs": 19.3244,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -67.70809999999983,
+          "InsideWindow": true,
+          "Accepted": true
+        },
+        {
+          "Key": "Space",
+          "ActionId": null,
+          "NearestActionId": "hit-1",
+          "HookQpc": 4152800771348,
+          "TimeMs": 5954.700200000001,
+          "HookToUiMs": 4.2898,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -645.2997999999989,
+          "InsideWindow": false,
+          "Accepted": false
+        },
+        {
+          "Key": "Space",
+          "ActionId": null,
+          "NearestActionId": "hit-2",
+          "HookQpc": 4152815649196,
+          "TimeMs": 7442.485000000001,
+          "HookToUiMs": 27.71,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -507.5149999999994,
+          "InsideWindow": false,
+          "Accepted": false
+        },
+        {
+          "Key": "Space",
+          "ActionId": "hit-3",
+          "NearestActionId": "hit-3",
+          "HookQpc": 4152835970089,
+          "TimeMs": 9474.5743,
+          "HookToUiMs": 35.2623,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -275.4256999999998,
+          "InsideWindow": true,
+          "Accepted": true
+        },
+        {
+          "Key": "Space",
+          "ActionId": null,
+          "NearestActionId": "hit-4",
+          "HookQpc": 4152846920186,
+          "TimeMs": 10569.584,
+          "HookToUiMs": 10.231,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -580.4159999999993,
+          "InsideWindow": false,
+          "Accepted": false
+        },
+        {
+          "Key": "Space",
+          "ActionId": "hit-5",
+          "NearestActionId": "hit-5",
+          "HookQpc": 4152873436923,
+          "TimeMs": 13221.257700000002,
+          "HookToUiMs": 2.619,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -228.74229999999807,
+          "InsideWindow": true,
+          "Accepted": true
+        }
+      ],
+      "firstCaptureDurationMs": 61.178499999999985,
+      "paintIntervalMedianMs": 26.674349999999322,
+      "paintIntervalMaxMs": 123.77920000000086,
+      "greenFeedback": [
+        {
+          "actionId": "entry",
+          "hookMs": 4232.2919,
+          "firstGreenFrame": 788,
+          "greenDrawnTimeMs": 4285.576923076923,
+          "drawTimeMinusHookMs": 53.2850230769227,
+          "hookToUiMs": 19.3244
+        },
+        {
+          "actionId": "hit-3",
+          "hookMs": 9474.5743,
+          "firstGreenFrame": 1101,
+          "greenDrawnTimeMs": 9535.817307692309,
+          "drawTimeMinusHookMs": 61.24300769230831,
+          "hookToUiMs": 35.2623
+        },
+        {
+          "actionId": "hit-5",
+          "hookMs": 13221.257700000002,
+          "firstGreenFrame": 1323,
+          "greenDrawnTimeMs": 13225.48076923077,
+          "drawTimeMinusHookMs": 4.223069230767578,
+          "hookToUiMs": 2.619
+        }
+      ]
+    },
+    {
+      "stamp": "17-57-40",
+      "log": "20260920-175810-vesper-execute-02-10c4fbcb.json",
+      "logSha256": "596614152220e27b66fafc34a72fcf4c7835f0205d1c51cbfafb92516d2a4b31",
+      "video": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_17-57-40.mp4",
+      "videoSha256": "a39a0f4c250a6f2a91de4d871ae4af30d38444608ecdd7adbfe951d52c1cb64f",
+      "pattern": "vesper-execute-02",
+      "gameOutcome": "11111",
+      "noticeThresholdFrame": 322,
+      "noticeThresholdSec": 5.366666666666666,
+      "laneAlignmentSec": 5.425000000000001,
+      "alignmentMinusNoticeMs": 58.33333333333446,
+      "laneRate": 0.9997766778846617,
+      "alignmentPercentilesMs": [
+        5389.663461538459,
+        5400.444711538462,
+        5425.000000000001,
+        5458.681891025642,
+        5478.525641025641
+      ],
+      "sameFrameTimeSpreadMaxMs": 3.846153846154266,
+      "sampleCount": 772,
+      "filterAudit": {
+        "beforeRobustCount": 772,
+        "afterRobustCount": 772,
+        "removed": 0,
+        "preFilterLaneRate": 0.9997766778846617,
+        "preFilterMedianSec": 5.425000000000001,
+        "uniqueFrames": 529,
+        "perFrameMedianAlignmentSec": 5.425000000000001
+      },
+      "startedUtc": "2026-09-20T08:57:43.5206233Z",
+      "endedUtc": "2026-09-20T08:57:56.1159172Z",
+      "laneOutcome": "11111",
+      "inputs": [
+        {
+          "Key": "RMB",
+          "ActionId": "entry",
+          "NearestActionId": "entry",
+          "HookQpc": 4160463755241,
+          "TimeMs": 3104.1650999999997,
+          "HookToUiMs": 2.3497,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -195.8349000000003,
+          "InsideWindow": true,
+          "Accepted": true
+        },
+        {
+          "Key": "Space",
+          "ActionId": "hit-1",
+          "NearestActionId": "hit-1",
+          "HookQpc": 4160477617095,
+          "TimeMs": 4490.3505000000005,
+          "HookToUiMs": 29.6434,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -209.64949999999953,
+          "InsideWindow": true,
+          "Accepted": true
+        },
+        {
+          "Key": "Space",
+          "ActionId": "hit-2",
+          "NearestActionId": "hit-2",
+          "HookQpc": 4160492587950,
+          "TimeMs": 5987.436,
+          "HookToUiMs": 25.848,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -212.5640000000003,
+          "InsideWindow": true,
+          "Accepted": true
+        },
+        {
+          "Key": "Space",
+          "ActionId": "hit-3",
+          "NearestActionId": "hit-3",
+          "HookQpc": 4160508025636,
+          "TimeMs": 7531.204599999999,
+          "HookToUiMs": 7.7393,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -318.7954000000009,
+          "InsideWindow": true,
+          "Accepted": true
+        },
+        {
+          "Key": "Space",
+          "ActionId": "hit-4",
+          "NearestActionId": "hit-4",
+          "HookQpc": 4160525897803,
+          "TimeMs": 9318.4213,
+          "HookToUiMs": 8.4255,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -281.5787,
+          "InsideWindow": true,
+          "Accepted": true
+        }
+      ],
+      "firstCaptureDurationMs": 32.00620000000026,
+      "paintIntervalMedianMs": 28.298199999999497,
+      "paintIntervalMaxMs": 40.9713999999999,
+      "greenFeedback": [
+        {
+          "actionId": "entry",
+          "hookMs": 3104.1650999999997,
+          "firstGreenFrame": 511,
+          "greenDrawnTimeMs": 3107.9326923076924,
+          "drawTimeMinusHookMs": 3.7675923076926665,
+          "hookToUiMs": 2.3497
+        },
+        {
+          "actionId": "hit-1",
+          "hookMs": 4490.3505000000005,
+          "firstGreenFrame": 598,
+          "greenDrawnTimeMs": 4557.211538461538,
+          "drawTimeMinusHookMs": 66.86103846153765,
+          "hookToUiMs": 29.6434
+        },
+        {
+          "actionId": "hit-2",
+          "hookMs": 5987.436,
+          "firstGreenFrame": 686,
+          "greenDrawnTimeMs": 6024.5192307692305,
+          "drawTimeMinusHookMs": 37.083230769230795,
+          "hookToUiMs": 25.848
+        },
+        {
+          "actionId": "hit-3",
+          "hookMs": 7531.204599999999,
+          "firstGreenFrame": 779,
+          "greenDrawnTimeMs": 7569.951923076923,
+          "drawTimeMinusHookMs": 38.74732307692375,
+          "hookToUiMs": 7.7393
+        },
+        {
+          "actionId": "hit-4",
+          "hookMs": 9318.4213,
+          "firstGreenFrame": 884,
+          "greenDrawnTimeMs": 9325.961538461539,
+          "drawTimeMinusHookMs": 7.540238461539047,
+          "hookToUiMs": 8.4255
+        }
+      ]
+    },
+    {
+      "stamp": "17-59-39",
+      "log": "20260920-180022-vesper-execute-01-703f78fd.json",
+      "logSha256": "950d342179482a809436e88611f779f5f30252281f5c9bc088413ebb690e8a50",
+      "video": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_17-59-39.mp4",
+      "videoSha256": "34adbca9a896846838694171e66eb08e3835022ae1509c3667f73ba6189c0b0a",
+      "pattern": "vesper-execute-01",
+      "gameOutcome": "011111",
+      "noticeThresholdFrame": 495,
+      "noticeThresholdSec": 8.25,
+      "laneAlignmentSec": 8.29775641025641,
+      "alignmentMinusNoticeMs": 47.756410256409865,
+      "laneRate": 0.9997025788093191,
+      "alignmentPercentilesMs": [
+        8237.099358974358,
+        8272.804487179488,
+        8297.75641025641,
+        8335.897435897437,
+        8376.602564102563
+      ],
+      "sameFrameTimeSpreadMaxMs": 4.086538461539021,
+      "sampleCount": 925,
+      "filterAudit": {
+        "beforeRobustCount": 925,
+        "afterRobustCount": 925,
+        "removed": 0,
+        "preFilterLaneRate": 0.9997025788093191,
+        "preFilterMedianSec": 8.29775641025641,
+        "uniqueFrames": 696,
+        "perFrameMedianAlignmentSec": 8.29775641025641
+      },
+      "startedUtc": "2026-09-20T08:59:42.5457145Z",
+      "endedUtc": "2026-09-20T09:00:01.6510936Z",
+      "laneOutcome": "001111",
+      "inputs": [
+        {
+          "Key": "Space",
+          "ActionId": null,
+          "NearestActionId": "hit-1",
+          "HookQpc": 4161710819526,
+          "TimeMs": 6138.1497,
+          "HookToUiMs": 1.4657,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -461.85030000000006,
+          "InsideWindow": false,
+          "Accepted": false
+        },
+        {
+          "Key": "Space",
+          "ActionId": "hit-2",
+          "NearestActionId": "hit-2",
+          "HookQpc": 4161725558690,
+          "TimeMs": 7612.0661,
+          "HookToUiMs": 24.7534,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -337.9339,
+          "InsideWindow": true,
+          "Accepted": true
+        },
+        {
+          "Key": "Space",
+          "ActionId": "hit-3",
+          "NearestActionId": "hit-3",
+          "HookQpc": 4161745193071,
+          "TimeMs": 9575.5042,
+          "HookToUiMs": 20.6187,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -174.4958000000006,
+          "InsideWindow": true,
+          "Accepted": true
+        },
+        {
+          "Key": "Space",
+          "ActionId": "hit-4",
+          "NearestActionId": "hit-4",
+          "HookQpc": 4161757793116,
+          "TimeMs": 10835.5087,
+          "HookToUiMs": 0.7031,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -314.4912999999997,
+          "InsideWindow": true,
+          "Accepted": true
+        },
+        {
+          "Key": "Space",
+          "ActionId": "hit-5",
+          "NearestActionId": "hit-5",
+          "HookQpc": 4161781449366,
+          "TimeMs": 13201.1337,
+          "HookToUiMs": 9.8734,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -248.86629999999968,
+          "InsideWindow": true,
+          "Accepted": true
+        }
+      ],
+      "firstCaptureDurationMs": 34.88420000000042,
+      "paintIntervalMedianMs": 27.67679999999973,
+      "paintIntervalMaxMs": 59.37359999999899,
+      "greenFeedback": [
+        {
+          "actionId": "hit-2",
+          "hookMs": 7612.0661,
+          "firstGreenFrame": 957,
+          "greenDrawnTimeMs": 7680.7692307692305,
+          "drawTimeMinusHookMs": 68.70313076923048,
+          "hookToUiMs": 24.7534
+        },
+        {
+          "actionId": "hit-3",
+          "hookMs": 9575.5042,
+          "firstGreenFrame": 1073,
+          "greenDrawnTimeMs": 9605.528846153846,
+          "drawTimeMinusHookMs": 30.024646153846334,
+          "hookToUiMs": 20.6187
+        },
+        {
+          "actionId": "hit-4",
+          "hookMs": 10835.5087,
+          "firstGreenFrame": 1148,
+          "greenDrawnTimeMs": 10853.365384615385,
+          "drawTimeMinusHookMs": 17.856684615384438,
+          "hookToUiMs": 0.7031
+        },
+        {
+          "actionId": "hit-5",
+          "hookMs": 13201.1337,
+          "firstGreenFrame": 1289,
+          "greenDrawnTimeMs": 13211.057692307691,
+          "drawTimeMinusHookMs": 9.923992307691151,
+          "hookToUiMs": 9.8734
+        }
+      ]
+    },
+    {
+      "stamp": "18-01-05",
+      "log": "20260920-180131-vesper-execute-02-3c44f8dd.json",
+      "logSha256": "9379653d62b0b41d9ec8f0578aa2aa58b89fd7385f84df2f9ce0eb923eac1932",
+      "video": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_18-01-05.mp4",
+      "videoSha256": "4a9803568d039c72e02cfc2ce2ff4820abd91bef6488178b351876c0e7e1410b",
+      "pattern": "vesper-execute-02",
+      "gameOutcome": "11111",
+      "noticeThresholdFrame": 337,
+      "noticeThresholdSec": 5.616666666666666,
+      "laneAlignmentSec": 5.630208333333333,
+      "alignmentMinusNoticeMs": 13.541666666666785,
+      "laneRate": 0.9992262104727506,
+      "alignmentPercentilesMs": [
+        5585.737179487179,
+        5604.743589743589,
+        5630.208333333333,
+        5662.564102564102,
+        5696.79487179487
+      ],
+      "sameFrameTimeSpreadMaxMs": 3.846153846154266,
+      "sampleCount": 773,
+      "filterAudit": {
+        "beforeRobustCount": 773,
+        "afterRobustCount": 773,
+        "removed": 0,
+        "preFilterLaneRate": 0.9992262104727506,
+        "preFilterMedianSec": 5.630208333333333,
+        "uniqueFrames": 529,
+        "perFrameMedianAlignmentSec": 5.630048076923076
+      },
+      "startedUtc": "2026-09-20T09:01:07.8207379Z",
+      "endedUtc": "2026-09-20T09:01:21.1561647Z",
+      "laneOutcome": "11111",
+      "inputs": [
+        {
+          "Key": "RMB",
+          "ActionId": "entry",
+          "NearestActionId": "entry",
+          "HookQpc": 4162515948805,
+          "TimeMs": 3285.2931999999996,
+          "HookToUiMs": 3.3982,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -14.706800000000385,
+          "InsideWindow": true,
+          "Accepted": true
+        },
+        {
+          "Key": "Space",
+          "ActionId": "hit-1",
+          "NearestActionId": "hit-1",
+          "HookQpc": 4162528162765,
+          "TimeMs": 4506.689200000001,
+          "HookToUiMs": 14.197,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -193.3107999999993,
+          "InsideWindow": true,
+          "Accepted": true
+        },
+        {
+          "Key": "Space",
+          "ActionId": "hit-2",
+          "NearestActionId": "hit-2",
+          "HookQpc": 4162544346767,
+          "TimeMs": 6125.089399999999,
+          "HookToUiMs": 28.0894,
+          "OsEventToHookMs": 15,
+          "NearestLateDifferenceMs": -74.91060000000107,
+          "InsideWindow": true,
+          "Accepted": true
+        },
+        {
+          "Key": "Space",
+          "ActionId": "hit-3",
+          "NearestActionId": "hit-3",
+          "HookQpc": 4162560648466,
+          "TimeMs": 7755.2593,
+          "HookToUiMs": 13.4796,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -94.74070000000029,
+          "InsideWindow": true,
+          "Accepted": true
+        },
+        {
+          "Key": "Space",
+          "ActionId": "hit-4",
+          "NearestActionId": "hit-4",
+          "HookQpc": 4162577583171,
+          "TimeMs": 9448.7298,
+          "HookToUiMs": 0.8628,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -151.27020000000084,
+          "InsideWindow": true,
+          "Accepted": true
+        }
+      ],
+      "firstCaptureDurationMs": 32.85600000000022,
+      "paintIntervalMedianMs": 28.743100000000595,
+      "paintIntervalMaxMs": 41.97580000000016,
+      "greenFeedback": [
+        {
+          "actionId": "entry",
+          "hookMs": 3285.2931999999996,
+          "firstGreenFrame": 535,
+          "greenDrawnTimeMs": 3290.625,
+          "drawTimeMinusHookMs": 5.331800000000385,
+          "hookToUiMs": 3.3982
+        },
+        {
+          "actionId": "hit-1",
+          "hookMs": 4506.689200000001,
+          "firstGreenFrame": 608,
+          "greenDrawnTimeMs": 4522.3557692307695,
+          "drawTimeMinusHookMs": 15.6665692307688,
+          "hookToUiMs": 14.197
+        },
+        {
+          "actionId": "hit-2",
+          "hookMs": 6125.089399999999,
+          "firstGreenFrame": 708,
+          "greenDrawnTimeMs": 6161.538461538462,
+          "drawTimeMinusHookMs": 36.449061538462956,
+          "hookToUiMs": 28.0894
+        },
+        {
+          "actionId": "hit-3",
+          "hookMs": 7755.2593,
+          "firstGreenFrame": 803,
+          "greenDrawnTimeMs": 7768.2692307692305,
+          "drawTimeMinusHookMs": 13.009930769230778,
+          "hookToUiMs": 13.4796
+        },
+        {
+          "actionId": "hit-4",
+          "hookMs": 9448.7298,
+          "firstGreenFrame": 905,
+          "greenDrawnTimeMs": 9449.759615384615,
+          "drawTimeMinusHookMs": 1.0298153846160858,
+          "hookToUiMs": 0.8628
+        }
+      ]
+    },
+    {
+      "stamp": "18-02-44",
+      "log": "20260920-180328-vesper-execute-01-948f9e3a.json",
+      "logSha256": "c1b2ba2efe77560feb1eb20f27af66c1ed24ae143b9acab92505958fc3d1cebd",
+      "video": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_18-02-44.mp4",
+      "videoSha256": "bd5fbd768dcc791b99146c4ac84731fd8317a137507804b284bf5bd8efb1dd9b",
+      "pattern": "vesper-execute-01",
+      "gameOutcome": "111111",
+      "noticeThresholdFrame": 996,
+      "noticeThresholdSec": 16.6,
+      "laneAlignmentSec": 16.61522435897436,
+      "alignmentMinusNoticeMs": 15.224358974357699,
+      "laneRate": 1.000299218649688,
+      "alignmentPercentilesMs": [
+        16577.083333333336,
+        16586.883012820515,
+        16615.22435897436,
+        16645.408653846152,
+        16670.99358974359
+      ],
+      "sameFrameTimeSpreadMaxMs": 6.25,
+      "sampleCount": 927,
+      "filterAudit": {
+        "beforeRobustCount": 927,
+        "afterRobustCount": 927,
+        "removed": 0,
+        "preFilterLaneRate": 1.000299218649688,
+        "preFilterMedianSec": 16.61522435897436,
+        "uniqueFrames": 698,
+        "perFrameMedianAlignmentSec": 16.615184294871796
+      },
+      "startedUtc": "2026-09-20T09:02:46.9751158Z",
+      "endedUtc": "2026-09-20T09:03:14.9965089Z",
+      "laneOutcome": "001111",
+      "inputs": [
+        {
+          "Key": "RMB",
+          "ActionId": null,
+          "NearestActionId": "entry",
+          "HookQpc": 4163623107204,
+          "TimeMs": 4036.3363999999983,
+          "HookToUiMs": 19.5844,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -263.6636000000017,
+          "InsideWindow": false,
+          "Accepted": false
+        },
+        {
+          "Key": "Space",
+          "ActionId": null,
+          "NearestActionId": "hit-1",
+          "HookQpc": 4163645065611,
+          "TimeMs": 6232.177099999999,
+          "HookToUiMs": 25.1108,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -367.822900000001,
+          "InsideWindow": false,
+          "Accepted": false
+        },
+        {
+          "Key": "Space",
+          "ActionId": "hit-2",
+          "NearestActionId": "hit-2",
+          "HookQpc": 4163658757742,
+          "TimeMs": 7601.3902,
+          "HookToUiMs": 1.3104,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -348.6098000000002,
+          "InsideWindow": true,
+          "Accepted": true
+        },
+        {
+          "Key": "Space",
+          "ActionId": "hit-3",
+          "NearestActionId": "hit-3",
+          "HookQpc": 4163678229064,
+          "TimeMs": 9548.5224,
+          "HookToUiMs": 14.9229,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -201.47760000000017,
+          "InsideWindow": true,
+          "Accepted": true
+        },
+        {
+          "Key": "Space",
+          "ActionId": "hit-4",
+          "NearestActionId": "hit-4",
+          "HookQpc": 4163691560443,
+          "TimeMs": 10881.660299999998,
+          "HookToUiMs": 20.8393,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -268.33970000000227,
+          "InsideWindow": true,
+          "Accepted": true
+        },
+        {
+          "Key": "Space",
+          "ActionId": "hit-5",
+          "NearestActionId": "hit-5",
+          "HookQpc": 4163715007752,
+          "TimeMs": 13226.3912,
+          "HookToUiMs": 0.3801,
+          "OsEventToHookMs": 0,
+          "NearestLateDifferenceMs": -223.60879999999997,
+          "InsideWindow": true,
+          "Accepted": true
+        }
+      ],
+      "firstCaptureDurationMs": 44.39130000000114,
+      "paintIntervalMedianMs": 27.771349999999074,
+      "paintIntervalMaxMs": 49.380799999999,
+      "greenFeedback": [
+        {
+          "actionId": "hit-2",
+          "hookMs": 7601.3902,
+          "firstGreenFrame": 1452,
+          "greenDrawnTimeMs": 7605.048076923077,
+          "drawTimeMinusHookMs": 3.6578769230773105,
+          "hookToUiMs": 1.3104
+        },
+        {
+          "actionId": "hit-3",
+          "hookMs": 9548.5224,
+          "firstGreenFrame": 1570,
+          "greenDrawnTimeMs": 9570.673076923076,
+          "drawTimeMinusHookMs": 22.15067692307639,
+          "hookToUiMs": 14.9229
+        },
+        {
+          "actionId": "hit-4",
+          "hookMs": 10881.660299999998,
+          "firstGreenFrame": 1650,
+          "greenDrawnTimeMs": 10901.442307692309,
+          "drawTimeMinusHookMs": 19.7820076923108,
+          "hookToUiMs": 20.8393
+        },
+        {
+          "actionId": "hit-5",
+          "hookMs": 13226.3912,
+          "firstGreenFrame": 1792,
+          "greenDrawnTimeMs": 13268.75,
+          "drawTimeMinusHookMs": 42.358799999999974,
+          "hookToUiMs": 0.3801
+        }
+      ]
+    }
+  ],
+  "artifactRoot": "<PRIVATE_HOME>\\Documents\\Codex\\lane-capture-analysis-20260920",
+  "retention": {
+    "date": "2026-09-21",
+    "status": "summarized originals retired after user-approved closure",
+    "inventory": "experiment-cleanup.json#current",
+    "meaning": "Historical raw log, source video and scratch paths describe provenance; only current.retainedOriginals are promised to remain. Conditions, outcomes, counterexamples and measurement limits stay in this evidence."
+  }
+}

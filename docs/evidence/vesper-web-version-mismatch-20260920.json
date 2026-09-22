@@ -1,0 +1,466 @@
+{
+  "date": "2026-09-20",
+  "recording": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_18-34-14.mp4",
+  "recordingSha256": "460b96bf480c8094ae3241b2ce18eb83d6f3b0621865e007ab85d916ab303778",
+  "finding": "Recorded web uses old video and old windows matching clean main checkout, not current f815. Server no longer listening; exact process path not directly observed.",
+  "oldRoot": "<PRIVATE_HOME>\\Documents\\Codex\\2026-09-14\\zzz-pattern-practice",
+  "currentRoot": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice",
+  "oldWindows": [
+    [
+      4100,
+      4250
+    ],
+    [
+      6250,
+      6600
+    ],
+    [
+      7500,
+      7900
+    ],
+    [
+      9350,
+      9650
+    ],
+    [
+      10650,
+      11050
+    ],
+    [
+      12950,
+      13400
+    ]
+  ],
+  "currentWindows": [
+    [
+      4100,
+      4300
+    ],
+    [
+      6250,
+      6600
+    ],
+    [
+      7500,
+      7950
+    ],
+    [
+      9350,
+      9750
+    ],
+    [
+      10650,
+      11150
+    ],
+    [
+      12950,
+      13450
+    ]
+  ],
+  "oldClipOriginMs": 66.66666666666667,
+  "currentClipOriginMs": 183.33333333333331,
+  "originWarning": "Different clips and source recordings. Difference116.667ms is not itself a measured synchronization error.",
+  "oldProfileSourceSha256": "4ac8898e0f38a6a5cb35953e8cec19a9e799a2d6c9524342a81e62b5b79ad6cc",
+  "currentProfileSourceSha256": "d91c14705e1b1e62cda35476d589cb3f7c04e5b8706ff9ea641d9291dab50439",
+  "inputPositions": [
+    {
+      "action": "entry",
+      "nativeTimeMs": 4036.3363999999983,
+      "nativeWindow": [
+        4100,
+        4300
+      ],
+      "nativeWindowPositionPercent": -31.831800000000836,
+      "webResultPixelBounds": [
+        311,
+        328
+      ],
+      "webResultInputPixel": 328.5,
+      "webOldWindowPositionPercentApprox": 102.94117647058823
+    },
+    {
+      "action": "hit-1",
+      "nativeTimeMs": 6232.177099999999,
+      "nativeWindow": [
+        6250,
+        6600
+      ],
+      "nativeWindowPositionPercent": -5.092257142857436,
+      "webResultPixelBounds": [
+        419,
+        459
+      ],
+      "webResultInputPixel": 432,
+      "webOldWindowPositionPercentApprox": 32.5
+    },
+    {
+      "action": "hit-2",
+      "nativeTimeMs": 7601.3902,
+      "nativeWindow": [
+        7500,
+        7950
+      ],
+      "nativeWindowPositionPercent": 22.531155555555515,
+      "webResultPixelBounds": [
+        550,
+        596
+      ],
+      "webResultInputPixel": 579,
+      "webOldWindowPositionPercentApprox": 63.04347826086957
+    },
+    {
+      "action": "hit-3",
+      "nativeTimeMs": 9548.5224,
+      "nativeWindow": [
+        9350,
+        9750
+      ],
+      "nativeWindowPositionPercent": 49.63059999999996,
+      "webResultPixelBounds": [
+        687,
+        721
+      ],
+      "webResultInputPixel": 740.5,
+      "webOldWindowPositionPercentApprox": 157.35294117647058
+    },
+    {
+      "action": "hit-4",
+      "nativeTimeMs": 10881.660299999998,
+      "nativeWindow": [
+        10650,
+        11150
+      ],
+      "nativeWindowPositionPercent": 46.33205999999955,
+      "webResultPixelBounds": [
+        812,
+        858
+      ],
+      "webResultInputPixel": 850,
+      "webOldWindowPositionPercentApprox": 82.6086956521739
+    },
+    {
+      "action": "hit-5",
+      "nativeTimeMs": 13226.3912,
+      "nativeWindow": [
+        12950,
+        13450
+      ],
+      "nativeWindowPositionPercent": 55.278240000000004,
+      "webResultPixelBounds": [
+        950,
+        1001
+      ],
+      "webResultInputPixel": 991,
+      "webOldWindowPositionPercentApprox": 80.3921568627451
+    }
+  ],
+  "resultReadout": "Percentages for recorded web are approximate screenshot geometry, ~2px uncertainty; outside-window marks >100%. No exact hidden browser timestamps claimed.",
+  "mediaPixelMatches": [
+    {
+      "label": "current",
+      "asset": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\public\\media\\vesper-execute-01.mp4",
+      "sha256": "ee3151f6af2f44b4a032fae9cd8ea409185a0b37a5ef71778533398f4173223b",
+      "frames": 1008,
+      "matches": [
+        {
+          "recordingSec": 5,
+          "bestFrame": 191,
+          "clipSec": 3.183333333333333,
+          "mae": 26.99625,
+          "nearFrames": [
+            110,
+            111,
+            129,
+            130,
+            131,
+            132,
+            133,
+            134,
+            135,
+            136,
+            137,
+            138,
+            155,
+            156,
+            157,
+            158,
+            159,
+            160,
+            161,
+            162,
+            163,
+            164,
+            165,
+            166,
+            167,
+            168,
+            169,
+            170,
+            171,
+            172,
+            173,
+            175,
+            176,
+            177,
+            178,
+            179,
+            180,
+            181,
+            182,
+            183,
+            184,
+            185,
+            186,
+            187,
+            188,
+            189,
+            190,
+            191,
+            192,
+            193,
+            194,
+            195,
+            196,
+            197,
+            198,
+            199,
+            200,
+            201,
+            202,
+            203,
+            204,
+            205,
+            206,
+            207,
+            208,
+            209,
+            210,
+            211,
+            212,
+            213,
+            214,
+            215,
+            216,
+            217,
+            218,
+            219,
+            220,
+            221,
+            222,
+            223,
+            224,
+            225,
+            226,
+            227,
+            228,
+            229,
+            230,
+            231,
+            232,
+            233,
+            234,
+            235,
+            236,
+            237,
+            238,
+            240,
+            241,
+            242,
+            243,
+            244,
+            245
+          ]
+        },
+        {
+          "recordingSec": 8,
+          "bestFrame": 402,
+          "clipSec": 6.7,
+          "mae": 10.224560185185185,
+          "nearFrames": [
+            400,
+            401,
+            402
+          ]
+        },
+        {
+          "recordingSec": 11,
+          "bestFrame": 585,
+          "clipSec": 9.75,
+          "mae": 10.914074074074074,
+          "nearFrames": [
+            581,
+            582,
+            583,
+            584,
+            585
+          ]
+        },
+        {
+          "recordingSec": 14,
+          "bestFrame": 762,
+          "clipSec": 12.7,
+          "mae": 12.235833333333334,
+          "nearFrames": [
+            761,
+            762
+          ]
+        }
+      ]
+    },
+    {
+      "label": "main",
+      "asset": "<PRIVATE_HOME>\\Documents\\Codex\\2026-09-14\\zzz-pattern-practice\\public\\media\\vesper-execute-01.mp4",
+      "sha256": "dcc241feb52e78a7d3d61704a8902d39a7b77b15f492d8a2246f3cf8fccb41b4",
+      "frames": 921,
+      "matches": [
+        {
+          "recordingSec": 5,
+          "bestFrame": 202,
+          "clipSec": 3.3666666666666667,
+          "mae": 2.8648842592592594,
+          "nearFrames": [
+            202
+          ]
+        },
+        {
+          "recordingSec": 8,
+          "bestFrame": 378,
+          "clipSec": 6.3,
+          "mae": 3.180509259259259,
+          "nearFrames": [
+            378,
+            379
+          ]
+        },
+        {
+          "recordingSec": 11,
+          "bestFrame": 560,
+          "clipSec": 9.333333333333334,
+          "mae": 2.978287037037037,
+          "nearFrames": [
+            560,
+            561,
+            562
+          ]
+        },
+        {
+          "recordingSec": 14,
+          "bestFrame": 742,
+          "clipSec": 12.366666666666667,
+          "mae": 2.969699074074074,
+          "nearFrames": [
+            741,
+            742
+          ]
+        }
+      ]
+    }
+  ],
+  "sameFrameLaneAndVideoChecks": [
+    {
+      "recordingSec": 5,
+      "tiles": [
+        {
+          "action": 0,
+          "left": 610,
+          "right": 652,
+          "laneTimeSec": 3.3511474793077496,
+          "matchedVideoSec": 3.3666666666666667,
+          "laneLeadMs": -15.519187358917108,
+          "nearFrameLeadRangeMs": [
+            -15.519187358917108,
+            -15.519187358917108
+          ]
+        }
+      ]
+    },
+    {
+      "recordingSec": 8,
+      "tiles": [
+        {
+          "action": 1,
+          "left": 387,
+          "right": 488,
+          "laneTimeSec": 6.256339352896915,
+          "matchedVideoSec": 6.3,
+          "laneLeadMs": -43.660647103084926,
+          "nearFrameLeadRangeMs": [
+            -60.327313769751534,
+            -43.660647103084926
+          ]
+        },
+        {
+          "action": 2,
+          "left": 756,
+          "right": 872,
+          "laneTimeSec": 6.256508653122649,
+          "matchedVideoSec": 6.3,
+          "laneLeadMs": -43.49134687735123,
+          "nearFrameLeadRangeMs": [
+            -60.15801354401784,
+            -43.49134687735123
+          ]
+        }
+      ]
+    },
+    {
+      "recordingSec": 11,
+      "tiles": [
+        {
+          "action": 3,
+          "left": 408,
+          "right": 498,
+          "laneTimeSec": 9.278856282919488,
+          "matchedVideoSec": 9.333333333333334,
+          "laneLeadMs": -54.47705041384587,
+          "nearFrameLeadRangeMs": [
+            -87.81038374717909,
+            -54.47705041384587
+          ]
+        },
+        {
+          "action": 4,
+          "left": 795,
+          "right": 907,
+          "laneTimeSec": 9.281226486079758,
+          "matchedVideoSec": 9.333333333333334,
+          "laneLeadMs": -52.10684725357595,
+          "nearFrameLeadRangeMs": [
+            -85.44018058690916,
+            -52.10684725357595
+          ]
+        }
+      ]
+    },
+    {
+      "recordingSec": 14,
+      "tiles": [
+        {
+          "action": 5,
+          "left": 577,
+          "right": 704,
+          "laneTimeSec": 12.31898043641836,
+          "matchedVideoSec": 12.366666666666667,
+          "laneLeadMs": -47.686230248306316,
+          "nearFrameLeadRangeMs": [
+            -47.686230248306316,
+            -31.01956358163882
+          ]
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Four real browser screenshots only; no universal render-latency claim.",
+    "Native and web were separate manual attempts, not identical physical inputs.",
+    "Old narrower late endpoints explain part of relative-position difference; different recorded play and reaction may contribute.",
+    "No source, server, profile, or game result was changed."
+  ],
+  "artifactRoot": "<PRIVATE_HOME>\\Documents\\Codex\\lane-capture-analysis-20260920\\web-comparison",
+  "retention": {
+    "date": "2026-09-21",
+    "status": "summarized originals retired after user-approved closure",
+    "inventory": "experiment-cleanup.json#current",
+    "meaning": "Historical raw log, source video and scratch paths describe provenance; only current.retainedOriginals are promised to remain. Conditions, outcomes, counterexamples and measurement limits stay in this evidence."
+  }
+}

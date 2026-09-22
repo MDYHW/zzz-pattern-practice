@@ -1,0 +1,143 @@
+{
+  "purpose": "Offline causal trigger feasibility; all four clips are development data, not independent validation or live capture tests.",
+  "roi": [
+    1158,
+    621,
+    1214,
+    670
+  ],
+  "cases": [
+    {
+      "id": "N1",
+      "start_after_second_release": 691,
+      "expected_ready3": 766,
+      "end_before_third_overlay": 781,
+      "max_pre_ready_ratio_including_unarmed_second_ready": 0.3498542274052478,
+      "checks": [
+        {
+          "threshold": 0.25,
+          "trigger": {
+            "onset": 766,
+            "confirmed": 767
+          },
+          "matches_annotation": true
+        },
+        {
+          "threshold": 0.3,
+          "trigger": {
+            "onset": 766,
+            "confirmed": 767
+          },
+          "matches_annotation": true
+        },
+        {
+          "threshold": 0.33,
+          "trigger": {
+            "onset": 766,
+            "confirmed": 767
+          },
+          "matches_annotation": true
+        }
+      ]
+    },
+    {
+      "id": "N2",
+      "start_after_second_release": 663,
+      "expected_ready3": 738,
+      "end_before_third_overlay": 770,
+      "max_pre_ready_ratio_including_unarmed_second_ready": 0.34730320699708456,
+      "checks": [
+        {
+          "threshold": 0.25,
+          "trigger": {
+            "onset": 738,
+            "confirmed": 739
+          },
+          "matches_annotation": true
+        },
+        {
+          "threshold": 0.3,
+          "trigger": {
+            "onset": 738,
+            "confirmed": 739
+          },
+          "matches_annotation": true
+        },
+        {
+          "threshold": 0.33,
+          "trigger": {
+            "onset": 738,
+            "confirmed": 739
+          },
+          "matches_annotation": true
+        }
+      ]
+    },
+    {
+      "id": "N3",
+      "start_after_second_release": 734,
+      "expected_ready3": 822,
+      "end_before_third_overlay": 825,
+      "max_pre_ready_ratio_including_unarmed_second_ready": 0.3487609329446064,
+      "checks": [
+        {
+          "threshold": 0.25,
+          "trigger": {
+            "onset": 822,
+            "confirmed": 823
+          },
+          "matches_annotation": true
+        },
+        {
+          "threshold": 0.3,
+          "trigger": {
+            "onset": 822,
+            "confirmed": 823
+          },
+          "matches_annotation": true
+        },
+        {
+          "threshold": 0.33,
+          "trigger": {
+            "onset": 822,
+            "confirmed": 823
+          },
+          "matches_annotation": true
+        }
+      ]
+    },
+    {
+      "id": "N4",
+      "start_after_second_release": 558,
+      "expected_ready3": 633,
+      "end_before_third_overlay": 666,
+      "max_pre_ready_ratio_including_unarmed_second_ready": 0.3520408163265306,
+      "checks": [
+        {
+          "threshold": 0.25,
+          "trigger": {
+            "onset": 633,
+            "confirmed": 634
+          },
+          "matches_annotation": true
+        },
+        {
+          "threshold": 0.3,
+          "trigger": {
+            "onset": 633,
+            "confirmed": 634
+          },
+          "matches_annotation": true
+        },
+        {
+          "threshold": 0.33,
+          "trigger": {
+            "onset": 633,
+            "confirmed": 634
+          },
+          "matches_annotation": true
+        }
+      ]
+    }
+  ]
+}

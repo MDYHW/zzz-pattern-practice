@@ -1,0 +1,155 @@
+{
+  "reviewed_on": "2026-09-17",
+  "threshold_ms": 50,
+  "scope": "Rendered video-clock pixels versus rendered lane edges, same application cue values. Trace changes instrumentation; no threshold or retry relaxation.",
+  "limits": "These local Chromium samples support separating detailed trace from real-time checks. They do not prove decoder stalls impossible or guarantee loaded-device performance.",
+  "runs": {
+    "trace_off_control": [
+      {
+        "frame": 68,
+        "videoTime": 1.1333333333333333,
+        "guideTime": 1.116788321167883,
+        "differenceMs": 16.545012165450235,
+        "screencastTimestamp": 1789572426.518127,
+        "captureBefore": {
+          "videoTime": 1.087483,
+          "guideTime": "1.072263"
+        },
+        "captureAfter": {
+          "videoTime": 1.230589,
+          "guideTime": "1.225163"
+        },
+        "input": 1.337718,
+        "before": 1.327214,
+        "after": 1.383594
+      },
+      {
+        "frame": 306,
+        "videoTime": 5.1,
+        "guideTime": 5.086940389627737,
+        "differenceMs": 13.05961037226222,
+        "screencastTimestamp": 1789572430.499983,
+        "captureBefore": {
+          "videoTime": 5.081215,
+          "guideTime": "5.070485"
+        },
+        "captureAfter": {
+          "videoTime": 5.202184,
+          "guideTime": "5.184786"
+        },
+        "input": 5.330261,
+        "before": 5.324378,
+        "after": 5.37278
+      },
+      {
+        "frame": 488,
+        "videoTime": 8.133333333333333,
+        "guideTime": 8.099753348423357,
+        "differenceMs": 33.57998490997538,
+        "screencastTimestamp": 1789572433.495538,
+        "captureBefore": {
+          "videoTime": 8.063244,
+          "guideTime": "8.050486"
+        },
+        "captureAfter": {
+          "videoTime": 8.184219,
+          "guideTime": "8.166970"
+        },
+        "input": 8.270494,
+        "before": 8.265779,
+        "after": 8.303895
+      }
+    ],
+    "trace_restored_control": [
+      {
+        "frame": 70,
+        "videoTime": 1.1666666666666667,
+        "guideTime": 1.135036496350365,
+        "differenceMs": 31.630170316301776,
+        "screencastTimestamp": 1789572507.908999,
+        "captureBefore": {
+          "videoTime": 1.16997,
+          "guideTime": "1.137593"
+        },
+        "captureAfter": {
+          "videoTime": 1.344587,
+          "guideTime": "1.323558"
+        },
+        "input": 1.562909,
+        "before": 1.533632,
+        "after": 1.670569
+      },
+      {
+        "frame": 306,
+        "videoTime": 5.1,
+        "guideTime": 5.041319951671533,
+        "differenceMs": 58.680048328466405,
+        "screencastTimestamp": 1789572511.839617,
+        "captureBefore": {
+          "videoTime": 5.12523,
+          "guideTime": "5.113739"
+        },
+        "captureAfter": {
+          "videoTime": 5.274459,
+          "guideTime": "5.213724"
+        }
+      }
+    ],
+    "final_default_trace_off": [
+      {
+        "frame": 67,
+        "videoTime": 1.1166666666666667,
+        "guideTime": 1.1076642335766422,
+        "differenceMs": 9.002433090024464,
+        "screencastTimestamp": 1789572682.483618,
+        "captureBefore": {
+          "videoTime": 1.080564,
+          "guideTime": "1.066421"
+        },
+        "captureAfter": {
+          "videoTime": 1.211634,
+          "guideTime": "1.194205"
+        },
+        "input": 1.318651,
+        "before": 1.310341,
+        "after": 1.359553
+      },
+      {
+        "frame": 308,
+        "videoTime": 5.133333333333334,
+        "guideTime": 5.105188564810219,
+        "differenceMs": 28.14476852311465,
+        "screencastTimestamp": 1789572686.476743,
+        "captureBefore": {
+          "videoTime": 5.065296,
+          "guideTime": "5.045725"
+        },
+        "captureAfter": {
+          "videoTime": 5.198182,
+          "guideTime": "5.191923"
+        },
+        "input": 5.281568,
+        "before": 5.271956,
+        "after": 5.307832
+      },
+      {
+        "frame": 487,
+        "videoTime": 8.116666666666667,
+        "guideTime": 8.086067217036495,
+        "differenceMs": 30.599449630171804,
+        "screencastTimestamp": 1789572689.476357,
+        "captureBefore": {
+          "videoTime": 8.080564,
+          "guideTime": "8.066150"
+        },
+        "captureAfter": {
+          "videoTime": 8.208303,
+          "guideTime": "8.205325"
+        },
+        "input": 8.287295,
+        "before": 8.283872,
+        "after": 8.320236
+      }
+    ]
+  }
+}

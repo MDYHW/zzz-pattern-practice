@@ -1,0 +1,141 @@
+{
+  "date": "2026-09-19",
+  "purpose": "Controller judgment continuity: regression cases plus one unseen synthetic transfer case. Not a game experiment or model benchmark.",
+  "baseline": {
+    "technical_resume_commit": "1cf1a2836959fe4e14c111cea9335f7755b74c87",
+    "external_research_checkpoint": "fdbfa57",
+    "failure": "Technical resume passed, but subsequent reasoning did not adequately use Vesper widths/exceptions and preferred an unvalidated average-rate mapping. This is an observed prior failure, not a controlled baseline run of this case set."
+  },
+  "context": {
+    "respondent": "/root/judgment_resume_eval",
+    "fork_turns": "none",
+    "reviewer": "/root (document author; reviewed the separate respondent answer)",
+    "model": "Inherited session model; no model comparison performed.",
+    "provided": [
+      "repository path",
+      "canonical project documents",
+      "tools/research/judgment-cases.json",
+      "one synthetic prompt below"
+    ],
+    "excluded": [
+      "parent conversation",
+      "other task history",
+      "previous evaluation results"
+    ],
+    "constraints": [
+      "read only",
+      "no game input",
+      "no source media or external web remeasurement"
+    ],
+    "followup": "Scope reminder only: answer the four cases plus the supplied hypothetical; no additional research required.",
+    "input_document_sha256": {
+      "AGENTS.md": "c3ed2c81219214272d8fbd88c84dd0a2cacd63aadc6018b616f0c3ed513857f0",
+      "README.md": "976eaecbeedb3c13f34cef095a6529f3d50fb6d29c57a14ac94fad2a1720ae63",
+      "docs/product.md": "7e852ae0c496372c6767da1dbf85eb3419e69cb60ec37ad9e4c07b7d7141d6ad",
+      "docs/research.md": "b830193942f6bc145f51f8e963ae18f51088bba0d93857f16df29aaa8fcc1270",
+      "docs/boss-control-patterns.md": "3be56e0b64a4ef8910f0f2a4d114abeb032fd5a925d63704026a599c14ccd918",
+      "tools/research/judgment-cases.json": "c644b6cfb002e36a97b9c32fd6928b30568e3b085682e6c5e2bc026bf1b51e3a"
+    }
+  },
+  "cases": [
+    {
+      "id": "transfer",
+      "result": "pass",
+      "answer_excerpt": "후속 대응이 가까운1·2타의 여유가 제한되고, 마지막3타는 상대적으로 여유가 있을 가능성",
+      "review": "Used Gir22/34 and first18 against Vesper28/58/88 and first34. Used external4.2/5.7/6.8/8.2 as response locations, refused fixed latency or proportional width copying, and explained that a short local input link distinguishes origin-only shift from per-hit/party-path changes."
+    },
+    {
+      "id": "counterexample",
+      "result": "pass",
+      "answer_excerpt": "400ms라는 서비스 선택값과 약425ms라는 불확실한 여유 추정",
+      "review": "Retained three intermittent failures at7350,7400–7800 adopted400 and untested7375/425 hypothesis. Did not force2nd/3rd true widths equal or reopen25ms testing."
+    },
+    {
+      "id": "retrospective",
+      "result": "pass",
+      "answer_excerpt": "1500×32/71 = 676.1ms; 1616.6667×32/78 = 663.2ms; 1816.6667×32/88 = 660.6ms",
+      "review": "Applied the method to Vesper and related it to near-boundary failures, rejected preferential use of630–650ms while distinguishing model inadequacy from mathematical disproof of the maximum possible width. Reviewer separately recomputed from preserved JSON."
+    },
+    {
+      "id": "reopen",
+      "result": "pass",
+      "answer_excerpt": "선행 실패 뒤에만 발생했다면 마지막 타 자체의 정상 경로 폭이 틀렸다고 합산하지 않는다.",
+      "review": "Outside success does not force service widening; inside failure triggers provenance/clock/condition checks and targeted reconsideration. Preserved failure-path distinction."
+    },
+    {
+      "id": "unseen_transfer",
+      "result": "pass",
+      "prompt": "가상 보스 X는 내부 지원 폭이 모두30이고 앞뒤 간격은 이전보다 넓다. 그러나 입력을100ms 늦춘 조건에서 후속 준비 표시가 반복해서 약90ms 늦어졌고, 마지막 타의 후보 구간 안 실패는 선행 타 실패 뒤에만 나타났다. 이것은 폭이 더 넓다는 가설, 공통 절대 시간표, 마지막 타 서비스 구간에 각각 무엇을 의미하며 다음 한 묶음을 어떻게 선택하겠는가?",
+      "answer_excerpt": "폭의 증가보다 후속 위치의 이동을 직접 가리킨다. 비율90/100≈0.9는 이번 조건에서 지연이 상당히 전달됐다는 요약이며 일반적인 전달계수는 아니다.",
+      "review": "Reconsidered the common absolute timeline instead of copying Vesper. Preserved a conditional width hypothesis and separated prior-failure outcomes. Proposed A baseline, B prior+100/following unchanged, C prior+100/following+100, two each with fixed recording condition, tagged+100 as unverified50ms-step candidate, and excluded prior failures from normal-path timing comparison. Did not automatically implement a live detector."
+    }
+  ],
+  "checks": {
+    "judgment_results": "5 of5 pass in this single response",
+    "json_questions": 4,
+    "local_links_before_result_record": 13,
+    "arithmetic": {
+      "source": "docs/evidence/vesper-external-video-20260918.json",
+      "source_sha256": "319a173c2ed8905ff7baf515128e6744a731e202b46fccd656311024af1f274a",
+      "response_frames": [
+        284,
+        374,
+        471,
+        580
+      ],
+      "fps": 60,
+      "internal_starts": [
+        34,
+        105,
+        183,
+        271
+      ],
+      "internal_steps": [
+        71,
+        78,
+        88
+      ],
+      "response_gaps_ms": [
+        1500.0,
+        1616.6666666666667,
+        1816.6666666666667
+      ],
+      "average_rate_widths_ms": [
+        676.056338028169,
+        663.2478632478633,
+        660.6060606060606
+      ],
+      "adopted_support_widths_ms": [
+        450,
+        400,
+        400,
+        450
+      ],
+      "observed_overlay_to_response_ms": {
+        "Execute_02": [
+          133.33333333333334,
+          133.33333333333334,
+          100.0,
+          116.66666666666667
+        ],
+        "Execute_01": [
+          116.66666666666667,
+          133.33333333333334,
+          116.66666666666667,
+          116.66666666666667,
+          150.0
+        ]
+      }
+    },
+    "diff_whitespace": "git diff --check passed before final record; repeated before commit",
+    "application_tests": "Not rerun: changes are documents and evaluation data; application, timing values and experiment executor unchanged.",
+    "actual_game_inputs": 0
+  },
+  "limitations": [
+    "Four regression cases have corresponding explanations in canonical documents; these test retrieval and application, not blind discovery.",
+    "The synthetic fifth case was not present in the documents supplied to the respondent; it is not an actual boss observation.",
+    "One fresh respondent and author review, not independent blinded grading, repeated sampling, a controlled before/after comparison or proof against future context drift.",
+    "The respondent read reports, not raw footage. Reviewer arithmetic checks verify calculations from preserved annotations, not annotation accuracy or physical input windows."
+  ],
+  "decision": "Use separate technical and judgment resume checks. Continue conditional Gir candidate analysis from canonical documents; do not require new recording merely to begin analysis. New game experiments and service timing changes remain subsequent work."
+}

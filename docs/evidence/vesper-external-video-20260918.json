@@ -1,0 +1,516 @@
+{
+  "date": "2026-09-18",
+  "fps": 60,
+  "frameConvention": "zero-based decoded frame index; onset bracket [f-1,f]. 1280x720 HLS 60fps, remuxed without re-encoding.",
+  "methods": {
+    "anchor": "First frame where initial entry instruction is absent before support instruction appears. Delta=externalAnchor-baseAnchor; exactly one translation per sequence.",
+    "ready": "Gray-to-yellow support icon onset for hits 2 onward; ROI [1164,620,1211,671], HSV H16..42/S140..255/V140..255; verified abrupt count 0 to >866. Not the actual success-window boundary.",
+    "response": "First yellow-to-dark support icon frame accompanied by character change; support action effects/labels and sequence completion checked separately. Not physical input time.",
+    "normalizedProxy": "referenceMs + 1000/60*(externalResponse-baseResponse-Delta). This assumes equal overlay-to-UI latency across sources and is conditional. Baseline observed gap is 6..9 frames, not universal input latency.",
+    "uncertainty": "Each onset is bracketed [f-1,f]. A four-onset difference has central-estimate quantization uncertainty ±2 frames (±33.3ms), excluding unmeasured cross-device/display latency. It is not a statistical confidence interval."
+  },
+  "baseline": {
+    "Execute_02": {
+      "anchor": 216,
+      "notice": 0,
+      "overlay": [
+        276,
+        366,
+        465,
+        573
+      ],
+      "response": [
+        284,
+        374,
+        471,
+        580
+      ],
+      "ready": [
+        352,
+        451,
+        556
+      ],
+      "refs": [
+        4450,
+        5950,
+        7600,
+        9400
+      ],
+      "windows": [
+        [
+          4200,
+          4650
+        ],
+        [
+          5750,
+          6150
+        ],
+        [
+          7400,
+          7800
+        ],
+        [
+          9150,
+          9600
+        ]
+      ]
+    },
+    "Execute_01": {
+      "anchor": 275,
+      "notice": 0,
+      "overlay": [
+        391,
+        466,
+        574,
+        655,
+        796
+      ],
+      "response": [
+        398,
+        474,
+        581,
+        662,
+        805
+      ],
+      "ready": [
+        453,
+        559,
+        641,
+        748
+      ],
+      "refs": [
+        6450,
+        7700,
+        9500,
+        10850,
+        13200
+      ],
+      "windows": [
+        [
+          6250,
+          6600
+        ],
+        [
+          7500,
+          7900
+        ],
+        [
+          9350,
+          9650
+        ],
+        [
+          10650,
+          11050
+        ],
+        [
+          12950,
+          13400
+        ]
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "NxhUIlBHUeQ",
+      "url": "https://www.youtube.com/watch?v=NxhUIlBHUeQ",
+      "channel": "BUBU",
+      "title": "2.6 강습전 아유수 121 고독한 불협의 노래 · 베스퍼 2026-02-27 ~ 2026-03-13",
+      "context": "Deadly Assault 2.6; Aria/Yuzuha/Sunna; blog https://nahollogame.tistory.com/44",
+      "indexedSha256": "e6eadb280528e456250c7b65f231b46c3980ec470a00c272ae046be6fc64d967",
+      "localWorkingFile": "NxhUIlBHUeQ-indexed.mp4"
+    },
+    {
+      "id": "mEgcV1Bc580",
+      "url": "https://www.youtube.com/watch?v=mEgcV1Bc580",
+      "channel": "BELIANIS87",
+      "title": "Zenless Zone Zero / Cavidad Cero: Operation Matrix /Vesper Boss",
+      "context": "Hollow Zero Operation Matrix; Dialyn/Yixuan/Lucia; different mode",
+      "indexedSha256": "a1c39aa88b64e2b14f6fac364768a729cc6bc91ee50c444a2bb8f60757613718",
+      "localWorkingFile": "mEgcV1Bc580-indexed.mp4"
+    }
+  ],
+  "sequences": [
+    {
+      "source": "NxhUIlBHUeQ",
+      "skill": "Execute_02",
+      "noticeFirstFrame": 955,
+      "entryInstructionAbsentFrame": 1244,
+      "alignmentDeltaFrames": 1028,
+      "noticeToAnchorMs": 4816.666666666667,
+      "noticeAlignedAnchorDriftMs": 1216.6666666666667,
+      "readyFirstFrames": [
+        1381,
+        1478,
+        1583
+      ],
+      "readyResidualMs": [
+        16.666666666666668,
+        -16.666666666666668,
+        -16.666666666666668
+      ],
+      "responses": [
+        {
+          "hit": 1,
+          "firstFrame": 1310,
+          "videoTimeSeconds": 21.833333333333332,
+          "normalizedConditionalProxyMs": 4416.666666666667,
+          "conservativeWindowMs": [
+            4200,
+            4650
+          ],
+          "classificationAtCentralEstimate": "inside",
+          "distanceOutsideMs": 0,
+          "observedOutcome": "support response and continuation consistent with success; source contains no physical input log"
+        },
+        {
+          "hit": 2,
+          "firstFrame": 1384,
+          "videoTimeSeconds": 23.066666666666666,
+          "normalizedConditionalProxyMs": 5650.0,
+          "conservativeWindowMs": [
+            5750,
+            6150
+          ],
+          "classificationAtCentralEstimate": "early",
+          "distanceOutsideMs": 100.0,
+          "observedOutcome": "support response and continuation consistent with success; source contains no physical input log"
+        },
+        {
+          "hit": 3,
+          "firstFrame": 1491,
+          "videoTimeSeconds": 24.85,
+          "normalizedConditionalProxyMs": 7466.666666666667,
+          "conservativeWindowMs": [
+            7400,
+            7800
+          ],
+          "classificationAtCentralEstimate": "inside",
+          "distanceOutsideMs": 0,
+          "observedOutcome": "support response and continuation consistent with success; source contains no physical input log"
+        },
+        {
+          "hit": 4,
+          "firstFrame": 1596,
+          "videoTimeSeconds": 26.6,
+          "normalizedConditionalProxyMs": 9200.0,
+          "conservativeWindowMs": [
+            9150,
+            9600
+          ],
+          "classificationAtCentralEstimate": "inside",
+          "distanceOutsideMs": 0,
+          "observedOutcome": "support response and continuation consistent with success; source contains no physical input log"
+        }
+      ]
+    },
+    {
+      "source": "NxhUIlBHUeQ",
+      "skill": "Execute_01",
+      "noticeFirstFrame": 6691,
+      "entryInstructionAbsentFrame": 7056,
+      "alignmentDeltaFrames": 6781,
+      "noticeToAnchorMs": 6083.333333333333,
+      "noticeAlignedAnchorDriftMs": 1500.0,
+      "readyFirstFrames": [
+        7235,
+        7340,
+        7425,
+        7530
+      ],
+      "readyResidualMs": [
+        16.666666666666668,
+        0.0,
+        50.0,
+        16.666666666666668
+      ],
+      "responses": [
+        {
+          "hit": 1,
+          "firstFrame": 7171,
+          "videoTimeSeconds": 119.51666666666667,
+          "normalizedConditionalProxyMs": 6316.666666666667,
+          "conservativeWindowMs": [
+            6250,
+            6600
+          ],
+          "classificationAtCentralEstimate": "inside",
+          "distanceOutsideMs": 0,
+          "observedOutcome": "support response and continuation consistent with success; source contains no physical input log"
+        },
+        {
+          "hit": 2,
+          "firstFrame": 7259,
+          "videoTimeSeconds": 120.98333333333333,
+          "normalizedConditionalProxyMs": 7766.666666666667,
+          "conservativeWindowMs": [
+            7500,
+            7900
+          ],
+          "classificationAtCentralEstimate": "inside",
+          "distanceOutsideMs": 0,
+          "observedOutcome": "support response and continuation consistent with success; source contains no physical input log"
+        },
+        {
+          "hit": 3,
+          "firstFrame": 7356,
+          "videoTimeSeconds": 122.6,
+          "normalizedConditionalProxyMs": 9400.0,
+          "conservativeWindowMs": [
+            9350,
+            9650
+          ],
+          "classificationAtCentralEstimate": "inside",
+          "distanceOutsideMs": 0,
+          "observedOutcome": "support response and continuation consistent with success; source contains no physical input log"
+        },
+        {
+          "hit": 4,
+          "firstFrame": 7451,
+          "videoTimeSeconds": 124.18333333333334,
+          "normalizedConditionalProxyMs": 10983.333333333334,
+          "conservativeWindowMs": [
+            10650,
+            11050
+          ],
+          "classificationAtCentralEstimate": "inside",
+          "distanceOutsideMs": 0,
+          "observedOutcome": "support response and continuation consistent with success; source contains no physical input log"
+        },
+        {
+          "hit": 5,
+          "firstFrame": 7576,
+          "videoTimeSeconds": 126.26666666666667,
+          "normalizedConditionalProxyMs": 13033.333333333334,
+          "conservativeWindowMs": [
+            12950,
+            13400
+          ],
+          "classificationAtCentralEstimate": "inside",
+          "distanceOutsideMs": 0,
+          "observedOutcome": "support response and continuation consistent with success; source contains no physical input log"
+        }
+      ]
+    },
+    {
+      "source": "mEgcV1Bc580",
+      "skill": "Execute_02",
+      "noticeFirstFrame": 737,
+      "entryInstructionAbsentFrame": 1097,
+      "alignmentDeltaFrames": 881,
+      "noticeToAnchorMs": 6000.0,
+      "noticeAlignedAnchorDriftMs": 2400.0,
+      "readyFirstFrames": [
+        1219,
+        1317,
+        1421
+      ],
+      "readyResidualMs": [
+        -233.33333333333334,
+        -250.0,
+        -266.6666666666667
+      ],
+      "responses": [
+        {
+          "hit": 1,
+          "firstFrame": 1160,
+          "videoTimeSeconds": 19.333333333333332,
+          "normalizedConditionalProxyMs": 4366.666666666667,
+          "conservativeWindowMs": [
+            4200,
+            4650
+          ],
+          "classificationAtCentralEstimate": "inside",
+          "distanceOutsideMs": 0,
+          "observedOutcome": "support response and continuation consistent with success; source contains no physical input log"
+        },
+        {
+          "hit": 2,
+          "firstFrame": 1249,
+          "videoTimeSeconds": 20.816666666666666,
+          "normalizedConditionalProxyMs": 5850.0,
+          "conservativeWindowMs": [
+            5750,
+            6150
+          ],
+          "classificationAtCentralEstimate": "inside",
+          "distanceOutsideMs": 0,
+          "observedOutcome": "support response and continuation consistent with success; source contains no physical input log"
+        },
+        {
+          "hit": 3,
+          "firstFrame": 1338,
+          "videoTimeSeconds": 22.3,
+          "normalizedConditionalProxyMs": 7366.666666666667,
+          "conservativeWindowMs": [
+            7400,
+            7800
+          ],
+          "classificationAtCentralEstimate": "early",
+          "distanceOutsideMs": 33.33333333333303,
+          "observedOutcome": "support response and continuation consistent with success; source contains no physical input log"
+        },
+        {
+          "hit": 4,
+          "firstFrame": 1445,
+          "videoTimeSeconds": 24.083333333333332,
+          "normalizedConditionalProxyMs": 9133.333333333334,
+          "conservativeWindowMs": [
+            9150,
+            9600
+          ],
+          "classificationAtCentralEstimate": "early",
+          "distanceOutsideMs": 16.66666666666606,
+          "observedOutcome": "support response and continuation consistent with success; source contains no physical input log"
+        }
+      ]
+    },
+    {
+      "source": "mEgcV1Bc580",
+      "skill": "Execute_01",
+      "noticeFirstFrame": 7251,
+      "entryInstructionAbsentFrame": 7654,
+      "alignmentDeltaFrames": 7379,
+      "noticeToAnchorMs": 6716.666666666667,
+      "noticeAlignedAnchorDriftMs": 2133.3333333333335,
+      "readyFirstFrames": [
+        7829,
+        7931,
+        8018,
+        8124
+      ],
+      "readyResidualMs": [
+        -50.0,
+        -116.66666666666667,
+        -33.333333333333336,
+        -50.0
+      ],
+      "responses": [
+        {
+          "hit": 1,
+          "firstFrame": 7766,
+          "videoTimeSeconds": 129.43333333333334,
+          "normalizedConditionalProxyMs": 6266.666666666667,
+          "conservativeWindowMs": [
+            6250,
+            6600
+          ],
+          "classificationAtCentralEstimate": "inside",
+          "distanceOutsideMs": 0,
+          "observedOutcome": "support response and continuation consistent with success; source contains no physical input log"
+        },
+        {
+          "hit": 2,
+          "firstFrame": 7857,
+          "videoTimeSeconds": 130.95,
+          "normalizedConditionalProxyMs": 7766.666666666667,
+          "conservativeWindowMs": [
+            7500,
+            7900
+          ],
+          "classificationAtCentralEstimate": "inside",
+          "distanceOutsideMs": 0,
+          "observedOutcome": "support response and continuation consistent with success; source contains no physical input log"
+        },
+        {
+          "hit": 3,
+          "firstFrame": 7966,
+          "videoTimeSeconds": 132.76666666666668,
+          "normalizedConditionalProxyMs": 9600.0,
+          "conservativeWindowMs": [
+            9350,
+            9650
+          ],
+          "classificationAtCentralEstimate": "inside",
+          "distanceOutsideMs": 0,
+          "observedOutcome": "support response and continuation consistent with success; source contains no physical input log"
+        },
+        {
+          "hit": 4,
+          "firstFrame": 8044,
+          "videoTimeSeconds": 134.06666666666666,
+          "normalizedConditionalProxyMs": 10900.0,
+          "conservativeWindowMs": [
+            10650,
+            11050
+          ],
+          "classificationAtCentralEstimate": "inside",
+          "distanceOutsideMs": 0,
+          "observedOutcome": "support response and continuation consistent with success; source contains no physical input log"
+        },
+        {
+          "hit": 5,
+          "firstFrame": 8189,
+          "videoTimeSeconds": 136.48333333333332,
+          "normalizedConditionalProxyMs": 13283.333333333334,
+          "conservativeWindowMs": [
+            12950,
+            13400
+          ],
+          "classificationAtCentralEstimate": "inside",
+          "distanceOutsideMs": 0,
+          "observedOutcome": "support response and continuation consistent with success; source contains no physical input log"
+        }
+      ]
+    }
+  ],
+  "excludedFromPrimaryQuantitativeComparison": [
+    {
+      "id": "60o1tjrJUnM",
+      "reason": "Tutorial has transition/edit and zoomed timing presentation in Execute_01; not used for pooled timing claims. Execute_02 notice first frame691 and UI flash responses1083/1159/1251/1364 measured for screening only."
+    },
+    {
+      "id": "5H9AzDJdXiY",
+      "reason": "Repeated scenes, slowed/frozen explanations and absent complete notice origin; excluded from natural-speed absolute timing comparison."
+    }
+  ],
+  "outcomeEvidence": {
+    "NxhUIlBHUeQ": "Response changes corroborated by support effects, score gains and sequence completion. Example Execute_02 score2734(f1345)→3084(f1355), +350; third3586(f1545)→3936(f1555), +350; fourth explicit +350 popupf1625. Execute_01 first43758(f7205)→44108(f7215), third44545(f7390)→44895(f7400), fourth44939(f7475)→45289(f7485); second continuation and completed final sequence also inspected.",
+    "mEgcV1Bc580": "Different mode without the same control-score HUD; support/evasive response labels, effects and final boss shutdown inspected. Weaker outcome evidence than the scored Deadly Assault source; not pooled as the same-mode repetition."
+  },
+  "frameEvidence": [
+    {
+      "file": "vesper-external-nah-ready-comparison-20260918.jpg",
+      "sha256": "e0ccaa486b07fec9cd1d80481620787f5476c724e4ce90273703c174fe4f16ed"
+    },
+    {
+      "file": "vesper-external-bel-ready-comparison-20260918.jpg",
+      "sha256": "4b078c668c26f9056f0d94ab47ee6531702004dd3e853ab5542c64fa4acbc0af"
+    },
+    {
+      "file": "vesper-external-external-notice-anchors-20260918.jpg",
+      "sha256": "080288e3a5437767d6d7e3c1ac957a681e9d28ed728cf55d271a92ee963f394a"
+    },
+    {
+      "file": "vesper-external-base02-events-20260918.jpg",
+      "sha256": "49bef24861e2c4582d4a18ed463f333d94139fe48dbdfbb0ddf5ac4effe2f42e"
+    },
+    {
+      "file": "vesper-external-base01-events-20260918.jpg",
+      "sha256": "902c083404ca738f64ddf709edb842597496a3943c490420302e106d83f9a9e0"
+    },
+    {
+      "file": "vesper-external-nah02-events-20260918.jpg",
+      "sha256": "059de9ba5c5e37b0a3203bac797268a7e23d592d7b2d7514c14d57e92818b45a"
+    },
+    {
+      "file": "vesper-external-nah01-events-20260918.jpg",
+      "sha256": "4e4d92b9eb10848198e4f2c9b0a7786139c8fcd571468a46ae19a6868847ed8e"
+    },
+    {
+      "file": "vesper-external-bel02-events-20260918.jpg",
+      "sha256": "2183f54031196edf8fee35ba3776f162cecdae7a867e37821f8715ecb65b0790"
+    },
+    {
+      "file": "vesper-external-bel01-events-20260918.jpg",
+      "sha256": "74f42e61a250390ef53ed558262f3ab979dc63c461862ac52ed3a3712d5bb530"
+    },
+    {
+      "file": "vesper-external-nah02-scores-20260918.jpg",
+      "sha256": "19cafcd77651208c950f5c2da377af2912934e7075121f90b95408c69e1660c9"
+    },
+    {
+      "file": "vesper-external-nah01-scores-20260918.jpg",
+      "sha256": "4f5809734ccbe380fa2a5678ea8484e2227bd4947a093ece4f41f3bfd3dd31fd"
+    }
+  ]
+}

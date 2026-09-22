@@ -1,0 +1,82 @@
+# ZZZ 패턴 연습
+
+고정된 제어스킬의 순서와 리듬을 준비 전투 없이 반복 연습하는 비공식 정적 웹앱입니다. 성공 대응 영상에 맞춰 키보드·마우스로 입력하고, 동작별 결과와 추가 입력을 확인합니다.
+
+## 제공 패턴
+
+| 보스 | 패턴 | 제공하는 대응 |
+|---|---|---|
+| 베스퍼 | Execute_01 | 진입 + 5타, 진입 RMB/SPACE 선택 |
+| 베스퍼 | Execute_02 | 진입 + 4타, 진입 RMB/SPACE 선택 |
+| 기르타블리르·퇴행 변종 | Execute_01 | 진입 + 3타 |
+| 쿠사리쿠 | Execute_01 | 준비 회피·이동 안내, 진입 + 4타 |
+| 환영의 화살 유닛 | Attack_09 | 진입 + 4타, 마지막 SPACE/RMB 선택 A와 겹침 레인 B |
+
+대표 영상 6개와 포스터 6개를 포함합니다. 환영의 화살 유닛 A는 마지막 입력에 맞는 영상을 사용하고, B는 RMB 대표 영상을 고정 사용합니다. 영상 속 성공과 연습 중 사용자의 입력 결과는 별개입니다.
+
+<a id="현재-단계--2026-09-21"></a>
+
+## 현재 상태
+
+다섯 패턴의 로컬 구현·수용을 마치고 첫 공개를 준비하고 있습니다. 공개 예정 주소는 [zzz-pattern-practice.github.io](https://zzz-pattern-practice.github.io/)이며, 배포 완료 전에는 접속할 수 없습니다. [배포 저장소](https://github.com/zzz-pattern-practice/zzz-pattern-practice.github.io)에서 소스 커밋을 지정해 수동 배포합니다. 환영의 화살 유닛 진입 SPACE 추가 측정은 현재 공개 조건이 아닙니다.
+
+데스크톱 Chromium과 키보드·마우스를 기준으로 확인했습니다. 모바일 터치 연습은 지원하지 않습니다. 표시하는 구간은 관측 조건에 맞춘 보수적인 연습 구간이며, 게임의 전체 허용 범위나 학습 효과를 수치로 입증한 것은 아닙니다.
+
+## 실행
+
+Node 24.19 이상인 24.x와 npm 11이 필요합니다. 패키지 버전은 `package-lock.json`으로 고정합니다.
+
+```sh
+npm ci
+npm run dev
+```
+
+Windows에서는 기존 설치를 찾는 진입점을 사용할 수 있습니다.
+
+```powershell
+.\tools.ps1 install
+.\tools.ps1 dev
+```
+
+개발 서버는 `http://127.0.0.1:5187/`, production 미리보기는 `http://127.0.0.1:4187/`입니다. 포트가 이미 사용 중이면 실패하며 다른 서버를 재사용하지 않습니다.
+
+| 작업 | npm | Windows |
+|---|---|---|
+| 타입·단위 검사·빌드 | `npm run check` | `.\tools.ps1 check` |
+| 콘텐츠 검사 | `npm test -- src/content/skills.test.ts` | `.\tools.ps1 test src/content/skills.test.ts` |
+| Chromium 최초 설치 | `npm run browsers` | `.\tools.ps1 browsers` |
+| 브라우저 검사 | `npm run test:e2e` | `.\tools.ps1 test:e2e` |
+| production 미리보기 | `npm run preview` | `.\tools.ps1 preview` |
+| 연구 계산·검사 | `npm run research:check` | `.\tools.ps1 research:check` |
+| 실험 도구 무입력 검사 | `npm run experiment:check` | `.\tools.ps1 experiment:check` |
+
+브라우저 검사는 별도 4287 포트와 `.local/path-check`에 빌드한 하위 경로를 사용합니다. 일반 `dist`는 덮어쓰지 않습니다. 하위 경로에 배포한다면 빌드 환경의 `APP_BASE`를 해당 경로로 지정합니다.
+
+### 변경에 맞춘 검증
+
+문서 변경은 링크·현행 상태와 `git diff --check`를 확인합니다. 콘텐츠·영상 변경은 콘텐츠 단위검사와 영상 정렬을, 입력 판정·UI 변경은 관련 단위검사와 해당 브라우저 흐름을 확인합니다. 실험 실행부 변경은 가짜 입력·프로필 검사를 수행합니다. 통과한 범위는 새 변경이나 실패 없이 반복 실행하지 않습니다.
+
+## 연구와 실험 도구
+
+- [제품 범위와 채택 조건](docs/product.md)
+- [연구 방법과 한계](docs/research.md)
+- [보스별 조사](docs/boss-control-patterns.md)
+- [실험기 사용법](tools/experiment/사용법.md)
+- [수동 레인 검증기 사용법](tools/lane-verifier/사용법.md)
+- [원본 곡선 추출 도구와 외부 의존성](tools/research/assets/README.md)
+
+웹앱 자체는 게임에 입력하지 않습니다. Windows용 실험기와 레인 검증기는 별도 도구이며, 실제 게임 입력은 사용자가 해당 사용법에 따라 명시적으로 켜고 수행합니다. 무입력 검사는 실제 게임 성공을 입증하지 않습니다.
+
+실험기와 레인 검증기를 빌드하려면 Windows x64와 .NET Framework 4.x C# 컴파일러가 필요합니다. 빌드 스크립트는 `%WINDIR%\Microsoft.NET\Framework64\v4.0.30319\csc.exe`를 사용합니다. 웹앱 실행에는 이 컴파일러가 필요하지 않습니다.
+
+연구 계산에는 Python 3.11 이상이 필요합니다. `RESEARCH_PYTHON`으로 기존 실행 파일을 지정할 수 있습니다. 원본 곡선 추출에는 별도로 준비한 게임 블록과 고정 버전 외부 파일이 필요하며, 게임 원본·외부 DLL은 이 저장소에 포함하지 않습니다. 출처와 라이선스는 추출 도구 설명을 따릅니다.
+
+## 공개 자료의 범위
+
+이 저장소는 웹·도구 소스, 기본 제공 프로필, 테스트, 연구 문서, 서비스 자산의 공개 사본입니다. 과거 로컬 Git 이력, 개인 실행 설정, 원시 회차 로그와 전체 녹화 원본은 포함하지 않습니다.
+
+문서와 근거 JSON의 `<PRIVATE_HOME>`은 비공개 로컬 홈 경로를 대신하는 표시이며, 공개 저장소 안에서 열 수 있는 경로가 아닙니다. 해당 파일의 해시는 과거 원자료를 식별하는 값으로 보존했습니다. 원자료가 없으면 그 해시만으로 원본을 복원하거나 모든 실험을 재생산할 수 없습니다. 공개 사본의 경로 정리는 원시 증거의 정정이 아닙니다.
+
+보존·삭제 상태는 [자료 정리 기록](docs/evidence/experiment-cleanup.json)의 `current`를 따릅니다. 그 안의 ‘보존’은 연구자의 로컬 보관 상태이며 공개 저장소 포함 여부와 다릅니다. 삭제된 자료에 백업이 있다고 가정하지 않습니다. 서비스 영상·포스터의 해시와 시간 연결, 원자료의 관측값·출처·판정은 유지했습니다.
+
+`docs/evidence`에는 콘텐츠·도구 검사가 직접 읽는 근거가 포함되므로 폴더 전체를 제거하면 검사가 동작하지 않습니다. 연구 문서는 일반 웹 빌드 결과에 포함되지 않습니다.

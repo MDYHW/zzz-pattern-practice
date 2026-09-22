@@ -1,0 +1,60 @@
+{
+  "date": "2026-09-20",
+  "scope": "Manual live-game lane verifier; synthetic windows and no actual game input",
+  "selfTest": {
+    "passed": true,
+    "checks": [
+      "vesper-execute-01: template, origin, judgment, persistence passed",
+      "vesper-execute-02: template, origin, judgment, persistence passed",
+      "girtablullu-stagnant-execute-01: template, origin, judgment, persistence passed",
+      "no input injection APIs; passive hooks install/dispose; repeated down suppressed"
+    ],
+    "gameInputsSent": 0
+  },
+  "smoke": {
+    "passed": true,
+    "checks": [
+      "vesper-execute-01: offset 1280x720 and scaled1600x900 capture, overlay geometry/focus/native pass-through, absolute paint clock, movement/off-screen guards",
+      "vesper-execute-02: offset 1280x720 and scaled1600x900 capture, overlay geometry/focus/native pass-through, absolute paint clock, movement/off-screen guards",
+      "girtablullu-stagnant-execute-01: offset 1280x720 and scaled1600x900 capture, overlay geometry/focus/native pass-through, absolute paint clock, movement/off-screen guards",
+      "controller detection-to-paint bridge, original origin retained, focus loss aborts, no fabricated inputs/results"
+    ],
+    "gameInputsSent": 0
+  },
+  "existingHarnessRegression": {
+    "vesper-execute-01": {
+      "passedChecks": 78,
+      "selectedProfileCombinationsPassed": 9,
+      "nativeInputCalls": 0
+    },
+    "vesper-execute-02": {
+      "passedChecks": 78,
+      "selectedProfileCombinationsPassed": 9,
+      "nativeInputCalls": 0
+    },
+    "girtablullu-stagnant-execute-01": {
+      "passedChecks": 78,
+      "selectedProfileCombinationsPassed": 9,
+      "nativeInputCalls": 0
+    }
+  },
+  "deliveryHashes": {
+    "LaneVerifier.exe": "8f6c2f28439e03094f60f19141a513c6d4eeb2e8022fc8c2ec699149b92f3394",
+    "notice-template.png": "b5495ce64753def2898c8bd66490797357448da30c1f05ed66425e0380aaf185",
+    "notice-template-execute02.png": "a77872ed8aa8ca412bfa5bdb8b37b04717af40b0ef4dbb17551b7abc25c9d000",
+    "notice-template-girtablullu.png": "39194a973610342fb85047e35ec976235b1102ede77ca13a68eb2b752e0fc8cb",
+    "사용법.md": "f6e80e61d3aba1ca590659e73c42f6fc91def77bc0544e75b4670013b6c35af9",
+    "profiles/vesper-execute-01.json": "2e0b9ea73ae44a87925f3d40c6e97819508516eb5d368f135b13d7c2ac141a61",
+    "profiles/vesper-execute-02.json": "c96c706e505c2493b4d568150738dc38bfddb49214d199aef61768e4eb965a1c",
+    "profiles/girtablullu-stagnant-execute-01.json": "7d0e680b827eb4a5f9deae0fce923f4a77d6303cc6d4f824550419d3aa5e6e99"
+  },
+  "remaining": [
+    "User actual-game windowed detection and manual lane/game-success comparison"
+  ],
+  "retention": {
+    "date": "2026-09-21",
+    "status": "summarized originals retired after user-approved closure",
+    "inventory": "experiment-cleanup.json#current",
+    "meaning": "Historical raw log, source video and scratch paths describe provenance; only current.retainedOriginals are promised to remain. Conditions, outcomes, counterexamples and measurement limits stay in this evidence."
+  }
+}

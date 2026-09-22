@@ -1,0 +1,199 @@
+{
+  "date": "2026-09-19",
+  "purpose": "Recover the requested icon comparison and evaluate product dependencies in actual artifacts. Not a model benchmark or a game experiment.",
+  "checkout": "f815/zzz-pattern-practice",
+  "branch": "codex/boss-expansion",
+  "head_before_and_after": "375fc425c16f0092fbdffc8e748c55ad2e6a9950",
+  "working_tree": "Uncommitted controller input/UI and Girtablullu work existed before recovery. Existing input semantics preserved; unrelated boss research not edited by recovery.",
+  "authorization": "User requested recovery and harness correction. Final icon choice is still pending; no prototype adopted as production default.",
+  "restored": [
+    "Actual Practice video/session reused for baseline and A/B/C/D. Layout changes preserve current attempt and paused media time.",
+    "B: Space above band, right-click below. C: complementary diagonal clipped halves only on entry. D: two complete small icons.",
+    "Production keeps prior single dodge icon with alternative key text; entry accepts Space/right-click, later cues Space. Other inputs ignored; results show actual successful key.",
+    "Shared video/lane size budget and real displayed measurements, including skill changes and guide hide/show."
+  ],
+  "failures_observed_during_recovery": [
+    {
+      "check": "test:preview --grep comparison preserves",
+      "outcome": "failed before recovery",
+      "reason": "Old isolated comparison had no actual Practice [data-phase]/video session."
+    },
+    {
+      "check": "test:preview --grep shared viewport",
+      "outcome": "failed on 700x420 viewport after initial recovery",
+      "reason": "Legacy narrow-screen guide width forced 100% independently of height-limited video.",
+      "width_difference_px": 139.125,
+      "correction": "Use shared stage width at narrow sizes too."
+    },
+    {
+      "check": "test:preview full",
+      "outcome": "failed on displayed metrics after skill/layout change",
+      "expected": "영상 366 × 206px · 레인 118px",
+      "observed": "영상 366 × 206px · 레인 152px",
+      "correction": "Observe actual guide size and rebind observers to replaced Practice nodes."
+    },
+    {
+      "check": "Internal visual review of C",
+      "outcome": "found later single-key icons clipped by a broad CSS selector",
+      "correction": "Scope clipping to dual entry; browser regression verifies later icons remain whole."
+    },
+    {
+      "check": "test:e2e full",
+      "outcome": "8 passed, 1 failed at a stale production icon-count assertion",
+      "correction": "Restore assertion to 1 for original production appearance; targeted flow passed after correction."
+    }
+  ],
+  "verification": [
+    {
+      "command": ".\\tools.ps1 check",
+      "result": "passed typecheck, 60 unit tests, production build",
+      "scope": "After viewport/measurement fixes; final subsequent CSS change only scoped the dev C clipping and was verified by test:preview."
+    },
+    {
+      "command": ".\\tools.ps1 test:preview",
+      "result": "3 passed after final clipping fix",
+      "scope": "Actual media, layout semantics, common width/height budget, paused attempt preservation, baseline production appearance, changed skill, 1280x720/900x650/700x420/390x844 conditions."
+    },
+    {
+      "command": ".\\tools.ps1 test:e2e; .\\tools.ps1 test:e2e --grep \"mistakes recover\"",
+      "result": "All 9 distinct production browser cases passed across full and targeted runs",
+      "scope": "8 initially passed; corrected stale icon count and reran the remaining actual input/results/retry flow (27.2s test, passed)."
+    },
+    {
+      "command": "git diff --check",
+      "result": "passed; line-ending warnings only"
+    },
+    {
+      "check": "Production output",
+      "result": "icon-test.html absent",
+      "observed": true
+    }
+  ],
+  "visual_review": {
+    "reviewer": "Implementing controller; not independent review",
+    "method": "Existing Playwright on verified f815 dev server, actual Execute_02 media paused near 2.5s, all five layouts at 1280x720 and B at 700x420. Checked whole scene and lane. C rechecked after selector fix.",
+    "measurements": {
+      "errors": [],
+      "measures": [
+        {
+          "layout": "baseline",
+          "video": {
+            "x": 104.890625,
+            "y": 0.375,
+            "width": 1070.21875,
+            "height": 601.984375
+          },
+          "guide": {
+            "x": 104.890625,
+            "y": 602.359375,
+            "width": 1070.21875,
+            "height": 118
+          },
+          "time": 2.517663,
+          "metrics": "영상 1070 × 602px · 레인 118px"
+        },
+        {
+          "layout": "side",
+          "video": {
+            "x": 104.890625,
+            "y": 0.375,
+            "width": 1070.21875,
+            "height": 601.984375
+          },
+          "guide": {
+            "x": 104.890625,
+            "y": 602.359375,
+            "width": 1070.21875,
+            "height": 118
+          },
+          "time": 2.517663,
+          "metrics": "영상 1070 × 602px · 레인 118px"
+        },
+        {
+          "layout": "split",
+          "video": {
+            "x": 135.109375,
+            "y": 0.375,
+            "width": 1009.765625,
+            "height": 567.984375
+          },
+          "guide": {
+            "x": 135.109375,
+            "y": 568.359375,
+            "width": 1009.765625,
+            "height": 152
+          },
+          "time": 2.517663,
+          "metrics": "영상 1010 × 568px · 레인 152px"
+        },
+        {
+          "layout": "diagonal",
+          "video": {
+            "x": 104.890625,
+            "y": 0.375,
+            "width": 1070.21875,
+            "height": 601.984375
+          },
+          "guide": {
+            "x": 104.890625,
+            "y": 602.359375,
+            "width": 1070.21875,
+            "height": 118
+          },
+          "time": 2.517663,
+          "metrics": "영상 1070 × 602px · 레인 118px"
+        },
+        {
+          "layout": "compact",
+          "video": {
+            "x": 104.890625,
+            "y": 0.375,
+            "width": 1070.21875,
+            "height": 601.984375
+          },
+          "guide": {
+            "x": 104.890625,
+            "y": 602.359375,
+            "width": 1070.21875,
+            "height": 118
+          },
+          "time": 2.517663,
+          "metrics": "영상 1070 × 602px · 레인 118px"
+        }
+      ]
+    },
+    "delivery": "http://127.0.0.1:5187/icon-test.html; no screenshots delivered. Temporary review images removed after recording measurements."
+  },
+  "harness_change": {
+    "canonical_model": "docs/product.md: product areas, preserved qualities, cross-area dependencies, actual observations.",
+    "workflow": "docs/research.md: request/authority -> relevant constraints -> downstream effect -> discriminating scenario -> actual result; research answers are not UI implementation proof.",
+    "entrypoint": "AGENTS.md and README link existing canonical sections, no separate rulebook or graph database.",
+    "new_judgment_cases": [
+      "product-impact",
+      "display-state",
+      "new-playback-proposal"
+    ],
+    "new_judgment_case_execution": "Not run by a fresh controller. Added as available future evaluation cases; no new general judgment pass claimed.",
+    "portable_guide": "Updated existing external Documents/Codex/guides/project-harness-starter.md in place; no repository copy."
+  },
+  "limits": [
+    "No game input or new timing-window measurements.",
+    "No independent reviewer or long-term controller/model evaluation in this recovery.",
+    "Candidate preference and actual learning transfer remain user/product evaluation questions.",
+    "Finite cases and product map reduce omissions; they do not guarantee correctness on all novel requirements."
+  ],
+  "sha256": {
+    "AGENTS.md": "45de755dbfb69cbd74e40b660491448001210eb35fc7e20435dce3531893aca5",
+    "docs/product.md": "5cdf52f70a9f153f1bc48074965b044a1e62f9855220d43caaa8a8d75d90127e",
+    "docs/research.md": "12e28f38e6d8f284d7e50de894447e37a4a364399566e56ad355a230b12b9f9e",
+    "src/App.tsx": "f53ab82edaae1d2c516be8b03260ca51a6e032ddfdc34b3c924b47c9d7e3ced9",
+    "src/practice/Practice.tsx": "ad93e26eb71b15ae28c840a5c0dfb6159a57cba1e4aee98d3674944c0dd42efe",
+    "src/practice/RhythmGuide.tsx": "1f04be6c7c172e4213a251f6e4c6e5b5bb2ed4930dad08aa7c37bffb008a353b",
+    "src/practice/rhythm-guide.css": "8f3d460d6f617e2e0c315ce237bc4f41ce7c2442b73125498901dab892758839",
+    "src/style.css": "5a0989e44f965bcdb6fc17aca0af25820ff7b3ac88ddf306790d50772fb7b2b2",
+    "src/dev/icon-test.tsx": "79f20bedadb2b0f76c6d27c59acb8f51fc4b38b9b0d6d649c1845fe67fe924d4",
+    "tests/preview/icon-preview.spec.ts": "c29c5d5c402476163706e067b6117f40d154634e91df910e6e9f1c2067bd28df",
+    "tests/browser/practice.spec.ts": "f06589295f711fb4b1ec47714b1cbc6b96ee864acfbf7f0c9d5dd478e1846a44",
+    "tools/research/judgment-cases.json": "ec5fec6f5e4ef9c9b1e233cb59337e8a3e5d8062fc9fdd2fad61fdb481eb1ea2"
+  }
+}

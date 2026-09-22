@@ -1,0 +1,146 @@
+{
+  "id": "N3",
+  "reviewed_on": "2026-09-17",
+  "trial_id": "20260917T035406864Z-d77812864874465994c584ea0f2e6dee",
+  "video": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-17_12-54-00.mp4",
+  "video_sha256": "835eb91bcab2f1425928ba2b161429fdb583e143404cc5808c95a11f5f4d117c",
+  "log": "<PRIVATE_HOME>\\Documents\\Codex\\2026-09-16\\zzz-controller-refresh\\outputs\\vesper-input-experiment\\logs\\20260917T035406864Z-d77812864874465994c584ea0f2e6dee.json",
+  "log_sha256": "9455005ba558f141b8685edf5e4be9d9714be0670340435a1db09a695783f112",
+  "settings": {
+    "TargetAttack": 3,
+    "ShiftMs": 270,
+    "Comparison": false,
+    "DryRun": false,
+    "Recording": "",
+    "Conditions": "베스퍼 첫 제어스킬 / 파티: 아리아 → 남궁우 → 수나 / 시작: 아리아"
+  },
+  "effective_shift_ms": 0,
+  "settings_note": "Comparison=false ignores retained ShiftMs270. Schedule confirms baseline third input.",
+  "media": {
+    "fps": 60,
+    "sequential_frames": 1249,
+    "container_frame_count": 1250,
+    "note": "One frame count discrepancy; annotations use sequential decoded 0-based frames. Reviewed events through f1020 precede decoded EOF."
+  },
+  "user_report": "0ms에서 똑같이 완벽 대응 성공했다.",
+  "operator_log_outcomes_unchanged": [
+    "미확인",
+    "미확인",
+    "미확인",
+    "미확인",
+    "미확인"
+  ],
+  "analyst_outcomes": {
+    "entry": "success",
+    "1": "success",
+    "2": "success",
+    "3": "success",
+    "4": "success"
+  },
+  "evidence": {
+    "entry": "HP10406 unchanged f540/557/580/600; extreme-dodge text at f580; combat points1352→1371/1372.",
+    "1": "Control score875 at f720.",
+    "2": "Control score1750 at f800.",
+    "3": "Space unfilled f825→filled f826, actor HP12255; control score2625 at f900.",
+    "4": "Final response and part break, control score9017 at f1020."
+  },
+  "manual_brackets": {
+    "ready2": [
+      724,
+      725
+    ],
+    "input2": [
+      727,
+      728
+    ],
+    "ready3": [
+      821,
+      822
+    ],
+    "input3": [
+      825,
+      826
+    ]
+  },
+  "phase_comparison": {
+    "N1_success_frames": [
+      15,
+      17
+    ],
+    "N2_failure_frames": [
+      32,
+      34
+    ],
+    "N3_success_frames": [
+      3,
+      5
+    ],
+    "N3_ms": [
+      50.0,
+      83.33333333333333
+    ],
+    "N1_minus_N3_frames": [
+      10,
+      14
+    ],
+    "note": "Same nominal baseline differs by central12frames≈200ms. Not a proven continuous success interval or physical input gate."
+  },
+  "alignment": {
+    "reference": "R2",
+    "offset2_frames": [
+      133,
+      135
+    ],
+    "offset3_frames": [
+      132,
+      134
+    ],
+    "offset_union_frames": [
+      132,
+      135
+    ],
+    "mapped_original_frames": [
+      690,
+      694
+    ],
+    "mapped_clip_seconds": [
+      6.0,
+      6.066666666666666
+    ],
+    "service_end_seconds": 6.5792124542124535,
+    "note": "Pre-input ready transitions only; translation sensitivity is not an engine clock calibration. Brackets cover annotation uncertainty, not all timing error."
+  },
+  "api": {
+    "max_down_begin_lateness_ms": 0.07732839506024902,
+    "max_up_begin_lateness_ms": 4.741499999999178,
+    "attack3_actual_begin_ms": 7501.1819,
+    "note": "OS submission timing, not game acceptance timing."
+  },
+  "next_trial": {
+    "TargetAttack": 3,
+    "ShiftMs": 270,
+    "Comparison": true,
+    "count": 1,
+    "recording_required": true,
+    "purpose": "One B repeat after A-B-A. Measure actual pre-input phase and outcome; do not assume nominal shift fixes game phase.",
+    "conditional_prediction_only": {
+      "if": "N3 pre-input phase repeats",
+      "ready3_to_input_ms": [
+        320.0,
+        353.3333333333333
+      ],
+      "mapped_clip_seconds": [
+        6.27,
+        6.336666666666666
+      ]
+    },
+    "stop_rule": "If anchors disagree or phase dispersion prevents targeting the relevant region, improve event synchronization/trigger before further shift sweeps or repetitions."
+  },
+  "decision": "Baseline full success restored. Preserve N2 failure, exclude its fourth hit from independent window inference. Keep provisional product widths; neither nominal0 success nor +270 failure defines a boundary.",
+  "independent_review": "timing_candidate_review checked arithmetic and bounded next-trial logic only; no independent video review.",
+  "visual_artifacts": [
+    "ready-and-input.jpg",
+    "outcomes.jpg",
+    "overview.jpg"
+  ]
+}

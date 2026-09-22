@@ -1,0 +1,689 @@
+{
+  "date": "2026-09-22",
+  "scope": "20 finalized automatic-input trials; analysis and proposals only, no program/profile changes",
+  "trials": [
+    {
+      "number": 1,
+      "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-b2d450f8c07d4d349c35636cf716cc15.json",
+      "trialId": "da384fe391434087be7d0e6896404bf9",
+      "rawSha256": "fced16ea2fdbde31f3ffaa0d823e8cfeebf72f832df098d0947a73c73b8f7e9d",
+      "resultSha256": "aa541e54d0120c721ad71f3a97289750990cdc6692e96182cae8b070f112183b",
+      "f8Utc": "2026-09-21T16:58:07.7379722Z",
+      "f8Korea": "01:58:07",
+      "delaysMs": [
+        4150,
+        6300,
+        8150,
+        9650,
+        11900
+      ],
+      "bits": "11111",
+      "resultSource": "user-report via hash-linked result sidecar",
+      "firstMatchScore": 0.8324958123953099,
+      "firstMatchIndex": 119,
+      "confirmedIndex": 121,
+      "inputBeginMaxLateMs": 1.939300000000003,
+      "inputCallMaxDurationMs": 12.698699999999917,
+      "recordingPolicy": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "number": 2,
+      "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-1e6b5d10c2bb4695b1103b88248d227e.json",
+      "trialId": "a7c65fd16d1b49fca41b152dddfb96e4",
+      "rawSha256": "f307656fba2d84da0f3cf422765309216d36bdb96170ea61c21f000dabe03d74",
+      "resultSha256": "7ac6b52a255d7a65ca6e512da01ff783c52d91486e1ec71c9cdb3c8305ebb0a8",
+      "f8Utc": "2026-09-21T16:59:27.3035313Z",
+      "f8Korea": "01:59:27",
+      "delaysMs": [
+        4000,
+        6500,
+        7950,
+        9850,
+        11700
+      ],
+      "bits": "00000",
+      "resultSource": "user-report via hash-linked result sidecar",
+      "firstMatchScore": 0.8430873621713316,
+      "firstMatchIndex": 76,
+      "confirmedIndex": 79,
+      "inputBeginMaxLateMs": 0.0286999999989348,
+      "inputCallMaxDurationMs": 13.655000000000655,
+      "recordingPolicy": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "number": 3,
+      "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-d787cebf9ce041c382a9a0c299b354fd.json",
+      "trialId": "83859d300e6445c181654eeee7e15407",
+      "rawSha256": "ae080b187e0518ffbd8971124dce00e6ad386e8c8a653e87df4cb0dee480cd50",
+      "resultSha256": "430da10d21986c9e8dc9f3e87fc19e494264677f33725b755b930f5e61b18779",
+      "f8Utc": "2026-09-21T17:01:03.2132935Z",
+      "f8Korea": "02:01:03",
+      "delaysMs": [
+        4050,
+        6500,
+        7950,
+        9850,
+        11700
+      ],
+      "bits": "11101",
+      "resultSource": "user-report via hash-linked result sidecar",
+      "firstMatchScore": 0.8639240506329114,
+      "firstMatchIndex": 144,
+      "confirmedIndex": 147,
+      "inputBeginMaxLateMs": 0.023199999999633292,
+      "inputCallMaxDurationMs": 13.461900000000242,
+      "recordingPolicy": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "number": 4,
+      "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-fee306f99b824dd2b0a2d28d2acedde7.json",
+      "trialId": "9344971082484751a8e97b624fefe707",
+      "rawSha256": "7b2555e12c69c5cd43a03e1f46ed403ff4ee21245b97e9cd24776a57dc343140",
+      "resultSha256": "5ef04d925f4fee3f0f32bdd3af9594537a7161c5650885e3d3c56c507a4f5145",
+      "f8Utc": "2026-09-21T17:05:36.4487453Z",
+      "f8Korea": "02:05:36",
+      "delaysMs": [
+        4050,
+        6500,
+        7950,
+        9800,
+        11700
+      ],
+      "bits": "11101",
+      "resultSource": "user-report via hash-linked result sidecar",
+      "firstMatchScore": 0.7567567567567568,
+      "firstMatchIndex": 172,
+      "confirmedIndex": 175,
+      "inputBeginMaxLateMs": 1.1346000000012282,
+      "inputCallMaxDurationMs": 13.927700000000186,
+      "recordingPolicy": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "number": 5,
+      "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-7ae3900c39c04ef4bd2f313d1eab1593.json",
+      "trialId": "ead00a32f550499b804993095c0d07e1",
+      "rawSha256": "ecc2966aea2b3cfe541b02663fe1005e211ad0e50dfe6aabce0e363f08fdf495",
+      "resultSha256": "49aab4d5e48cfe0e92ab086bfa719ccddd07b267e9e4c79ba0edd3006d629ba1",
+      "f8Utc": "2026-09-21T17:06:57.3226339Z",
+      "f8Korea": "02:06:57",
+      "delaysMs": [
+        4050,
+        6500,
+        7950,
+        9750,
+        11700
+      ],
+      "bits": "11101",
+      "resultSource": "user-report via hash-linked result sidecar",
+      "firstMatchScore": 0.7950089126559715,
+      "firstMatchIndex": 164,
+      "confirmedIndex": 166,
+      "inputBeginMaxLateMs": 0.022100000000136788,
+      "inputCallMaxDurationMs": 13.528199999999742,
+      "recordingPolicy": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "number": 6,
+      "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-b8a823b366fa4e349e8a041b45feeccf.json",
+      "trialId": "54a6873d07dc480884497e58b685a89f",
+      "rawSha256": "bd22812cad7e322a5b6c2433fc8c873836a7d4ec6f5d16fd9236f8998a02e079",
+      "resultSha256": "aa1e5b00f1db063ea1940e9bc6571f7b8c65f9561c2b103a2f75c447337dbd4e",
+      "f8Utc": "2026-09-21T17:08:07.9213677Z",
+      "f8Korea": "02:08:07",
+      "delaysMs": [
+        4050,
+        6500,
+        7950,
+        9700,
+        11700
+      ],
+      "bits": "11111",
+      "resultSource": "user-report via hash-linked result sidecar",
+      "firstMatchScore": 0.7791970802919708,
+      "firstMatchIndex": 168,
+      "confirmedIndex": 170,
+      "inputBeginMaxLateMs": 0.041800000000876025,
+      "inputCallMaxDurationMs": 13.809400000000096,
+      "recordingPolicy": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "number": 7,
+      "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-f20ab9e010a3495cb1c8e75b5da1e9f1.json",
+      "trialId": "1f9b113051344a648c95812859037f84",
+      "rawSha256": "8d2750d7633e1d859463c1d6936e234876893aebcc4fe6ac221bfdb9fc10ec15",
+      "resultSha256": "0268637f34cf58c5e280517ce4e8820d0557f997c9e8793818b924c36f3f83dc",
+      "f8Utc": "2026-09-21T17:10:45.0321059Z",
+      "f8Korea": "02:10:45",
+      "delaysMs": [
+        4300,
+        6200,
+        8350,
+        9450,
+        12100
+      ],
+      "bits": "10000",
+      "resultSource": "user-report via hash-linked result sidecar",
+      "firstMatchScore": 0.7516525023607177,
+      "firstMatchIndex": 350,
+      "confirmedIndex": 352,
+      "inputBeginMaxLateMs": 0.017400000000634464,
+      "inputCallMaxDurationMs": 15.20679999999993,
+      "recordingPolicy": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "number": 8,
+      "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-dadf56c363d84074bbc896e93692c74b.json",
+      "trialId": "33ce5ac580b54ab5b343898d90d3a886",
+      "rawSha256": "fc9757c92768fcb55e2692baf90d010a42010121cb869e3c936ad1a45e2030db",
+      "resultSha256": "b788fda781e3311a77ee59f077bb2663eae79488624e681c9ecd4435f43a18f7",
+      "f8Utc": "2026-09-21T17:13:55.0236845Z",
+      "f8Korea": "02:13:55",
+      "delaysMs": [
+        4300,
+        6250,
+        8350,
+        9450,
+        12050
+      ],
+      "bits": "11111",
+      "resultSource": "user-report via hash-linked result sidecar",
+      "firstMatchScore": 0.8204724409448819,
+      "firstMatchIndex": 200,
+      "confirmedIndex": 202,
+      "inputBeginMaxLateMs": 0.14390000000094005,
+      "inputCallMaxDurationMs": 14.649500000001353,
+      "recordingPolicy": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "number": 9,
+      "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-f0e354f5d93a4be9a75fca99893f0125.json",
+      "trialId": "b26b1f9ddeda467191a4e9364ff1e0fa",
+      "rawSha256": "d06955553a95ceb7a2a0bdef54e77791c6ec7b23519765adc720ce8dc0976d2f",
+      "resultSha256": "28b42c4538bf7108c225ed18ce746853a85df87e1975c47e35b238f8f407fcc8",
+      "f8Utc": "2026-09-21T17:15:56.8852215Z",
+      "f8Korea": "02:15:56",
+      "delaysMs": [
+        4350,
+        6250,
+        8350,
+        9450,
+        12100
+      ],
+      "bits": "11110",
+      "resultSource": "user-report via hash-linked result sidecar",
+      "firstMatchScore": 0.6994106090373281,
+      "firstMatchIndex": 235,
+      "confirmedIndex": 237,
+      "inputBeginMaxLateMs": 0.0408000000006723,
+      "inputCallMaxDurationMs": 14.65899999999965,
+      "recordingPolicy": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "number": 10,
+      "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-9561124b2f9e4ab5bfbc25c189788b0c.json",
+      "trialId": "924a04b807aa4080b50fa963df8ebc7f",
+      "rawSha256": "10e81bf23920137da5f3cfdf449b664b5a52f73fc2669df172e0271390e4bb59",
+      "resultSha256": "c63d040e9295c3738d5fc59e286d4e335e3fa2d7e3fa05821a3adfcef69f8802",
+      "f8Utc": "2026-09-21T17:18:22.5935892Z",
+      "f8Korea": "02:18:22",
+      "delaysMs": [
+        4450,
+        6300,
+        8150,
+        9550,
+        11850
+      ],
+      "bits": "01100",
+      "resultSource": "user-report via hash-linked result sidecar",
+      "firstMatchScore": 0.8044982698961938,
+      "firstMatchIndex": 168,
+      "confirmedIndex": 171,
+      "inputBeginMaxLateMs": 0.04579999999987194,
+      "inputCallMaxDurationMs": 14.672499999999673,
+      "recordingPolicy": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "number": 11,
+      "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-97123c4b4af24772adf9d3c5fbd3f749.json",
+      "trialId": "382c490de27f4f6b9eb6848ba09dde70",
+      "rawSha256": "fc3f4dbe9f516a9b262674779650311357b263035e1e4ddd6fcd2e7a5874e486",
+      "resultSha256": "d9572a288188384e5a3cdd06ac1e90d09d8208df35b35d0e106ed9e4b1b9dbee",
+      "f8Utc": "2026-09-21T17:20:45.6148878Z",
+      "f8Korea": "02:20:45",
+      "delaysMs": [
+        4400,
+        6300,
+        8150,
+        9550,
+        11850
+      ],
+      "bits": "11111",
+      "resultSource": "user-report via hash-linked result sidecar",
+      "firstMatchScore": 0.8440366972477065,
+      "firstMatchIndex": 187,
+      "confirmedIndex": 189,
+      "inputBeginMaxLateMs": 0.07089999999971042,
+      "inputCallMaxDurationMs": 13.787999999999556,
+      "recordingPolicy": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "number": 12,
+      "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-6af286b658f348cba5465d3affc5ddf3.json",
+      "trialId": "4154ce32e57842f6bfc8eaa7c97a11ca",
+      "rawSha256": "c487919c39b4bd76c2ac53d2c6f00da456a49aefb27e309031d4223ea3f3d0c4",
+      "resultSha256": "5179b2e25020a279456e4a33c84ac84a1d178a30cd2a12013fd9b9047b4be074",
+      "f8Utc": "2026-09-21T17:22:29.5473941Z",
+      "f8Korea": "02:22:29",
+      "delaysMs": [
+        4400,
+        6250,
+        8350,
+        9400,
+        12050
+      ],
+      "bits": "10110",
+      "resultSource": "user-report via hash-linked result sidecar",
+      "firstMatchScore": 0.755803156917363,
+      "firstMatchIndex": 314,
+      "confirmedIndex": 317,
+      "inputBeginMaxLateMs": 0.13840000000163855,
+      "inputCallMaxDurationMs": 14.259200000000419,
+      "recordingPolicy": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "number": 13,
+      "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-bd0348d91da041fba5be43f4257a6ba1.json",
+      "trialId": "42093ac3eccd46989000c9a235ad0064",
+      "rawSha256": "f255610c796e1acb9d55d00f34042a88462d059c45b775a94685bef926436c8f",
+      "resultSha256": "cc3d9dee93dcc39b4d93c250263417920106941c447d7afc026f6dafc9437b31",
+      "f8Utc": "2026-09-21T17:25:10.2462470Z",
+      "f8Korea": "02:25:10",
+      "delaysMs": [
+        4350,
+        6250,
+        8350,
+        9400,
+        12050
+      ],
+      "bits": "11111",
+      "resultSource": "user-report via hash-linked result sidecar",
+      "firstMatchScore": 0.816597510373444,
+      "firstMatchIndex": 178,
+      "confirmedIndex": 181,
+      "inputBeginMaxLateMs": 0.018299999999726424,
+      "inputCallMaxDurationMs": 14.098500000000058,
+      "recordingPolicy": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "number": 14,
+      "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-4b05072ddce84701b97bd89d1e6e4659.json",
+      "trialId": "0bf44462bf764fd6aec2303139adb089",
+      "rawSha256": "63329308559c02479b8dca9173d0c4a3e9ab080fd4234b3551bcedb5dd85bc20",
+      "resultSha256": "33c864a6747f109170d1c4d22e5b96214c2e0d413acd2185c5dab3743c1a7090",
+      "f8Utc": "2026-09-21T17:28:53.2574227Z",
+      "f8Korea": "02:28:53",
+      "delaysMs": [
+        4100,
+        6550,
+        7950,
+        9700,
+        11700
+      ],
+      "bits": "01101",
+      "resultSource": "user-report via hash-linked result sidecar",
+      "firstMatchScore": 0.856655290102389,
+      "firstMatchIndex": 211,
+      "confirmedIndex": 213,
+      "inputBeginMaxLateMs": 3.590700000000652,
+      "inputCallMaxDurationMs": 10.36449999999968,
+      "recordingPolicy": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "number": 15,
+      "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-018596576dfc4941b9f13c7f4cd8f529.json",
+      "trialId": "04e34753a8ff4f96a5e69aadf9f23df9",
+      "rawSha256": "1af04330704112793e6caaddcb6676c341f23c310f350eb372fc9bdba887b45f",
+      "resultSha256": "a6b63a2960eff3f7424dd0c120d4afe1d5f8b548f70e9a2b16bca3888578af48",
+      "f8Utc": "2026-09-21T17:30:19.6098781Z",
+      "f8Korea": "02:30:19",
+      "delaysMs": [
+        4100,
+        6550,
+        7950,
+        9700,
+        11700
+      ],
+      "bits": "01000",
+      "resultSource": "user-report via hash-linked result sidecar",
+      "firstMatchScore": 0.8151332760103182,
+      "firstMatchIndex": 318,
+      "confirmedIndex": 321,
+      "inputBeginMaxLateMs": 0.075700000001234,
+      "inputCallMaxDurationMs": 13.938500000000204,
+      "recordingPolicy": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "number": 16,
+      "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-c3d4a0fe3abd4e67a23329700334f055.json",
+      "trialId": "cf705205b62d4063b85d8348f76ba3cb",
+      "rawSha256": "b5f4bbf10193579019d203f22e21c0d84c0318eba90735acb7544fe280185bd3",
+      "resultSha256": "edb669adfc6206c3f8b779f763f5787fb44017bf1acbaca706beb94f7615fd9f",
+      "f8Utc": "2026-09-21T17:33:44.2134814Z",
+      "f8Korea": "02:33:44",
+      "delaysMs": [
+        4150,
+        6550,
+        7950,
+        9700,
+        11700
+      ],
+      "bits": "11111",
+      "resultSource": "user-report via hash-linked result sidecar",
+      "firstMatchScore": 0.6875,
+      "firstMatchIndex": 198,
+      "confirmedIndex": 200,
+      "inputBeginMaxLateMs": 0.017099999999118154,
+      "inputCallMaxDurationMs": 14.597499999999854,
+      "recordingPolicy": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "number": 17,
+      "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-035cd5fe8df94b198d8661e7f76c9521.json",
+      "trialId": "ae99f951431c442bac114064388e9320",
+      "rawSha256": "84760389f571e532364034d2e1ebcdc35c39bdbe6d497358995802f7834c9a1f",
+      "resultSha256": "9f5525b24594e0355e8db5a413f7cd6abf8d12e83fbbf320aaa93a30b4e109fa",
+      "f8Utc": "2026-09-21T17:35:51.6174231Z",
+      "f8Korea": "02:35:51",
+      "delaysMs": [
+        4150,
+        6550,
+        7950,
+        9700,
+        11650
+      ],
+      "bits": "11111",
+      "resultSource": "user-report via hash-linked result sidecar",
+      "firstMatchScore": 0.7873873873873873,
+      "firstMatchIndex": 195,
+      "confirmedIndex": 197,
+      "inputBeginMaxLateMs": 0.7662000000000262,
+      "inputCallMaxDurationMs": 15.113899999999376,
+      "recordingPolicy": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "number": 18,
+      "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-21a5e718251446908b9202fd2d4aafe4.json",
+      "trialId": "9efe4bda0a6c4613b1c8032053afce01",
+      "rawSha256": "af747c5da9a313d0d6e6ce0ceedfb249a9f1e4c9b62ef80073f980239fa684ec",
+      "resultSha256": "b35f3da971db164306b580ab3be6fa19ae4bccd25aac33e9dcaff16c5e8f5e16",
+      "f8Utc": "2026-09-21T17:37:04.3332421Z",
+      "f8Korea": "02:37:04",
+      "delaysMs": [
+        4250,
+        6400,
+        8150,
+        9550,
+        11850
+      ],
+      "bits": "11111",
+      "resultSource": "user-report via hash-linked result sidecar",
+      "firstMatchScore": 0.8003565062388592,
+      "firstMatchIndex": 419,
+      "confirmedIndex": 422,
+      "inputBeginMaxLateMs": 0.04219999999986612,
+      "inputCallMaxDurationMs": 10.5617000000002,
+      "recordingPolicy": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "number": 19,
+      "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-ef97232ac5af40afba722b99f9f8f179.json",
+      "trialId": "98fe333a333146fc9e3afa61fcacb567",
+      "rawSha256": "847a3a0f8f227400c845db42e1faa0f63afc442eefb6148d3cb7be8d1210a021",
+      "resultSha256": "56c2dc5a0eba379a52876b1c8a25d38137c5d5970e630b9d54b5161aae830d9c",
+      "f8Utc": "2026-09-21T17:38:23.1217651Z",
+      "f8Korea": "02:38:23",
+      "delaysMs": [
+        4100,
+        6400,
+        8150,
+        9550,
+        11850
+      ],
+      "bits": "11111",
+      "resultSource": "user-report via hash-linked result sidecar",
+      "firstMatchScore": 0.7957371225577264,
+      "firstMatchIndex": 172,
+      "confirmedIndex": 175,
+      "inputBeginMaxLateMs": 0.1434000000008382,
+      "inputCallMaxDurationMs": 13.346700000000055,
+      "recordingPolicy": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "number": 20,
+      "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-66d961a2572244b7bfbfa312d15ff33f.json",
+      "trialId": "d767326f71b84f73be22805188268750",
+      "rawSha256": "d9921ddcb4438ba421d8427b4b597d50501a4b05a589eb39e7b7e86818135316",
+      "resultSha256": "db9e72131c545b0da9b462c83bc35122018cc26fcd1afa5c7367635e7bf88fb3",
+      "f8Utc": "2026-09-21T17:39:28.1510707Z",
+      "f8Korea": "02:39:28",
+      "delaysMs": [
+        4100,
+        6550,
+        7950,
+        9700,
+        11650
+      ],
+      "bits": "11111",
+      "resultSource": "user-report via hash-linked result sidecar",
+      "firstMatchScore": 0.7710843373493976,
+      "firstMatchIndex": 169,
+      "confirmedIndex": 171,
+      "inputBeginMaxLateMs": 0.015300000000934233,
+      "inputCallMaxDurationMs": 14.645499999999629,
+      "recordingPolicy": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    }
+  ],
+  "conditions": {
+    "party": "아리아 → 남궁우 → 수나",
+    "start": "아리아",
+    "client": [
+      1920,
+      1080
+    ],
+    "keys": [
+      "RMB",
+      "Space",
+      "Space",
+      "Space",
+      "Space"
+    ],
+    "holdMs": [
+      100,
+      150,
+      150,
+      150,
+      150
+    ],
+    "manualWasdAllowed": true,
+    "movementActuallyPerformed": "not recorded",
+    "recording": "All OFF policy from stale/unknown OBS status; no new local video found. Does not prove OBS inactive."
+  },
+  "validation": {
+    "rawAndResultHashAndTrialId": true,
+    "recordsImportAndValidate": "passed",
+    "inputDownCountPerTrial": 5,
+    "inputUpCountPerTrial": 5,
+    "insertionErrors": 0,
+    "fullUserReportedSuccessCount": 10,
+    "nativeGameInputsByAnalyst": 0
+  },
+  "findings": {
+    "entry4100": {
+      "successTrials": [
+        19,
+        20
+      ],
+      "failureTrials": [
+        14,
+        15
+      ],
+      "interpretation": "Mixed. Trial20 differs from14/15 only in future last timing; that cannot cause earlier entry success. Repetition/condition/origin variation remains unresolved."
+    },
+    "entryLateAndHit1": {
+      "trials": [
+        11,
+        12,
+        13
+      ],
+      "interpretation": "4400 entry succeeds, but 6250 hit1 failed in12;4350/6250 succeeds13. Pair suggests conditional sensitivity, not proven causal transition."
+    },
+    "hit3Late": {
+      "failed": [
+        9850,
+        9800,
+        9750
+      ],
+      "successful": 9700,
+      "trials": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "priorActionsSuccessful": true
+    },
+    "hit4Late": {
+      "failureTrial": 9,
+      "failedMs": 12100,
+      "priorActionsSuccessful": true,
+      "successMs": 12050
+    },
+    "crosses": {
+      "earlyEntryLateOdd": [
+        4150,
+        6550,
+        7950,
+        9700,
+        11650
+      ],
+      "trial": 17,
+      "opposite": [
+        4350,
+        6250,
+        8350,
+        9400,
+        12050
+      ],
+      "oppositeTrial": 13
+    }
+  },
+  "limits": [
+    "User-reported bits, not new video-verified outcomes.",
+    "Failure after prior failure does not locate the normal-route boundary.",
+    "Small submission latency does not prove stable notice-to-game origin.",
+    "Observed outer success values are not universal independent boundaries."
+  ],
+  "recommendation": {
+    "additionalBoundaryTrials": 0,
+    "proposedWindowsMs": [
+      [
+        4150,
+        4350
+      ],
+      [
+        6250,
+        6550
+      ],
+      [
+        7950,
+        8350
+      ],
+      [
+        9400,
+        9700
+      ],
+      [
+        11650,
+        12050
+      ]
+    ],
+    "proposedBaselineMs": [
+      4250,
+      6400,
+      8150,
+      9550,
+      11850
+    ],
+    "baselineSuccessTrial": 18,
+    "crossSuccessTrials": [
+      17,
+      13
+    ],
+    "reason": "Mixed4100 remains mixed even after a few successes; shrinking only entry early to4150 uses already successful crosses. Outer expansion is not needed for a conservative practice window.",
+    "nextIfProceedingToService": "One representative full-success recording at already successful proposed baseline; compare recording timing before service adoption.",
+    "adoption": "proposal only; user profile preserved; no website implementation"
+  },
+  "independentReview": {
+    "reviewer": "mirage_next_review",
+    "scope": "read-only minimal follow-up experiment decision",
+    "accepted": "0 further numeric boundary trials; conservative entry4150..4350 and existing two crosses",
+    "validPrefixSuccessFailureCounts": [
+      [
+        16,
+        4
+      ],
+      [
+        14,
+        2
+      ],
+      [
+        14,
+        0
+      ],
+      [
+        11,
+        3
+      ],
+      [
+        10,
+        1
+      ]
+    ],
+    "limitation": "Conditional observation counts after excluding all actions following first failure, not success-rate estimates."
+  },
+  "sourceAvailability": {
+    "asOf": "2026-09-22",
+    "inventory": "docs/evidence/experiment-cleanup.json#/current",
+    "retainedOriginals": [
+      "ZZZ_2026-09-22_03-02-21.mp4",
+      "ZZZ_2026-09-22_12-08-35.mp4",
+      "ZZZ_2026-09-22_13-50-10.mp4"
+    ],
+    "retainedTrialIds": [
+      "f458ddae93024a70974794805167e726",
+      "f0ef0f89899741b282aaf610046316be",
+      "53581e707ac6420a8f50491b5ace86e0"
+    ],
+    "rule": "Only listed representative originals/trials remain. Other historical paths and hashes are provenance for summarized observations, not replayable files. Derived contact sheets/replay output were removed; final values, frame annotations and limitations remain here."
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "reviewed_on": "2026-09-17",
+  "id": "N1",
+  "trial_id": "20260917T031727353Z-9e708d050ba946b795c3cebfee6cb4d8",
+  "session_id": "20260917_120430_624714",
+  "video": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-17_12-17-21.mp4",
+  "video_sha256": "286a3795e3e9b02f9165500edabed4ef2e05054a760360f521962273ca36d5b3",
+  "fps": 60,
+  "decoded_frames": 1461,
+  "log": "<PRIVATE_HOME>\\Documents\\Codex\\2026-09-16\\zzz-controller-refresh\\outputs\\vesper-input-experiment\\logs\\20260917T031727353Z-9e708d050ba946b795c3cebfee6cb4d8.json",
+  "log_sha256": "ebec8aee17014e5d40980d894cb9bfa4429a51da6bfa88ebd5dcab5d8838a141",
+  "settings": {
+    "TargetAttack": 3,
+    "ShiftMs": 0,
+    "Comparison": false,
+    "DryRun": false,
+    "Recording": "",
+    "Conditions": "베스퍼 첫 제어스킬 / 파티: 아리아 → 남궁우 → 수나 / 시작: 아리아"
+  },
+  "operator_outcomes_unchanged": [
+    "미확인",
+    "미확인",
+    "미확인",
+    "미확인",
+    "미확인"
+  ],
+  "analyst_outcomes": {
+    "entry": "success",
+    "1": "success",
+    "2": "success",
+    "3": "success",
+    "4": "success"
+  },
+  "evidence": {
+    "entry": "f530 shows 극한 회피; HP9896 unchanged at sampled f480/515/530/560; combat points1450 to1470",
+    "1": "control score875 at f650",
+    "2": "control score1750 at f782",
+    "3": "control score2625 at f825",
+    "4": "final response and 부위 파괴, control score9017 at f960; final award not isolated to one hit"
+  },
+  "overlay_onsets": {
+    "entry": [
+      514,
+      515
+    ],
+    "1": [
+      596,
+      597
+    ],
+    "2": [
+      684,
+      685
+    ],
+    "3": [
+      781,
+      782
+    ],
+    "4": [
+      891,
+      892
+    ]
+  },
+  "ready_brackets": {
+    "2": [
+      666,
+      667
+    ],
+    "3": [
+      765,
+      766
+    ]
+  },
+  "reference_ready_brackets": {
+    "2": [
+      590,
+      591
+    ],
+    "3": [
+      688,
+      689
+    ]
+  },
+  "alignment": {
+    "kind": "conditional local translation sensitivity",
+    "offset_ranges_frames": [
+      [
+        75,
+        77
+      ],
+      [
+        76,
+        78
+      ]
+    ],
+    "union_frames": [
+      75,
+      78
+    ],
+    "mapped_attack3_r2_clip_seconds": [
+      6.216666666666667,
+      6.283333333333333
+    ],
+    "r2_trim_frames": 330,
+    "current_service_end_seconds": 6.5792124542124535
+  },
+  "next_trial": {
+    "TargetAttack": 3,
+    "ShiftMs": 270,
+    "Comparison": true,
+    "predicted_clip_seconds": [
+      6.486666666666666,
+      6.553333333333333
+    ],
+    "rationale": "Current service late portion; end minus mapped upper minus one observed-frame reserve permits279.212ms, rounded down to10ms gives270. Reserve is an experimental design choice, not error guarantee."
+  },
+  "api": {
+    "max_down_schedule_lateness_ms": 0.05040000000008149,
+    "down_call_duration_ms": [
+      39.56179999999995,
+      5.241100000000188,
+      1.7293999999992593,
+      2.5072000000000116,
+      3.03820000000087
+    ]
+  },
+  "limits": [
+    "Single new success does not establish timing window or success rate.",
+    "Readiness color is an input-before alignment marker, not a proven input gate.",
+    "Sensitivity ranges omit unknown differential overlay/game display latency; local scale assumption remains conditional.",
+    "Plus270 is a prospective schedule setting. Re-align every new trial rather than assuming it reached the predicted game phase.",
+    "Original video and user outcome fields were not modified."
+  ]
+}

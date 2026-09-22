@@ -1,0 +1,1044 @@
+{
+  "date": "2026-09-22",
+  "status": "exploration-candidates-not-adopted-game-boundaries",
+  "frameConvention": "0-based, [first filled frame, first unfilled frame); 60fps. Overlay timestamps are not physical switch timestamps.",
+  "videos": [
+    {
+      "id": 1,
+      "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-22_00-18-00.mp4",
+      "sha256": "a5d4a5a10a2e9be4a6a4d398a20ba3ed46ff6de6017774e31caddce49c9a0916",
+      "fps": 60,
+      "frames": 1165,
+      "matcherFirstFrame": 259,
+      "matcherConfirmedFrame": 262,
+      "validNoticeOrigin": true,
+      "normalPartyPath": false,
+      "visualOutcome": "01111",
+      "selectedInputFrames": [
+        493,
+        608,
+        728,
+        804,
+        931
+      ],
+      "noticeRelativeMs": [
+        3900.0,
+        5816.667,
+        7816.667,
+        9083.333,
+        11200.0
+      ],
+      "overlayCandidates": {
+        "RMB": [
+          [
+            493,
+            505
+          ],
+          [
+            529,
+            536
+          ]
+        ],
+        "LMB": [
+          [
+            1161,
+            1165
+          ]
+        ],
+        "Space": [
+          [
+            608,
+            619
+          ],
+          [
+            639,
+            647
+          ],
+          [
+            728,
+            737
+          ],
+          [
+            776,
+            780
+          ],
+          [
+            804,
+            812
+          ],
+          [
+            931,
+            948
+          ]
+        ],
+        "W": [],
+        "A": [],
+        "S": [],
+        "D": []
+      }
+    },
+    {
+      "id": 2,
+      "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-22_00-20-45.mp4",
+      "sha256": "891ccc8821febdabbdca588b5d2995e686ac5806bbb34474ce3866e07593e802",
+      "fps": 60,
+      "frames": 1177,
+      "matcherFirstFrame": 283,
+      "matcherConfirmedFrame": 286,
+      "validNoticeOrigin": true,
+      "normalPartyPath": true,
+      "visualOutcome": "11110",
+      "selectedInputFrames": [
+        532,
+        671,
+        773,
+        873,
+        935
+      ],
+      "noticeRelativeMs": [
+        4150.0,
+        6466.667,
+        8166.667,
+        9833.333,
+        10866.667
+      ],
+      "overlayCandidates": {
+        "RMB": [
+          [
+            532,
+            534
+          ],
+          [
+            977,
+            981
+          ]
+        ],
+        "LMB": [
+          [
+            1173,
+            1177
+          ]
+        ],
+        "Space": [
+          [
+            671,
+            680
+          ],
+          [
+            773,
+            781
+          ],
+          [
+            873,
+            882
+          ],
+          [
+            935,
+            958
+          ]
+        ],
+        "W": [],
+        "A": [],
+        "S": [],
+        "D": []
+      }
+    },
+    {
+      "id": 3,
+      "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-22_00-23-23.mp4",
+      "sha256": "ce0e9099fe72f46ecdd7c5c53b3ce7b77489af87da1fc47fa197072bbebfa6fe",
+      "fps": 60,
+      "frames": 1201,
+      "matcherFirstFrame": 310,
+      "matcherConfirmedFrame": 313,
+      "validNoticeOrigin": true,
+      "normalPartyPath": true,
+      "visualOutcome": "11110",
+      "selectedInputFrames": [
+        558,
+        680,
+        798,
+        893,
+        980
+      ],
+      "noticeRelativeMs": [
+        4133.333,
+        6166.667,
+        8133.333,
+        9716.667,
+        11166.667
+      ],
+      "overlayCandidates": {
+        "RMB": [
+          [
+            558,
+            566
+          ],
+          [
+            690,
+            692
+          ]
+        ],
+        "LMB": [
+          [
+            690,
+            692
+          ],
+          [
+            1197,
+            1201
+          ]
+        ],
+        "Space": [
+          [
+            680,
+            690
+          ],
+          [
+            798,
+            807
+          ],
+          [
+            893,
+            902
+          ],
+          [
+            980,
+            1003
+          ]
+        ],
+        "W": [],
+        "A": [],
+        "S": [],
+        "D": []
+      }
+    },
+    {
+      "id": 4,
+      "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-22_00-25-50.mp4",
+      "sha256": "759874407de8e5645525b9a0f13d2230aeb883299150be7ae9a6f33531b698bb",
+      "fps": 60,
+      "frames": 1337,
+      "matcherFirstFrame": 284,
+      "matcherConfirmedFrame": 287,
+      "validNoticeOrigin": true,
+      "normalPartyPath": true,
+      "visualOutcome": "11111",
+      "selectedInputFrames": [
+        535,
+        651,
+        770,
+        857,
+        996
+      ],
+      "noticeRelativeMs": [
+        4183.333,
+        6116.667,
+        8100.0,
+        9550.0,
+        11866.667
+      ],
+      "overlayCandidates": {
+        "RMB": [
+          [
+            535,
+            541
+          ]
+        ],
+        "LMB": [
+          [
+            1289,
+            1295
+          ],
+          [
+            1330,
+            1337
+          ]
+        ],
+        "Space": [
+          [
+            651,
+            661
+          ],
+          [
+            770,
+            779
+          ],
+          [
+            857,
+            866
+          ],
+          [
+            996,
+            1004
+          ]
+        ],
+        "W": [],
+        "A": [],
+        "S": [],
+        "D": []
+      }
+    },
+    {
+      "id": 5,
+      "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-22_00-28-43.mp4",
+      "sha256": "659c6bc4de220a0707f72efdeffcbec44a46c7d1248445f98c95a13f3219f237",
+      "fps": 60,
+      "frames": 1307,
+      "matcherFirstFrame": 301,
+      "matcherConfirmedFrame": 304,
+      "validNoticeOrigin": true,
+      "normalPartyPath": true,
+      "visualOutcome": "11111",
+      "selectedInputFrames": [
+        545,
+        670,
+        796,
+        876,
+        1011
+      ],
+      "noticeRelativeMs": [
+        4066.667,
+        6150.0,
+        8250.0,
+        9583.333,
+        11833.333
+      ],
+      "overlayCandidates": {
+        "RMB": [
+          [
+            545,
+            550
+          ],
+          [
+            1189,
+            1209
+          ]
+        ],
+        "LMB": [
+          [
+            702,
+            708
+          ],
+          [
+            1158,
+            1167
+          ],
+          [
+            1304,
+            1307
+          ]
+        ],
+        "Space": [
+          [
+            670,
+            680
+          ],
+          [
+            796,
+            804
+          ],
+          [
+            876,
+            885
+          ],
+          [
+            1011,
+            1029
+          ]
+        ],
+        "W": [],
+        "A": [],
+        "S": [
+          [
+            995,
+            996
+          ],
+          [
+            1006,
+            1008
+          ]
+        ],
+        "D": []
+      }
+    },
+    {
+      "id": 6,
+      "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-22_00-54-19.mp4",
+      "sha256": "7ce971054c5e175ecf27951942fbdf9c40973f4678506b23773fb0ece93a9a9d",
+      "fps": 60,
+      "frames": 955,
+      "matcherFirstFrame": 122,
+      "matcherConfirmedFrame": 125,
+      "validNoticeOrigin": false,
+      "normalPartyPath": true,
+      "visualOutcome": "11111",
+      "selectedInputFrames": [
+        297,
+        421,
+        540,
+        634,
+        769
+      ],
+      "noticeRelativeMs": null,
+      "overlayCandidates": {
+        "RMB": [
+          [
+            297,
+            307
+          ]
+        ],
+        "LMB": [
+          [
+            951,
+            955
+          ]
+        ],
+        "Space": [
+          [
+            421,
+            438
+          ],
+          [
+            540,
+            549
+          ],
+          [
+            634,
+            642
+          ],
+          [
+            769,
+            777
+          ]
+        ],
+        "W": [],
+        "A": [],
+        "S": [],
+        "D": []
+      }
+    },
+    {
+      "id": 7,
+      "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-22_00-55-12.mp4",
+      "sha256": "551a777256b2650aa768c10597d95d3f617de589c7413d49131d1ff869846ce2",
+      "fps": 60,
+      "frames": 1517,
+      "matcherFirstFrame": 554,
+      "matcherConfirmedFrame": 557,
+      "validNoticeOrigin": true,
+      "normalPartyPath": true,
+      "visualOutcome": "11111",
+      "selectedInputFrames": [
+        808,
+        934,
+        1054,
+        1141,
+        1274
+      ],
+      "noticeRelativeMs": [
+        4233.333,
+        6333.333,
+        8333.333,
+        9783.333,
+        12000.0
+      ],
+      "overlayCandidates": {
+        "RMB": [
+          [
+            344,
+            349
+          ],
+          [
+            425,
+            433
+          ],
+          [
+            436,
+            443
+          ],
+          [
+            453,
+            460
+          ],
+          [
+            581,
+            588
+          ],
+          [
+            808,
+            815
+          ]
+        ],
+        "LMB": [
+          [
+            384,
+            389
+          ],
+          [
+            392,
+            398
+          ],
+          [
+            403,
+            407
+          ],
+          [
+            414,
+            418
+          ],
+          [
+            478,
+            484
+          ],
+          [
+            488,
+            493
+          ],
+          [
+            1513,
+            1517
+          ]
+        ],
+        "Space": [
+          [
+            934,
+            951
+          ],
+          [
+            1054,
+            1062
+          ],
+          [
+            1141,
+            1151
+          ],
+          [
+            1274,
+            1282
+          ]
+        ],
+        "W": [],
+        "A": [],
+        "S": [],
+        "D": []
+      }
+    }
+  ],
+  "detectorReplay": [
+    {
+      "videoId": 1,
+      "frames": 1165,
+      "first": 259,
+      "confirmed": 262,
+      "matchedRange": [
+        259,
+        493
+      ],
+      "matchedCount": 235,
+      "expected": [
+        249,
+        263,
+        496
+      ],
+      "passed": true,
+      "nativeInputCalls": 0,
+      "firstScore": 0.8647654093836247
+    },
+    {
+      "videoId": 2,
+      "frames": 1177,
+      "first": 283,
+      "confirmed": 286,
+      "matchedRange": [
+        283,
+        520
+      ],
+      "matchedCount": 238,
+      "expected": [
+        273,
+        287,
+        523
+      ],
+      "passed": true,
+      "nativeInputCalls": 0,
+      "firstScore": 0.6824254881808839
+    },
+    {
+      "videoId": 3,
+      "frames": 1201,
+      "first": 310,
+      "confirmed": 313,
+      "matchedRange": [
+        310,
+        544
+      ],
+      "matchedCount": 235,
+      "expected": [
+        300,
+        314,
+        547
+      ],
+      "passed": true,
+      "nativeInputCalls": 0,
+      "firstScore": 0.7930082796688133
+    },
+    {
+      "videoId": 4,
+      "frames": 1337,
+      "first": 284,
+      "confirmed": 287,
+      "matchedRange": [
+        284,
+        516
+      ],
+      "matchedCount": 233,
+      "expected": [
+        274,
+        288,
+        519
+      ],
+      "passed": true,
+      "nativeInputCalls": 0,
+      "firstScore": 0.8389319552110249
+    },
+    {
+      "videoId": 5,
+      "frames": 1307,
+      "first": 301,
+      "confirmed": 304,
+      "matchedRange": [
+        301,
+        536
+      ],
+      "matchedCount": 236,
+      "expected": [
+        291,
+        305,
+        539
+      ],
+      "passed": true,
+      "nativeInputCalls": 0,
+      "firstScore": 0.734975369458128
+    },
+    {
+      "videoId": 7,
+      "frames": 1517,
+      "first": 554,
+      "confirmed": 557,
+      "matchedRange": [
+        554,
+        791
+      ],
+      "matchedCount": 238,
+      "expected": [
+        544,
+        558,
+        794
+      ],
+      "passed": true,
+      "nativeInputCalls": 0,
+      "firstScore": 0.8113035551504102
+    }
+  ],
+  "normalParty": [
+    "아리아",
+    "남궁우",
+    "수나",
+    "아리아",
+    "남궁우"
+  ],
+  "candidateProfile": {
+    "SchemaVersion": 1,
+    "Id": "mirage-archer-unit-attack-09",
+    "BossId": "mirage-archer-unit",
+    "BossLabel": "환영의 화살 유닛",
+    "Skill": "Attack_09",
+    "Conditions": "한국어·16:9·최소1280×720 / 아리아 시작 / 수동 녹화 기반 탐색 후보·성공 경계 미확정 / 문구 출현 전 F8 / 준비 자동 입력 없음 / WASD 직접 입력 가능",
+    "Party": "아리아 → 남궁우 → 수나",
+    "StartCharacter": "아리아",
+    "AllowManualMovement": true,
+    "ManualPreparationRmbUntilMs": 0,
+    "MinimumSpacingMs": 250,
+    "Detector": {
+      "Id": "mirage-archer-unit-korean-shared-yellow-shape-v1",
+      "Template": "../notice-template-girtablullu.png",
+      "ReferenceWidth": 1280,
+      "ReferenceHeight": 720,
+      "X": 368,
+      "Y": 136,
+      "Width": 528,
+      "Height": 28,
+      "MinimumClientWidth": 1280,
+      "Threshold": 0.68,
+      "PollMs": 8,
+      "AbsentMs": 100,
+      "ConfirmationMs": 40,
+      "TimeoutMs": 60000
+    },
+    "Actions": [
+      {
+        "Id": "entry",
+        "Label": "진입 회피",
+        "Key": "RMB",
+        "Group": "A",
+        "HoldMs": 100,
+        "SelectedTiming": "baseline",
+        "MinimumMs": 100,
+        "MaximumMs": 20000,
+        "Timing": {
+          "EarlyMs": 4000,
+          "BaselineMs": 4150,
+          "LateMs": 4300
+        }
+      },
+      {
+        "Id": "hit-1",
+        "Label": "1타",
+        "Key": "Space",
+        "Group": "B",
+        "HoldMs": 150,
+        "SelectedTiming": "baseline",
+        "MinimumMs": 100,
+        "MaximumMs": 20000,
+        "Timing": {
+          "EarlyMs": 6100,
+          "BaselineMs": 6300,
+          "LateMs": 6500
+        }
+      },
+      {
+        "Id": "hit-2",
+        "Label": "2타",
+        "Key": "Space",
+        "Group": "A",
+        "HoldMs": 150,
+        "SelectedTiming": "baseline",
+        "MinimumMs": 100,
+        "MaximumMs": 20000,
+        "Timing": {
+          "EarlyMs": 7950,
+          "BaselineMs": 8150,
+          "LateMs": 8350
+        }
+      },
+      {
+        "Id": "hit-3",
+        "Label": "3타",
+        "Key": "Space",
+        "Group": "B",
+        "HoldMs": 150,
+        "SelectedTiming": "baseline",
+        "MinimumMs": 100,
+        "MaximumMs": 20000,
+        "Timing": {
+          "EarlyMs": 9450,
+          "BaselineMs": 9650,
+          "LateMs": 9850
+        }
+      },
+      {
+        "Id": "hit-4",
+        "Label": "4타",
+        "Key": "Space",
+        "Group": "A",
+        "HoldMs": 150,
+        "SelectedTiming": "baseline",
+        "MinimumMs": 100,
+        "MaximumMs": 20000,
+        "Timing": {
+          "EarlyMs": 11700,
+          "BaselineMs": 11900,
+          "LateMs": 12100
+        }
+      }
+    ]
+  },
+  "exclusions": {
+    "1": "Entry KO changes party route; repeated real Space. Do not pool later timing with normal route.",
+    "6": "Menu clears after notice already appears; first threshold match is not true onset. No absolute timing use.",
+    "falseOverlayCandidates": [
+      "3: LMB/RMB around690–692 from gold assist effect",
+      "5: LMB702–708 and S995–1008 from gold effect"
+    ]
+  },
+  "fixedScheduleComparison": {
+    "videos": [
+      2,
+      4
+    ],
+    "hit1RelativeFrames": [
+      388,
+      367
+    ],
+    "hit2ReadyFrames": [
+      759,
+      757
+    ],
+    "hit3ReadyFrames": [
+      843,
+      841
+    ],
+    "origins": [
+      283,
+      284
+    ],
+    "inputDifferenceMs": 350,
+    "laterCueDifferenceMs": 50,
+    "limitation": "Visible readiness cue is not success boundary; observational comparison on normal path, not proof of engine transition independence."
+  },
+  "checks": {
+    "nativeGameInputCalls": 0,
+    "offlineReplayValidSources": 6,
+    "selectedProfileCheck": "passed",
+    "uiSmoke": "source and deployed executable passed; screenshots visually reviewed; actual input unchecked",
+    "selectedProfileCombinations": 9,
+    "sharedAssertions": 148,
+    "build": "passed",
+    "nodeTests": 42,
+    "fullExperimentCheck": "Stopped after first bundled profile completed; narrowed to new profile after discovering missing generic WASD guidance. New profile complete suite passed after fix; not a full five-profile/service-alignment pass.",
+    "profileSourceSha256": "63fa109613c3dea16e3bc83d42bde6fb632d3226de49cab0ed2365e31207ac6e",
+    "templateSha256": "39194a973610342fb85047e35ec976235b1102ede77ca13a68eb2b752e0fc8cb",
+    "executableSha256": "bf3a58cf843a52ac6320cca27cf1c82b0d09060106868ceac4121c2ff2f05096",
+    "checkReportSha256": "f28a734c6beee6062943e007b5d96ca4ef00e9591c6c5c38b8d1c1c739d11826"
+  },
+  "independentReview": {
+    "profile": "mirage_profile_review: identifiers, candidate vs confirmed distinction, replay requirements",
+    "outcomes": "mirage_outcome_read: videos1–5; controller reviewed6–7 and decision-driving4/comparison frames"
+  },
+  "sourceRoles": "All seven retained for current initial timing, failure, route and origin review; no video deletion this turn.",
+  "outcomeReview": {
+    "scope": "Read-only visual outcome review of manual Mirage Archer Unit videos 1-5",
+    "frameBasis": "0-based sequential decode, 1280x720, 60fps",
+    "bitOrder": [
+      "entry",
+      "followUp1",
+      "followUp2",
+      "followUp3",
+      "followUp4"
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "bits": "01111",
+        "activeRoute": [
+          "Aria (entry hit, KO)",
+          "Nangong Yu",
+          "Sunna",
+          "Nangong Yu",
+          "Sunna"
+        ],
+        "anchors": {
+          "entryFailure": [
+            "f488 Aria HP 4899/10406",
+            "f563 Aria HP 0/10406"
+          ],
+          "followUps": [
+            "f678 Nangong Yu",
+            "f798 Sunna",
+            "f874 Nangong Yu",
+            "f1001 Sunna"
+          ],
+          "lastResponse": [
+            "f931 Space",
+            "f951-f971 contact/support response"
+          ]
+        },
+        "finalBanner": {
+          "observed": false,
+          "checkedFrames": "f1005-f1075"
+        },
+        "overlayNotes": [
+          "Space f639-f647 and f776-f780 are real yellow Space-bar activations, not visual false positives.",
+          "Six Space runs must not be mapped one-to-one onto the four boss follow-ups."
+        ]
+      },
+      {
+        "id": 2,
+        "bits": "11110",
+        "activeRoute": [
+          "Aria",
+          "Nangong Yu",
+          "Sunna",
+          "Aria",
+          "Nangong Yu (early raw switch, no successful counter)"
+        ],
+        "anchors": {
+          "entrySuccess": [
+            "f527-f602 Aria HP 10406/10406 and dodge scene"
+          ],
+          "followUps": [
+            "f741 Nangong Yu",
+            "f843 Sunna",
+            "f943 Aria"
+          ],
+          "lastFailure": [
+            "f935 Space",
+            "f1010-f1060 no parry contact, perfect counter, or banner",
+            "f1080 menu"
+          ]
+        },
+        "finalBanner": {
+          "observed": false
+        },
+        "uncertainty": "No distinct HP-loss number was captured for the last failure; the failure basis is the absent parry/counter response after the early raw switch, so it is weaker than video 3."
+      },
+      {
+        "id": 3,
+        "bits": "11110",
+        "activeRoute": [
+          "Aria",
+          "Nangong Yu",
+          "Sunna",
+          "Aria",
+          "Nangong Yu (hit)"
+        ],
+        "anchors": {
+          "entrySuccess": [
+            "f553-f628 Aria HP remains 10406/10406"
+          ],
+          "followUps": [
+            "f750 Nangong Yu",
+            "f868 Sunna",
+            "f963 Aria"
+          ],
+          "lastFailure": [
+            "f980 Space",
+            "f1040-f1060 red damage 1464",
+            "Nangong Yu HP 12919 to 11455"
+          ]
+        },
+        "finalBanner": {
+          "observed": false
+        },
+        "overlayNotes": [
+          "LMB/RMB f690-f692 are false positives from the gold support effect washing over the transparent mouse overlay."
+        ]
+      },
+      {
+        "id": 4,
+        "bits": "11111",
+        "activeRoute": [
+          "Aria",
+          "Nangong Yu",
+          "Sunna",
+          "Aria",
+          "Nangong Yu"
+        ],
+        "anchors": {
+          "entrySuccess": [
+            "f530-f605 Aria HP remains 10406/10406"
+          ],
+          "followUps": [
+            "f721 Nangong Yu",
+            "f840 Sunna",
+            "f927 Aria"
+          ],
+          "lastSuccess": [
+            "f996 Space",
+            "f1016 contact",
+            "f1066 Nangong Yu HP 12919/12919 and perfect counter"
+          ]
+        },
+        "finalBanner": {
+          "observed": true,
+          "frame": 1066,
+          "text": "완벽대응!!",
+          "damage": 7783870
+        }
+      },
+      {
+        "id": 5,
+        "bits": "11111",
+        "activeRoute": [
+          "Aria",
+          "Nangong Yu",
+          "Sunna",
+          "Aria",
+          "Nangong Yu"
+        ],
+        "anchors": {
+          "entrySuccess": [
+            "f540-f615 Aria HP remains 10406/10406"
+          ],
+          "followUps": [
+            "f740 Nangong Yu",
+            "f866 Sunna",
+            "f946 Aria"
+          ],
+          "lastSuccess": [
+            "f1011 Space",
+            "f1031 contact",
+            "f1081 Nangong Yu HP remains 12601/12919 and perfect counter"
+          ]
+        },
+        "finalBanner": {
+          "observed": true,
+          "frame": 1081,
+          "text": "완벽대응!!",
+          "damage": 7783870
+        },
+        "overlayNotes": [
+          "LMB f702-f708 is a false positive from the gold support/X effect over the transparent overlay.",
+          "S f995-f1008 is a false positive from the gold X effect over the keyboard overlay.",
+          "Post-combat LMB/RMB runs are menu/exit-region activity and are not control-skill inputs."
+        ]
+      }
+    ],
+    "bannerCaveat": "A final perfect-response banner is strong evidence for the last counter, not proof that all five bits succeeded. A 01111 route can also receive the game's perfect evaluation, so individual HP, switch, and contact evidence remains authoritative."
+  },
+  "controllerVisualAnchors": {
+    "6": {
+      "entry": 297,
+      "space": [
+        421,
+        540,
+        634,
+        769
+      ],
+      "perfectBanner": 850,
+      "invalidOriginReason": "At frame119 notice and sword-cross already active after menu. Matcher122 is fade threshold, not true onset."
+    },
+    "7": {
+      "entry": 808,
+      "entryDodgeEffect": 823,
+      "space": [
+        934,
+        1054,
+        1141,
+        1274
+      ],
+      "assistEffects": [
+        942,
+        1065,
+        1155,
+        1284
+      ],
+      "perfectBanner": 1330,
+      "prePatternHp": "Aria8667/10406; not whole-video no-damage"
+    }
+  },
+  "deployment": {
+    "Profile": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\profiles\\mirage-archer-unit-attack-09.json",
+    "ProfileSha256": "AB9E2BE25BFD812D8D1DA2CCFCF8FD55DE48EEC8C414316AB65DDB292134B44A",
+    "ExeSha256": "BF3A58CF843A52AC6320CCA27CF1C82B0D09060106868CEAC4121C2FF2F05096",
+    "PreservedFiles": 22,
+    "changed": "New profile plus existing shared template, updated executable for generic manual-WASD guidance, current usage document. Existing22 JSON/settings/last-profile hashes preserved.",
+    "deployedUiSmoke": "passed; no game input"
+  },
+  "sourceAvailability": {
+    "asOf": "2026-09-22",
+    "inventory": "docs/evidence/experiment-cleanup.json#/current",
+    "retainedOriginals": [
+      "ZZZ_2026-09-22_03-02-21.mp4",
+      "ZZZ_2026-09-22_12-08-35.mp4",
+      "ZZZ_2026-09-22_13-50-10.mp4"
+    ],
+    "retainedTrialIds": [
+      "f458ddae93024a70974794805167e726",
+      "f0ef0f89899741b282aaf610046316be",
+      "53581e707ac6420a8f50491b5ace86e0"
+    ],
+    "rule": "Only listed representative originals/trials remain. Other historical paths and hashes are provenance for summarized observations, not replayable files. Derived contact sheets/replay output were removed; final values, frame annotations and limitations remain here."
+  }
+}

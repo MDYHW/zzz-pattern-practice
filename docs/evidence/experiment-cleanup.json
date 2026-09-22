@@ -1,0 +1,573 @@
+{
+  "current": {
+    "date": "2026-09-22",
+    "status": "completed",
+    "policy": "Retain current service originals/assets, one early-Space-to-RMB success original, their trial evidence, final research summaries and active tools/settings. Remove completed exploratory logs, redundant media, analysis frames, helpers and test outputs without archives.",
+    "retainedOriginals": [
+      {
+        "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_06-23-16.mp4",
+        "sha256": "61ed09a56053d6045e63abb9030c499858fea2eb2663ec133463a0e3262e1110",
+        "role": "current-service-source"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_06-31-35.mp4",
+        "sha256": "dd231eb10fc7b977fd280a1bc9aabbc1b73fc9add91f173634a1ff8ce4db32fc",
+        "role": "current-service-source"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_23-01-39.mp4",
+        "sha256": "3802f1eceebd5fea33b3cd71553b85d33b278b09d63796c002b03f494518d90f",
+        "role": "current-service-source"
+      },
+      {
+        "path": "<PRIVATE_HOME>/Videos/ZZZ_2026-09-21_21-12-19.mp4",
+        "sha256": "0796e27ecab9738aac1c6b54ee82e7084b144b300f8af285b5dc7d8855be3e8c",
+        "role": "current-service-source"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-22_03-02-21.mp4",
+        "sha256": "19ab81d853add9603306a93f867cedd28782844f1aee3e5e7812eca742d69fce",
+        "role": "current-service-source"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-22_12-08-35.mp4",
+        "sha256": "143e6ccfa14b75d67b7958b35c26a0b160b1a26d18dce4941b566672488c7bc2",
+        "role": "current-service-source"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-22_13-50-10.mp4",
+        "sha256": "7bfe8f96de0c5ec1f58ae7bcd2fa4ed0c71eecaa586d69e0d6fa647d7f0b7aa1",
+        "role": "early-Space-to-RMB-success-proof"
+      }
+    ],
+    "serviceAssets": "All twelve current public/media clip/poster assets, covering six representative clips; hashes and alignment in service-media-20260920.json.",
+    "retainedRuntimeAndTrial": [
+      {
+        "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\ControlExperiment.exe",
+        "sha256": "32fd5122aa0fd7722a284639eb64ab47f07d329612c73971cc530adb54288012"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\profiles\\kusarikku-execute-01.json",
+        "sha256": "7c33fb0f4fa7298de2f9c5137a0fba094ba2cb844698f6e8c6730a0a8e512d38"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-6ced000c8efe45289fe7fef918cf0068.json",
+        "sha256": "b9902b313f8e83033c0c0cdb6c6d9833d412b87ae0435b1d28e6abc44be8846a"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-6ced000c8efe45289fe7fef918cf0068.json.result.json",
+        "sha256": "ab034f00848ae7c292ff674ea6178aa014686f3f71870adeb3b48d6b92a999fe"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-6ced000c8efe45289fe7fef918cf0068.png",
+        "sha256": "1e0c2fb69afb79889b814c9f3121476689673d79db2315e333afbcf6bec24362"
+      }
+    ],
+    "kusarikkuClosure": {
+      "removedFiles": 96,
+      "removedBytes": 292842031,
+      "removedVideos": 17,
+      "removedPastTrials": 8,
+      "removedPastTrialFiles": 24,
+      "archiveCreated": false,
+      "manifestDigest": "2067db5c63bf9024473625a4b447670a2b4e1ed394911b1e2f15a7558045a13c",
+      "digestMeaning": "Deletion receipt fingerprint, not a restorable archive.",
+      "previous49TrialReduction": {
+        "removedTrials": 47,
+        "removedFiles": 141,
+        "archiveCreated": false
+      },
+      "summary": "Latest source21:12, its raw/result/image and current service remain. Former two crossed trials are now summarized in boundaries evidence; records store and finished batches removed.",
+      "finalDerivedCleanup": {
+        "files": 956,
+        "bytes": 377727930.0,
+        "archiveCreated": false,
+        "scope": "Previous f873 Kusarikku analysis video frames/static extracts, completed browser/build/fake-test outputs and one-off cleanup helpers"
+      }
+    },
+    "summaryLocations": [
+      "docs/experiments/kusarikku-control-skill.md",
+      "docs/evidence/kusarikku-service-20260921.json",
+      "docs/evidence/kusarikku-boundaries-20260921.json",
+      "docs/evidence/kusarikku-control-20260921.json",
+      "docs/evidence/service-media-20260920.json",
+      "docs/evidence/mirage-archer-unit-automatic-20260922.json",
+      "docs/evidence/mirage-archer-unit-manual-20260922.json",
+      "docs/evidence/mirage-archer-unit-rmb-20260922.json",
+      "docs/evidence/mirage-archer-unit-service-20260922.json",
+      "docs/evidence/mirage-recovery-distance-20260922.json",
+      "docs/experiments/arrow-unit-control-skill.md"
+    ],
+    "verification": {
+      "protectedHashesUnchangedAtDeletion": 194,
+      "removedPathsAbsent": true,
+      "recordStoreValidation": "passed with three retained representative trials",
+      "sourceOrRuntimeBehaviorChanged": false
+    },
+    "limitations": [
+      "Deleted historical originals/trials cannot be replayed.",
+      "Historical paths below describe earlier cleanup, not currently available files."
+    ],
+    "retainedMirageTrials": [
+      {
+        "trialId": "f458ddae93024a70974794805167e726",
+        "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-4b6458699eda4090a61239b5de060b2d.json",
+        "files": [
+          {
+            "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-4b6458699eda4090a61239b5de060b2d.json",
+            "sha256": "3628145801dd23cf4cea755d976df5b0038352f23dcf05db1edcbba73aeec6d6"
+          },
+          {
+            "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-4b6458699eda4090a61239b5de060b2d.json.result.json",
+            "sha256": "6b428e32a428c6d35fc5131e6a702d419f688633aa8c6a4102e8d5344d23d094"
+          },
+          {
+            "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-4b6458699eda4090a61239b5de060b2d.png",
+            "sha256": "39ca1cb2ce83ca475b345d91d1bd922217cb6c7f35c322e9b0277889d26e8eaf"
+          }
+        ]
+      },
+      {
+        "trialId": "f0ef0f89899741b282aaf610046316be",
+        "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-4aed7aff2d7d409ca0ab24ca2c67aff2.json",
+        "files": [
+          {
+            "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-4aed7aff2d7d409ca0ab24ca2c67aff2.json",
+            "sha256": "51e2e5a1223f66af44a368471c3a62c9b893709f11f9e4918074ca51354b0680"
+          },
+          {
+            "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-4aed7aff2d7d409ca0ab24ca2c67aff2.json.result.json",
+            "sha256": "022f169182c75e785a1a9e0e949f6997d6d22bbc2f6c1a3f828d341a4a21ea61"
+          },
+          {
+            "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-4aed7aff2d7d409ca0ab24ca2c67aff2.png",
+            "sha256": "6167d574dc951455569575fcce5088bfaa3454a53d148da5c7c67e0f517b0cf7"
+          }
+        ]
+      },
+      {
+        "trialId": "53581e707ac6420a8f50491b5ace86e0",
+        "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-c3965c1132d4480aa7325db1e06c8bd8.json",
+        "files": [
+          {
+            "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-c3965c1132d4480aa7325db1e06c8bd8.json",
+            "sha256": "31388b469ddec7a51a7a5c9df5c4e49c438a8ef995539f299da4a1278e539684"
+          },
+          {
+            "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-c3965c1132d4480aa7325db1e06c8bd8.json.result.json",
+            "sha256": "01df47f9584c97bf8674240b5b165436d9c8c0bca1271b755223734a3ab34d2a"
+          },
+          {
+            "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-c3965c1132d4480aa7325db1e06c8bd8.png",
+            "sha256": "9813fca571bed20698286e8038206497b1e76f42f812251f324ebc49c93ba7b7"
+          }
+        ]
+      }
+    ],
+    "retainedMirageObsSessions": [
+      "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\obs-recordings\\obs-36dc3d7e821543bd88308f9bfe986468.json",
+      "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\obs-recordings\\obs-9336885786ce48fda94ee57d16a94533.json",
+      "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\obs-recordings\\obs-d44509863b3b46e9bb8fed047cf44798.json"
+    ],
+    "mirageClosure": {
+      "date": "2026-09-22",
+      "status": "completed",
+      "removedFiles": 530,
+      "removedBytes": 490119291,
+      "removedVideos": 9,
+      "removedTrials": 33,
+      "retainedMirageOriginals": 3,
+      "retainedMirageTrials": 3,
+      "groups": {
+        "superseded-mirage-video": {
+          "files": 9,
+          "bytes": 151393117
+        },
+        "summarized-mirage-trial": {
+          "files": 99,
+          "bytes": 3196976
+        },
+        "finished-obs-session-with-retired-output": {
+          "files": 14,
+          "bytes": 26764
+        },
+        "derived-analysis-or-completed-check": {
+          "files": 384,
+          "bytes": 333421329
+        },
+        "completed-browser-check": {
+          "files": 5,
+          "bytes": 1374071
+        },
+        "retired-kusarikku-helper-or-check": {
+          "files": 18,
+          "bytes": 704398
+        },
+        "implemented-tile-prototype": {
+          "files": 1,
+          "bytes": 2636
+        }
+      },
+      "archiveCreated": false,
+      "manifestDigest": "7af9cf1aebe667f8ee704cbbf3733d873ca14fdf7cc7ecdd76eb812361922d7e",
+      "digestMeaning": "Receipt fingerprint only, not a recoverable archive.",
+      "recordStore": ".local/experiments/records.json contains only the three Mirage representatives; original logs/result sidecars are unchanged.",
+      "priorKusarikkuRemainders": "Removed obsolete deployment backup, one-off helpers and completed checks still present in f873.",
+      "autoReview": "Initial request rejected for possible required-store deletion. Narrowed request retained the reduced store and hash-protected docs/src/assets/runtime; approved and completed."
+    }
+  },
+  "initial_20260917": {
+    "historical": true,
+    "status": "completed",
+    "note": "Historical operation only; current is the sole retained-file inventory. Removed per-file receipts do not represent missing experimental outcomes.",
+    "date": "2026-09-17",
+    "result": {
+      "deleted_videos": 35,
+      "retained_videos": 16,
+      "deleted_program_files": 10,
+      "app_media_unchanged": true
+    },
+    "deletedCounts": {
+      "video": 35,
+      "retired_program": 10
+    },
+    "deletedBytes": 277864419
+  },
+  "entry_notice_cleanup": {
+    "historical": true,
+    "status": "completed",
+    "note": "Historical operation only; current is the sole retained-file inventory. Removed per-file receipts do not represent missing experimental outcomes.",
+    "date": "2026-09-17",
+    "summary": "notice-detector-20260917.json entry_experiment",
+    "deletedCounts": {
+      "entry_log": 38,
+      "notice_confirmation_image": 39,
+      "entry_video": 21,
+      "detector_intermediate": 4
+    },
+    "deletedBytes": 279562783
+  },
+  "first_hit_cleanup": {
+    "historical": true,
+    "status": "completed",
+    "note": "Historical operation only; current is the sole retained-file inventory. Removed per-file receipts do not represent missing experimental outcomes.",
+    "date": "2026-09-17",
+    "deletedCounts": {
+      "raw_log": 32,
+      "detector_png": 37,
+      "video": 18,
+      "diagnostic": 3,
+      "duplicate_build_source": 13
+    },
+    "deletedBytes": 259238706
+  },
+  "consolidation_20260918": {
+    "historical": true,
+    "status": "completed",
+    "note": "Historical operation only; current is the sole retained-file inventory. Removed per-file receipts do not represent missing experimental outcomes.",
+    "date": "2026-09-18",
+    "deletedCounts": {
+      "video": 36,
+      "research_clip": 4,
+      "raw_log": 44,
+      "detector_png": 38,
+      "duplicate_build_source": 13,
+      "retired_diagnostic": 4
+    },
+    "deletedBytes": 522016097
+  },
+  "consolidation_third_fourth_20260918": {
+    "historical": true,
+    "status": "completed",
+    "note": "Historical operation only; current is the sole retained-file inventory. Removed per-file receipts do not represent missing experimental outcomes.",
+    "date": "2026-09-18",
+    "result": {
+      "deleted_files": 139,
+      "deleted_videos": 13,
+      "deleted_trial_logs": 63,
+      "deleted_detector_snapshots": 63,
+      "deleted_bytes": 252919337,
+      "Videos_before": 17,
+      "Videos_after": 4,
+      "raw_trial_logs_remaining": 1,
+      "protected_hashes_verified": 8
+    },
+    "deletedCounts": {
+      "video": 13,
+      "trial_log": 63,
+      "detector_snapshot": 63
+    },
+    "deletedBytes": 252919337
+  },
+  "vesper_closure_20260918": {
+    "historical": true,
+    "status": "completed_except_active_executable",
+    "note": "Historical operation only; current is the sole retained-file inventory. Removed per-file receipts do not represent missing experimental outcomes.",
+    "date": "2026-09-18",
+    "result": {
+      "deleted_files": 130,
+      "deleted_videos": 10,
+      "deleted_raw_logs": 47,
+      "deleted_notice_snapshots": 33,
+      "deleted_generated_outputs": 4,
+      "deleted_analysis_scratch": 36,
+      "deleted_bytes": 233990567,
+      "remaining_videos": 4,
+      "remaining_raw_logs": 2,
+      "protected_hashes_verified": 5,
+      "pending_files": 0
+    },
+    "summary": "docs/experiments/vesper-control-skills.md and docs/vesper-timing-evidence.json experiment_closure_20260918",
+    "deletedCounts": {
+      "video": 10,
+      "raw_log": 47,
+      "notice_snapshot": 33,
+      "generated_experiment_output": 5,
+      "video_analysis_scratch": 36
+    },
+    "deletedBytes": 234082727
+  },
+  "entry_space_review_20260919": {
+    "historical": true,
+    "status": "completed",
+    "note": "Historical operation only; current is the sole retained-file inventory. Removed per-file receipts do not represent missing experimental outcomes.",
+    "summary": "docs/experiments/vesper-control-skills.md#execute_02-진입-space-비교--2026-09-19",
+    "deletedCounts": {
+      "raw-log": 5,
+      "user-result": 4,
+      "detection-image": 4,
+      "video": 1
+    },
+    "deletedBytes": 16253653
+  },
+  "execute02_off_closeout_20260919": {
+    "historical": true,
+    "status": "completed",
+    "note": "Historical operation only; current is the sole retained-file inventory. Removed per-file receipts do not represent missing experimental outcomes.",
+    "completedUtc": "2026-09-19T12:56:53.9589486Z",
+    "deletedCounts": {
+      "superseded-profile-backup": 2,
+      "user-result": 35,
+      "intermediate": 268,
+      "video": 3,
+      "detection-image": 35,
+      "raw-log": 35,
+      "closeout-intermediate": 14
+    },
+    "deletedBytes": 78653507
+  },
+  "closure_20260919_inventory": {
+    "historical": true,
+    "status": "completed",
+    "date": "2026-09-19",
+    "deletedCounts": {
+      "execute02-raw-summary-replacement": 78,
+      "superseded-video": 6,
+      "obsolete-experiment-build-and-logs": 22,
+      "obsolete-validation-output": 7,
+      "retired-resume-snapshot-or-fixture": 621,
+      "regenerable-validation-output": 5,
+      "completed-ui-comparison-output": 7,
+      "superseded-ui-screenshot": 2,
+      "merged-document": 1,
+      "manual-f8-raw-summary-replacement": 72,
+      "merged-manual-f8-summary": 2
+    },
+    "deletedFiles": 823,
+    "deletedBytes": 185432249,
+    "note": "Superseded by current. Former retained lists were retired on 2026-09-21; experiment outcomes remain in canonical evidence."
+  },
+  "harnessDocuments20260921": {
+    "date": "2026-09-21",
+    "status": "completed",
+    "removedRoot": "<PRIVATE_HOME>/Documents/Codex/2026-09-21/controller-transfer-repair",
+    "removed": [
+      {
+        "name": "evaluation.json",
+        "sha256": "3081808371ce936b260573e4b6ffeddecdf2db2094047a43e718055052650c10",
+        "bytes": 8702
+      },
+      {
+        "name": "final-evaluation.json",
+        "sha256": "4fa45c268ea1c87abfc79dd2e8dfa9804d815757142dbd7185cc72f4ffd7d34a",
+        "bytes": 13650
+      },
+      {
+        "name": "verification.json",
+        "sha256": "4dd8789f06265f2b6a9020ac1e4d400eb8a184b390f59634270ba68c2754ac9e",
+        "bytes": 964
+      },
+      {
+        "name": "final-corrections.mjs",
+        "sha256": "3a544b86d890aaba83340feb3dda20ea1983e5cf59e65ccbd07eeb41bb3bf42f",
+        "bytes": 910
+      },
+      {
+        "name": "finalize.mjs",
+        "sha256": "1a71ccd17d1cf152c7cd8a0d7aba6847ac6d878ced49d08fb8040d412a813837",
+        "bytes": 9473
+      },
+      {
+        "name": "record-verification.mjs",
+        "sha256": "473b9b7a991443facded204b6c2924e831dde010d00622fb14a3865fdd145da4",
+        "bytes": 1478
+      },
+      {
+        "name": "refine.mjs",
+        "sha256": "790190a975ca8eff2cdb82cfe84deef495aa428ceb77fdee6a1c95bb5d6b072d",
+        "bytes": 2960
+      },
+      {
+        "name": "repair.mjs",
+        "sha256": "6343f891c0178569b959f27a3803517c9390c7928e05ce56c7c9613c4b5341ac",
+        "bytes": 21748
+      },
+      {
+        "name": "verify.mjs",
+        "sha256": "48d82242d2789eafbdd25f95a2ca6005471f03338b82358d20b2b07e424f99d4",
+        "bytes": 3604
+      }
+    ],
+    "retained": [
+      {
+        "path": "first-responses.json / followup-responses.json",
+        "role": "Original prior-evaluation answers used to review semantic acceptance"
+      },
+      {
+        "path": "before/ / before-manifest.json / changed-manifest.json / preexisting.patch / current.patch",
+        "role": "Prior source context and rollback evidence for existing uncommitted work"
+      }
+    ],
+    "newArtifactPolicy": "First batch definition and isolated registered store/report diff retained for actual consumption and review. Derived CLI output, migration previews and one-shot scripts removed after their results were integrated into the evaluation.",
+    "removedTemporaryFiles": [
+      {
+        "path": "<PRIVATE_HOME>\\Documents\\Codex\\research-cleanup-preview\\research-history.md",
+        "bytes": 171904,
+        "sha256": "17160e68c62199004ec9408a0b980f8854052b90d37a345ec1f4b1a80cf6f523"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\Documents\\Codex\\research-cleanup-preview\\research.diff",
+        "bytes": 202386,
+        "sha256": "1a0c7178daee07cd1b8b08e6fcf4b238b3a9d1a72cf94015d05c15451d53acb8"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\Documents\\Codex\\research-cleanup-preview\\research.md",
+        "bytes": 27549,
+        "sha256": "c9f72281b8dcc62d161f7504fc5071024726e8657ed2f4bea37c3554ead7e0b8"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\Documents\\Codex\\research-cleanup-preview\\verification.json",
+        "bytes": 19171,
+        "sha256": "f5151a66d685ba1df010ece23f0d984c65e8050615a1c882d67b8d20a1075466"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\Documents\\Codex\\restructure-research.mjs",
+        "bytes": 14438,
+        "sha256": "bcd5091aa8668fd97c67519614e6394559f80e558a2a84eb09e52d66866d76ee"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\Documents\\Codex\\verify-research-preview.mjs",
+        "bytes": 3283,
+        "sha256": "0dd329825146e169497ff6525e5df0c5a487c30b76660972511067c74d7ab7aa"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\Documents\\Codex\\2026-09-21\\zzz-controller-workflow-validation\\outputs\\batch-registration-node.json",
+        "bytes": 73,
+        "sha256": "fd19dd28bf0e4a357bffb2f1ec1ada0e7c258c8c6ab4c8c56c744a40a5b23a41"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\Documents\\Codex\\2026-09-21\\zzz-controller-workflow-validation\\outputs\\batch-registration.txt",
+        "bytes": 1598,
+        "sha256": "4174822c51aa3708455239ce380cd2e468d96e51f14f00742e63be79ddf0dd82"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\Documents\\Codex\\2026-09-21\\zzz-controller-workflow-validation\\outputs\\batch-summary.json",
+        "bytes": 2566,
+        "sha256": "ca941951b20b8b304bff1f2e0df45bb445f520bcaa2b37439e66c157f2c2f9cf"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\Documents\\Codex\\2026-09-21\\zzz-controller-workflow-validation\\outputs\\batch-validation.json",
+        "bytes": 38,
+        "sha256": "c7e7b2197f800d32e90748e7ece8b8843c84ceccba06268752aa40b8c27ae81c"
+      },
+      {
+        "path": "C:\\tmp\\zzz-research-before-structure-20260921.md",
+        "bytes": 191576,
+        "sha256": "18c19f5ae46816cce2cd9eeb2aca677d4b113543a4a9e2a693d291102a76aeb7"
+      },
+      {
+        "path": "C:\\tmp\\zzz-readme-before-research-history-20260921.md",
+        "bytes": 31089,
+        "sha256": "c1e4590009b1902bad03e1cb63ae8dcd6a532c17e495490a653e0c44a68aabb8"
+      }
+    ]
+  },
+  "retiredObsSessions20260921": [
+    {
+      "outputPaths": [
+        "<PRIVATE_HOME>/Videos/ZZZ_2026-09-19_18-11-44.mp4"
+      ],
+      "stoppedUtc": "2026-09-19T09:12:05.8087705Z",
+      "sha256": "db8ddac8e1d9ef5095a93227a42b0ac42dba619042d59b53f4d53cde33c5204f",
+      "recordingId": "obs-1ad0c423cac3451b990dcb36259c4915",
+      "file": "obs-1ad0c423cac3451b990dcb36259c4915.json",
+      "startedUtc": "2026-09-19T09:11:44.771719Z",
+      "continuityLost": false
+    },
+    {
+      "outputPaths": [
+        "<PRIVATE_HOME>/Videos/ZZZ_2026-09-20_15-41-54.mp4"
+      ],
+      "stoppedUtc": "2026-09-20T06:42:27.4207526Z",
+      "sha256": "d846171e9afa398b0cef9a4348508840711c0b5276c2d7310a328810c75f30de",
+      "recordingId": "obs-3960be146b8541de81a7537df960227a",
+      "file": "obs-3960be146b8541de81a7537df960227a.json",
+      "startedUtc": "2026-09-20T06:41:54.5968078Z",
+      "continuityLost": false
+    },
+    {
+      "outputPaths": [
+        "<PRIVATE_HOME>/Videos/ZZZ_2026-09-20_15-44-37.mp4"
+      ],
+      "stoppedUtc": "2026-09-20T06:45:18.8172391Z",
+      "sha256": "a1700dff7fcdf681594c35ae017ea8cceb1daa4a4426e185a359d943711e4c4c",
+      "recordingId": "obs-89e60097f83b448889b9efb2d5c67353",
+      "file": "obs-89e60097f83b448889b9efb2d5c67353.json",
+      "startedUtc": "2026-09-20T06:44:37.9889376Z",
+      "continuityLost": false
+    },
+    {
+      "outputPaths": [
+        "<PRIVATE_HOME>/Videos/ZZZ_2026-09-19_18-12-48.mp4"
+      ],
+      "stoppedUtc": "2026-09-19T09:13:16.0592581Z",
+      "sha256": "f175a56386d8f909ec59a7b6de4c4753cd7d12d4d44d4b5999f4b4de0b583856",
+      "recordingId": "obs-98c51f61a2ec40bfbc1b2902d62953ed",
+      "file": "obs-98c51f61a2ec40bfbc1b2902d62953ed.json",
+      "startedUtc": "2026-09-19T09:12:48.5180416Z",
+      "continuityLost": false
+    },
+    {
+      "outputPaths": [
+        "<PRIVATE_HOME>/Videos/ZZZ_2026-09-20_15-39-20.mp4"
+      ],
+      "stoppedUtc": "2026-09-20T06:39:52.4070155Z",
+      "sha256": "056e768fe2688f1c96f8e071260ac1c89a69716bfcd1520f0d54b134c3627472",
+      "recordingId": "obs-a9aff72e77544d5c9f93496191ab8517",
+      "file": "obs-a9aff72e77544d5c9f93496191ab8517.json",
+      "startedUtc": "2026-09-20T06:39:20.5927748Z",
+      "continuityLost": false
+    },
+    {
+      "outputPaths": [
+        "<PRIVATE_HOME>/Videos/ZZZ_2026-09-20_06-35-04.mp4"
+      ],
+      "stoppedUtc": "2026-09-19T21:35:30.3469819Z",
+      "sha256": "4c3ec7bb0fb57e63faa4f5412786871ef3fcc1ef0923814e0c41ecbf5494bcd1",
+      "recordingId": "obs-c76ce8d6c1e04004b3bb15622a7ddc88",
+      "file": "obs-c76ce8d6c1e04004b3bb15622a7ddc88.json",
+      "startedUtc": "2026-09-19T21:35:05.1240468Z",
+      "continuityLost": false
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "recording_fps": 60,
+  "internal_effect_coordinates": [57, 129, 209, 300],
+  "provenance": {
+    "kind": "human video-frame observation, not engine telemetry or OS input timing",
+    "sources": [
+      {
+        "path": "../zzz-boss-pattern-feasibility/work/event-alignment/manual-annotations.json",
+        "sha256": "085f926141b277410b14f341f2d82baa0f434c98b339b42c34252795924b2d58",
+        "role": "original T3 effect annotations"
+      },
+      {
+        "path": ".local/research-video/observations.json",
+        "sha256": "5521f88a10f0be943fd6628c74a7495bd517b28fbc05a10f9678c88db29deb58",
+        "role": "read-only repeat-frame inspection and expanded T3/R2 brackets"
+      },
+      {
+        "path": "docs/research.md",
+        "role": "original T3/R2 annotation brackets and comparison formula, sections 106–129"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "original_annotations",
+      "meaning": "Candidate first visible effect brackets from the prior manual annotations",
+      "T3": [[295, 296], [384, 387], [483, 486], [598, 599]],
+      "R2": [[526, 527], [623, 624], [717, 718], [827, 828]]
+    },
+    {
+      "id": "repeated_image_sensitivity",
+      "meaning": "Last visibly changed absence to first visible effect; exploratory sensitivity brackets, not engine-event bounds",
+      "T3": [[290, 296], [383, 387], [482, 486], [592, 599]],
+      "R2": [[522, 527], [619, 624], [713, 718], [824, 828]]
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "SchemaVersion": 1,
+  "Id": "kusarikku-execute-01",
+  "BossId": "larval",
+  "BossLabel": "쿠사리쿠",
+  "Skill": "Execute_01",
+  "Conditions": "한국어·16:9·최소1280×720 / 같은 시작 위치·목표 / F8 시작 LMB5·준비 회피·진입·후속 자동 / WASD 직접 이동 가능, LMB·RMB·Space는 자동 / 수동 이동 경로의 성공은 별도 확인",
+  "StartAttack": {
+    "AtMs": [
+      500,
+      1050,
+      1700,
+      2300,
+      3100
+    ],
+    "HoldMs": 100
+  },
+  "ManualPreparationRmbUntilMs": 0,
+  "Preparation": [
+    {
+      "Id": "prepare-rmb-1",
+      "Label": "준비 회피1",
+      "Key": "RMB",
+      "AtMs": 1250,
+      "HoldMs": 150
+    },
+    {
+      "Id": "prepare-rmb-2",
+      "Label": "준비 회피2",
+      "Key": "RMB",
+      "AtMs": 2650,
+      "HoldMs": 150
+    }
+  ],
+  "MinimumSpacingMs": 250,
+  "Detector": {
+    "Id": "larval-korean-shared-yellow-shape-v1",
+    "Template": "../notice-template-girtablullu.png",
+    "ReferenceWidth": 1280,
+    "ReferenceHeight": 720,
+    "X": 368,
+    "Y": 136,
+    "Width": 528,
+    "Height": 28,
+    "MinimumClientWidth": 1280,
+    "Threshold": 0.68,
+    "PollMs": 8,
+    "AbsentMs": 100,
+    "ConfirmationMs": 40,
+    "TimeoutMs": 60000
+  },
+  "Actions": [
+    {
+      "Id": "entry",
+      "Label": "진입 회피",
+      "Key": "RMB",
+      "Group": "A",
+      "HoldMs": 100,
+      "SelectedTiming": "baseline",
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 3950,
+        "BaselineMs": 4100,
+        "LateMs": 4250
+      }
+    },
+    {
+      "Id": "hit-1",
+      "Label": "1타",
+      "Key": "Space",
+      "Group": "B",
+      "HoldMs": 150,
+      "SelectedTiming": "baseline",
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 6700,
+        "BaselineMs": 6850,
+        "LateMs": 7050
+      }
+    },
+    {
+      "Id": "hit-2",
+      "Label": "2타",
+      "Key": "Space",
+      "Group": "A",
+      "HoldMs": 200,
+      "SelectedTiming": "baseline",
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 7700,
+        "BaselineMs": 7900,
+        "LateMs": 8150
+      }
+    },
+    {
+      "Id": "hit-3",
+      "Label": "3타",
+      "Key": "Space",
+      "Group": "B",
+      "HoldMs": 250,
+      "SelectedTiming": "baseline",
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 9450,
+        "BaselineMs": 9650,
+        "LateMs": 9850
+      }
+    },
+    {
+      "Id": "hit-4",
+      "Label": "4타",
+      "Key": "Space",
+      "Group": "A",
+      "HoldMs": 200,
+      "SelectedTiming": "baseline",
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 10550,
+        "BaselineMs": 10750,
+        "LateMs": 11000
+      }
+    }
+  ],
+  "Party": "엽빛나 → 수나 → 자오",
+  "StartCharacter": "엽빛나",
+  "AllowManualMovement": true
+}

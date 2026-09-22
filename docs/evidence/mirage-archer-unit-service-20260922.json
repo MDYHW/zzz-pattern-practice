@@ -1,0 +1,219 @@
+{
+  "date": "2026-09-22",
+  "status": "completed",
+  "authorization": "User requested brief comparison of two new baseline recordings, representative selection and website implementation; new Space-entry/RMB-last A/B modes are discussion only after this implementation.",
+  "representativesCompared": [
+    {
+      "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-22_03-02-21.mp4",
+      "sha256": "19ab81d853add9603306a93f867cedd28782844f1aee3e5e7812eca742d69fce",
+      "trial": {
+        "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-4b6458699eda4090a61239b5de060b2d.json",
+        "sha256": "3628145801dd23cf4cea755d976df5b0038352f23dcf05db1edcbba73aeec6d6",
+        "resultSha256": "6b428e32a428c6d35fc5131e6a702d419f688633aa8c6a4102e8d5344d23d094",
+        "trialId": "f458ddae93024a70974794805167e726",
+        "F8Utc": "2026-09-21T18:02:29.7974198Z",
+        "startedUtc": "2026-09-21T18:02:30.1387942Z",
+        "endedUtc": "2026-09-21T18:02:44.4678667Z",
+        "bits": "11111",
+        "source": "user result sidecar",
+        "recording": "ON",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "delaysMs": [
+          4250,
+          6400,
+          8150,
+          9550,
+          11850
+        ],
+        "profileHash": "35e9cf3cf755fbafd307ecb81edbc0d948acddb48d41f02ff74914de475a82d5"
+      }
+    },
+    {
+      "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-22_03-03-38.mp4",
+      "sha256": "6ce585dfa2dc7476dc915f3c665789b39a21fd3ea05c0350cb356c9ce159d845",
+      "trial": {
+        "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-6868bb8ad139476cad3f35f43281a4de.json",
+        "sha256": "56e45de7379c0625834fc22876375a7dfabea438d4a3f6fbfc9296d6fee1316d",
+        "resultSha256": "d130a7753c4dfd48de5244f95906563524d0a95ae15f65bf65b82b5fb7ec12e3",
+        "trialId": "03b4fbc0dfab40958c953084c54db60a",
+        "F8Utc": "2026-09-21T18:03:41.4238760Z",
+        "startedUtc": "2026-09-21T18:03:41.8405984Z",
+        "endedUtc": "2026-09-21T18:03:56.8015579Z",
+        "bits": "11111",
+        "source": "user result sidecar",
+        "recording": "ON",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "delaysMs": [
+          4250,
+          6400,
+          8150,
+          9550,
+          11850
+        ],
+        "profileHash": "35e9cf3cf755fbafd307ecb81edbc0d948acddb48d41f02ff74914de475a82d5"
+      }
+    }
+  ],
+  "decision": {
+    "selected": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-22_03-02-21.mp4",
+    "basis": "Centered open-arena framing and fewer obstructing wall/companion effects than second take; both have baseline11111 user reports. Simple comparison only, no repeated full timing study.",
+    "party": "아리아 → 남궁우 → 수나",
+    "startCharacter": "아리아",
+    "windowsMs": [
+      [
+        4150,
+        4350
+      ],
+      [
+        6250,
+        6550
+      ],
+      [
+        7950,
+        8350
+      ],
+      [
+        9400,
+        9700
+      ],
+      [
+        11650,
+        12050
+      ]
+    ],
+    "baselineMs": [
+      4250,
+      6400,
+      8150,
+      9550,
+      11850
+    ],
+    "serviceRecording": {
+      "contentId": "mirage-archer-unit-attack-09",
+      "bossId": "mirage-archer-unit",
+      "skill": "Attack_09",
+      "source": "ZZZ_2026-09-22_03-02-21.mp4",
+      "sourceSha256": "19ab81d853add9603306a93f867cedd28782844f1aee3e5e7812eca742d69fce",
+      "fps": 60,
+      "firstSourceFrame": 523,
+      "endSourceFrameExclusive": 1500,
+      "patternOriginSourceFrame": 643,
+      "patternTimeZeroAtClipTime": 2,
+      "sourceOverlayDownFrames": [
+        898,
+        1026,
+        1131,
+        1215,
+        1353
+      ],
+      "windowsMs": [
+        [
+          4150,
+          4350
+        ],
+        [
+          6250,
+          6550
+        ],
+        [
+          7950,
+          8350
+        ],
+        [
+          9400,
+          9700
+        ],
+        [
+          11650,
+          12050
+        ]
+      ],
+      "referenceMs": [
+        4250.0,
+        6383.333333333334,
+        8133.333333333333,
+        9533.333333333334,
+        11833.333333333334
+      ],
+      "clip": "media/mirage-archer-unit-attack-09.mp4",
+      "clipSha256": "c8c4c1533938c801c95eba19b3b7ddcf3e59cc8be408f0d645c9bbe2f7cdad14",
+      "posterSha256": "6c75e1e7dbef53d797ba381e78b782eb63654407fb56b5aeb8538fa25a4df8de",
+      "outcomeReviewSourceFrame": 1425,
+      "overlayResidualFrames": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "visualReview": "Two baseline11111 takes compared briefly; first chosen for centered boss and less wall/particle interference. Menu and waiting removed; all five inputs and final perfect-response banner retained.",
+      "referenceBasis": "Actual selected-video overlay references with one origin translation from offline C# notice match; experiment baseline and adopted windows remain distinct."
+    },
+    "sourceFrameCount": 1599,
+    "outcomeFrame": 1425,
+    "perfectBannerIsNotSoleFiveBitEvidence": true
+  },
+  "connection": {
+    "basis": "File creation time/F8 intervals agree; selected video has exactly RMB+fourSpace overlay holds in expected order; overlay offsets match logged baseline within one frame; full result visible.",
+    "obsCaveat": "Both logs classify stale UNKNOWN as OFF; do not assert direct OBS ledger link."
+  },
+  "detector": {
+    "method": "Offline existing C# --notice-replay, selected recording only, native input0",
+    "first": 643,
+    "confirmed": 646,
+    "matchedRange": [
+      643,
+      878
+    ],
+    "purpose": "origin alignment, not a new timing-window study"
+  },
+  "checks": {
+    "rawResultHashes": "passed",
+    "actualGameInputsByAssistant": 0,
+    "web": "pending",
+    "mediaAlignment": "passed, all5published records within2frames; Mirage references exactly match selected overlay frames",
+    "typecheck": "passed",
+    "unitTests": 75,
+    "productionBuild": "passed",
+    "browserTests": {
+      "passed": 2,
+      "scope": [
+        "Mirage representative video decode, duration, five responses, extras0, guide/mask toggles,390px layout",
+        "Boss switch regression and existing Gir route"
+      ]
+    },
+    "screenshotsVisuallyReviewed": [
+      "mirage-complete.png",
+      "mirage-ready-narrow.png"
+    ],
+    "profileCheck": "passed:9 selected-profile combinations and148 shared checks; native game inputs0. Targeted profile suite, not full five-profile experiment:check rerun.",
+    "independentCodeReview": "passed; service-media updated date corrected to2026-09-22",
+    "serviceRuntimeScope": "local website only; no remote deployment",
+    "bundledProfileSha256": "2a26859618a5ed20166b614db3b82abfa8edf607652b3dc74be374e9d4fa1bca"
+  },
+  "independentScopeReview": "mirage_web_scope: accepted standard five-action route, existing renderer, separate future A/B discussion.",
+  "futureDiscussion": {
+    "status": "unapproved-design",
+    "scope": [
+      "Mirage Space entry and final RMB require key-specific measured windows and successful route evidence",
+      "A: preselect entry and final response; B: display both key windows on one lane and accept either valid key once",
+      "Early Space followed by valid RMB should be considered recovered response, with early input feedback discussed separately"
+    ],
+    "notImplemented": true
+  },
+  "sourceAvailability": {
+    "asOf": "2026-09-22",
+    "inventory": "docs/evidence/experiment-cleanup.json#/current",
+    "retainedOriginals": [
+      "ZZZ_2026-09-22_03-02-21.mp4",
+      "ZZZ_2026-09-22_12-08-35.mp4",
+      "ZZZ_2026-09-22_13-50-10.mp4"
+    ],
+    "retainedTrialIds": [
+      "f458ddae93024a70974794805167e726",
+      "f0ef0f89899741b282aaf610046316be",
+      "53581e707ac6420a8f50491b5ace86e0"
+    ],
+    "rule": "Only listed representative originals/trials remain. Other historical paths and hashes are provenance for summarized observations, not replayable files. Derived contact sheets/replay output were removed; final values, frame annotations and limitations remain here."
+  }
+}

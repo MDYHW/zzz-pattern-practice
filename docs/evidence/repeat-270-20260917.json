@@ -1,0 +1,140 @@
+{
+  "id": "N4",
+  "reviewed_on": "2026-09-17",
+  "trial_id": "20260917T040918840Z-0866ac46804440d099a1e23871d0945f",
+  "video": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-17_13-09-15.mp4",
+  "video_sha256": "748bccdc24ab03016c787d321aebe9d358230a4528885a9fc53e13e8e33d8d8c",
+  "log": "<PRIVATE_HOME>\\Documents\\Codex\\2026-09-16\\zzz-controller-refresh\\outputs\\vesper-input-experiment\\logs\\20260917T040918840Z-0866ac46804440d099a1e23871d0945f.json",
+  "log_sha256": "e3397e5f6779f2392aa06b5d21cc17dc7cfbe53d6ff547baa7f6508e5560e26e",
+  "settings": {
+    "TargetAttack": 3,
+    "ShiftMs": 270,
+    "Comparison": true,
+    "DryRun": false,
+    "Recording": "",
+    "Conditions": "베스퍼 첫 제어스킬 / 파티: 아리아 → 남궁우 → 수나 / 시작: 아리아"
+  },
+  "effective_shift_ms": 270,
+  "media": {
+    "fps": 60,
+    "sequential_frames": 1054,
+    "container_frames": 1055,
+    "note": "One frame count discrepancy; annotations use sequential 0-based decode. Relevant frames through f900 precede EOF."
+  },
+  "user_report": "Same result, felt attack3 hit prevented attack4 input.",
+  "operator_log_outcomes_unchanged": [
+    "미확인",
+    "미확인",
+    "미확인",
+    "미확인",
+    "미확인"
+  ],
+  "analyst_outcomes": {
+    "entry": "success",
+    "1": "success",
+    "2": "success",
+    "3": "failure",
+    "4": "failure after attack3 failure; exclude from independent window inference"
+  },
+  "evidence": {
+    "entry": "HP10406 unchanged f370/382/400/420, extreme dodge f400, combat1322→1342.",
+    "1": "Control score875 f510.",
+    "2": "Control score1750 f600; target actor HP12255 before attack3.",
+    "3": "HP12255 f665→11739 f666; Space first filled f667; character switched by f674; score remains1750.",
+    "4": "Space unfilled f759→filled f760; HP10406 f761→9845 f765; character changes from Aria to Nangong byf768 with support-attack text. Control score remains1750 throughf900."
+  },
+  "manual_brackets": {
+    "ready2": [
+      535,
+      536
+    ],
+    "input2": [
+      552,
+      553
+    ],
+    "ready3": [
+      632,
+      633
+    ],
+    "input3": [
+      666,
+      667
+    ],
+    "input4": [
+      759,
+      760
+    ]
+  },
+  "automatic_input3_candidate": 669,
+  "automatic_correction": "Bright translucent background caused RGB candidate to miss f667/f668; manual review supplies onset667.",
+  "phase_comparison": {
+    "N1_success_frames": [
+      15,
+      17
+    ],
+    "N3_success_frames": [
+      3,
+      5
+    ],
+    "N2_failure_frames": [
+      32,
+      34
+    ],
+    "N4_failure_frames": [
+      33,
+      35
+    ],
+    "N4_failure_ms": [
+      550.0,
+      583.3333333333334
+    ]
+  },
+  "alignment": {
+    "reference": "R2",
+    "offset2_frames": [
+      -56,
+      -54
+    ],
+    "offset3_frames": [
+      -57,
+      -55
+    ],
+    "union_frames": [
+      -57,
+      -54
+    ],
+    "mapped_original_frames": [
+      720,
+      724
+    ],
+    "mapped_clip_seconds": [
+      6.5,
+      6.566666666666666
+    ],
+    "service_end_seconds": 6.5792124542124535,
+    "finding": "Both pre-input anchors agree within annotation ranges; failure maps inside provisional tile under local translation. Evidence against keeping current late edge as a known-safe game window, not an exact boundary or engine clock proof."
+  },
+  "fourth_input_interpretation": {
+    "os_submission": true,
+    "overlay_press": true,
+    "character_switch_observed": true,
+    "successful_control_response": false,
+    "finding": "Input not wholly suppressed: switch/support attack occurs. Exact gate state at keydown and cause of failed perfect response are unproven. Third-failure path must not calibrate attack4 width.",
+    "static_review": "Existing conditional ExecuteHit switch mute Duration0.3 and input-mute paths do not prove universal subsequent Space lockout; historical R3 recovered later attacks."
+  },
+  "api": {
+    "max_down_lateness_ms": 0.05341275720275007,
+    "attack4_begin_ms": 9329.9701,
+    "attack4_inserted": 1
+  },
+  "next_method": {
+    "mode": "third-ready-relative",
+    "ReadyDelayMs": 400,
+    "stop_after_attack": 3,
+    "basis": "Mid-gap diagnostic between latest observed successful ready-relative timing≈267ms and repeated failures≈550ms; rounded near400ms. Not a final window.",
+    "requirement": "Validate offline cue detector, then live captured cue and input alignment with recording; do not continue nominal Shift sweeps.",
+    "recording_required": true
+  },
+  "decision": "N4 reproduces late attack3 failure. Change synchronization before narrow timing search; keep product width provisional pending cue-relative evidence.",
+  "independent_review": "timing_candidate_review inspected existing internal-state references only; controller performed video review."
+}

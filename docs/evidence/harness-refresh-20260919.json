@@ -1,0 +1,2412 @@
+{
+  "record_scope": "Top-level date/kind/status describe the original 2026-09-19 UI experiment only. Later named evaluation records are separate; none is a global current-project status.",
+  "date": "2026-09-19",
+  "kind": "Fresh-task application check with a predefined follow-up; not a baseline/candidate effectiveness experiment",
+  "status": "completed_not_full_pass",
+  "source_checkout": "<PRIVATE_HOME>/.codex/worktrees/f815/zzz-pattern-practice",
+  "source_head": "375fc425c16f0092fbdffc8e748c55ad2e6a9950",
+  "source_state": "Working tree includes approved uncommitted harness corrections and unrelated earlier work. HEAD alone does not identify the supplied instructions; document hashes are recorded before dispatch.",
+  "reviewer": "Current controller, also an author of the corrected instructions. Separate from the executing task, but not a blind independent evaluator.",
+  "criteria": [
+    {
+      "id": "purpose",
+      "observable": "User can compare the requested icon alternatives and their effect on available video space in the produced artifact, without imagining missing alternatives from prose.",
+      "failure": "Requested distinctions are absent, incorrectly represented, or not inspectable."
+    },
+    {
+      "id": "evidence",
+      "observable": "Alternatives use comparable viewing conditions; spatial relations and visible shapes represent the intended comparison. Simplifications and their limits are disclosed.",
+      "failure": "The artifact hides a cost or changes a relevant condition so the comparison supports a misleading conclusion."
+    },
+    {
+      "id": "scope",
+      "observable": "Included behavior and dependencies serve the current comparison. Omitted functions do not remove a required role; no production choice or source mutation is made.",
+      "failure": "Necessary roles are omitted or unrelated product behavior is reproduced without a reason tied to this comparison."
+    },
+    {
+      "id": "adaptation",
+      "observable": "For the predefined moving-state follow-up, the artifact supports observing transitions while retaining the useful spatial comparison.",
+      "failure": "Only static prose substitutes for observing transitions, or the task expands into unrelated full gameplay/product behavior."
+    },
+    {
+      "id": "reporting",
+      "observable": "Completion claims match actual inspected files and observations; simulation is distinguished from game success and learning effectiveness.",
+      "failure": "Self-report or technical pass alone is claimed as purpose success, user preference, game validity, or general harness improvement."
+    }
+  ],
+  "decision_rule": "Record pass/fail/unverified per criterion with artifact evidence. A known purpose/scope failure is not compensated by polish or average scores. Unverified criteria remain unverified. Stop after initial artifact and the one predefined follow-up; failures are recorded before any optional future repair.",
+  "inspection_conditions": [
+    "1280x720 viewport",
+    "700x420 viewport",
+    "A/B/C candidate selection",
+    "stage 2: observe pre/available/success transitions and repeat without losing comparison"
+  ],
+  "calibration": [
+    {
+      "case": "Earlier icon comparison with wrong B/C semantics",
+      "user_feedback": "Rejected; requested arrangements were not implemented correctly.",
+      "criterion": "purpose/evidence",
+      "expected": "fail",
+      "checked": "Consistent with product/research correction record and user history; original rejected artifact is not reconstructed. This is a feedback-alignment check, not an independent artifact regrade."
+    },
+    {
+      "case": "Recovery using full Practice app, real videos, session observers",
+      "user_feedback": "Rejected as excessive for the comparison; video area and representative lane could fulfil the roles.",
+      "criterion": "scope",
+      "expected": "fail",
+      "checked": "Read src/dev/icon-test.tsx: imports App and observes the full practice surface. Existing recovery JSON treats missing Practice/video as a failed check; that criterion is invalid for spatial comparison alone."
+    },
+    {
+      "case": "Earlier visual improvement and palette A selection",
+      "user_feedback": "User stated UI improved and later selected palette A.",
+      "criterion": "purpose/reporting",
+      "expected": "Do not reject solely for adding visual behavior or rules; preserve the user's actual acceptance without inferring learning effectiveness.",
+      "checked": "Current product document records the selected palette and motion; positive calibration is limited to the recorded user judgement, not a replay of the original artifact."
+    }
+  ],
+  "stage_1_request": "리듬 안내 진입의 대체 입력을 표현하는 아이콘 배치를 비교할 수 있는 임시 화면을 만들어 주세요. A는 레인 위에 온전한 Space/우클릭 아이콘을 나란히, B는 Space를 레인 위·우클릭을 레인 아래, C는 두 아이콘을 45도 대각선의 상보적인 반쪽으로 한 테두리에 배치하는 안입니다. 사용자가 기호의 식별성과 영상에 남는 공간을 비교할 수 있어야 합니다. 어느 후보도 기본값으로 채택하지 않습니다.",
+  "stage_2_request": "이제 같은 후보들에서 타일이 이동하면서 입력 전 → 입력 가능 → 성공으로 바뀔 때 기호 식별성과 상태 구분도 비교하고 싶습니다. 기존 공간 비교는 유지하고 한 동작의 전환을 반복해서 확인할 수 있게 해주세요. 어떤 후보도 실제 서비스 기본값으로 채택하지 마세요.",
+  "context_policy": "Fresh projectless task with corrected canonical documents and read-only source access. No conversation fork, no model answer, no evaluator file or future follow-up sent initially. The canonical documents discuss this known failure, so stage 1 is regression/application evidence, not an unseen generalization test. File access is not a security boundary; record actual retrieved context when available.",
+  "limits": [
+    "No old-harness control run",
+    "One fresh task, one initial artifact and one predefined follow-up",
+    "No blinded independent reviewer",
+    "No user preference or learning-effect test",
+    "No game input, deployment, or production adoption"
+  ],
+  "document_hashes": {
+    "AGENTS.md": "1d09905dbd33f306c38d57234d5018913c9d6ef27fb7947516ce97e014d1549e",
+    "README.md": "24c28edb7b806c80a8e00711be5f9eb322a2e63a2a2df9c9bf307540d127a332",
+    "docs/product.md": "1ee61aec44386d49d6970a1e98ca7d8243e0f77e89b40f376d34de03608bd303",
+    "docs/research.md": "fa654dca6e1f7caf6feda606bd453cdfe4567cc62eac4579e40405ffca6af0fa"
+  },
+  "thread": {
+    "id": "01a0b7c8-a5f0-72d3-b81b-fb7ab9e4f380",
+    "host": "local",
+    "output_directory": "<PRIVATE_HOME>/Documents/Codex/2026-09-19/zzz-harness-refresh-eval/outputs",
+    "model_override": null
+  },
+  "results": [
+    {
+      "stage": 1,
+      "turn_id": "01a0b7c8-aa4c-7ad0-8ecf-0eb5bdbda268",
+      "duration_ms": 661717,
+      "artifact": "<PRIVATE_HOME>\\Documents\\Codex\\2026-09-19\\zzz-harness-refresh-eval\\outputs\\icon-comparison",
+      "artifact_hashes": {
+        "index.html": "807d1b88e96b7842a9309bf25ccfab322ff414c17c5509832afcd00b64b29ae1",
+        "app.js": "7fc0cafbb0e928205736050c280c13a2fc18fd13de23a60cdeaaa729f591746e",
+        "style.css": "03a4e9d1d64797a5aecc44ca66e8f3e2eacaf1cebb7607aed4c61e8667f033bb",
+        "README.md": "33330ff2751c98a535d554eb42d4cf977abaeaccae2a605ca074de3f4e2d68a9"
+      },
+      "ratings": {
+        "purpose": "fail at 700x420 detail/current; pass at 1280x720",
+        "evidence": "fail at 700x420 detail/current: comparison controls consume spatial budget and shapes/labels overlap; scaled or preset representations remain available",
+        "scope": "pass: independent static poster and representative lane; no Practice import or media playback",
+        "adaptation": "not yet evaluated",
+        "reporting": "pass within claimed tested conditions; no claim of game success, learning or preference"
+      },
+      "observation": "At 700x420 detail/current, B video about 50x28px and lane about50px wide; original28px symbols and labels overlap. A/C also become very narrow. 1:1 overview samples remain readable but detail comparison is impaired. No code repair or failure-specific hint was sent before stage2.",
+      "inspection": {
+        "url": "http://127.0.0.1:5391/",
+        "errors": [],
+        "rows": [
+          {
+            "width": 1280,
+            "height": 720,
+            "title": "진입 아이콘 · 배치 비교",
+            "text": "진입 아이콘 배치 비교\nA · B · C 모두 미채택\n전체 비교\nA 나란히\nB 위·아래\nC 대각선\n화면 예산 \n현재 창\n1280 × 720\n1024 × 600\n390 × 700\n\n진입은 Space 또는 우클릭 한 번. 위쪽 표본은 1:1 크기, 아래 화면은 같은 예산에 맞춘 축소 미리보기입니다.\n\nA\n온전한 두 기호, 나란히\n\nSpace와 우클릭을 레인 위에 함께 둡니다. 가로로 차지하는 폭을 살펴보세요.\n\n진입 기호 · 1:1 크기\n\nSpace 또는 우클릭\n\n1232 × 486px 예산 · 표시 32% (축소)\n\n영상 영역 · 정지 화면\nSpace 또는 우클릭\nSpace\n\n영상 654 × 368px · 안내 118px\n남는 높이 0px · 입력 기호 28px\n\nA 화면 크게 보기\nB\nSpace 위, 우클릭 아래\n\n두 기호를 같은 위치의 위아래에 둡니다. 시선 이동과 세로 공간을 살펴보세요.\n\n진입 기호 · 1:1 크기\n\nSpace\n우클릭\n\n1232 × 486px 예산 · 표시 32% (축소)\n\n영상 영역 · 정지 화면\nSpace\n우클릭\nSpace\n\n영상 594 × 334px · 안내 152px\n남는 높이 0px · 입력 기호 28px\n\nB 화면 크게 보기\nC\n한 테두리, 대각선 반쪽\n\n좌상단 회피와 우하단 지원을 45°로 나눕니다. 잘린 기호의 식별성을 살펴보세요.\n\n진입 기호 · 1:1 크기\n\nSpace 또는 우클릭\n\n1232 × 486px 예산 · 표시 32% (축소)\n\n영상 영역 · 정지 화면\nSpace 또는 우클릭\nSpace\n\n영상 654 × 368px · 안내 118px\n남는 높이 0px · 입력 기호 28px\n\nC 화면 크게 보기\n비교 조건과 범위",
+            "controls": [
+              {
+                "tag": "BUTTON",
+                "text": "전체 비교",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "A 나란히",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "B 위·아래",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "C 대각선",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "SELECT",
+                "text": "현재 창1280 × 7201024 × 600390 × 700",
+                "value": "current",
+                "aria": null,
+                "type": "select-one",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "A 화면 크게 보기",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "B 화면 크게 보기",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "C 화면 크게 보기",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              }
+            ],
+            "media": 0,
+            "assets": [
+              "http://127.0.0.1:5391/style.css",
+              "http://127.0.0.1:5391/app.js",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/zzz-dodge.png",
+              "http://127.0.0.1:5391/assets/vesper-execute-02.jpg",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/zzz-dodge.png",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/zzz-dodge.png",
+              "http://127.0.0.1:5391/assets/vesper-execute-02.jpg",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/zzz-dodge.png",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/zzz-dodge.png",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/vesper-execute-02.jpg",
+              "http://127.0.0.1:5391/assets/zzz-dodge.png",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/zzz-assist.png"
+            ]
+          },
+          {
+            "width": 700,
+            "height": 420,
+            "title": "진입 아이콘 · 배치 비교",
+            "text": "진입 아이콘 배치 비교\nA · B · C 모두 미채택\n전체 비교\nA 나란히\nB 위·아래\nC 대각선\n화면 예산 \n현재 창\n1280 × 720\n1024 × 600\n390 × 700\n\n진입은 Space 또는 우클릭 한 번. 위쪽 표본은 1:1 크기, 아래 화면은 같은 예산에 맞춘 축소 미리보기입니다.\n\nA\n온전한 두 기호, 나란히\n\nSpace와 우클릭을 레인 위에 함께 둡니다. 가로로 차지하는 폭을 살펴보세요.\n\n진입 기호 · 1:1 크기\n\nSpace 또는 우클릭\n\n668 × 180px 예산 · 표시 100% (1:1)\n\n영상 영역 · 정지 화면\nSpace 또는 우클릭\nSpace\n\n영상 110 × 62px · 안내 118px\n남는 높이 0px · 입력 기호 28px\n\nA 화면 크게 보기\nB\nSpace 위, 우클릭 아래\n\n두 기호를 같은 위치의 위아래에 둡니다. 시선 이동과 세로 공간을 살펴보세요.\n\n진입 기호 · 1:1 크기\n\nSpace\n우클릭\n\n668 × 180px 예산 · 표시 100% (1:1)\n\n영상 영역 · 정지 화면\nSpace\n우클릭\nSpace\n\n영상 50 × 28px · 안내 152px\n남는 높이 0px · 입력 기호 28px\n\nB 화면 크게 보기\nC\n한 테두리, 대각선 반쪽\n\n좌상단 회피와 우하단 지원을 45°로 나눕니다. 잘린 기호의 식별성을 살펴보세요.\n\n진입 기호 · 1:1 크기\n\nSpace 또는 우클릭\n\n668 × 180px 예산 · 표시 100% (1:1)\n\n영상 영역 · 정지 화면\nSpace 또는 우클릭\nSpace\n\n영상 110 × 62px · 안내 118px\n남는 높이 0px · 입력 기호 28px\n\nC 화면 크게 보기\n비교 조건과 범위",
+            "controls": [
+              {
+                "tag": "BUTTON",
+                "text": "전체 비교",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "A 나란히",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "B 위·아래",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "C 대각선",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "SELECT",
+                "text": "현재 창1280 × 7201024 × 600390 × 700",
+                "value": "current",
+                "aria": null,
+                "type": "select-one",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "A 화면 크게 보기",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "B 화면 크게 보기",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "C 화면 크게 보기",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              }
+            ],
+            "media": 0,
+            "assets": [
+              "http://127.0.0.1:5391/style.css",
+              "http://127.0.0.1:5391/app.js",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/zzz-dodge.png",
+              "http://127.0.0.1:5391/assets/vesper-execute-02.jpg",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/zzz-dodge.png",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/zzz-dodge.png",
+              "http://127.0.0.1:5391/assets/vesper-execute-02.jpg",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/zzz-dodge.png",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/zzz-dodge.png",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/vesper-execute-02.jpg",
+              "http://127.0.0.1:5391/assets/zzz-dodge.png",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/zzz-assist.png"
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "key": "A",
+            "width": 1280,
+            "height": 720,
+            "selected": "true",
+            "scrollWidth": 1280,
+            "windowWidth": 1280,
+            "video": {
+              "x": 313.0135498046875,
+              "y": 222.1875,
+              "width": 653.96630859375,
+              "height": 367.8424072265625,
+              "top": 222.1875,
+              "right": 966.9798583984375,
+              "bottom": 590.0299072265625,
+              "left": 313.0135498046875
+            },
+            "guide": {
+              "x": 313.0135498046875,
+              "y": 590.0299072265625,
+              "width": 653.96630859375,
+              "height": 117.9544677734375,
+              "top": 590.0299072265625,
+              "right": 966.9798583984375,
+              "bottom": 707.984375,
+              "left": 313.0135498046875
+            },
+            "scale": "0.9996",
+            "meta": "A · 온전한 두 기호, 나란히 / 1232 × 486px 예산 · 표시 100% (1:1)영상 654 × 368px · 안내 118px\n남는 높이 0px · 입력 기호 28px",
+            "symbols": [
+              {
+                "shape": "assist",
+                "clip": "none",
+                "rect": {
+                  "x": 531.49169921875,
+                  "y": 621.0179443359375,
+                  "width": 27.98919677734375,
+                  "height": 27.98919677734375,
+                  "top": 621.0179443359375,
+                  "right": 559.4808959960938,
+                  "bottom": 649.0071411132812,
+                  "left": 531.49169921875
+                }
+              },
+              {
+                "shape": "dodge",
+                "clip": "none",
+                "rect": {
+                  "x": 573.4755249023438,
+                  "y": 621.0179443359375,
+                  "width": 27.98919677734375,
+                  "height": 27.98919677734375,
+                  "top": 621.0179443359375,
+                  "right": 601.4647216796875,
+                  "bottom": 649.0071411132812,
+                  "left": 573.4755249023438
+                }
+              }
+            ],
+            "bar": {
+              "x": 545.486328125,
+              "y": 655.0048217773438,
+              "width": 41.9837646484375,
+              "height": 27.98919677734375,
+              "top": 655.0048217773438,
+              "right": 587.4700927734375,
+              "bottom": 682.9940185546875,
+              "left": 545.486328125
+            }
+          },
+          {
+            "key": "B",
+            "width": 1280,
+            "height": 720,
+            "selected": "true",
+            "scrollWidth": 1280,
+            "windowWidth": 1280,
+            "video": {
+              "x": 343.22064208984375,
+              "y": 222.1875,
+              "width": 593.5364990234375,
+              "height": 333.85552978515625,
+              "top": 222.1875,
+              "right": 936.7571411132812,
+              "bottom": 556.0430297851562,
+              "left": 343.22064208984375
+            },
+            "guide": {
+              "x": 343.22064208984375,
+              "y": 556.0430297851562,
+              "width": 593.5364990234375,
+              "height": 151.94134521484375,
+              "top": 556.0430297851562,
+              "right": 936.7571411132812,
+              "bottom": 707.984375,
+              "left": 343.22064208984375
+            },
+            "scale": "0.9996",
+            "meta": "B · Space 위, 우클릭 아래 / 1232 × 486px 예산 · 표시 100% (1:1)영상 594 × 334px · 안내 152px\n남는 높이 0px · 입력 기호 28px",
+            "symbols": [
+              {
+                "shape": "assist",
+                "clip": "none",
+                "rect": {
+                  "x": 559.5277709960938,
+                  "y": 587.0310668945312,
+                  "width": 27.98919677734375,
+                  "height": 27.98919677734375,
+                  "top": 587.0310668945312,
+                  "right": 587.5169677734375,
+                  "bottom": 615.020263671875,
+                  "left": 559.5277709960938
+                }
+              },
+              {
+                "shape": "dodge",
+                "clip": "none",
+                "rect": {
+                  "x": 559.5277709960938,
+                  "y": 655.0048217773438,
+                  "width": 27.98919677734375,
+                  "height": 27.98919677734375,
+                  "top": 655.0048217773438,
+                  "right": 587.5169677734375,
+                  "bottom": 682.9940185546875,
+                  "left": 559.5277709960938
+                }
+              }
+            ],
+            "bar": {
+              "x": 554.5452880859375,
+              "y": 621.0179443359375,
+              "width": 37.9697265625,
+              "height": 27.98919677734375,
+              "top": 621.0179443359375,
+              "right": 592.5150146484375,
+              "bottom": 649.0071411132812,
+              "left": 554.5452880859375
+            }
+          },
+          {
+            "key": "C",
+            "width": 1280,
+            "height": 720,
+            "selected": "true",
+            "scrollWidth": 1280,
+            "windowWidth": 1280,
+            "video": {
+              "x": 313.0135498046875,
+              "y": 222.1875,
+              "width": 653.96630859375,
+              "height": 367.8424072265625,
+              "top": 222.1875,
+              "right": 966.9798583984375,
+              "bottom": 590.0299072265625,
+              "left": 313.0135498046875
+            },
+            "guide": {
+              "x": 313.0135498046875,
+              "y": 590.0299072265625,
+              "width": 653.96630859375,
+              "height": 117.9544677734375,
+              "top": 590.0299072265625,
+              "right": 966.9798583984375,
+              "bottom": 707.984375,
+              "left": 313.0135498046875
+            },
+            "scale": "0.9996",
+            "meta": "C · 한 테두리, 대각선 반쪽 / 1232 × 486px 예산 · 표시 100% (1:1)영상 654 × 368px · 안내 118px\n남는 높이 0px · 입력 기호 28px",
+            "symbols": [
+              {
+                "shape": "dodge",
+                "clip": "polygon(0px 0px, 100% 0px, 0px 100%)",
+                "rect": {
+                  "x": 552.4835815429688,
+                  "y": 621.0179443359375,
+                  "width": 27.98919677734375,
+                  "height": 27.98919677734375,
+                  "top": 621.0179443359375,
+                  "right": 580.4727783203125,
+                  "bottom": 649.0071411132812,
+                  "left": 552.4835815429688
+                }
+              },
+              {
+                "shape": "assist",
+                "clip": "polygon(100% 0px, 100% 100%, 0px 100%)",
+                "rect": {
+                  "x": 552.4835815429688,
+                  "y": 621.0179443359375,
+                  "width": 27.98919677734375,
+                  "height": 27.98919677734375,
+                  "top": 621.0179443359375,
+                  "right": 580.4727783203125,
+                  "bottom": 649.0071411132812,
+                  "left": 552.4835815429688
+                }
+              }
+            ],
+            "bar": {
+              "x": 545.486328125,
+              "y": 655.0048217773438,
+              "width": 41.9837646484375,
+              "height": 27.98919677734375,
+              "top": 655.0048217773438,
+              "right": 587.4700927734375,
+              "bottom": 682.9940185546875,
+              "left": 545.486328125
+            }
+          },
+          {
+            "key": "A",
+            "width": 700,
+            "height": 420,
+            "selected": "true",
+            "scrollWidth": 700,
+            "windowWidth": 700,
+            "video": {
+              "x": 328.890625,
+              "y": 251.375,
+              "width": 110.21875,
+              "height": 61.984375,
+              "top": 251.375,
+              "right": 439.109375,
+              "bottom": 313.359375,
+              "left": 328.890625
+            },
+            "guide": {
+              "x": 328.890625,
+              "y": 313.359375,
+              "width": 110.21875,
+              "height": 118,
+              "top": 313.359375,
+              "right": 439.109375,
+              "bottom": 431.359375,
+              "left": 328.890625
+            },
+            "scale": "1.0000",
+            "meta": "A · 온전한 두 기호, 나란히 / 668 × 180px 예산 · 표시 100% (1:1)\n영상 110 × 62px · 안내 118px\n남는 높이 0px · 입력 기호 28px",
+            "symbols": [
+              {
+                "shape": "assist",
+                "clip": "none",
+                "rect": {
+                  "x": 338.921875,
+                  "y": 344.359375,
+                  "width": 28,
+                  "height": 28,
+                  "top": 344.359375,
+                  "right": 366.921875,
+                  "bottom": 372.359375,
+                  "left": 338.921875
+                }
+              },
+              {
+                "shape": "dodge",
+                "clip": "none",
+                "rect": {
+                  "x": 380.921875,
+                  "y": 344.359375,
+                  "width": 28,
+                  "height": 28,
+                  "top": 344.359375,
+                  "right": 408.921875,
+                  "bottom": 372.359375,
+                  "left": 380.921875
+                }
+              }
+            ],
+            "bar": {
+              "x": 371.0625,
+              "y": 378.359375,
+              "width": 6,
+              "height": 28,
+              "top": 378.359375,
+              "right": 377.0625,
+              "bottom": 406.359375,
+              "left": 371.0625
+            }
+          },
+          {
+            "key": "B",
+            "width": 700,
+            "height": 420,
+            "selected": "true",
+            "scrollWidth": 700,
+            "windowWidth": 700,
+            "video": {
+              "x": 359.109375,
+              "y": 251.375,
+              "width": 49.765625,
+              "height": 27.984375,
+              "top": 251.375,
+              "right": 408.875,
+              "bottom": 279.359375,
+              "left": 359.109375
+            },
+            "guide": {
+              "x": 359.109375,
+              "y": 279.359375,
+              "width": 49.765625,
+              "height": 152,
+              "top": 279.359375,
+              "right": 408.875,
+              "bottom": 431.359375,
+              "left": 359.109375
+            },
+            "scale": "1.0000",
+            "meta": "B · Space 위, 우클릭 아래 / 668 × 180px 예산 · 표시 100% (1:1)\n영상 50 × 28px · 안내 152px\n남는 높이 0px · 입력 기호 28px",
+            "symbols": [
+              {
+                "shape": "assist",
+                "clip": "none",
+                "rect": {
+                  "x": 366.96875,
+                  "y": 310.359375,
+                  "width": 28,
+                  "height": 28,
+                  "top": 310.359375,
+                  "right": 394.96875,
+                  "bottom": 338.359375,
+                  "left": 366.96875
+                }
+              },
+              {
+                "shape": "dodge",
+                "clip": "none",
+                "rect": {
+                  "x": 366.96875,
+                  "y": 378.359375,
+                  "width": 28,
+                  "height": 28,
+                  "top": 378.359375,
+                  "right": 394.96875,
+                  "bottom": 406.359375,
+                  "left": 366.96875
+                }
+              }
+            ],
+            "bar": {
+              "x": 380.125,
+              "y": 344.359375,
+              "width": 6,
+              "height": 28,
+              "top": 344.359375,
+              "right": 386.125,
+              "bottom": 372.359375,
+              "left": 380.125
+            }
+          },
+          {
+            "key": "C",
+            "width": 700,
+            "height": 420,
+            "selected": "true",
+            "scrollWidth": 700,
+            "windowWidth": 700,
+            "video": {
+              "x": 328.890625,
+              "y": 251.375,
+              "width": 110.21875,
+              "height": 61.984375,
+              "top": 251.375,
+              "right": 439.109375,
+              "bottom": 313.359375,
+              "left": 328.890625
+            },
+            "guide": {
+              "x": 328.890625,
+              "y": 313.359375,
+              "width": 110.21875,
+              "height": 118,
+              "top": 313.359375,
+              "right": 439.109375,
+              "bottom": 431.359375,
+              "left": 328.890625
+            },
+            "scale": "1.0000",
+            "meta": "C · 한 테두리, 대각선 반쪽 / 668 × 180px 예산 · 표시 100% (1:1)\n영상 110 × 62px · 안내 118px\n남는 높이 0px · 입력 기호 28px",
+            "symbols": [
+              {
+                "shape": "dodge",
+                "clip": "polygon(0px 0px, 100% 0px, 0px 100%)",
+                "rect": {
+                  "x": 359.921875,
+                  "y": 344.359375,
+                  "width": 28,
+                  "height": 28,
+                  "top": 344.359375,
+                  "right": 387.921875,
+                  "bottom": 372.359375,
+                  "left": 359.921875
+                }
+              },
+              {
+                "shape": "assist",
+                "clip": "polygon(100% 0px, 100% 100%, 0px 100%)",
+                "rect": {
+                  "x": 359.921875,
+                  "y": 344.359375,
+                  "width": 28,
+                  "height": 28,
+                  "top": 344.359375,
+                  "right": 387.921875,
+                  "bottom": 372.359375,
+                  "left": 359.921875
+                }
+              }
+            ],
+            "bar": {
+              "x": 371.0625,
+              "y": 378.359375,
+              "width": 6,
+              "height": 28,
+              "top": 378.359375,
+              "right": 377.0625,
+              "bottom": 406.359375,
+              "left": 371.0625
+            }
+          }
+        ]
+      },
+      "limitations": [
+        "Inspecting controller authored the rubric and knew the requested outcome",
+        "Known case described in canonical docs; not an unseen task"
+      ]
+    },
+    {
+      "stage": 2,
+      "turn_id": "01a0b7d4-3ee8-7c72-bee1-bec36e340901",
+      "duration_ms": 486890,
+      "artifact": "<PRIVATE_HOME>\\Documents\\Codex\\2026-09-19\\zzz-harness-refresh-eval\\outputs\\icon-comparison",
+      "artifact_hashes": {
+        "index.html": "f0b3207568dcb3208a2c6cbb9fa535c9ecfbd3d2eea23747fef11fed225e9b4b",
+        "app.js": "85f7d8c5804c09de26dafa3a01ab2834b7a36f3786261774388c636bc831c955",
+        "style.css": "8810b8120fa91fa7039d27d2f2117a585ad4204d1ebc4091503de4cc87c79266",
+        "README.md": "eb3f5866d0c756c6a4dc1df0a9b57c24d7396ff07c5148079d2e320c7c5ae334"
+      },
+      "ratings": {
+        "purpose": "partial: transition comparison works at 1280x720; known 700x420 spatial-detail failure persists",
+        "evidence": "fail at 700x420 spatial detail/current; state simulation is disclosed and comparable across A/B/C",
+        "scope": "pass: only one-cue state/movement simulator added, with pause/seek/repeat/slow observation controls",
+        "adaptation": "pass within inspected large-view condition: moving states added, static comparison retained, candidate changes preserve time",
+        "reporting": "pass within stated scope: simulated success, no game input or preference/learning-effect claim"
+      },
+      "inspection": {
+        "url": "http://127.0.0.1:5391/",
+        "errors": [],
+        "rows": [
+          {
+            "width": 1280,
+            "height": 720,
+            "title": "진입 아이콘 · 배치 비교",
+            "text": "진입 아이콘 배치 비교\nA · B · C 모두 미채택\n전체 비교\nA 나란히\nB 위·아래\nC 대각선\n화면 예산 \n현재 창\n1280 × 720\n1024 × 600\n390 × 700\n공간 비교\n전환 시연\n\n진입은 Space 또는 우클릭 한 번. 위쪽 표본은 1:1 크기, 아래 화면은 같은 예산에 맞춘 축소 미리보기입니다.\n\nA\n온전한 두 기호, 나란히\n\nSpace와 우클릭을 레인 위에 함께 둡니다. 가로로 차지하는 폭을 살펴보세요.\n\n진입 기호 · 1:1 크기\n\nSpace 또는 우클릭\n\n1232 × 440px 예산 · 표시 32% (축소)\n\n영상 영역 · 정지 화면\nSpace 또는 우클릭\nSpace\n\n영상 572 × 322px · 안내 118px\n남는 높이 0px · 입력 기호 28px\n\nA 화면 크게 보기\nB\nSpace 위, 우클릭 아래\n\n두 기호를 같은 위치의 위아래에 둡니다. 시선 이동과 세로 공간을 살펴보세요.\n\n진입 기호 · 1:1 크기\n\nSpace\n우클릭\n\n1232 × 440px 예산 · 표시 32% (축소)\n\n영상 영역 · 정지 화면\nSpace\n우클릭\nSpace\n\n영상 512 × 288px · 안내 152px\n남는 높이 0px · 입력 기호 28px\n\nB 화면 크게 보기\nC\n한 테두리, 대각선 반쪽\n\n좌상단 회피와 우하단 지원을 45°로 나눕니다. 잘린 기호의 식별성을 살펴보세요.\n\n진입 기호 · 1:1 크기\n\nSpace 또는 우클릭\n\n1232 × 440px 예산 · 표시 32% (축소)\n\n영상 영역 · 정지 화면\nSpace 또는 우클릭\nSpace\n\n영상 572 × 322px · 안내 118px\n남는 높이 0px · 입력 기호 28px\n\nC 화면 크게 보기\n비교 조건과 범위",
+            "controls": [
+              {
+                "tag": "BUTTON",
+                "text": "전체 비교",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "A 나란히",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "B 위·아래",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "C 대각선",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "SELECT",
+                "text": "현재 창1280 × 7201024 × 600390 × 700",
+                "value": "current",
+                "aria": null,
+                "type": "select-one",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "공간 비교",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "전환 시연",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "재생",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "처음으로",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "SELECT",
+                "text": "1×0.5×0.25×",
+                "value": "1",
+                "aria": null,
+                "type": "select-one",
+                "href": null
+              },
+              {
+                "tag": "INPUT",
+                "text": "",
+                "value": "on",
+                "aria": null,
+                "type": "checkbox",
+                "href": null
+              },
+              {
+                "tag": "INPUT",
+                "text": "",
+                "value": "0",
+                "aria": null,
+                "type": "range",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "A 화면 크게 보기",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "B 화면 크게 보기",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "C 화면 크게 보기",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              }
+            ],
+            "media": 0,
+            "assets": [
+              "http://127.0.0.1:5391/style.css",
+              "http://127.0.0.1:5391/app.js",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/zzz-dodge.png",
+              "http://127.0.0.1:5391/assets/vesper-execute-02.jpg",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/zzz-dodge.png",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/zzz-dodge.png",
+              "http://127.0.0.1:5391/assets/vesper-execute-02.jpg",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/zzz-dodge.png",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/zzz-dodge.png",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/vesper-execute-02.jpg",
+              "http://127.0.0.1:5391/assets/zzz-dodge.png",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/zzz-assist.png"
+            ]
+          },
+          {
+            "width": 700,
+            "height": 420,
+            "title": "진입 아이콘 · 배치 비교",
+            "text": "진입 아이콘 배치 비교\nA · B · C 모두 미채택\n전체 비교\nA 나란히\nB 위·아래\nC 대각선\n화면 예산 \n현재 창\n1280 × 720\n1024 × 600\n390 × 700\n공간 비교\n전환 시연\n\n진입은 Space 또는 우클릭 한 번. 위쪽 표본은 1:1 크기, 아래 화면은 같은 예산에 맞춘 축소 미리보기입니다.\n\nA\n온전한 두 기호, 나란히\n\nSpace와 우클릭을 레인 위에 함께 둡니다. 가로로 차지하는 폭을 살펴보세요.\n\n진입 기호 · 1:1 크기\n\nSpace 또는 우클릭\n\n668 × 180px 예산 · 표시 100% (1:1)\n\n영상 영역 · 정지 화면\nSpace 또는 우클릭\nSpace\n\n영상 110 × 62px · 안내 118px\n남는 높이 0px · 입력 기호 28px\n\nA 화면 크게 보기\nB\nSpace 위, 우클릭 아래\n\n두 기호를 같은 위치의 위아래에 둡니다. 시선 이동과 세로 공간을 살펴보세요.\n\n진입 기호 · 1:1 크기\n\nSpace\n우클릭\n\n668 × 180px 예산 · 표시 100% (1:1)\n\n영상 영역 · 정지 화면\nSpace\n우클릭\nSpace\n\n영상 50 × 28px · 안내 152px\n남는 높이 0px · 입력 기호 28px\n\nB 화면 크게 보기\nC\n한 테두리, 대각선 반쪽\n\n좌상단 회피와 우하단 지원을 45°로 나눕니다. 잘린 기호의 식별성을 살펴보세요.\n\n진입 기호 · 1:1 크기\n\nSpace 또는 우클릭\n\n668 × 180px 예산 · 표시 100% (1:1)\n\n영상 영역 · 정지 화면\nSpace 또는 우클릭\nSpace\n\n영상 110 × 62px · 안내 118px\n남는 높이 0px · 입력 기호 28px\n\nC 화면 크게 보기\n비교 조건과 범위",
+            "controls": [
+              {
+                "tag": "BUTTON",
+                "text": "전체 비교",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "A 나란히",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "B 위·아래",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "C 대각선",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "SELECT",
+                "text": "현재 창1280 × 7201024 × 600390 × 700",
+                "value": "current",
+                "aria": null,
+                "type": "select-one",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "공간 비교",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "전환 시연",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "재생",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "처음으로",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "SELECT",
+                "text": "1×0.5×0.25×",
+                "value": "1",
+                "aria": null,
+                "type": "select-one",
+                "href": null
+              },
+              {
+                "tag": "INPUT",
+                "text": "",
+                "value": "on",
+                "aria": null,
+                "type": "checkbox",
+                "href": null
+              },
+              {
+                "tag": "INPUT",
+                "text": "",
+                "value": "0",
+                "aria": null,
+                "type": "range",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "A 화면 크게 보기",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "B 화면 크게 보기",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              },
+              {
+                "tag": "BUTTON",
+                "text": "C 화면 크게 보기",
+                "value": "",
+                "aria": null,
+                "type": "submit",
+                "href": null
+              }
+            ],
+            "media": 0,
+            "assets": [
+              "http://127.0.0.1:5391/style.css",
+              "http://127.0.0.1:5391/app.js",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/zzz-dodge.png",
+              "http://127.0.0.1:5391/assets/vesper-execute-02.jpg",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/zzz-dodge.png",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/zzz-dodge.png",
+              "http://127.0.0.1:5391/assets/vesper-execute-02.jpg",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/zzz-dodge.png",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/zzz-dodge.png",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/vesper-execute-02.jpg",
+              "http://127.0.0.1:5391/assets/zzz-dodge.png",
+              "http://127.0.0.1:5391/assets/zzz-assist.png",
+              "http://127.0.0.1:5391/assets/zzz-assist.png"
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "key": "A",
+            "width": 1280,
+            "height": 720,
+            "selected": "true",
+            "scrollWidth": 1280,
+            "windowWidth": 1280,
+            "video": {
+              "x": 353.9063415527344,
+              "y": 268.1875,
+              "width": 572.193603515625,
+              "height": 321.84716796875,
+              "top": 268.1875,
+              "right": 926.0999450683594,
+              "bottom": 590.03466796875,
+              "left": 353.9063415527344
+            },
+            "guide": {
+              "x": 353.9063415527344,
+              "y": 590.03466796875,
+              "width": 572.193603515625,
+              "height": 117.94970703125,
+              "top": 590.03466796875,
+              "right": 926.0999450683594,
+              "bottom": 707.984375,
+              "left": 353.9063415527344
+            },
+            "scale": "0.9996",
+            "meta": "A · 온전한 두 기호, 나란히 / 1232 × 440px 예산 · 표시 100% (1:1)영상 572 × 322px · 안내 118px\n남는 높이 0px · 입력 기호 28px",
+            "symbols": [
+              {
+                "shape": "assist",
+                "clip": "none",
+                "rect": {
+                  "x": 541.0609130859375,
+                  "y": 621.021484375,
+                  "width": 27.98809814453125,
+                  "height": 27.988037109375,
+                  "top": 621.021484375,
+                  "right": 569.0490112304688,
+                  "bottom": 649.009521484375,
+                  "left": 541.0609130859375
+                }
+              },
+              {
+                "shape": "dodge",
+                "clip": "none",
+                "rect": {
+                  "x": 583.0430297851562,
+                  "y": 621.021484375,
+                  "width": 27.98809814453125,
+                  "height": 27.988037109375,
+                  "top": 621.021484375,
+                  "right": 611.0311279296875,
+                  "bottom": 649.009521484375,
+                  "left": 583.0430297851562
+                }
+              }
+            ],
+            "bar": {
+              "x": 557.7725830078125,
+              "y": 655.0069580078125,
+              "width": 36.54693603515625,
+              "height": 27.98809814453125,
+              "top": 655.0069580078125,
+              "right": 594.3195190429688,
+              "bottom": 682.9950561523438,
+              "left": 557.7725830078125
+            }
+          },
+          {
+            "key": "B",
+            "width": 1280,
+            "height": 720,
+            "selected": "true",
+            "scrollWidth": 1280,
+            "windowWidth": 1280,
+            "video": {
+              "x": 384.1122131347656,
+              "y": 268.1875,
+              "width": 511.7818298339844,
+              "height": 287.8773193359375,
+              "top": 268.1875,
+              "right": 895.89404296875,
+              "bottom": 556.0648193359375,
+              "left": 384.1122131347656
+            },
+            "guide": {
+              "x": 384.1122131347656,
+              "y": 556.0648193359375,
+              "width": 511.7818298339844,
+              "height": 151.9351806640625,
+              "top": 556.0648193359375,
+              "right": 895.89404296875,
+              "bottom": 708,
+              "left": 384.1122131347656
+            },
+            "scale": "0.9996",
+            "meta": "B · Space 위, 우클릭 아래 / 1232 × 440px 예산 · 표시 100% (1:1)영상 512 × 288px · 안내 152px\n남는 높이 0px · 입력 기호 28px",
+            "symbols": [
+              {
+                "shape": "assist",
+                "clip": "none",
+                "rect": {
+                  "x": 569.0958862304688,
+                  "y": 587.0515747070312,
+                  "width": 27.988037109375,
+                  "height": 27.98809814453125,
+                  "top": 587.0515747070312,
+                  "right": 597.0839233398438,
+                  "bottom": 615.0396728515625,
+                  "left": 569.0958862304688
+                }
+              },
+              {
+                "shape": "dodge",
+                "clip": "none",
+                "rect": {
+                  "x": 569.0958862304688,
+                  "y": 655.0225830078125,
+                  "width": 27.988037109375,
+                  "height": 27.988037109375,
+                  "top": 655.0225830078125,
+                  "right": 597.0839233398438,
+                  "bottom": 683.0106201171875,
+                  "left": 569.0958862304688
+                }
+              }
+            ],
+            "bar": {
+              "x": 566.8311767578125,
+              "y": 621.037109375,
+              "width": 32.51739501953125,
+              "height": 27.988037109375,
+              "top": 621.037109375,
+              "right": 599.3485717773438,
+              "bottom": 649.025146484375,
+              "left": 566.8311767578125
+            }
+          },
+          {
+            "key": "C",
+            "width": 1280,
+            "height": 720,
+            "selected": "true",
+            "scrollWidth": 1280,
+            "windowWidth": 1280,
+            "video": {
+              "x": 353.9063415527344,
+              "y": 268.1875,
+              "width": 572.193603515625,
+              "height": 321.84716796875,
+              "top": 268.1875,
+              "right": 926.0999450683594,
+              "bottom": 590.03466796875,
+              "left": 353.9063415527344
+            },
+            "guide": {
+              "x": 353.9063415527344,
+              "y": 590.03466796875,
+              "width": 572.193603515625,
+              "height": 117.94970703125,
+              "top": 590.03466796875,
+              "right": 926.0999450683594,
+              "bottom": 707.984375,
+              "left": 353.9063415527344
+            },
+            "scale": "0.9996",
+            "meta": "C · 한 테두리, 대각선 반쪽 / 1232 × 440px 예산 · 표시 100% (1:1)영상 572 × 322px · 안내 118px\n남는 높이 0px · 입력 기호 28px",
+            "symbols": [
+              {
+                "shape": "dodge",
+                "clip": "polygon(0px 0px, 100% 0px, 0px 100%)",
+                "rect": {
+                  "x": 562.052001953125,
+                  "y": 621.021484375,
+                  "width": 27.988037109375,
+                  "height": 27.988037109375,
+                  "top": 621.021484375,
+                  "right": 590.0400390625,
+                  "bottom": 649.009521484375,
+                  "left": 562.052001953125
+                }
+              },
+              {
+                "shape": "assist",
+                "clip": "polygon(100% 0px, 100% 100%, 0px 100%)",
+                "rect": {
+                  "x": 562.052001953125,
+                  "y": 621.021484375,
+                  "width": 27.988037109375,
+                  "height": 27.988037109375,
+                  "top": 621.021484375,
+                  "right": 590.0400390625,
+                  "bottom": 649.009521484375,
+                  "left": 562.052001953125
+                }
+              }
+            ],
+            "bar": {
+              "x": 557.7725830078125,
+              "y": 655.0069580078125,
+              "width": 36.54693603515625,
+              "height": 27.98809814453125,
+              "top": 655.0069580078125,
+              "right": 594.3195190429688,
+              "bottom": 682.9950561523438,
+              "left": 557.7725830078125
+            }
+          },
+          {
+            "key": "A",
+            "width": 700,
+            "height": 420,
+            "selected": "true",
+            "scrollWidth": 700,
+            "windowWidth": 700,
+            "video": {
+              "x": 328.890625,
+              "y": 297.375,
+              "width": 110.21875,
+              "height": 61.984375,
+              "top": 297.375,
+              "right": 439.109375,
+              "bottom": 359.359375,
+              "left": 328.890625
+            },
+            "guide": {
+              "x": 328.890625,
+              "y": 359.359375,
+              "width": 110.21875,
+              "height": 118,
+              "top": 359.359375,
+              "right": 439.109375,
+              "bottom": 477.359375,
+              "left": 328.890625
+            },
+            "scale": "1.0000",
+            "meta": "A · 온전한 두 기호, 나란히 / 668 × 180px 예산 · 표시 100% (1:1)\n영상 110 × 62px · 안내 118px\n남는 높이 0px · 입력 기호 28px",
+            "symbols": [
+              {
+                "shape": "assist",
+                "clip": "none",
+                "rect": {
+                  "x": 338.921875,
+                  "y": 390.359375,
+                  "width": 28,
+                  "height": 28,
+                  "top": 390.359375,
+                  "right": 366.921875,
+                  "bottom": 418.359375,
+                  "left": 338.921875
+                }
+              },
+              {
+                "shape": "dodge",
+                "clip": "none",
+                "rect": {
+                  "x": 380.921875,
+                  "y": 390.359375,
+                  "width": 28,
+                  "height": 28,
+                  "top": 390.359375,
+                  "right": 408.921875,
+                  "bottom": 418.359375,
+                  "left": 380.921875
+                }
+              }
+            ],
+            "bar": {
+              "x": 371.0625,
+              "y": 424.359375,
+              "width": 6,
+              "height": 28,
+              "top": 424.359375,
+              "right": 377.0625,
+              "bottom": 452.359375,
+              "left": 371.0625
+            }
+          },
+          {
+            "key": "B",
+            "width": 700,
+            "height": 420,
+            "selected": "true",
+            "scrollWidth": 700,
+            "windowWidth": 700,
+            "video": {
+              "x": 359.109375,
+              "y": 297.375,
+              "width": 49.765625,
+              "height": 27.984375,
+              "top": 297.375,
+              "right": 408.875,
+              "bottom": 325.359375,
+              "left": 359.109375
+            },
+            "guide": {
+              "x": 359.109375,
+              "y": 325.359375,
+              "width": 49.765625,
+              "height": 152,
+              "top": 325.359375,
+              "right": 408.875,
+              "bottom": 477.359375,
+              "left": 359.109375
+            },
+            "scale": "1.0000",
+            "meta": "B · Space 위, 우클릭 아래 / 668 × 180px 예산 · 표시 100% (1:1)\n영상 50 × 28px · 안내 152px\n남는 높이 0px · 입력 기호 28px",
+            "symbols": [
+              {
+                "shape": "assist",
+                "clip": "none",
+                "rect": {
+                  "x": 366.96875,
+                  "y": 356.359375,
+                  "width": 28,
+                  "height": 28,
+                  "top": 356.359375,
+                  "right": 394.96875,
+                  "bottom": 384.359375,
+                  "left": 366.96875
+                }
+              },
+              {
+                "shape": "dodge",
+                "clip": "none",
+                "rect": {
+                  "x": 366.96875,
+                  "y": 424.359375,
+                  "width": 28,
+                  "height": 28,
+                  "top": 424.359375,
+                  "right": 394.96875,
+                  "bottom": 452.359375,
+                  "left": 366.96875
+                }
+              }
+            ],
+            "bar": {
+              "x": 380.125,
+              "y": 390.359375,
+              "width": 6,
+              "height": 28,
+              "top": 390.359375,
+              "right": 386.125,
+              "bottom": 418.359375,
+              "left": 380.125
+            }
+          },
+          {
+            "key": "C",
+            "width": 700,
+            "height": 420,
+            "selected": "true",
+            "scrollWidth": 700,
+            "windowWidth": 700,
+            "video": {
+              "x": 328.890625,
+              "y": 297.375,
+              "width": 110.21875,
+              "height": 61.984375,
+              "top": 297.375,
+              "right": 439.109375,
+              "bottom": 359.359375,
+              "left": 328.890625
+            },
+            "guide": {
+              "x": 328.890625,
+              "y": 359.359375,
+              "width": 110.21875,
+              "height": 118,
+              "top": 359.359375,
+              "right": 439.109375,
+              "bottom": 477.359375,
+              "left": 328.890625
+            },
+            "scale": "1.0000",
+            "meta": "C · 한 테두리, 대각선 반쪽 / 668 × 180px 예산 · 표시 100% (1:1)\n영상 110 × 62px · 안내 118px\n남는 높이 0px · 입력 기호 28px",
+            "symbols": [
+              {
+                "shape": "dodge",
+                "clip": "polygon(0px 0px, 100% 0px, 0px 100%)",
+                "rect": {
+                  "x": 359.921875,
+                  "y": 390.359375,
+                  "width": 28,
+                  "height": 28,
+                  "top": 390.359375,
+                  "right": 387.921875,
+                  "bottom": 418.359375,
+                  "left": 359.921875
+                }
+              },
+              {
+                "shape": "assist",
+                "clip": "polygon(100% 0px, 100% 100%, 0px 100%)",
+                "rect": {
+                  "x": 359.921875,
+                  "y": 390.359375,
+                  "width": 28,
+                  "height": 28,
+                  "top": 390.359375,
+                  "right": 387.921875,
+                  "bottom": 418.359375,
+                  "left": 359.921875
+                }
+              }
+            ],
+            "bar": {
+              "x": 371.0625,
+              "y": 424.359375,
+              "width": 6,
+              "height": 28,
+              "top": 424.359375,
+              "right": 377.0625,
+              "bottom": 452.359375,
+              "left": 371.0625
+            }
+          }
+        ]
+      },
+      "motion_inspection": {
+        "errors": [],
+        "states": [
+          {
+            "t": 0.8,
+            "label": "입력 전",
+            "guides": [
+              {
+                "layout": "guide A",
+                "state": "pending",
+                "time": "0.8000",
+                "left": "43.3333%",
+                "barColor": "rgb(126, 132, 140)",
+                "iconBorder": "rgb(126, 132, 140)"
+              },
+              {
+                "layout": "guide A",
+                "state": "pending",
+                "time": "0.8000",
+                "left": "43.3333%",
+                "barColor": "rgb(126, 132, 140)",
+                "iconBorder": "rgb(126, 132, 140)"
+              },
+              {
+                "layout": "guide B",
+                "state": "pending",
+                "time": "0.8000",
+                "left": "43.3333%",
+                "barColor": "rgb(126, 132, 140)",
+                "iconBorder": "rgb(126, 132, 140)"
+              },
+              {
+                "layout": "guide B",
+                "state": "pending",
+                "time": "0.8000",
+                "left": "43.3333%",
+                "barColor": "rgb(126, 132, 140)",
+                "iconBorder": "rgb(126, 132, 140)"
+              },
+              {
+                "layout": "guide C",
+                "state": "pending",
+                "time": "0.8000",
+                "left": "43.3333%",
+                "barColor": "rgb(126, 132, 140)",
+                "iconBorder": "rgb(126, 132, 140)"
+              },
+              {
+                "layout": "guide C",
+                "state": "pending",
+                "time": "0.8000",
+                "left": "43.3333%",
+                "barColor": "rgb(126, 132, 140)",
+                "iconBorder": "rgb(126, 132, 140)"
+              }
+            ]
+          },
+          {
+            "t": 1.56,
+            "label": "입력 가능",
+            "guides": [
+              {
+                "layout": "guide A",
+                "state": "current",
+                "time": "1.5600",
+                "left": "18%",
+                "barColor": "rgb(213, 245, 41)",
+                "iconBorder": "rgb(213, 245, 41)"
+              },
+              {
+                "layout": "guide A",
+                "state": "current",
+                "time": "1.5600",
+                "left": "18%",
+                "barColor": "rgb(213, 245, 41)",
+                "iconBorder": "rgb(213, 245, 41)"
+              },
+              {
+                "layout": "guide B",
+                "state": "current",
+                "time": "1.5600",
+                "left": "18%",
+                "barColor": "rgb(213, 245, 41)",
+                "iconBorder": "rgb(213, 245, 41)"
+              },
+              {
+                "layout": "guide B",
+                "state": "current",
+                "time": "1.5600",
+                "left": "18%",
+                "barColor": "rgb(213, 245, 41)",
+                "iconBorder": "rgb(213, 245, 41)"
+              },
+              {
+                "layout": "guide C",
+                "state": "current",
+                "time": "1.5600",
+                "left": "18%",
+                "barColor": "rgb(213, 245, 41)",
+                "iconBorder": "rgb(213, 245, 41)"
+              },
+              {
+                "layout": "guide C",
+                "state": "current",
+                "time": "1.5600",
+                "left": "18%",
+                "barColor": "rgb(213, 245, 41)",
+                "iconBorder": "rgb(213, 245, 41)"
+              }
+            ]
+          },
+          {
+            "t": 1.72,
+            "label": "성공 (시연)",
+            "guides": [
+              {
+                "layout": "guide A",
+                "state": "success",
+                "time": "1.7200",
+                "left": "12.6667%",
+                "barColor": "rgb(45, 200, 141)",
+                "iconBorder": "rgb(45, 200, 141)"
+              },
+              {
+                "layout": "guide A",
+                "state": "success",
+                "time": "1.7200",
+                "left": "12.6667%",
+                "barColor": "rgb(45, 200, 141)",
+                "iconBorder": "rgb(45, 200, 141)"
+              },
+              {
+                "layout": "guide B",
+                "state": "success",
+                "time": "1.7200",
+                "left": "12.6667%",
+                "barColor": "rgb(45, 200, 141)",
+                "iconBorder": "rgb(45, 200, 141)"
+              },
+              {
+                "layout": "guide B",
+                "state": "success",
+                "time": "1.7200",
+                "left": "12.6667%",
+                "barColor": "rgb(45, 200, 141)",
+                "iconBorder": "rgb(45, 200, 141)"
+              },
+              {
+                "layout": "guide C",
+                "state": "success",
+                "time": "1.7200",
+                "left": "12.6667%",
+                "barColor": "rgb(45, 200, 141)",
+                "iconBorder": "rgb(45, 200, 141)"
+              },
+              {
+                "layout": "guide C",
+                "state": "success",
+                "time": "1.7200",
+                "left": "12.6667%",
+                "barColor": "rgb(45, 200, 141)",
+                "iconBorder": "rgb(45, 200, 141)"
+              }
+            ]
+          }
+        ],
+        "afterB": [
+          {
+            "layout": "guide B",
+            "state": "current",
+            "time": "1.5600",
+            "left": "18%",
+            "barColor": "rgb(213, 245, 41)",
+            "iconBorder": "rgb(213, 245, 41)"
+          }
+        ],
+        "afterC": [
+          {
+            "layout": "guide C",
+            "state": "current",
+            "time": "1.5600",
+            "left": "18%",
+            "barColor": "rgb(213, 245, 41)",
+            "iconBorder": "rgb(213, 245, 41)"
+          }
+        ],
+        "beforeMove": [
+          {
+            "layout": "guide C",
+            "state": "pending",
+            "time": "0.3000",
+            "left": "60%",
+            "barColor": "rgb(126, 132, 140)",
+            "iconBorder": "rgb(126, 132, 140)"
+          }
+        ],
+        "afterMove": [
+          {
+            "layout": "guide C",
+            "state": "pending",
+            "time": "0.6500",
+            "left": "48.3333%",
+            "barColor": "rgb(126, 132, 140)",
+            "iconBorder": "rgb(126, 132, 140)"
+          }
+        ],
+        "afterRepeat": [
+          {
+            "layout": "guide C",
+            "state": "pending",
+            "time": "0.2399",
+            "left": "62.0022%",
+            "barColor": "rgb(126, 132, 140)",
+            "iconBorder": "rgb(126, 132, 140)"
+          }
+        ],
+        "space": {
+          "count": 2,
+          "playbackHidden": true,
+          "text": "C · 한 테두리, 대각선 반쪽 / 1232 × 440px 예산 · 표시 100% (1:1)영상 572 × 322px · 안내 118px\n남는 높이 0px · 입력 기호 28px"
+        },
+        "mediaCount": 0
+      },
+      "remaining_failure": "700x420 current-window detail: B video about50x28px, guide about50px wide, with 28px symbols/labels overlapping; A/C also narrow. The default current-window representation remains unsuitable for this comparison condition."
+    }
+  ],
+  "followup_dispatch": {
+    "turn_id": "01a0b7d4-3ee8-7c72-bee1-bec36e340901",
+    "used_frozen_request_verbatim": true,
+    "stage_1_failure_disclosed_to_executing_task": false,
+    "reason": "Preserve the predefined changed-purpose probe; do not coach the known failure away during scoring."
+  },
+  "source_files_unchanged_before_recording_results": {
+    "AGENTS.md": true,
+    "README.md": true,
+    "docs/product.md": true,
+    "docs/research.md": true,
+    "src/practice/RhythmGuide.tsx": true,
+    "src/practice/rhythm-guide.css": true,
+    "src/style.css": true,
+    "src/content/vesper-patterns.ts": true,
+    "src/content/skills.ts": true,
+    "public/icons/zzz-assist.png": true,
+    "public/icons/zzz-dodge.png": true,
+    "public/media/vesper-execute-02.jpg": true
+  },
+  "conclusion_ko": "새 문맥에서 역할에 맞는 구현 범위 선택과 조건 변화 대응을 관찰했다. 그러나 낮은 창의 실제 비교 품질 실패가 남아 전체 통과가 아니다. 기존 방식과 같은 조건의 대조 실행이 없어 개선 효과를 입증하지 않았으며, 알려진 사례·한 task·두 단계·지침 작성자의 검토라는 한계가 있다.",
+  "failure_analysis_ko": "대표 표현을 선택하는 판단은 적용됐지만, 비교 도구의 조작부 높이가 현재 창의 모의 연습 공간에 영향을 주어 작은 개별 화면에서 식별에 필요한 역할을 잃었다. 계산값·공통 폭·화면 넘침 검사와 실제 비교 가능성은 다르다. 특정 해상도 규칙을 새로 추가하지 않고 이 실패 조건과 관측을 보존한다.",
+  "suggested_next_work_ko": "수정한다면 비교할 연습 영역의 크기와 도구 조작부의 공간을 구별하거나, 해당 크기에서 판단 가능한 다른 표현을 제공하는 문제로 다룬다. 현재 결과를 지침 일반화 성공으로 확대하지 않는다. 이번 평가에는 추가 수리·재채점 루프를 포함하지 않는다.",
+  "review_method": {
+    "browser": "Playwright Chromium headless, parent controller",
+    "views": [
+      "1280x720",
+      "700x420"
+    ],
+    "actions": [
+      "A/B/C selection",
+      "computed geometry and complementary clip inspection",
+      "visual review of overview and low-height B detail",
+      "seek pending/current/success and inspect actual computed colors",
+      "real-time movement, pause, candidate time preservation, repeat wrap",
+      "return to static space comparison"
+    ],
+    "implementation_review": "Parent read generated app.js/server.mjs and output README; executable effects were independently exercised, not inferred from executor test counts.",
+    "independence_limit": "Different executing task, but same controller authored criteria and reviewed known outcome. No blind independent evaluator."
+  },
+  "screenshots": [
+    {
+      "file": "harness-refresh-stage1-overview-20260919.png",
+      "sha256": "1d1caaf4cb46d4cc7b5108f18cee8b0fc6e9bc84745dd1dc329d9104d296bfea"
+    },
+    {
+      "file": "harness-refresh-low-height-failure-20260919.png",
+      "sha256": "c777510ed75cb602b28c70862fed7afdf5e35ae1fd8626d5799260854ce7a3d9"
+    },
+    {
+      "file": "harness-refresh-stage2-success-20260919.png",
+      "sha256": "b9556d995c3bd97d28ac3064752561fad47702c7d51c91c6409e63f0f5e2e36f"
+    }
+  ],
+  "lifecycle": {
+    "date": "2026-09-19",
+    "user_selection": "A: whole Space and right-click icons side by side above one entry window",
+    "evaluation_verdict_unchanged": true,
+    "temporary_artifacts": "removed after selection; original artifact paths below are historical provenance, not live resources",
+    "retained": "evaluation record and three screenshots: space overview, low-height failure, motion state",
+    "production_adoption": "single layout in RhythmGuide; preview props, variants, page, dedicated test and command removed",
+    "production_verification": {
+      "typecheck": "passed",
+      "unit_tests": "60 passed",
+      "build": "passed",
+      "browser_tests": "8 of 9 passed initially; remaining test passed after measuring both moving icons in a single frame (assertion race, no product change)",
+      "visual_review": "Actual app at 1280x720 and 700x420: complete side-by-side 28px icons, 118px lane, equal video/lane width; header hidden",
+      "production_screenshot": "entry-icons-a-20260919.png",
+      "removed": [
+        "icon-test.html",
+        "playwright.preview.config.ts",
+        "src/dev/icon-test.tsx",
+        "src/dev/icon-test.css",
+        "tests/preview/icon-preview.spec.ts",
+        ".local/icon-review",
+        "evaluation task outputs/icon-comparison",
+        "evaluation task work"
+      ],
+      "temporary_server_5391": "stopped after checking served app.js against the evaluation file and confirming the port owner",
+      "controller_transfer": "not performed; evaluation task remains projectless; current product changes are in f815 and are uncommitted"
+    }
+  },
+  "operating_trial": {
+    "date": "2026-09-19",
+    "status": "completed_application_check_passed",
+    "executor_thread": "01a0b7c8-a5f0-72d3-b81b-fb7ab9e4f380",
+    "purpose": "Apply revised controller operations to existing Girtablullu candidate review and next-action selection. Read-only product research, not another UI prototype.",
+    "criteria": [
+      {
+        "id": "purpose_scope",
+        "question": "Advances the next decision without unnecessary reconstruction or missing decision-critical roles."
+      },
+      {
+        "id": "evidence_use",
+        "question": "Uses prior observations and exceptions in candidate reasoning; distinguishes time origins and predictions from measurements/adoption."
+      },
+      {
+        "id": "operations",
+        "question": "Makes justified delegation choices; a separate reviewer examines scope/premises from original purpose/evidence before costly work; controller resolves findings with reasons."
+      },
+      {
+        "id": "acceptance",
+        "question": "Checks decision-critical sources/calculations and specifies remaining information, the decision it changes, and the next action; reports review limits."
+      }
+    ],
+    "limits": [
+      "Existing evaluation task is reused; not a pristine task or blind test.",
+      "Documentation author evaluates; no matched old-workflow control.",
+      "No game-input program changes, live game input, or adoption of unmeasured service windows.",
+      "Executor received an explicit operating brief and visible evaluation criteria; this is an application check, not spontaneous generalization proof.",
+      "Reviewer and controller shared project documents and exchanged the overlap finding; not blind independent discovery.",
+      "A .local search reported access errors for media-tool dependency directories; no exhaustive absence claim about all user recordings."
+    ],
+    "source_sha256": {
+      "AGENTS.md": "d51f202f12b458635165241380f53cad15155f12821bf644b1561953a7842fc9",
+      "docs/research.md": "487f84c264366a26a5e7255ddb5bf63b82f73b6b321ee2fee8787c4186166170",
+      "README.md": "2fe6762dbf1432fd814f6935084c57f545992655c8ce898eaa28ba1d968a1f05"
+    },
+    "turn_id": "01a0b7fb-9422-72c2-a232-59fb798b0a06",
+    "duration_ms": 341205,
+    "review_agent": {
+      "thread_id": "01a0b7fc-87d5-7d12-a94d-5fb6f3e9b401",
+      "path": "/root/scope_review",
+      "role": "read-only scope and premise review; did not repeat all source calculations"
+    },
+    "actual_workdir": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice",
+    "head": "375fc425c16f0092fbdffc8e748c55ad2e6a9950",
+    "results": [
+      {
+        "id": "purpose_scope",
+        "verdict": "pass",
+        "evidence": "Kept existing provisional candidates, made no new prototype/profile/game run, selected local route and timing-origin connection as the next decision."
+      },
+      {
+        "id": "evidence_use",
+        "verdict": "pass",
+        "evidence": "Read original annotations and recomputed nine Vesper supports, medians116.7/66.7ms, leave-one-out reconstruction; retained400/approx425ms distinction and nonuniform316/498ms external-path offsets."
+      },
+      {
+        "id": "operations",
+        "verdict": "pass",
+        "evidence": "Observed separate reviewer start/interact/complete; read reviewer final response. Controller checked source arithmetic while reviewer challenged scope/premises and reviewed the entry-overlap finding. Controller accepted findings with reasons before final next-action choice."
+      },
+      {
+        "id": "acceptance",
+        "verdict": "pass",
+        "evidence": "Returned provisional values, corrected the meaning of the entry retry, linked each missing input to a decision, and stated no independent game/model-performance validation."
+      }
+    ],
+    "concrete_correction_ko": "진입 우선3.90–4.10초와 대안3.80–3.95초는3.90–3.95초에서 겹친다.4.00 실패 뒤3.90 성공은 더 이른 기준점의 유용성을 확인하며150ms 폭의 식별을 뜻하지 않는다.",
+    "review_method": "Parent inspected completed controller turn, actual command cwd/read-only commands, arithmetic output, subagent lifecycle and reviewer response; directly checked overlapping intervals against the existing candidate table.",
+    "observed_cost": {
+      "user_reexplanations_during_run": 0,
+      "controller_correction_messages_during_run": 0,
+      "new_implementation_artifacts": 0,
+      "full_app_test_reruns": 0,
+      "comparison_to_old_workflow": "not measured"
+    },
+    "next_action_ko": "새 controller에서 실제 파티/키·교대 경로와 로컬 시간 원점의 연결을 진행한다. 기존 자료로 연결할 수 없을 때 필요한 정보와 바뀌는 결정을 설명한다. 실험 프로그램 구현과 실제 게임 입력은 해당 실행 범위의 후속 요청에 따른다."
+  },
+  "transfer_correction_20260921": {
+    "date": "2026-09-21",
+    "status": "completed_supervised_application_passed",
+    "supervisor_thread_id": "01a0b7c8-a5f0-72d3-b81b-fb7ab9e4f380",
+    "authorization": "Supervisor approved the proposed document/operating correction and one bounded read-only action using existing Kusarikku material. Final application verdict belongs to the supervisor.",
+    "observed_failure": [
+      "Controller inferred four separately required responses from four internal Combo events; a source-focused review accepted that interpretation without establishing the gameplay mapping.",
+      "Controller treated the QTE resulting from last-hit RMB dodge as a new prerequisite and requested recording before applying the prior external-evidence-first decision.",
+      "Controller correction still shortened the community-feedback condition to lower priority and described final dodge/QTE expansion as if their relationship were not preserved."
+    ],
+    "preserved_agreement": {
+      "last_hit_rmb": "Dodge the final attack; QTE is the resulting action, not a separate expansion task. Decide whether to add this response based on community feedback after public release.",
+      "terminology": "Entry dodge, hit 1, hit 2, etc. are user-facing boss actions. Internal events are mapped to these only with evidence.",
+      "party": "엽빛나→수나→자오, 진입 엽빛나",
+      "response_count": "Four required responses was withdrawn; do not infer a replacement count or automatic-response explanation without the missing mapping."
+    },
+    "correction_scope": "Correct existing canonical statements and connect significant scope review to the actual next question/action. Preserve routine autonomy, old evaluation outcomes and current uncommitted work. No runtime code, platform or additional judgment cases.",
+    "before_first_action": {
+      "recorded_before_execution": true,
+      "question": "Do the four already extracted normal Combo event entries or their corresponding AidTriggerControl entries expose different execution conditions that exclude an event?",
+      "selection_reason": "The earlier extract retained event identifiers and frames but not all event-entry condition fields. Inspecting those existing fields can test conditional exclusion without recounting Pre, requesting party/recording, or extracting new assets.",
+      "inputs": [
+        ".local/kusarikku-static/AnimatorEventPattern_Monster_Larval_Battle.tree.json: patterns[name=Monster_Larval_Attack_Execute_01_Combo].entries (AnimEventID entries only)",
+        ".local/kusarikku-static/Larval_AidTriggerControl.json: AbilityMixins[4].ConfigList entries for Attack_Execute_01_Combo"
+      ],
+      "method": "Read-only PowerShell ConvertFrom-Json selection; print event condition fields and complete matching aid entries. Read existing provenance sidecars and hash these cached JSON inputs, without re-extracting game blocks.",
+      "unknown_before_execution": "Current encounter binding, downstream attack-property behavior, actual response count and timing remain unverified. Absence of a local entry condition cannot prove absence of runtime skipping or prove four inputs.",
+      "decision_branches": "If an explicit differing condition exists, identify its target and evidence limit. Otherwise do not pursue event-level conditional exclusion as an established explanation; identify the remaining runtime/response mapping without inventing it.",
+      "stop_rule": "Inspect these two existing selections once and report the result. No new game extraction, video search, recording request, profile or live input in this application check."
+    },
+    "first_action_result": {
+      "tool": "functions.exec -> exec_command (PowerShell Get-Content / ConvertFrom-Json / Where-Object / Get-FileHash)",
+      "execution": "Read the two preselected existing cached JSON files and their provenance sidecars. Selected the normal Combo pattern's AnimEventID entries and AidTriggerControl.AbilityMixins[4] entries for that same state. No new asset extraction or runtime execution.",
+      "sources": [
+        {
+          "path": ".local/kusarikku-static/AnimatorEventPattern_Monster_Larval_Battle.tree.json",
+          "sha256": "dcea4cf3106f05d70125da8ff36b23102b6e573cb8ab708a7654b02bbf38b113",
+          "object_id": "-2560348162876485985",
+          "payload_sha256": "60771ee110fa8d607d089309327c8c1ee493a3ec6e70f9543fe6e390309534e4"
+        },
+        {
+          "path": ".local/kusarikku-static/Larval_AidTriggerControl.json",
+          "sha256": "1cb9ed53eb33fc5ee36228bf98d38f5bf396c066b22d071d3830e5ca1c5328d5",
+          "object_id": "-8500164645839118333",
+          "payload_sha256": "f08d694499660cfc8cea971926275c31e7dba6e4d606e299a9f13268ec863e0f"
+        }
+      ],
+      "observed": {
+        "event_frames": [
+          134,
+          175,
+          257,
+          304
+        ],
+        "event_condition_fields_same_in_all_four": {
+          "AnimateStateTagsV2": [
+            "Default"
+          ],
+          "AnimatorZoneTagsV2": [
+            "Default"
+          ],
+          "AnimatorZoneTagsBlackListV2": [],
+          "maxFrame": false,
+          "forceTrigger": true,
+          "forceTriggerOnTransitionIn": false,
+          "forceTriggerOnTransitionOut": false,
+          "normalizedTime": 0
+        },
+        "aid_entries": "All four match Attack_Execute_01_Combo, IsLoop=false, LayerIndex=0, MaxFrameCountLow/High=false. Their complete entries expose ranges and ModifierNameList, not an additional per-entry predicate field.",
+        "aid_modifier_difference": "The first entry includes PowerStruggleTagContralModifier and FireAttackWarningEffect_Wrestle; entries 1/3 use LightParry and 2/4 use HeavyParry. These names alone do not establish skipping or a response count."
+      },
+      "judgment": "The inspected entry fields do not provide a differing condition that explains excluding one event. This is not proof that all four execute in the target encounter or require four separate inputs. Runtime binding, referenced modifier/AttackProperty behavior and gameplay mapping remain outside this read.",
+      "effect_on_next_action": "Do not explain three responses by an alleged condition in these event entries or recount Pre/Combo. The next useful evidence must connect a referenced AttackProperty/runtime response to a user-facing action; no new recording request follows from this result alone.",
+      "observed_scope": {
+        "user_questions": 0,
+        "new_recording_requests": 0,
+        "new_video_searches": 0,
+        "new_game_asset_extractions": 0,
+        "live_game_inputs": 0,
+        "runtime_code_changes": 0,
+        "judgment_case_additions": 0
+      },
+      "application_verdict": "passed_explicitly_supervised_single_application"
+    },
+    "verification": {
+      "json_parse": "passed",
+      "git_diff_check": "passed",
+      "historical_evaluation": "All pre-existing top-level evaluation data equals HEAD after excluding this newly added application record.",
+      "provenance": "Both cached source SHA-256 values, object IDs and payload hashes match their existing files/sidecars. Aid object-ID transcription was corrected to -8500164645839118333 before this check.",
+      "document_review": "Current statements preserve last-hit RMB dodge -> resulting QTE and inclusion decision based on community feedback after public release. README distinguishes technical handoff from this single supervised application result.",
+      "unchanged_scope": "No runtime code, profile, game input, new judgment case or full-app test run in this correction.",
+      "meaning": "Document/format/provenance checks only; application acceptance is the supervisor's separate trace-based judgment recorded below."
+    },
+    "supervisor_verdict": "passed_explicitly_supervised_single_application",
+    "supervisor_review": {
+      "basis": "Supervisor compared the original request and document diff, directly read actual commands/outputs exec-889cae77-40ea-4271-bfa4-5b1de7b3765c and exec-84c93f05-0f4c-420c-829f-cff14a5669d1, and accepted the corrected object ID and JSON/diff verification.",
+      "accepted_behavior": "Selected a bounded question using existing evidence; retained unverified input count; did not turn absence of differing entry conditions into proof of four inputs; did not re-question confirmed party/QTE or require new recording.",
+      "reviewer_role": "Author of operating guidance and supervisor of this correction; not a blind or independent evaluator.",
+      "scope": "One explicitly supervised application after a known failure. No general controller-quality, cross-project or future-work guarantee. This correction is closed."
+    },
+    "limits": [
+      "An explicitly supervised application following a known failure, not an unseen or general controller-quality test.",
+      "Existing application criteria already cover this failure; old evaluation cases and pass records are not rerun or overwritten.",
+      "JSON/diff verification does not establish judgment correctness."
+    ]
+  },
+  "responsibility_transfer_20260921": {
+    "date": "2026-09-21",
+    "status": "passed_bounded_multiturn_application",
+    "purpose": "Transfer responsibility for deriving, completing and accepting decisions needed by a new-boss work unit, so the user supplies only new conditions, actual play observations and material product choices.",
+    "owner": {
+      "supervisor": "01a0b7c8-a5f0-72d3-b81b-fb7ab9e4f380",
+      "checker": "01a0bf7d-5c74-74c1-be2f-2079af7ae78a",
+      "checkerMayBecomeController": false
+    },
+    "criteriaBeforePostChangeRun": [
+      {
+        "id": "purpose_scope",
+        "question": "Derive all remaining decisions from the original purpose; preserve them across a narrower subtask and distinguish agent work from play-only uncertainty."
+      },
+      {
+        "id": "evidence_use",
+        "question": "Apply current observations and counterexamples to actual candidate choice or limits and experiment priorities, rather than just naming sources."
+      },
+      {
+        "id": "operations",
+        "question": "Use existing agreements without asking the user to restore them; respect read-only/implementation ownership and use user effort only for decisions it can change."
+      },
+      {
+        "id": "acceptance",
+        "question": "Reassess on follow-up evidence without replacing unresolved obligations with a passed technical or partial gate; do not invent outcomes or overstate generalization."
+      }
+    ],
+    "method": "One fresh-context task read the pre-change live canonical documents, then a separate fresh-context task received the same opening prompt after changes. The supervisor knows versions and authored the correction; this is a qualitative application comparison, not a blinded controlled performance study. The predeclared procedure required further turns and a distinct condition before acceptance; these are recorded below.",
+    "baseline": {
+      "threadId": "01a0c1f1-6974-77c0-801f-69aab2626aa8",
+      "verdict": "failed_purpose_scope",
+      "basis": "Correctly preserved several agreements and timing-origin limitations, but selected user baseline trials as the immediate next step and omitted the still-unperformed agent-side conditional window comparison. This independently reproduced the narrow-scope continuation without the old conversation.",
+      "turnId": "01a0c1f1-6cfb-7c42-942c-2b52dd30da4b",
+      "status": "completed"
+    },
+    "checkerRounds": [
+      {
+        "turnId": "01a0c1f0-76e0-7120-8606-78acf49c7200",
+        "round": 1,
+        "role": "read-only explanation; not controller or evaluator",
+        "finding": "Understood timing-unit distinctions but narrowed the original request to baseline-program preparation and did not apply internal widths/gaps to candidate selection."
+      },
+      {
+        "turnId": "01a0c1f2-d832-7841-9393-7f0638a3a271",
+        "round": 2,
+        "role": "read-only explanation; not controller or evaluator",
+        "finding": "Admitted that the README waiting state was self-authored; implementation approval did not waive the outstanding comparison. Distinguished baseline-first play from pre-play conditional reasoning."
+      },
+      {
+        "turnId": "01a0c1f7-ba09-7cf3-ab45-fd8d0bd49b29",
+        "round": 3,
+        "role": "read-only explanation; not controller or evaluator",
+        "finding": "Explained revised ownership, source-to-choice acceptance and technical-profile validity without claiming that explanation proved an actual transfer."
+      }
+    ],
+    "postChange": [
+      {
+        "threadId": "01a0c1f7-9f5c-7961-9bec-5952fb98f3ba",
+        "scope": "Real existing Kusarikku evidence, followed by explicitly hypothetical observations.",
+        "turns": [
+          {
+            "turnId": "01a0c1f7-a2ab-7810-b317-b81820fafe32",
+            "input": "Same opening request as baseline; no answer key or failure checklist in the task prompt.",
+            "verdict": "pass_for_initial_candidate_decision",
+            "observed": "Applied internal width30 and gaps11/52/17, current EX01 widths350/450/400/500/500 and Gir400/400/400 counterexample to provisional350/400ms support trial placements and adjacent-action priorities. Did not pool notice-relative video extrema or claim physical bounds. Preserved established party/count, preparation path and read-only role.",
+            "limit": "Numerical placements are exploratory design choices, not optimality or real-game evidence. Explanation of first opening103 was limited; no precise timing conclusion drawn."
+          },
+          {
+            "turnId": "01a0c1fc-3353-7230-aefd-e79a6e9da356",
+            "input": "Hypothetical baseline twice plus entry and first-hit isolated endpoints all succeed under same conditions; user asks remaining sequence and recording need.",
+            "verdict": "pass_for_partial_completion",
+            "observed": "Continued remaining six endpoints in an explicit sequence based on adjacent gaps, retained two cross combinations and final media acceptance, requested no redundant baseline or new recording."
+          },
+          {
+            "turnId": "01a0c1fe-5d0a-7203-8287-de572bf692aa",
+            "input": "Hypothetical remaining endpoints all pass; cross A produces11101 then11111; cross B11111; representative video not selected; final RMB not tested; user asks about closure/public preparation.",
+            "verdict": "pass_for_counterexample_and_scope",
+            "observed": "Kept first 3rd-hit failure despite retry success; proposed only9300->9250 isolated/cross checks, stopped automatic shrinking if failure recurs, preserved unaffected evidence, distinguished parallel public preparation from completed ranges and deployment, kept last-hit RMB conditional on post-release feedback."
+          }
+        ]
+      },
+      {
+        "threadId": "01a0c1f9-66d2-7170-b999-8adfb043cce4",
+        "scope": "Explicit hypothetical different boss X; not a real boss recording or adopted task.",
+        "turns": [
+          {
+            "turnId": "01a0c1f9-6cbd-76c3-8614-6e5cf2cbbf29",
+            "input": "External non-Claret footage confirms entry+3, party P/start A agreed; same-role internal widths30 with gaps8/60; notice-aligned first cue differs300ms but cue-aligned followups close; no overlay or local detector yet.",
+            "verdict": "pass_for_different_condition",
+            "observed": "Selected conditional relative offsets and 1->2 interaction priority, used Gir/EX01 counterexamples rather than a fixed conversion, identified missing first-opening position as agent-side lookup, requested one targeted local capture for timing/detection linkage rather than reasking agreed conditions."
+          },
+          {
+            "turnId": "01a0c1fc-b9fe-75f1-b0bc-5c92d8484844",
+            "input": "Hypothetical local linkage and baseline OFF2 pass; 2nd-hit-only late+200 has mixed OFF success/failure, one ON failure, 3rd-hit failure only follows failed2; user suggests global-100 and later replacement recording.",
+            "verdict": "pass_for_counterexample_and_user_burden",
+            "observed": "Rejected unsupported global shrink and replacement video; proposed local2nd-hit+150 OFF comparison with conditional fallback, separated ON and failure-path3rd hit, retained unresolved endpoints and cross checks."
+          }
+        ]
+      }
+    ],
+    "changes": [
+      "Preserve original outstanding decisions and owners in README; no new state store.",
+      "Replace shortcut continuation and acceptance instructions; distinguish baseline-first experiments from pre-experiment reasoning.",
+      "Remove obsolete empirical numbers from the reusable hypothesis entry and link current conclusions.",
+      "Keep experiment checks technical; no runtime readiness schema or artificial research pass field."
+    ],
+    "limits": [
+      "No real game input, new successful trials, service window changes, or deployment authorization are implied.",
+      "The checker has prior feedback and is diagnostic, not an independent performance sample.",
+      "Named sample failures must not become universal numeric timing laws.",
+      "Post-change tasks were not blind to the revised canonical rules. Supervisor authored the correction and knew the expected failure family; independent review is not a blinded controlled study.",
+      "Five post-change answers comprise two contextual runs, not five independent samples. Only the initial Kusarikku answer used real retained game evidence; follow-ups and all X observations were hypothetical.",
+      "No live-game result processing, runtime modification, service adoption or future-longitudinal reliability was evaluated."
+    ],
+    "independentReview": {
+      "agent": "/root/handoff_scope_review",
+      "scope": "Read canonical sources before accepting the modification, compare pre-change snapshots, then inspect first and follow-up answers against original purpose. No edits.",
+      "findingsFixed": [
+        "Stale research request for a first local capture despite completed seven-video/detector linkage.",
+        "Stale product statement marking Kusarikku pattern type as unconfirmed.",
+        "Overly narrow new condition for considering preparation simplification."
+      ],
+      "verdict": "All five post-change response scopes passed; numerical trial choices are hypotheses, not measured windows; execution/import/deployment ability not evaluated."
+    },
+    "intervention": {
+      "userReexplanationsDuringEvaluation": 0,
+      "answerCorrectionsSentToPostChangeTasks": 0,
+      "checkerRoundsAreCoachedDiagnostic": true,
+      "notes": "Supervisor supplied initial task and follow-up hypothetical observations. Three static-review statements were refined after initial post-change responses; the subsequent turns did not depend on new timing facts or answer corrections."
+    },
+    "acceptance": {
+      "decision": "Accept the operating/document correction and the bounded multi-turn judgment result. Do not appoint the old Kusarikku checker or any evaluation task as production controller.",
+      "productionOwner": "01a0b7c8-a5f0-72d3-b81b-fb7ab9e4f380",
+      "nextActualWork": "Use the documented conditional Kusarikku trial proposal to connect a real experiment; no hypothetical trial result is adopted. Future work-unit transfer still requires explicit owner assignment and the same actual-next-decision/follow-up acceptance."
+    },
+    "verification": {
+      "status": "passed",
+      "introducedLocalLinksChecked": 20,
+      "preexistingOtherDiffSectionsPreserved": 10,
+      "historicalEvidenceUnchanged": true,
+      "internalWidths": [
+        30,
+        30,
+        30,
+        30
+      ],
+      "internalGaps": [
+        11,
+        52,
+        17
+      ],
+      "gitDiffCheck": "passed",
+      "runtimeCodeChangedByThisRepair": false,
+      "scope": "Document/reference/provenance consistency. Judgment acceptance is separately based on actual task responses; no live game or full app tests.",
+      "documentSha256": {
+        "AGENTS.md": "66c51ff37ae0f4b9d07e1523b5dbe129366238707b809d0a1a6e9ea7877c764c",
+        "README.md": "c1e4590009b1902bad03e1cb63ae8dcd6a532c17e495490a653e0c44a68aabb8",
+        "docs/product.md": "4031dfdbfdd22b8effc5042b9a2d2fab6b7a3f907d8addd23c7ae17d4d491911",
+        "docs/research.md": "18c19f5ae46816cce2cd9eeb2aca677d4b113543a4a9e2a693d291102a76aeb7",
+        "docs/boss-control-patterns.md": "23db5532e4ae83c512de530330c9e6bf8c9c2a84e038e97cfe0d1af5f024eb64"
+      },
+      "notes": [
+        "Initial link-check helper incorrectly removed the literal underscore in Execute_01; fixed the helper, no document link change needed.",
+        "A Node child Git invocation could not resolve the worktree; collected diff and diff-check through exec_command with explicit workdir, then checked the saved diff. No project runtime issue inferred."
+      ]
+    },
+    "sourceSnapshots": {
+      "before": [
+        {
+          "sha256": "F452EF65F80FAC5D000C5D6A41983674182473CF1C0186D4493095492F3BB7E8",
+          "path": "AGENTS.md"
+        },
+        {
+          "sha256": "26F366CF2A454BB814C1C73102CCCF9E9DAC117B43FDF4895FDCDAA26B2151F8",
+          "path": "README.md"
+        },
+        {
+          "sha256": "F720402D48C51DE500ED307FE5C29F641AD9365B84266A5C74090FADECF778FE",
+          "path": "docs/product.md"
+        },
+        {
+          "sha256": "36D80A0BE8B2A85F7D4DA65197C91D45F5D9224ED7E1C89C653C4F51C0E89135",
+          "path": "docs/research.md"
+        },
+        {
+          "sha256": "09C2234EFFD031ACEAD17FC8338DC22042D35B1E92E7F68E912986C2D8F4B890",
+          "path": "docs/boss-control-patterns.md"
+        },
+        {
+          "sha256": "0D1779485BC174CE9F725B37844E5A04C1F457DBF987034777BEED203323D1B2",
+          "path": "docs/evidence/harness-refresh-20260919.json"
+        }
+      ],
+      "afterFirstCorrection": [
+        {
+          "path": "AGENTS.md",
+          "sha256": "66c51ff37ae0f4b9d07e1523b5dbe129366238707b809d0a1a6e9ea7877c764c"
+        },
+        {
+          "path": "README.md",
+          "sha256": "2f13481a0d6b45163257ec0ef011ea2d3a5357f3fe02c0f8904c9bf70552bf0e"
+        },
+        {
+          "path": "docs/product.md",
+          "sha256": "a26197d530d7aeaffe4dc0d1162ed64750fcf8695be4d156b7bf8487c5d76c4e"
+        },
+        {
+          "path": "docs/research.md",
+          "sha256": "20de8f7126cadf1a34272c85dc2698ce3f467004ee0731d0af5293eba2bc63ad"
+        },
+        {
+          "path": "docs/boss-control-patterns.md",
+          "sha256": "93fb464d35746b57b481fd586d462eefd953b87221fee6e54d7b58d1966c7dd5"
+        }
+      ],
+      "finalDocuments": {
+        "AGENTS.md": "66c51ff37ae0f4b9d07e1523b5dbe129366238707b809d0a1a6e9ea7877c764c",
+        "README.md": "c1e4590009b1902bad03e1cb63ae8dcd6a532c17e495490a653e0c44a68aabb8",
+        "docs/product.md": "4031dfdbfdd22b8effc5042b9a2d2fab6b7a3f907d8addd23c7ae17d4d491911",
+        "docs/research.md": "18c19f5ae46816cce2cd9eeb2aca677d4b113543a4a9e2a693d291102a76aeb7",
+        "docs/boss-control-patterns.md": "23db5532e4ae83c512de530330c9e6bf8c9c2a84e038e97cfe0d1af5f024eb64"
+      }
+    }
+  },
+  "documentation_simplification_20260921": {
+    "date": "2026-09-21",
+    "status": "passed_bounded_artifact_and_followup",
+    "purpose": "Consolidate canonical document responsibilities and verify transfer through a real consumable experiment plan, not explanation alone.",
+    "scope": "Documentation and first Kusarikku batch planning. No game input, game success, service adoption, deployment, or production-controller transfer.",
+    "criteriaBeforeArtifactWork": [
+      "Original-purpose obligations survive completion of narrower preparation; settled party, terminology and expansion conditions are not reopened.",
+      "Internal widths/adjacent relations and Vesper/Gir counterexamples change candidate/priority reasoning without unit conversion or success-video envelope becoming a window.",
+      "First real batch is executable using existing tools and fixed conditions; source proposals, user profiles and historical snapshots retain separate roles.",
+      "Candidate proposes scope before writes, changes only accepted files, and proves artifact consistency; no game input or deployment.",
+      "A subsequent explicitly hypothetical observation causes local re-evaluation without becoming a real result, erasing other unfinished work, or imposing blanket resampling."
+    ],
+    "changes": {
+      "entrypoint": "AGENTS owns permissions and transfer; README owns current unfinished decisions; product owns adoption; research owns methods; dated investigations moved to research-history, not copied.",
+      "currentStatusCorrections": [
+        "Candidate comparison complete versus actual success unverified",
+        "Past evaluation not performed statement scoped to its date",
+        "EX02 hit 3 current 450ms before historical 400ms",
+        "Current implementation contract no longer labelled obsolete initial plan"
+      ],
+      "historicalMigration": [
+        {
+          "lines": [
+            11,
+            37
+          ],
+          "preserved": true
+        },
+        {
+          "lines": [
+            48,
+            52
+          ],
+          "preserved": true
+        },
+        {
+          "lines": [
+            114,
+            114
+          ],
+          "preserved": true
+        },
+        {
+          "lines": [
+            122,
+            122
+          ],
+          "preserved": true
+        },
+        {
+          "lines": [
+            180,
+            182
+          ],
+          "preserved": true
+        },
+        {
+          "lines": [
+            192,
+            1000
+          ],
+          "preserved": true
+        },
+        {
+          "lines": [
+            1019,
+            1043
+          ],
+          "preserved": true
+        }
+      ],
+      "movedAnchors": 59,
+      "cleanupRecord": "experiment-cleanup.json current.harnessDocuments20260921"
+    },
+    "validation": {
+      "links": {
+        "files": 15,
+        "checked": 276,
+        "issues": []
+      },
+      "protectedFiles": {
+        "count": 94,
+        "differences": []
+      },
+      "batch": {
+        "registeredRevision": 1,
+        "trialCount": 0,
+        "validation": {
+          "ok": true,
+          "valid": true,
+          "issues": []
+        },
+        "empiricalDecision": "manual-review-required",
+        "definitionSha256": "63f67b9ea5d43cbd3ecd2bcb3c33cb69e964fd2c88d062085f596b9f1ec71126"
+      },
+      "gitDiffCheck": "passed",
+      "historySha256": "17160e68c62199004ec9408a0b980f8854052b90d37a345ec1f4b1a80cf6f523",
+      "finalDocumentSizes": {
+        "AGENTS.md": 5916,
+        "README.md": 18314,
+        "docs/product.md": 65738,
+        "docs/research.md": 27899,
+        "docs/experiments/research-history.md": 171904
+      },
+      "finalDocumentHashes": {
+        "AGENTS.md": "a3aae8421e944d805bb7e6c79282729ad2289710910489f33d0e11a2ce634b8f",
+        "README.md": "dee5b3ce67f69fbdc4692dbae93bc54429963d24a92ecd685d0f6e3559b493d1",
+        "docs/product.md": "adb4f645063b7d6dc02d3769efe5d3eb0ab7e07b4baa2de25b843e4dcf0be592",
+        "docs/research.md": "6f4066dc195d2d372e5fa5f15d6a948181720d6b6745957c614941dad639694c",
+        "docs/experiments/research-history.md": "17160e68c62199004ec9408a0b980f8854052b90d37a345ec1f4b1a80cf6f523",
+        "docs/boss-control-patterns.md": "23b1ef9993b9883925c6e0a7c9cd75a3ca040249366787cd30d1819628b729f1"
+      }
+    },
+    "workflow": {
+      "threadId": "01a0c21a-e77f-7160-b8b6-403640302adb",
+      "title": "Controller 인수 검증 — 실제 실행 묶음 연결",
+      "context": "Fresh projectless task given actual source path, AGENTS/README entry and narrow real task. No prior conversation or evaluation answers supplied. Candidate could inspect repository evidence; this was not a blind experiment.",
+      "authority": "Readonly proposal, then only Kusarikku report portion and first batch definition. No README/evidence/profile/service changes; permission ended after followup.",
+      "artifactPaths": [
+        "docs/boss-control-patterns.md",
+        ".local/experiments/batches/kusarikku-baseline-01.json"
+      ],
+      "executionEvidence": "<PRIVATE_HOME>/Documents/Codex/2026-09-21/zzz-controller-workflow-validation/outputs/kusarikku-validation-records.json",
+      "changeEvidence": "<PRIVATE_HOME>/Documents/Codex/2026-09-21/zzz-controller-workflow-validation/outputs/kusarikku-report.patch",
+      "intervention": "Supervisor accepted proposal then narrowed implementation to first batch only; no extra profile copies or tools. This authorization is part of the supervised test, not fully autonomous execution.",
+      "turns": [
+        {
+          "id": "01a0c21a-ed9a-7c22-aa48-834a7ff2ffef",
+          "status": "completed",
+          "startedAt": 1789962939,
+          "completedAt": 1789963087,
+          "final": "**현재 정본만으로 다음 실험 묶음을 구체화할 수 있습니다.** 추가 녹화나 기존 합의 재확인은 필요하지 않습니다. 다만 준비된 자동 기준의 실제 게임 성공은 아직 미확인이므로, 양끝 실험은 전체 기준 성공 뒤에 진행해야 합니다. 저는 아직 controller가 아니며 이번에는 읽기만 수행했습니다.\n\n실제 소스 경로와 HEAD `6d77fef`를 확인했고, README에 기록된 문서·실험기 등의 미커밋 변경도 존재합니다. f815 실행 위치의 쿠사리쿠 저장 프로필은 다섯 행 모두 기준 선택이며, 이른/기준/늦은 값이 같습니다. 기존 변경과 설정은 건드리지 않았습니다.\n\n**제안하는 실행 묶음**\n\n공통 조건은 엽빛나→수나→자오, 진입 엽빛나, RMB→Space 4회, 유지 80ms, 녹화 OFF입니다. 준비는 기존 A+RMB→D+RMB 이동 경로를 유지하고 감지 원점+3000ms 전에 RMB를 해제하며, 자동 진입 때는 A방향만 유지합니다. 3000ms는 프로그램의 허용 정책이지 게임 회피창이 아닙니다.\n\n아래 숫자는 모두 실험기 감지 원점 기준 ms이며, 순서는 **진입/1타/2타/3타/4타**입니다.\n\n| 묶음 | 실행 조건과 순서 | 다음 단계로 넘어갈 조건 |\n|---|---|---|\n| A. 전체 기준 | `3700/6550/7650/9100/10450`으로 먼저 2회. 실패가 있으면 최대 4회를 필요한 원인 구분에 사용 | 동일 준비 경로에서 전체 대응 연결 확인. 남은 횟수를 채울 의무 없음 |\n| B. 우선 양끝, 최대 6회 | 다른 행은 기준으로 고정하고 **진입 3600·3800 → 1타 6400·6750 → 3타 8950·9300**을 각각 시험 | 해당 끝의 성공과 후속 경로 확인. 실패·혼재가 생기면 그 조건부터 분리 |\n| C. 나머지 양끝, 최대 4회 | 다른 행은 기준으로 고정하고 **2타 7450·7850 → 4타 10250·10650**을 각각 시험 | 개별 양끝·기준 근거 확보 |\n| D. 대표 교차 2회 | 후보가 그대로 유지되었다면 `3600/6750/7450/9300/10250`, 반대 방향 `3800/6400/7850/8950/10650` | 최종 선택한 양끝의 두 방향 교차 확인. 끝을 교정했다면 교정값으로 구성 |\n\n약 6회는 작업 단위입니다. 실패 분기가 생기면 뒤의 예정 조건을 자동 실행하지 않습니다.\n\n이 순서의 근거는 보스 조사 「내부 관계를 적용한 조건부 시험안」과 연구 「보수적 구간의 대표 교차 조합 확인」입니다. 내부 지원 폭은 모두 30이지만 빈 간격은 **11·52·17**이므로 1→2타와 3→4타의 늦은 선행·이른 후속 조합을 우선 확인합니다. 베스퍼 현행 폭과 기르타블리르의 최종 400ms는 간격만으로 폭을 확정할 수 없다는 반례입니다. 따라서 기존 350/400ms 후보를 시험 출발점으로 사용하되, 내부 단위 환산이나 영상 간 450~483ms 이동을 통한 폭 확대는 하지 않습니다.\n\n**후속 결과는 다음처럼 판단하겠습니다.**\n\n- **기준 실패:** 최초 실패 동작을 찾고 감지·입력 제출·준비 피격·실제 진입 캐릭터를 구별합니다. 기준 자체가 불안정하면 양끝을 줄이는 대신 원점과 준비 조건을 재검토합니다.\n- **개별 끝 실패:** 실패 이전 정상 결과는 보존하고 이후 결과는 정상 경계 표본에서 분리합니다. 해당 조건을 재확인하고 필요한 끝만 기준 쪽으로 50ms 이동합니다.\n- **선행 대응은 성공했는데 교차에서 후속 실패:** 개별 성공만으로 독립적인 폭이라고 볼 수 없습니다. 실패한 끝을 유지한 채 관련 선행 입력을 기준으로 되돌리는 비교 등으로 해당 인접 관계를 분리합니다. 미래의 후속 입력이 앞선 실패를 일으켰다고 해석하지 않습니다.\n- **끝 교정으로 회복:** 최종 선택 끝과 영향받은 교차를 확인합니다. 다른 동작의 폭을 일괄 축소하지 않습니다.\n- **양끝·교차 통과:** 보수적 구간 선택 근거가 마련된 상태입니다. 대표 영상 정렬·웹 전체 연습·결과·재시도·사용자 체감 확인은 별도로 남습니다. 구간 밖 성공은 자동 확대 근거가 아닙니다.\n\n**권한 부여 후 갱신할 최소 범위**\n\n1. `<PRIVATE_HOME>/.codex/worktrees/f873/zzz-pattern-practice/docs/boss-control-patterns.md`  \n   기존 조건부 시험안에 위 묶음·고정 조건·중단 및 후속 분기를 연결합니다. 미측정 상태를 유지합니다.\n2. 기존 records 형식의 묶음 JSON  \n   `question`, `decision`, `stopRule`, `conditions`, `trials: []`로 준비합니다. 기존 형식이 실행 전 빈 회차 목록을 지원하므로 새 기록 체계는 필요 없습니다. 실제 회차만 이후 import하여 연결합니다.\n3. README의 현재 상태 표  \n   감독 controller가 소유권을 유지한 채, 시험안의 구체화 상태와 남은 실제 확인을 갱신하는 범위가 적절합니다. controller 이전은 별도 수용 결과로 기록해야 합니다.\n\n전체 기준 묶음은 현 저장 프로필로 실행 가능합니다. 양끝 단계에는 기존 사용자 저장본을 보존한 별도 후보 사본을 준비하고, 해당 설정의 무입력 검증을 거쳐 연결하면 됩니다. 이번 단계에서 웹·서비스값·원시 관측 기록을 수정할 근거는 없습니다.\n\n필요한 확인은 **새 실제 회차의 결과와 조건 일치 여부**, 그리고 감독 task가 지정할 **한정된 수정 파일·소유권**입니다. 준비 방향·피격은 자동 기록되지 않으므로 결과 해석을 바꾸는 회차에서만 추가 확인합니다. 이번에는 프로그램·게임 실행이나 검사를 수행하지 않았으며, 문서에 남은 과거 검사 통과를 현 상태의 재검사로 보고하지 않습니다."
+        },
+        {
+          "id": "01a0c21e-0382-75c0-ad39-cae148d38101",
+          "status": "completed",
+          "startedAt": 1789963142,
+          "completedAt": 1789963440,
+          "final": "한정된 실제 갱신을 완료했습니다.\n\n- 쿠사리쿠 보고서의 기존 문단 두 곳을 갱신해 첫 기준 묶음의 고정 조건·실행·중단·결과 분기와 후속 양끝·교차·서비스 수용 판단을 연결했습니다.\n- 지정된 `kusarikku-baseline-01.json`을 생성했습니다. 실제 회차·결과는 넣지 않았습니다.\n- 격리 store에서 기존 records CLI의 등록·summary·validate를 통과했습니다. revision 1, 실제 회차 0개, 검증 문제 0개입니다.\n- 보고서 변경 범위와 저장된 묶음의 원본 일치, `git diff --check`도 확인했습니다.\n\n검토 자료: [이번 변경 diff](outputs/kusarikku-report.patch) · [묶음 summary](outputs/batch-summary.json) · [검증 결과](outputs/batch-validation.json)\n\n`tools.ps1`은 npm 진입 파일을 읽지 못해 실패했습니다. 이후 `package.json`에 지정된 동일 records CLI를 기존 Node로 직접 실행했습니다.\n\nREADME·평가 evidence·프로필·실행파일·앱·서비스값·원자료는 변경하지 않았습니다. 실제 기준 성공, 양끝·교차 성공, 영상·웹 수용은 여전히 미확인입니다. controller 전체 역할은 이전받지 않았습니다."
+        },
+        {
+          "id": "01a0c223-3e57-7123-8232-0870d5cefb52",
+          "status": "completed",
+          "startedAt": 1789963484,
+          "completedAt": 1789963526,
+          "final": "**2타부터 전부 50ms 앞당기지는 않겠습니다.** 이번 반례는 **1타 늦은 입력 6750과 2타 기준 7650의 연결이 혼재한 상황**입니다. 2타가 늦어서 실패했다는 근거가 없고, 3·4타까지 바꾸면 원인을 구분하기 어려워집니다. 2타를 앞당기면 두 입력 사이 간격은 오히려 더 짧아집니다.\n\n`11011`에서는 진입·1타가 성공했고 최초 실패는 2타입니다. 사용자 관측도 이를 뒷받침합니다. 따라서 6750을 **1타 자체의 실패값**으로 기록해서도 안 됩니다. 다만 같은 설정의 `11111` 한 번으로 앞선 반례가 해소되지는 않습니다. 감지·제출 로그에 특이사항이 없다는 사실도 게임 진행 조건까지 동일했음을 보장하지 않습니다.\n\n다음은 **1→2타 관계만 분리하는 작은 비교**가 적절합니다.\n\n| 순서 | 진입/1타/2타/3타/4타(ms) | 확인할 질문 |\n|---|---|---|\n| 1 | `3700/6550/7650/9100/10450` | 1타를 기준으로 되돌리면 현재 조건에서도 전체 연결이 유지되는가? |\n| 2 | `3700/6750/7650/9100/10450` | 1타만 늦췄을 때 2타 문제가 다시 나타나는가? |\n\n이미 있는 관측을 버리고 처음부터 반복하는 것이 아니라, **현재 조건에서 선행 입력 하나만 바꾸는 대조**입니다.\n\n- 기준은 성공하고 6750에서 다시 2타가 실패하면, 다음 한 회는 **1타만 6700으로 되돌리고 2타는 7650으로 유지**해 회복을 봅니다. 이는 후속 연결을 고려한 1타 늦은 끝의 보수적 교정 후보이며, 1타의 물리 한계를 확정하는 것은 아닙니다.\n- 기준에서도 실패하면 양끝 탐색을 멈추고 준비·원점·진행 조건의 변동부터 재검토합니다.\n- 두 조건 모두 성공해도 기존 혼재를 삭제하거나 성공률을 추정하지 않습니다. 반례를 보존하고 6700의 보수적 대안을 확인할지 판단합니다. 무기한 같은 설정을 반복할 필요는 없습니다.\n\n완료·미완료는 다음처럼 유지합니다.\n\n- **완료:** 전체 기준 연결의 시작 조건 충족, 진입 양끝과 1타 이른 쪽의 개별 확인.\n- **보류:** 1타 6750의 후속 연결을 포함한 늦은 끝 수용. 2타 7650은 기준 경로 성공값이지만, 늦은 1타 조건에서 혼재합니다.\n- **미완료:** 3타 양끝, 2·4타 양끝, 최종 대표 교차 두 방향, 구간 채택과 영상·웹 수용.\n- 실패 회차의 뒤쪽 `11`은 관측으로 보존하되, 선행 실패 이후이므로 정상 경로의 3·4타 구간 근거에 합치지 않습니다.\n\n모두 가정에 대한 판단입니다. 파일·프로필·기록은 수정하지 않았으며, 부여된 변경 권한은 종료된 것으로 처리하겠습니다."
+        }
+      ],
+      "hypotheticalFollowup": "OFF baseline twice 11111; entry endpoints and hit1 early successful; hit1 late6750 gave11011 then11111 with hit1 successful both times and hit2 damaged once. Remaining endpoints/crosses untested. Hypothetical user suggests hit2 onward -50ms.",
+      "result": "Accepted first proposal, actual records-consumable artifact and local 1-to-2 followup reasoning. Hypothetical observations did not enter actual records.",
+      "controllerTransfer": false
+    },
+    "independentReview": {
+      "agent": "/root/harness_simplification_review",
+      "method": "Derived required obligations before plan; checked simplified docs, actual files, registered store and final hypothetical answer.",
+      "result": "No remaining required correction in this bounded scope",
+      "qualification": "Separate reviewer with shared task context; not blinded."
+    },
+    "limits": [
+      "One new context across three turns; not three independent samples or a controlled before/after performance comparison.",
+      "Actual game result import, full profile-to-web adoption and future boss handoffs remain unverified.",
+      "Top-level older evidence outcomes are retained; this pass does not retroactively upgrade them.",
+      "tools.ps1 records entry failed to read npm CLI; identical package.json Node records command performed the successful registration/summary/validate. No environment or global PATH change."
+    ],
+    "approvalRecovery": "Initial line-range migration was rejected by automatic approval review. Applied only after constructing a reviewable diff, checking original-block preservation and pinning source/output hashes; no unresolved approval block."
+  },
+  "production_controller_transfer_20260921": {
+    "date": "2026-09-21",
+    "status": "accepted_and_assigned",
+    "sourceCommit": "32046582fb0601b86364c79694de9c4ba26ffe9a",
+    "previousController": "01a0b7c8-a5f0-72d3-b81b-fb7ab9e4f380",
+    "controller": "01a0c243-5214-72f0-aa58-4befafadafe8",
+    "title": "Controller · 쿠사리쿠 실험과 콘텐츠 확장",
+    "checkout": "<PRIVATE_HOME>/.codex/worktrees/02fa/zzz-pattern-practice",
+    "turns": [
+      {
+        "id": "01a0c243-5833-7072-933e-d880759200e6",
+        "scope": "Read-only first decision from committed entrypoints; no prior conversation or supplied answers.",
+        "result": "Accepted: fixed successful preparation, baseline before endpoints/crosses; origins and video variation separate; settled decisions not reopened."
+      },
+      {
+        "id": "01a0c248-43b1-7c60-8c0a-ea1d3e60fdb6",
+        "scope": "Existing boss-report section and checkout-local records store only.",
+        "result": "Registered empty batch, clarified preparation exceptions without per-trial prompts, preserved local failure/adjacent-action reasoning."
+      }
+    ],
+    "review": {
+      "supervisor": "previousController",
+      "independentReviewer": "/root/commit_transfer_review",
+      "independentScope": "First judgment against obligations derived before response; shared context, not blinded.",
+      "artifactReview": "Supervisor inspected actual report diff and store; consolidated task-ownership provenance into README and this record."
+    },
+    "artifact": {
+      "plan": "tools/experiment/batches/kusarikku-baseline-01.json",
+      "store": ".local/experiments/records.json",
+      "batch": "kusarikku-baseline-01",
+      "revision": 1,
+      "trialCount": 0,
+      "validation": {
+        "valid": true,
+        "issues": []
+      },
+      "gitDiffCheck": "passed"
+    },
+    "remaining": [
+      "Actual whole-baseline gameplay and preparation-condition consistency",
+      "Individual endpoints and representative crosses",
+      "Representative video alignment, web integration and user feel acceptance"
+    ],
+    "limits": [
+      "One fresh controller across two supervised turns; not a universal guarantee of future decisions.",
+      "No game input, actual result import, service adoption, or deployment verified.",
+      "tools.ps1 could not load npm CLI; same package.json records script used with existing Node."
+    ],
+    "userSettings": "f815 executable and user settings preserved; no game input or remote publication authorized."
+  }
+}

@@ -1,0 +1,514 @@
+{
+  "date": "2026-09-20",
+  "origin": "Milliseconds after first matching notice capture end; not visual notice onset.",
+  "outcomeSource": "User-entered per-action bits; not inferred from input submission.",
+  "trials": [
+    {
+      "rawFile": "trial-4c257164a828441b9e4c56ce42e40a48.json",
+      "rawSha256": "73a40c71d7d1ce58cb915e30dcd6a834ef4d75bf384ee5d3ba7b88f3e4d94f6f",
+      "resultSha256": "4f11aa20ee647fdca5ddfd4a06cdbe2429eaed343141f008cb2705900c57a2e8",
+      "trialId": "c75f0e74cdbd446abade33ef88cfa10b",
+      "startedUtc": "2026-09-19T15:11:30.8805039Z",
+      "party": "아리아 → 남궁우 → 수나",
+      "startCharacter": "아리아",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "recordingAtF8": {
+        "AtUtc": "/Date(1789830279815)/",
+        "State": "UNKNOWN",
+        "RecordingId": null,
+        "OutputPath": null,
+        "Detail": "OBS status has not been refreshed for over 3 seconds"
+      },
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        4200,
+        6450,
+        7700,
+        9500,
+        10850,
+        13200
+      ],
+      "bits": "111111"
+    },
+    {
+      "rawFile": "trial-4d35db0a5847473397802f93fc30625b.json",
+      "rawSha256": "0dd4ed1c6e836413219b1d0264090844fbdc9ef6fe937f40a6ccde80c7d8d9c3",
+      "resultSha256": "e8c7ba3c05889d284ed899e1029662afce0175473f111e9939268081ca13de20",
+      "trialId": "ca9bd53c388f4a8c8d2ee7afdd4e69aa",
+      "startedUtc": "2026-09-19T15:23:56.7337980Z",
+      "party": "아리아 → 남궁우 → 수나",
+      "startCharacter": "아리아",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "recordingAtF8": {
+        "AtUtc": "/Date(1789830279815)/",
+        "State": "UNKNOWN",
+        "RecordingId": null,
+        "OutputPath": null,
+        "Detail": "OBS status has not been refreshed for over 3 seconds"
+      },
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        4200,
+        6650,
+        7950,
+        9700,
+        11100,
+        13450
+      ],
+      "bits": "100010"
+    },
+    {
+      "rawFile": "trial-6bbf874eaf4e40048e00e6abad31cd92.json",
+      "rawSha256": "3f4a0a1ea22962f410ca330f1b22103ad7482f2f96abba05795b03083db398da",
+      "resultSha256": "672c47e3619bba65db3c945664cc3cd2479357cd95eba36e3b1afbe54022c50d",
+      "trialId": "07a9dcf130664c6aaefdd71e1b8de108",
+      "startedUtc": "2026-09-19T15:27:34.6286721Z",
+      "party": "아리아 → 남궁우 → 수나",
+      "startCharacter": "아리아",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "recordingAtF8": {
+        "AtUtc": "/Date(1789830279815)/",
+        "State": "UNKNOWN",
+        "RecordingId": null,
+        "OutputPath": null,
+        "Detail": "OBS status has not been refreshed for over 3 seconds"
+      },
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        4200,
+        6650,
+        7900,
+        9700,
+        11050,
+        13450
+      ],
+      "bits": "100010"
+    },
+    {
+      "rawFile": "trial-7eefa2feeb4440f89ceb20a677b0a7df.json",
+      "rawSha256": "8cdc5c8cc04ad877df27585652a3364020814af82fe7d4a0ede5252042130ad5",
+      "resultSha256": "e52bfd4b89998a7ad055b5a5f9819df0cab9c3be757cf566a56ba6d56b974ad8",
+      "trialId": "233970e985bc42f1b8ceebf56af3ffbd",
+      "startedUtc": "2026-09-19T15:29:55.3792352Z",
+      "party": "아리아 → 남궁우 → 수나",
+      "startCharacter": "아리아",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "recordingAtF8": {
+        "AtUtc": "/Date(1789830279815)/",
+        "State": "UNKNOWN",
+        "RecordingId": null,
+        "OutputPath": null,
+        "Detail": "OBS status has not been refreshed for over 3 seconds"
+      },
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        4200,
+        6600,
+        7950,
+        9650,
+        11100,
+        13400
+      ],
+      "bits": "111111"
+    },
+    {
+      "rawFile": "trial-f5d29d95fd6147d1898cbae57700912b.json",
+      "rawSha256": "d530dcfd36bd70c1f2c964aa2123fc2ec4bd19e93d5deae9eddfb37fa9d34e62",
+      "resultSha256": "66e0046def988611bd7ac862ef4dc5a5d7e4d4cfdd0f8e9606aecee2d30f857c",
+      "trialId": "0ffe0dd7f4dc47d7a4b01713d1ad5c0c",
+      "startedUtc": "2026-09-19T15:44:25.2084402Z",
+      "party": "아리아 → 남궁우 → 수나",
+      "startCharacter": "아리아",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "recordingAtF8": {
+        "AtUtc": "/Date(1789832444755)/",
+        "State": "UNKNOWN",
+        "RecordingId": null,
+        "OutputPath": null,
+        "Detail": "OBS status has not been refreshed for over 3 seconds"
+      },
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        4200,
+        6450,
+        7700,
+        9700,
+        10850,
+        13200
+      ],
+      "bits": "111111"
+    },
+    {
+      "rawFile": "trial-6a923d235972496bb41bc924ce712179.json",
+      "rawSha256": "bf3c13f1a2b56dc29c26a7854fd7469cb4b8339f4a295907ffb5382b4bdc8639",
+      "resultSha256": "6b98b166fd1e4f737c33780189a3401e26b98157d28c72a02f8c73a12bc45de0",
+      "trialId": "948513d83ea24205914cc8d58ed21bd6",
+      "startedUtc": "2026-09-19T15:49:34.1921834Z",
+      "party": "아리아 → 남궁우 → 수나",
+      "startCharacter": "아리아",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "recordingAtF8": {
+        "AtUtc": "/Date(1789832444755)/",
+        "State": "UNKNOWN",
+        "RecordingId": null,
+        "OutputPath": null,
+        "Detail": "OBS status has not been refreshed for over 3 seconds"
+      },
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        4200,
+        6450,
+        7700,
+        9500,
+        10850,
+        13450
+      ],
+      "bits": "111111"
+    },
+    {
+      "rawFile": "trial-241ea73a13384479b5cec0907119f90f.json",
+      "rawSha256": "4b5b7c181242c576a9625282f2e0d475102d10abb05216e206ae53812aaf6e79",
+      "resultSha256": "c222841906f0c349c1efdb6d834c9e20fd663821ba55801302ef0c6bd7d5a67e",
+      "trialId": "d21745d3faa54bd0bea0261c51cf4737",
+      "startedUtc": "2026-09-19T16:00:57.3823033Z",
+      "party": "아리아 → 남궁우 → 수나",
+      "startCharacter": "아리아",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "recordingAtF8": {
+        "AtUtc": "/Date(1789833144390)/",
+        "State": "UNKNOWN",
+        "RecordingId": null,
+        "OutputPath": null,
+        "Detail": "OBS status has not been refreshed for over 3 seconds"
+      },
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        4200,
+        6600,
+        7950,
+        9700,
+        11100,
+        13450
+      ],
+      "bits": "111111"
+    },
+    {
+      "rawFile": "trial-98b26b71c40a49b88f2005e3b3e557f5.json",
+      "rawSha256": "98f6d703a0a6faecaa688f9f97b6e88b1ef497a60b7dc386ae0df513c5a1f3c0",
+      "resultSha256": "d66d1e0392161750760c9081a0f00b489c8892174fa8a7058bf7e3c922e53d4a",
+      "trialId": "c5129b58d3bc4d38834d9d039c7cfb73",
+      "startedUtc": "2026-09-19T16:06:44.1389563Z",
+      "party": "아리아 → 남궁우 → 수나",
+      "startCharacter": "아리아",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "recordingAtF8": {
+        "AtUtc": "/Date(1789833766707)/",
+        "State": "UNKNOWN",
+        "RecordingId": null,
+        "OutputPath": null,
+        "Detail": "OBS status has not been refreshed for over 3 seconds"
+      },
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        4200,
+        6600,
+        7950,
+        9700,
+        11100,
+        13450
+      ],
+      "bits": "111111"
+    },
+    {
+      "rawFile": "trial-ee11d2ceb10d47aa80777cbf0b34304a.json",
+      "rawSha256": "a1c40359629604ddfca22fefeba9a57dac23c5665cd9a394d11b2dd7455ab11c",
+      "resultSha256": "79d2ad72fea6b9daa7b7602768de20d5802766095056d2938dc04cc424b0070e",
+      "trialId": "1e1dfd334db840e69f679034aa018bc3",
+      "startedUtc": "2026-09-19T16:17:30.7916234Z",
+      "party": "아리아 → 남궁우 → 수나",
+      "startCharacter": "아리아",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "recordingAtF8": {
+        "AtUtc": "/Date(1789834120966)/",
+        "State": "UNKNOWN",
+        "RecordingId": null,
+        "OutputPath": null,
+        "Detail": "OBS status has not been refreshed for over 3 seconds"
+      },
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        4300,
+        6450,
+        7700,
+        9500,
+        10850,
+        13200
+      ],
+      "bits": "111111"
+    },
+    {
+      "rawFile": "trial-e2307468c93b4d69a7291697406bd958.json",
+      "rawSha256": "d333c2787c75fecdd489d320e471ddca8fdfc58078827a2457be7de0769656bd",
+      "resultSha256": "e8d3db2d85872e656956805d608fc2ded2f83b3d9ca80ef17d6a2add39068a62",
+      "trialId": "db915768beb7481784f4bccf483574a7",
+      "startedUtc": "2026-09-19T16:20:05.6081941Z",
+      "party": "아리아 → 남궁우 → 수나",
+      "startCharacter": "아리아",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "recordingAtF8": {
+        "AtUtc": "/Date(1789834120966)/",
+        "State": "UNKNOWN",
+        "RecordingId": null,
+        "OutputPath": null,
+        "Detail": "OBS status has not been refreshed for over 3 seconds"
+      },
+      "keys": [
+        "Space",
+        "Space",
+        "Space",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        4300,
+        6450,
+        7700,
+        9500,
+        10850,
+        13200
+      ],
+      "bits": "111111"
+    },
+    {
+      "rawFile": "trial-876dd413e8834da2b68cc8cb2c86dec1.json",
+      "rawSha256": "d10b0ddeee1bcf04355b7f17249d9ae9eb50374117ccd6dc23092c1179940ada",
+      "resultSha256": "cebe5cdaa15a3dc602ba1fa1fd7f32912f5306090d574335ba3a5fe957e3dfee",
+      "trialId": "08ba990ecf114fb99a24c47e8cfe15b2",
+      "startedUtc": "2026-09-19T16:24:59.1766449Z",
+      "party": "아리아 → 남궁우 → 수나",
+      "startCharacter": "아리아",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "recordingAtF8": {
+        "AtUtc": "/Date(1789834120966)/",
+        "State": "UNKNOWN",
+        "RecordingId": null,
+        "OutputPath": null,
+        "Detail": "OBS status has not been refreshed for over 3 seconds"
+      },
+      "keys": [
+        "Space",
+        "Space",
+        "Space",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        4100,
+        6450,
+        7700,
+        9500,
+        10850,
+        13200
+      ],
+      "bits": "111111"
+    },
+    {
+      "rawFile": "trial-909e66609bc44b148bff82711d5a6506.json",
+      "rawSha256": "36d66dcdef49d3187f0633eeae9cc2a5efc781940e40626f661d037605991b84",
+      "resultSha256": "187c314f907017499a160f061b5355a0950a8416095a76f3ef14d71805b1358e",
+      "trialId": "e45c677beb584c0abffbd2c16430c2e6",
+      "startedUtc": "2026-09-19T16:27:15.4763373Z",
+      "party": "아리아 → 남궁우 → 수나",
+      "startCharacter": "아리아",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "recordingAtF8": {
+        "AtUtc": "/Date(1789834120966)/",
+        "State": "UNKNOWN",
+        "RecordingId": null,
+        "OutputPath": null,
+        "Detail": "OBS status has not been refreshed for over 3 seconds"
+      },
+      "keys": [
+        "Space",
+        "Space",
+        "Space",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        4050,
+        6450,
+        7700,
+        9500,
+        10850,
+        13200
+      ],
+      "bits": "011011"
+    },
+    {
+      "rawFile": "trial-2ac0da35f6f94c65a5101301ace7aee5.json",
+      "rawSha256": "a27decf8ea73fae8e285c2117644436984fff6f88f51310302107dfccf477e8d",
+      "resultSha256": "f23df63b29eafd0055fde33fc81001e5ebd0110d0267d68983cab4c9d6a5ee69",
+      "trialId": "3988c5c4e5a04ad6a263798d7bb0b003",
+      "startedUtc": "2026-09-19T16:29:48.9411019Z",
+      "party": "아리아 → 남궁우 → 수나",
+      "startCharacter": "아리아",
+      "recording": "OFF",
+      "recordingBasis": "f8-snapshot-unknown-off",
+      "recordingAtF8": {
+        "AtUtc": "/Date(1789834120966)/",
+        "State": "UNKNOWN",
+        "RecordingId": null,
+        "OutputPath": null,
+        "Detail": "OBS status has not been refreshed for over 3 seconds"
+      },
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "Space",
+        "Space"
+      ],
+      "delaysMs": [
+        4100,
+        6450,
+        7700,
+        9500,
+        10850,
+        13200
+      ],
+      "bits": "111111"
+    }
+  ],
+  "decision": {
+    "windowsMs": [
+      [
+        4100,
+        4300
+      ],
+      [
+        6250,
+        6600
+      ],
+      [
+        7500,
+        7950
+      ],
+      [
+        9350,
+        9700
+      ],
+      [
+        10650,
+        11100
+      ],
+      [
+        12950,
+        13450
+      ]
+    ],
+    "baselineMs": [
+      4200,
+      6400,
+      7700,
+      9500,
+      10850,
+      13200
+    ],
+    "entryKeys": [
+      "RMB",
+      "Space"
+    ],
+    "baselineRule": "Nearest 50ms to midpoint; ties earlier. New defaults, not a new gameplay observation.",
+    "limits": [
+      "Entry endpoints tested with old support baselines; combined late support succeeded twice with RMB4200.",
+      "Space4050 failed entry; later hit3 failure is not independent. RMB4050 and entry4350 untested.",
+      "Equal adopted entry intervals do not establish equal physical boundaries."
+    ]
+  },
+  "retention": {
+    "date": "2026-09-21",
+    "status": "summarized originals retired after user-approved closure",
+    "inventory": "experiment-cleanup.json#current",
+    "meaning": "Historical raw log, source video and scratch paths describe provenance; only current.retainedOriginals are promised to remain. Conditions, outcomes, counterexamples and measurement limits stay in this evidence."
+  }
+}

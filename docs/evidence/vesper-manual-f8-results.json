@@ -1,0 +1,4099 @@
+{
+  "scope": "Historical manual F8 experiment, not the live notice-capture time origin. 44 trials:40 completed and4 aborted. Entry RMB hold80ms. JSON44 and rounded duplicate CSV28 removed after source comparison. Outcomes/conditions retained; individual API timing/configuration metadata cannot all be reconstructed.",
+  "entry": {
+    "scope": "First control skill, Aria, 60-fps recordings; displayed input time is not engine acceptance time.",
+    "warning_definition": "First visible long pink cross; threshold350 with visual review.",
+    "cases": [
+      {
+        "id": "Entry-E1",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_16-16-16.mp4",
+        "warning": 421,
+        "rmb": 433,
+        "gap_frames": 12,
+        "success": true,
+        "thresholds": {
+          "250": 421,
+          "350": 421,
+          "450": 421,
+          "550": 423
+        },
+        "log": "outputs/입력실험/logs/20260915_161621_103_450aba.json",
+        "configured_delay_ms": 3000,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": [
+          447,
+          449
+        ]
+      },
+      {
+        "id": "Entry-E2",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_16-17-17.mp4",
+        "warning": 503,
+        "rmb": 514,
+        "gap_frames": 11,
+        "success": true,
+        "thresholds": {
+          "250": 503,
+          "350": 503,
+          "450": 503,
+          "550": 506
+        },
+        "log": "outputs/입력실험/logs/20260915_161723_289_f93afe.json",
+        "configured_delay_ms": 3000,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": [
+          536,
+          538
+        ]
+      },
+      {
+        "id": "Entry-F1",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_16-42-05.mp4",
+        "warning": 415,
+        "rmb": 433,
+        "gap_frames": 18,
+        "success": true,
+        "thresholds": {
+          "250": 415,
+          "350": 415,
+          "450": 415,
+          "550": 417
+        },
+        "log": "outputs/입력실험/logs/20260915_164210_289_e5bbf4.json",
+        "configured_delay_ms": 3000,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": [
+          447,
+          449
+        ]
+      },
+      {
+        "id": "Entry-F2",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_16-43-06.mp4",
+        "warning": 468,
+        "rmb": 485,
+        "gap_frames": 17,
+        "success": true,
+        "thresholds": {
+          "250": 468,
+          "350": 468,
+          "450": 468,
+          "550": 468
+        },
+        "log": "outputs/입력실험/logs/20260915_164311_575_e13cb9.json",
+        "configured_delay_ms": 3000,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": [
+          503,
+          505
+        ]
+      },
+      {
+        "id": "Entry-F3",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_16-44-03.mp4",
+        "warning": 447,
+        "rmb": 458,
+        "gap_frames": 11,
+        "success": true,
+        "thresholds": {
+          "250": 447,
+          "350": 447,
+          "450": 447,
+          "550": 448
+        },
+        "log": "outputs/입력실험/logs/20260915_164408_053_b0f5d8.json",
+        "configured_delay_ms": 3000,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": [
+          470,
+          472
+        ]
+      },
+      {
+        "id": "Entry-G1",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_17-11-36.mp4",
+        "warning": 446,
+        "rmb": 455,
+        "gap_frames": 9,
+        "success": true,
+        "thresholds": {
+          "250": 446,
+          "350": 446,
+          "450": 446,
+          "550": 447
+        },
+        "log": "outputs/입력실험/logs/20260915_171141_521_ac3c78.json",
+        "configured_delay_ms": 2900,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": [
+          467,
+          469
+        ]
+      },
+      {
+        "id": "Entry-G2",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_17-12-34.mp4",
+        "warning": 728,
+        "rmb": 732,
+        "gap_frames": 4,
+        "success": true,
+        "thresholds": {
+          "250": 728,
+          "350": 728,
+          "450": 728,
+          "550": 729
+        },
+        "log": "outputs/입력실험/logs/20260915_171244_651_47e0d7.json",
+        "configured_delay_ms": 2900,
+        "fps": 60,
+        "normal_dodge_onset_bounds": [
+          740,
+          742
+        ],
+        "perfect_flare_bounds": [
+          746,
+          748
+        ]
+      },
+      {
+        "id": "Entry-H1",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_17-22-43.mp4",
+        "warning": 448,
+        "rmb": 449,
+        "gap_frames": 1,
+        "success": true,
+        "thresholds": {
+          "250": 448,
+          "350": 448,
+          "450": 448,
+          "550": 448
+        },
+        "log": "outputs/입력실험/logs/20260915_172248_424_bf7581.json",
+        "configured_delay_ms": 2850,
+        "fps": 60,
+        "normal_dodge_onset_bounds": [
+          457,
+          459
+        ],
+        "perfect_flare_bounds": [
+          473,
+          475
+        ]
+      },
+      {
+        "id": "Entry-H2",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_17-24-15.mp4",
+        "warning": 500,
+        "rmb": 499,
+        "gap_frames": -1,
+        "success": true,
+        "thresholds": {
+          "250": 500,
+          "350": 500,
+          "450": 500,
+          "550": 501
+        },
+        "log": "outputs/입력실험/logs/20260915_172421_047_752a9c.json",
+        "configured_delay_ms": 2850,
+        "fps": 60,
+        "normal_dodge_onset_bounds": [
+          507,
+          511
+        ],
+        "perfect_flare_bounds": [
+          515,
+          517
+        ]
+      },
+      {
+        "id": "Entry-I1",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_17-33-19.mp4",
+        "warning": 363,
+        "rmb": 369,
+        "gap_frames": 6,
+        "success": true,
+        "thresholds": {
+          "250": 363,
+          "350": 363,
+          "450": 363,
+          "550": 363
+        },
+        "log": "outputs/입력실험/logs/20260915_173323_092_9f8d3f.json",
+        "configured_delay_ms": 2800,
+        "fps": 60,
+        "normal_dodge_onset_bounds": [
+          375,
+          377
+        ],
+        "perfect_flare_bounds": [
+          383,
+          385
+        ]
+      },
+      {
+        "id": "Entry-I2",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_17-34-31.mp4",
+        "warning": 381,
+        "rmb": 381,
+        "gap_frames": 0,
+        "success": false,
+        "thresholds": {
+          "250": 381,
+          "350": 381,
+          "450": 381,
+          "550": 381
+        },
+        "log": "outputs/입력실험/logs/20260915_173435_349_8dae81.json",
+        "configured_delay_ms": 2800,
+        "fps": 60,
+        "normal_dodge_onset_bounds": [
+          387,
+          389
+        ],
+        "perfect_flare_bounds": null
+      },
+      {
+        "id": "J1",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_19-02-45.mp4",
+        "warning": 451,
+        "rmb": 475,
+        "gap_frames": 24,
+        "success": false,
+        "thresholds": {
+          "250": 451,
+          "350": 451,
+          "450": 453,
+          "550": 453
+        },
+        "log": "outputs/입력실험/logs/20260915_190250_281_109087.json",
+        "configured_delay_ms": 3200,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 281,
+            "seconds": 4.683333333333334
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 290,
+            "seconds": 4.833333333333333
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 475,
+            "seconds": 7.916666666666667
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 480,
+            "seconds": 8.0
+          }
+        ],
+        "f8_to_rmb_frames": 194
+      },
+      {
+        "id": "J2",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_19-05-32.mp4",
+        "warning": 532,
+        "rmb": 566,
+        "gap_frames": 34,
+        "success": false,
+        "thresholds": {
+          "250": 532,
+          "350": 532,
+          "450": 532,
+          "550": 532
+        },
+        "log": "outputs/입력실험/logs/20260915_190538_930_e2674d.json",
+        "configured_delay_ms": 3200,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 370,
+            "seconds": 6.166666666666667
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 378,
+            "seconds": 6.3
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 566,
+            "seconds": 9.433333333333334
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 572,
+            "seconds": 9.533333333333333
+          }
+        ],
+        "f8_to_rmb_frames": 196
+      },
+      {
+        "id": "K1",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_19-30-55.mp4",
+        "warning": 548,
+        "rmb": 588,
+        "gap_frames": 40,
+        "success": false,
+        "thresholds": {
+          "250": 548,
+          "350": 548,
+          "450": 548,
+          "550": 551
+        },
+        "log": "outputs/입력실험/logs/20260915_193102_529_c4a97f.json",
+        "configured_delay_ms": 3100,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": null,
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 399
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 411
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 588
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 593
+          }
+        ],
+        "f8_to_rmb_frames": 189,
+        "review_note": "Hit/damage visible by sampled frame583, before RMB588; no perfect-dodge flare."
+      },
+      {
+        "id": "K2",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_19-33-00.mp4",
+        "warning": 429,
+        "rmb": 451,
+        "gap_frames": 22,
+        "success": true,
+        "thresholds": {
+          "250": 429,
+          "350": 429,
+          "450": 429,
+          "550": 432
+        },
+        "log": "outputs/입력실험/logs/20260915_193305_637_54f2fd.json",
+        "configured_delay_ms": 3100,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": [
+          464,
+          469
+        ],
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 262
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 269
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 451
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 457
+          }
+        ],
+        "f8_to_rmb_frames": 189,
+        "review_note": "White cross flare at469 and subsequent powered skill icon; no red hit chain at entry."
+      },
+      {
+        "id": "K3",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_19-35-04.mp4",
+        "warning": 685,
+        "rmb": 705,
+        "gap_frames": 20,
+        "success": true,
+        "thresholds": {
+          "250": 685,
+          "350": 685,
+          "450": 685,
+          "550": 686
+        },
+        "log": "outputs/입력실험/logs/20260915_193513_614_cdcded.json",
+        "configured_delay_ms": 3100,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": [
+          715,
+          720
+        ],
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 516
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 522
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 705
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 710
+          }
+        ],
+        "f8_to_rmb_frames": 189,
+        "review_note": "White cross flare at720, follow-up pose725 and powered skill icon."
+      },
+      {
+        "id": "L1",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_20-15-21.mp4",
+        "warning": 380,
+        "rmb": 397,
+        "gap_frames": 17,
+        "success": true,
+        "thresholds": {
+          "250": 380,
+          "350": 380,
+          "450": 380,
+          "550": 380
+        },
+        "log": "outputs/입력실험/logs/20260915_201525_804_476e9e.json",
+        "configured_delay_ms": 3120,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": [
+          410,
+          415
+        ],
+        "cue_onset_bounds": [
+          190,
+          192
+        ],
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 208
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 215
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 397
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 402
+          }
+        ],
+        "f8_to_rmb_frames": 189,
+        "review_note": "White perfect-dodge cross flare followed by powered skill icon and control-skill transition. Cue onset sampled every two frames; flare sampled every five. All API inserts succeeded; original log retained."
+      },
+      {
+        "id": "L2",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_20-16-52.mp4",
+        "warning": 393,
+        "rmb": 405,
+        "gap_frames": 12,
+        "success": true,
+        "thresholds": {
+          "250": 393,
+          "350": 393,
+          "450": 393,
+          "550": 393
+        },
+        "log": "outputs/입력실험/logs/20260915_201656_552_c88cd7.json",
+        "configured_delay_ms": 3120,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": [
+          428,
+          433
+        ],
+        "cue_onset_bounds": [
+          206,
+          208
+        ],
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 216
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 226
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 405
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 409
+          }
+        ],
+        "f8_to_rmb_frames": 189,
+        "review_note": "White perfect-dodge cross flare followed by powered skill icon and control-skill transition. Cue onset sampled every two frames; flare sampled every five. All API inserts succeeded; original log retained."
+      },
+      {
+        "id": "L3",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_20-21-19.mp4",
+        "warning": 358,
+        "rmb": 369,
+        "gap_frames": 11,
+        "success": true,
+        "thresholds": {
+          "250": 358,
+          "350": 358,
+          "450": 358,
+          "550": 359
+        },
+        "log": "outputs/입력실험/logs/20260915_202122_887_428c6b.json",
+        "configured_delay_ms": 3120,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": [
+          383,
+          388
+        ],
+        "cue_onset_bounds": [
+          171,
+          173
+        ],
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 181
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 191
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 369
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 374
+          }
+        ],
+        "f8_to_rmb_frames": 188,
+        "review_note": "White perfect-dodge cross flare followed by powered skill icon and control-skill transition. Cue onset sampled every two frames; flare sampled every five. All API inserts succeeded; original log retained."
+      },
+      {
+        "id": "M1",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_20-36-42.mp4",
+        "warning": 407,
+        "rmb": 429,
+        "gap_frames": 22,
+        "success": false,
+        "thresholds": {
+          "250": 407,
+          "350": 407,
+          "450": 407,
+          "550": 410
+        },
+        "log": "outputs/입력실험/logs/20260915_203646_464_5384d9.json",
+        "configured_delay_ms": 3300,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": null,
+        "cue_onset_bounds": [
+          222,
+          224
+        ],
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 230
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 239
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 429
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 435
+          }
+        ],
+        "f8_to_rmb_frames": 199,
+        "review_note": "No perfect-dodge cross or powered follow-up icon; red hit feedback visible by sampled frame 447, followed by damage chain. Cue onset sampled every two frames. All API inserts succeeded; original log retained."
+      },
+      {
+        "id": "M2",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_20-39-03.mp4",
+        "warning": 325,
+        "rmb": 354,
+        "gap_frames": 29,
+        "success": false,
+        "thresholds": {
+          "250": 325,
+          "350": 325,
+          "450": 325,
+          "550": 328
+        },
+        "log": "outputs/입력실험/logs/20260915_203906_331_147b35.json",
+        "configured_delay_ms": 3300,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": null,
+        "cue_onset_bounds": [
+          139,
+          141
+        ],
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 153
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 160
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 354
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 359
+          }
+        ],
+        "f8_to_rmb_frames": 201,
+        "review_note": "No perfect-dodge cross or powered follow-up icon; red hit feedback visible by sampled frame 360, followed by damage chain. Cue onset sampled every two frames. All API inserts succeeded; original log retained."
+      },
+      {
+        "id": "M3",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_20-40-06.mp4",
+        "warning": 739,
+        "rmb": 762,
+        "gap_frames": 23,
+        "success": false,
+        "thresholds": {
+          "250": 739,
+          "350": 739,
+          "450": 739,
+          "550": 740
+        },
+        "log": "outputs/입력실험/logs/20260915_204016_179_c6b3dc.json",
+        "configured_delay_ms": 3300,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": null,
+        "cue_onset_bounds": [
+          551,
+          553
+        ],
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 561
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 569
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 762
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 768
+          }
+        ],
+        "f8_to_rmb_frames": 201,
+        "review_note": "No perfect-dodge cross or powered follow-up icon; red hit feedback visible by sampled frame 774, followed by damage chain. Cue onset sampled every two frames. All API inserts succeeded; original log retained."
+      },
+      {
+        "id": "N1",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_20-50-58.mp4",
+        "warning": 492,
+        "rmb": 515,
+        "gap_frames": 23,
+        "success": false,
+        "thresholds": {
+          "250": 492,
+          "350": 492,
+          "450": 492,
+          "550": 493
+        },
+        "log": "outputs/입력실험/logs/20260915_205104_714_99cbc3.json",
+        "configured_delay_ms": 3250,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": null,
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 318
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 329
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 515
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 521
+          }
+        ],
+        "f8_to_rmb_frames": 197,
+        "review_note": "No perfect-dodge cross or powered follow-up icon. Red hit feedback visible by sampled frame 527, followed by damage chain. Warning onset visually checked. All API inserts succeeded; original log retained."
+      },
+      {
+        "id": "N2",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_20-52-37.mp4",
+        "warning": 543,
+        "rmb": 567,
+        "gap_frames": 24,
+        "success": false,
+        "thresholds": {
+          "250": 543,
+          "350": 543,
+          "450": 543,
+          "550": 543
+        },
+        "log": "outputs/입력실험/logs/20260915_205244_120_f20d0d.json",
+        "configured_delay_ms": 3250,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": null,
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 371
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 381
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 567
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 573
+          }
+        ],
+        "f8_to_rmb_frames": 196,
+        "review_note": "No perfect-dodge cross or powered follow-up icon. Red hit feedback visible by sampled frame 578, followed by damage chain. Warning onset visually checked. All API inserts succeeded; original log retained."
+      },
+      {
+        "id": "N3",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_20-53-32.mp4",
+        "warning": 451,
+        "rmb": 474,
+        "gap_frames": 23,
+        "success": false,
+        "thresholds": {
+          "250": 451,
+          "350": 451,
+          "450": 451,
+          "550": 452
+        },
+        "log": "outputs/입력실험/logs/20260915_205337_332_465318.json",
+        "configured_delay_ms": 3250,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": null,
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 277
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 284
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 474
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 479
+          }
+        ],
+        "f8_to_rmb_frames": 197,
+        "review_note": "No perfect-dodge cross or powered follow-up icon. Red hit feedback visible by sampled frame 486, followed by damage chain. Warning onset visually checked. All API inserts succeeded; original log retained."
+      },
+      {
+        "id": "O1",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_21-06-39.mp4",
+        "warning": 699,
+        "rmb": 724,
+        "gap_frames": 25,
+        "success": false,
+        "thresholds": {
+          "250": 699,
+          "350": 699,
+          "450": 699,
+          "550": 701
+        },
+        "log": null,
+        "configured_delay_ms": 3200,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": null,
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 528
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 536
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 724
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 729
+          }
+        ],
+        "f8_to_rmb_frames": 196,
+        "review_note": "No perfect-dodge cross or powered follow-up icon; red hit feedback by sampled frame739 followed by damage chain. Warning onset visually checked. All API inserts succeeded; log was previously verified and later deleted by the user; original video and measured results remain.",
+        "deleted_log_path": "outputs/입력실험/logs/20260915_210648_820_18a7ad.json",
+        "log_status": "deleted_by_user_after_prior_verification"
+      },
+      {
+        "id": "O2",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_21-07-48.mp4",
+        "warning": 541,
+        "rmb": 559,
+        "gap_frames": 18,
+        "success": true,
+        "thresholds": {
+          "250": 541,
+          "350": 541,
+          "450": 541,
+          "550": 541
+        },
+        "log": null,
+        "configured_delay_ms": 3200,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": [
+          566,
+          571
+        ],
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 364
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 371
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 559
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 564
+          }
+        ],
+        "f8_to_rmb_frames": 195,
+        "review_note": "White perfect-dodge cross appears in (566,571], then powered follow-up icon by581 and control-skill sequence. Warning onset visually checked. All API inserts succeeded; log was previously verified and later deleted by the user; original video and measured results remain.",
+        "deleted_log_path": "outputs/입력실험/logs/20260915_210754_982_4338b3.json",
+        "log_status": "deleted_by_user_after_prior_verification"
+      },
+      {
+        "id": "O3",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_21-08-59.mp4",
+        "warning": 352,
+        "rmb": 378,
+        "gap_frames": 26,
+        "success": false,
+        "thresholds": {
+          "250": 352,
+          "350": 352,
+          "450": 352,
+          "550": 352
+        },
+        "log": null,
+        "configured_delay_ms": 3200,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": null,
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 184
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 193
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 378
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 383
+          }
+        ],
+        "f8_to_rmb_frames": 194,
+        "review_note": "No perfect-dodge cross or powered follow-up icon; red hit feedback by sampled frame387 followed by damage chain. Character is near arena edge at warning; not a matched-position control against O2. Warning onset visually checked. All API inserts succeeded; log was previously verified and later deleted by the user; original video and measured results remain.",
+        "deleted_log_path": "outputs/입력실험/logs/20260915_210902_936_47fbc1.json",
+        "log_status": "deleted_by_user_after_prior_verification"
+      },
+      {
+        "id": "P1",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_21-19-50.mp4",
+        "warning": 431,
+        "rmb": 457,
+        "gap_frames": 26,
+        "success": false,
+        "thresholds": {
+          "250": 431,
+          "350": 431,
+          "450": 431,
+          "550": 431
+        },
+        "log": "outputs/입력실험/logs/20260915_211955_521_533b57.json",
+        "configured_delay_ms": 3200,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": null,
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 260
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 268
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 457
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 462
+          }
+        ],
+        "f8_to_rmb_frames": 197,
+        "review_note": "No perfect-dodge cross or powered follow-up icon; red hit feedback by sampled frame 466 and subsequent damage chain. All API inserts succeeded. P3 compared with O2/K3: different boss approach states at displayed RMB; no engine acceptance or dodge-start delay inferred.",
+        "cue_onset_bounds": [
+          244,
+          246
+        ]
+      },
+      {
+        "id": "P2",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_21-20-52.mp4",
+        "warning": 386,
+        "rmb": 409,
+        "gap_frames": 23,
+        "success": false,
+        "thresholds": {
+          "250": 386,
+          "350": 386,
+          "450": 386,
+          "550": 386
+        },
+        "log": "outputs/입력실험/logs/20260915_212056_175_d46579.json",
+        "configured_delay_ms": 3200,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": null,
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 214
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 222
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 409
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 414
+          }
+        ],
+        "f8_to_rmb_frames": 195,
+        "review_note": "No perfect-dodge cross or powered follow-up icon; red hit feedback by sampled frame 421 and subsequent damage chain. All API inserts succeeded. P3 compared with O2/K3: different boss approach states at displayed RMB; no engine acceptance or dodge-start delay inferred.",
+        "cue_onset_bounds": [
+          198,
+          200
+        ]
+      },
+      {
+        "id": "P3",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_21-21-52.mp4",
+        "warning": 555,
+        "rmb": 574,
+        "gap_frames": 19,
+        "success": false,
+        "thresholds": {
+          "250": 555,
+          "350": 555,
+          "450": 555,
+          "550": 555
+        },
+        "log": "outputs/입력실험/logs/20260915_212158_915_7f8646.json",
+        "configured_delay_ms": 3200,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": null,
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 381
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 392
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 574
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 580
+          }
+        ],
+        "f8_to_rmb_frames": 193,
+        "review_note": "No perfect-dodge cross or powered follow-up icon; red hit feedback by sampled frame595 and subsequent damage chain. All API inserts succeeded. Rechecked warning absent554/present555 and RMB overlay off573/on574:19 frames. Cue onset sampled in(371,373], F8=381. At RMB display the boss rush is less advanced than P1/P2; world-space distance cannot be ranked from these camera views. Input-response comparison with O2/K3 does not identify engine acceptance or exact dodge onset.",
+        "cue_onset_bounds": [
+          371,
+          373
+        ]
+      },
+      {
+        "id": "Q1",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_21-42-45.mp4",
+        "warning": 449,
+        "rmb": 467,
+        "gap_frames": 18,
+        "success": true,
+        "thresholds": {
+          "250": 449,
+          "350": 449,
+          "450": 449,
+          "550": 450
+        },
+        "log": "outputs/입력실험/logs/20260915_214250_402_33df1e.json",
+        "configured_delay_ms": 3180,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": [
+          479,
+          484
+        ],
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 275
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 286
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 467
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 472
+          }
+        ],
+        "f8_to_rmb_frames": 192,
+        "review_note": "White perfect-dodge flare in(479,484], then powered follow-up icon by489. Warning absent448/present449, RMB overlay off466/on467. All API inserts succeeded. Q1/Q2 visually compared at equal warning-relative frames; displayed time is not engine acceptance time."
+      },
+      {
+        "id": "Q2",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_21-44-02.mp4",
+        "warning": 402,
+        "rmb": 420,
+        "gap_frames": 18,
+        "success": false,
+        "thresholds": {
+          "250": 402,
+          "350": 402,
+          "450": 402,
+          "550": 402
+        },
+        "log": "outputs/입력실험/logs/20260915_214407_096_e571a6.json",
+        "configured_delay_ms": 3180,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": null,
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 225
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 239
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 420
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 425
+          }
+        ],
+        "f8_to_rmb_frames": 195,
+        "review_note": "No perfect-dodge flare or powered follow-up icon; red hit feedback by sampled frame437 and subsequent damage chain. Warning absent401/present402, RMB overlay off419/on420. All API inserts succeeded. Q1/Q2 visually compared at equal warning-relative frames; displayed time is not engine acceptance time."
+      },
+      {
+        "id": "Q3",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_21-45-05.mp4",
+        "warning": 506,
+        "rmb": 530,
+        "gap_frames": 24,
+        "success": false,
+        "thresholds": {
+          "250": 506,
+          "350": 506,
+          "450": 506,
+          "550": 506
+        },
+        "log": "outputs/입력실험/logs/20260915_214511_991_6fe87e.json",
+        "configured_delay_ms": 3180,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": null,
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 337
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 348
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 530
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 535
+          }
+        ],
+        "f8_to_rmb_frames": 193,
+        "review_note": "No perfect-dodge flare or powered follow-up icon; red hit feedback by sampled frame546 and subsequent damage chain. Warning onset visually verified. All API inserts succeeded. Q1/Q2 visually compared at equal warning-relative frames; displayed time is not engine acceptance time."
+      },
+      {
+        "id": "R1",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_22-13-13.mp4",
+        "warning": 585,
+        "rmb": 605,
+        "gap_frames": 20,
+        "success": true,
+        "thresholds": {
+          "250": 585,
+          "350": 585,
+          "450": 585,
+          "550": 585
+        },
+        "log": "<PRIVATE_HOME>\\Documents\\Codex\\2026-09-14\\zzz-boss-pattern-feasibility\\outputs\\입력실험\\logs\\20260915_221321_453_831f7d.json",
+        "configured_delay_ms": 3000,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": null,
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 422
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 435
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 605
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 610
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 687
+          },
+          {
+            "key": "space",
+            "down": false,
+            "frame": 693
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 776
+          },
+          {
+            "key": "space",
+            "down": false,
+            "frame": 782
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 874
+          },
+          {
+            "key": "space",
+            "down": false,
+            "frame": 879
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 983
+          },
+          {
+            "key": "space",
+            "down": false,
+            "frame": 989
+          }
+        ],
+        "f8_to_rmb_frames": 183,
+        "review_note": "Full-v1 entry+combo trial; entry perfect dodge confirmed by white effect and enhanced follow-up icon. See full-sequence-results.json for all five outcomes."
+      },
+      {
+        "id": "R2",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_22-14-28.mp4",
+        "warning": 420,
+        "rmb": 434,
+        "gap_frames": 14,
+        "success": true,
+        "thresholds": {
+          "250": 420,
+          "350": 420,
+          "450": 420,
+          "550": 422
+        },
+        "log": "<PRIVATE_HOME>\\Documents\\Codex\\2026-09-14\\zzz-boss-pattern-feasibility\\outputs\\입력실험\\logs\\20260915_221433_235_1db6c7.json",
+        "configured_delay_ms": 3000,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": null,
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 252
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 262
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 434
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 440
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 518
+          },
+          {
+            "key": "space",
+            "down": false,
+            "frame": 524
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 606
+          },
+          {
+            "key": "space",
+            "down": false,
+            "frame": 612
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 704
+          },
+          {
+            "key": "space",
+            "down": false,
+            "frame": 709
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 814
+          },
+          {
+            "key": "space",
+            "down": false,
+            "frame": 819
+          }
+        ],
+        "f8_to_rmb_frames": 182,
+        "review_note": "Full-v1 entry+combo trial; entry perfect dodge confirmed by white effect and enhanced follow-up icon. See full-sequence-results.json for all five outcomes."
+      },
+      {
+        "id": "R3",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_22-43-04.mp4",
+        "warning": 588,
+        "rmb": 596,
+        "gap_frames": 8,
+        "success": true,
+        "thresholds": {
+          "250": 588,
+          "350": 588,
+          "450": 588,
+          "550": 588
+        },
+        "log": "<PRIVATE_HOME>\\Documents\\Codex\\2026-09-14\\zzz-boss-pattern-feasibility\\outputs\\입력실험\\logs\\20260915_224312_779_1b3092.json",
+        "configured_delay_ms": 3000,
+        "fps": 60,
+        "normal_dodge_onset_bounds": null,
+        "perfect_flare_bounds": null,
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 415
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 426
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 596
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 601
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 679
+          },
+          {
+            "key": "space",
+            "down": false,
+            "frame": 684
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 768
+          },
+          {
+            "key": "space",
+            "down": false,
+            "frame": 773
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 865
+          },
+          {
+            "key": "space",
+            "down": false,
+            "frame": 870
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 975
+          },
+          {
+            "key": "space",
+            "down": false,
+            "frame": 980
+          }
+        ],
+        "f8_to_rmb_frames": 181,
+        "review_note": "Full-v1 entry+combo trial; entry perfect dodge confirmed by white effect and enhanced follow-up icon. See full-sequence-results.json for all five outcomes."
+      }
+    ],
+    "late_candidate": {
+      "classification": "mixed outcomes at identical displayed gaps within the same configuration; no deterministic global warning-to-overlay cutoff established",
+      "mixed_observations": [
+        {
+          "gap_frames": 18,
+          "seconds": 0.3,
+          "success_ids": [
+            "Entry-F1",
+            "O2",
+            "Q1"
+          ],
+          "failure_ids": [
+            "Q2"
+          ]
+        },
+        {
+          "gap_frames": 22,
+          "seconds": 0.36666666666666664,
+          "success_ids": [
+            "K2"
+          ],
+          "failure_ids": [
+            "M1"
+          ]
+        }
+      ],
+      "non_monotonic_pair": {
+        "earlier_failure_id": "P3",
+        "earlier_failure_frames": 19,
+        "later_success_id": "K3",
+        "later_success_frames": 20
+      },
+      "note": "Frame quantization, rendered state, input acceptance and spatial conditions are not separated. Mixed displayed gaps do not imply equal engine timestamps or random engine judgement."
+    },
+    "threshold_sensitivity": [
+      {
+        "threshold": 250,
+        "K2_success_gap": 22,
+        "J1_failure_gap": 24,
+        "M1_failure_gap": 22,
+        "M3_failure_gap": 23,
+        "N1_failure_gap": 23,
+        "N2_failure_gap": 24,
+        "N3_failure_gap": 23,
+        "O1_failure_gap": 25,
+        "O2_success_gap": 18,
+        "O3_failure_gap": 26,
+        "P1_failure_gap": 26,
+        "P2_failure_gap": 23,
+        "P3_failure_gap": 19,
+        "Q1_success_gap": 18,
+        "Q2_failure_gap": 18,
+        "Q3_failure_gap": 24
+      },
+      {
+        "threshold": 350,
+        "K2_success_gap": 22,
+        "J1_failure_gap": 24,
+        "M1_failure_gap": 22,
+        "M3_failure_gap": 23,
+        "N1_failure_gap": 23,
+        "N2_failure_gap": 24,
+        "N3_failure_gap": 23,
+        "O1_failure_gap": 25,
+        "O2_success_gap": 18,
+        "O3_failure_gap": 26,
+        "P1_failure_gap": 26,
+        "P2_failure_gap": 23,
+        "P3_failure_gap": 19,
+        "Q1_success_gap": 18,
+        "Q2_failure_gap": 18,
+        "Q3_failure_gap": 24
+      },
+      {
+        "threshold": 450,
+        "K2_success_gap": 22,
+        "J1_failure_gap": 22,
+        "M1_failure_gap": 22,
+        "M3_failure_gap": 23,
+        "N1_failure_gap": 23,
+        "N2_failure_gap": 24,
+        "N3_failure_gap": 23,
+        "O1_failure_gap": 25,
+        "O2_success_gap": 18,
+        "O3_failure_gap": 26,
+        "P1_failure_gap": 26,
+        "P2_failure_gap": 23,
+        "P3_failure_gap": 19,
+        "Q1_success_gap": 18,
+        "Q2_failure_gap": 18,
+        "Q3_failure_gap": 24
+      },
+      {
+        "threshold": 550,
+        "K2_success_gap": 19,
+        "J1_failure_gap": 22,
+        "M1_failure_gap": 19,
+        "M3_failure_gap": 22,
+        "N1_failure_gap": 22,
+        "N2_failure_gap": 24,
+        "N3_failure_gap": 22,
+        "O1_failure_gap": 23,
+        "O2_success_gap": 18,
+        "O3_failure_gap": 26,
+        "P1_failure_gap": 26,
+        "P2_failure_gap": 23,
+        "P3_failure_gap": 19,
+        "Q1_success_gap": 17,
+        "Q2_failure_gap": 18,
+        "Q3_failure_gap": 24
+      }
+    ]
+  },
+  "fullSequence": {
+    "scope": "Prospective first-skill entry plus four attacks, Aria and same party; 60fps recordings; frozen full-v1 schedule.",
+    "configuration": {
+      "Id": "full-v1-entry3000-t3-center-four-attacks",
+      "Name": "진입 회피 + 4타 · 권장 타이밍 검증",
+      "ActiveProfile": "첫 번째 제어스킬",
+      "Repetitions": 3,
+      "First": {
+        "Mode": 1,
+        "TargetAttack": 0,
+        "ShiftMs": 0,
+        "StartDelayMs": 3000,
+        "EntryGapMs": 1404.6296296296289,
+        "HoldMs": 80,
+        "Notes": "첫 번째 제어스킬 진입 회피+Space 4타를 같은 설정으로 3회. 기존 아리아·파티·진입 조건 유지. 시작 안내 문구가 처음 나타나면 평소처럼 F8 한 번. F8 후 3000ms 우클릭(이 설정 기존 진입 5/5 성공), 약 1404.630ms 뒤 첫 Space, 이후 T3 내부 구간 중앙 상대 간격. T3 진입 RMB f200, 기존 성공 1타 f280, 중앙 후보 f284.278을 연결한 가설. 직접 회피·Space·이동·공격 없이 마지막 대응 결과 후 3초까지 녹화. 진입 포함 각 타 성공 여부와 전체 성공 횟수를 검증하며 원작 성공을 보장하는 설정은 아님.",
+        "ComboTimesMs": [
+          0.0,
+          1475.5144032921814,
+          3096.5020576131697,
+          4925.30864197531
+        ]
+      },
+      "Second": {
+        "Mode": 0,
+        "TargetAttack": 0,
+        "ShiftMs": 0,
+        "StartDelayMs": 0,
+        "EntryGapMs": 2000,
+        "HoldMs": 80,
+        "Notes": "두 번째 스킬 G4 영상의 연속 대응 간격. 이번에는 조절 없이 같은 설정을 3회 반복."
+      }
+    },
+    "cases": [
+      {
+        "id": "R1",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_22-13-13.mp4",
+        "log": "<PRIVATE_HOME>\\Documents\\Codex\\2026-09-14\\zzz-boss-pattern-feasibility\\outputs\\입력실험\\logs\\20260915_221321_453_831f7d.json",
+        "attempt": 1,
+        "configuration_id": "full-v1-entry3000-t3-center-four-attacks:0BF943E6C0C07933",
+        "fps": 60,
+        "frame_count": 1630,
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 422
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 435
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 605
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 610
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 687
+          },
+          {
+            "key": "space",
+            "down": false,
+            "frame": 693
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 776
+          },
+          {
+            "key": "space",
+            "down": false,
+            "frame": 782
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 874
+          },
+          {
+            "key": "space",
+            "down": false,
+            "frame": 879
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 983
+          },
+          {
+            "key": "space",
+            "down": false,
+            "frame": 989
+          }
+        ],
+        "f8": 422,
+        "warning_candidates": {
+          "250": 585,
+          "350": 585,
+          "450": 585,
+          "550": 585
+        },
+        "downs": [
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 605
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 687
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 776
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 874
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 983
+          }
+        ],
+        "interval_frames": [
+          82,
+          89,
+          98,
+          109
+        ],
+        "api_down_events": [
+          {
+            "Event": "down",
+            "Key": "RMB",
+            "Detail": null,
+            "Attack": -1,
+            "Win32Error": 0,
+            "DueMs": 3000,
+            "BeginMs": 3009.4905,
+            "EndMs": 3040.1175,
+            "JitterMs": 9.490499999999884,
+            "Inserted": 1
+          },
+          {
+            "Event": "down",
+            "Key": "Space",
+            "Detail": null,
+            "Attack": 1,
+            "Win32Error": 0,
+            "DueMs": 4414.1201296296285,
+            "BeginMs": 4414.1823,
+            "EndMs": 4417.5667,
+            "JitterMs": 0.06217037037185946,
+            "Inserted": 1
+          },
+          {
+            "Event": "down",
+            "Key": "Space",
+            "Detail": null,
+            "Attack": 2,
+            "Win32Error": 0,
+            "DueMs": 5889.63453292181,
+            "BeginMs": 5899.3649,
+            "EndMs": 5901.6969,
+            "JitterMs": 9.730367078189374,
+            "Inserted": 1
+          },
+          {
+            "Event": "down",
+            "Key": "Space",
+            "Detail": null,
+            "Attack": 3,
+            "Win32Error": 0,
+            "DueMs": 7510.622187242798,
+            "BeginMs": 7522.3653,
+            "EndMs": 7526.4247,
+            "JitterMs": 11.743112757202653,
+            "Inserted": 1
+          },
+          {
+            "Event": "down",
+            "Key": "Space",
+            "Detail": null,
+            "Attack": 4,
+            "Win32Error": 0,
+            "DueMs": 9339.428771604938,
+            "BeginMs": 9353.0924,
+            "EndMs": 9355.6585,
+            "JitterMs": 13.663628395061096,
+            "Inserted": 1
+          }
+        ],
+        "outcomes": [
+          "success",
+          "success",
+          "success",
+          "success",
+          "success"
+        ],
+        "full_success": true,
+        "outcome_order": [
+          "entry",
+          "attack1",
+          "attack2",
+          "attack3",
+          "attack4"
+        ],
+        "entry_warning_to_input_frames": 20,
+        "observed_intervals_seconds": [
+          1.3666666666666667,
+          1.4833333333333334,
+          1.6333333333333333,
+          1.8166666666666667
+        ],
+        "review_note": "Entry enhanced icon; successive attack scores875/1750/2625; final counter/break and score9017 byf1073, including final bonus. Repeated displayed frames around final attack; reviewed beyond immediate input+75."
+      },
+      {
+        "id": "R2",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_22-14-28.mp4",
+        "log": "<PRIVATE_HOME>\\Documents\\Codex\\2026-09-14\\zzz-boss-pattern-feasibility\\outputs\\입력실험\\logs\\20260915_221433_235_1db6c7.json",
+        "attempt": 2,
+        "configuration_id": "full-v1-entry3000-t3-center-four-attacks:0BF943E6C0C07933",
+        "fps": 60,
+        "frame_count": 1415,
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 252
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 262
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 434
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 440
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 518
+          },
+          {
+            "key": "space",
+            "down": false,
+            "frame": 524
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 606
+          },
+          {
+            "key": "space",
+            "down": false,
+            "frame": 612
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 704
+          },
+          {
+            "key": "space",
+            "down": false,
+            "frame": 709
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 814
+          },
+          {
+            "key": "space",
+            "down": false,
+            "frame": 819
+          }
+        ],
+        "f8": 252,
+        "warning_candidates": {
+          "250": 420,
+          "350": 420,
+          "450": 420,
+          "550": 422
+        },
+        "downs": [
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 434
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 518
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 606
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 704
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 814
+          }
+        ],
+        "interval_frames": [
+          84,
+          88,
+          98,
+          110
+        ],
+        "api_down_events": [
+          {
+            "Event": "down",
+            "Key": "RMB",
+            "Detail": null,
+            "Attack": -1,
+            "Win32Error": 0,
+            "DueMs": 3000,
+            "BeginMs": 3008.7239,
+            "EndMs": 3028.8423,
+            "JitterMs": 8.723899999999958,
+            "Inserted": 1
+          },
+          {
+            "Event": "down",
+            "Key": "Space",
+            "Detail": null,
+            "Attack": 1,
+            "Win32Error": 0,
+            "DueMs": 4413.353529629629,
+            "BeginMs": 4420.9921,
+            "EndMs": 4423.463,
+            "JitterMs": 7.638570370371781,
+            "Inserted": 1
+          },
+          {
+            "Event": "down",
+            "Key": "Space",
+            "Detail": null,
+            "Attack": 2,
+            "Win32Error": 0,
+            "DueMs": 5888.86793292181,
+            "BeginMs": 5890.9387,
+            "EndMs": 5897.8991,
+            "JitterMs": 2.0707670781894194,
+            "Inserted": 1
+          },
+          {
+            "Event": "down",
+            "Key": "Space",
+            "Detail": null,
+            "Attack": 3,
+            "Win32Error": 0,
+            "DueMs": 7509.855587242798,
+            "BeginMs": 7524.2313,
+            "EndMs": 7527.0647,
+            "JitterMs": 14.375712757202564,
+            "Inserted": 1
+          },
+          {
+            "Event": "down",
+            "Key": "Space",
+            "Detail": null,
+            "Attack": 4,
+            "Win32Error": 0,
+            "DueMs": 9338.662171604938,
+            "BeginMs": 9345.8751,
+            "EndMs": 9358.3902,
+            "JitterMs": 7.212928395061681,
+            "Inserted": 1
+          }
+        ],
+        "outcomes": [
+          "success",
+          "success",
+          "success",
+          "success",
+          "success"
+        ],
+        "full_success": true,
+        "outcome_order": [
+          "entry",
+          "attack1",
+          "attack2",
+          "attack3",
+          "attack4"
+        ],
+        "entry_warning_to_input_frames": 14,
+        "observed_intervals_seconds": [
+          1.4,
+          1.4666666666666666,
+          1.6333333333333333,
+          1.8333333333333333
+        ],
+        "review_note": "Entry enhanced icon; successive attack scores875/1750/2625; final counter/break and score9017 byf864, including final bonus."
+      },
+      {
+        "id": "R3",
+        "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_22-43-04.mp4",
+        "log": "<PRIVATE_HOME>\\Documents\\Codex\\2026-09-14\\zzz-boss-pattern-feasibility\\outputs\\입력실험\\logs\\20260915_224312_779_1b3092.json",
+        "attempt": 3,
+        "configuration_id": "full-v1-entry3000-t3-center-four-attacks:0BF943E6C0C07933",
+        "fps": 60,
+        "frame_count": 1454,
+        "events": [
+          {
+            "key": "f8",
+            "down": true,
+            "frame": 415
+          },
+          {
+            "key": "f8",
+            "down": false,
+            "frame": 426
+          },
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 596
+          },
+          {
+            "key": "rmb",
+            "down": false,
+            "frame": 601
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 679
+          },
+          {
+            "key": "space",
+            "down": false,
+            "frame": 684
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 768
+          },
+          {
+            "key": "space",
+            "down": false,
+            "frame": 773
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 865
+          },
+          {
+            "key": "space",
+            "down": false,
+            "frame": 870
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 975
+          },
+          {
+            "key": "space",
+            "down": false,
+            "frame": 980
+          }
+        ],
+        "f8": 415,
+        "warning_candidates": {
+          "250": 588,
+          "350": 588,
+          "450": 588,
+          "550": 588
+        },
+        "downs": [
+          {
+            "key": "rmb",
+            "down": true,
+            "frame": 596
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 679
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 768
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 865
+          },
+          {
+            "key": "space",
+            "down": true,
+            "frame": 975
+          }
+        ],
+        "interval_frames": [
+          83,
+          89,
+          97,
+          110
+        ],
+        "api_down_events": [
+          {
+            "Event": "down",
+            "Key": "RMB",
+            "Detail": null,
+            "Attack": -1,
+            "Win32Error": 0,
+            "DueMs": 3000,
+            "BeginMs": 3000.3749,
+            "EndMs": 3018.4669,
+            "JitterMs": 0.37489999999979773,
+            "Inserted": 1
+          },
+          {
+            "Event": "down",
+            "Key": "Space",
+            "Detail": null,
+            "Attack": 1,
+            "Win32Error": 0,
+            "DueMs": 4405.004529629628,
+            "BeginMs": 4405.041,
+            "EndMs": 4406.0351,
+            "JitterMs": 0.036470370371716854,
+            "Inserted": 1
+          },
+          {
+            "Event": "down",
+            "Key": "Space",
+            "Detail": null,
+            "Attack": 2,
+            "Win32Error": 0,
+            "DueMs": 5880.51893292181,
+            "BeginMs": 5882.8053,
+            "EndMs": 5883.9533,
+            "JitterMs": 2.286367078189869,
+            "Inserted": 1
+          },
+          {
+            "Event": "down",
+            "Key": "Space",
+            "Detail": null,
+            "Attack": 3,
+            "Win32Error": 0,
+            "DueMs": 7501.506587242798,
+            "BeginMs": 7501.5808,
+            "EndMs": 7503.4687,
+            "JitterMs": 0.07421275720207632,
+            "Inserted": 1
+          },
+          {
+            "Event": "down",
+            "Key": "Space",
+            "Detail": null,
+            "Attack": 4,
+            "Win32Error": 0,
+            "DueMs": 9330.31317160494,
+            "BeginMs": 9330.3477,
+            "EndMs": 9331.6903,
+            "JitterMs": 0.03452839506098826,
+            "Inserted": 1
+          }
+        ],
+        "outcomes": [
+          "success",
+          "success",
+          "failure",
+          "success",
+          "success"
+        ],
+        "full_success": false,
+        "outcome_order": [
+          "entry",
+          "attack1",
+          "attack2",
+          "attack3",
+          "attack4"
+        ],
+        "entry_warning_to_input_frames": 8,
+        "observed_intervals_seconds": [
+          1.3833333333333333,
+          1.4833333333333334,
+          1.6166666666666667,
+          1.8333333333333333
+        ],
+        "review_note": "Entry white effect/enhanced icon; attack1 score875; attack2 red damage f813 onward, score remains875; attack3 score1750; attack4 score2625. Last hit success does not imply all-hit success."
+      }
+    ],
+    "execution_interruptions": [
+      {
+        "log": "outputs\\입력실험\\logs\\20260915_221547_109_09522f.json",
+        "status": "aborted",
+        "error": "게임 창을 벗어나 입력을 중지했습니다.",
+        "down_count": 3,
+        "included_in_completed_three": false
+      },
+      {
+        "log": "outputs\\입력실험\\logs\\20260915_221833_438_e8ccb1.json",
+        "status": "aborted",
+        "error": "게임 창을 벗어나 입력을 중지했습니다.",
+        "down_count": 0,
+        "included_in_completed_three": false
+      },
+      {
+        "log": "outputs\\입력실험\\logs\\20260915_222000_827_58daf4.json",
+        "status": "aborted",
+        "error": "예정 시각보다 250ms 이상 늦어져 중지했습니다. 밀린 입력을 몰아서 보내지 않습니다.",
+        "down_count": 4,
+        "included_in_completed_three": false
+      }
+    ],
+    "summary": {
+      "completed_trials": 3,
+      "full_successes": 2,
+      "entry_successes": 3,
+      "combo_successes": 11,
+      "combo_observations": 12,
+      "all_events_successes": 14,
+      "all_events_observations": 15,
+      "rate_caveat": "2/3 describes completed recorded trials, not all launch attempts or a population success-rate estimate."
+    },
+    "phase_comparison": {
+      "event": "Second-attack weapon trail, candidate internal coordinate129; last sampled absence to first presence.",
+      "R2": {
+        "input_frame": 606,
+        "trail_bounds": [
+          621,
+          626
+        ],
+        "input_to_trail_frame_bounds": [
+          15,
+          20
+        ],
+        "outcome": "success"
+      },
+      "R3": {
+        "input_frame": 768,
+        "trail_bounds": [
+          803,
+          808
+        ],
+        "input_to_trail_frame_bounds": [
+          35,
+          40
+        ],
+        "outcome": "failure"
+      },
+      "difference_seconds_midpoint": 0.3333333333333333,
+      "inference": "R3 input is about0.33s earlier relative to the matching attack trail than R2. Supports phase mismatch/early-input hypothesis, not a proven engine acceptance timestamp or sole cause.",
+      "first_attack_trail_bounds": {
+        "R2": [
+          523,
+          528
+        ],
+        "R3": [
+          709,
+          714
+        ]
+      },
+      "limitation": "Recorded state repetition and trigger-to-combat phase differ; neither F8 reaction alone nor GPU load is isolated as cause. Do not apply +0.33s universally."
+    },
+    "evidence": [
+      "outputs/evidence/full-v1-results.jpg",
+      "outputs/evidence/full-v1-attack2-phase.jpg"
+    ],
+    "decision": "Both skills reproduced complete entry+combo success: first2/3, corrected second3/3. Ready to implement prerecorded timing-practice prototype; native key-window fidelity and learning benefit are not yet validated.",
+    "second_skill": {
+      "scope": "Second skill entry plus5 attacks, Aria and same party, prospective frozen full-v2 test.",
+      "configuration": {
+        "Id": "full-v2-second-warning-g4-center-five-attacks",
+        "Name": "경고 섬광 F8 · 진입 회피 + 5타",
+        "ActiveProfile": "두 번째 제어스킬",
+        "Repetitions": 3,
+        "First": {
+          "Mode": 1,
+          "TargetAttack": 0,
+          "ShiftMs": 0,
+          "StartDelayMs": 3000,
+          "EntryGapMs": 1404.6296296296289,
+          "HoldMs": 80,
+          "Notes": "첫 번째 제어스킬 진입 회피+Space 4타를 같은 설정으로 3회. 기존 아리아·파티·진입 조건 유지. 시작 안내 문구가 처음 나타나면 평소처럼 F8 한 번. F8 후 3000ms 우클릭(이 설정 기존 진입 5/5 성공), 약 1404.630ms 뒤 첫 Space, 이후 T3 내부 구간 중앙 상대 간격. T3 진입 RMB f200, 기존 성공 1타 f280, 중앙 후보 f284.278을 연결한 가설. 직접 회피·Space·이동·공격 없이 마지막 대응 결과 후 3초까지 녹화. 진입 포함 각 타 성공 여부와 전체 성공 횟수를 검증하며 원작 성공을 보장하는 설정은 아님.",
+          "ComboTimesMs": [
+            0.0,
+            1475.5144032921814,
+            3096.5020576131697,
+            4925.30864197531
+          ]
+        },
+        "Second": {
+          "Mode": 1,
+          "TargetAttack": 0,
+          "ShiftMs": 0,
+          "StartDelayMs": 0,
+          "EntryGapMs": 2286.384615384616,
+          "HoldMs": 80,
+          "Notes": "두 번째 제어스킬 진입+Space5타를 같은 설정으로3회. 시작 문구가 아니라 길게 뻗는 분홍 십자 경고 섬광이 처음 보이면 F8한번. F8직후 우클릭, 약2286.385ms뒤 1타, 이후 G4 내부구간 중앙 후보. G4는 진입RMB f246, 성공1타 f366, 중앙1타 f383.183이다. 기존 G3/G4영상은 문구가 이미 표시된 상태의 메뉴 복귀로 시작하므로 문구기준 대기를 추정하지 않았다. 같은 아리아·파티·진입 조건을 유지하고 직접 우클릭·Space·이동·공격 없이 마지막 결과 후3초까지 녹화. F8반응시간이 진입 타이밍에 포함되며 전 과정 성공을 검증할 후보이다.",
+          "ComboTimesMs": [
+            0.0,
+            1301.5384615384614,
+            3253.846153846153,
+            4555.384615384614,
+            7169.307692307692
+          ]
+        }
+      },
+      "cases": [
+        {
+          "id": "S1",
+          "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_23-13-14.mp4",
+          "log": "outputs/입력실험/logs/20260915_231320_673_a9dc85.json",
+          "events": [
+            {
+              "key": "f8",
+              "down": true,
+              "frame": 330
+            },
+            {
+              "key": "rmb",
+              "down": true,
+              "frame": 333
+            },
+            {
+              "key": "f8",
+              "down": false,
+              "frame": 339
+            },
+            {
+              "key": "rmb",
+              "down": false,
+              "frame": 339
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 469
+            },
+            {
+              "key": "space",
+              "down": false,
+              "frame": 474
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 546
+            },
+            {
+              "key": "space",
+              "down": false,
+              "frame": 552
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 664
+            },
+            {
+              "key": "space",
+              "down": false,
+              "frame": 671
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 742
+            },
+            {
+              "key": "space",
+              "down": false,
+              "frame": 747
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 899
+            },
+            {
+              "key": "space",
+              "down": false,
+              "frame": 905
+            }
+          ],
+          "warning_candidates": {
+            "250": 317,
+            "350": 317,
+            "450": 317,
+            "550": 317
+          },
+          "frame_count": 1421,
+          "fps": 60,
+          "configuration_id": "full-v2-second-warning-g4-center-five-attacks:2908CFBDE0170E09",
+          "attempt": 1,
+          "api_down_events": [
+            {
+              "Event": "down",
+              "Key": "RMB",
+              "Detail": null,
+              "Attack": -1,
+              "Win32Error": 0,
+              "DueMs": 0,
+              "BeginMs": 20.1752,
+              "EndMs": 61.2312,
+              "JitterMs": 20.1752,
+              "Inserted": 1
+            },
+            {
+              "Event": "down",
+              "Key": "Space",
+              "Detail": null,
+              "Attack": 1,
+              "Win32Error": 0,
+              "DueMs": 2306.5598153846163,
+              "BeginMs": 2316.3886,
+              "EndMs": 2317.6774,
+              "JitterMs": 9.828784615383938,
+              "Inserted": 1
+            },
+            {
+              "Event": "down",
+              "Key": "Space",
+              "Detail": null,
+              "Attack": 2,
+              "Win32Error": 0,
+              "DueMs": 3608.0982769230777,
+              "BeginMs": 3610.2569,
+              "EndMs": 3612.3385,
+              "JitterMs": 2.15862307692214,
+              "Inserted": 1
+            },
+            {
+              "Event": "down",
+              "Key": "Space",
+              "Detail": null,
+              "Attack": 3,
+              "Win32Error": 0,
+              "DueMs": 5560.405969230769,
+              "BeginMs": 5571.3903,
+              "EndMs": 5572.9456,
+              "JitterMs": 10.984330769230837,
+              "Inserted": 1
+            },
+            {
+              "Event": "down",
+              "Key": "Space",
+              "Detail": null,
+              "Attack": 4,
+              "Win32Error": 0,
+              "DueMs": 6861.94443076923,
+              "BeginMs": 6866.013,
+              "EndMs": 6870.5216,
+              "JitterMs": 4.068569230769754,
+              "Inserted": 1
+            },
+            {
+              "Event": "down",
+              "Key": "Space",
+              "Detail": null,
+              "Attack": 5,
+              "Win32Error": 0,
+              "DueMs": 9475.867507692308,
+              "BeginMs": 9488.2556,
+              "EndMs": 9490.0358,
+              "JitterMs": 12.388092307692204,
+              "Inserted": 1
+            }
+          ],
+          "f8": 330,
+          "downs": [
+            {
+              "key": "rmb",
+              "down": true,
+              "frame": 333
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 469
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 546
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 664
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 742
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 899
+            }
+          ],
+          "interval_frames": [
+            136,
+            77,
+            118,
+            78,
+            157
+          ],
+          "observed_intervals_seconds": [
+            2.2666666666666666,
+            1.2833333333333334,
+            1.9666666666666666,
+            1.3,
+            2.6166666666666667
+          ],
+          "outcome_order": [
+            "entry",
+            "attack1",
+            "attack2",
+            "attack3",
+            "attack4",
+            "attack5"
+          ],
+          "outcomes": [
+            "success",
+            "success",
+            "failure",
+            "success",
+            "success",
+            "success"
+          ],
+          "full_success": false,
+          "entry_warning_to_input_frames": 16,
+          "score_after_entry_and_each_attack": [
+            44754,
+            45629,
+            45629,
+            46504,
+            47379,
+            48254
+          ],
+          "review_note": "Entry success effect; successful attacks add875 to displayed response score. Failed attack has damage and no score increment. Final animation alone is not a success label.",
+          "overlay_note": "RMB RGB detector supplemented by HSV yellow mask; full-video rescan confirms exactly one RMB down/up. S3 cyan background masked yellow in the old detector.",
+          "phase_analysis": {
+            "anchor_internal_coordinates": [
+              394,
+              548,
+              719
+            ],
+            "anchor_bounds_last_absent_first_present": [
+              [
+                504,
+                509
+              ],
+              [
+                684,
+                689
+              ],
+              [
+                899,
+                904
+              ]
+            ],
+            "video_frames_per_internal_unit_1_to_3": 1.1688311688311688,
+            "video_frames_per_internal_unit_3_to_5": 1.2573099415204678,
+            "attack2_estimated_overlay_coordinate": 427.7944444444444,
+            "attack2_after_proposed_200ms_delay": 438.0611111111111,
+            "attack5_estimated_overlay_coordinate": 717.0116279069767,
+            "attack5_after_proposed_250ms_advance": 705.0813953488372,
+            "attack5_input_minus_burst_frame_bounds": [
+              -5,
+              0
+            ],
+            "limitation": "Sparse anchors with5-video-frame brackets, piecewise interpolation, no runtime acceptance timestamp. Prior +2 internal offset is exploratory only. Hypothetical replay does not simulate changes caused by correcting an earlier failure."
+          }
+        },
+        {
+          "id": "S2",
+          "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_23-16-00.mp4",
+          "log": "outputs/입력실험/logs/20260915_231605_741_0d7862.json",
+          "events": [
+            {
+              "key": "f8",
+              "down": true,
+              "frame": 257
+            },
+            {
+              "key": "rmb",
+              "down": true,
+              "frame": 259
+            },
+            {
+              "key": "rmb",
+              "down": false,
+              "frame": 264
+            },
+            {
+              "key": "f8",
+              "down": false,
+              "frame": 266
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 395
+            },
+            {
+              "key": "space",
+              "down": false,
+              "frame": 401
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 473
+            },
+            {
+              "key": "space",
+              "down": false,
+              "frame": 479
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 591
+            },
+            {
+              "key": "space",
+              "down": false,
+              "frame": 596
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 669
+            },
+            {
+              "key": "space",
+              "down": false,
+              "frame": 674
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 826
+            },
+            {
+              "key": "space",
+              "down": false,
+              "frame": 832
+            }
+          ],
+          "warning_candidates": {
+            "250": 244,
+            "350": 244,
+            "450": 244,
+            "550": 244
+          },
+          "frame_count": 1222,
+          "fps": 60,
+          "configuration_id": "full-v2-second-warning-g4-center-five-attacks:2908CFBDE0170E09",
+          "attempt": 2,
+          "api_down_events": [
+            {
+              "Event": "down",
+              "Key": "RMB",
+              "Detail": null,
+              "Attack": -1,
+              "Win32Error": 0,
+              "DueMs": 0,
+              "BeginMs": 9.6378,
+              "EndMs": 25.3071,
+              "JitterMs": 9.6378,
+              "Inserted": 1
+            },
+            {
+              "Event": "down",
+              "Key": "Space",
+              "Detail": null,
+              "Attack": 1,
+              "Win32Error": 0,
+              "DueMs": 2296.022415384616,
+              "BeginMs": 2296.0555,
+              "EndMs": 2297.3081,
+              "JitterMs": 0.0330846153838138,
+              "Inserted": 1
+            },
+            {
+              "Event": "down",
+              "Key": "Space",
+              "Detail": null,
+              "Attack": 2,
+              "Win32Error": 0,
+              "DueMs": 3597.5608769230776,
+              "BeginMs": 3597.591,
+              "EndMs": 3599.2811,
+              "JitterMs": 0.030123076922336622,
+              "Inserted": 1
+            },
+            {
+              "Event": "down",
+              "Key": "Space",
+              "Detail": null,
+              "Attack": 3,
+              "Win32Error": 0,
+              "DueMs": 5549.86856923077,
+              "BeginMs": 5558.4408,
+              "EndMs": 5560.3127,
+              "JitterMs": 8.572230769230373,
+              "Inserted": 1
+            },
+            {
+              "Event": "down",
+              "Key": "Space",
+              "Detail": null,
+              "Attack": 4,
+              "Win32Error": 0,
+              "DueMs": 6851.407030769231,
+              "BeginMs": 6851.4352,
+              "EndMs": 6853.1377,
+              "JitterMs": 0.028169230768980924,
+              "Inserted": 1
+            },
+            {
+              "Event": "down",
+              "Key": "Space",
+              "Detail": null,
+              "Attack": 5,
+              "Win32Error": 0,
+              "DueMs": 9465.330107692309,
+              "BeginMs": 9476.5501,
+              "EndMs": 9477.7353,
+              "JitterMs": 11.219992307691427,
+              "Inserted": 1
+            }
+          ],
+          "f8": 257,
+          "downs": [
+            {
+              "key": "rmb",
+              "down": true,
+              "frame": 259
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 395
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 473
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 591
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 669
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 826
+            }
+          ],
+          "interval_frames": [
+            136,
+            78,
+            118,
+            78,
+            157
+          ],
+          "observed_intervals_seconds": [
+            2.2666666666666666,
+            1.3,
+            1.9666666666666666,
+            1.3,
+            2.6166666666666667
+          ],
+          "outcome_order": [
+            "entry",
+            "attack1",
+            "attack2",
+            "attack3",
+            "attack4",
+            "attack5"
+          ],
+          "outcomes": [
+            "success",
+            "success",
+            "success",
+            "success",
+            "success",
+            "failure"
+          ],
+          "full_success": false,
+          "entry_warning_to_input_frames": 15,
+          "score_after_entry_and_each_attack": [
+            39693,
+            40568,
+            41443,
+            42318,
+            43193,
+            43193
+          ],
+          "review_note": "Entry success effect; successful attacks add875 to displayed response score. Failed attack has damage and no score increment. Final animation alone is not a success label.",
+          "overlay_note": "RMB RGB detector supplemented by HSV yellow mask; full-video rescan confirms exactly one RMB down/up. S3 cyan background masked yellow in the old detector.",
+          "phase_analysis": {
+            "anchor_internal_coordinates": [
+              394,
+              548,
+              719
+            ],
+            "anchor_bounds_last_absent_first_present": [
+              [
+                410,
+                415
+              ],
+              [
+                606,
+                611
+              ],
+              [
+                811,
+                816
+              ]
+            ],
+            "video_frames_per_internal_unit_1_to_3": 1.2727272727272727,
+            "video_frames_per_internal_unit_3_to_5": 1.1988304093567252,
+            "attack2_estimated_overlay_coordinate": 441.5357142857143,
+            "attack2_after_proposed_200ms_delay": 450.9642857142857,
+            "attack5_estimated_overlay_coordinate": 729.4268292682926,
+            "attack5_after_proposed_250ms_advance": 716.9146341463414,
+            "attack5_input_minus_burst_frame_bounds": [
+              10,
+              15
+            ],
+            "limitation": "Sparse anchors with5-video-frame brackets, piecewise interpolation, no runtime acceptance timestamp. Prior +2 internal offset is exploratory only. Hypothetical replay does not simulate changes caused by correcting an earlier failure."
+          }
+        },
+        {
+          "id": "S3",
+          "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_23-18-45.mp4",
+          "log": "outputs/입력실험/logs/20260915_231852_284_205087.json",
+          "events": [
+            {
+              "key": "f8",
+              "down": true,
+              "frame": 363
+            },
+            {
+              "key": "rmb",
+              "down": true,
+              "frame": 365
+            },
+            {
+              "key": "rmb",
+              "down": false,
+              "frame": 370
+            },
+            {
+              "key": "f8",
+              "down": false,
+              "frame": 372
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 501
+            },
+            {
+              "key": "space",
+              "down": false,
+              "frame": 507
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 579
+            },
+            {
+              "key": "space",
+              "down": false,
+              "frame": 585
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 696
+            },
+            {
+              "key": "space",
+              "down": false,
+              "frame": 702
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 774
+            },
+            {
+              "key": "space",
+              "down": false,
+              "frame": 780
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 931
+            },
+            {
+              "key": "space",
+              "down": false,
+              "frame": 938
+            }
+          ],
+          "warning_candidates": {
+            "250": 348,
+            "350": 348,
+            "450": 348,
+            "550": 351
+          },
+          "frame_count": 1457,
+          "fps": 60,
+          "configuration_id": "full-v2-second-warning-g4-center-five-attacks:2908CFBDE0170E09",
+          "attempt": 3,
+          "api_down_events": [
+            {
+              "Event": "down",
+              "Key": "RMB",
+              "Detail": null,
+              "Attack": -1,
+              "Win32Error": 0,
+              "DueMs": 0,
+              "BeginMs": 6.6386,
+              "EndMs": 31.8859,
+              "JitterMs": 6.6386,
+              "Inserted": 1
+            },
+            {
+              "Event": "down",
+              "Key": "Space",
+              "Detail": null,
+              "Attack": 1,
+              "Win32Error": 0,
+              "DueMs": 2293.0232153846164,
+              "BeginMs": 2303.7186,
+              "EndMs": 2305.4185,
+              "JitterMs": 10.695384615383773,
+              "Inserted": 1
+            },
+            {
+              "Event": "down",
+              "Key": "Space",
+              "Detail": null,
+              "Attack": 2,
+              "Win32Error": 0,
+              "DueMs": 3594.561676923078,
+              "BeginMs": 3607.1118,
+              "EndMs": 3610.7012,
+              "JitterMs": 12.550123076922318,
+              "Inserted": 1
+            },
+            {
+              "Event": "down",
+              "Key": "Space",
+              "Detail": null,
+              "Attack": 3,
+              "Win32Error": 0,
+              "DueMs": 5546.86936923077,
+              "BeginMs": 5556.9007,
+              "EndMs": 5562.1853,
+              "JitterMs": 10.031330769230408,
+              "Inserted": 1
+            },
+            {
+              "Event": "down",
+              "Key": "Space",
+              "Detail": null,
+              "Attack": 4,
+              "Win32Error": 0,
+              "DueMs": 6848.407830769231,
+              "BeginMs": 6849.1154,
+              "EndMs": 6854.5068,
+              "JitterMs": 0.7075692307689678,
+              "Inserted": 1
+            },
+            {
+              "Event": "down",
+              "Key": "Space",
+              "Detail": null,
+              "Attack": 5,
+              "Win32Error": 0,
+              "DueMs": 9462.330907692309,
+              "BeginMs": 9467.384,
+              "EndMs": 9495.9931,
+              "JitterMs": 5.053092307691259,
+              "Inserted": 1
+            }
+          ],
+          "f8": 363,
+          "downs": [
+            {
+              "key": "rmb",
+              "down": true,
+              "frame": 365
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 501
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 579
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 696
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 774
+            },
+            {
+              "key": "space",
+              "down": true,
+              "frame": 931
+            }
+          ],
+          "interval_frames": [
+            136,
+            78,
+            117,
+            78,
+            157
+          ],
+          "observed_intervals_seconds": [
+            2.2666666666666666,
+            1.3,
+            1.95,
+            1.3,
+            2.6166666666666667
+          ],
+          "outcome_order": [
+            "entry",
+            "attack1",
+            "attack2",
+            "attack3",
+            "attack4",
+            "attack5"
+          ],
+          "outcomes": [
+            "success",
+            "success",
+            "success",
+            "success",
+            "success",
+            "failure"
+          ],
+          "full_success": false,
+          "entry_warning_to_input_frames": 17,
+          "score_after_entry_and_each_attack": [
+            43097,
+            43972,
+            44847,
+            45722,
+            46597,
+            46597
+          ],
+          "review_note": "Entry success effect; successful attacks add875 to displayed response score. Failed attack has damage and no score increment. Final animation alone is not a success label.",
+          "overlay_note": "RMB RGB detector supplemented by HSV yellow mask; full-video rescan confirms exactly one RMB down/up. S3 cyan background masked yellow in the old detector.",
+          "phase_analysis": {
+            "anchor_internal_coordinates": [
+              394,
+              548,
+              719
+            ],
+            "anchor_bounds_last_absent_first_present": [
+              [
+                516,
+                521
+              ],
+              [
+                711,
+                716
+              ],
+              [
+                926,
+                931
+              ]
+            ],
+            "video_frames_per_internal_unit_1_to_3": 1.2662337662337662,
+            "video_frames_per_internal_unit_3_to_5": 1.2573099415204678,
+            "attack2_estimated_overlay_coordinate": 441.7794871794872,
+            "attack2_after_proposed_200ms_delay": 451.2564102564103,
+            "attack5_estimated_overlay_coordinate": 720.9883720930233,
+            "attack5_after_proposed_250ms_advance": 709.0581395348837,
+            "attack5_input_minus_burst_frame_bounds": [
+              0,
+              5
+            ],
+            "limitation": "Sparse anchors with5-video-frame brackets, piecewise interpolation, no runtime acceptance timestamp. Prior +2 internal offset is exploratory only. Hypothetical replay does not simulate changes caused by correcting an earlier failure."
+          }
+        }
+      ],
+      "summary": {
+        "completed_trials": 3,
+        "full_successes": 0,
+        "entry_successes": 3,
+        "combo_successes": 12,
+        "combo_observations": 15,
+        "all_events_successes": 15,
+        "all_events_observations": 18
+      },
+      "proposed_adjustment": {
+        "applied": true,
+        "attack2_shift_ms": 200,
+        "attack5_shift_ms": -250,
+        "other_inputs": "unchanged",
+        "nominal_f8_seconds": [
+          0,
+          2.286384615384616,
+          3.7879230769230774,
+          5.540230769230769,
+          6.841769230769231,
+          9.20569230769231
+        ],
+        "reason": "S1 attack2 is earlier in locally mapped phase than S2/S3. Advance attack5 so all three hypothetical inputs precede the sampled chest burst, retaining S1 within the internally mapped range. Candidate only, not a measured universal boundary.",
+        "applied_configuration_id": "full-v3-second-warning-a2plus200-a5minus250",
+        "validation_status": "Completed: U1/U2/U3 full success3/3."
+      },
+      "evidence": [
+        "outputs/evidence/full-v2-results.jpg",
+        "outputs/evidence/full-v2-attack5-phase.jpg"
+      ],
+      "decision": "Initial full-v2 had0/3 full successes. Corrected full-v3 retest has3/3. Preserve both cohorts; second-skill full-sequence feasibility gate passed.",
+      "retest": {
+        "configuration": {
+          "Id": "full-v3-second-warning-a2plus200-a5minus250",
+          "Name": "두 번째 스킬 2차 · 2타+200ms · 5타-250ms",
+          "ActiveProfile": "두 번째 제어스킬",
+          "Repetitions": 3,
+          "First": {
+            "Mode": 1,
+            "TargetAttack": 0,
+            "ShiftMs": 0,
+            "StartDelayMs": 3000,
+            "EntryGapMs": 1404.6296296296289,
+            "HoldMs": 80,
+            "Notes": "첫 번째 제어스킬 진입 회피+Space 4타를 같은 설정으로 3회. 기존 아리아·파티·진입 조건 유지. 시작 안내 문구가 처음 나타나면 평소처럼 F8 한 번. F8 후 3000ms 우클릭(이 설정 기존 진입 5/5 성공), 약 1404.630ms 뒤 첫 Space, 이후 T3 내부 구간 중앙 상대 간격. T3 진입 RMB f200, 기존 성공 1타 f280, 중앙 후보 f284.278을 연결한 가설. 직접 회피·Space·이동·공격 없이 마지막 대응 결과 후 3초까지 녹화. 진입 포함 각 타 성공 여부와 전체 성공 횟수를 검증하며 원작 성공을 보장하는 설정은 아님.",
+            "ComboTimesMs": [
+              0.0,
+              1475.5144032921814,
+              3096.5020576131697,
+              4925.30864197531
+            ]
+          },
+          "Second": {
+            "Mode": 1,
+            "TargetAttack": 0,
+            "ShiftMs": 0,
+            "StartDelayMs": 0,
+            "EntryGapMs": 2286.384615384616,
+            "HoldMs": 80,
+            "Notes": "두 번째 제어스킬 2차 전체 대응 검증. 기존 full-v2 대비2타만200ms 늦추고5타만250ms 앞당김. 진입·1·3·4타와80ms 유지 설정은 동일. 길게 뻗는 분홍 십자 경고 섬광이 처음 보이면 F8 한 번. 즉시 우클릭 후 Space5회. 같은 아리아·파티·진입 조건에서3회 녹화하며 직접 회피·Space·이동·공격하지 말고 마지막 결과 후3초까지 기록. 보정 후보이며 전체 성공은 검증 전.",
+            "ComboTimesMs": [
+              0.0,
+              1501.5384615384614,
+              3253.846153846153,
+              4555.384615384614,
+              6919.307692307692
+            ]
+          }
+        },
+        "cases": [
+          {
+            "id": "U1",
+            "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_23-42-02.mp4",
+            "log": "<PRIVATE_HOME>\\Documents\\Codex\\2026-09-14\\zzz-boss-pattern-feasibility\\outputs\\입력실험\\logs\\20260915_234209_182_17a5f1.json",
+            "attempt": 1,
+            "configuration_id": "full-v3-second-warning-a2plus200-a5minus250:A9144DD441959B3B",
+            "fps": 60,
+            "frame_count": 1415,
+            "events": [
+              {
+                "key": "f8",
+                "down": true,
+                "frame": 373
+              },
+              {
+                "key": "rmb",
+                "down": true,
+                "frame": 374
+              },
+              {
+                "key": "rmb",
+                "down": false,
+                "frame": 379
+              },
+              {
+                "key": "f8",
+                "down": false,
+                "frame": 382
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 510
+              },
+              {
+                "key": "space",
+                "down": false,
+                "frame": 515
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 601
+              },
+              {
+                "key": "space",
+                "down": false,
+                "frame": 607
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 706
+              },
+              {
+                "key": "space",
+                "down": false,
+                "frame": 711
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 784
+              },
+              {
+                "key": "space",
+                "down": false,
+                "frame": 789
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 926
+              },
+              {
+                "key": "space",
+                "down": false,
+                "frame": 932
+              }
+            ],
+            "f8": 373,
+            "warning_candidates": {
+              "250": 358,
+              "350": 358,
+              "450": 358,
+              "550": 358
+            },
+            "downs": [
+              {
+                "key": "rmb",
+                "down": true,
+                "frame": 374
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 510
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 601
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 706
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 784
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 926
+              }
+            ],
+            "interval_frames": [
+              136,
+              91,
+              105,
+              78,
+              142
+            ],
+            "api_down_events": [
+              {
+                "Event": "down",
+                "Key": "RMB",
+                "Detail": null,
+                "Attack": -1,
+                "Win32Error": 0,
+                "DueMs": 0,
+                "BeginMs": 6.637,
+                "EndMs": 15.4525,
+                "JitterMs": 6.637,
+                "Inserted": 1
+              },
+              {
+                "Event": "down",
+                "Key": "Space",
+                "Detail": null,
+                "Attack": 1,
+                "Win32Error": 0,
+                "DueMs": 2293.0216153846163,
+                "BeginMs": 2293.5368,
+                "EndMs": 2294.899,
+                "JitterMs": 0.5151846153835322,
+                "Inserted": 1
+              },
+              {
+                "Event": "down",
+                "Key": "Space",
+                "Detail": null,
+                "Attack": 2,
+                "Win32Error": 0,
+                "DueMs": 3794.5600769230778,
+                "BeginMs": 3806.278,
+                "EndMs": 3808.953,
+                "JitterMs": 11.717923076922034,
+                "Inserted": 1
+              },
+              {
+                "Event": "down",
+                "Key": "Space",
+                "Detail": null,
+                "Attack": 3,
+                "Win32Error": 0,
+                "DueMs": 5546.867769230769,
+                "BeginMs": 5550.1734,
+                "EndMs": 5552.2578,
+                "JitterMs": 3.305630769230447,
+                "Inserted": 1
+              },
+              {
+                "Event": "down",
+                "Key": "Space",
+                "Detail": null,
+                "Attack": 4,
+                "Win32Error": 0,
+                "DueMs": 6848.40623076923,
+                "BeginMs": 6850.5996,
+                "EndMs": 6852.5238,
+                "JitterMs": 2.193369230769349,
+                "Inserted": 1
+              },
+              {
+                "Event": "down",
+                "Key": "Space",
+                "Detail": null,
+                "Attack": 5,
+                "Win32Error": 0,
+                "DueMs": 9212.32930769231,
+                "BeginMs": 9224.8403,
+                "EndMs": 9227.4707,
+                "JitterMs": 12.510992307690685,
+                "Inserted": 1
+              }
+            ],
+            "outcomes": [
+              "success",
+              "success",
+              "success",
+              "success",
+              "success",
+              "success"
+            ],
+            "outcome_order": [
+              "entry",
+              "attack1",
+              "attack2",
+              "attack3",
+              "attack4",
+              "attack5"
+            ],
+            "full_success": true,
+            "entry_warning_to_input_frames": 16,
+            "observed_intervals_seconds": [
+              2.2666666666666666,
+              1.5166666666666666,
+              1.75,
+              1.3,
+              2.3666666666666667
+            ],
+            "review_note": "Visually reviewed all6 rows: entry success effect/enhanced indication; successive response score increases at attacks1-4; final successful counter and part break at attack5. User independently reports full perfect response. All12 API down/up events accepted; this does not measure engine input-acceptance latency."
+          },
+          {
+            "id": "U2",
+            "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_23-44-50.mp4",
+            "log": "<PRIVATE_HOME>\\Documents\\Codex\\2026-09-14\\zzz-boss-pattern-feasibility\\outputs\\입력실험\\logs\\20260915_234457_370_9fbd64.json",
+            "attempt": 2,
+            "configuration_id": "full-v3-second-warning-a2plus200-a5minus250:A9144DD441959B3B",
+            "fps": 60,
+            "frame_count": 1413,
+            "events": [
+              {
+                "key": "f8",
+                "down": true,
+                "frame": 363
+              },
+              {
+                "key": "rmb",
+                "down": true,
+                "frame": 364
+              },
+              {
+                "key": "rmb",
+                "down": false,
+                "frame": 369
+              },
+              {
+                "key": "f8",
+                "down": false,
+                "frame": 372
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 501
+              },
+              {
+                "key": "space",
+                "down": false,
+                "frame": 507
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 591
+              },
+              {
+                "key": "space",
+                "down": false,
+                "frame": 596
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 695
+              },
+              {
+                "key": "space",
+                "down": false,
+                "frame": 702
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 774
+              },
+              {
+                "key": "space",
+                "down": false,
+                "frame": 779
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 916
+              },
+              {
+                "key": "space",
+                "down": false,
+                "frame": 922
+              }
+            ],
+            "f8": 363,
+            "warning_candidates": {
+              "250": 349,
+              "350": 349,
+              "450": 349,
+              "550": 349
+            },
+            "downs": [
+              {
+                "key": "rmb",
+                "down": true,
+                "frame": 364
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 501
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 591
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 695
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 774
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 916
+              }
+            ],
+            "interval_frames": [
+              137,
+              90,
+              104,
+              79,
+              142
+            ],
+            "api_down_events": [
+              {
+                "Event": "down",
+                "Key": "RMB",
+                "Detail": null,
+                "Attack": -1,
+                "Win32Error": 0,
+                "DueMs": 0,
+                "BeginMs": 7.2034,
+                "EndMs": 17.3007,
+                "JitterMs": 7.2034,
+                "Inserted": 1
+              },
+              {
+                "Event": "down",
+                "Key": "Space",
+                "Detail": null,
+                "Attack": 1,
+                "Win32Error": 0,
+                "DueMs": 2293.588015384616,
+                "BeginMs": 2297.6366,
+                "EndMs": 2299.157,
+                "JitterMs": 4.048584615383788,
+                "Inserted": 1
+              },
+              {
+                "Event": "down",
+                "Key": "Space",
+                "Detail": null,
+                "Attack": 2,
+                "Win32Error": 0,
+                "DueMs": 3795.1264769230775,
+                "BeginMs": 3803.6713,
+                "EndMs": 3804.8442,
+                "JitterMs": 8.544823076922512,
+                "Inserted": 1
+              },
+              {
+                "Event": "down",
+                "Key": "Space",
+                "Detail": null,
+                "Attack": 3,
+                "Win32Error": 0,
+                "DueMs": 5547.43416923077,
+                "BeginMs": 5552.7323,
+                "EndMs": 5553.9102,
+                "JitterMs": 5.298130769229829,
+                "Inserted": 1
+              },
+              {
+                "Event": "down",
+                "Key": "Space",
+                "Detail": null,
+                "Attack": 4,
+                "Win32Error": 0,
+                "DueMs": 6848.972630769231,
+                "BeginMs": 6850.2489,
+                "EndMs": 6851.9977,
+                "JitterMs": 1.2762692307687757,
+                "Inserted": 1
+              },
+              {
+                "Event": "down",
+                "Key": "Space",
+                "Detail": null,
+                "Attack": 5,
+                "Win32Error": 0,
+                "DueMs": 9212.895707692309,
+                "BeginMs": 9216.6232,
+                "EndMs": 9218.9519,
+                "JitterMs": 3.7274923076911364,
+                "Inserted": 1
+              }
+            ],
+            "outcomes": [
+              "success",
+              "success",
+              "success",
+              "success",
+              "success",
+              "success"
+            ],
+            "outcome_order": [
+              "entry",
+              "attack1",
+              "attack2",
+              "attack3",
+              "attack4",
+              "attack5"
+            ],
+            "full_success": true,
+            "entry_warning_to_input_frames": 15,
+            "observed_intervals_seconds": [
+              2.283333333333333,
+              1.5,
+              1.7333333333333334,
+              1.3166666666666667,
+              2.3666666666666667
+            ],
+            "review_note": "Visually reviewed all6 rows: entry success effect/enhanced indication; successive response score increases at attacks1-4; final successful counter and part break at attack5. User independently reports full perfect response. All12 API down/up events accepted; this does not measure engine input-acceptance latency."
+          },
+          {
+            "id": "U3",
+            "source": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_23-47-34.mp4",
+            "log": "<PRIVATE_HOME>\\Documents\\Codex\\2026-09-14\\zzz-boss-pattern-feasibility\\outputs\\입력실험\\logs\\20260915_234742_426_de0bfb.json",
+            "attempt": 3,
+            "configuration_id": "full-v3-second-warning-a2plus200-a5minus250:A9144DD441959B3B",
+            "fps": 60,
+            "frame_count": 1421,
+            "events": [
+              {
+                "key": "f8",
+                "down": true,
+                "frame": 417
+              },
+              {
+                "key": "rmb",
+                "down": true,
+                "frame": 419
+              },
+              {
+                "key": "rmb",
+                "down": false,
+                "frame": 424
+              },
+              {
+                "key": "f8",
+                "down": false,
+                "frame": 427
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 555
+              },
+              {
+                "key": "space",
+                "down": false,
+                "frame": 560
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 645
+              },
+              {
+                "key": "space",
+                "down": false,
+                "frame": 650
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 750
+              },
+              {
+                "key": "space",
+                "down": false,
+                "frame": 756
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 829
+              },
+              {
+                "key": "space",
+                "down": false,
+                "frame": 835
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 970
+              },
+              {
+                "key": "space",
+                "down": false,
+                "frame": 976
+              }
+            ],
+            "f8": 417,
+            "warning_candidates": {
+              "250": 405,
+              "350": 405,
+              "450": 405,
+              "550": 408
+            },
+            "downs": [
+              {
+                "key": "rmb",
+                "down": true,
+                "frame": 419
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 555
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 645
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 750
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 829
+              },
+              {
+                "key": "space",
+                "down": true,
+                "frame": 970
+              }
+            ],
+            "interval_frames": [
+              136,
+              90,
+              105,
+              79,
+              141
+            ],
+            "api_down_events": [
+              {
+                "Event": "down",
+                "Key": "RMB",
+                "Detail": null,
+                "Attack": -1,
+                "Win32Error": 0,
+                "DueMs": 0,
+                "BeginMs": 7.2072,
+                "EndMs": 24.6219,
+                "JitterMs": 7.2072,
+                "Inserted": 1
+              },
+              {
+                "Event": "down",
+                "Key": "Space",
+                "Detail": null,
+                "Attack": 1,
+                "Win32Error": 0,
+                "DueMs": 2293.591815384616,
+                "BeginMs": 2300.9001,
+                "EndMs": 2302.2833,
+                "JitterMs": 7.3082846153838545,
+                "Inserted": 1
+              },
+              {
+                "Event": "down",
+                "Key": "Space",
+                "Detail": null,
+                "Attack": 2,
+                "Win32Error": 0,
+                "DueMs": 3795.1302769230774,
+                "BeginMs": 3798.5286,
+                "EndMs": 3799.5498,
+                "JitterMs": 3.3983230769226793,
+                "Inserted": 1
+              },
+              {
+                "Event": "down",
+                "Key": "Space",
+                "Detail": null,
+                "Attack": 3,
+                "Win32Error": 0,
+                "DueMs": 5547.437969230769,
+                "BeginMs": 5547.4658,
+                "EndMs": 5548.9047,
+                "JitterMs": 0.027830769230604346,
+                "Inserted": 1
+              },
+              {
+                "Event": "down",
+                "Key": "Space",
+                "Detail": null,
+                "Attack": 4,
+                "Win32Error": 0,
+                "DueMs": 6848.97643076923,
+                "BeginMs": 6858.9965,
+                "EndMs": 6861.4154,
+                "JitterMs": 10.020069230769877,
+                "Inserted": 1
+              },
+              {
+                "Event": "down",
+                "Key": "Space",
+                "Detail": null,
+                "Attack": 5,
+                "Win32Error": 0,
+                "DueMs": 9212.89950769231,
+                "BeginMs": 9214.0678,
+                "EndMs": 9215.5525,
+                "JitterMs": 1.1682923076914449,
+                "Inserted": 1
+              }
+            ],
+            "outcomes": [
+              "success",
+              "success",
+              "success",
+              "success",
+              "success",
+              "success"
+            ],
+            "outcome_order": [
+              "entry",
+              "attack1",
+              "attack2",
+              "attack3",
+              "attack4",
+              "attack5"
+            ],
+            "full_success": true,
+            "entry_warning_to_input_frames": 14,
+            "observed_intervals_seconds": [
+              2.2666666666666666,
+              1.5,
+              1.75,
+              1.3166666666666667,
+              2.35
+            ],
+            "review_note": "Visually reviewed all6 rows: entry success effect/enhanced indication; successive response score increases at attacks1-4; final successful counter and part break at attack5. User independently reports full perfect response. All12 API down/up events accepted; this does not measure engine input-acceptance latency."
+          }
+        ],
+        "summary": {
+          "completed_trials": 3,
+          "full_successes": 3,
+          "entry_successes": 3,
+          "combo_successes": 15,
+          "combo_observations": 15,
+          "all_events_successes": 18,
+          "all_events_observations": 18,
+          "rate_caveat": "Three completed trials at same character/party/conditions. Does not establish90% population success or90% coverage of the native response window."
+        },
+        "execution_interruptions": [
+          {
+            "log": "outputs/입력실험/logs/20260915_234131_337_463c1a.json",
+            "status": "aborted",
+            "error": "게임 창을 벗어나 입력을 중지했습니다.",
+            "down_count": 1,
+            "included_in_completed_three": false
+          }
+        ],
+        "evidence": [
+          "outputs/evidence/full-v3-results.jpg"
+        ],
+        "decision": "Second-skill entry plus5-hit full response reproduced in all3 completed corrected-schedule trials. Timing feasibility gate for prerecorded practice prototype passed; no more boundary or hardware experiments required before implementation."
+      }
+    },
+    "implementation_handoff": {
+      "readiness": "ready_for_prerecorded_practice_prototype",
+      "scope": "Two Vesper control skills, entry included, correct key and timing practice, fast/late feedback and section repeat.",
+      "successful_references": [
+        {
+          "skill": 1,
+          "case": "R2",
+          "source_video": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_22-14-28.mp4",
+          "fps": 60,
+          "successful_overlay_notes": [
+            {
+              "event": "entry",
+              "key": "rmb",
+              "source_frame": 434,
+              "source_video_seconds": 7.233333333333333
+            },
+            {
+              "event": "attack1",
+              "key": "space",
+              "source_frame": 518,
+              "source_video_seconds": 8.633333333333333
+            },
+            {
+              "event": "attack2",
+              "key": "space",
+              "source_frame": 606,
+              "source_video_seconds": 10.1
+            },
+            {
+              "event": "attack3",
+              "key": "space",
+              "source_frame": 704,
+              "source_video_seconds": 11.733333333333333
+            },
+            {
+              "event": "attack4",
+              "key": "space",
+              "source_frame": 814,
+              "source_video_seconds": 13.566666666666666
+            }
+          ],
+          "use": "Successful input reference in the original video timeline. Adjust timestamps by any trim start; synchronize to playback time. This is a reference point, not measured acceptance-window endpoints."
+        },
+        {
+          "skill": 2,
+          "case": "U2",
+          "source_video": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-15_23-44-50.mp4",
+          "fps": 60,
+          "successful_overlay_notes": [
+            {
+              "event": "entry",
+              "key": "rmb",
+              "source_frame": 364,
+              "source_video_seconds": 6.066666666666666
+            },
+            {
+              "event": "attack1",
+              "key": "space",
+              "source_frame": 501,
+              "source_video_seconds": 8.35
+            },
+            {
+              "event": "attack2",
+              "key": "space",
+              "source_frame": 591,
+              "source_video_seconds": 9.85
+            },
+            {
+              "event": "attack3",
+              "key": "space",
+              "source_frame": 695,
+              "source_video_seconds": 11.583333333333334
+            },
+            {
+              "event": "attack4",
+              "key": "space",
+              "source_frame": 774,
+              "source_video_seconds": 12.9
+            },
+            {
+              "event": "attack5",
+              "key": "space",
+              "source_frame": 916,
+              "source_video_seconds": 15.266666666666667
+            }
+          ],
+          "use": "Successful input reference in the original video timeline. Adjust timestamps by any trim start; synchronize to playback time. This is a reference point, not measured acceptance-window endpoints."
+        }
+      ],
+      "remaining_implementation_checks": [
+        "Video/input clock synchronization across pause, seek and buffering.",
+        "Select explicit practice judgement width; do not claim native90% coverage.",
+        "User playtest for understandable feedback and training benefit."
+      ],
+      "additional_game_recording_required_before_implementation": false
+    }
+  }
+}

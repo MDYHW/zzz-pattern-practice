@@ -1,0 +1,621 @@
+{
+  "date": "2026-09-19",
+  "purpose": "Conditional GirReborn input-window candidates and first-batch design; no game input.",
+  "input_sha256": {
+    "docs/evidence/vesper-external-video-20260918.json": "319a173c2ed8905ff7baf515128e6744a731e202b46fccd656311024af1f274a",
+    "docs/evidence/girtablullu-external-video-20260919.json": "adc3763a9ed081036efb257a73932e65c31840ca2fc0f3ddbc00d616d3f5702c",
+    "docs/evidence/vesper-service-media-20260918.json": "3a71d6e1437239b90ad46330477604660512223b82de73ed50faaf5f2d7b8780"
+  },
+  "origin": {
+    "video_id": "JtB07dlEw_k",
+    "manual_anchor_frame": 6246,
+    "manual_anchor_pts_seconds": 104.2041,
+    "units": "milliseconds after selected readable Thai prompt frame, not detector-relative delays",
+    "local_transform": "If Delta_i = local corresponding scene time - reference scene time, and detector D is measured after local readable-prompt anchor, candidate detector delay = candidate + Delta_i - D. Common Delta is a hypothesis to check, not assumed from a different prompt/mode.",
+    "uncertainty": "Reference brackets about83ms wide; median proxy not event telemetry. Unknown device, character, key-routing and public-player timing position can shift all or individual candidates."
+  },
+  "method": {
+    "support_reference_formula": "tau = baseline reference_ms + (response_frame - overlay_frame)*1000/60",
+    "support_proxy_formula": "representative = gir response midpoint - median Vesper display gap; late = gir response midpoint + median Vesper selected-end minus reference-response offset; early = late - chosen width scenario. Round proposed values to50ms.",
+    "median_overlay_to_response_ms": 116.66666666666667,
+    "median_selected_end_relative_response_ms": 66.66666666666697,
+    "width_method": "Empirical analog categories plus Gir transition/preceding-gap modifiers. Values300/350/400/450 are hypothesis choices, not fitted engine constants or confidence bounds.",
+    "retrospective_method": "For each of9 Vesper supports, leave that row out of end-offset median and category width median. Short-following<=28, other following, terminal categories chosen after seeing the existing cases.",
+    "retrospective_limit": "Descriptive reconstruction, not blind or independent validation. Reference inputs were selected near window middles, so endpoint offsets partly reflect that selection. Public Gir player is assumed to act at a comparable interior position; that assumption is unverified.",
+    "entry_method": "Separately measured visual action-lock onset in two retained Vesper service clips, relative to their preserved experiment-to-clip origins. Transfer both selected entry-window offsets as competing scenarios; do not subtract support latency.",
+    "rejected": "Internal-window length times inter-response average rate remains nonpreferred: Vesper676.1/663.2/660.6ms does not explain selected widths and boundary failures."
+  },
+  "vesper_support_reapplication": [
+    {
+      "skill": "Execute_02",
+      "hit": 1,
+      "pre_gap": null,
+      "post_gap": 39,
+      "reference_input_ms": 4450,
+      "observed_overlay_to_response_ms": 133.33333333333334,
+      "reference_response_in_experiment_coordinates_ms": 4583.333333333333,
+      "selected_window_ms": [
+        4200,
+        4650
+      ],
+      "selected_width_ms": 450,
+      "selected_start_relative_response_ms": -383.33333333333303,
+      "selected_end_relative_response_ms": 66.66666666666697,
+      "category": "other_following",
+      "interpretive_width_ms": null,
+      "leave_one_out": {
+        "predicted_window_ms": [
+          4250.0,
+          4650.0
+        ],
+        "width_ms": 400.0,
+        "start_error_ms": 50.0,
+        "end_error_ms": 0.0
+      }
+    },
+    {
+      "skill": "Execute_02",
+      "hit": 2,
+      "pre_gap": 39,
+      "post_gap": 46,
+      "reference_input_ms": 5950,
+      "observed_overlay_to_response_ms": 133.33333333333334,
+      "reference_response_in_experiment_coordinates_ms": 6083.333333333333,
+      "selected_window_ms": [
+        5750,
+        6150
+      ],
+      "selected_width_ms": 400,
+      "selected_start_relative_response_ms": -333.33333333333303,
+      "selected_end_relative_response_ms": 66.66666666666697,
+      "category": "other_following",
+      "interpretive_width_ms": null,
+      "leave_one_out": {
+        "predicted_window_ms": [
+          5750.0,
+          6150.0
+        ],
+        "width_ms": 400.0,
+        "start_error_ms": 0.0,
+        "end_error_ms": 0.0
+      }
+    },
+    {
+      "skill": "Execute_02",
+      "hit": 3,
+      "pre_gap": 46,
+      "post_gap": 56,
+      "reference_input_ms": 7600,
+      "observed_overlay_to_response_ms": 100.0,
+      "reference_response_in_experiment_coordinates_ms": 7700.0,
+      "selected_window_ms": [
+        7400,
+        7800
+      ],
+      "selected_width_ms": 400,
+      "selected_start_relative_response_ms": -300.0,
+      "selected_end_relative_response_ms": 100.0,
+      "category": "other_following",
+      "interpretive_width_ms": 425,
+      "leave_one_out": {
+        "predicted_window_ms": [
+          7366.666666666667,
+          7766.666666666667
+        ],
+        "width_ms": 400.0,
+        "start_error_ms": -33.33333333333303,
+        "end_error_ms": -33.33333333333303
+      }
+    },
+    {
+      "skill": "Execute_02",
+      "hit": 4,
+      "pre_gap": 56,
+      "post_gap": null,
+      "reference_input_ms": 9400,
+      "observed_overlay_to_response_ms": 116.66666666666667,
+      "reference_response_in_experiment_coordinates_ms": 9516.666666666666,
+      "selected_window_ms": [
+        9150,
+        9600
+      ],
+      "selected_width_ms": 450,
+      "selected_start_relative_response_ms": -366.66666666666606,
+      "selected_end_relative_response_ms": 83.33333333333394,
+      "category": "terminal",
+      "interpretive_width_ms": null,
+      "leave_one_out": {
+        "predicted_window_ms": [
+          9133.333333333332,
+          9583.333333333332
+        ],
+        "width_ms": 450,
+        "start_error_ms": -16.66666666666788,
+        "end_error_ms": -16.66666666666788
+      }
+    },
+    {
+      "skill": "Execute_01",
+      "hit": 1,
+      "pre_gap": null,
+      "post_gap": 28,
+      "reference_input_ms": 6450,
+      "observed_overlay_to_response_ms": 116.66666666666667,
+      "reference_response_in_experiment_coordinates_ms": 6566.666666666667,
+      "selected_window_ms": [
+        6250,
+        6600
+      ],
+      "selected_width_ms": 350,
+      "selected_start_relative_response_ms": -316.66666666666697,
+      "selected_end_relative_response_ms": 33.33333333333303,
+      "category": "short_following",
+      "interpretive_width_ms": null,
+      "leave_one_out": {
+        "predicted_window_ms": [
+          6333.333333333334,
+          6633.333333333334
+        ],
+        "width_ms": 300,
+        "start_error_ms": 83.33333333333394,
+        "end_error_ms": 33.33333333333394
+      }
+    },
+    {
+      "skill": "Execute_01",
+      "hit": 2,
+      "pre_gap": 28,
+      "post_gap": 58,
+      "reference_input_ms": 7700,
+      "observed_overlay_to_response_ms": 133.33333333333334,
+      "reference_response_in_experiment_coordinates_ms": 7833.333333333333,
+      "selected_window_ms": [
+        7500,
+        7900
+      ],
+      "selected_width_ms": 400,
+      "selected_start_relative_response_ms": -333.33333333333303,
+      "selected_end_relative_response_ms": 66.66666666666697,
+      "category": "other_following",
+      "interpretive_width_ms": null,
+      "leave_one_out": {
+        "predicted_window_ms": [
+          7500.0,
+          7900.0
+        ],
+        "width_ms": 400.0,
+        "start_error_ms": 0.0,
+        "end_error_ms": 0.0
+      }
+    },
+    {
+      "skill": "Execute_01",
+      "hit": 3,
+      "pre_gap": 58,
+      "post_gap": 28,
+      "reference_input_ms": 9500,
+      "observed_overlay_to_response_ms": 116.66666666666667,
+      "reference_response_in_experiment_coordinates_ms": 9616.666666666666,
+      "selected_window_ms": [
+        9350,
+        9650
+      ],
+      "selected_width_ms": 300,
+      "selected_start_relative_response_ms": -266.66666666666606,
+      "selected_end_relative_response_ms": 33.33333333333394,
+      "category": "short_following",
+      "interpretive_width_ms": null,
+      "leave_one_out": {
+        "predicted_window_ms": [
+          9333.333333333332,
+          9683.333333333332
+        ],
+        "width_ms": 350,
+        "start_error_ms": -16.66666666666788,
+        "end_error_ms": 33.33333333333212
+      }
+    },
+    {
+      "skill": "Execute_01",
+      "hit": 4,
+      "pre_gap": 28,
+      "post_gap": 88,
+      "reference_input_ms": 10850,
+      "observed_overlay_to_response_ms": 116.66666666666667,
+      "reference_response_in_experiment_coordinates_ms": 10966.666666666666,
+      "selected_window_ms": [
+        10650,
+        11050
+      ],
+      "selected_width_ms": 400,
+      "selected_start_relative_response_ms": -316.66666666666606,
+      "selected_end_relative_response_ms": 83.33333333333394,
+      "category": "other_following",
+      "interpretive_width_ms": null,
+      "leave_one_out": {
+        "predicted_window_ms": [
+          10633.333333333332,
+          11033.333333333332
+        ],
+        "width_ms": 400.0,
+        "start_error_ms": -16.66666666666788,
+        "end_error_ms": -16.66666666666788
+      }
+    },
+    {
+      "skill": "Execute_01",
+      "hit": 5,
+      "pre_gap": 88,
+      "post_gap": null,
+      "reference_input_ms": 13200,
+      "observed_overlay_to_response_ms": 150.0,
+      "reference_response_in_experiment_coordinates_ms": 13350.0,
+      "selected_window_ms": [
+        12950,
+        13400
+      ],
+      "selected_width_ms": 450,
+      "selected_start_relative_response_ms": -400.0,
+      "selected_end_relative_response_ms": 50.0,
+      "category": "terminal",
+      "interpretive_width_ms": null,
+      "leave_one_out": {
+        "predicted_window_ms": [
+          12966.666666666668,
+          13416.666666666668
+        ],
+        "width_ms": 450,
+        "start_error_ms": 16.66666666666788,
+        "end_error_ms": 16.66666666666788
+      }
+    }
+  ],
+  "reapplication_summary": {
+    "maximum_absolute_start_error_ms": 83.33333333333394,
+    "maximum_absolute_end_error_ms": 33.33333333333394,
+    "maximum_absolute_width_error_ms": 50.0,
+    "interpretive_425_sensitivity": "Replacing only Execute_02 hit3 width400 by interpretive425 in comparison makes that row width discrepancy25ms; this is not an observed label or replacement for service400."
+  },
+  "vesper_failure_reapplication": [
+    {
+      "skill": "Execute_02",
+      "hit": 1,
+      "reported_failure_or_unstable_candidates_ms": [
+        4150,
+        4700
+      ],
+      "inside_predicted_window_ms": []
+    },
+    {
+      "skill": "Execute_02",
+      "hit": 2,
+      "reported_failure_or_unstable_candidates_ms": [
+        5700,
+        6200,
+        6250
+      ],
+      "inside_predicted_window_ms": []
+    },
+    {
+      "skill": "Execute_02",
+      "hit": 3,
+      "reported_failure_or_unstable_candidates_ms": [
+        7350,
+        7850
+      ],
+      "inside_predicted_window_ms": []
+    },
+    {
+      "skill": "Execute_02",
+      "hit": 4,
+      "reported_failure_or_unstable_candidates_ms": [
+        9100,
+        9650
+      ],
+      "inside_predicted_window_ms": []
+    }
+  ],
+  "failure_limits": "Listed boundary points had failures or unstable outcomes in documented conditions; some also succeeded. Excluding them is not a failure classifier or proof of all interior successes. Preserve entry3250 past hit and unassigned preceding results.",
+  "entry_reapplication": [
+    {
+      "skill": "Execute_02",
+      "clip": "public/media/vesper-execute-02.mp4",
+      "sha256": "ebaf58f3393d52a5e0a9747b0b2242bf536a61f510ade468bcca6f32bfe01082",
+      "response_definition": "Ordinary attack and E icons first darken together as entry transition begins; onset bracket in decoded service clip frames.",
+      "frame_bracket": [
+        210,
+        212
+      ],
+      "original_frame_bracket": [
+        515,
+        517
+      ],
+      "source_overlay_down_frame": 504,
+      "response_experiment_ms": [
+        3350.0,
+        3383.333333333333
+      ],
+      "reference_input_ms": 3150,
+      "reference_to_response_midpoint_ms": 216.66666666666652,
+      "selected_window_ms": [
+        3050,
+        3250
+      ],
+      "window_relative_response_midpoint_ms": [
+        -316.6666666666665,
+        -116.66666666666652
+      ],
+      "evidence_image": "girtablullu-entry-analogy-execute_02-20260919.jpg",
+      "cross_skill_transfer": {
+        "using": "Execute_01",
+        "predicted_window_ms": [
+          2950.0000000000005,
+          3100.0000000000005
+        ],
+        "warning": "Cross-skill endpoint errors reach 100-150ms; no universal dodge latency."
+      },
+      "evidence_sha256": "c61ea8d4fbd431d9018c2f6a1a3794e18b0a82bc4ca960368366ae2416e5235e"
+    },
+    {
+      "skill": "Execute_01",
+      "clip": "public/media/vesper-execute-01.mp4",
+      "sha256": "dcc241feb52e78a7d3d61704a8902d39a7b77b15f492d8a2246f3cf8fccb41b4",
+      "response_definition": "Ordinary attack and E icons first darken together as entry transition begins; onset bracket in decoded service clip frames.",
+      "frame_bracket": [
+        274,
+        276
+      ],
+      "original_frame_bracket": [
+        613,
+        615
+      ],
+      "source_overlay_down_frame": 597,
+      "response_experiment_ms": [
+        4499.999999999999,
+        4533.333333333333
+      ],
+      "reference_input_ms": 4200,
+      "reference_to_response_midpoint_ms": 316.66666666666606,
+      "selected_window_ms": [
+        4100,
+        4250
+      ],
+      "window_relative_response_midpoint_ms": [
+        -416.66666666666606,
+        -266.66666666666606
+      ],
+      "evidence_image": "girtablullu-entry-analogy-execute_01-20260919.jpg",
+      "cross_skill_transfer": {
+        "using": "Execute_02",
+        "predicted_window_ms": [
+          4200.0,
+          4400.0
+        ],
+        "warning": "Cross-skill endpoint errors reach 100-150ms; no universal dodge latency."
+      },
+      "evidence_sha256": "57e9ca8504599c34654b0386fb365066e6db7ffe6fdeb8f74468e5a97b554ec0"
+    }
+  ],
+  "girtablullu_candidates": [
+    {
+      "action": "entry",
+      "internal_window": [
+        199,
+        230
+      ],
+      "primary_window_ms": [
+        3900,
+        4100
+      ],
+      "primary_width_ms": 200,
+      "representative_ms": 4000,
+      "alternative_windows_ms": [
+        [
+          3800,
+          3950
+        ]
+      ],
+      "alternative_representative_ms": 3900,
+      "reason": "Use Execute_02 entry analogy first (listen width30 versus Gir31); keep Execute_01 150ms entry template as an earlier competing scenario. Similar internal width is not proportional time conversion.",
+      "response_bracket_ms": [
+        4154.156000000001,
+        4237.567
+      ],
+      "unrounded_entry_analogy_windows_ms": [
+        {
+          "template": "Execute_02",
+          "window_ms": [
+            3879.1948333333335,
+            4079.1948333333335
+          ]
+        },
+        {
+          "template": "Execute_01",
+          "window_ms": [
+            3779.194833333334,
+            3929.194833333334
+          ]
+        }
+      ],
+      "status": "conditional prediction, untested; not a service or executable setting"
+    },
+    {
+      "action": "support_1",
+      "internal_window": [
+        18,
+        48
+      ],
+      "first_open": 18,
+      "pre_gap": null,
+      "post_gap": 22,
+      "primary_window_ms": [
+        5450,
+        5750
+      ],
+      "primary_width_ms": 300,
+      "representative_ms": 5600,
+      "alternative_windows_ms": [
+        [
+          5400,
+          5750
+        ]
+      ],
+      "reason": "Short following gap22 versus Vesper28 short-following cases350/300; opening18 versus34 adds transition concern. 300 preferred to350 as a hypothesis, not a lower bound.",
+      "response_bracket_ms": [
+        5655.656,
+        5739.067
+      ],
+      "unrounded_representative_proxy_ms": 5580.694833333332,
+      "unrounded_late_proxy_ms": 5764.028166666666,
+      "status": "conditional prediction, untested; not a service or executable setting"
+    },
+    {
+      "action": "support_2",
+      "internal_window": [
+        70,
+        100
+      ],
+      "pre_gap": 22,
+      "post_gap": 34,
+      "primary_window_ms": [
+        6500,
+        6850
+      ],
+      "primary_width_ms": 350,
+      "representative_ms": 6650,
+      "alternative_windows_ms": [
+        [
+          6550,
+          6850
+        ],
+        [
+          6450,
+          6850
+        ]
+      ],
+      "reason": "Between short-following300/350 and longer-following400 cases, with unusually short preceding gap22. Compare300/350/400 rather than impose a gap-linear equation.",
+      "response_bracket_ms": [
+        6740.067,
+        6823.4890000000005
+      ],
+      "unrounded_representative_proxy_ms": 6665.111333333333,
+      "unrounded_late_proxy_ms": 6848.444666666667,
+      "status": "conditional prediction, untested; not a service or executable setting"
+    },
+    {
+      "action": "support_3",
+      "internal_window": [
+        134,
+        164
+      ],
+      "pre_gap": 34,
+      "post_gap": null,
+      "primary_window_ms": [
+        7850,
+        8250
+      ],
+      "primary_width_ms": 400,
+      "representative_ms": 8100,
+      "alternative_windows_ms": [
+        [
+          7800,
+          8250
+        ]
+      ],
+      "reason": "Vesper final supports450 but preceding gaps56/88 versus34; compare400 with450. Preserve Execute_02 interpretive425 as evidence of uncertainty, not an extra25ms test.",
+      "response_bracket_ms": [
+        8158.156,
+        8241.567
+      ],
+      "unrounded_representative_proxy_ms": 8083.194833333334,
+      "unrounded_late_proxy_ms": 8266.528166666667,
+      "status": "conditional prediction, untested; not a service or executable setting"
+    }
+  ],
+  "comparison_sources": {
+    "secondary_id": "EjOtsszBewo",
+    "secondary_minus_primary_response_ms": [
+      187.4715,
+      -114.0285,
+      201.555,
+      383.4715
+    ],
+    "use": "Not a second success or shared timing bound. Nonuniform deltas challenge a universal prompt-to-action schedule.",
+    "third_id": "oRMiteZP62M",
+    "third_use": "Korean prompt/form reference only; no input timing fabricated."
+  },
+  "first_batch": {
+    "question": "Does the predicted common route work, and do primary early/late combinations survive preceding timing changes? Use one matched ON/OFF comparison if earlier results make it useful.",
+    "proposed_party": "Prefer previously used Aria -> Nangong Yu -> Sunna, starting Aria, to reuse player-side context. This is a proposed condition, not a new Gir observation; verify actual support route and separate PowerStruggle.",
+    "time_origin": "Table reference coordinates only; resolve detector D/scene Delta and key route before future executable implementation.",
+    "trials": [
+      {
+        "n": 1,
+        "condition": "representative",
+        "recording": "ON",
+        "times_ms": [
+          4000,
+          5600,
+          6650,
+          8100
+        ]
+      },
+      {
+        "n": 2,
+        "condition": "all early",
+        "recording": "ON",
+        "times_ms": [
+          3900,
+          5450,
+          6500,
+          7850
+        ]
+      },
+      {
+        "n": 3,
+        "condition": "all late",
+        "recording": "ON",
+        "times_ms": [
+          4100,
+          5750,
+          6850,
+          8250
+        ]
+      },
+      {
+        "n": 4,
+        "condition": "entry+support2 early; support1+3 late",
+        "recording": "ON",
+        "times_ms": [
+          3900,
+          5750,
+          6500,
+          8250
+        ]
+      },
+      {
+        "n": 5,
+        "condition": "entry+support2 late; support1+3 early",
+        "recording": "ON",
+        "times_ms": [
+          4100,
+          5450,
+          6850,
+          7850
+        ]
+      },
+      {
+        "n": 6,
+        "condition": "Repeat one earlier complete condition OFF; if all pass choose all-late, otherwise choose a normal-path failing condition for ON/OFF contrast",
+        "recording": "OFF",
+        "times_ms": null
+      }
+    ],
+    "branch": "If trial1 entry fails, replace the next trial with earlier entry3900 and unchanged supports, then review. If a support fails, preserve the successful prefix and use remaining budget to shift only that support/resolve route. Do not execute the edge matrix after a failed reference route.",
+    "stop": "Stop this batch when baseline and tested combinations support primary candidate selection, or a counterexample identifies the next local question. No automatic testing of every wider alternative; no six-trial success-rate claim.",
+    "recording_limit": "One matched OFF comparison can expose a discrepancy, not establish its direction or validate all OFF endpoints. OFF outcomes require user report, unknown is not success."
+  },
+  "actual_game_inputs": 0,
+  "experiment_program_changed": false,
+  "service_values_changed": false
+}

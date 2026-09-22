@@ -1,0 +1,398 @@
+{
+  "date": "2026-09-22",
+  "status": "completed",
+  "scope": "Last-RMB representative and last-response A/B extension; entry Space remains unmeasured",
+  "sources": [
+    {
+      "id": 1,
+      "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-22_12-08-35.mp4",
+      "sha256": "143e6ccfa14b75d67b7958b35c26a0b160b1a26d18dce4941b566672488c7bc2"
+    },
+    {
+      "id": 2,
+      "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-22_12-13-39.mp4",
+      "sha256": "435859a9de00923db3ed137bf290b81b69d1b8561b9bda4575d38e45587df12e"
+    }
+  ],
+  "recordings": [
+    {
+      "contentId": "mirage-archer-unit-attack-09",
+      "variant": "last-rmb",
+      "bossId": "mirage-archer-unit",
+      "skill": "Attack_09",
+      "source": "ZZZ_2026-09-22_12-08-35.mp4",
+      "sourceSha256": "143e6ccfa14b75d67b7958b35c26a0b160b1a26d18dce4941b566672488c7bc2",
+      "fps": 60,
+      "firstSourceFrame": 648,
+      "endSourceFrameExclusive": 1730,
+      "patternOriginSourceFrame": 768,
+      "patternTimeZeroAtClipTime": 2,
+      "sourceOverlayDownFrames": [
+        1024,
+        1152,
+        1257,
+        1341,
+        1485
+      ],
+      "actionKeys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "RMB"
+      ],
+      "windowsMs": [
+        [
+          4150,
+          4350
+        ],
+        [
+          6250,
+          6550
+        ],
+        [
+          7950,
+          8350
+        ],
+        [
+          9400,
+          9700
+        ],
+        [
+          11850,
+          12050
+        ]
+      ],
+      "referenceMs": [
+        4266.666666666667,
+        6400.0,
+        8150.0,
+        9550.0,
+        11950.0
+      ],
+      "clip": "media/mirage-archer-unit-attack-09-rmb.mp4",
+      "clipSha256": "e7986a0805803f403d1f929a71dfa5cee2adf34c47e74b5197115b7aadbdcec4",
+      "posterSha256": "7c22f5dd693afba2cc799406173a92d3f57405238169d4ceb6d45eae4d0a2654",
+      "qteVisibleBySourceFrame": 1505,
+      "perfectResponseVisibleBySourceFrame": 1620,
+      "visualReview": "Full five-response success, RMB blue dodge and QTE followed by perfect-response banner. Clip starts two seconds before notice and retains QTE and final banner; no per-entry video variants."
+    }
+  ],
+  "replay": [
+    {
+      "frames": 1819,
+      "first": 768,
+      "confirmed": 771,
+      "expected_first_low": 650,
+      "expected_first_high": 800,
+      "expected_last_high": 1100,
+      "passed": true,
+      "native_input_calls": 0
+    },
+    {
+      "frames": 1391,
+      "first": 438,
+      "confirmed": 441,
+      "expected_first_low": 400,
+      "expected_first_high": 570,
+      "expected_last_high": 900,
+      "passed": true,
+      "native_input_calls": 0
+    }
+  ],
+  "manualRecovery": {
+    "sourceIndex": 1,
+    "originFrame": 438,
+    "entryRmbFrame": 707,
+    "spaceFrames": [
+      828,
+      936,
+      1030,
+      1123
+    ],
+    "lastRmbFrame": 1145,
+    "lastSpaceMs": 11416.666666666666,
+    "lastRmbMs": 11783.333333333334,
+    "spaceToRmbMs": 366.66666666666663,
+    "dodgeVisibleByFrame": 1170,
+    "perfectResponse": false,
+    "qteObserved": false,
+    "interpretation": "Early final Space switches character, then RMB produces dodge blue effect. Earlier entry and hit3 are late; this is recovery-route evidence, not a normal-prefix last-RMB boundary. Its 11783ms RMB is outside the conservative service interval."
+  },
+  "trials": [
+    {
+      "trialId": "467ed538af1242559940d8672a56c160",
+      "startedLocal": "2026-09-22T11:59:01.8062527+09:00",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "RMB"
+      ],
+      "delaysMs": [
+        4250,
+        6400,
+        8150,
+        9550,
+        11850
+      ],
+      "userResultBits": "11111",
+      "precedingActionsSuccessfulForLast": true,
+      "raw": {
+        "path": "<PRIVATE_HOME>/.codex/worktrees/f815/zzz-pattern-practice/.local/experiment-build/notice-logs/trial-a94aa772cb3049c08512f8b5037c2f59.json",
+        "sha256": "f1b79cdc146b87c4d165151e6c19f19ec764cf34a91b214aac9efb01bd61a883",
+        "resultPath": "<PRIVATE_HOME>/.codex/worktrees/f815/zzz-pattern-practice/.local/experiment-build/notice-logs/trial-a94aa772cb3049c08512f8b5037c2f59.json.result.json",
+        "resultSha256": "4edd437b3558a531ec90efd153ebc095a4e4e8462f320ae16de66b800632457b",
+        "resultRawSha256Matches": true,
+        "detectedImagePath": "<PRIVATE_HOME>/.codex/worktrees/f815/zzz-pattern-practice/.local/experiment-build/notice-logs/trial-a94aa772cb3049c08512f8b5037c2f59.png",
+        "detectedImageSha256": "f21a01040a911acf1a9e4382049457946689384334af32933a03719774cc469b"
+      },
+      "recording": {
+        "atF8": "OFF",
+        "basis": "stale UNKNOWN treated as OFF",
+        "recordingId": null,
+        "outputPath": null
+      }
+    },
+    {
+      "trialId": "c9812492a0124e6e98e2821a745c8ef4",
+      "startedLocal": "2026-09-22T12:00:28.8062044+09:00",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "RMB"
+      ],
+      "delaysMs": [
+        4250,
+        6400,
+        8150,
+        9550,
+        11750
+      ],
+      "userResultBits": "11110",
+      "precedingActionsSuccessfulForLast": true,
+      "raw": {
+        "path": "<PRIVATE_HOME>/.codex/worktrees/f815/zzz-pattern-practice/.local/experiment-build/notice-logs/trial-e0caba8f748b45668a1f3d8f8d06f2ac.json",
+        "sha256": "8bcd7f2366d341dfc01876d70166c2abc2cacaa0b84ad695c0afba3a77e62880",
+        "resultPath": "<PRIVATE_HOME>/.codex/worktrees/f815/zzz-pattern-practice/.local/experiment-build/notice-logs/trial-e0caba8f748b45668a1f3d8f8d06f2ac.json.result.json",
+        "resultSha256": "726d50718e09f3aa0fada2a30d97a76cf53f543eaefa0d09087877092a9b5492",
+        "resultRawSha256Matches": true,
+        "detectedImagePath": "<PRIVATE_HOME>/.codex/worktrees/f815/zzz-pattern-practice/.local/experiment-build/notice-logs/trial-e0caba8f748b45668a1f3d8f8d06f2ac.png",
+        "detectedImageSha256": "4f248f09f458436e30e18b70f5ae98199dafcd77de7a2e5546d6fbdb7a21dc58"
+      },
+      "recording": {
+        "atF8": "OFF",
+        "basis": "stale UNKNOWN treated as OFF",
+        "recordingId": null,
+        "outputPath": null
+      }
+    },
+    {
+      "trialId": "fa94559b8475466b94b1cff6a5b0933c",
+      "startedLocal": "2026-09-22T12:02:00.285485+09:00",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "RMB"
+      ],
+      "delaysMs": [
+        4250,
+        6400,
+        8150,
+        9550,
+        11800
+      ],
+      "userResultBits": "11110",
+      "precedingActionsSuccessfulForLast": true,
+      "raw": {
+        "path": "<PRIVATE_HOME>/.codex/worktrees/f815/zzz-pattern-practice/.local/experiment-build/notice-logs/trial-634f17d284c64c75980e4f505945743e.json",
+        "sha256": "6fbc5bc4234eddd04a37385c3b14471d4c049bc03cbf5a9e1afde23637e5df3b",
+        "resultPath": "<PRIVATE_HOME>/.codex/worktrees/f815/zzz-pattern-practice/.local/experiment-build/notice-logs/trial-634f17d284c64c75980e4f505945743e.json.result.json",
+        "resultSha256": "8587db455672bbe1ef8e129ad2d8a7216570b8530b9954f5897d6d71d9246f66",
+        "resultRawSha256Matches": true,
+        "detectedImagePath": "<PRIVATE_HOME>/.codex/worktrees/f815/zzz-pattern-practice/.local/experiment-build/notice-logs/trial-634f17d284c64c75980e4f505945743e.png",
+        "detectedImageSha256": "25b2ef9b7718257c3247dcbf6b1733ae939fd06d57980f1ca4f288fe517d4ab2"
+      },
+      "recording": {
+        "atF8": "OFF",
+        "basis": "stale UNKNOWN treated as OFF",
+        "recordingId": null,
+        "outputPath": null
+      }
+    },
+    {
+      "trialId": "87a9a613167f4af1aeea450cc0f7d8e9",
+      "startedLocal": "2026-09-22T12:03:42.4521207+09:00",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "RMB"
+      ],
+      "delaysMs": [
+        4100,
+        6400,
+        8150,
+        9550,
+        12100
+      ],
+      "userResultBits": "11110",
+      "precedingActionsSuccessfulForLast": true,
+      "raw": {
+        "path": "<PRIVATE_HOME>/.codex/worktrees/f815/zzz-pattern-practice/.local/experiment-build/notice-logs/trial-c7c31ef3f2954c389c6ce489d9dab6f6.json",
+        "sha256": "3e8dfc3499b32cf5ca50e8b57627da5b2785aa8ff11370e48519c2d5970d1f24",
+        "resultPath": "<PRIVATE_HOME>/.codex/worktrees/f815/zzz-pattern-practice/.local/experiment-build/notice-logs/trial-c7c31ef3f2954c389c6ce489d9dab6f6.json.result.json",
+        "resultSha256": "6da9358b1791575d88deab66a9af18803c4aab7ec136788f9f5717935f561721",
+        "resultRawSha256Matches": true,
+        "detectedImagePath": "<PRIVATE_HOME>/.codex/worktrees/f815/zzz-pattern-practice/.local/experiment-build/notice-logs/trial-c7c31ef3f2954c389c6ce489d9dab6f6.png",
+        "detectedImageSha256": "7e3b5aed724f9cf1a55e9b2b550e824f05b7264f4312e9d21affd75684330793"
+      },
+      "recording": {
+        "atF8": "OFF",
+        "basis": "stale UNKNOWN treated as OFF",
+        "recordingId": null,
+        "outputPath": null
+      }
+    },
+    {
+      "trialId": "9483c8c53df9435c84adea7e6b05cbd0",
+      "startedLocal": "2026-09-22T12:05:05.0603305+09:00",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "RMB"
+      ],
+      "delaysMs": [
+        4100,
+        6400,
+        8150,
+        9550,
+        12050
+      ],
+      "userResultBits": "01111",
+      "precedingActionsSuccessfulForLast": false,
+      "raw": {
+        "path": "<PRIVATE_HOME>/.codex/worktrees/f815/zzz-pattern-practice/.local/experiment-build/notice-logs/trial-3024bef88730422fa89fefbd282d7ddd.json",
+        "sha256": "7cf1df35364fdd2850e3a1f31a51d9c17a7bbc669b44f336abe6c93a321fe8be",
+        "resultPath": "<PRIVATE_HOME>/.codex/worktrees/f815/zzz-pattern-practice/.local/experiment-build/notice-logs/trial-3024bef88730422fa89fefbd282d7ddd.json.result.json",
+        "resultSha256": "da7bd70cdb4c42a187b9d07a30ca2e57973efdd9c4c804d5e1284a9995d27e65",
+        "resultRawSha256Matches": true,
+        "detectedImagePath": "<PRIVATE_HOME>/.codex/worktrees/f815/zzz-pattern-practice/.local/experiment-build/notice-logs/trial-3024bef88730422fa89fefbd282d7ddd.png",
+        "detectedImageSha256": "84d8607f704a6aee7434c9d04edf60f85f8259fbcd314d3b0f0cbbea691c2bbb"
+      },
+      "recording": {
+        "atF8": "OFF",
+        "basis": "stale UNKNOWN treated as OFF",
+        "recordingId": null,
+        "outputPath": null
+      }
+    },
+    {
+      "trialId": "53581e707ac6420a8f50491b5ace86e0",
+      "startedLocal": "2026-09-22T12:08:43.4900986+09:00",
+      "keys": [
+        "RMB",
+        "Space",
+        "Space",
+        "Space",
+        "RMB"
+      ],
+      "delaysMs": [
+        4250,
+        6400,
+        8150,
+        9550,
+        11950
+      ],
+      "userResultBits": "11111",
+      "precedingActionsSuccessfulForLast": true,
+      "raw": {
+        "path": "<PRIVATE_HOME>/.codex/worktrees/f815/zzz-pattern-practice/.local/experiment-build/notice-logs/trial-c3965c1132d4480aa7325db1e06c8bd8.json",
+        "sha256": "31388b469ddec7a51a7a5c9df5c4e49c438a8ef995539f299da4a1278e539684",
+        "resultPath": "<PRIVATE_HOME>/.codex/worktrees/f815/zzz-pattern-practice/.local/experiment-build/notice-logs/trial-c3965c1132d4480aa7325db1e06c8bd8.json.result.json",
+        "resultSha256": "01df47f9584c97bf8674240b5b165436d9c8c0bca1271b755223734a3ab34d2a",
+        "resultRawSha256Matches": true,
+        "detectedImagePath": "<PRIVATE_HOME>/.codex/worktrees/f815/zzz-pattern-practice/.local/experiment-build/notice-logs/trial-c3965c1132d4480aa7325db1e06c8bd8.png",
+        "detectedImageSha256": "9813fca571bed20698286e8038206497b1e76f42f812251f324ebc49c93ba7b7"
+      },
+      "recording": {
+        "atF8": "ON",
+        "recordingId": "obs-9336885786ce48fda94ee57d16a94533",
+        "outputPath": "<PRIVATE_HOME>/Videos/ZZZ_2026-09-22_12-08-35.mp4",
+        "videoSha256": "143e6ccfa14b75d67b7958b35c26a0b160b1a26d18dce4941b566672488c7bc2"
+      }
+    }
+  ],
+  "adoption": {
+    "windowsMs": [
+      11850,
+      12050
+    ],
+    "baselineMs": 11950,
+    "basis": "User explicitly directed the late endpoint to 12050ms. Keep the 01111 failed-entry condition of that success; 11850 and 11950 have 11111 successes.",
+    "normalPrefixSuccessMs": [
+      11850,
+      11950
+    ],
+    "normalPrefixFailureMs": [
+      11750,
+      11800,
+      12100
+    ],
+    "lateEndpointResult": "01111",
+    "entrySpace": "unmeasured; not offered"
+  },
+  "overlayReview": {
+    "falseRmbCandidateSourceFrames": [
+      1269,
+      1270
+    ],
+    "decision": "Golden hit effect contaminates the overlay crop; no corresponding RMB in the five-action execution log. Not promoted to an input."
+  },
+  "implementation": {
+    "A": "Select final Space or RMB before playback; matching representative clip.",
+    "B": "Fixed final-RMB reference clip; last action accepts either key only inside its own interval. One scored event.",
+    "videoBranch": "Final action only; no per-entry clips and no live input-driven video splice.",
+    "qte": "Retained in video tail; no sixth scored event.",
+    "manualRecoveryLimit": "The recorded earlier 11783ms recovery is outside the adopted 11850ms start. Do not claim this conservative lane reproduces its exact timing or a character-state transition."
+  },
+  "checks": {
+    "typecheck": "passed",
+    "unitTests": 95,
+    "build": "passed",
+    "browserTests": 4,
+    "mediaAlignment": "passed; five references match clip overlay within two frames",
+    "nativeInputCalls": 0,
+    "visualReview": [
+      "B final Space-base/RMB-slope and one centered representative icon",
+      "B result5/5 with one early-Space extra and successful RMB",
+      "390px controls without overflow"
+    ],
+    "scope": "Local website and saved-video analysis, no real-game inputs, no deployment",
+    "independentReview": "Core judgment and Results reviewed separately; no findings. Controller reviewed integration and rendered browser outputs.",
+    "finalVisualRetest": "Mirage B passed again after Korean line-wrap adjustment"
+  },
+  "sourceAvailability": {
+    "asOf": "2026-09-22",
+    "inventory": "docs/evidence/experiment-cleanup.json#/current",
+    "retainedOriginals": [
+      "ZZZ_2026-09-22_03-02-21.mp4",
+      "ZZZ_2026-09-22_12-08-35.mp4",
+      "ZZZ_2026-09-22_13-50-10.mp4"
+    ],
+    "retainedTrialIds": [
+      "f458ddae93024a70974794805167e726",
+      "f0ef0f89899741b282aaf610046316be",
+      "53581e707ac6420a8f50491b5ace86e0"
+    ],
+    "rule": "Only listed representative originals/trials remain. Other historical paths and hashes are provenance for summarized observations, not replayable files. Derived contact sheets/replay output were removed; final values, frame annotations and limitations remain here."
+  }
+}
