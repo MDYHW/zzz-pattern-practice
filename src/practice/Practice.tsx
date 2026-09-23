@@ -73,6 +73,16 @@ export function Practice({ content, choices = [content], onSelect, onEntryChange
 
   useLayoutEffect(() => {
     const main = practiceRef.current!;
+    const surface = session.surfaceRef.current!;
+    const measure = () => main.style.setProperty('--surface-height', `${surface.offsetHeight}px`);
+    const observer = new ResizeObserver(measure);
+    observer.observe(surface);
+    measure();
+    return () => observer.disconnect();
+  }, [session.surfaceRef]);
+
+  useLayoutEffect(() => {
+    const main = practiceRef.current!;
     const rhythm = main.querySelector<HTMLElement>('.guide');
     if (!rhythm) return;
     const measure = () => main.style.setProperty('--guide-height', `${rhythm.offsetHeight}px`);
@@ -118,16 +128,16 @@ export function Practice({ content, choices = [content], onSelect, onEntryChange
             </select></label>}
             {onLaneLayoutChange && laneLayout === 'overlap' && <button className="quiet" aria-label="레인 아이콘 표시" aria-pressed={!display.hideIcons}
               onClick={() => { onDisplayChange({ ...display, hideIcons: !display.hideIcons }); if (active) session.surfaceRef.current?.focus({ preventScroll: true }); }}>
-              레인 아이콘 <span>{display.hideIcons ? '꺼짐' : '켜짐'}</span></button>}
-            <button className="quiet" aria-label="리듬 안내 표시" aria-pressed={guide} onClick={toggleGuide}>리듬 안내 <span>{guide ? '켜짐' : '꺼짐'}</span></button>
+              레인 아이콘 <span>{display.hideIcons ? 'OFF' : 'ON'}</span></button>}
+            <button className="quiet" aria-label="리듬 안내 표시" aria-pressed={guide} onClick={toggleGuide}>리듬 안내 <span>{guide ? 'ON' : 'OFF'}</span></button>
             {!!content.recordedInputMasks?.length && <button className="quiet" aria-pressed={hideRecordedInput} onClick={() => {
               onDisplayChange({ ...display, hideRecordedInput: !hideRecordedInput });
               if (active) session.surfaceRef.current?.focus({ preventScroll: true });
-            }}>녹화 입력 가리기 <span>{hideRecordedInput ? '켜짐' : '꺼짐'}</span></button>}
+            }}>녹화 입력 가리기 <span>{hideRecordedInput ? 'ON' : 'OFF'}</span></button>}
             {!!content.gameInputMasks?.length && <button className="quiet" aria-pressed={hideGameInput} onClick={() => {
               onDisplayChange({ ...display, hideGameInput: !hideGameInput });
               if (active) session.surfaceRef.current?.focus({ preventScroll: true });
-            }}>인게임 입력 가리기 <span>{hideGameInput ? '켜짐' : '꺼짐'}</span></button>}
+            }}>인게임 입력 가리기 <span>{hideGameInput ? 'ON' : 'OFF'}</span></button>}
           </div>
         </div>
       </header>

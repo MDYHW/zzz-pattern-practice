@@ -52,16 +52,40 @@
   .touch-layout .entry-selection p { margin-top: 4px; font-size: 10px; }
 }
 @media (orientation: portrait) {
-  .practice.practice-layout.touch-layout { width: calc(100% - 56px); margin-left: 6px; }
+  .practice.practice-layout.touch-layout { width: calc(100% - 12px); margin-inline: 6px; }
+  .touch-layout .header-shell.is-floating { left: 6px; right: auto; width: min(320px, calc(100% - 12px)); padding: 6px; }
+  .touch-layout .masthead { display: grid; grid-template-columns: minmax(0, 1fr); gap: 4px; padding: 0; }
+  .touch-layout .masthead h1 { min-height: 24px; padding-right: 32px; display: flex; align-items: center; font-size: 14px; }
+  .touch-layout .toolbar { display: grid; grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .touch-layout .selection, .touch-layout .display-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; width: 100%; }
+  .touch-layout .display-options { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; }
+  .touch-layout .display-options > [aria-label="리듬 안내 표시"] { grid-column: 1; }
+  .touch-layout .selection label { display: grid; gap: 2px; min-width: 0; font-size: 10px; line-height: 12px; }
+  .touch-layout .selection select { width: 100%; max-width: none; min-width: 0; }
+  .touch-layout .masthead .quiet, .touch-layout .masthead select { min-height: 28px; padding: 4px 6px; line-height: 16px; }
+  .touch-layout .masthead select { font-size: 11px; }
+  .touch-layout .masthead .quiet { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; font-size: 10px; white-space: normal; padding-inline: 2px; }
+  .touch-layout .masthead .quiet span { margin-left: 0; width: 3ch; text-align: center; font-family: Consolas, monospace; }
+  .touch-layout .touch-menu-close { position: absolute; right: 6px; top: 6px; width: 28px; height: 28px; font-size: 18px; }
+  .touch-layout .lane-choice { display: grid; grid-template-columns: auto minmax(0, 1fr); grid-column: 1 / -1; }
   .touch-layout .practice-workspace { justify-content: flex-start; padding-top: 56px; }
-  .touch-layout .video-with-control { margin-bottom: 80px; }
-  .touch-layout .video-stage { overflow: visible; }
-  .touch-layout .touch-controls { bottom: -80px; }
+  .touch-layout .video-stage { container-type: inline-size; }
+  /* Keep both buttons within the HUD width. At 390px portrait this is about
+     48px per button; the pad remains below the large Q icon's top edge. */
+  .touch-layout .touch-controls { bottom: 0; gap: 4px; padding: 2px; }
+  .touch-layout .touch-action { width: calc((27.5cqw - 8px) / 2); height: calc((27.5cqw - 8px) / 2); padding: 1px; }
+  .touch-layout .touch-action .action-icon { padding: 3px; }
+  .touch-layout .guide-collapse { left: auto; right: 0; width: 20px; border-radius: 0; border-right: 0; }
+  .touch-layout .guide-with-control .guide { padding-right: 24px; }
+  .touch-layout .guide-expand { left: 0; right: 0; bottom: -24px; width: 100%; height: 24px; border: 1px solid #59664c; border-radius: 0 0 4px 4px; }
+  .touch-layout.expanded .video-with-control { margin-bottom: 24px; }
+  .touch-layout.expanded .is-finished .video-with-control { margin-bottom: 0; }
   .touch-layout .video-cover { gap: 6px; padding: 6px; }
   .touch-layout .entry-selection p { display: none; }
   .touch-layout .primary { width: 44px; height: 44px; }
   .touch-layout .cover-title { font-size: 15px; }
   .touch-layout .video-label { display: none; }
-  .touch-layout .practice-workspace > .results { max-height: calc(100% - 140px); }
-  .touch-layout .is-finished .video-cover { bottom: 0; }
+  .touch-layout .practice-workspace > .results { bottom: calc(100% - 56px - var(--surface-height)); max-height: calc(var(--surface-height) - 64px); }
+  .touch-layout.expanded .is-finished .practice-surface { padding-bottom: var(--guide-height); }
+  .practice-layout.touch-layout.expanded .is-finished .video-cover { bottom: max(0px, calc(var(--result-base-height, 154px) - var(--guide-height))); }
 }
