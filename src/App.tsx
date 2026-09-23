@@ -30,6 +30,7 @@ export function App() {
   const [mirageLayout, setMirageLayout] = useState(readMirageLayout);
   const [mirageLastKey, setMirageLastKey] = useState(readMirageLastKey);
   const [preparation, setPreparation] = useState(0);
+  const [floatingMenuOpen, setFloatingMenuOpen] = useState(false);
   const [display, setDisplay] = useState({ guide: true, hideRecordedInput: true, hideGameInput: false, hideIcons: false });
   const baseContent = skills.find(skill => skill.id === selected)!;
   const availableEntries = baseContent.entryOptions ?? [];
@@ -98,6 +99,7 @@ export function App() {
 
   return <div className="practice-scroll" ref={scrollRef} aria-label="연습 화면 스크롤">
     <Practice key={mountKey} content={content} choices={skills} onSelect={setSelected}
+      floatingMenuOpen={floatingMenuOpen} onFloatingMenuChange={setFloatingMenuOpen}
       onEntryChange={chooseEntry} onPrepareEntry={() => setPreparation(value => value + 1)}
       laneLayout={laneLayout} onLaneLayoutChange={hasLaneChoice ? chooseLayout : undefined}
       onLastKeyChange={hasLaneChoice ? chooseLastKey : undefined}

@@ -1,4 +1,7 @@
+import { useLayoutEffect, useRef } from 'react';
 import { usePracticeSession } from './session';
+import { FloatingHeader } from './FloatingHeader';
+import './practice-layout.css';
 import type { PracticeContent, Phase } from './session';
 import { ActionIcon, RhythmGuide } from './RhythmGuide';
 import './rhythm-guide.css';
@@ -25,7 +28,8 @@ function ControlIcon({ kind }: { kind: 'play' | 'pause' | 'restart' }) {
   </svg>;
 }
 
-export function Practice({ content, choices = [content], onSelect, onEntryChange, onPrepareEntry, display, onDisplayChange, laneLayout = 'selected', onLaneLayoutChange, onLastKeyChange }: {
+export function Practice({ content, choices = [content], onSelect, onEntryChange, onPrepareEntry, display, onDisplayChange, laneLayout = 'selected', onLaneLayoutChange, onLastKeyChange, floatingMenuOpen, onFloatingMenuChange }: {
+  floatingMenuOpen: boolean; onFloatingMenuChange: (open: boolean) => void;
   content: PracticeContent; choices?: readonly PracticeContent[]; onSelect?: (id: string) => void;
   onEntryChange: (key: PracticeKey) => void; onPrepareEntry: () => void;
   display: { guide: boolean; hideRecordedInput: boolean; hideGameInput: boolean; hideIcons: boolean };
@@ -34,6 +38,7 @@ export function Practice({ content, choices = [content], onSelect, onEntryChange
   onLastKeyChange?: (key: PracticeKey) => void;
 }) {
   const session = usePracticeSession(content);
+  const practiceRef = useRef<HTMLElement>(null);
   const { guide, hideRecordedInput, hideGameInput } = display;
   const active = session.phase === 'running' || session.phase === 'starting' || session.phase === 'resuming';
   const paused = session.phase === 'paused';
@@ -60,8 +65,36 @@ export function Practice({ content, choices = [content], onSelect, onEntryChange
     if (active) session.surfaceRef.current?.focus({ preventScroll: true });
   };
 
+  useLayoutEffect(() => {
+    const main = practiceRef.current!;
+    const rhythm = main.querySelector<HTMLElement>('.guide');
+    if (!rhythm) return;
+    const measure = () => main.style.setProperty('--guide-height', `${rhythm.offsetHeight}px`);
+    const observer = new ResizeObserver(measure);
+    observer.observe(rhythm);
+    measure();
+    return () => observer.disconnect();
+  }, [guide, finished]);
+
+  useLayoutEffect(() => {
+    const main = practiceRef.current!;
+    const result = main.querySelector<HTMLElement>('.practice-workspace > .results');
+    if (!result) return;
+    const measure = () => {
+      const chart = result.querySelector<HTMLElement>('.result-scroll')!;
+      const baseHeight = chart.getBoundingClientRect().bottom - result.getBoundingClientRect().top
+        + parseFloat(getComputedStyle(result).paddingBottom);
+      main.style.setProperty('--result-base-height', `${baseHeight}px`);
+    };
+    const observer = new ResizeObserver(measure);
+    observer.observe(result);
+    measure();
+    return () => observer.disconnect();
+  }, [finished]);
+
   return (
-    <main className={`practice${guide ? '' : ' expanded'}`}>
+    <main ref={practiceRef} className={`practice practice-layout${guide ? '' : ' expanded'}`}>
+      <FloatingHeader open={floatingMenuOpen} setOpen={onFloatingMenuChange}>
       <header className="masthead">
         <h1>패턴 연습<span> / ZZZ</span></h1>
         <div className="toolbar">
@@ -92,11 +125,17 @@ export function Practice({ content, choices = [content], onSelect, onEntryChange
           </div>
         </div>
       </header>
+      </FloatingHeader>
+      <div className={`practice-workspace${finished ? ' is-finished' : ''}`}>
       <section className="practice-surface" ref={session.surfaceRef} tabIndex={0} aria-label="연습 입력 영역" aria-describedby="input-summary"
         data-phase={session.phase} data-last-input-time={session.attempt.lastInputTime}>
         <div className="video-stage">
           <video ref={session.videoRef} src={`${import.meta.env.BASE_URL}${content.video}`} poster={`${import.meta.env.BASE_URL}${content.poster}`}
             preload="auto" playsInline disablePictureInPicture aria-label="성공 대응 참고 영상" />
+          {!guide && !finished && <button className="guide-edge-toggle guide-expand" aria-label="리듬 바 펼치기"
+            title="리듬 바 펼치기" aria-expanded="false" onClick={toggleGuide}>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+          </button>}
           {hideRecordedInput && content.recordedInputMasks?.map((mask, index) => <div key={index} className="recorded-input-mask" aria-hidden="true"
             style={{ left: `${mask.x}%`, top: `${mask.y}%`, width: `${mask.width}%`, height: `${mask.height}%` }} />)}
           {hideGameInput && content.gameInputMasks?.map((mask, index) => <div key={index} className="game-input-mask" aria-hidden="true"
@@ -138,11 +177,17 @@ export function Practice({ content, choices = [content], onSelect, onEntryChange
         </div>
         <p className="sr-only" role="status" aria-live="polite">{status}</p>
         <p className="sr-only" id="input-summary">우클릭·Space로 입력하고, ESC로 일시정지하거나 이어서 합니다.</p>
-        {guide && !finished && <RhythmGuide cues={content.cues} attempt={session.attempt} time={session.time} preparation={content.preparation}
-          layout={laneLayout} hideIcons={laneLayout === 'overlap' && display.hideIcons} />}
+        {guide && !finished && <div className="guide-with-control"><RhythmGuide cues={content.cues} attempt={session.attempt} time={session.time} preparation={content.preparation}
+          layout={laneLayout} hideIcons={laneLayout === 'overlap' && display.hideIcons} />
+          <button className="guide-edge-toggle guide-collapse" aria-label="리듬 바 접기" title="리듬 바 접기"
+            aria-expanded="true" onClick={toggleGuide}>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6" /></svg>
+          </button>
+        </div>}
       </section>
-      {onLaneLayoutChange && laneLayout === 'overlap' && <p className="lane-preview-note">Space는 단색, 우클릭은 내부 사선 무늬입니다. 마지막 타는 각 키의 구간에서 하나만 성공하면 됩니다. 영상은 우클릭 대응 예시이며 내 입력에 따라 바뀌지 않습니다.</p>}
       {finished && <Results content={content} attempt={session.attempt} />}
+      </div>
+      {onLaneLayoutChange && laneLayout === 'overlap' && <p className="lane-preview-note">Space는 단색, 우클릭은 내부 사선 무늬입니다. 마지막 타는 각 키의 구간에서 하나만 성공하면 됩니다. 영상은 우클릭 대응 예시이며 내 입력에 따라 바뀌지 않습니다.</p>}
       {session.phase === 'interrupted' && <section className="results results-interrupted" aria-labelledby="results-title">
         <h2 id="results-title">중단된 시도</h2><p>이번 시도는 채점하지 않습니다. ↻로 처음부터 다시 연습하세요.</p>
       </section>}

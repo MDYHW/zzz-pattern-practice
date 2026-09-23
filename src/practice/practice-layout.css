@@ -1,0 +1,30 @@
+.practice.practice-layout { width: calc(100% - 64px); }
+.practice-layout .practice-workspace { position: relative; height: 100dvh; display: flex; flex-direction: column; justify-content: flex-end; scroll-snap-align: start; scroll-snap-stop: always; }
+.practice-layout .practice-surface, .practice-layout .results, .practice-layout .masthead { scroll-snap-align: none; }
+.practice-layout .header-slot { scroll-snap-align: start; scroll-snap-stop: always; }
+.practice-layout .practice-surface { min-height: 0; flex-shrink: 0; }
+/* Preserve the space formerly occupied by the guide so the video never moves. */
+.practice-layout:not(.expanded) .is-finished .practice-surface { padding-bottom: var(--guide-height); }
+.practice-layout .practice-workspace > .results { position: absolute; bottom: 0; left: 0; right: 0; z-index: 8; margin-bottom: 0; max-height: 100%; overflow-y: auto; }
+.guide-with-control { position: relative; width: var(--stage-width); margin: 0 auto; }
+.practice-layout .guide-with-control .guide { width: 100%; }
+.guide-edge-toggle { display: grid; place-items: center; padding: 0; color: var(--accent); background: #20271c; border: 1px solid #59664c; z-index: 4; }
+.guide-edge-toggle svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.guide-edge-toggle:hover { background: #3b482b; border-color: var(--accent); }
+.guide-collapse { position: absolute; left: 100%; top: 0; bottom: 0; width: 24px; border-left: 2px solid var(--accent); border-radius: 0 4px 4px 0; }
+.guide-expand { position: absolute; right: 0; bottom: 0; width: 36px; height: 36px; border-right: 0; border-bottom: 0; border-radius: 4px 0 0 0; z-index: 6; }
+.header-slot { position: relative; }
+.header-shell.is-floating { position: fixed; top: 0; left: 0; right: 0; z-index: 30; padding: 0 32px; background: #141813f5; border: 1px solid #515b48; border-top: 0; box-shadow: 0 8px 24px #0009; border-radius: 0 0 6px 6px; }
+.top-reveal-zone { position: fixed; z-index: 29; top: 0; left: 0; width: 100%; height: var(--header-height, 48px); border: 0; padding: 0; background: transparent; display: grid; place-items: start center; cursor: default; }
+.top-reveal-zone span { width: 60px; height: 3px; border-radius: 0 0 4px 4px; background: #8b967b88; }
+.top-reveal-zone:hover span, .top-reveal-zone:focus-visible span { background: var(--accent); }
+@media (max-width: 760px) {
+  .practice.practice-layout { width: calc(100% - 52px); }
+  .header-shell.is-floating { padding: 0 12px; }
+}
+
+.practice-layout .is-finished .video-cover { justify-content: safe flex-end; padding-bottom: 40px; bottom: max(0px, calc(var(--result-base-height, 280px) - var(--guide-height))); }
+.practice-layout.expanded .is-finished .video-cover { bottom: var(--result-base-height, 280px); }
+
+.practice-layout .video-pause { top: calc(var(--floating-header-height, 48px) + 8px); }
+.practice-layout.expanded .video-progress { right: 54px; }
