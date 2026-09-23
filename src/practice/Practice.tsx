@@ -194,6 +194,7 @@ export function Practice({ content, choices = [content], onSelect, onEntryChange
       <details className="help" onToggle={event => { if (event.currentTarget.open && active) session.pause(); }}>
         <summary>조작 안내</summary>
         <div id="input-help">
+          <p>공개 사이트는 Cloudflare Web Analytics로 방문 및 화면 성능 통계를 수집합니다. 보스별 연습 기록과 입력·채점 결과는 전송하지 않습니다. <a href="https://www.cloudflare.com/web-analytics/">통계 서비스 안내</a></p>
           <p><ActionIcon action="dodge" /><kbd>우클릭</kbd> <span className="separator">/</span> <ActionIcon action="assist" /><kbd>Space</kbd></p>
           <ul>
             <li>인게임 입력 가리기는 영상 오른쪽 아래 입력 아이콘 줄 전체를 하나의 직사각형으로 가립니다. 녹화 입력 가리기와 따로 켜고 끌 수 있습니다.</li>
