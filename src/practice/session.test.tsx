@@ -23,6 +23,8 @@ function Harness({ content: practiceContent = content }: { content?: PracticeCon
       <video ref={session.videoRef} src={practiceContent.video} data-testid="video" />
       <button onClick={session.start}>Start</button>
       <button onClick={session.pause}>Pause</button><button onClick={session.resume}>Resume</button>
+      <button onClick={() => session.input('MouseRight')}>Touch dodge</button>
+      <button onClick={() => session.input('Space')}>Touch assist</button>
       <output data-testid="snapshot">{JSON.stringify({
         phase: session.phase, time: session.time, attempt: session.attempt, reason: session.reason,
       })}</output>
@@ -136,6 +138,20 @@ function right(time: number, release = true) {
   fireEvent.mouseDown(surface(), { button: 2 });
   if (release) fireEvent.mouseUp(surface(), { button: 2 });
 }
+
+test('explicit touch command shares judgment and rejects inputs outside running', async () => {
+  render(<Harness />);
+  const tap = (name: string, time: number) => { video().currentTime = time; fireEvent.click(screen.getByRole('button', { name })); };
+  tap('Touch dodge', 1.1);
+  expect(snapshot().attempt.lastInputTime).toBeUndefined();
+  await running();
+  tap('Touch dodge', 1.1);
+  expect(statuses()[0]).toBe('success');
+  fireEvent.click(screen.getByRole('button', { name: 'Pause' }));
+  const paused = snapshot().attempt;
+  tap('Touch assist', 2.1);
+  expect(snapshot().attempt).toEqual(paused);
+});
 
 test('loading and pending play cannot accept inputs; a first frame alone does not start the attempt', async () => {
   render(<Harness />);

@@ -1,0 +1,67 @@
+.touch-controls { position: absolute; right: 0; bottom: 0; z-index: 5; display: flex; gap: 12px; padding: 8px; }
+.touch-action { width: 64px; height: 64px; padding: 3px; display: grid; place-items: center; border: 2px solid #71796b; border-radius: 50%; background: #121713; touch-action: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; transition: none; }
+.touch-action canvas, .touch-action .action-icon { display: block; width: 100%; height: 100%; margin: 0; border-radius: 50%; pointer-events: none; }
+.touch-action .action-icon { padding: 7px; object-fit: contain; }
+.touch-action { overflow: hidden; }
+.touch-action canvas, .touch-action .action-icon { grid-area: 1 / 1; }
+.touch-action.is-pressed { border-color: #fff; box-shadow: 0 0 0 3px #d5f529; }
+.touch-action:disabled { opacity: 1; cursor: default; }
+.practice.practice-layout.touch-layout { width: calc(100% - 96px); }
+.touch-layout .guide-collapse { width: 44px; }
+.touch-layout .guide { padding: 3px 8px; }
+.touch-layout .timeline, .touch-layout .cue { height: 72px; }
+.touch-layout .timeline { background: linear-gradient(to bottom, transparent 40px, #292c2c 40px, #292c2c 64px, transparent 64px); }
+.touch-layout .timeline::before { top: 52px; }
+.touch-layout .cue > span, .touch-layout .preparation-dodge kbd { display: none; }
+.touch-layout .cue-symbol { top: 3px; }
+.touch-layout .cue i::before, .touch-layout .cue-window { top: 40px; height: 24px; }
+.touch-layout .cue i::after { top: 35px; height: 5px; }
+.touch-layout .input-pulse { top: 38px; height: 28px; }
+.touch-layout .preparation-dodge i { top: 24px; }
+.touch-layout .preparation-movement { top: 68px; height: 4px; }
+.touch-layout .preparation-note { margin-top: 2px; font-size: 10px; line-height: 14px; }
+.touch-layout .guide-expand { width: 44px; height: 44px; }
+.touch-layout .video-pause { top: 8px; right: 8px; width: 44px; height: 44px; }
+.touch-layout .top-reveal-zone { left: max(8px, env(safe-area-inset-left)); top: max(8px, env(safe-area-inset-top)); width: 44px; height: 44px; background: #141813ed; border: 1px solid #71796b; border-radius: 4px; place-items: center; }
+.touch-layout .top-reveal-zone span { width: 20px; height: 14px; border-top: 2px solid var(--accent); border-bottom: 2px solid var(--accent); background: transparent; border-radius: 0; }
+.touch-layout .header-shell.is-floating { padding: 8px 56px 8px max(12px, env(safe-area-inset-left)); max-height: 85dvh; overflow: auto; }
+.touch-layout .masthead, .touch-layout .toolbar { flex-wrap: wrap; gap: 8px; }
+.touch-layout .toolbar { flex-basis: 100%; }
+.touch-layout .quiet, .touch-layout select { min-height: 44px; }
+.touch-menu-close { position: fixed; right: 8px; top: 8px; z-index: 31; width: 44px; height: 44px; font-size: 24px; color: #f3f0e6; background: #20271c; border: 1px solid #71796b; }
+.touch-layout .video-label { left: 58px; right: 58px; width: fit-content; font-size: 9px; }
+.touch-layout .is-finished .video-cover { inset: 0; bottom: max(0px, calc(var(--result-base-height, 154px) - var(--guide-height))); flex-direction: row; height: auto; padding: 8px; gap: 12px; justify-content: center; }
+.touch-layout .is-finished .cover-title { font-size: 16px; }
+.touch-layout .is-finished .entry-selection p, .touch-layout .is-finished .entry-selection label { display: none; }
+.touch-layout .is-finished .entry-selection .quiet { margin: 0; }
+.touch-layout .is-finished .primary { width: 48px; height: 48px; }
+.touch-layout .practice-workspace > .results { max-height: calc(100% - 80px); }
+.touch-layout .result-header { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.touch-layout .result-key-label small { display: none; }
+.touch-layout .results { padding: 2px 6px; }
+.touch-layout .result-scroll { padding: 0; }
+.touch-layout .result-chart { padding-left: 52px; padding-right: 10px; }
+.touch-layout .result-focus { top: 54px; bottom: 2px; }
+.touch-layout .result-gap { top: 50px; }
+.touch-layout .result-key-label { right: calc(100% + 8px); }
+.touch-layout .result-detail { margin-top: 4px; padding-top: 4px; gap: 4px 8px; }
+@media (orientation: landscape) and (max-height: 500px) {
+  .touch-layout .video-cover { gap: 6px; padding: 8px; }
+  .touch-layout .primary { width: 48px; height: 48px; }
+  .touch-layout .cover-title { font-size: 18px; }
+  .touch-layout .entry-selection p { margin-top: 4px; font-size: 10px; }
+}
+@media (orientation: portrait) {
+  .practice.practice-layout.touch-layout { width: calc(100% - 56px); margin-left: 6px; }
+  .touch-layout .practice-workspace { justify-content: flex-start; padding-top: 56px; }
+  .touch-layout .video-with-control { margin-bottom: 80px; }
+  .touch-layout .video-stage { overflow: visible; }
+  .touch-layout .touch-controls { bottom: -80px; }
+  .touch-layout .video-cover { gap: 6px; padding: 6px; }
+  .touch-layout .entry-selection p { display: none; }
+  .touch-layout .primary { width: 44px; height: 44px; }
+  .touch-layout .cover-title { font-size: 15px; }
+  .touch-layout .video-label { display: none; }
+  .touch-layout .practice-workspace > .results { max-height: calc(100% - 140px); }
+  .touch-layout .is-finished .video-cover { bottom: 0; }
+}

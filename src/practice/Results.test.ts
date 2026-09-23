@@ -77,7 +77,7 @@ test('key rows and folded markers expose original records without assigning extr
   const space = screen.getByRole('button', { name: /추가 입력 Space 2회/ });
   fireEvent.click(space);
   expect(document.querySelectorAll('.extra-records li')).toHaveLength(2);
-  expect(document.querySelector('.extra-records')).toHaveTextContent('0.00초Space구간 밖');
+  expect(document.querySelector('.extra-records')).toHaveTextContent('0.00초Space추가 입력');
   expect(document.querySelector('.extra-records')).not.toHaveTextContent('우클릭');
   fireEvent.click(space);
   expect(document.querySelector('.result-detail')).toBeNull();

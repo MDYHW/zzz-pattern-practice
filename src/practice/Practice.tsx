@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from 'react';
+import { useCallback, useLayoutEffect, useRef } from 'react';
 import { usePracticeSession } from './session';
 import { FloatingHeader } from './FloatingHeader';
 import './practice-layout.css';
@@ -7,6 +7,7 @@ import { ActionIcon, RhythmGuide } from './RhythmGuide';
 import './rhythm-guide.css';
 import type { PracticeKey } from './judge';
 import { Results } from './Results';
+import { TouchControls, useTouchLayout } from './TouchControls';
 
 const phaseLabels: Record<Phase, string> = {
   loading: '영상 준비 중', ready: '시작을 기다리고 있어요', starting: '재생 준비 중',
@@ -14,8 +15,8 @@ const phaseLabels: Record<Phase, string> = {
   paused: '일시정지', resuming: '1초 후 이어서 합니다',
 };
 const feedbackLabels = {
-  none: '타이밍에 맞춰 한 번씩 눌러 주세요.', outside: '입력 구간 밖 · 다음 구간을 기다려 주세요.',
-  wrong: '선택한 대응과 다른 입력 · 선택한 키로 다시 눌러 주세요.',
+  none: '타이밍에 맞춰 한 번씩 눌러 주세요.', outside: '',
+  wrong: '',
   success: '대응 성공', miss: '대응 놓침 · 다음 대응을 계속하세요.',
 };
 const clock = (seconds: number) => `${Math.floor(seconds / 60).toString().padStart(2, '0')}:${Math.floor(seconds % 60).toString().padStart(2, '0')}`;
@@ -38,6 +39,13 @@ export function Practice({ content, choices = [content], onSelect, onEntryChange
   onLastKeyChange?: (key: PracticeKey) => void;
 }) {
   const session = usePracticeSession(content);
+  const touch = useTouchLayout();
+  const pauseRef = useRef(session.pause);
+  pauseRef.current = session.pause;
+  const setMenuOpen = useCallback((open: boolean) => {
+    if (touch && open) pauseRef.current();
+    onFloatingMenuChange(open);
+  }, [touch, onFloatingMenuChange]);
   const practiceRef = useRef<HTMLElement>(null);
   const { guide, hideRecordedInput, hideGameInput } = display;
   const active = session.phase === 'running' || session.phase === 'starting' || session.phase === 'resuming';
@@ -58,8 +66,6 @@ export function Practice({ content, choices = [content], onSelect, onEntryChange
   const complete = successes === content.cues.length;
   const status = session.reason || (finished ? (complete ? '전체 대응 성공' : '놓친 대응을 확인하고 다시 연습해 보세요.')
     : session.phase === 'running' ? feedbackLabels[session.attempt.feedback] : phaseLabels[session.phase]);
-  const feedback = session.phase === 'running'
-    ? ({ none: '', success: '', miss: '', wrong: '선택과 다른 입력', outside: '구간 밖' }[session.attempt.feedback]) : '';
   const toggleGuide = () => {
     onDisplayChange({ ...display, guide: !guide });
     if (active) session.surfaceRef.current?.focus({ preventScroll: true });
@@ -93,8 +99,8 @@ export function Practice({ content, choices = [content], onSelect, onEntryChange
   }, [finished]);
 
   return (
-    <main ref={practiceRef} className={`practice practice-layout${guide ? '' : ' expanded'}`}>
-      <FloatingHeader open={floatingMenuOpen} setOpen={onFloatingMenuChange}>
+    <main ref={practiceRef} className={`practice practice-layout${guide ? '' : ' expanded'}${touch ? ' touch-layout' : ''}`}>
+      <FloatingHeader touch={touch} open={floatingMenuOpen} setOpen={setMenuOpen}>
       <header className="masthead">
         <h1>패턴 연습<span> / ZZZ</span></h1>
         <div className="toolbar">
@@ -129,25 +135,21 @@ export function Practice({ content, choices = [content], onSelect, onEntryChange
       <div className={`practice-workspace${finished ? ' is-finished' : ''}`}>
       <section className="practice-surface" ref={session.surfaceRef} tabIndex={0} aria-label="연습 입력 영역" aria-describedby="input-summary"
         data-phase={session.phase} data-last-input-time={session.attempt.lastInputTime}>
+        <div className="video-with-control">
         <div className="video-stage">
           <video ref={session.videoRef} src={`${import.meta.env.BASE_URL}${content.video}`} poster={`${import.meta.env.BASE_URL}${content.poster}`}
             preload="auto" playsInline disablePictureInPicture aria-label="성공 대응 참고 영상" />
-          {!guide && !finished && <button className="guide-edge-toggle guide-expand" aria-label="리듬 바 펼치기"
-            title="리듬 바 펼치기" aria-expanded="false" onClick={toggleGuide}>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
-          </button>}
           {hideRecordedInput && content.recordedInputMasks?.map((mask, index) => <div key={index} className="recorded-input-mask" aria-hidden="true"
             style={{ left: `${mask.x}%`, top: `${mask.y}%`, width: `${mask.width}%`, height: `${mask.height}%` }} />)}
-          {hideGameInput && content.gameInputMasks?.map((mask, index) => <div key={index} className="game-input-mask" aria-hidden="true"
+          {(hideGameInput || touch) && content.gameInputMasks?.map((mask, index) => <div key={index} className="game-input-mask" aria-hidden="true"
             style={{ left: `${mask.x}%`, top: `${mask.y}%`, width: `${mask.width}%`, height: `${mask.height}%` }} />)}
           <span className="video-label">{onLastKeyChange
             ? `참고 영상: 우클릭 진입 · 마지막 ${content.recordedFinalKey === 'MouseRight' ? '우클릭 → QTE' : 'Space'}`
             : <>영상: {content.preparation && '준비 회피·이동 → '}우클릭 진입 → 패링 · 내 진입: {entryName}</>}</span>
           <span className="video-time" aria-label="영상 진행 시간">{clock(session.time)} <span>/ {clock(content.duration)}</span></span>
-          {feedback && <div className={`video-progress feedback-${session.attempt.feedback}`}>
-            <span className="input-feedback">{feedback}</span>
-          </div>}
           {session.phase === 'running' && <button className="video-pause icon-button" aria-label="일시정지" title="일시정지 (ESC)" aria-keyshortcuts="Escape" onClick={session.pause}><ControlIcon kind="pause" /></button>}
+          {touch && !['finished', 'interrupted', 'error'].includes(session.phase) && <TouchControls
+            videoRef={session.videoRef} fixed={hideGameInput} enabled={session.phase === 'running'} input={session.input} />}
           {session.phase !== 'running' && <div className="video-cover" role="group" aria-label="영상 조작">
             {session.phase !== 'ready' && <p className="cover-title">{session.phase === 'resuming' ? '1' : phaseLabels[session.phase]}</p>}
             {session.reason && <p className="cover-note">{session.reason}</p>}
@@ -175,6 +177,11 @@ export function Practice({ content, choices = [content], onSelect, onEntryChange
             {paused && <kbd className="cover-shortcut">ESC</kbd>}
           </div>}
         </div>
+        {!guide && !finished && <button className="guide-edge-toggle guide-expand" aria-label="리듬 바 펼치기"
+          title="리듬 바 펼치기" aria-expanded="false" onClick={toggleGuide}>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+        </button>}
+        </div>
         <p className="sr-only" role="status" aria-live="polite">{status}</p>
         <p className="sr-only" id="input-summary">우클릭·Space로 입력하고, ESC로 일시정지하거나 이어서 합니다.</p>
         {guide && !finished && <div className="guide-with-control"><RhythmGuide cues={content.cues} attempt={session.attempt} time={session.time} preparation={content.preparation}
@@ -185,7 +192,7 @@ export function Practice({ content, choices = [content], onSelect, onEntryChange
           </button>
         </div>}
       </section>
-      {finished && <Results content={content} attempt={session.attempt} />}
+      {finished && <Results content={content} attempt={session.attempt} compact={touch} />}
       </div>
       {onLaneLayoutChange && laneLayout === 'overlap' && <p className="lane-preview-note">Space는 단색, 우클릭은 내부 사선 무늬입니다. 마지막 타는 각 키의 구간에서 하나만 성공하면 됩니다. 영상은 우클릭 대응 예시이며 내 입력에 따라 바뀌지 않습니다.</p>}
       {session.phase === 'interrupted' && <section className="results results-interrupted" aria-labelledby="results-title">
@@ -197,7 +204,7 @@ export function Practice({ content, choices = [content], onSelect, onEntryChange
           <p>공개 사이트는 Cloudflare Web Analytics로 방문 및 화면 성능 통계를 수집합니다. 보스별 연습 기록과 입력·채점 결과는 전송하지 않습니다. <a href="https://www.cloudflare.com/web-analytics/">통계 서비스 안내</a></p>
           <p><ActionIcon action="dodge" /><kbd>우클릭</kbd> <span className="separator">/</span> <ActionIcon action="assist" /><kbd>Space</kbd></p>
           <ul>
-            <li>인게임 입력 가리기는 영상 오른쪽 아래 입력 아이콘 줄 전체를 하나의 직사각형으로 가립니다. 녹화 입력 가리기와 따로 켜고 끌 수 있습니다.</li>
+            <li>{touch ? '터치 버튼은 누르는 순간 입력됩니다. 인게임 입력 가리기를 끄면 녹화 영상의 아이콘 상태를 확대하고, 켜면 고정 아이콘을 표시합니다. 영상의 색·쿨타임 변화는 녹화 당시 상태이며 내 터치 결과가 아닙니다. 내 터치는 바깥 테두리로 표시합니다.' : '인게임 입력 가리기는 영상 오른쪽 아래 입력 아이콘 줄 전체를 하나의 직사각형으로 가립니다. 녹화 입력 가리기와 따로 켜고 끌 수 있습니다.'}</li>
             {onLaneLayoutChange && <li>A는 마지막 대응을 미리 고르고, B는 Space 단색·우클릭 내부 사선 무늬를 함께 표시합니다. 진입은 측정된 우클릭만 제공합니다. 일시정지·종료 상태에서도 상단에서 A/B를 바로 바꿀 수 있으며, 전환하면 새 연습을 처음부터 준비합니다.</li>}
             <li>{responseSummary ?? (hasEntryChoice ? <>진입은 시작 전에 선택한 {entryName}, 이후 대응은 Space를 사용합니다. 선택은 패턴별로 기억합니다.</> : <>진입은 {entryName}, 이후 대응은 Space를 사용합니다.</>)}</li>
             <li>타일의 구간 띠가 고정 입력선과 겹치는 동안 해당 키를 한 번 누르세요. 아이콘 중앙을 맞출 필요는 없습니다.</li>

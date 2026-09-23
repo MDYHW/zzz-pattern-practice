@@ -6,12 +6,12 @@ import { groupExtraInputs, resultTimeline } from './result-timeline';
 import './results.css';
 
 const keyLabel = { MouseRight: '우클릭', Space: 'Space' };
-const reasonLabel = { wrong: '선택과 다른 입력', outside: '구간 밖', 'after-success': '성공 후 입력' };
+const reasonLabel = { wrong: '선택과 다른 입력', outside: '추가 입력', 'after-success': '성공 후 입력' };
 const stateLabel = { success: '성공', miss: '놓침', pending: '대기' };
 const seconds = (time: number) => `${time.toFixed(2)}초`;
-const rowY = { MouseRight: 88, Space: 152 };
 
-export function Results({ content, attempt }: { content: PracticeContent; attempt: Attempt }) {
+export function Results({ content, attempt, compact = false }: { content: PracticeContent; attempt: Attempt; compact?: boolean }) {
+  const rowY = compact ? { MouseRight: 64, Space: 110 } : { MouseRight: 88, Space: 152 };
   const [selection, setSelection] = useState<{ kind: 'cue'; index: number } | { kind: 'extra'; first: number } | null>(null);
   const [width, setWidth] = useState(600);
   const trackRef = useRef<HTMLDivElement>(null);
@@ -48,7 +48,7 @@ export function Results({ content, attempt }: { content: PracticeContent; attemp
     </div>
     <div className="result-scroll" tabIndex={0} aria-label="동작 주변 입력 비교 · 대기 간격 축약">
       <div className="result-chart">
-        <div className="result-timeline" ref={trackRef} style={{ height: 206 }} aria-label="키별 동작과 입력 시점">
+        <div className="result-timeline" ref={trackRef} style={{ height: compact ? 150 : 206 }} aria-label="키별 동작과 입력 시점">
           {timeline.segments.map((segment, index) => segment.compressed
             ? <span key={index} className="result-gap" role="img" aria-label={`대기 ${seconds(segment.end - segment.start)} 축약`}
               style={{ left: percent((segment.left + segment.right) / 2) }}>〃</span>
@@ -84,7 +84,7 @@ export function Results({ content, attempt }: { content: PracticeContent; attemp
             const count = group.indices.length;
             const selected = selection?.kind === 'extra' && selection.first === first;
             return <button key={first} className="extra-marker" data-key={group.key}
-              style={{ left: percent(group.position), top: rowY[group.key] + 18 }}
+              style={{ left: percent(group.position), top: rowY[group.key] + (compact ? 12 : 18) }}
               aria-label={`추가 입력 ${keyLabel[group.key]} ${count}회, ${seconds(attempt.extraInputs[first].time)}${count > 1 ? `부터 ${seconds(attempt.extraInputs[last].time)}` : ''}`}
               aria-pressed={selected} aria-expanded={selected}
               onClick={() => setSelection(current => current?.kind === 'extra' && current.first === first ? null : { kind: 'extra', first })}>
@@ -98,7 +98,7 @@ export function Results({ content, attempt }: { content: PracticeContent; attemp
       <strong>{selectedCue.label} · {stateLabel[selectedResult.status]}</strong>
       <span>{cueWindows(selectedCue).map(window =>
         `${keyLabel[window.key]} 구간 ${seconds(window.start)}–${seconds(window.end)}`).join(' / ')}</span>
-      <span>{selectedResult.inputTime !== undefined ? `실제 입력 ${keyLabel[selectedResult.inputKey ?? selectedCue.key]} ${seconds(selectedResult.inputTime)}` : '구간 내 성공 입력 없음'}</span>
+      <span>{selectedResult.inputTime !== undefined ? `실제 입력 ${keyLabel[selectedResult.inputKey ?? selectedCue.key]} ${seconds(selectedResult.inputTime)}` : '성공 입력 없음'}</span>
     </div>}
     {selectedGroup && <div className="result-detail" aria-live="polite">
       <strong>추가 입력 {keyLabel[selectedGroup.key]} {selectedGroup.indices.length}회</strong>

@@ -1,6 +1,6 @@
 import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from 'react';
 
-export function FloatingHeader({ children, open, setOpen }: { children: ReactNode; open: boolean; setOpen: (value: boolean) => void }) {
+export function FloatingHeader({ children, open, setOpen, touch = false }: { children: ReactNode; open: boolean; setOpen: (value: boolean) => void; touch?: boolean }) {
   const slot = useRef<HTMLDivElement>(null);
   const shell = useRef<HTMLDivElement>(null);
   const waitForPointerExit = useRef(false);
@@ -10,6 +10,7 @@ export function FloatingHeader({ children, open, setOpen }: { children: ReactNod
   const reveal = () => { clear(); setOpen(true); };
   const scheduleClose = () => {
     clear();
+    if (touch) return;
     timer.current = setTimeout(() => {
       if (!shell.current?.matches(':hover, :focus-within')) setOpen(false);
     }, 120);
@@ -33,8 +34,9 @@ export function FloatingHeader({ children, open, setOpen }: { children: ReactNod
   useEffect(() => () => clearTimeout(timer.current), []);
   return <div className="header-slot" ref={slot}>
     {hidden && !open && <button className="top-reveal-zone" aria-label="제어 메뉴 열기" title="제어 메뉴 열기"
-      onPointerEnter={() => { if (!waitForPointerExit.current) reveal(); }}
+      onPointerEnter={() => { if (!touch && !waitForPointerExit.current) reveal(); }}
       onPointerLeave={() => { clear(); waitForPointerExit.current = false; }} onFocus={() => {
+        if (touch) return;
         reveal();
         requestAnimationFrame(() => shell.current?.querySelector<HTMLElement>('select, button')?.focus({ preventScroll: true }));
       }} onClick={reveal}><span aria-hidden="true" /></button>}
@@ -47,6 +49,9 @@ export function FloatingHeader({ children, open, setOpen }: { children: ReactNod
         slot.current?.closest('main')?.querySelector<HTMLElement>('.practice-surface')?.focus({ preventScroll: true });
       }}>
       {children}
+      {touch && hidden && open && <button className="touch-menu-close" aria-label="제어 메뉴 닫기" onClick={() => {
+        setOpen(false); slot.current?.closest('main')?.querySelector<HTMLElement>('.practice-surface')?.focus({ preventScroll: true });
+      }}>×</button>}
     </div>
   </div>;
 }

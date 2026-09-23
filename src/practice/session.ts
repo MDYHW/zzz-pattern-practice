@@ -41,7 +41,7 @@ interface View {
 export function usePracticeSession(content: PracticeContent) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const surfaceRef = useRef<HTMLElement>(null);
-  const commands = useRef({ start() {}, pause() {}, resume() {} });
+  const commands = useRef({ start() {}, pause() {}, resume() {}, input(_key: PracticeKey) {} });
   const [view, setView] = useState<View>(() => ({
     phase: 'loading', time: 0, attempt: createAttempt(content.cues), reason: '',
   }));
@@ -250,7 +250,7 @@ export function usePracticeSession(content: PracticeContent) {
     window.addEventListener('blur', blur);
     document.addEventListener('visibilitychange', visibility);
     surface.addEventListener('contextmenu', contextMenu);
-    commands.current = { start, pause, resume };
+    commands.current = { start, pause, resume, input };
     if (typeof video.requestVideoFrameCallback !== 'function') {
       publish({ phase: 'error', reason: '이 브라우저는 영상 프레임 동기화를 지원하지 않습니다. 최신 Chromium 브라우저를 사용해 주세요.' });
     } else if (video.error) error();
@@ -271,9 +271,9 @@ export function usePracticeSession(content: PracticeContent) {
       window.removeEventListener('blur', blur);
       document.removeEventListener('visibilitychange', visibility);
       surface.removeEventListener('contextmenu', contextMenu);
-      commands.current = { start() {}, pause() {}, resume() {} };
+      commands.current = { start() {}, pause() {}, resume() {}, input(_key: PracticeKey) {} };
     };
   }, [content]);
 
-  return { ...view, videoRef, surfaceRef, start: () => commands.current.start(), pause: () => commands.current.pause(), resume: () => commands.current.resume() };
+  return { ...view, videoRef, surfaceRef, start: () => commands.current.start(), pause: () => commands.current.pause(), resume: () => commands.current.resume(), input: (key: PracticeKey) => commands.current.input(key) };
 }
