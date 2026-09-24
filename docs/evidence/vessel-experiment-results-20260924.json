@@ -1946,26 +1946,25 @@
     "webOwnerTask": "01a0c854-8093-7671-8bcc-f4caa1c60d99",
     "state": "published and verified",
     "serviceEvidence": "vessel-service-media-20260924.json",
-    "sourceCommit": "dae0b8ae3445a2cbb852b3def20fb90161c10fde",
-    "pagesRun": 35989433287,
+    "sourceCommit": "6286271a1347c97101bec7a287b592e52bd712de",
+    "pagesRun": 35991280603,
     "url": "https://zzz-pattern-practice.github.io/",
     "liveVerification": {
-      "browserTests": 3,
-      "viewports": [
-        "1280x1080",
-        "844x390",
-        "390x844"
-      ],
-      "scoredSuccess": 5,
-      "extraInputs": 0,
-      "preparationInputsExcluded": true,
-      "bundle": "index-CrG4QNmj.js",
+      "browserTests": 1,
+      "scope": "Updated first scene,19.5833s duration, preparation/W/entry clock positions and natural playback; full PC/mobile completion tested locally for this revision.",
+      "bundle": "index-Cs4QHOSh.js",
       "mediaHttp200AndSha256Match": true
     },
     "startRevision": {
-      "state": "local validation in progress",
+      "state": "published and verified",
       "firstSourceFrame": 250,
-      "addedLeadInSeconds": 3
+      "addedLeadInSeconds": 3,
+      "sourceCommit": "6286271a1347c97101bec7a287b592e52bd712de",
+      "pagesRun": 35991280603
+    },
+    "previousPublication": {
+      "sourceCommit": "dae0b8ae3445a2cbb852b3def20fb90161c10fde",
+      "pagesRun": 35989433287
     }
   }
 }
