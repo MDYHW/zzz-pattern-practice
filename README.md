@@ -14,12 +14,15 @@
 | 태양의 잔불 | Execute_01 | 비채점 준비 회피 1회, 진입 + 3타 |
 | 융합·태양의 잔불 | Execute_02 | 진입 + 4타 |
 | 태초의 악몽·창조주 | Execute_01 | 비채점 준비 회피 2회·이동 안내, 진입 + 4타 |
+| 피의 청소부 | Attack_Excute_Pre / Attack_Excute_Combo | 비채점 준비 회피 1회·이동 안내, 진입 + 5타 |
 
-대표 영상 9개와 포스터 9개를 포함합니다. 환영의 화살 유닛 A는 마지막 입력에 맞는 영상을 사용하고, B는 RMB 대표 영상을 고정 사용합니다. 영상 속 성공과 연습 중 사용자의 입력 결과는 별개입니다.
+대표 영상 10개와 포스터 10개를 포함합니다. 환영의 화살 유닛 A는 마지막 입력에 맞는 영상을 사용하고, B는 RMB 대표 영상을 고정 사용합니다. 영상 속 성공과 연습 중 사용자의 입력 결과는 별개입니다.
 
 <a id="현재-단계--2026-09-21"></a>
 
 ## 현재 상태
+
+피의 청소부를 추가했습니다. 준비 회피는 채점하지 않고 진입RMB와Space5회의 결과를 제공합니다. 원본 시작부터 사용해 준비 회피까지3.85초 여유를 두며 음량은−26LUFS에 맞췄습니다. 승인된 세 경계의25ms 여유와 실제 측정값은 [피의 청소부 보고서](docs/experiments/graymane-control-skill.md)에 구별합니다.
 
 창조주 영상의 시작에 자연스러운 준비3초를 추가했습니다. 첫 준비 회피까지 약4.08초의 여유가 있으며, 원본 기준 입력 시각과 판정 폭은 유지합니다. 소스 `6286271`로 배포했고 실제 URL의 새 영상·포스터 및 시간 연결을 확인했습니다.
 
@@ -27,7 +30,7 @@
 
 태양의 잔불 확장과 종료 정리를 완료했습니다. 대표2회와 최종 구간·혼재 반례를 보존하고 역할이 끝난 초기 조사 자료를 현재 소스에서 제거했습니다. 삭제된 상세 원본은 재분석할 수 없으며, 융합 진입의 추가25ms 여유는 실제 게임 검증 대기입니다. [종료 상태](docs/experiments/sun-control-skill.md)를 따릅니다.
 
-7보스·8패턴을 [zzz-pattern-practice.github.io](https://zzz-pattern-practice.github.io/)에서 연습할 수 있습니다. [배포 저장소](https://github.com/zzz-pattern-practice/zzz-pattern-practice.github.io)에서 소스 커밋을 지정해 수동 배포합니다. 환영의 화살 유닛 진입 SPACE 추가 측정은 현재 공개 조건이 아닙니다.
+8보스·9패턴을 [zzz-pattern-practice.github.io](https://zzz-pattern-practice.github.io/)에서 연습할 수 있습니다. [배포 저장소](https://github.com/zzz-pattern-practice/zzz-pattern-practice.github.io)에서 소스 커밋을 지정해 수동 배포합니다. 환영의 화살 유닛 진입 SPACE 추가 측정은 현재 공개 조건이 아닙니다.
 
 환영의 화살 유닛 진입·3타는 사용자 체감에 따라 웹 판정의 양 끝을25ms씩 임시 확대했습니다. 추가 구간의 실제 게임 검증은 아직 남아 있으며 [조정 근거와 검증 계획](docs/experiments/arrow-unit-control-skill.md#공개-후-임시-서비스-판정-조정--2026-09-22)을 따릅니다.
 

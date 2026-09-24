@@ -1,0 +1,585 @@
+{
+  "date": "2026-09-24",
+  "installedVersionInfo": "OSPRODWin3.2.0",
+  "coordinateUnit": "Animator state frame coordinate; width=high-low, not inclusive tick count or elapsed milliseconds. Gaps are calculated only within the same state.",
+  "currentCatalogs": {
+    "resourceCatalogGameFile": "ZenlessZoneZero_Data/Persistent/Blocks/1677012929.blk",
+    "resourceCatalogDecompressedSha256": "b8cfbb1f7c6450d9a2dc379ff6a2de2f94d1cbf29115360b7663c496d9728c06",
+    "dataCatalogGameFile": "ZenlessZoneZero_Data/Persistent/Blocks/Data/1584573291.blk",
+    "dataCatalogDecompressedSha256": "db996a3c202bef9620bebb0a01ae12c2357bf8ddce344c1c052fb5b70306f6f5",
+    "currentAbilityBlockGameFile": "ZenlessZoneZero_Data/Persistent/Blocks/Data/3433520595.blk",
+    "currentAbilityBlockSha256": "e40e5306f3f4599f458ac8978b4c674a7461b25d382fce11645fad5daeb4c8ee",
+    "priorManagerPayloadMatches": [
+      "Vessel_Execute_Manager",
+      "Vessel_Execute_Manager_HC",
+      "Vessel_Execute02_Manager",
+      "GraymaneCenturion_Execute_Manager"
+    ],
+    "note": "Both catalogs differ from the 2026-09-18 extraction; old Data block 3191559225.blk is absent. Bundle indices 720 and 811 retain old bundle hash, secondary hash, size, and the four listed manager object payload SHA256 values, but are relocated in 3433520595.blk. Individual asset path hash exposure is incomplete in the current Data index; bundled objects were enumerated directly."
+  },
+  "limits": [
+    "No runtime game input, outcome, or external video observation in this evidence.",
+    "Registered assets and script skill keys bound candidate states; complete AI/controller transition reachability and current encounter spawn tags are not reconstructed.",
+    "Character asset to initial manager attachment was not independently restored; normal/HC manager names and matching states are strong candidates, not an exact current entity-init proof.",
+    "Execute02 Combo versus Combo_Banned relation and actual selection are unresolved; do not copy normal timings into that route.",
+    "An attack event, assist receiver interval, and distinct physical key press are different quantities.",
+    "No internal frame to milliseconds conversion; no cross-state subtraction or sum without a verified transition offset.",
+    "No input timing recommendation or service profile can be derived from these assets alone."
+  ],
+  "sourceEvidenceSha256": "295b51beb4b12a6c6c775178e97398d04a981a468a6dae698ff1b1e30a61a26e",
+  "identity": {
+    "en": "Sanguine Sweeper",
+    "ko": "피의 청소부"
+  },
+  "characterSkillBindings": [
+    {
+      "name": "Monster_GraymaneCenturion",
+      "source": {
+        "path": "Assets/NapResources/Data/ScriptConfig/Character/Monster_GraymaneCenturion.asset",
+        "assetHash": "10617845529711733341",
+        "bundleIndex": 74913,
+        "bundleHash": "10617845529711733341",
+        "secondaryHash": "17698439624770361062",
+        "offset": 1517570,
+        "size": 11548,
+        "catalogSha256": "b8cfbb1f7c6450d9a2dc379ff6a2de2f94d1cbf29115360b7663c496d9728c06",
+        "objectId": "564047508755523675",
+        "objectName": "Monster_GraymaneCenturion",
+        "serializedSha256": "90fc53c1418fbb2a0589ac2c3fd072a12a8d014b9f4b617f2b224fc9c17f9d44",
+        "payloadSha256": "19f9b6faafb7912af006d663c728d7343e5c76d0bd9d2be2db4b050e603691fe",
+        "gameBlockSha256": "b0d7055f5994a4257b80134bd5daee0450c81889da2f29684409bd99e3e2688a",
+        "gameFile": "ZenlessZoneZero_Data/Persistent/Blocks/2651798755.blk"
+      },
+      "skills": [
+        {
+          "key": "GraymaneCenturion_Attack_Excute_Pre",
+          "pointer": "/Skills/$items/13"
+        },
+        {
+          "key": "GraymaneCenturion_Attack_Excute_Combo",
+          "pointer": "/Skills/$items/14"
+        }
+      ],
+      "note": "Distinct from ordinary Attack_2/3/4/etc skill keys."
+    }
+  ],
+  "routes": {
+    "graymaneDedicatedExcute": {
+      "entry": {
+        "ability": "GraymaneCenturion_AidTriggerControl",
+        "state": "Attack_Excute_Pre",
+        "source": {
+          "offset": 846538,
+          "size": 29368,
+          "bundleIndex": 720,
+          "bundleHash": "471717793230859616",
+          "secondaryHash": "10847205552448976934",
+          "catalogSha256": "db996a3c202bef9620bebb0a01ae12c2357bf8ddce344c1c052fb5b70306f6f5",
+          "gameBlockSha256": "e40e5306f3f4599f458ac8978b4c674a7461b25d382fce11645fad5daeb4c8ee",
+          "objectId": "6583053841611422474",
+          "objectName": "GraymaneCenturion_AidTriggerControl",
+          "payloadSha256": "ddba2bb485ce6fd2f2a1943deca4c153234a209d025a87fe81741c696ef4b393",
+          "gameFile": "ZenlessZoneZero_Data/Persistent/Blocks/Data/3433520595.blk"
+        },
+        "windows": [
+          {
+            "role": "entry assist cue",
+            "pointer": "/AbilityMixins/1/ConfigList/23",
+            "low": 154,
+            "high": 184,
+            "width": 30,
+            "modifiers": [
+              "SetAidAttackExtraTargetRangeModifier",
+              "HeavyParryTagContralModifier",
+              "EvadeTagContralModifier",
+              "SwitchTagContralModifier",
+              "FireAttackWarningEffect_Execute"
+            ],
+            "previousGapSameState": null,
+            "nextGapSameState": null
+          }
+        ]
+      },
+      "entryDodgeListener": {
+        "ability": "GraymaneCenturion_Execute_Manager",
+        "state": "Attack_Excute_Pre",
+        "source": {
+          "offset": 846538,
+          "size": 29368,
+          "bundleIndex": 720,
+          "bundleHash": "471717793230859616",
+          "secondaryHash": "10847205552448976934",
+          "catalogSha256": "db996a3c202bef9620bebb0a01ae12c2357bf8ddce344c1c052fb5b70306f6f5",
+          "gameBlockSha256": "e40e5306f3f4599f458ac8978b4c674a7461b25d382fce11645fad5daeb4c8ee",
+          "objectId": "465258111824255530",
+          "objectName": "GraymaneCenturion_Execute_Manager",
+          "payloadSha256": "e7c278a4e084898c59c5b18d2a338dda3028cd511ce1397cd4c9e51bbcb1b7b0",
+          "gameFile": "ZenlessZoneZero_Data/Persistent/Blocks/Data/3433520595.blk"
+        },
+        "windows": [
+          {
+            "role": "entry dodge listener",
+            "pointer": "/AbilityMixins/0/ConfigList/1",
+            "low": 153,
+            "high": 186,
+            "width": 33,
+            "modifiers": [
+              "Execute_01_ListenEvade_Modifier"
+            ],
+            "previousGapSameState": null,
+            "nextGapSameState": null
+          }
+        ]
+      },
+      "followups": {
+        "ability": "GraymaneCenturion_AidTriggerControl",
+        "state": "Attack_Excute_Combo",
+        "source": {
+          "offset": 846538,
+          "size": 29368,
+          "bundleIndex": 720,
+          "bundleHash": "471717793230859616",
+          "secondaryHash": "10847205552448976934",
+          "catalogSha256": "db996a3c202bef9620bebb0a01ae12c2357bf8ddce344c1c052fb5b70306f6f5",
+          "gameBlockSha256": "e40e5306f3f4599f458ac8978b4c674a7461b25d382fce11645fad5daeb4c8ee",
+          "objectId": "6583053841611422474",
+          "objectName": "GraymaneCenturion_AidTriggerControl",
+          "payloadSha256": "ddba2bb485ce6fd2f2a1943deca4c153234a209d025a87fe81741c696ef4b393",
+          "gameFile": "ZenlessZoneZero_Data/Persistent/Blocks/Data/3433520595.blk"
+        },
+        "windows": [
+          {
+            "role": "power struggle / heavy parry cue",
+            "pointer": "/AbilityMixins/1/ConfigList/24",
+            "low": 37,
+            "high": 67,
+            "width": 30,
+            "modifiers": [
+              "PowerStruggleTagContralModifier",
+              "SetAidAttackExtraTargetRangeModifier",
+              "HeavyParryTagContralModifier",
+              "EvadeTagContralModifier",
+              "SwitchTagContralModifier",
+              "FireAttackWarningEffect_Wrestle",
+              "ParryTypeContral_Normal"
+            ],
+            "previousGapSameState": null,
+            "nextGapSameState": 40
+          },
+          {
+            "role": "heavy parry cue",
+            "pointer": "/AbilityMixins/1/ConfigList/25",
+            "low": 107,
+            "high": 137,
+            "width": 30,
+            "modifiers": [
+              "HeavyParryTagContralModifier",
+              "EvadeTagContralModifier",
+              "SwitchTagContralModifier",
+              "FireAttackWarningEffect",
+              "ParryTypeContral_Normal"
+            ],
+            "previousGapSameState": 40,
+            "nextGapSameState": 27
+          },
+          {
+            "role": "heavy parry cue",
+            "pointer": "/AbilityMixins/1/ConfigList/26",
+            "low": 164,
+            "high": 194,
+            "width": 30,
+            "modifiers": [
+              "HeavyParryTagContralModifier",
+              "EvadeTagContralModifier",
+              "SwitchTagContralModifier",
+              "FireAttackWarningEffect",
+              "ParryTypeContral_Normal"
+            ],
+            "previousGapSameState": 27,
+            "nextGapSameState": 33
+          },
+          {
+            "role": "heavy parry cue",
+            "pointer": "/AbilityMixins/1/ConfigList/27",
+            "low": 227,
+            "high": 257,
+            "width": 30,
+            "modifiers": [
+              "HeavyParryTagContralModifier",
+              "EvadeTagContralModifier",
+              "SwitchTagContralModifier",
+              "FireAttackWarningEffect",
+              "ParryTypeContral_Normal"
+            ],
+            "previousGapSameState": 33,
+            "nextGapSameState": 66
+          },
+          {
+            "role": "heavy parry cue",
+            "pointer": "/AbilityMixins/1/ConfigList/28",
+            "low": 323,
+            "high": 353,
+            "width": 30,
+            "modifiers": [
+              "HeavyParryTagContralModifier",
+              "EvadeTagContralModifier",
+              "SwitchTagContralModifier",
+              "FireAttackWarningEffect",
+              "ParryTypeContral_Normal"
+            ],
+            "previousGapSameState": 66,
+            "nextGapSameState": null
+          }
+        ]
+      },
+      "endListener": {
+        "ability": "GraymaneCenturion_Execute_Manager",
+        "state": "Attack_Excute_Combo",
+        "source": {
+          "offset": 846538,
+          "size": 29368,
+          "bundleIndex": 720,
+          "bundleHash": "471717793230859616",
+          "secondaryHash": "10847205552448976934",
+          "catalogSha256": "db996a3c202bef9620bebb0a01ae12c2357bf8ddce344c1c052fb5b70306f6f5",
+          "gameBlockSha256": "e40e5306f3f4599f458ac8978b4c674a7461b25d382fce11645fad5daeb4c8ee",
+          "objectId": "465258111824255530",
+          "objectName": "GraymaneCenturion_Execute_Manager",
+          "payloadSha256": "e7c278a4e084898c59c5b18d2a338dda3028cd511ce1397cd4c9e51bbcb1b7b0",
+          "gameFile": "ZenlessZoneZero_Data/Persistent/Blocks/Data/3433520595.blk"
+        },
+        "windows": [
+          {
+            "role": "last attack dodge / parry detect",
+            "pointer": "/AbilityMixins/0/ConfigList/5",
+            "low": 320,
+            "high": 357,
+            "width": 37,
+            "modifiers": [
+              "Execute_ParryHit_Modifier"
+            ],
+            "previousGapSameState": null,
+            "nextGapSameState": null
+          }
+        ]
+      },
+      "slowdown": {
+        "ability": "GraymaneCenturion_Execute_Manager",
+        "state": "Attack_Excute_Combo",
+        "source": {
+          "offset": 846538,
+          "size": 29368,
+          "bundleIndex": 720,
+          "bundleHash": "471717793230859616",
+          "secondaryHash": "10847205552448976934",
+          "catalogSha256": "db996a3c202bef9620bebb0a01ae12c2357bf8ddce344c1c052fb5b70306f6f5",
+          "gameBlockSha256": "e40e5306f3f4599f458ac8978b4c674a7461b25d382fce11645fad5daeb4c8ee",
+          "objectId": "465258111824255530",
+          "objectName": "GraymaneCenturion_Execute_Manager",
+          "payloadSha256": "e7c278a4e084898c59c5b18d2a338dda3028cd511ce1397cd4c9e51bbcb1b7b0",
+          "gameFile": "ZenlessZoneZero_Data/Persistent/Blocks/Data/3433520595.blk"
+        },
+        "windows": [
+          {
+            "role": "WitchSlowDown modifier lifetime",
+            "pointer": "/AbilityMixins/0/ConfigList/3",
+            "low": 0,
+            "high": 355,
+            "width": 355,
+            "modifiers": [
+              "Execute_WitchSlow_Modifier"
+            ],
+            "previousGapSameState": null,
+            "nextGapSameState": null
+          }
+        ]
+      },
+      "qteManager": {
+        "name": "GraymaneCenturion_RealTimeQTE_Manager",
+        "source": {
+          "offset": 846538,
+          "size": 29368,
+          "bundleIndex": 720,
+          "bundleHash": "471717793230859616",
+          "secondaryHash": "10847205552448976934",
+          "catalogSha256": "db996a3c202bef9620bebb0a01ae12c2357bf8ddce344c1c052fb5b70306f6f5",
+          "gameBlockSha256": "e40e5306f3f4599f458ac8978b4c674a7461b25d382fce11645fad5daeb4c8ee",
+          "objectId": "2075911051594579433",
+          "objectName": "GraymaneCenturion_RealTimeQTE_Manager",
+          "payloadSha256": "0581f6e010f490870b7bdc28a449bf878a733896bdba3860b6951a98d6e44885",
+          "gameFile": "ZenlessZoneZero_Data/Persistent/Blocks/Data/3433520595.blk"
+        },
+        "triggerPointer": "/Modifiers/Execute_LastAttack_Evade_Detect_Modifier/OnDodgeSuccess/0",
+        "evadeAidPointer": "/Modifiers/Execute_LastAttack_Evade_Detect_Modifier/OnSkillStart/1",
+        "configKey": "Common_Monsterr_Execute_RealTimeQTE"
+      },
+      "events": {
+        "source": {
+          "path": "Assets/NapResources/Data/ScriptConfig/AnimatorEvents/Battle/AnimatorEventPattern_Monster_GraymaneCenturion_Battle.asset",
+          "assetHash": "6869508588276588163",
+          "bundleIndex": 69898,
+          "bundleHash": "6869508588276588163",
+          "secondaryHash": "2706992992251933256",
+          "offset": 3132101,
+          "size": 6246,
+          "catalogSha256": "b8cfbb1f7c6450d9a2dc379ff6a2de2f94d1cbf29115360b7663c496d9728c06",
+          "objectId": "-8817908410582952492",
+          "objectName": "AnimatorEventPattern_Monster_GraymaneCenturion_Battle",
+          "serializedSha256": "47b90acab1a5c8a318a84940b86b4a38ce6e6327eca38d9048f2575ec2e20fd3",
+          "payloadSha256": "b6523de7519470f6ca743fb6271049342d74eadaf0974d43f31e6c805709cd07",
+          "gameBlockSha256": "89ec2b6d9d82f56be66090d4f58cde26c7a2a5ed12988145bf2733c0e9180082",
+          "gameFile": "ZenlessZoneZero_Data/StreamingAssets/Blocks/134424642.blk"
+        },
+        "patterns": [
+          {
+            "pattern": "Monster_GraymaneCenturion_Excute_Pre",
+            "patternPointer": "/patterns/31",
+            "events": [
+              {
+                "pointer": "/patterns/31/entries/0",
+                "frame": 185,
+                "type": "AnimatorEventAnimEventHandlerEntry",
+                "eventId": "Monster_GraymaneCenturion_Excute_Pre_Attackproperty_Check"
+              },
+              {
+                "pointer": "/patterns/31/entries/1",
+                "frame": 173,
+                "type": "AnimatorEventAnimPatternEntry",
+                "eventId": "Monster_GraymaneCenturion_Excute_Pre_Attackproperty_Check_Predicate"
+              }
+            ]
+          },
+          {
+            "pattern": "Monster_GraymaneCenturion_Excute_Combo",
+            "patternPointer": "/patterns/30",
+            "events": [
+              {
+                "pointer": "/patterns/30/entries/0",
+                "frame": 68,
+                "type": "AnimatorEventAnimEventHandlerEntry",
+                "eventId": "Monster_GraymaneCenturion_Excute_Combo_01_Attackproperty"
+              },
+              {
+                "pointer": "/patterns/30/entries/1",
+                "frame": 138,
+                "type": "AnimatorEventAnimEventHandlerEntry",
+                "eventId": "Monster_GraymaneCenturion_Excute_Combo_02_Attackproperty"
+              },
+              {
+                "pointer": "/patterns/30/entries/2",
+                "frame": 195,
+                "type": "AnimatorEventAnimEventHandlerEntry",
+                "eventId": "Monster_GraymaneCenturion_Excute_Combo_03_Attackproperty"
+              },
+              {
+                "pointer": "/patterns/30/entries/3",
+                "frame": 258,
+                "type": "AnimatorEventAnimEventHandlerEntry",
+                "eventId": "Monster_GraymaneCenturion_Excute_Combo_03_Attackproperty"
+              },
+              {
+                "pointer": "/patterns/30/entries/4",
+                "frame": 354,
+                "type": "AnimatorEventAnimEventHandlerEntry",
+                "eventId": "Monster_GraymaneCenturion_Excute_Combo_04_Attackproperty"
+              }
+            ]
+          }
+        ]
+      },
+      "scoreAction": {
+        "ability": "GraymaneCenturion_Excute",
+        "source": {
+          "offset": 846538,
+          "size": 29368,
+          "bundleIndex": 720,
+          "bundleHash": "471717793230859616",
+          "secondaryHash": "10847205552448976934",
+          "catalogSha256": "db996a3c202bef9620bebb0a01ae12c2357bf8ddce344c1c052fb5b70306f6f5",
+          "gameBlockSha256": "e40e5306f3f4599f458ac8978b4c674a7461b25d382fce11645fad5daeb4c8ee",
+          "objectId": "-5723692462726738798",
+          "objectName": "GraymaneCenturion_Excute",
+          "payloadSha256": "e8e42438c20a9287ad3c027417e3ded5af81af7b4dd0e8a917f9d9ac4f25fadb",
+          "gameFile": "ZenlessZoneZero_Data/Persistent/Blocks/Data/3433520595.blk"
+        },
+        "pointers": [
+          "/AbilityMixins/1/ConfigList/0/ActionList/0",
+          "/AbilityMixins/1/ConfigList/1/ActionList/0",
+          "/AbilityMixins/1/ConfigList/2/ActionList/0",
+          "/AbilityMixins/1/ConfigList/3/ActionList/0",
+          "/AbilityMixins/1/ConfigList/4/ActionList/0"
+        ],
+        "frames": [
+          69,
+          139,
+          196,
+          259,
+          355
+        ],
+        "meaning": "After each attack event, send GraymaneCenturion_Abyss_Score_02_Action if Execution_Attack_SuccessHit is absent, then clear that tag."
+      },
+      "availability": {
+        "ability": "GraymaneCenturion_StageManager",
+        "source": {
+          "offset": 846538,
+          "size": 29368,
+          "bundleIndex": 720,
+          "bundleHash": "471717793230859616",
+          "secondaryHash": "10847205552448976934",
+          "catalogSha256": "db996a3c202bef9620bebb0a01ae12c2357bf8ddce344c1c052fb5b70306f6f5",
+          "gameBlockSha256": "e40e5306f3f4599f458ac8978b4c674a7461b25d382fce11645fad5daeb4c8ee",
+          "objectId": "-8130148306827611987",
+          "objectName": "GraymaneCenturion_StageManager",
+          "payloadSha256": "872b8cbc61b72a72334afb741580636e49ce3c2e25acb5a31a0457b2b452c432",
+          "gameFile": "ZenlessZoneZero_Data/Persistent/Blocks/Data/3433520595.blk"
+        },
+        "pointers": [
+          "/Modifiers/CanUseExcuteSkill/OnAdded/0",
+          "/Modifiers/ExcuteSkillEnd/OnAdded",
+          "/Modifiers/GraymaneCenturionChallangeSequence/OnAdded/0",
+          "/Modifiers/GraymaneCenturionP2Countdown/OnAdded/1"
+        ],
+        "meaning": "CanUseExcuteSkill is added only absent ExcuteSkillFinished and WeeklyBoss tags; ExcuteSkillEnd removes availability and marks finished. Challenge sequence or P2 countdown can add availability."
+      },
+      "note": "Pre Check at 185; Combo events 68,138,195,258,354. Five aid receiver windows, not a measured count of distinct key presses."
+    },
+    "graymaneOrdinaryComparison": {
+      "ability": "GraymaneCenturion_AidTriggerControl",
+      "source": {
+        "offset": 846538,
+        "size": 29368,
+        "bundleIndex": 720,
+        "bundleHash": "471717793230859616",
+        "secondaryHash": "10847205552448976934",
+        "catalogSha256": "db996a3c202bef9620bebb0a01ae12c2357bf8ddce344c1c052fb5b70306f6f5",
+        "gameBlockSha256": "e40e5306f3f4599f458ac8978b4c674a7461b25d382fce11645fad5daeb4c8ee",
+        "objectId": "6583053841611422474",
+        "objectName": "GraymaneCenturion_AidTriggerControl",
+        "payloadSha256": "ddba2bb485ce6fd2f2a1943deca4c153234a209d025a87fe81741c696ef4b393",
+        "gameFile": "ZenlessZoneZero_Data/Persistent/Blocks/Data/3433520595.blk"
+      },
+      "examples": [
+        {
+          "ability": "GraymaneCenturion_AidTriggerControl",
+          "state": "Attack_4",
+          "source": {
+            "offset": 846538,
+            "size": 29368,
+            "bundleIndex": 720,
+            "bundleHash": "471717793230859616",
+            "secondaryHash": "10847205552448976934",
+            "catalogSha256": "db996a3c202bef9620bebb0a01ae12c2357bf8ddce344c1c052fb5b70306f6f5",
+            "gameBlockSha256": "e40e5306f3f4599f458ac8978b4c674a7461b25d382fce11645fad5daeb4c8ee",
+            "objectId": "6583053841611422474",
+            "objectName": "GraymaneCenturion_AidTriggerControl",
+            "payloadSha256": "ddba2bb485ce6fd2f2a1943deca4c153234a209d025a87fe81741c696ef4b393",
+            "gameFile": "ZenlessZoneZero_Data/Persistent/Blocks/Data/3433520595.blk"
+          },
+          "windows": [
+            {
+              "role": "ordinary evade cue",
+              "pointer": "/AbilityMixins/1/ConfigList/7",
+              "low": 26,
+              "high": 56,
+              "width": 30,
+              "modifiers": [
+                "EvadeTagContralModifier",
+                "SwitchTagContralModifier",
+                "FireAttackWarningEffect",
+                "ParryTypeContral_Normal"
+              ]
+            },
+            {
+              "role": "normal branch light parry",
+              "pointer": "/AbilityMixins/1/ConfigList/8",
+              "low": 76,
+              "high": 106,
+              "width": 30,
+              "modifiers": [
+                "LightParryTagContralModifier_Normal",
+                "EvadeTagContralModifier_Normal",
+                "SwitchTagContralModifier_Normal",
+                "FireAttackWarningEffect_Normal",
+                "ParryTypeContral_Special_Normal"
+              ]
+            },
+            {
+              "role": "ZenkovErosion branch evade cue",
+              "pointer": "/AbilityMixins/1/ConfigList/9",
+              "low": 71,
+              "high": 106,
+              "width": 35,
+              "modifiers": [
+                "EvadeTagContralModifier_ZenkovErosion",
+                "SwitchTagContralModifier_ZenkovErosion",
+                "FireAttackWarningEffect_UltraPre",
+                "ParryTypeContral_Special_ZenkovErosion"
+              ]
+            }
+          ]
+        },
+        {
+          "ability": "GraymaneCenturion_AidTriggerControl",
+          "state": "Attack_11",
+          "source": {
+            "offset": 846538,
+            "size": 29368,
+            "bundleIndex": 720,
+            "bundleHash": "471717793230859616",
+            "secondaryHash": "10847205552448976934",
+            "catalogSha256": "db996a3c202bef9620bebb0a01ae12c2357bf8ddce344c1c052fb5b70306f6f5",
+            "gameBlockSha256": "e40e5306f3f4599f458ac8978b4c674a7461b25d382fce11645fad5daeb4c8ee",
+            "objectId": "6583053841611422474",
+            "objectName": "GraymaneCenturion_AidTriggerControl",
+            "payloadSha256": "ddba2bb485ce6fd2f2a1943deca4c153234a209d025a87fe81741c696ef4b393",
+            "gameFile": "ZenlessZoneZero_Data/Persistent/Blocks/Data/3433520595.blk"
+          },
+          "windows": [
+            {
+              "role": "ordinary light parry",
+              "pointer": "/AbilityMixins/1/ConfigList/16",
+              "low": 52,
+              "high": 82,
+              "width": 30,
+              "modifiers": [
+                "LightParryTagContralModifier",
+                "EvadeTagContralModifier",
+                "SwitchTagContralModifier",
+                "FireAttackWarningEffect",
+                "ParryTypeContral_Normal"
+              ]
+            },
+            {
+              "role": "normal branch heavy parry",
+              "pointer": "/AbilityMixins/1/ConfigList/17",
+              "low": 100,
+              "high": 130,
+              "width": 30,
+              "modifiers": [
+                "HeavyParryTagContralModifier_Normal",
+                "EvadeTagContralModifier_Normal",
+                "SwitchTagContralModifier_Normal",
+                "FireAttackWarningEffect_Normal",
+                "ParryTypeContral_Special_Normal"
+              ]
+            },
+            {
+              "role": "ZenkovErosion branch evade cue",
+              "pointer": "/AbilityMixins/1/ConfigList/18",
+              "low": 95,
+              "high": 130,
+              "width": 35,
+              "modifiers": [
+                "EvadeTagContralModifier_ZenkovErosion",
+                "SwitchTagContralModifier_ZenkovErosion",
+                "FireAttackWarningEffect_UltraPre",
+                "ParryTypeContral_Special_ZenkovErosion"
+              ]
+            }
+          ]
+        }
+      ],
+      "note": "Ordinary Attack_4/11 states have variant gates; they do not establish the dedicated Excute_Combo sequence. Alternate same-state overlapping branch windows are not sequential gaps."
+    }
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "SchemaVersion": 3,
+  "Id": "graymane-execute-01",
+  "BossId": "graymane",
+  "BossLabel": "피의 청소부",
+  "Skill": "Attack_Excute_Pre / Attack_Excute_Combo",
+  "Conditions": "9월24일 측정30회 실용 구간 / 아리아 시작·같은 시작 위치·W/RMB 준비 / 문구 감지 원점 / 진입2550 별도 사용자 성공 확인 / 웹의25ms 추가 여유는 별도 채택",
+  "Party": "아리아 → 남궁우 → 수나",
+  "StartCharacter": "아리아",
+  "MinimumSpacingMs": 250,
+  "ManualPreparationRmbUntilMs": 0,
+  "Preparation": null,
+  "AuxiliaryInputs": null,
+  "StartAttack": null,
+  "StartInputs": [
+    {
+      "Id": "approach",
+      "Label": "전진 회피 방향",
+      "Key": "W",
+      "AtMs": 500,
+      "HoldMs": 850
+    },
+    {
+      "Id": "prepare-dodge",
+      "Label": "전진 회피",
+      "Key": "RMB",
+      "AtMs": 750,
+      "HoldMs": 100
+    }
+  ],
+  "AllowManualMovement": false,
+  "Detector": {
+    "Id": "graymane-korean-shared-yellow-shape-v1",
+    "Template": "../notice-template-girtablullu.png",
+    "ReferenceWidth": 1280,
+    "ReferenceHeight": 720,
+    "X": 368,
+    "Y": 136,
+    "Width": 528,
+    "Height": 28,
+    "MinimumClientWidth": 1280,
+    "Threshold": 0.68,
+    "PollMs": 8,
+    "AbsentMs": 100,
+    "ConfirmationMs": 40,
+    "TimeoutMs": 60000
+  },
+  "Actions": [
+    {
+      "Id": "entry",
+      "Label": "진입 회피",
+      "Key": "RMB",
+      "Group": "A",
+      "SelectedTiming": "baseline",
+      "HoldMs": 100,
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 2550,
+        "BaselineMs": 2700,
+        "LateMs": 2850
+      }
+    },
+    {
+      "Id": "hit-1",
+      "Label": "1타",
+      "Key": "Space",
+      "Group": "B",
+      "SelectedTiming": "baseline",
+      "HoldMs": 150,
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 4050,
+        "BaselineMs": 4250,
+        "LateMs": 4500
+      }
+    },
+    {
+      "Id": "hit-2",
+      "Label": "2타",
+      "Key": "Space",
+      "Group": "A",
+      "SelectedTiming": "baseline",
+      "HoldMs": 150,
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 5550,
+        "BaselineMs": 5750,
+        "LateMs": 6000
+      }
+    },
+    {
+      "Id": "hit-3",
+      "Label": "3타",
+      "Key": "Space",
+      "Group": "B",
+      "SelectedTiming": "baseline",
+      "HoldMs": 150,
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 6850,
+        "BaselineMs": 7050,
+        "LateMs": 7250
+      }
+    },
+    {
+      "Id": "hit-4",
+      "Label": "4타",
+      "Key": "Space",
+      "Group": "A",
+      "SelectedTiming": "baseline",
+      "HoldMs": 150,
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 8250,
+        "BaselineMs": 8450,
+        "LateMs": 8650
+      }
+    },
+    {
+      "Id": "hit-5",
+      "Label": "5타",
+      "Key": "Space",
+      "Group": "B",
+      "SelectedTiming": "baseline",
+      "HoldMs": 150,
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 10200,
+        "BaselineMs": 10400,
+        "LateMs": 10600
+      }
+    }
+  ]
+}

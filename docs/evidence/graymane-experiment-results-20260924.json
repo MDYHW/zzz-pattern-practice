@@ -1,0 +1,2363 @@
+{
+  "date": "2026-09-24",
+  "status": "measured-windows-with-user-approved-service-25ms-expansion",
+  "scope": "Website implementation and deployment approved after analysis. Measured automatic-trial coordinates remain unchanged.",
+  "conditions": {
+    "party": "아리아 → 남궁우 → 수나",
+    "startCharacter": "아리아",
+    "mode": "score-battle HUD; exact form selection not captured",
+    "timeOrigin": "first matched live notice capture end; no extra40ms confirmation delay",
+    "preparation": [
+      {
+        "Id": "approach",
+        "Label": "전진 회피 방향",
+        "Key": "W",
+        "AtMs": 500,
+        "HoldMs": 850
+      },
+      {
+        "Id": "prepare-dodge",
+        "Label": "전진 회피",
+        "Key": "RMB",
+        "AtMs": 750,
+        "HoldMs": 100
+      }
+    ]
+  },
+  "counts": {
+    "trials": 30,
+    "fullSuccess": 21,
+    "recordingOn": 4,
+    "unknownClassifiedOff": 26
+  },
+  "adopted": [
+    {
+      "action": "entry",
+      "adopted": {
+        "EarlyMs": 2550,
+        "BaselineMs": 2700,
+        "LateMs": 2850
+      },
+      "widthMs": 300,
+      "counts": [
+        {
+          "ms": 2500,
+          "success": 0,
+          "failure": 1,
+          "normalTrialIds": [
+            "f78da28acc3e4b0aac915e3a88a8c22e"
+          ],
+          "afterEarlierFailureTrialIds": []
+        },
+        {
+          "ms": 2650,
+          "success": 22,
+          "failure": 0,
+          "normalTrialIds": [
+            "89edd5b82d8548118ccca50939a080f0",
+            "3edc950f1fc54ed28697d129bb6c33a6",
+            "fd5c8831e88a4ebcbc5c2293f82b9c68",
+            "c4090fc8e31b461fa6ad4f00e738fce6",
+            "8e826a9d39c041818909c3d139adf8a1",
+            "5b2a6700c00643dda10b290eb31cba2a",
+            "20d55810a7a94229b44623184d575102",
+            "6a28b708ee64424eb54c0517173e177f",
+            "12fa304f31ab467595d971617a6ba81b",
+            "eb2e952540eb4c569399270538568555",
+            "65c642d83b9b4fb48396e4dd743bd43c",
+            "9321ffd497cf4a71b6b64790a281dafa",
+            "46653c257ec34f9fa839f9da8fea834a",
+            "ea59543da972451693731a607e853027",
+            "b53da33e138242ca805b7fff8ddb691f",
+            "394b0f922b63418c9f0ecd46a64010f0",
+            "5654ead3599c488694e063e23609065e",
+            "b115bf34504b44008db03c96cbc937e5",
+            "89c635e17cf4434bbe8476bd8c879ad5",
+            "8b100a1d7ef74bf9a9c831d62bfaa41d",
+            "fd0586453e2142b0938b105453552371",
+            "5830a2f0d66740769541ac70a438e21c"
+          ],
+          "afterEarlierFailureTrialIds": []
+        },
+        {
+          "ms": 2700,
+          "success": 4,
+          "failure": 0,
+          "normalTrialIds": [
+            "d800e54e4c964efb9af837a4e05f10e4",
+            "7a9da115210f4d36be14d0db48c9d040",
+            "36fad706c0c74d0183031088ad0c5131",
+            "ff79ac210c3e4875847d3040fafd6d28"
+          ],
+          "afterEarlierFailureTrialIds": []
+        },
+        {
+          "ms": 2800,
+          "success": 1,
+          "failure": 0,
+          "normalTrialIds": [
+            "eb185052f2d74faebabb03bf575a71ad"
+          ],
+          "afterEarlierFailureTrialIds": []
+        },
+        {
+          "ms": 2850,
+          "success": 1,
+          "failure": 0,
+          "normalTrialIds": [
+            "9490193fed894d5bb57f10d2eac84ada"
+          ],
+          "afterEarlierFailureTrialIds": []
+        },
+        {
+          "ms": 2900,
+          "success": 0,
+          "failure": 1,
+          "normalTrialIds": [
+            "7df009abf5bc4902a7aaae5ac5227eb9"
+          ],
+          "afterEarlierFailureTrialIds": []
+        }
+      ]
+    },
+    {
+      "action": "hit-1",
+      "adopted": {
+        "EarlyMs": 4050,
+        "BaselineMs": 4250,
+        "LateMs": 4500
+      },
+      "widthMs": 450,
+      "counts": [
+        {
+          "ms": 4000,
+          "success": 0,
+          "failure": 1,
+          "normalTrialIds": [
+            "c4090fc8e31b461fa6ad4f00e738fce6"
+          ],
+          "afterEarlierFailureTrialIds": []
+        },
+        {
+          "ms": 4050,
+          "success": 9,
+          "failure": 0,
+          "normalTrialIds": [
+            "fd5c8831e88a4ebcbc5c2293f82b9c68",
+            "8e826a9d39c041818909c3d139adf8a1",
+            "5b2a6700c00643dda10b290eb31cba2a",
+            "20d55810a7a94229b44623184d575102",
+            "6a28b708ee64424eb54c0517173e177f",
+            "12fa304f31ab467595d971617a6ba81b",
+            "9321ffd497cf4a71b6b64790a281dafa",
+            "5654ead3599c488694e063e23609065e",
+            "5830a2f0d66740769541ac70a438e21c"
+          ],
+          "afterEarlierFailureTrialIds": []
+        },
+        {
+          "ms": 4100,
+          "success": 1,
+          "failure": 0,
+          "normalTrialIds": [
+            "3edc950f1fc54ed28697d129bb6c33a6"
+          ],
+          "afterEarlierFailureTrialIds": []
+        },
+        {
+          "ms": 4250,
+          "success": 9,
+          "failure": 0,
+          "normalTrialIds": [
+            "89edd5b82d8548118ccca50939a080f0",
+            "46653c257ec34f9fa839f9da8fea834a",
+            "ea59543da972451693731a607e853027",
+            "eb185052f2d74faebabb03bf575a71ad",
+            "9490193fed894d5bb57f10d2eac84ada",
+            "d800e54e4c964efb9af837a4e05f10e4",
+            "7a9da115210f4d36be14d0db48c9d040",
+            "36fad706c0c74d0183031088ad0c5131",
+            "ff79ac210c3e4875847d3040fafd6d28"
+          ],
+          "afterEarlierFailureTrialIds": [
+            "f78da28acc3e4b0aac915e3a88a8c22e",
+            "7df009abf5bc4902a7aaae5ac5227eb9"
+          ]
+        },
+        {
+          "ms": 4450,
+          "success": 1,
+          "failure": 0,
+          "normalTrialIds": [
+            "eb2e952540eb4c569399270538568555"
+          ],
+          "afterEarlierFailureTrialIds": []
+        },
+        {
+          "ms": 4500,
+          "success": 7,
+          "failure": 0,
+          "normalTrialIds": [
+            "65c642d83b9b4fb48396e4dd743bd43c",
+            "b53da33e138242ca805b7fff8ddb691f",
+            "394b0f922b63418c9f0ecd46a64010f0",
+            "b115bf34504b44008db03c96cbc937e5",
+            "89c635e17cf4434bbe8476bd8c879ad5",
+            "8b100a1d7ef74bf9a9c831d62bfaa41d",
+            "fd0586453e2142b0938b105453552371"
+          ],
+          "afterEarlierFailureTrialIds": []
+        }
+      ]
+    },
+    {
+      "action": "hit-2",
+      "adopted": {
+        "EarlyMs": 5550,
+        "BaselineMs": 5750,
+        "LateMs": 6000
+      },
+      "widthMs": 450,
+      "counts": [
+        {
+          "ms": 5500,
+          "success": 0,
+          "failure": 1,
+          "normalTrialIds": [
+            "8e826a9d39c041818909c3d139adf8a1"
+          ],
+          "afterEarlierFailureTrialIds": []
+        },
+        {
+          "ms": 5550,
+          "success": 9,
+          "failure": 0,
+          "normalTrialIds": [
+            "fd5c8831e88a4ebcbc5c2293f82b9c68",
+            "5b2a6700c00643dda10b290eb31cba2a",
+            "20d55810a7a94229b44623184d575102",
+            "6a28b708ee64424eb54c0517173e177f",
+            "12fa304f31ab467595d971617a6ba81b",
+            "b115bf34504b44008db03c96cbc937e5",
+            "89c635e17cf4434bbe8476bd8c879ad5",
+            "8b100a1d7ef74bf9a9c831d62bfaa41d",
+            "fd0586453e2142b0938b105453552371"
+          ],
+          "afterEarlierFailureTrialIds": [
+            "c4090fc8e31b461fa6ad4f00e738fce6"
+          ]
+        },
+        {
+          "ms": 5600,
+          "success": 1,
+          "failure": 0,
+          "normalTrialIds": [
+            "3edc950f1fc54ed28697d129bb6c33a6"
+          ],
+          "afterEarlierFailureTrialIds": []
+        },
+        {
+          "ms": 5750,
+          "success": 9,
+          "failure": 0,
+          "normalTrialIds": [
+            "89edd5b82d8548118ccca50939a080f0",
+            "46653c257ec34f9fa839f9da8fea834a",
+            "ea59543da972451693731a607e853027",
+            "eb185052f2d74faebabb03bf575a71ad",
+            "9490193fed894d5bb57f10d2eac84ada",
+            "d800e54e4c964efb9af837a4e05f10e4",
+            "7a9da115210f4d36be14d0db48c9d040",
+            "36fad706c0c74d0183031088ad0c5131",
+            "ff79ac210c3e4875847d3040fafd6d28"
+          ],
+          "afterEarlierFailureTrialIds": [
+            "f78da28acc3e4b0aac915e3a88a8c22e",
+            "7df009abf5bc4902a7aaae5ac5227eb9"
+          ]
+        },
+        {
+          "ms": 5950,
+          "success": 1,
+          "failure": 0,
+          "normalTrialIds": [
+            "eb2e952540eb4c569399270538568555"
+          ],
+          "afterEarlierFailureTrialIds": []
+        },
+        {
+          "ms": 6000,
+          "success": 6,
+          "failure": 0,
+          "normalTrialIds": [
+            "65c642d83b9b4fb48396e4dd743bd43c",
+            "9321ffd497cf4a71b6b64790a281dafa",
+            "b53da33e138242ca805b7fff8ddb691f",
+            "394b0f922b63418c9f0ecd46a64010f0",
+            "5654ead3599c488694e063e23609065e",
+            "5830a2f0d66740769541ac70a438e21c"
+          ],
+          "afterEarlierFailureTrialIds": []
+        }
+      ]
+    },
+    {
+      "action": "hit-3",
+      "adopted": {
+        "EarlyMs": 6850,
+        "BaselineMs": 7050,
+        "LateMs": 7250
+      },
+      "widthMs": 400,
+      "counts": [
+        {
+          "ms": 6800,
+          "success": 0,
+          "failure": 1,
+          "normalTrialIds": [
+            "5b2a6700c00643dda10b290eb31cba2a"
+          ],
+          "afterEarlierFailureTrialIds": [
+            "8e826a9d39c041818909c3d139adf8a1"
+          ]
+        },
+        {
+          "ms": 6850,
+          "success": 7,
+          "failure": 0,
+          "normalTrialIds": [
+            "fd5c8831e88a4ebcbc5c2293f82b9c68",
+            "20d55810a7a94229b44623184d575102",
+            "6a28b708ee64424eb54c0517173e177f",
+            "12fa304f31ab467595d971617a6ba81b",
+            "9321ffd497cf4a71b6b64790a281dafa",
+            "5654ead3599c488694e063e23609065e",
+            "5830a2f0d66740769541ac70a438e21c"
+          ],
+          "afterEarlierFailureTrialIds": [
+            "c4090fc8e31b461fa6ad4f00e738fce6"
+          ]
+        },
+        {
+          "ms": 6900,
+          "success": 1,
+          "failure": 0,
+          "normalTrialIds": [
+            "3edc950f1fc54ed28697d129bb6c33a6"
+          ],
+          "afterEarlierFailureTrialIds": []
+        },
+        {
+          "ms": 7050,
+          "success": 9,
+          "failure": 0,
+          "normalTrialIds": [
+            "89edd5b82d8548118ccca50939a080f0",
+            "46653c257ec34f9fa839f9da8fea834a",
+            "ea59543da972451693731a607e853027",
+            "eb185052f2d74faebabb03bf575a71ad",
+            "9490193fed894d5bb57f10d2eac84ada",
+            "d800e54e4c964efb9af837a4e05f10e4",
+            "7a9da115210f4d36be14d0db48c9d040",
+            "36fad706c0c74d0183031088ad0c5131",
+            "ff79ac210c3e4875847d3040fafd6d28"
+          ],
+          "afterEarlierFailureTrialIds": [
+            "f78da28acc3e4b0aac915e3a88a8c22e",
+            "7df009abf5bc4902a7aaae5ac5227eb9"
+          ]
+        },
+        {
+          "ms": 7250,
+          "success": 3,
+          "failure": 0,
+          "normalTrialIds": [
+            "eb2e952540eb4c569399270538568555",
+            "8b100a1d7ef74bf9a9c831d62bfaa41d",
+            "fd0586453e2142b0938b105453552371"
+          ],
+          "afterEarlierFailureTrialIds": []
+        },
+        {
+          "ms": 7300,
+          "success": 4,
+          "failure": 1,
+          "normalTrialIds": [
+            "65c642d83b9b4fb48396e4dd743bd43c",
+            "b53da33e138242ca805b7fff8ddb691f",
+            "394b0f922b63418c9f0ecd46a64010f0",
+            "b115bf34504b44008db03c96cbc937e5",
+            "89c635e17cf4434bbe8476bd8c879ad5"
+          ],
+          "afterEarlierFailureTrialIds": []
+        }
+      ]
+    },
+    {
+      "action": "hit-4",
+      "adopted": {
+        "EarlyMs": 8250,
+        "BaselineMs": 8450,
+        "LateMs": 8650
+      },
+      "widthMs": 400,
+      "counts": [
+        {
+          "ms": 8150,
+          "success": 0,
+          "failure": 1,
+          "normalTrialIds": [
+            "20d55810a7a94229b44623184d575102"
+          ],
+          "afterEarlierFailureTrialIds": []
+        },
+        {
+          "ms": 8200,
+          "success": 2,
+          "failure": 1,
+          "normalTrialIds": [
+            "fd5c8831e88a4ebcbc5c2293f82b9c68",
+            "12fa304f31ab467595d971617a6ba81b",
+            "b115bf34504b44008db03c96cbc937e5"
+          ],
+          "afterEarlierFailureTrialIds": [
+            "c4090fc8e31b461fa6ad4f00e738fce6",
+            "8e826a9d39c041818909c3d139adf8a1",
+            "5b2a6700c00643dda10b290eb31cba2a"
+          ]
+        },
+        {
+          "ms": 8250,
+          "success": 4,
+          "failure": 0,
+          "normalTrialIds": [
+            "3edc950f1fc54ed28697d129bb6c33a6",
+            "6a28b708ee64424eb54c0517173e177f",
+            "8b100a1d7ef74bf9a9c831d62bfaa41d",
+            "fd0586453e2142b0938b105453552371"
+          ],
+          "afterEarlierFailureTrialIds": [
+            "89c635e17cf4434bbe8476bd8c879ad5"
+          ]
+        },
+        {
+          "ms": 8400,
+          "success": 3,
+          "failure": 0,
+          "normalTrialIds": [
+            "89edd5b82d8548118ccca50939a080f0",
+            "46653c257ec34f9fa839f9da8fea834a",
+            "ea59543da972451693731a607e853027"
+          ],
+          "afterEarlierFailureTrialIds": []
+        },
+        {
+          "ms": 8450,
+          "success": 6,
+          "failure": 0,
+          "normalTrialIds": [
+            "eb185052f2d74faebabb03bf575a71ad",
+            "9490193fed894d5bb57f10d2eac84ada",
+            "d800e54e4c964efb9af837a4e05f10e4",
+            "7a9da115210f4d36be14d0db48c9d040",
+            "36fad706c0c74d0183031088ad0c5131",
+            "ff79ac210c3e4875847d3040fafd6d28"
+          ],
+          "afterEarlierFailureTrialIds": [
+            "f78da28acc3e4b0aac915e3a88a8c22e",
+            "7df009abf5bc4902a7aaae5ac5227eb9"
+          ]
+        },
+        {
+          "ms": 8600,
+          "success": 1,
+          "failure": 0,
+          "normalTrialIds": [
+            "eb2e952540eb4c569399270538568555"
+          ],
+          "afterEarlierFailureTrialIds": []
+        },
+        {
+          "ms": 8650,
+          "success": 6,
+          "failure": 0,
+          "normalTrialIds": [
+            "65c642d83b9b4fb48396e4dd743bd43c",
+            "9321ffd497cf4a71b6b64790a281dafa",
+            "b53da33e138242ca805b7fff8ddb691f",
+            "394b0f922b63418c9f0ecd46a64010f0",
+            "5654ead3599c488694e063e23609065e",
+            "5830a2f0d66740769541ac70a438e21c"
+          ],
+          "afterEarlierFailureTrialIds": []
+        }
+      ]
+    },
+    {
+      "action": "hit-5",
+      "adopted": {
+        "EarlyMs": 10200,
+        "BaselineMs": 10400,
+        "LateMs": 10600
+      },
+      "widthMs": 400,
+      "counts": [
+        {
+          "ms": 10200,
+          "success": 5,
+          "failure": 0,
+          "normalTrialIds": [
+            "6a28b708ee64424eb54c0517173e177f",
+            "12fa304f31ab467595d971617a6ba81b",
+            "9321ffd497cf4a71b6b64790a281dafa",
+            "5654ead3599c488694e063e23609065e",
+            "5830a2f0d66740769541ac70a438e21c"
+          ],
+          "afterEarlierFailureTrialIds": [
+            "c4090fc8e31b461fa6ad4f00e738fce6",
+            "8e826a9d39c041818909c3d139adf8a1",
+            "5b2a6700c00643dda10b290eb31cba2a",
+            "20d55810a7a94229b44623184d575102"
+          ]
+        },
+        {
+          "ms": 10250,
+          "success": 2,
+          "failure": 0,
+          "normalTrialIds": [
+            "3edc950f1fc54ed28697d129bb6c33a6",
+            "fd5c8831e88a4ebcbc5c2293f82b9c68"
+          ],
+          "afterEarlierFailureTrialIds": []
+        },
+        {
+          "ms": 10300,
+          "success": 1,
+          "failure": 0,
+          "normalTrialIds": [
+            "89edd5b82d8548118ccca50939a080f0"
+          ],
+          "afterEarlierFailureTrialIds": []
+        },
+        {
+          "ms": 10400,
+          "success": 6,
+          "failure": 0,
+          "normalTrialIds": [
+            "eb185052f2d74faebabb03bf575a71ad",
+            "9490193fed894d5bb57f10d2eac84ada",
+            "d800e54e4c964efb9af837a4e05f10e4",
+            "7a9da115210f4d36be14d0db48c9d040",
+            "36fad706c0c74d0183031088ad0c5131",
+            "ff79ac210c3e4875847d3040fafd6d28"
+          ],
+          "afterEarlierFailureTrialIds": [
+            "f78da28acc3e4b0aac915e3a88a8c22e",
+            "7df009abf5bc4902a7aaae5ac5227eb9"
+          ]
+        },
+        {
+          "ms": 10450,
+          "success": 1,
+          "failure": 0,
+          "normalTrialIds": [
+            "eb2e952540eb4c569399270538568555"
+          ],
+          "afterEarlierFailureTrialIds": []
+        },
+        {
+          "ms": 10500,
+          "success": 1,
+          "failure": 0,
+          "normalTrialIds": [
+            "65c642d83b9b4fb48396e4dd743bd43c"
+          ],
+          "afterEarlierFailureTrialIds": []
+        },
+        {
+          "ms": 10550,
+          "success": 1,
+          "failure": 0,
+          "normalTrialIds": [
+            "46653c257ec34f9fa839f9da8fea834a"
+          ],
+          "afterEarlierFailureTrialIds": []
+        },
+        {
+          "ms": 10600,
+          "success": 3,
+          "failure": 0,
+          "normalTrialIds": [
+            "ea59543da972451693731a607e853027",
+            "b53da33e138242ca805b7fff8ddb691f",
+            "fd0586453e2142b0938b105453552371"
+          ],
+          "afterEarlierFailureTrialIds": []
+        },
+        {
+          "ms": 10650,
+          "success": 1,
+          "failure": 1,
+          "normalTrialIds": [
+            "394b0f922b63418c9f0ecd46a64010f0",
+            "8b100a1d7ef74bf9a9c831d62bfaa41d"
+          ],
+          "afterEarlierFailureTrialIds": [
+            "b115bf34504b44008db03c96cbc937e5",
+            "89c635e17cf4434bbe8476bd8c879ad5"
+          ]
+        }
+      ]
+    }
+  ],
+  "extraUserEvidence": [
+    {
+      "action": "entry",
+      "ms": 2550,
+      "outcome": "success",
+      "source": "current-task user clarification 2026-09-24: 2550ms 성공을 별도로 확인했다",
+      "rawTrialId": null,
+      "policy": "Separate user observation; not included in30 raw-trial counts or given a fabricated ID"
+    }
+  ],
+  "trials": [
+    {
+      "file": "trial-dc21ddff392e4364a090adb7a48d880d.json",
+      "trialId": "89edd5b82d8548118ccca50939a080f0",
+      "at": "2026-09-24T11:42:57.6664272Z",
+      "delays": [
+        2650,
+        4250,
+        5750,
+        7050,
+        8400,
+        10300
+      ],
+      "bits": "111111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "UNKNOWN",
+      "video": null,
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-dc21ddff392e4364a090adb7a48d880d.json",
+      "rawSha256": "4556dd4d5c7a0eee275a60f1615640814e660c9afc8523244b2f14ffa3c51e34",
+      "resultSha256": "9a478c76d7213932523cf35f542f2cd8afe4e341b4a7fe4757d48e4a9c841b4e",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 500,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 850,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "UNKNOWN treated as OFF; not proof that no recording existed",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-cd01e3f125ac4d7b824a838ac28ad19f.json",
+      "trialId": "3edc950f1fc54ed28697d129bb6c33a6",
+      "at": "2026-09-24T11:43:46.4399278Z",
+      "delays": [
+        2650,
+        4100,
+        5600,
+        6900,
+        8250,
+        10250
+      ],
+      "bits": "111111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "UNKNOWN",
+      "video": null,
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-cd01e3f125ac4d7b824a838ac28ad19f.json",
+      "rawSha256": "bb468cfb68cfbabd3f09a47c43bfeed73719eb401cb3e764e6ba9bc38d6b3a27",
+      "resultSha256": "f6592a56f5e006945a0ccc416520c80a5706c9544894b7bf14b352a4afae9e26",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 500,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 850,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "UNKNOWN treated as OFF; not proof that no recording existed",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-49595b7baca948539f234c05e8aa09e0.json",
+      "trialId": "fd5c8831e88a4ebcbc5c2293f82b9c68",
+      "at": "2026-09-24T11:45:47.5329957Z",
+      "delays": [
+        2650,
+        4050,
+        5550,
+        6850,
+        8200,
+        10250
+      ],
+      "bits": "111111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "UNKNOWN",
+      "video": null,
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-49595b7baca948539f234c05e8aa09e0.json",
+      "rawSha256": "996bfcf363f2ef398d9f16858b6a077b493dec589ca48fa02f195275926cc97a",
+      "resultSha256": "6ed1029c32fb732c41f59c1b396aa8efb4579841efa6a1bacdf9ff8abb1ab1d6",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 500,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 850,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "UNKNOWN treated as OFF; not proof that no recording existed",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-e1fa0506fe054110b86c1f5f31832d00.json",
+      "trialId": "c4090fc8e31b461fa6ad4f00e738fce6",
+      "at": "2026-09-24T11:46:34.0715706Z",
+      "delays": [
+        2650,
+        4000,
+        5550,
+        6850,
+        8200,
+        10200
+      ],
+      "bits": "101111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "UNKNOWN",
+      "video": null,
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-e1fa0506fe054110b86c1f5f31832d00.json",
+      "rawSha256": "b8e022e0dfb6fedeb24261cef4b506f49b40642c7182d22a1ca547e54ed23397",
+      "resultSha256": "8a87cf7e8078891087ed52658852387eb6a1437c3dd8d288acdb1f8aab20fd45",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 500,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 850,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "UNKNOWN treated as OFF; not proof that no recording existed",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-8e2282e29fac42fa8f48584afe3e97f1.json",
+      "trialId": "8e826a9d39c041818909c3d139adf8a1",
+      "at": "2026-09-24T11:47:28.2950510Z",
+      "delays": [
+        2650,
+        4050,
+        5500,
+        6800,
+        8200,
+        10200
+      ],
+      "bits": "110111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "UNKNOWN",
+      "video": null,
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-8e2282e29fac42fa8f48584afe3e97f1.json",
+      "rawSha256": "877e48e92d2194263efa58188316c3ac44347ddcf02f511d50a4ebe8aa2fafbe",
+      "resultSha256": "03333f018063e08bab1388b48202edc3140d73ae1506eb8eae90f8b06b62ab1c",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 500,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 850,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "UNKNOWN treated as OFF; not proof that no recording existed",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-e7db1453133f4cce848088aab51cbbc3.json",
+      "trialId": "5b2a6700c00643dda10b290eb31cba2a",
+      "at": "2026-09-24T11:48:14.4814443Z",
+      "delays": [
+        2650,
+        4050,
+        5550,
+        6800,
+        8200,
+        10200
+      ],
+      "bits": "111011",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "UNKNOWN",
+      "video": null,
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-e7db1453133f4cce848088aab51cbbc3.json",
+      "rawSha256": "143849e79484f775bc555817683d2d7b7f2d38d0c19ec572eba308674d87eb42",
+      "resultSha256": "1afa41ee0f4ec19831681554ab449f069a64c5f486862cfae229ca980749e243",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 500,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 850,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "UNKNOWN treated as OFF; not proof that no recording existed",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-25b15405e40e49298363d3e53c225950.json",
+      "trialId": "20d55810a7a94229b44623184d575102",
+      "at": "2026-09-24T11:49:06.9889357Z",
+      "delays": [
+        2650,
+        4050,
+        5550,
+        6850,
+        8150,
+        10200
+      ],
+      "bits": "111101",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "UNKNOWN",
+      "video": null,
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-25b15405e40e49298363d3e53c225950.json",
+      "rawSha256": "e70028a1e306d580622db5c37ef8323d281ef3380cddeb6605b9ca8ee71f74c9",
+      "resultSha256": "d7df5d9f9f167d331ce6fd67cc26723172035b01b52cdb02d43d261c13dfb702",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 500,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 850,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "UNKNOWN treated as OFF; not proof that no recording existed",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-2a7ef1b26c3d45f98bca8cb6dda846a5.json",
+      "trialId": "6a28b708ee64424eb54c0517173e177f",
+      "at": "2026-09-24T11:55:25.7052958Z",
+      "delays": [
+        2650,
+        4050,
+        5550,
+        6850,
+        8250,
+        10200
+      ],
+      "bits": "111111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "UNKNOWN",
+      "video": null,
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-2a7ef1b26c3d45f98bca8cb6dda846a5.json",
+      "rawSha256": "ec9d11dae06c78fd65c2a4df0158d1610b022327f75c8fa1cf4ae8a6434226ae",
+      "resultSha256": "2b79759d4fdf78119423341e54bb58021ec29896dd85165dcb01ca4161b7bed2",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 700,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 850,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "UNKNOWN treated as OFF; not proof that no recording existed",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-77861177da564e33b6d6d460755089a9.json",
+      "trialId": "12fa304f31ab467595d971617a6ba81b",
+      "at": "2026-09-24T11:55:56.5759237Z",
+      "delays": [
+        2650,
+        4050,
+        5550,
+        6850,
+        8200,
+        10200
+      ],
+      "bits": "111111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "UNKNOWN",
+      "video": null,
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-77861177da564e33b6d6d460755089a9.json",
+      "rawSha256": "6c51421a7b1b2a8537af75ce157620b0688e279768973403f0079b3abb8500ed",
+      "resultSha256": "96718d1cd62bac806584afda1fa941a46e66c1c787fdf230eecf0253863ebb08",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 700,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 850,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "UNKNOWN treated as OFF; not proof that no recording existed",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-1cffb33f262847ec827d9c10e21ddd5e.json",
+      "trialId": "eb2e952540eb4c569399270538568555",
+      "at": "2026-09-24T11:57:55.1820688Z",
+      "delays": [
+        2650,
+        4450,
+        5950,
+        7250,
+        8600,
+        10450
+      ],
+      "bits": "111111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "UNKNOWN",
+      "video": null,
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-1cffb33f262847ec827d9c10e21ddd5e.json",
+      "rawSha256": "0230743521c1a94db67b903f158c673718fe18d682d47f0fb6c926e314f4e054",
+      "resultSha256": "c3d5407e098e2e69331b14606bf121cf0b65e98585c81a1626a289a3c17f5b35",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 700,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 950,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "UNKNOWN treated as OFF; not proof that no recording existed",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-c88fd39f020e4d56a5ec93d21ef9e1cd.json",
+      "trialId": "65c642d83b9b4fb48396e4dd743bd43c",
+      "at": "2026-09-24T11:58:47.7931661Z",
+      "delays": [
+        2650,
+        4500,
+        6000,
+        7300,
+        8650,
+        10500
+      ],
+      "bits": "111111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "UNKNOWN",
+      "video": null,
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-c88fd39f020e4d56a5ec93d21ef9e1cd.json",
+      "rawSha256": "92b9c7e68e44ca358b6aa0d51c4b4c587704fdd30780a90ef53a894057a2103f",
+      "resultSha256": "700ccb9152cffb5afda15572219abf4e4532b66727e2eb36c36b5654bc3e98ef",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 700,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 950,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "UNKNOWN treated as OFF; not proof that no recording existed",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-45e91e9e1a724c8b8fea01494a8867ac.json",
+      "trialId": "9321ffd497cf4a71b6b64790a281dafa",
+      "at": "2026-09-24T11:59:23.9658063Z",
+      "delays": [
+        2650,
+        4050,
+        6000,
+        6850,
+        8650,
+        10200
+      ],
+      "bits": "111111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "UNKNOWN",
+      "video": null,
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-45e91e9e1a724c8b8fea01494a8867ac.json",
+      "rawSha256": "4fbbb81b12e9881a6a9c4f30d1d5253ddeb3ebb276631352324f4e2a7bf6421e",
+      "resultSha256": "f27b69c588a83c32a92e0216675f10882d2037b1a31d7e0912562b16641b3f21",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 700,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 950,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "UNKNOWN treated as OFF; not proof that no recording existed",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-45c82396c33a4c77ad0f9fcf22b99fdf.json",
+      "trialId": "46653c257ec34f9fa839f9da8fea834a",
+      "at": "2026-09-24T12:01:11.6855627Z",
+      "delays": [
+        2650,
+        4250,
+        5750,
+        7050,
+        8400,
+        10550
+      ],
+      "bits": "111111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "UNKNOWN",
+      "video": null,
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-45c82396c33a4c77ad0f9fcf22b99fdf.json",
+      "rawSha256": "354cda310ee71d8b32998858fb4587ba6f4648595a6d1b593804f9da84607f2f",
+      "resultSha256": "ac117352474772ff7fb3fc49f20bc34a2502ed472b38719bdd59921eb0a38d65",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 700,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 950,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "UNKNOWN treated as OFF; not proof that no recording existed",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-ddde76f8781c408a80e3f8e6e9c94925.json",
+      "trialId": "ea59543da972451693731a607e853027",
+      "at": "2026-09-24T12:01:43.3952684Z",
+      "delays": [
+        2650,
+        4250,
+        5750,
+        7050,
+        8400,
+        10600
+      ],
+      "bits": "111111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "UNKNOWN",
+      "video": null,
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-ddde76f8781c408a80e3f8e6e9c94925.json",
+      "rawSha256": "01c5613051047d2670e7996238e41cfe728a711ea20a0d6099069ebe9352f668",
+      "resultSha256": "44f8339fa5e16922a1e9d406003050f4f814891357a9daf07a2b5b8a154ace0e",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 700,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 950,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "UNKNOWN treated as OFF; not proof that no recording existed",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-93a5084116604829b0904fa11da63803.json",
+      "trialId": "b53da33e138242ca805b7fff8ddb691f",
+      "at": "2026-09-24T12:02:13.4872562Z",
+      "delays": [
+        2650,
+        4500,
+        6000,
+        7300,
+        8650,
+        10600
+      ],
+      "bits": "111111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "UNKNOWN",
+      "video": null,
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-93a5084116604829b0904fa11da63803.json",
+      "rawSha256": "2eef9a795b07b823e219cb539d8b79ab8ef058d78e40fbf61266f4e4baeaef3d",
+      "resultSha256": "df3dc8889618d6e164d0b1f7b452564e7c5e5671db0d3db0a1fce212b9deb51d",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 700,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 950,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "UNKNOWN treated as OFF; not proof that no recording existed",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-948e738fe344449ea628b376c55a1f54.json",
+      "trialId": "394b0f922b63418c9f0ecd46a64010f0",
+      "at": "2026-09-24T12:03:16.1824146Z",
+      "delays": [
+        2650,
+        4500,
+        6000,
+        7300,
+        8650,
+        10650
+      ],
+      "bits": "111111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "UNKNOWN",
+      "video": null,
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-948e738fe344449ea628b376c55a1f54.json",
+      "rawSha256": "dd142ea207340410d4e65046e0e1b34917a5a5edc4dc2cd5eb40f604d252a3d0",
+      "resultSha256": "7f348df9fe3ec710fc1aa2c9362e5265b6e88a04ceee4bd58901f5eb802114f1",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 700,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 950,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "UNKNOWN treated as OFF; not proof that no recording existed",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-f412357f805a4379a976d9eb15608cc6.json",
+      "trialId": "5654ead3599c488694e063e23609065e",
+      "at": "2026-09-24T12:04:03.2526995Z",
+      "delays": [
+        2650,
+        4050,
+        6000,
+        6850,
+        8650,
+        10200
+      ],
+      "bits": "111111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "UNKNOWN",
+      "video": null,
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-f412357f805a4379a976d9eb15608cc6.json",
+      "rawSha256": "38a9935911e382e868dd1ad7baf3296cd82a8bc4dde6e12d0e45e9f5b1f25a57",
+      "resultSha256": "cab4f0522452d980c7674a3146104acdb9eb4636ba8188975d9c35ab698fea2f",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 700,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 950,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "UNKNOWN treated as OFF; not proof that no recording existed",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-c328f1d556084e05bd1b56b8c7154d00.json",
+      "trialId": "b115bf34504b44008db03c96cbc937e5",
+      "at": "2026-09-24T12:05:52.6093361Z",
+      "delays": [
+        2650,
+        4500,
+        5550,
+        7300,
+        8200,
+        10650
+      ],
+      "bits": "111100",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "UNKNOWN",
+      "video": null,
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-c328f1d556084e05bd1b56b8c7154d00.json",
+      "rawSha256": "17f396056a57f94b7d942439069df303757e8fc75ba2bdaf48e0315a78cfdf58",
+      "resultSha256": "a65e6e779043a05fecb0d0941dd6bea27d20410b8f8c1ca9e516f82d913713b8",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 600,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 950,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "UNKNOWN treated as OFF; not proof that no recording existed",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-ccd795849a244e6ab150d9d59c419ff5.json",
+      "trialId": "89c635e17cf4434bbe8476bd8c879ad5",
+      "at": "2026-09-24T12:07:13.3886322Z",
+      "delays": [
+        2650,
+        4500,
+        5550,
+        7300,
+        8250,
+        10650
+      ],
+      "bits": "111010",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "UNKNOWN",
+      "video": null,
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-ccd795849a244e6ab150d9d59c419ff5.json",
+      "rawSha256": "d45810f85f69d5b165fd10eac0a2eb541aa02218960efdb48af1b0c360b84280",
+      "resultSha256": "3444f777733c42109c300073edaeb9616550f8076b9dd6939b836abb3ef123ab",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 500,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 750,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "UNKNOWN treated as OFF; not proof that no recording existed",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-41946cc7cd5e4019a163e7bc50d24bcb.json",
+      "trialId": "8b100a1d7ef74bf9a9c831d62bfaa41d",
+      "at": "2026-09-24T12:08:01.7449557Z",
+      "delays": [
+        2650,
+        4500,
+        5550,
+        7250,
+        8250,
+        10650
+      ],
+      "bits": "111110",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "UNKNOWN",
+      "video": null,
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-41946cc7cd5e4019a163e7bc50d24bcb.json",
+      "rawSha256": "38d92f99cca9d97d35cf0a466a422ba27d24ad91125fe503585eeb89e88f1fcd",
+      "resultSha256": "8519554564afb1969d178ab452c76305b20d3dc8fdad71127b63110d0c65350b",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 500,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 750,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "UNKNOWN treated as OFF; not proof that no recording existed",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-a6432bbded4d4cdfa6f7a6cf527da763.json",
+      "trialId": "fd0586453e2142b0938b105453552371",
+      "at": "2026-09-24T12:09:12.2677255Z",
+      "delays": [
+        2650,
+        4500,
+        5550,
+        7250,
+        8250,
+        10600
+      ],
+      "bits": "111111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "UNKNOWN",
+      "video": null,
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-a6432bbded4d4cdfa6f7a6cf527da763.json",
+      "rawSha256": "3a07fce6fedfd2da5a325f86e75ae5bc9684bc56a96af362bd0b9be350be08a8",
+      "resultSha256": "4edf9f900cce6c6013003122db23b2b2478833a45a20a3679152e2884e78f3b6",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 500,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 750,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "UNKNOWN treated as OFF; not proof that no recording existed",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-dc9ce4141b8a4277a8b506a0303248df.json",
+      "trialId": "5830a2f0d66740769541ac70a438e21c",
+      "at": "2026-09-24T12:09:52.8405176Z",
+      "delays": [
+        2650,
+        4050,
+        6000,
+        6850,
+        8650,
+        10200
+      ],
+      "bits": "111111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "UNKNOWN",
+      "video": null,
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-dc9ce4141b8a4277a8b506a0303248df.json",
+      "rawSha256": "a42bd966aac7ad8f95915b03dc5e2b8ddba8e6d979e438f697d31c9efd2a0804",
+      "resultSha256": "373422485b41ce68b2febea91e2628b650df46674df6b2283430cede030f0e16",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 500,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 750,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "UNKNOWN treated as OFF; not proof that no recording existed",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-ae8f1e7a9a1b4a01ad070659366578e3.json",
+      "trialId": "f78da28acc3e4b0aac915e3a88a8c22e",
+      "at": "2026-09-24T12:10:53.5227586Z",
+      "delays": [
+        2500,
+        4250,
+        5750,
+        7050,
+        8450,
+        10400
+      ],
+      "bits": "011111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "UNKNOWN",
+      "video": null,
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-ae8f1e7a9a1b4a01ad070659366578e3.json",
+      "rawSha256": "a7709fc35c8b4f4ce7e35b79d9bcec9c3e2ff69c3f20c978402bbc8f03483b43",
+      "resultSha256": "93a42206c9ff0ca25b2472ef03e87649e859d7dfc6ed38bcc0eef1b87fee0ed3",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 500,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 750,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "UNKNOWN treated as OFF; not proof that no recording existed",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-942f27dd448541bb972882ae5473fef2.json",
+      "trialId": "eb185052f2d74faebabb03bf575a71ad",
+      "at": "2026-09-24T12:11:24.9412318Z",
+      "delays": [
+        2800,
+        4250,
+        5750,
+        7050,
+        8450,
+        10400
+      ],
+      "bits": "111111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "UNKNOWN",
+      "video": null,
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-942f27dd448541bb972882ae5473fef2.json",
+      "rawSha256": "ab8f63e39aacb360b098ec1ebf39ee2dc2a51a12256bdf9f8b1e3210b3795261",
+      "resultSha256": "fdca0436988d019f01bf0c7d986b7a0f6aaca6fe986b5b27927e1e8a2669c414",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 500,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 750,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "UNKNOWN treated as OFF; not proof that no recording existed",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-5676609c1dcf4da88730c37dc9188d7c.json",
+      "trialId": "9490193fed894d5bb57f10d2eac84ada",
+      "at": "2026-09-24T12:11:55.2342945Z",
+      "delays": [
+        2850,
+        4250,
+        5750,
+        7050,
+        8450,
+        10400
+      ],
+      "bits": "111111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "UNKNOWN",
+      "video": null,
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-5676609c1dcf4da88730c37dc9188d7c.json",
+      "rawSha256": "ddd2048900f9ebb30ac6538ea28eaefebf0b197555a11da4fabcdf49de1f0db2",
+      "resultSha256": "695ca52473f7f311b0aa39ef9c125de5891bd0e2d95ccdeab46fd9e93a854006",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 500,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 750,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "UNKNOWN treated as OFF; not proof that no recording existed",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-e4835df00e1b4b70ac549f8f6de4c725.json",
+      "trialId": "7df009abf5bc4902a7aaae5ac5227eb9",
+      "at": "2026-09-24T12:12:48.1748296Z",
+      "delays": [
+        2900,
+        4250,
+        5750,
+        7050,
+        8450,
+        10400
+      ],
+      "bits": "011111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "UNKNOWN",
+      "video": null,
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-e4835df00e1b4b70ac549f8f6de4c725.json",
+      "rawSha256": "99114a3d7bb86c9cbdd4ddcc120fffc4e98c3ddee3116a3fc2ac93e56a94b44e",
+      "resultSha256": "0d6566ad43a0b16a8407b2db8ed2be4ed1a50c2d74f7262944a9572ba65022a0",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 500,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 750,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "UNKNOWN treated as OFF; not proof that no recording existed",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-6c63e30c68d84741ad76d5742a3fd6dd.json",
+      "trialId": "d800e54e4c964efb9af837a4e05f10e4",
+      "at": "2026-09-24T12:14:15.1821950Z",
+      "delays": [
+        2700,
+        4250,
+        5750,
+        7050,
+        8450,
+        10400
+      ],
+      "bits": "111111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "ON",
+      "video": "<PRIVATE_HOME>/Videos/ZZZ_2026-09-24_21-14-07.mp4",
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-6c63e30c68d84741ad76d5742a3fd6dd.json",
+      "rawSha256": "5ce1ea4d8870274b75ffe7d6ae84c4b6b49bbda4cadbd98f970633f02efe9679",
+      "resultSha256": "663208faaa828e5cfc4002ae3366519e045221e9664701517ce0efe88e9fab50",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 500,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 750,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "ON",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-79952317c3d84807bc8db8cdc0f288f3.json",
+      "trialId": "7a9da115210f4d36be14d0db48c9d040",
+      "at": "2026-09-24T12:14:53.2167879Z",
+      "delays": [
+        2700,
+        4250,
+        5750,
+        7050,
+        8450,
+        10400
+      ],
+      "bits": "111111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "ON",
+      "video": "<PRIVATE_HOME>/Videos/ZZZ_2026-09-24_21-14-49.mp4",
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-79952317c3d84807bc8db8cdc0f288f3.json",
+      "rawSha256": "f81c41e4c2f74a9608a6098e0fe1c828dd8f842554cf8a711de8d03ab4cc11f4",
+      "resultSha256": "e11b5ff9edabcf52939e793f6af969aad4ee2f05a4e02c454e9d5ff9f44c7204",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 500,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 750,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "ON",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-dbb26d8803d14be8a5d70c9344026e7e.json",
+      "trialId": "36fad706c0c74d0183031088ad0c5131",
+      "at": "2026-09-24T12:16:56.2631693Z",
+      "delays": [
+        2700,
+        4250,
+        5750,
+        7050,
+        8450,
+        10400
+      ],
+      "bits": "111111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "ON",
+      "video": "<PRIVATE_HOME>/Videos/ZZZ_2026-09-24_21-16-52.mp4",
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-dbb26d8803d14be8a5d70c9344026e7e.json",
+      "rawSha256": "1adf874c1c81ef14e8addcb0e180e6d0cd7224b93311d6948a50d00564eb1681",
+      "resultSha256": "80242689ab486cf498cfb3e856e6d920a92d12bbe7e905a86ec80dfae196c670",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 500,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 750,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "ON",
+      "inputSubmissionComplete": true
+    },
+    {
+      "file": "trial-23c78edb98754391b6e9229cea75964c.json",
+      "trialId": "ff79ac210c3e4875847d3040fafd6d28",
+      "at": "2026-09-24T12:18:29.9494474Z",
+      "delays": [
+        2700,
+        4250,
+        5750,
+        7050,
+        8450,
+        10400
+      ],
+      "bits": "111111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "recording": "ON",
+      "video": "<PRIVATE_HOME>/Videos/ZZZ_2026-09-24_21-18-26.mp4",
+      "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-23c78edb98754391b6e9229cea75964c.json",
+      "rawSha256": "0143bf3c5f368a20d8c865ade6dd76629673390bc863b46afb73e04cfa6f8499",
+      "resultSha256": "71064e49cb1ccae800b81f700374e127ba5d27ab161f9e8124fbdb4328da3dab",
+      "resultSource": {
+        "kind": "user-report",
+        "reference": "회차 종료 후 사용자 직접 입력"
+      },
+      "preparation": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 500,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 750,
+          "HoldMs": 100
+        }
+      ],
+      "recordingInterpretation": "ON",
+      "inputSubmissionComplete": true
+    }
+  ],
+  "videos": [
+    {
+      "source": {
+        "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-24_21-14-07.mp4",
+        "sha256": "f5d676579a078c7ce1fdb29b435f62c8492003d33b82e52deaea3f804ff7fc3b",
+        "width": 1280,
+        "height": 720,
+        "fps": "60/1",
+        "duration": "00:00:23.57",
+        "frames": 1413
+      },
+      "linkedTrialId": "d800e54e4c964efb9af837a4e05f10e4",
+      "linkBasis": "OBS F8 recording path plus raw result; user confirms all four final baseline",
+      "loggedBaselineMs": [
+        2700,
+        4250,
+        5750,
+        7050,
+        8450,
+        10400
+      ],
+      "firstMatchFrame": 519,
+      "overlayMainDownFrames": [
+        679,
+        771,
+        861,
+        939,
+        1023,
+        1140
+      ],
+      "overlayRelativeMs": [
+        2666.67,
+        4200.0,
+        5700.0,
+        7000.0,
+        8400.0,
+        10350.0
+      ],
+      "preparationObservation": "Preparation damage already visible atf464: Aria8660/10406; not selected.",
+      "mainResult": "111111 user result and final perfect-response banner observed",
+      "selectedRepresentative": false,
+      "overlayCandidateCaveat": "background effects cause short yellow false positives; curated main sequence separated from scan candidates"
+    },
+    {
+      "source": {
+        "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-24_21-14-49.mp4",
+        "sha256": "b093a00473e341c116c4cf09b3e49cccd731ac3ba46741b7126d5771fdfa17d2",
+        "width": 1280,
+        "height": 720,
+        "fps": "60/1",
+        "duration": "00:00:20.82",
+        "frames": 1249
+      },
+      "linkedTrialId": "7a9da115210f4d36be14d0db48c9d040",
+      "linkBasis": "OBS F8 recording path plus raw result; user confirms all four final baseline",
+      "loggedBaselineMs": [
+        2700,
+        4250,
+        5750,
+        7050,
+        8450,
+        10400
+      ],
+      "firstMatchFrame": 344,
+      "overlayMainDownFrames": [
+        506,
+        599,
+        689,
+        768,
+        851,
+        968
+      ],
+      "overlayRelativeMs": [
+        2700.0,
+        4250.0,
+        5750.0,
+        7066.67,
+        8450.0,
+        10400.0
+      ],
+      "preparationObservation": "Preparation avoided: Aria10406/10406 at250/295/325; alternative. Starts on settings screen.",
+      "mainResult": "111111 user result and final perfect-response banner observed",
+      "selectedRepresentative": false,
+      "overlayCandidateCaveat": "background effects cause short yellow false positives; curated main sequence separated from scan candidates"
+    },
+    {
+      "source": {
+        "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-24_21-16-52.mp4",
+        "sha256": "9bac3fc0b479e98146dfddf10324dc1634904f53177abaa48ed425c8f53f88b1",
+        "width": 1280,
+        "height": 720,
+        "fps": "60/1",
+        "duration": "00:00:19.55",
+        "frames": 1173
+      },
+      "linkedTrialId": "36fad706c0c74d0183031088ad0c5131",
+      "linkBasis": "OBS F8 recording path plus raw result; user confirms all four final baseline",
+      "loggedBaselineMs": [
+        2700,
+        4250,
+        5750,
+        7050,
+        8450,
+        10400
+      ],
+      "firstMatchFrame": 362,
+      "overlayMainDownFrames": [
+        526,
+        618,
+        708,
+        785,
+        870,
+        987
+      ],
+      "overlayRelativeMs": [
+        2733.33,
+        4266.67,
+        5766.67,
+        7050.0,
+        8466.67,
+        10416.67
+      ],
+      "preparationObservation": "Preparation damage: Aria10406 at233/278 then8660 at308 with red damage1746; not selected.",
+      "mainResult": "111111 user result and final perfect-response banner observed",
+      "selectedRepresentative": false,
+      "overlayCandidateCaveat": "background effects cause short yellow false positives; curated main sequence separated from scan candidates"
+    },
+    {
+      "source": {
+        "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-24_21-18-26.mp4",
+        "sha256": "b28069a815123450367e0bb005799e7c92aa70d57ba1f27d127318a7c5cbbc71",
+        "width": 1280,
+        "height": 720,
+        "fps": "60/1",
+        "duration": "00:00:18.93",
+        "frames": 1135
+      },
+      "linkedTrialId": "ff79ac210c3e4875847d3040fafd6d28",
+      "linkBasis": "OBS F8 recording path plus raw result; user confirms all four final baseline",
+      "loggedBaselineMs": [
+        2700,
+        4250,
+        5750,
+        7050,
+        8450,
+        10400
+      ],
+      "firstMatchFrame": 322,
+      "overlayMainDownFrames": [
+        485,
+        577,
+        667,
+        745,
+        829,
+        946
+      ],
+      "overlayRelativeMs": [
+        2716.67,
+        4250.0,
+        5750.0,
+        7050.0,
+        8450.0,
+        10400.0
+      ],
+      "preparationObservation": "Preparation avoided: Aria10406/10406 at221/266/296 and entry sequence; selected.",
+      "mainResult": "111111 user result and final perfect-response banner observed",
+      "selectedRepresentative": true,
+      "overlayCandidateCaveat": "background effects cause short yellow false positives; curated main sequence separated from scan candidates"
+    }
+  ],
+  "profileSnapshot": {
+    "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\profiles\\graymane-execute-01.json",
+    "sha256": "1e2f2d41729ff8ea110ef12b9d20989833d12f8c9f4dcf8b852028ff5e01d946",
+    "data": {
+      "SchemaVersion": 3,
+      "Id": "graymane-execute-01",
+      "BossId": "graymane",
+      "BossLabel": "피의 청소부",
+      "Skill": "Attack_Excute_Pre / Attack_Excute_Combo",
+      "Conditions": "9월24일 수동 영상 기반 첫 시험점·성공 경계 미측정 / 아리아 시작·같은 시작 위치 / F8 W+RMB 준비 후 문구 원점 / 2타5983ms 실패 반례·선행 실패 이후 분리",
+      "Party": "아리아 → 남궁우 → 수나",
+      "StartCharacter": "아리아",
+      "MinimumSpacingMs": 250,
+      "ManualPreparationRmbUntilMs": 0,
+      "Preparation": null,
+      "AuxiliaryInputs": null,
+      "StartAttack": null,
+      "StartInputs": [
+        {
+          "Id": "approach",
+          "Label": "전진 회피 방향",
+          "Key": "W",
+          "AtMs": 500,
+          "HoldMs": 850
+        },
+        {
+          "Id": "prepare-dodge",
+          "Label": "전진 회피",
+          "Key": "RMB",
+          "AtMs": 750,
+          "HoldMs": 100
+        }
+      ],
+      "AllowManualMovement": false,
+      "Detector": {
+        "Id": "graymane-korean-shared-yellow-shape-v1",
+        "Template": "template-39194a973610342fb85047e35ec976235b1102ede77ca13a68eb2b752e0fc8cb.png",
+        "ReferenceWidth": 1280,
+        "ReferenceHeight": 720,
+        "X": 368,
+        "Y": 136,
+        "Width": 528,
+        "Height": 28,
+        "MinimumClientWidth": 1280,
+        "Threshold": 0.68,
+        "PollMs": 8,
+        "AbsentMs": 100,
+        "ConfirmationMs": 40,
+        "TimeoutMs": 60000
+      },
+      "Actions": [
+        {
+          "Id": "entry",
+          "Label": "진입 회피",
+          "Key": "RMB",
+          "Group": "A",
+          "SelectedTiming": "baseline",
+          "HoldMs": 100,
+          "MinimumMs": 100,
+          "MaximumMs": 20000,
+          "Timing": {
+            "EarlyMs": 2550,
+            "BaselineMs": 2700,
+            "LateMs": 2850
+          }
+        },
+        {
+          "Id": "hit-1",
+          "Label": "1타",
+          "Key": "Space",
+          "Group": "B",
+          "SelectedTiming": "baseline",
+          "HoldMs": 150,
+          "MinimumMs": 100,
+          "MaximumMs": 20000,
+          "Timing": {
+            "EarlyMs": 4050,
+            "BaselineMs": 4250,
+            "LateMs": 4500
+          }
+        },
+        {
+          "Id": "hit-2",
+          "Label": "2타",
+          "Key": "Space",
+          "Group": "A",
+          "SelectedTiming": "baseline",
+          "HoldMs": 150,
+          "MinimumMs": 100,
+          "MaximumMs": 20000,
+          "Timing": {
+            "EarlyMs": 5550,
+            "BaselineMs": 5750,
+            "LateMs": 6000
+          }
+        },
+        {
+          "Id": "hit-3",
+          "Label": "3타",
+          "Key": "Space",
+          "Group": "B",
+          "SelectedTiming": "baseline",
+          "HoldMs": 150,
+          "MinimumMs": 100,
+          "MaximumMs": 20000,
+          "Timing": {
+            "EarlyMs": 6850,
+            "BaselineMs": 7050,
+            "LateMs": 7250
+          }
+        },
+        {
+          "Id": "hit-4",
+          "Label": "4타",
+          "Key": "Space",
+          "Group": "A",
+          "SelectedTiming": "baseline",
+          "HoldMs": 150,
+          "MinimumMs": 100,
+          "MaximumMs": 20000,
+          "Timing": {
+            "EarlyMs": 8250,
+            "BaselineMs": 8450,
+            "LateMs": 8650
+          }
+        },
+        {
+          "Id": "hit-5",
+          "Label": "5타",
+          "Key": "Space",
+          "Group": "B",
+          "SelectedTiming": "baseline",
+          "HoldMs": 150,
+          "MinimumMs": 100,
+          "MaximumMs": 20000,
+          "Timing": {
+            "EarlyMs": 10200,
+            "BaselineMs": 10400,
+            "LateMs": 10600
+          }
+        }
+      ]
+    }
+  },
+  "validation": {
+    "importStore": ".local/experiments/records.json",
+    "importStoreValid": true,
+    "noticeReplays": [
+      {
+        "name": "ZZZ_2026-09-24_21-14-07.mp4",
+        "frames": 1413,
+        "first": 519,
+        "confirmed": 522,
+        "passed": true,
+        "native_input_calls": 0
+      },
+      {
+        "name": "ZZZ_2026-09-24_21-14-49.mp4",
+        "frames": 1249,
+        "first": 344,
+        "confirmed": 347,
+        "passed": true,
+        "native_input_calls": 0
+      },
+      {
+        "name": "ZZZ_2026-09-24_21-16-52.mp4",
+        "frames": 1173,
+        "first": 362,
+        "confirmed": 365,
+        "passed": true,
+        "native_input_calls": 0
+      },
+      {
+        "name": "ZZZ_2026-09-24_21-18-26.mp4",
+        "frames": 1135,
+        "first": 322,
+        "confirmed": 325,
+        "passed": true,
+        "native_input_calls": 0
+      }
+    ],
+    "nativeGameInputCalls": 0,
+    "finalBundledProfileCheck": {
+      "profileId": "graymane-execute-01",
+      "profileHash": "b273e72d33d0d287482ba80f023367637ea9548066d2ff6ad6cefe2298a4ac85",
+      "selected_profile_combinations_passed": 9,
+      "common_core_tests_run": false,
+      "native_input_calls": 0,
+      "passed": [
+        "selected profile schedules and editor snapshots"
+      ]
+    }
+  },
+  "review": {
+    "type": "independent read-only log review plus controller video/record integration",
+    "corrections": [
+      "Initial independent count28 corrected to30",
+      "Initial independent3rd-hit7300 recommendation rejected using111010 first-failure record; accepted7250",
+      "Independent missing2550 observation resolved by explicit separate user confirmation, not invented raw record"
+    ]
+  },
+  "limits": [
+    "Normal counts require all earlier main actions success; preparation-note empty is not proof of preparation success.",
+    "Preparation timing and earlier choices changed across trials; counts are not randomized probabilities or universal physical boundaries.",
+    "Manual2nd-hit5983ms failure and automatic6000ms success coexist; do not assume a monotonic boundary across conditions.",
+    "First video overlay relative timing is about50ms early despite all six final logged baselines; do not overwrite raw settings or treat it as different candidates. Selected representative aligns within one frame."
+  ],
+  "serviceAdoption": {
+    "date": "2026-09-24",
+    "source": "User explicitly chose hit3 late7275, hit4 early8225, hit5 late10625 and authorized website publication.",
+    "windowsMs": [
+      [
+        2550,
+        2850
+      ],
+      [
+        4050,
+        4500
+      ],
+      [
+        5550,
+        6000
+      ],
+      [
+        6850,
+        7275
+      ],
+      [
+        8225,
+        8650
+      ],
+      [
+        10200,
+        10625
+      ]
+    ],
+    "referenceMs": [
+      2700,
+      4250,
+      5750,
+      7050,
+      8450,
+      10400
+    ],
+    "unverifiedAddedSegmentsMs": {
+      "hit-3": [
+        7250,
+        7275
+      ],
+      "hit-4": [
+        8225,
+        8250
+      ],
+      "hit-5": [
+        10600,
+        10625
+      ]
+    },
+    "actualGameValidation": "These25ms additions are user-approved service margins, not observed successful game inputs.",
+    "experimentProfile": "Keeps50ms measured grid7250/8250/10600, baseline unchanged; no common-program25ms migration."
+  },
+  "implementation": {
+    "state": "locally-verified-awaiting-publication",
+    "contentId": "graymane-execute-01",
+    "mediaEvidence": "graymane-service-media-20260924.json",
+    "localValidation": {
+      "contentTests": 33,
+      "publicUnitTests": 115,
+      "typecheck": true,
+      "build": true,
+      "mediaAlignmentFramesTolerance": 2,
+      "browserDesktop": 1,
+      "browserMobileWithSuccessAssertion": 2,
+      "independentReadOnlyReview": "no blocking findings",
+      "nativeGameInputCalls": 0
+    },
+    "limitations": "Web-only three25ms additions remain unverified by real game play; viewport/touch automation is not physical mobile latency validation."
+  }
+}

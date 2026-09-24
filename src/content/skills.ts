@@ -6,6 +6,7 @@ import { mirageArcherUnitPattern, mirageArcherUnitRecording, mirageLastRmbWindow
 import { phaethonPattern, phaethonRecording, phaethonIntegratedPattern, phaethonIntegratedRecording } from './phaethon-patterns';
 import { cuesForRecording, vesperPatterns, vesperRecordings, vesperSpaceEntries } from './vesper-patterns';
 import { vesselPattern, vesselRecording } from './vessel-patterns';
+import { graymanePattern, graymaneRecording } from './graymane-patterns';
 
 // Cover the full lower input-icon row in the 1280×720 recordings.
 // Start above the small Q key circle (below the large skill icon) and reach the frame edges.
@@ -140,6 +141,26 @@ export const vesselExecute01: PracticeContent = {
 };
 validateCues(vesselExecute01.cues, vesselExecute01.duration);
 
+const graymaneClipTime = (frame: number) => (frame - graymaneRecording.firstSourceFrame) / 60;
+const graymaneCues = cuesForRecording(graymanePattern, graymaneClipTime(graymaneRecording.originSourceFrame));
+export const graymaneExecute01: PracticeContent = {
+  id: 'graymane-execute-01', bossId: 'graymane', bossLabel: '피의 청소부', title: 'Attack_Excute_Pre / Attack_Excute_Combo',
+  video: 'media/graymane-execute-01-lufs26.mp4', poster: 'media/graymane-execute-01.jpg',
+  duration: graymaneClipTime(graymaneRecording.endSourceFrameExclusive),
+  cues: graymaneCues,
+  gameInputMasks,
+  entryOptions: [{ key: 'MouseRight', start: graymaneCues[0].start, end: graymaneCues[0].end, reference: graymaneCues[0].reference }],
+  preparation: {
+    end: graymaneClipTime(graymaneRecording.preparationDodgeReleaseFrame),
+    dodges: [{ id: 'prepare-rmb-1', label: '준비 회피', time: graymaneClipTime(graymaneRecording.preparationDodgeDownFrame) }],
+    movements: graymaneRecording.forwardMovements.map(([start, end]) => ({
+      key: 'W', start: graymaneClipTime(start), end: graymaneClipTime(end),
+    })),
+  },
+  recordedInputMasks: [{ x: 0, y: 560 / 720 * 100, width: 315 / 1280 * 100, height: 160 / 720 * 100 }],
+};
+validateCues(graymaneExecute01.cues, graymaneExecute01.duration);
+
 /** B uses the RMB example throughout; its video is not a simulation of user input. */
 export function withMirageLastResponse(layout: 'selected' | 'overlap', key: PracticeKey): PracticeContent {
   const base = mirageArcherUnitAttack09;
@@ -161,7 +182,7 @@ export function withMirageLastResponse(layout: 'selected' | 'overlap', key: Prac
   return resolved;
 }
 export const skills = [vesperExecute01, vesperExecute02, girtablulluExecute01, kusarikkuExecute01,
-  mirageArcherUnitAttack09, phaethonExecute01, phaethonIntegratedExecute02, vesselExecute01];
+  mirageArcherUnitAttack09, phaethonExecute01, phaethonIntegratedExecute02, vesselExecute01, graymaneExecute01];
 
 /** The returned cue list belongs to a single selected practice route. */
 export function withEntryKey(content: PracticeContent, key: PracticeKey): PracticeContent {

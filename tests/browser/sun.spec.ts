@@ -23,7 +23,7 @@ for (const content of [phaethonExecute01, phaethonIntegratedExecute02]) {
     await page.setViewportSize({ width: 1280, height: 1080 });
     await page.goto('./');
     const boss = page.getByRole('combobox', { name: '보스', exact: true });
-    await expect(boss.locator('option')).toHaveCount(7);
+    await expect(boss.locator('option')).toHaveCount(8);
     await boss.selectOption(content.bossId!);
     await expect(surface(page)).toHaveAttribute('data-phase', 'ready');
     await expect(page.getByRole('combobox', { name: '제어스킬' })).toHaveValue(content.id);

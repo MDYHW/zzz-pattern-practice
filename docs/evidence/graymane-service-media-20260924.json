@@ -1,0 +1,173 @@
+{
+  "date": "2026-09-24",
+  "alignment": "Single translation from first notice match; measured windows and approved web allowances remain separate.",
+  "experimentEvidence": "graymane-experiment-results-20260924.json",
+  "recordings": [
+    {
+      "contentId": "graymane-execute-01",
+      "bossId": "graymane",
+      "skill": "Attack_Excute_Pre / Attack_Excute_Combo",
+      "source": "ZZZ_2026-09-24_21-18-26.mp4",
+      "sourceSha256": "b28069a815123450367e0bb005799e7c92aa70d57ba1f27d127318a7c5cbbc71",
+      "fps": 60,
+      "firstSourceFrame": 0,
+      "endSourceFrameExclusive": 1135,
+      "patternOriginSourceFrame": 322,
+      "patternTimeZeroAtClipTime": 5.366666666666666,
+      "sourceOverlayDownFrames": [
+        485,
+        577,
+        667,
+        745,
+        829,
+        946
+      ],
+      "windowsMs": [
+        [
+          2550,
+          2850
+        ],
+        [
+          4050,
+          4500
+        ],
+        [
+          5550,
+          6000
+        ],
+        [
+          6850,
+          7250
+        ],
+        [
+          8250,
+          8650
+        ],
+        [
+          10200,
+          10600
+        ]
+      ],
+      "serviceWindowsMs": [
+        [
+          2550,
+          2850
+        ],
+        [
+          4050,
+          4500
+        ],
+        [
+          5550,
+          6000
+        ],
+        [
+          6850,
+          7275
+        ],
+        [
+          8225,
+          8650
+        ],
+        [
+          10200,
+          10625
+        ]
+      ],
+      "referenceMs": [
+        2700,
+        4250,
+        5750,
+        7050,
+        8450,
+        10400
+      ],
+      "serviceAllowance": {
+        "hit-3": {
+          "lateMs": 25
+        },
+        "hit-4": {
+          "earlyMs": 25
+        },
+        "hit-5": {
+          "lateMs": 25
+        },
+        "basis": "User-approved web-only expansion; added portions are not verified game-success intervals. Bundled profile retains measured 50ms grid."
+      },
+      "clip": "media/graymane-execute-01-lufs26.mp4",
+      "clipSha256": "0d56430dd651f6e2f5869bc41b4e5a22853a430db748abc41bada01ba57bbcd6",
+      "posterSha256": "fe1e12055158d52e3b6c697effbf0314d471ae7714189bce60d1cc562e738dc9",
+      "preparation": {
+        "sourceDodgeDownFrames": [
+          231
+        ],
+        "sourceLastDodgeReleaseFrame": 238,
+        "sourceMovements": [
+          {
+            "key": "W",
+            "startFrame": 100,
+            "endFrameExclusive": 130
+          },
+          {
+            "key": "W",
+            "startFrame": 213,
+            "endFrameExclusive": 265
+          }
+        ],
+        "basis": "Inclusive observed spans end on the next frame. Initial W is manual positioning, followed by preparation W/RMB; all are unscored. RMB exemption ends at238 independently of W ending265."
+      },
+      "overlayResidualFrames": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decodedFrames": 1135,
+      "encodedOverlayDownFrames": [
+        485,
+        577,
+        667,
+        745,
+        829,
+        946
+      ],
+      "encodedPreparationDownFrames": [
+        231
+      ],
+      "noticeReplay": {
+        "firstMatchFrame": 322,
+        "confirmationFrame": 325,
+        "passed": true,
+        "nativeInputCalls": 0
+      },
+      "referenceBasis": "One shared origin translation. Entry baseline2700ms is retained despite overlay485 being one frame later.",
+      "recordingLink": {
+        "trialId": "ff79ac210c3e4875847d3040fafd6d28",
+        "basis": "Recorded representative baseline run, linked by analysis owner to ON trial; result111111."
+      },
+      "visualReview": "Analysis owner confirmed preparation perfect dodge with Aria HP10406 maintained and six successful main responses. Release owner inspected the first-frame poster, final decoded scene and before/after frames of both W spans, preparation RMB and all six main overlays in the encoded output. Brief color candidates517/518,524/525,734/735 are not additional inputs.",
+      "audio": {
+        "targetIntegratedLufs": -26,
+        "sourceTrimIntegratedLufs": -25.41,
+        "measuredIntegratedLufs": -26.14,
+        "measuredTruePeakDbtp": -15.0,
+        "normalization": "Two-pass loudnorm directly from original recording; no repeated OBS/fixed attenuation."
+      },
+      "encoding": {
+        "videoFilter": "trim=start_frame=0:end_frame=1135,setpts=N/(60*TB)",
+        "audioTrim": "atrim=start=0:end=18.916666666666668,asetpts=PTS-STARTPTS",
+        "codec": "libx264 preset medium crf20 yuv420p fps60 frames1135; aac128k48000Hz; faststart",
+        "loudnormSecondPass": {
+          "input_i": "-25.41",
+          "input_tp": "-15.09",
+          "input_lra": "1.40",
+          "input_thresh": "-35.41",
+          "target_offset": "-0.26"
+        },
+        "poster": "first decoded service frame, JPEG q2"
+      }
+    }
+  ]
+}

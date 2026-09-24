@@ -5,9 +5,10 @@ import { resolve } from 'node:path';
 import evidence from '../../docs/evidence/service-media-20260920.json';
 import sunEvidence from '../../docs/evidence/sun-service-media-20260924.json';
 import vesselEvidence from '../../docs/evidence/vessel-service-media-20260924.json';
+import graymaneEvidence from '../../docs/evidence/graymane-service-media-20260924.json';
 import girReview from '../../docs/evidence/girtablullu-off-20260920.json';
 import rmbEvidence from '../../docs/evidence/mirage-archer-unit-rmb-20260922.json';
-import { girtablulluExecute01, kusarikkuExecute01, mirageArcherUnitAttack09, phaethonExecute01, phaethonIntegratedExecute02, vesselExecute01, skills, vesperExecute01, vesperExecute02, withEntryKey, withMirageLastResponse } from './skills';
+import { graymaneExecute01, girtablulluExecute01, kusarikkuExecute01, mirageArcherUnitAttack09, phaethonExecute01, phaethonIntegratedExecute02, vesselExecute01, skills, vesperExecute01, vesperExecute02, withEntryKey, withMirageLastResponse } from './skills';
 import { phaethonRecording } from './phaethon-patterns';
 import { cuesForRecording, vesperPatterns } from './vesper-patterns';
 import { createAttempt, press, validateCues } from '../practice/judge';
@@ -21,13 +22,16 @@ const profilesDirectory = resolve('tools/experiment/profiles');
 // Only shipped defaults participate here; editable .local profiles are independent.
 const bundledProfiles: BundledProfile[] = readdirSync(profilesDirectory).filter(name => name.endsWith('.json')).sort()
   .map(name => JSON.parse(readFileSync(resolve(profilesDirectory, name), 'utf8').replace(/^\uFEFF/, '')));
-const reviewedRecordings = [...evidence.recordings, ...sunEvidence.recordings, ...vesselEvidence.recordings];
+const reviewedRecordings = [...evidence.recordings, ...sunEvidence.recordings, ...vesselEvidence.recordings, ...graymaneEvidence.recordings];
 type ReviewedRecording = (typeof reviewedRecordings)[number];
 
 // The temporary web-only allowance must not rewrite measured windows or bundled experiment profiles.
-const serviceAllowanceMs = (contentId: string, index: number) =>
-  (contentId === 'mirage-archer-unit-attack-09' && (index === 0 || index === 3))
-  || (contentId === 'phaethon-integrated-execute-02' && index === 0) ? 25 : 0;
+const serviceAllowanceMs = (contentId: string, index: number, side: 'early' | 'late') => {
+  if (contentId === 'graymane-execute-01')
+    return (side === 'early' && index === 4) || (side === 'late' && (index === 3 || index === 5)) ? 25 : 0;
+  return (contentId === 'mirage-archer-unit-attack-09' && (index === 0 || index === 3))
+    || (contentId === 'phaethon-integrated-execute-02' && index === 0) ? 25 : 0;
+};
 
 function assertReviewedContent(content: PracticeContent, recordings: readonly ReviewedRecording[], profiles: BundledProfile[]) {
   const matches = recordings.filter(item => item.contentId === content.id);
@@ -42,13 +46,14 @@ function assertReviewedContent(content: PracticeContent, recordings: readonly Re
   expect(profile.Actions).toHaveLength(content.cues.length);
   content.cues.forEach((cue, index) => {
     const [start, end] = recording.windowsMs[index];
-    const allowance = serviceAllowanceMs(content.id, index);
+    const earlyAllowance = serviceAllowanceMs(content.id, index, 'early');
+    const lateAllowance = serviceAllowanceMs(content.id, index, 'late');
     const action = profile.Actions[index];
     expect([action.Timing.EarlyMs, action.Timing.LateMs]).toEqual([start, end]);
     expect(cue.key).toBe(action.Key === 'RMB' ? 'MouseRight' : action.Key);
     expect(cue.alternateKey).toBeUndefined();
-    expect(cue.start - recording.patternTimeZeroAtClipTime).toBeCloseTo((start - allowance) / 1000, 10);
-    expect(cue.end - cue.start).toBeCloseTo((end - start + 2 * allowance) / 1000, 10);
+    expect(cue.start - recording.patternTimeZeroAtClipTime).toBeCloseTo((start - earlyAllowance) / 1000, 10);
+    expect(cue.end - cue.start).toBeCloseTo((end - start + earlyAllowance + lateAllowance) / 1000, 10);
     const recorded = (recording.sourceOverlayDownFrames[index] - recording.firstSourceFrame) / recording.fps;
     expect(Math.abs(cue.reference - recorded)).toBeLessThanOrEqual(2 / recording.fps + 1e-10);
     expect(recorded).toBeGreaterThanOrEqual(cue.start);
@@ -60,6 +65,48 @@ function assertReviewedContent(content: PracticeContent, recordings: readonly Re
 
 test('published IDs are unique', () => {
   expect(new Set(skills.map(content => content.id)).size).toBe(skills.length);
+});
+
+test('Graymane keeps preparation and both W movements outside six scored responses', () => {
+  const content = graymaneExecute01;
+  expect(content.cues.map(cue => cue.key)).toEqual(['MouseRight', 'Space', 'Space', 'Space', 'Space', 'Space']);
+  expect(content.entryOptions?.map(option => option.key)).toEqual(['MouseRight']);
+  expect(() => withEntryKey(content, 'Space')).toThrow(/unavailable/);
+  expect(content.duration).toBe(1135 / 60);
+  expect(content.preparation!.end).toBe(238 / 60);
+  expect(content.preparation!.end).toBeLessThan(content.cues[0].start);
+  expect(content.preparation!.dodges.map(dodge => dodge.time)).toEqual([231 / 60]);
+  expect(content.preparation!.movements).toEqual([
+    { key: 'W', start: 100 / 60, end: 130 / 60 },
+    { key: 'W', start: 213 / 60, end: 265 / 60 },
+  ]);
+  const references = [2700, 4250, 5750, 7050, 8450, 10400];
+  expect(bundledProfiles.find(profile => profile.Id === content.id)!.Actions.map(action => action.Timing.BaselineMs))
+    .toEqual(references);
+  content.cues.forEach((cue, index) => expect(cue.reference).toBeCloseTo(322 / 60 + references[index] / 1000, 10));
+  let attempt = createAttempt(content.cues);
+  for (const cue of content.cues) attempt = press(content.cues, attempt, cue.key, cue.reference);
+  expect(attempt.results.map(result => result.status)).toEqual(Array(6).fill('success'));
+  expect(attempt.extras).toBe(0);
+});
+
+test('Graymane accepts exact service edges and only the three approved 25ms extensions', () => {
+  const content = graymaneExecute01;
+  const windows = [[2550, 2850], [4050, 4500], [5550, 6000], [6850, 7275], [8225, 8650], [10200, 10625]];
+  content.cues.forEach((cue, index) => {
+    expect(cue.start).toBeCloseTo(322 / 60 + windows[index][0] / 1000, 10);
+    expect(cue.end).toBeCloseTo(322 / 60 + windows[index][1] / 1000, 10);
+    for (const time of [cue.start, cue.end])
+      expect(press(content.cues, createAttempt(content.cues), cue.key, time).results[index].status).toBe('success');
+    const early = press(content.cues, createAttempt(content.cues), cue.key, cue.start - .001);
+    expect(early.results[index].status).toBe('pending');
+    expect(early.extras).toBe(1);
+    expect(press(content.cues, createAttempt(content.cues), cue.key, cue.end + .001).results[index].status).toBe('miss');
+  });
+  for (const [index, ms] of [[3, 7262.5], [4, 8237.5], [5, 10612.5]]) {
+    const cue = content.cues[index];
+    expect(press(content.cues, createAttempt(content.cues), cue.key, 322 / 60 + ms / 1000).results[index].status).toBe('success');
+  }
 });
 
 test('Vessel keeps two preparation dodges and W outside the five scored responses', () => {
@@ -116,8 +163,8 @@ test('Mirage Archer Unit exposes five scored cues with RMB-only entry, no prepar
 });
 
 test('Phaethon forms remain separate routes with RMB entry and four or five scored cues', () => {
-  expect(skills).toHaveLength(8);
-  expect(new Set(skills.map(content => content.bossId)).size).toBe(7);
+  expect(skills).toHaveLength(9);
+  expect(new Set(skills.map(content => content.bossId)).size).toBe(8);
   for (const [content, count] of [[phaethonExecute01, 4], [phaethonIntegratedExecute02, 5]] as const) {
     expect(content.cues).toHaveLength(count);
     expect(content.cues.map(cue => cue.key)).toEqual(['MouseRight', ...Array(count - 1).fill('Space')]);
@@ -155,9 +202,8 @@ test('Mirage final choices preserve the five attacks and use the reviewed final-
     expect(resolved.recordedFinalKey).toBe('MouseRight');
     expect(() => validateCues(resolved.cues, resolved.duration)).not.toThrow();
     resolved.cues.forEach((cue, i) => {
-      const allowance = serviceAllowanceMs(resolved.id, i);
-      expect(cue.start - 2).toBeCloseTo((recording.windowsMs[i][0] - allowance) / 1000, 10);
-      expect(cue.end - 2).toBeCloseTo((recording.windowsMs[i][1] + allowance) / 1000, 10);
+      expect(cue.start - 2).toBeCloseTo((recording.windowsMs[i][0] - serviceAllowanceMs(resolved.id, i, 'early')) / 1000, 10);
+      expect(cue.end - 2).toBeCloseTo((recording.windowsMs[i][1] + serviceAllowanceMs(resolved.id, i, 'late')) / 1000, 10);
       expect(cue.reference).toBeCloseTo((recording.sourceOverlayDownFrames[i] - recording.firstSourceFrame) / 60);
       if (i < 4) expect({ key: cue.key, start: cue.start, end: cue.end })
         .toEqual({ key: space.cues[i].key, start: space.cues[i].start, end: space.cues[i].end });

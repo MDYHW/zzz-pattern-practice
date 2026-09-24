@@ -1,5 +1,5 @@
 import { expect, test, type Page } from '@playwright/test';
-import { vesselExecute01 as content } from '../../src/content/skills';
+import { graymaneExecute01 as content } from '../../src/content/skills';
 
 const surface = (page: Page) => page.getByRole('region', { name: '연습 입력 영역' });
 async function at(page: Page, time: number) {
@@ -13,7 +13,7 @@ async function at(page: Page, time: number) {
   }, time);
 }
 
-test('Vessel preparation is unscored and five desktop responses complete successfully', async ({ page }, info) => {
+test('Graymane preparation is unscored and six desktop responses complete successfully', async ({ page }, info) => {
   test.setTimeout(45_000);
   const errors: string[] = [];
   page.on('pageerror', error => errors.push(error.message));
@@ -22,15 +22,15 @@ test('Vessel preparation is unscored and five desktop responses complete success
   await page.goto('./');
   const boss = page.getByRole('combobox', { name: '보스', exact: true });
   await expect(boss.locator('option')).toHaveCount(8);
-  await boss.selectOption('vessel');
+  await boss.selectOption('graymane');
   await expect(page.getByRole('combobox', { name: '제어스킬' })).toHaveValue(content.id);
   await expect(page.getByRole('combobox', { name: '진입 입력' })).toHaveCount(0);
-  await expect(page.locator('.cue')).toHaveCount(5);
-  await expect(page.locator('[data-preparation-id]')).toHaveCount(2);
-  await expect(page.locator('[data-movement-key="W"]')).toHaveCount(1);
+  await expect(page.locator('.cue')).toHaveCount(6);
+  await expect(page.locator('[data-preparation-id]')).toHaveCount(1);
+  await expect(page.locator('[data-movement-key="W"]')).toHaveCount(2);
   await expect.poll(() => page.locator('video').evaluate((v: HTMLVideoElement) => v.videoWidth)).toBe(1280);
-  expect(await page.locator('video').evaluate((v: HTMLVideoElement) => v.duration)).toBeCloseTo(1175 / 60, 2);
-  await page.screenshot({ path: info.outputPath('vessel-ready.png'), fullPage: true });
+  expect(await page.locator('video').evaluate((v: HTMLVideoElement) => v.duration)).toBeCloseTo(1135 / 60, 2);
+  await page.screenshot({ path: info.outputPath('graymane-ready.png'), fullPage: true });
   await page.getByRole('button', { name: '연습 시작', exact: true }).click();
   const box = (await page.locator('.video-stage').boundingBox())!;
   const rmb = () => page.mouse.click(box.x + box.width / 2, box.y + box.height / 2, { button: 'right' });
@@ -46,9 +46,9 @@ test('Vessel preparation is unscored and five desktop responses complete success
   }
   await expect(surface(page)).toHaveAttribute('data-phase', 'finished', { timeout: 6000 });
   await expect(page.getByRole('heading', { name: '전체 대응 성공' })).toBeVisible();
-  await expect(page.locator('.result-hit')).toHaveCount(5);
+  await expect(page.locator('.result-hit')).toHaveCount(6);
   await expect(page.getByTestId('extras')).toHaveText('0');
-  await page.screenshot({ path: info.outputPath('vessel-complete.png'), fullPage: true });
+  await page.screenshot({ path: info.outputPath('graymane-complete.png'), fullPage: true });
   await boss.selectOption('larval');
   await expect(surface(page)).toHaveAttribute('data-phase', 'ready');
   await expect(page.locator('.results')).toHaveCount(0);
@@ -57,20 +57,20 @@ test('Vessel preparation is unscored and five desktop responses complete success
 });
 
 for (const viewport of [{ width: 844, height: 390 }, { width: 390, height: 844 }]) {
-  test.describe(`Vessel touch ${viewport.width}x${viewport.height}`, () => {
+  test.describe(`Graymane touch ${viewport.width}x${viewport.height}`, () => {
     test.use({ viewport, hasTouch: true });
     test('preparation, entry and result use the existing touch controls', async ({ page }, info) => {
       test.setTimeout(45_000);
       await page.goto('./?mobile=1');
       await page.getByRole('button', { name: '제어 메뉴 열기' }).tap();
-      await page.getByRole('combobox', { name: '보스', exact: true }).selectOption('vessel');
-      await page.screenshot({ path: info.outputPath('vessel-menu.png') });
+      await page.getByRole('combobox', { name: '보스', exact: true }).selectOption('graymane');
+      await page.screenshot({ path: info.outputPath('graymane-menu.png') });
       await page.getByRole('button', { name: '제어 메뉴 닫기' }).tap();
       // Set the viewport to the existing header stop without a wheel gesture overshooting it.
       await page.locator('.practice-scroll').evaluate(scroller => {
         scroller.scrollTop = scroller.querySelector('.masthead')!.getBoundingClientRect().height;
       });
-      await expect(page.locator('.cue')).toHaveCount(5);
+      await expect(page.locator('.cue')).toHaveCount(6);
       await expect(page.locator('.game-input-mask')).toHaveCount(1);
       await expect(page.locator('.guide')).toBeInViewport();
       await expect(page.getByRole('button', { name: '지원', exact: true })).toBeInViewport();
@@ -91,12 +91,13 @@ for (const viewport of [{ width: 844, height: 390 }, { width: 390, height: 844 }
       for (const cue of content.cues) {
         await at(page, cue.reference);
         await tap(cue.key);
-        if (cue === content.cues[0]) await page.screenshot({ path: info.outputPath('vessel-touch-entry.png') });
+        if (cue === content.cues[0]) await page.screenshot({ path: info.outputPath('graymane-touch-entry.png') });
       }
       await expect(surface(page)).toHaveAttribute('data-phase', 'finished', { timeout: 6000 });
-      await expect(page.locator('.result-hit')).toHaveCount(5);
+      await expect(page.getByRole('heading', { name: '전체 대응 성공' })).toHaveCount(1);
+      await expect(page.locator('.result-hit')).toHaveCount(6);
       await expect(page.getByTestId('extras')).toHaveText('0');
-      await page.screenshot({ path: info.outputPath('vessel-touch-complete.png') });
+      await page.screenshot({ path: info.outputPath('graymane-touch-complete.png') });
     });
   });
 }
