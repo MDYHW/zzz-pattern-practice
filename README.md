@@ -21,6 +21,8 @@
 
 ## 현재 상태
 
+창조주 추가는 소스 `dae0b8a`로 배포했으며 실제 공개 주소에서 PC·모바일 가로/세로 완주와 준비 비채점, 영상·포스터 무결성을 확인했습니다.
+
 태양의 잔불 확장과 종료 정리를 완료했습니다. 대표2회와 최종 구간·혼재 반례를 보존하고 역할이 끝난 초기 조사 자료를 현재 소스에서 제거했습니다. 삭제된 상세 원본은 재분석할 수 없으며, 융합 진입의 추가25ms 여유는 실제 게임 검증 대기입니다. [종료 상태](docs/experiments/sun-control-skill.md)를 따릅니다.
 
 7보스·8패턴을 [zzz-pattern-practice.github.io](https://zzz-pattern-practice.github.io/)에서 연습할 수 있습니다. [배포 저장소](https://github.com/zzz-pattern-practice/zzz-pattern-practice.github.io)에서 소스 커밋을 지정해 수동 배포합니다. 환영의 화살 유닛 진입 SPACE 추가 측정은 현재 공개 조건이 아닙니다.

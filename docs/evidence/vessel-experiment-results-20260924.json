@@ -1944,7 +1944,23 @@
   },
   "implementation": {
     "webOwnerTask": "01a0c854-8093-7671-8bcc-f4caa1c60d99",
-    "state": "web implementation validated; publication tracked in README",
-    "serviceEvidence": "vessel-service-media-20260924.json"
+    "state": "published and verified",
+    "serviceEvidence": "vessel-service-media-20260924.json",
+    "sourceCommit": "dae0b8ae3445a2cbb852b3def20fb90161c10fde",
+    "pagesRun": 35989433287,
+    "url": "https://zzz-pattern-practice.github.io/",
+    "liveVerification": {
+      "browserTests": 3,
+      "viewports": [
+        "1280x1080",
+        "844x390",
+        "390x844"
+      ],
+      "scoredSuccess": 5,
+      "extraInputs": 0,
+      "preparationInputsExcluded": true,
+      "bundle": "index-CrG4QNmj.js",
+      "mediaHttp200AndSha256Match": true
+    }
   }
 }
