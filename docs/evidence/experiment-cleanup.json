@@ -388,7 +388,9 @@
         "files": 141,
         "record": "<PRIVATE_HOME>/.codex/worktrees/1b46/zzz-pattern-practice/.local/cleanup-vessel-graymane-20260924.json",
         "retained": "Current deployment evidence and shared publication tools; no service redeployment",
-        "bytes": 65563293
+        "bytes": 65563293,
+        "obsoleteEvidenceCopies": 4,
+        "obsoleteEvidenceBytes": 92274
       },
       "controller5dc5": {
         "files": 3,
@@ -402,8 +404,8 @@
         ]
       },
       "allCheckoutsTotal": {
-        "files": 5098,
-        "bytes": 2725104914
+        "files": 5102,
+        "bytes": 2725197188
       },
       "limits": "Counts cover approved control-phase data cleanup and three obsolete target files; they exclude transient scripts created and removed during this cleanup. Historical Git blobs are retained."
     }
