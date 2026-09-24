@@ -72,6 +72,9 @@ test('Vessel keeps two preparation dodges and W outside the five scored response
   expect(content.preparation!.end).toBe(toClip(573));
   expect(content.preparation!.end).toBeLessThan(content.cues[0].start);
   expect(content.preparation!.dodges.map(dodge => dodge.time)).toEqual([495, 564].map(toClip));
+  expect(content.duration).toBe(1175 / 60);
+  expect(content.preparation!.dodges[0].time).toBeCloseTo(245 / 60, 10);
+  expect(content.cues[0].reference).toBeCloseTo(11.05, 10);
   expect(content.preparation!.movements).toEqual([{ key: 'W', start: toClip(487), end: toClip(503) }]);
   expect(bundledProfiles.find(profile => profile.Id === content.id)!.Actions.map(action => action.Timing.BaselineMs))
     .toEqual([3300, 5400, 6300, 7500, 9100]);

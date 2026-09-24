@@ -1934,7 +1934,7 @@
       238
     ],
     "proposedTrim": [
-      430,
+      250,
       1425
     ],
     "logTrialId": null,
@@ -1961,6 +1961,11 @@
       "preparationInputsExcluded": true,
       "bundle": "index-CrG4QNmj.js",
       "mediaHttp200AndSha256Match": true
+    },
+    "startRevision": {
+      "state": "local validation in progress",
+      "firstSourceFrame": 250,
+      "addedLeadInSeconds": 3
     }
   }
 }

@@ -6,7 +6,7 @@ export const vesselPattern = [
 ] as const;
 
 export const vesselRecording = {
-  firstSourceFrame: 430, endSourceFrameExclusive: 1425, originSourceFrame: 715,
+  firstSourceFrame: 250, endSourceFrameExclusive: 1425, originSourceFrame: 715,
   preparationDodgeDownFrames: [495, 564], preparationLastReleaseFrame: 573,
   preparationForwardStartFrame: 487, preparationForwardEndFrameExclusive: 503,
 } as const;

@@ -29,7 +29,7 @@ test('Vessel preparation is unscored and five desktop responses complete success
   await expect(page.locator('[data-preparation-id]')).toHaveCount(2);
   await expect(page.locator('[data-movement-key="W"]')).toHaveCount(1);
   await expect.poll(() => page.locator('video').evaluate((v: HTMLVideoElement) => v.videoWidth)).toBe(1280);
-  expect(await page.locator('video').evaluate((v: HTMLVideoElement) => v.duration)).toBeCloseTo(995 / 60, 2);
+  expect(await page.locator('video').evaluate((v: HTMLVideoElement) => v.duration)).toBeCloseTo(1175 / 60, 2);
   await page.screenshot({ path: info.outputPath('vessel-ready.png'), fullPage: true });
   await page.getByRole('button', { name: '연습 시작', exact: true }).click();
   const box = (await page.locator('.video-stage').boundingBox())!;

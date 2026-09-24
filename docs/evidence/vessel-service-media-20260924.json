@@ -10,10 +10,10 @@
       "source": "ZZZ_2026-09-24_19-29-21.mp4",
       "sourceSha256": "fbdb99a9ecf6784241d79747bff0e579d84572e442362561c2b481c778d7218f",
       "fps": 60,
-      "firstSourceFrame": 430,
+      "firstSourceFrame": 250,
       "endSourceFrameExclusive": 1425,
       "patternOriginSourceFrame": 715,
-      "patternTimeZeroAtClipTime": 4.75,
+      "patternTimeZeroAtClipTime": 7.75,
       "sourceOverlayDownFrames": [
         914,
         1039,
@@ -51,8 +51,8 @@
         9100
       ],
       "clip": "media/vessel-execute-01-lufs26.mp4",
-      "clipSha256": "c62cdc6be0b1f5e1028a1cc39febe5b56c7beee1bdde6bbf30e3e4341fd6443b",
-      "posterSha256": "c292fdfedd5767c33154324e035c0d2824ee80b78d717a50ca016e157431dfd6",
+      "clipSha256": "35829a138663c9beaba7764598052e3150a6c1062baf6b24e78f9e7261780eb2",
+      "posterSha256": "bdba827d663e982726da754186f498827c579bfb8ea607c5c1bf60274d3541ad",
       "preparation": {
         "sourceDodgeDownFrames": [
           495,
@@ -75,17 +75,17 @@
         0,
         0
       ],
-      "decodedFrames": 995,
+      "decodedFrames": 1175,
       "encodedOverlayDownFrames": [
-        484,
-        609,
-        663,
-        735,
-        831
+        664,
+        789,
+        843,
+        915,
+        1011
       ],
       "encodedPreparationDownFrames": [
-        65,
-        134
+        245,
+        314
       ],
       "noticeReplay": {
         "firstMatchFrame": 715,
@@ -98,26 +98,34 @@
         "trialId": null,
         "basis": "Separate user-confirmed19:29 recording. Last19:28 raw used entry3100 and outcome01111; it is not this video. All28 raw observations were UNKNOWN classified OFF; raw fields unchanged."
       },
-      "visualReview": "Analysis owner inspected sampled HP10906/12183/17416, entry and four assist transitions, score increments and finish. Release owner decoded995frames and confirmed preparation/main overlay onsets in final output. Yellow-background candidates1224/1283 are not additional inputs.",
+      "visualReview": "Analysis owner inspected sampled HP10906/12183/17416, entry and four assist transitions, score increments and finish. Release owner decoded1175frames and confirmed preparation/main overlay onsets in final output. Yellow-background candidates1224/1283 are not additional inputs.",
       "audio": {
         "targetIntegratedLufs": -26,
-        "sourceTrimIntegratedLufs": -25.68,
-        "measuredIntegratedLufs": -26.14,
-        "measuredTruePeakDbtp": -14.42,
+        "sourceTrimIntegratedLufs": -25.75,
+        "measuredIntegratedLufs": -26.13,
+        "measuredTruePeakDbtp": -14.55,
         "normalization": "Two-pass loudnorm from source trim; no repeated fixed attenuation."
       },
       "encoding": {
-        "videoFilter": "trim=start_frame=430:end_frame=1425,setpts=N/(60*TB)",
-        "audioTrim": "atrim=start=7.166666666666667:end=23.75,asetpts=PTS-STARTPTS",
-        "codec": "libx264 preset medium crf20 yuv420p fps60 frames995; aac128k48000Hz; faststart",
+        "videoFilter": "trim=start_frame=250:end_frame=1425,setpts=N/(60*TB)",
+        "audioTrim": "atrim=start=4.166666666666667:end=23.75,asetpts=PTS-STARTPTS",
+        "codec": "libx264 preset medium crf20 yuv420p fps60 frames1175; aac128k48000Hz; faststart",
         "loudnormSecondPass": {
-          "input_i": "-25.68",
+          "input_i": "-25.75",
           "input_tp": "-14.16",
           "input_lra": "3.30",
-          "input_thresh": "-35.68",
-          "target_offset": "-0.37"
+          "input_thresh": "-35.82",
+          "target_offset": "-0.42"
         },
         "poster": "first decoded service frame, JPEG q2"
+      },
+      "startRevision": {
+        "date": "2026-09-24",
+        "previousFirstSourceFrame": 430,
+        "firstSourceFrame": 250,
+        "addedLeadInSeconds": 3,
+        "reason": "Calmer start after approach W185–238 and before attack preparation; no artificial freeze or countdown.",
+        "sourceFramesAndExperimentWindowsUnchanged": true
       }
     }
   ]
