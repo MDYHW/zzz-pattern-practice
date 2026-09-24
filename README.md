@@ -11,18 +11,22 @@
 | 기르타블리르·퇴행 변종 | Execute_01 | 진입 + 3타 |
 | 쿠사리쿠 | Execute_01 | 준비 회피·이동 안내, 진입 + 4타 |
 | 환영의 화살 유닛 | Attack_09 | 진입 + 4타, 마지막 SPACE/RMB 선택 A와 겹침 레인 B |
+| 태양의 잔불 | Execute_01 | 비채점 준비 회피 1회, 진입 + 3타 |
+| 융합·태양의 잔불 | Execute_02 | 진입 + 4타 |
 
-대표 영상 6개와 포스터 6개를 포함합니다. 환영의 화살 유닛 A는 마지막 입력에 맞는 영상을 사용하고, B는 RMB 대표 영상을 고정 사용합니다. 영상 속 성공과 연습 중 사용자의 입력 결과는 별개입니다.
+대표 영상 8개와 포스터 8개를 포함합니다. 환영의 화살 유닛 A는 마지막 입력에 맞는 영상을 사용하고, B는 RMB 대표 영상을 고정 사용합니다. 영상 속 성공과 연습 중 사용자의 입력 결과는 별개입니다.
 
 <a id="현재-단계--2026-09-21"></a>
 
 ## 현재 상태
 
-다섯 패턴을 [zzz-pattern-practice.github.io](https://zzz-pattern-practice.github.io/)에서 연습할 수 있습니다. [배포 저장소](https://github.com/zzz-pattern-practice/zzz-pattern-practice.github.io)에서 소스 커밋을 지정해 수동 배포합니다. 환영의 화살 유닛 진입 SPACE 추가 측정은 현재 공개 조건이 아닙니다.
+6보스·7패턴을 [zzz-pattern-practice.github.io](https://zzz-pattern-practice.github.io/)에서 연습할 수 있습니다. [배포 저장소](https://github.com/zzz-pattern-practice/zzz-pattern-practice.github.io)에서 소스 커밋을 지정해 수동 배포합니다. 환영의 화살 유닛 진입 SPACE 추가 측정은 현재 공개 조건이 아닙니다.
 
 환영의 화살 유닛 진입·3타는 사용자 체감에 따라 웹 판정의 양 끝을25ms씩 임시 확대했습니다. 추가 구간의 실제 게임 검증은 아직 남아 있으며 [조정 근거와 검증 계획](docs/experiments/arrow-unit-control-skill.md#공개-후-임시-서비스-판정-조정--2026-09-22)을 따릅니다.
 
 데스크톱 Chromium과 모바일 크기의 Chromium 터치 환경에서 확인했습니다. 터치 입력을 지원하는 기기에서는 가로 화면 중심의 터치 UI를 제공합니다. 실제 휴대폰별 영상 재생 정책과 터치 지연은 추가 확인이 필요합니다. 표시하는 구간은 관측 조건에 맞춘 보수적인 연습 구간이며, 게임의 전체 허용 범위나 학습 효과를 수치로 입증한 것은 아닙니다.
+
+태양의 잔불 기본·융합은 54회 측정과 대표 성공 경로를 근거로 실용 구간을 채택했습니다. 일부 같은 입력의 성공·실패 혼재와 경로 조건은 [조사 보고서](docs/experiments/sun-control-skill.md)에 보존했으며, 보편적인 최대 폭이나 성공 보장을 뜻하지 않습니다.
 
 ## 실행
 

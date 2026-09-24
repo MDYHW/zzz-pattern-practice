@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 
 namespace VesperLab
@@ -11,7 +11,7 @@ namespace VesperLab
             public string Label;
             public double AtMs, HoldMs;
         }
-        public const string Version = "3.10.0", LiveMode = "scheduled-input", PerActionPattern = "per-action";
+        public const string Version = "3.11.0", LiveMode = "scheduled-input", PerActionPattern = "per-action";
         public const double HoldMs = 80;
         public static readonly string[] TimingIds = { "early", "baseline", "late" };
         public static string Skill { get { return ProfileStore.Current.Skill; } }

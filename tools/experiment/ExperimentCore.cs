@@ -30,7 +30,7 @@ namespace VesperLab
     public interface IInputSink
     {
         bool IsTargetForeground();
-        bool AnyControlHeld(string ownedKey = null, bool includeLmb = false);
+        bool AnyControlHeld(string ownedKey = null, bool includeLmb = false, bool includeE = false);
         bool AnyDirectionHeld(string ownedKey = null);
         int Send(string key, bool down, out int error);
         string ProcessName { get; }

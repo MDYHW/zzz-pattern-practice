@@ -30,6 +30,7 @@ namespace VesperLab
             public Func<string, bool> HeldExcept = key => false;
             public Func<string, bool> DirectionExcept = key => false;
             public Func<bool> LmbHeld = () => false;
+            public Func<bool> EHeld = () => false;
             public Func<bool> Foreground = () => true, Held = () => false;
             public bool FailDown, FailUp, ThrowDown, ThrowUp;
             public string FailKey;
@@ -38,7 +39,11 @@ namespace VesperLab
             public int ProcessId { get { return 0; } }
             public string WindowLabel { get { return "fake"; } }
             public bool IsTargetForeground() { return Foreground(); }
-            public bool AnyControlHeld(string ownedKey = null, bool includeLmb = false) { return Held() || HeldExcept(ownedKey) || (includeLmb && ownedKey != "LMB" && LmbHeld()); }
+            public bool AnyControlHeld(string ownedKey = null, bool includeLmb = false, bool includeE = false)
+            {
+                return Held() || HeldExcept(ownedKey) || (includeLmb && ownedKey != "LMB" && LmbHeld())
+                    || (includeE && ownedKey != "E" && EHeld());
+            }
             public bool AnyDirectionHeld(string ownedKey = null) { return DirectionExcept(ownedKey); }
             public int Send(string key, bool down, out int error)
             {
@@ -593,6 +598,67 @@ namespace VesperLab
         }
         private static void StartAttackTests(Action<string, Action> test)
         {
+            test("start E accepts exactly one press and rejects other keys or counts", () => {
+                var p = StartAttackFixture(); p.StartAttack.Key = "E"; p.StartAttack.AtMs = new[] { 500.0 };
+                ProfileStore.Validate(p);
+                foreach (Action<ExperimentProfile> mutate in new Action<ExperimentProfile>[] {
+                    x => x.StartAttack.Key = "Space", x => x.StartAttack.Key = "e",
+                    x => x.StartAttack.AtMs = new double[0], x => x.StartAttack.AtMs = new[] { 500.0, 1000.0 }
+                })
+                {
+                    var invalid = StartAttackFixture(); invalid.StartAttack.Key = "E"; invalid.StartAttack.AtMs = new[] { 500.0 };
+                    mutate(invalid); bool rejected = false;
+                    try { ProfileStore.Validate(invalid); } catch (ArgumentException) { rejected = true; }
+                    Expect(rejected, "invalid E start accepted");
+                }
+            });
+            foreach (string mode in new[] { ExperimentPlan.LiveMode, "observe" })
+            {
+                string selectedMode = mode;
+                test("start E sends or records one F8-based press before notice / " + mode, () => {
+                    var original = ProfileStore.Snapshot();
+                    try
+                    {
+                        var p = StartAttackFixture(); p.StartAttack.Key = "E"; p.StartAttack.AtMs = new[] { 500.0 };
+                        ProfileStore.Apply(p);
+                        var sink = new Sink(); var r = Trial(StartAttackSettings(selectedMode), sink: sink, probe: new Probe { Visible = t => t >= 800 });
+                        Expect(r.Status == (selectedMode == "observe" ? "observed-no-input" : "submitted-not-game-verified"), "E start failed: " + r.Error);
+                        Expect(r.StartAttackInputs.Count == 2 && r.StartAttackInputs.All(e => e.Key == "E" && e.Attack == 0)
+                            && r.StartAttackInputs[0].DueMs == 500 && r.StartAttackInputs[1].DueMs >= 600
+                            && r.Samples[r.FirstMatchIndex].CaptureEndMs > r.StartAttackInputs[1].EndMs,
+                            "E event or timing origin changed");
+                        Expect(selectedMode == "observe" ? sink.Calls.Count == 0 && r.StartAttackInputs[0].Action == "virtual-down"
+                            : sink.Calls.Take(2).SequenceEqual(new[] { "E-down", "E-up" }), "E input mode changed");
+                        var copy = new JavaScriptSerializer().Deserialize<NoticeRecord>(new JavaScriptSerializer().Serialize(r));
+                        Expect(copy.ProfileSnapshot.StartAttack.Key == "E" && copy.StartAttackInputs[1].Key == "E"
+                            && copy.Inputs.Count == r.Inputs.Count, "E provenance did not survive raw record round trip");
+                    }
+                    finally { ProfileStore.Apply(original); }
+                });
+            }
+            test("start E blocks early notice and releases on interruption", () => {
+                var original = ProfileStore.Snapshot();
+                try
+                {
+                    var p = StartAttackFixture(); p.StartAttack.Key = "E"; p.StartAttack.AtMs = new[] { 500.0 };
+                    ProfileStore.Apply(p);
+                    var sink = new Sink(); var r = Trial(StartAttackSettings(), sink: sink, probe: new Probe { Visible = t => t >= 520 });
+                    Expect(r.Status == "failed" && r.Error.Contains("해제 완료 전에") && r.Inputs.Count == 0
+                        && sink.Calls.SequenceEqual(new[] { "E-down", "E-up" }), "early notice entered schedule or leaked E");
+                    var c = new Clock(); sink = new Sink();
+                    r = Trial(StartAttackSettings(), c, sink, new Probe { Visible = t => t >= 800 }, () => c.Now >= 550);
+                    Expect(r.Status == "cancelled" && sink.Calls.SequenceEqual(new[] { "E-down", "E-up" })
+                        && r.Inputs.Count == 0, "F9 did not release owned E");
+                    sink = new Sink { EHeld = () => true };
+                    r = Trial(StartAttackSettings(), sink: sink);
+                    Expect(r.Status == "failed" && sink.Calls.Count == 0, "preheld E accepted");
+                    c = new Clock(); sink = new Sink { EHeld = () => c.Now >= 1200 };
+                    r = Trial(StartAttackSettings(), c, sink, new Probe { Visible = t => t >= 800 });
+                    Expect(r.Status == "failed" && r.StartAttackInputs.Count == 2 && r.Inputs.Count == 0,
+                        "manual E after startup was not guarded");
+                }
+                finally { ProfileStore.Apply(original); }
+            });
             test("start LMB validates exactly five ordered finite grid timings within timeout", () => {
                 foreach (Action<ExperimentProfile> mutate in new Action<ExperimentProfile>[] {
                     p => p.StartAttack.AtMs = null, p => p.StartAttack.AtMs = new double[4],

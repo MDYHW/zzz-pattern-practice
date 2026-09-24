@@ -15,7 +15,7 @@ export function RhythmGuide({ cues, attempt, time, preparation, hideIcons = fals
   const inputAge = attempt.lastInputTime === undefined ? Infinity : Math.max(0, time - attempt.lastInputTime);
   const inputSuccess = attempt.lastInputTime !== undefined && attempt.results.some(result => result.inputTime === attempt.lastInputTime);
   const timelineLabel = preparation
-    ? '준비 회피와 이동은 영상 경로 안내이며 채점하지 않습니다. 타일이 왼쪽으로 이동합니다. 고정된 입력선과 겹치는 동안 해당 키를 한 번 누르세요'
+    ? `준비 회피${preparation.movements.length ? '와 이동' : ''}는 영상 경로 안내이며 채점하지 않습니다. 타일이 왼쪽으로 이동합니다. 고정된 입력선과 겹치는 동안 해당 키를 한 번 누르세요`
     : '타일이 왼쪽으로 이동합니다. 고정된 입력선과 겹치는 동안 해당 키를 한 번 누르세요';
   return <div className="guide"
     aria-label="리듬 안내" data-time={time.toFixed(6)}>
@@ -57,6 +57,6 @@ export function RhythmGuide({ cues, attempt, time, preparation, hideIcons = fals
       {inputAge < .24 && <div className={`input-pulse ${inputSuccess ? 'input-pulse-success' : 'input-pulse-extra'}`} aria-hidden="true"
         style={{ opacity: (1 - inputAge / .24) * .75, scale: 1 + inputAge / .24 * .45 }} />}
     </div>
-    {preparation && <p className="preparation-note">준비·이동은 영상 경로 안내, 결과는 진입부터</p>}
+    {preparation && <p className="preparation-note">준비{preparation.movements.length ? '·이동' : ' 회피'}는 영상 경로 안내, 결과는 진입부터</p>}
   </div>;
 }

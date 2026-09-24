@@ -81,7 +81,7 @@ namespace VesperLab
             var team = Row(settingsPanel);
             Field(team, "파티 순서", party, 340); Field(team, "시작 캐릭터", start, 135);
             Field(team, "환경", conditions, 220);
-            settingsPanel.Controls.Add(new Label { AutoSize = true, Text = "비채점 보조 입력 · 시작 공격 / 준비 대응 / 중간 보조 입력" });
+            settingsPanel.Controls.Add(new Label { AutoSize = true, Text = "비채점 보조 입력 · 시작 입력 / 준비 대응 / 중간 보조 입력" });
             settingsPanel.Controls.Add(startAttackSummary);
             settingsPanel.Controls.Add(preparationSummary);
             ConfigurePreparationGrid(preparation, false); settingsPanel.Controls.Add(preparation);
@@ -341,9 +341,9 @@ namespace VesperLab
             bool automaticStart = edited.StartAttack != null;
             startAttackSummary.Visible = automaticStart;
             startAttackSummary.Text = automaticStart
-                ? "시작 공격 · F8 기준 · 좌클릭(LMB) 5회 자동 → 문구 감지 → 준비·진입·후속 자동\n"
-                  + "누름 간격 " + String.Join(" / ", edited.StartAttack.AtMs.Skip(1).Select((at, i) => (at - edited.StartAttack.AtMs[i]).ToString("0")))
-                  + "ms · 각 " + edited.StartAttack.HoldMs.ToString("0") + "ms 유지 · 직접 클릭하지 마세요."
+                ? "시작 입력 · F8 기준 · " + edited.StartAttack.Key + " " + edited.StartAttack.AtMs.Length + "회 자동 → 문구 감지 → 준비·진입·후속 자동\n"
+                  + "시각 " + String.Join(" / ", edited.StartAttack.AtMs.Select(at => at.ToString("0")))
+                  + "ms · 각 " + edited.StartAttack.HoldMs.ToString("0") + "ms 유지 · 시작 키를 직접 누르지 마세요."
                 : "";
             bool automaticPreparation = edited.Preparation != null && edited.Preparation.Length > 0;
             preparationSummary.Visible = automaticPreparation;
@@ -354,12 +354,13 @@ namespace VesperLab
                 : "";
             ShowPreparationRows(preparation, edited.Preparation);
             ShowAuxiliaryRows(auxiliary, edited.AuxiliaryInputs);
+            string startControls = edited.StartAttack != null && edited.StartAttack.Key == "E" ? "LMB·RMB·Space·E" : "LMB·RMB·Space";
             instructionNote.Text = "시각은 문구 감지 기준 · 50ms 단위. F8: 문구 출현 전 게임에서 시작 / F9: 상시 중단\n"
                 + (automaticStart
                     ? (edited.AllowManualMovement
-                        ? "WASD 직접 이동 가능 · LMB·RMB·Space는 놓으세요. 시작 공격·회피·교대는 자동입니다.\n"
-                        : "F8 전에 WASD·마우스 버튼·Space를 놓으세요. 시작 공격부터 자동이며 결과는 진입 이후만 기록합니다.\n")
-                      + "시작 5회 해제 전 나타난 문구가 감지 확정되면 중단합니다.\n" + edited.Conditions
+                        ? "WASD 직접 이동 가능 · " + startControls + "는 놓으세요. 시작 입력·회피·교대는 자동입니다.\n"
+                        : "F8 전에 WASD·" + startControls + "를 놓으세요. 시작 입력부터 자동이며 결과는 진입 이후만 기록합니다.\n")
+                      + "시작 " + edited.StartAttack.Key + " " + edited.StartAttack.AtMs.Length + "회 해제 전 나타난 문구가 감지 확정되면 중단합니다.\n" + edited.Conditions
                     : automaticPreparation
                     ? (edited.AllowManualMovement
                         ? "WASD 직접 이동 가능 · RMB·Space는 놓으세요. 준비 대응부터 자동 실행합니다.\n"
@@ -380,7 +381,7 @@ namespace VesperLab
             timing.Rows.Clear();
             foreach (var a in edited.Actions) timing.Rows.Add(a.Label, a.Group, a.Timing.EarlyMs, a.Timing.BaselineMs, a.Timing.LateMs, "", a.Key, a.HoldMs);
             for (int i = 0; i < edited.Actions.Length; i++) timing.Rows[i].Tag = edited.Actions[i].SelectedTiming;
-            instructionNote.Text += "\n사용 체크한 보조 입력도 문구 기준으로 실행합니다. LMB·RMB·Space를 놓고 시작하세요. 보조 전송은 게임 성공 판정이 아닙니다.";
+            instructionNote.Text += "\n사용 체크한 보조 입력도 문구 기준으로 실행합니다. " + startControls + "를 놓고 시작하세요. 보조 전송은 게임 성공 판정이 아닙니다.";
             timing.ClearSelection(); live.Checked = false; initializing = false;
         }
         private ExperimentProfile ReadEditor()
@@ -626,7 +627,8 @@ namespace VesperLab
                 string name = record.ProfileSnapshot == null ? record.BossId : record.ProfileSnapshot.BossLabel;
                 recentSummary.Text = "최근 보관 회차 · " + when + " · " + name + " / " + record.Skill + " · 결과 " + results
                     + "\n시작 " + TrialResultStore.ReadStartCharacter(path) + " · " + record.Party + " · 녹화 " + record.Recording
-                    + (record.ProfileSnapshot != null && record.ProfileSnapshot.StartAttack != null ? " · 시작 LMB5 자동" : "")
+                    + (record.ProfileSnapshot != null && record.ProfileSnapshot.StartAttack != null
+                        ? " · 시작 " + record.ProfileSnapshot.StartAttack.Key + record.ProfileSnapshot.StartAttack.AtMs.Length + " 자동" : "")
                     + (record.ProfileSnapshot != null && record.ProfileSnapshot.Preparation != null && record.ProfileSnapshot.Preparation.Length > 0 ? " · 자동 준비 포함 (결과는 진입 이후)" : "")
                     + " · 아래 값은 당시 기록입니다."
                     + (!String.IsNullOrEmpty(note) ? "\n준비 메모: " + note : "");

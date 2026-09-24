@@ -28,6 +28,7 @@ namespace VesperLab
     }
     public sealed class StartAttackProfile
     {
+        public string Key = "LMB";
         public double[] AtMs;
         public double HoldMs;
     }
@@ -124,13 +125,14 @@ namespace VesperLab
             if (p.StartAttack != null)
             {
                 var start = p.StartAttack;
-                Require(start.AtMs != null && start.AtMs.Length == 5, "시작 기본공격은 LMB 다섯 번이어야 합니다.");
-                Require(Finite(start.HoldMs) && start.HoldMs >= 50 && start.HoldMs <= 2000 && start.HoldMs % 50 == 0, "시작 LMB 유지 시간은 50~2000ms 내 50ms 단위여야 합니다.");
+                Require(start.Key == "LMB" || start.Key == "E", "시작 입력 키는 LMB 또는 E여야 합니다.");
+                Require(start.AtMs != null && start.AtMs.Length == (start.Key == "E" ? 1 : 5), "시작 입력은 LMB 다섯 번 또는 E 한 번이어야 합니다.");
+                Require(Finite(start.HoldMs) && start.HoldMs >= 50 && start.HoldMs <= 2000 && start.HoldMs % 50 == 0, "시작 입력 유지 시간은 50~2000ms 내 50ms 단위여야 합니다.");
                 for (int i = 0; i < start.AtMs.Length; i++)
                     Require(Finite(start.AtMs[i]) && start.AtMs[i] >= 100 && start.AtMs[i] % 50 == 0
                         && start.AtMs[i] + start.HoldMs < d.TimeoutMs
                         && (i == 0 || start.AtMs[i] >= start.AtMs[i - 1] + start.HoldMs),
-                        "시작 LMB 시각은 100ms 이상·50ms 단위이며, 순서대로 유지가 겹치지 않고 감지 대기 종료 전에 끝나야 합니다.");
+                        "시작 입력 시각은 100ms 이상·50ms 단위이며, 순서대로 유지가 겹치지 않고 감지 대기 종료 전에 끝나야 합니다.");
             }
             Require(p.Actions != null && p.Actions.Length >= 1 && p.Actions.Length <= 12 && p.Actions.All(a => a != null), "대응 수는 1~12개입니다.");
             Require(p.Actions.Select(a => a.Id).Distinct().Count() == p.Actions.Length, "대응 Id는 중복할 수 없습니다.");

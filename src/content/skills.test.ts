@@ -3,9 +3,11 @@ import { createHash } from 'node:crypto';
 import { readFileSync, readdirSync } from 'node:fs';
 import { resolve } from 'node:path';
 import evidence from '../../docs/evidence/service-media-20260920.json';
+import sunEvidence from '../../docs/evidence/sun-service-media-20260924.json';
 import girReview from '../../docs/evidence/girtablullu-off-20260920.json';
 import rmbEvidence from '../../docs/evidence/mirage-archer-unit-rmb-20260922.json';
-import { girtablulluExecute01, kusarikkuExecute01, mirageArcherUnitAttack09, skills, vesperExecute01, vesperExecute02, withEntryKey, withMirageLastResponse } from './skills';
+import { girtablulluExecute01, kusarikkuExecute01, mirageArcherUnitAttack09, phaethonExecute01, phaethonIntegratedExecute02, skills, vesperExecute01, vesperExecute02, withEntryKey, withMirageLastResponse } from './skills';
+import { phaethonRecording } from './phaethon-patterns';
 import { cuesForRecording, vesperPatterns } from './vesper-patterns';
 import { createAttempt, press, validateCues } from '../practice/judge';
 import type { PracticeContent } from '../practice/session';
@@ -18,12 +20,14 @@ const profilesDirectory = resolve('tools/experiment/profiles');
 // Only shipped defaults participate here; editable .local profiles are independent.
 const bundledProfiles: BundledProfile[] = readdirSync(profilesDirectory).filter(name => name.endsWith('.json')).sort()
   .map(name => JSON.parse(readFileSync(resolve(profilesDirectory, name), 'utf8').replace(/^\uFEFF/, '')));
+const reviewedRecordings = [...evidence.recordings, ...sunEvidence.recordings];
+type ReviewedRecording = (typeof reviewedRecordings)[number];
 
 // The temporary web-only allowance must not rewrite measured windows or bundled experiment profiles.
 const serviceAllowanceMs = (contentId: string, index: number) =>
   contentId === 'mirage-archer-unit-attack-09' && (index === 0 || index === 3) ? 25 : 0;
 
-function assertReviewedContent(content: PracticeContent, recordings: typeof evidence.recordings, profiles: BundledProfile[]) {
+function assertReviewedContent(content: PracticeContent, recordings: readonly ReviewedRecording[], profiles: BundledProfile[]) {
   const matches = recordings.filter(item => item.contentId === content.id);
   expect(matches, `${content.id}: one representative recording`).toHaveLength(1);
   const profileMatches = profiles.filter(item => item.Id === content.id);
@@ -88,6 +92,31 @@ test('Mirage Archer Unit exposes five scored cues with RMB-only entry, no prepar
   expect(content.preparation).toBeUndefined();
   expect(bundledProfiles.find(profile => profile.Id === content.id)!.Actions.map(action => action.Timing.BaselineMs))
     .toEqual([4250, 6400, 8150, 9550, 11850]);
+});
+
+test('Phaethon forms remain separate routes with RMB entry and four or five scored cues', () => {
+  expect(skills).toHaveLength(7);
+  expect(new Set(skills.map(content => content.bossId)).size).toBe(6);
+  for (const [content, count] of [[phaethonExecute01, 4], [phaethonIntegratedExecute02, 5]] as const) {
+    expect(content.cues).toHaveLength(count);
+    expect(content.cues.map(cue => cue.key)).toEqual(['MouseRight', ...Array(count - 1).fill('Space')]);
+    expect(content.entryOptions?.map(option => option.key)).toEqual(['MouseRight']);
+    expect(() => withEntryKey(content, 'Space')).toThrow(/unavailable/);
+  }
+  expect(phaethonExecute01.preparation!.dodges).toHaveLength(1);
+  expect(phaethonExecute01.preparation!.movements).toEqual([]);
+  expect(phaethonExecute01.preparation!.end).toBeLessThan(phaethonExecute01.cues[0].start);
+  const toClip = (frame: number) => (frame - phaethonRecording.firstSourceFrame) / 60;
+  expect(phaethonExecute01.preparation!.dodges[0].time).toBe(toClip(phaethonRecording.preparationDodgeDownFrame));
+  expect(phaethonExecute01.preparation!.end).toBe(toClip(phaethonRecording.preparationDodgeReleaseFrame));
+  expect(sunEvidence.recordings.find(item => item.contentId === phaethonExecute01.id)).toMatchObject({
+    preparation: {
+      sourceDodgeDownFrames: [phaethonRecording.preparationDodgeDownFrame],
+      sourceLastDodgeReleaseFrame: phaethonRecording.preparationDodgeReleaseFrame,
+      sourceMovements: [],
+    },
+  });
+  expect(phaethonIntegratedExecute02.preparation).toBeUndefined();
 });
 
 test('Mirage final choices preserve the five attacks and use the reviewed final-response videos', () => {
@@ -175,9 +204,9 @@ test('historical EX01 upper endpoints fail while different experiment and video 
 });
 
 for (const content of skills) {
-  const recording = evidence.recordings.find(item => item.contentId === content.id)!;
+  const recording = reviewedRecordings.find(item => item.contentId === content.id)!;
   test(`${content.id} preserves measured evidence with only explicit service allowances and aligns with recorded inputs`, () => {
-    assertReviewedContent(content, evidence.recordings, bundledProfiles);
+    assertReviewedContent(content, reviewedRecordings, bundledProfiles);
   });
   test(`${content.id} ships the reviewed trimmed asset`, () => {
     const clip = readFileSync(resolve('public', content.video));

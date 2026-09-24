@@ -1,0 +1,163 @@
+{
+  "date": "2026-09-24",
+  "alignment": "One translation per recording, anchored to first notice-template match. Windows are conditionally adopted practical ranges from 54 finalized trials; mixed endpoints are retained in the experiment report.",
+  "experimentEvidence": "sun-experiment-results-20260924.json",
+  "recordings": [
+    {
+      "contentId": "phaethon-execute-01",
+      "bossId": "phaethon",
+      "skill": "Execute_01",
+      "source": "ZZZ_2026-09-24_13-51-59.mp4",
+      "sourceSha256": "94c7b3b9f8d7b21cd1253f89389747738da85cbc09c609c6383c1a3705eaf522",
+      "fps": 60,
+      "firstSourceFrame": 162,
+      "endSourceFrameExclusive": 880,
+      "patternOriginSourceFrame": 267,
+      "patternTimeZeroAtClipTime": 1.75,
+      "sourceOverlayDownFrames": [
+        390,
+        549,
+        666,
+        744
+      ],
+      "windowsMs": [
+        [
+          1900,
+          2200
+        ],
+        [
+          4500,
+          4900
+        ],
+        [
+          6500,
+          6850
+        ],
+        [
+          7800,
+          8150
+        ]
+      ],
+      "referenceMs": [
+        2050,
+        4700,
+        6650,
+        7950
+      ],
+      "clip": "media/phaethon-execute-01-lufs26.mp4",
+      "clipSha256": "51bb54f00e367fd8f5fabebf5471fa4a91652c3df1f3da6444f5090f0dabcb5f",
+      "posterSha256": "9fc093593af1a5504154c7abf968a16011b42a36c200185e1549c8b9436b4849",
+      "outcomeReviewSourceFrame": 785,
+      "overlayResidualFrames": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visualReview": "Source menu excluded; sampled active HP stayed full through scored responses; final perfect-response banner retained. Observed route: 프로미아 → 벨리나 → 레미엘 → 프로미아",
+      "referenceBasis": "Recorded input overlay onsets match adopted experiment baseline; not a measurement of physical input latency.",
+      "alignmentBasis": "First notice-template match in source video, confirmed by no-input C# replay; confirmation frame is not time zero.",
+      "noticeReplay": {
+        "firstMatchFrame": 267,
+        "confirmationFrame": 270,
+        "passed": true,
+        "nativeInputCalls": 0
+      },
+      "outcomeBasis": "User-saved all-success result plus independently inspected HP and final banner; does not prove all trial endpoints or unobserved party routes.",
+      "audio": {
+        "targetIntegratedLufs": -26,
+        "measuredIntegratedLufs": -26.13,
+        "measuredTruePeakDbtp": -16.27,
+        "normalization": "Two-pass loudnorm from this source trim; no repeated fixed attenuation."
+      },
+      "preparation": {
+        "sourceDodgeDownFrames": [
+          295
+        ],
+        "sourceLastDodgeReleaseFrame": 301,
+        "sourceMovements": []
+      },
+      "preClipStartAttack": {
+        "key": "E",
+        "downFrame": 145,
+        "releaseFrame": 151,
+        "scored": false
+      }
+    },
+    {
+      "contentId": "phaethon-integrated-execute-02",
+      "bossId": "phaethon-integrated",
+      "skill": "Execute_02",
+      "source": "ZZZ_2026-09-24_14-40-53.mp4",
+      "sourceSha256": "218e29a93ad6a79da239915b8629fdddb2e2846dc7b28d06717c132acb20acbe",
+      "fps": 60,
+      "firstSourceFrame": 210,
+      "endSourceFrameExclusive": 1020,
+      "patternOriginSourceFrame": 252,
+      "patternTimeZeroAtClipTime": 0.7,
+      "sourceOverlayDownFrames": [
+        381,
+        570,
+        693,
+        825,
+        921
+      ],
+      "windowsMs": [
+        [
+          2050,
+          2250
+        ],
+        [
+          5100,
+          5500
+        ],
+        [
+          7150,
+          7550
+        ],
+        [
+          9350,
+          9750
+        ],
+        [
+          10950,
+          11400
+        ]
+      ],
+      "referenceMs": [
+        2150,
+        5300,
+        7350,
+        9550,
+        11150
+      ],
+      "clip": "media/phaethon-integrated-execute-02-lufs26.mp4",
+      "clipSha256": "564de3c354c8fc91380d40ea8905ef852a9142cf322606a0afa98bf3fe61502e",
+      "posterSha256": "e4e744f7c887cbe133e8c19101397dd7d83f735e54c6aba73cbe4841aa58877f",
+      "outcomeReviewSourceFrame": 981,
+      "overlayResidualFrames": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "visualReview": "Source menu excluded; sampled active HP stayed full through scored responses; final perfect-response banner retained. Observed route: 아리아 → 레미엘 → 아리아 → 레미엘 → 아리아",
+      "referenceBasis": "Recorded input overlay onsets match adopted experiment baseline; not a measurement of physical input latency.",
+      "alignmentBasis": "First notice-template match in source video, confirmed by no-input C# replay; confirmation frame is not time zero.",
+      "noticeReplay": {
+        "firstMatchFrame": 252,
+        "confirmationFrame": 255,
+        "passed": true,
+        "nativeInputCalls": 0
+      },
+      "outcomeBasis": "User-saved all-success result plus independently inspected HP and final banner; does not prove all trial endpoints or unobserved party routes.",
+      "audio": {
+        "targetIntegratedLufs": -26,
+        "measuredIntegratedLufs": -26.11,
+        "measuredTruePeakDbtp": -13.41,
+        "normalization": "Two-pass loudnorm from this source trim; no repeated fixed attenuation."
+      }
+    }
+  ]
+}

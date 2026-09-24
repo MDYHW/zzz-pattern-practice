@@ -57,7 +57,8 @@ export function Practice({ content, choices = [content], onSelect, onEntryChange
   const lastName = content.cues.at(-1)!.key === 'MouseRight' ? '우클릭' : 'Space';
   const responseSummary = onLastKeyChange
     ? `진입은 우클릭, 1~3타는 Space, 마지막은 ${laneLayout === 'overlap' ? 'Space 또는 우클릭' : lastName}입니다.` : undefined;
-  const preparationGuide = content.preparation && <>준비 회피 {content.preparation.dodges.length}회와 이동은 영상 경로 안내이며, 진입부터 {content.cues.length - 1}타까지 채점합니다.</>;
+  const hasPreparationMovement = !!content.preparation?.movements.length;
+  const preparationGuide = content.preparation && <>준비 회피 {content.preparation.dodges.length}회{hasPreparationMovement ? '와 이동은' : '는'} 영상 경로 안내이며, 진입부터 {content.cues.length - 1}타까지 채점합니다.</>;
   const bossId = content.bossId ?? 'vesper';
   const bossLabel = content.bossLabel ?? '베스퍼';
   const bosses = [...new Map(choices.map(choice => [choice.bossId ?? 'vesper', choice.bossLabel ?? '베스퍼'])).entries()];
@@ -155,7 +156,7 @@ export function Practice({ content, choices = [content], onSelect, onEntryChange
             style={{ left: `${mask.x}%`, top: `${mask.y}%`, width: `${mask.width}%`, height: `${mask.height}%` }} />)}
           <span className="video-label">{onLastKeyChange
             ? `참고 영상: 우클릭 진입 · 마지막 ${content.recordedFinalKey === 'MouseRight' ? '우클릭 → QTE' : 'Space'}`
-            : <>영상: {content.preparation && '준비 회피·이동 → '}우클릭 진입 → 패링 · 내 진입: {entryName}</>}</span>
+            : <>영상: {content.preparation && (hasPreparationMovement ? '준비 회피·이동 → ' : '준비 회피 → ')}우클릭 진입 → 패링 · 내 진입: {entryName}</>}</span>
           <span className="video-time" aria-label="영상 진행 시간">{clock(session.time)} <span>/ {clock(content.duration)}</span></span>
           {session.phase === 'running' && <button className="video-pause icon-button" aria-label="일시정지" title="일시정지 (ESC)" aria-keyshortcuts="Escape" onClick={session.pause}><ControlIcon kind="pause" /></button>}
           {touch && !['finished', 'interrupted', 'error'].includes(session.phase) && <TouchControls

@@ -1,0 +1,185 @@
+{
+  "date": "2026-09-23",
+  "purpose": "Bounded internal evidence for separate normal and integrated Phaethon control-skill practice candidates",
+  "method": {
+    "gameReadOnly": true,
+    "runtimeGameInput": false,
+    "scope": [
+      "One preserved current Mutant ability bundle",
+      "Two public monster rows",
+      "No summon patterns or ordinary parry patterns",
+      "No conversion from Animator state coordinates to milliseconds"
+    ],
+    "workingArtifacts": ".local/sun-research/internal/",
+    "note": "The data catalog exact-path record for bundleIndex 761 names a missing Streaming block at offset 1504756. The installed Persistent replacement block and bundle start were reused from the already preserved current manager records. All four requested object names were found in that single bundle."
+  },
+  "sources": {
+    "abilityBundle": {
+      "path": "ZenlessZoneZero_Data/Persistent/Blocks/Data/3191559225.blk",
+      "offset": 1504822,
+      "size": 67434,
+      "bundleIndex": 761,
+      "gameBlockSha256": "b34548afaec340f23b49575813dfc7ac508b6b7c2b28e60c4aa764dea9a1425a",
+      "resolution": "Preserved /abilityAssets/15-16 current manager source; the four named payloads were reread from the installed block."
+    },
+    "monsterTable": {
+      "path": "<PRIVATE_HOME>/Documents/Codex/2026-09-14/zzz-pattern-practice/.local/research-assets/MonsterConfigTemplateTb-public.json",
+      "sha256": "8c9e210bcfcc93771f211576e5ba92d5b9e5e83cb74ed64f59439b9615b69206",
+      "role": "Public release snapshot used for entity-row identity and the shared Character asset hash; local ability payloads were reread separately."
+    },
+    "textMap": {
+      "commit": "3767adeb56",
+      "normal": {
+        "key": "OfficialName_Monster_Mutant",
+        "en": "Phaethon of the Scorched Horizon",
+        "ko": "태양의 잔불·파에톤",
+        "preservedPointer": "docs/evidence/boss-control-patterns-20260918.json#/names/4"
+      },
+      "hardCore": {
+        "key": "OfficialName_Monster_Mutant_HC",
+        "en": "Integrated - Phaethon of the Scorched Horizon",
+        "url": "https://git.mero.moe/dimbreath/ZenlessData/src/commit/3767adeb56/TextMap/TextMap_ENOverwriteTemplateTb.json",
+        "interpretation": "Integrated is the HC enemy name. Despair is an encounter mode label and is not by itself proof that a clip used the HC entity."
+      }
+    },
+    "unavailableScopedAssets": [
+      {
+        "path": "Assets/NapResources/Data/ScriptConfig/Character/Monster_Mutant.asset",
+        "assetHash": "15851930300413477989",
+        "catalogBlock": "StreamingAssets/Blocks/2983813906.blk",
+        "status": "Catalog block absent from the installed checkout; no broad replacement scan performed."
+      },
+      {
+        "path": "Assets/NapResources/Data/ScriptConfig/AnimatorEvents/Battle/AnimatorEventPattern_Monster_Mutant_Battle.asset",
+        "assetHash": "3665752198373504718",
+        "catalogBlock": "StreamingAssets/Blocks/2983813906.blk",
+        "status": "Catalog block absent from the installed checkout; attack events and state-to-pattern bindings remain unextracted."
+      }
+    ]
+  },
+  "payloads": {
+    "Mutant_AidTriggerControl": {
+      "objectId": "-1030796191371296822",
+      "payloadSha256": "c29d9007d211254f2b450b80ba6e02e747fd1d50695146306bdf1daab7cf6e58"
+    },
+    "Mutant_Execute_Manager": {
+      "objectId": "2153734939801604513",
+      "payloadSha256": "21cf40dbf94ddc397c6ec27a6a3a4c432b844a5cc6b44f08ce461f01b1556742"
+    },
+    "Mutant_Execute_Manager_HC": {
+      "objectId": "-9002138506888515161",
+      "payloadSha256": "42b08150f30ac9d55a019d4e5d27c714c38789c5fdc51c53e602f08da8243172"
+    },
+    "Mutant_HC_Init": {
+      "objectId": "-1961224732055575544",
+      "payloadSha256": "d45112d40aee397094bad00d15bd6bb8bdb785eef5790911a2c80eedb538f582"
+    }
+  },
+  "entityMapping": {
+    "sharedCharacterAsset": {
+      "path": "Assets/NapResources/Data/ScriptConfig/Character/Monster_Mutant.asset",
+      "assetHash": "15851930300413477989"
+    },
+    "normal": {
+      "monsterRowPointer": "/IAEFFFFLKNB/2952",
+      "rowId": 31431,
+      "entityName": "Monster_Mutant",
+      "characterAssetHash": "15851930300413477989",
+      "prefab": "Assets/NapResources/Char/Monster/Monster_Mutant/Monster_Mutant_LOD3.prefab",
+      "tags": ["Ether", "Large", "MainStoryBoss", "Miasma", "MutantBoss", ""],
+      "initCondition": "Mutant_HC_Init DefaultModifier/OnAdded/0 HardCore condition failure",
+      "controllerBool": false,
+      "executeManager": "Mutant_Execute_Manager"
+    },
+    "hardCore": {
+      "monsterRowPointer": "/IAEFFFFLKNB/2958",
+      "rowId": 31437,
+      "entityName": "Monster_Mutant_HC",
+      "characterAssetHash": "15851930300413477989",
+      "prefab": "Assets/NapResources/Char/Monster/Monster_Mutant/Monster_Mutant_LOD3.prefab",
+      "icon": "Assets/NapResources/UI/Sprite/A1DynamicLoad/IconBossGeneral/UnPacker/IconMonster_HoloMutant.png",
+      "tags": ["Ether", "Large", "MainStoryBoss", "Miasma", "MutantBoss", "HardCore"],
+      "initCondition": "Mutant_HC_Init DefaultModifier/OnAdded/0 HardCore condition success",
+      "controllerBool": true,
+      "executeManager": "Mutant_Execute_Manager_HC"
+    },
+    "conclusion": "Normal and HC share the Character script asset but select different Execute managers through an explicit HardCore branch. A clip labeled only as Despair still needs its displayed enemy name or appearance to establish that it is the Integrated/HC entity."
+  },
+  "controlSequences": {
+    "unit": "Animator state coordinates; each width is high-low and is not wall-clock milliseconds or an inclusive tick count",
+    "normal": {
+      "manager": "Mutant_Execute_Manager",
+      "entry": {
+        "state": "Attack_Execute_01_Pre",
+        "aidWindow": [154, 184],
+        "aidWidth": 30,
+        "roles": ["HeavyParry", "Evade", "Switch"],
+        "managerEvadeListener": [155, 190],
+        "managerListenerWidth": 35
+      },
+      "followup": {
+        "state": "Attack_Execute_01_Combo",
+        "aidWindows": [[64, 94], [167, 197], [220, 250]],
+        "aidWidths": [30, 30, 30],
+        "betweenAidWindows": [73, 23],
+        "roles": [
+          ["PowerStruggle", "LightParry", "ParryPriority+1", "Evade", "Switch"],
+          ["LightParry", "ParryPriority+1", "Evade", "Switch"],
+          ["HeavyParry", "ParryPriority+1", "Evade", "Switch"]
+        ],
+        "managerWitchSlowScope": [0, 258],
+        "managerFinalSuccessReceiver": [230, 260],
+        "managerFinalReceiverWidth": 30
+      },
+      "initialRoleCandidate": "Entry reaction followed by three support/parry cues. The manager receiver overlaps the third aid window but is a different mechanism and is not an additional input cue."
+    },
+    "hardCore": {
+      "manager": "Mutant_Execute_Manager_HC",
+      "entry": {
+        "state": "Attack_Execute_02_Pre",
+        "aidWindow": [159, 189],
+        "aidWidth": 30,
+        "roles": ["HeavyParry", "Evade", "Switch"],
+        "managerEvadeListener": [120, 200],
+        "managerListenerWidth": 80
+      },
+      "followup": {
+        "state": "Attack_Execute_01_Combo_02",
+        "aidWindows": [[117, 147], [220, 250], [335, 365], [411, 441]],
+        "aidWidths": [30, 30, 30, 30],
+        "betweenAidWindows": [73, 85, 46],
+        "roles": [
+          ["PowerStruggle", "HeavyParry", "ParryPriority+1", "Evade", "Switch"],
+          ["HeavyParry", "ParryPriority+1", "Evade", "Switch"],
+          ["HeavyParry", "ParryPriority+1", "Evade", "Switch"],
+          ["HeavyParry", "ParryPriority+1", "Evade", "Switch"]
+        ],
+        "managerWitchSlowScope": [0, 443],
+        "managerFinalSuccessReceiver": [400, 445],
+        "managerFinalReceiverWidth": 45
+      },
+      "initialRoleCandidate": "Entry reaction followed by four support/parry cues. The manager receiver overlaps the fourth aid window but is a different mechanism and is not an additional input cue."
+    }
+  },
+  "partyInterpretation": {
+    "approvedParty": ["RemielleOrigin", "Velina", "Aria"],
+    "startingCharacter": "Aria",
+    "finding": "The two enemy forms expose different follow-up response tags even with the same party: normal starts PowerStruggle+Light and ends Heavy, while HC exposes PowerStruggle+Heavy and then Heavy throughout. This supports separate cue profiles. It does not determine character swap order, physical input timing, or support animation duration by itself.",
+    "doNotInfer": [
+      "Do not add character support durations to state-coordinate gaps.",
+      "Do not turn manager listener/receiver widths into physical input windows.",
+      "Do not infer one required input per unseen Battle attack event."
+    ]
+  },
+  "unresolved": [
+    "State-to-Battle-pattern bindings, attack-property event coordinates, and exact state transitions were not recovered because the two bounded catalog records point to an absent block.",
+    "External-video alignment is required to map state-coordinate cue roles to clip seconds and then to experiment milliseconds.",
+    "The approved clips must establish their displayed enemy identity; Despair mode alone is not the HC mapping proof.",
+    "Actual success boundaries and automatic-success behavior remain experimental questions."
+  ],
+  "adoption": {
+    "sharedImplementationShape": "Both forms fit an entry cue plus a list of follow-up cues, so the existing generic cue representation can be reused.",
+    "separateProfilesRequired": true,
+    "reason": "The selected manager, entry state, follow-up state, follow-up cue count, cue-role tags, state-coordinate positions, and final receiver differ."
+  }
+}

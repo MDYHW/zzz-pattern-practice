@@ -1,0 +1,106 @@
+{
+  "SchemaVersion": 1,
+  "Id": "phaethon-integrated-execute-02",
+  "BossId": "phaethon-integrated",
+  "BossLabel": "태양의 잔불 / 융합",
+  "Skill": "Execute_02",
+  "Conditions": "9월24일 사용자24회 측정 기반 실용 구간 / 아리아 시작 / 문구 이전 전투 수동·자동 시작 없음 / 대표 경로의 근사 범위이며 경계 혼재 기록 유지 / 수동 WASD 가능",
+  "Party": "레미엘 → 벨리나 → 아리아",
+  "StartCharacter": "아리아",
+  "AllowManualMovement": true,
+  "ManualPreparationRmbUntilMs": 0,
+  "MinimumSpacingMs": 250,
+  "Detector": {
+    "Id": "phaethon-integrated-korean-shared-yellow-shape-v1",
+    "Template": "../notice-template-girtablullu.png",
+    "ReferenceWidth": 1280,
+    "ReferenceHeight": 720,
+    "X": 368,
+    "Y": 136,
+    "Width": 528,
+    "Height": 28,
+    "MinimumClientWidth": 1280,
+    "Threshold": 0.68,
+    "PollMs": 8,
+    "AbsentMs": 100,
+    "ConfirmationMs": 40,
+    "TimeoutMs": 60000
+  },
+  "Actions": [
+    {
+      "Id": "entry",
+      "Label": "진입 회피",
+      "Key": "RMB",
+      "Group": "A",
+      "HoldMs": 100,
+      "SelectedTiming": "baseline",
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 2050,
+        "BaselineMs": 2150,
+        "LateMs": 2250
+      }
+    },
+    {
+      "Id": "hit-1",
+      "Label": "1타",
+      "Key": "Space",
+      "Group": "B",
+      "HoldMs": 150,
+      "SelectedTiming": "baseline",
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 5100,
+        "BaselineMs": 5300,
+        "LateMs": 5500
+      }
+    },
+    {
+      "Id": "hit-2",
+      "Label": "2타",
+      "Key": "Space",
+      "Group": "A",
+      "HoldMs": 150,
+      "SelectedTiming": "baseline",
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 7150,
+        "BaselineMs": 7350,
+        "LateMs": 7550
+      }
+    },
+    {
+      "Id": "hit-3",
+      "Label": "3타",
+      "Key": "Space",
+      "Group": "B",
+      "HoldMs": 150,
+      "SelectedTiming": "baseline",
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 9350,
+        "BaselineMs": 9550,
+        "LateMs": 9750
+      }
+    },
+    {
+      "Id": "hit-4",
+      "Label": "4타",
+      "Key": "Space",
+      "Group": "A",
+      "HoldMs": 150,
+      "SelectedTiming": "baseline",
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 10950,
+        "BaselineMs": 11150,
+        "LateMs": 11400
+      }
+    }
+  ]
+}

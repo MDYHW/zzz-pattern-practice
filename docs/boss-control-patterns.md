@@ -56,7 +56,7 @@
 | 태초의 악몽·「창조주」 | `Vessel` | 전용 관리자 여러 계열과 제어스킬 대응·Shutdown 업적. 스킬·형태별 채보 분리 필요 |
 | 염원의 피날레·아리아 / 환영의 화살 유닛 | 표시 `PinkBowTrooper` / `ObsoleteAndroid`, 전투 `Monster_ObsoleteAndroid` | 31441/31442의 entity·script 공유 연결 확인. 진입+후속4 구조와 외부 안내 교차. [환영의 화살 유닛 조사](experiments/arrow-unit-control-skill.md) 참조 |
 | 피의 청소부 | `GraymaneCenturion` | 전용 `Execute_Manager`·`Excute` 설정. 일반 왕복 공격 대응과 제어기 구분 필요 |
-| 태양의 잔불·파에톤 | `Mutant` | 일반·HC Execute 관리자 확인. 소환체 패링까지 한 개의 고정 제어기라고 합치지 않음 |
+| 태양의 잔불·파에톤 | `Mutant` | [기본·융합형 현행 구간](experiments/sun-control-skill.md#실험-결과와-서비스-채택--2026-09-24): 일반 후속3·HC 후속4와 HardCore 분기 확인. 9월24일54회 측정·대표 기준 성공을 바탕으로 두 형태 웹 채택. 기본 준비RMB1회는 비채점. 상태 좌표는 ms가 아니며 소환체 패링을 고정 제어기에 합치지 않음 |
 | 연옥을 누비는 자 | `SymbioticEtherealSinner` | 전용 Execute 관리자와 제어기 투사체 설정 확인 |
 | 쿠사리쿠 | `Larval` | 준비 대응과 진입+1~4타. 로컬 실험·채택 구간·무피격 대표·웹 반영·정리 완료 |
 | 우리딤 | `Stalker` | Execute 관리자 확인. 전투 진입 조건과 대응 이후 흐름은 별도 조사 대상 |

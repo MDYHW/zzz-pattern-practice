@@ -1,0 +1,451 @@
+{
+  "date": "2026-09-23",
+  "scope": "외부 두 저장 클립의 독립 육안 cue 감사. 실험 초기 탐색점 참고 전용. 게임 입력/서비스 채택 검증이 아니다.",
+  "sampling": {
+    "method": "ffmpeg select original frame n, showinfo pts_time, vfr image output. PIL sheet labels use captured original PTS.",
+    "script": ".local/sun-research/cue-audit/extract.py",
+    "precision_note": "표시된 브래킷은 마지막 미관측 샘플과 첫 관측 샘플 사이 약50ms다. 프레임 단위 최초 시점이나 물리 입력시각을 뜻하지 않는다.",
+    "frame_numbers": "zero-based decoded source clip frame index"
+  },
+  "timing_constraints": [
+    "소스 초 = clip PTS + clip 절단 오프셋. 내부 지원 구간 좌표는 ms가 아니며 이 영상에 억지 정렬하지 않는다.",
+    "원본에는 입력 로그가 없다. UI 발광도 물리 키다운으로 취급하지 않는다. 성공폭, 시스템 지연, 입력 제출시각은 확정 불가.",
+    "일반3.55/절망3.85 눈 원점은 controller가 공급한 임시 판독 원점이며 검출기 첫 감지 시점이 아니다. 이 감사는 그 원점을 재검증하거나 성공 판정하지 않는다.",
+    "일반은 진입 교대+후속3교대가 관측되며 절망은 피격/제한 전환+후속4교대가 관측된다. 내부 기대 횟수 때문에 다른 장면을 더하거나 빼지 않았다.",
+    "각 반응의 여러 타격/잔상/피격 효과와 새로운 플레이어 교대를 구분했다.",
+    "외부 파티와 진입 경로가 사용자 레미엘→벨리나→아리아, 시작 아리아와 다르다. 특히 절망 후속 타이밍은 피격 진입 경로에서 얻었으므로 성공 회피 진입으로 직접 전이하지 못한다."
+  ],
+  "clips": [
+    {
+      "variant": "general",
+      "video_id": "2hCKkHN4eTk",
+      "clip": ".local/sun-research/external/2hCKkHN4eTk-general-source-004-025.mp4",
+      "sha256": "c09e1a3aeb387cd32ee0a5613cb88186bcf717bc33f06345211ffd13031d3310",
+      "local_zero_source_seconds": 4,
+      "frame_rate": "60000/1001",
+      "dimensions": [
+        1280,
+        714
+      ],
+      "identity": {
+        "status": "conditional_on_supplied_source_metadata",
+        "basis": "푸른 광채의 길게 뻗은 팔다리와 변형된 보스 외형",
+        "limitation": "검토한 클립에는 보스 이름 헤더가 없다. 태양의 잔불 기본/절망 구분은 제공된 원본 메타데이터 및 외형과 결합한 조건부 식별이다."
+      },
+      "source_party_from_assignment": [
+        "야나기",
+        "남궁우",
+        "유즈하"
+      ],
+      "events": [
+        {
+          "event": "entry_boss_gold_flash",
+          "observed_bracket_local_pts_seconds": [
+            7.3073,
+            7.35735
+          ],
+          "observed_midpoint_local_seconds": 7.332325,
+          "source_bracket_seconds": [
+            11.3073,
+            11.35735
+          ],
+          "frames": [
+            {
+              "frame": 438,
+              "pts": 7.3073,
+              "source_seconds": 11.3073,
+              "path": ".local\\sun-research\\cue-audit\\general-7.25-7.55-0.05\\002.jpg"
+            },
+            {
+              "frame": 441,
+              "pts": 7.35735,
+              "source_seconds": 11.35735,
+              "path": ".local\\sun-research\\cue-audit\\general-7.25-7.55-0.05\\003.jpg"
+            }
+          ],
+          "interpretation": "금색 전조 시작. 교대 시작과 별개다.",
+          "physical_input_time": null
+        },
+        {
+          "event": "entry_visible_party_switch",
+          "observed_bracket_local_pts_seconds": [
+            7.45745,
+            7.5075
+          ],
+          "observed_midpoint_local_seconds": 7.482475,
+          "source_bracket_seconds": [
+            11.45745,
+            11.5075
+          ],
+          "frames": [
+            {
+              "frame": 447,
+              "pts": 7.45745,
+              "source_seconds": 11.45745,
+              "path": ".local\\sun-research\\cue-audit\\general-7.25-7.55-0.05\\005.jpg"
+            },
+            {
+              "frame": 450,
+              "pts": 7.5075,
+              "source_seconds": 11.5075,
+              "path": ".local\\sun-research\\cue-audit\\general-7.25-7.55-0.05\\006.jpg"
+            }
+          ],
+          "interpretation": "금색 충돌 중 활성 초상화 변경과 교대 표시. 극한 지원 경로와 일치하나 물리 입력은 없다. 사용자 실험의 RMB 회피 진입과 다른 경로다.",
+          "physical_input_time": null
+        },
+        {
+          "event": "followup_1_visible_party_switch",
+          "observed_bracket_local_pts_seconds": [
+            10.143467,
+            10.193517
+          ],
+          "observed_midpoint_local_seconds": 10.168492,
+          "source_bracket_seconds": [
+            14.143467,
+            14.193517
+          ],
+          "frames": [
+            {
+              "frame": 608,
+              "pts": 10.143467,
+              "source_seconds": 14.143467,
+              "path": ".local\\sun-research\\cue-audit\\general-10.05-10.35-0.05\\003.jpg"
+            },
+            {
+              "frame": 611,
+              "pts": 10.193517,
+              "source_seconds": 14.193517,
+              "path": ".local\\sun-research\\cue-audit\\general-10.05-10.35-0.05\\004.jpg"
+            }
+          ],
+          "interpretation": "원거리 보스의 금색 전조 뒤 활성 초상화 변경. 이후 붉은 횡베기. 10.6의 큰 횡베기 자체를 진입으로 세면 안 된다.",
+          "physical_input_time": null
+        },
+        {
+          "event": "followup_2_visible_party_switch",
+          "observed_bracket_local_pts_seconds": [
+            12.245567,
+            12.295617
+          ],
+          "observed_midpoint_local_seconds": 12.270592,
+          "source_bracket_seconds": [
+            16.245567,
+            16.295617
+          ],
+          "frames": [
+            {
+              "frame": 734,
+              "pts": 12.245567,
+              "source_seconds": 16.245567,
+              "path": ".local\\sun-research\\cue-audit\\general-12.1-12.4-0.05\\004.jpg"
+            },
+            {
+              "frame": 737,
+              "pts": 12.295617,
+              "source_seconds": 16.295617,
+              "path": ".local\\sun-research\\cue-audit\\general-12.1-12.4-0.05\\005.jpg"
+            }
+          ],
+          "interpretation": "보스 공중 정지 후 내려찍기 시작에서 초상화 변경. 이후 바닥 충격과 여러 잔상은 같은 반응 묶음이다.",
+          "physical_input_time": null
+        },
+        {
+          "event": "followup_3_visible_party_switch",
+          "observed_bracket_local_pts_seconds": [
+            13.346667,
+            13.396717
+          ],
+          "observed_midpoint_local_seconds": 13.371692,
+          "source_bracket_seconds": [
+            17.346667,
+            17.396717000000002
+          ],
+          "frames": [
+            {
+              "frame": 800,
+              "pts": 13.346667,
+              "source_seconds": 17.346667,
+              "path": ".local\\sun-research\\cue-audit\\general-13.25-13.65-0.05\\003.jpg"
+            },
+            {
+              "frame": 803,
+              "pts": 13.396717,
+              "source_seconds": 17.396717000000002,
+              "path": ".local\\sun-research\\cue-audit\\general-13.25-13.65-0.05\\004.jpg"
+            }
+          ],
+          "interpretation": "직전 착지 이후 초상화 변경. 보스의 뒤이은 횡베기와 성공 보상을 포함하는 마지막 반응 묶음. 13.65 이후 보상 시작.",
+          "physical_input_time": null
+        },
+        {
+          "event": "completion_reward_onset",
+          "observed_bracket_local_pts_seconds": [
+            13.596917,
+            13.646967
+          ],
+          "observed_midpoint_local_seconds": 13.621942,
+          "source_bracket_seconds": [
+            17.596916999999998,
+            17.646967
+          ],
+          "frames": [
+            {
+              "frame": 815,
+              "pts": 13.596917,
+              "source_seconds": 17.596916999999998,
+              "path": ".local\\sun-research\\cue-audit\\general-13.25-13.65-0.05\\008.jpg"
+            },
+            {
+              "frame": 818,
+              "pts": 13.646967,
+              "source_seconds": 17.646967,
+              "path": ".local\\sun-research\\cue-audit\\general-13.25-13.65-0.05\\009.jpg"
+            }
+          ],
+          "interpretation": "점수 항목에 완벽 대응 보상 표시가 나타남. 더 큰 중앙 완벽대응!! 문구는 13.89722 표본에서 읽힌다.",
+          "physical_input_time": null
+        }
+      ],
+      "qte": {
+        "status": "not_established_by_completion_samples",
+        "note": "완벽 대응/점수 보상은 확인. 종료 표본에서 캐릭터 선택 QTE는 확정하지 않는다. 일반의 이전 1~2초 구간 선택 UI는 본 제어기보다 앞선 전투이므로 후속/완료로 세지 않는다."
+      }
+    },
+    {
+      "variant": "despair",
+      "video_id": "dJ3YPGKspeQ",
+      "clip": ".local/sun-research/external/dJ3YPGKspeQ-despair-source-028-046.mp4",
+      "sha256": "7ccb27c1d0efa32c2ea646e227d2c7a684badf57a38e34445f4b95ecb6ddfac5",
+      "local_zero_source_seconds": 28,
+      "frame_rate": "60/1",
+      "dimensions": [
+        1270,
+        720
+      ],
+      "identity": {
+        "status": "conditional_on_supplied_source_metadata",
+        "basis": "황금/주황 불꽃과 거대한 변형 팔을 가진 보스 외형",
+        "limitation": "검토한 클립에는 보스 이름 헤더가 없다. 태양의 잔불 기본/절망 구분은 제공된 원본 메타데이터 및 외형과 결합한 조건부 식별이다."
+      },
+      "source_party_from_assignment": [
+        "레미엘",
+        "버니스",
+        "벨리나"
+      ],
+      "events": [
+        {
+          "event": "entry_damage_and_restricted_scene",
+          "observed_bracket_local_pts_seconds": [
+            6.65,
+            6.7
+          ],
+          "observed_midpoint_local_seconds": 6.675,
+          "source_bracket_seconds": [
+            34.65,
+            34.7
+          ],
+          "frames": [
+            {
+              "frame": 399,
+              "pts": 6.65,
+              "source_seconds": 34.65,
+              "path": ".local\\sun-research\\cue-audit\\despair-6.4-6.85-0.05\\006.jpg"
+            },
+            {
+              "frame": 402,
+              "pts": 6.7,
+              "source_seconds": 34.7,
+              "path": ".local\\sun-research\\cue-audit\\despair-6.4-6.85-0.05\\007.jpg"
+            }
+          ],
+          "interpretation": "6.65까지 HP10656/10656, 6.70에서 HP8126/10656. Burnice 활성 초상화 유지. 동시에 조작 아이콘 제한 및 보라색 화면 전환이 시작하여 6.80 이후 제한 장면, 8.70~8.80 후속 안내로 이어진다. 제어기 첫 타격의 피격 진입과 강하게 일치하지만 별도 입력/게임 로그가 없어 준비 공격과의 엄밀한 인과 및 내부 노드 연결은 확정하지 않는다. 성공 회피/지원 진입 시각 아님.",
+          "physical_input_time": null
+        },
+        {
+          "event": "followup_guide_change",
+          "observed_bracket_local_pts_seconds": [
+            8.7,
+            8.8
+          ],
+          "observed_midpoint_local_seconds": 8.75,
+          "source_bracket_seconds": [
+            36.7,
+            36.8
+          ],
+          "frames": [
+            {
+              "frame": 522,
+              "pts": 8.7,
+              "source_seconds": 36.7,
+              "path": ".local\\sun-research\\cue-audit\\despair-7.6-9.1-0.1\\012.jpg"
+            },
+            {
+              "frame": 528,
+              "pts": 8.8,
+              "source_seconds": 36.8,
+              "path": ".local\\sun-research\\cue-audit\\despair-7.6-9.1-0.1\\013.jpg"
+            }
+          ],
+          "interpretation": "첫 제어기 피해 회피 안내에서 연속 공격 대응 안내로 전환. 이때 플레이어는 같은 자리와 같은 활성 캐릭터로 남아 있으므로 안내 변경을 새로운 지원/회피 입력으로 세지 않는다.",
+          "physical_input_time": null
+        },
+        {
+          "event": "followup_1_visible_party_switch",
+          "observed_bracket_local_pts_seconds": [
+            9.5,
+            9.55
+          ],
+          "observed_midpoint_local_seconds": 9.525,
+          "source_bracket_seconds": [
+            37.5,
+            37.55
+          ],
+          "frames": [
+            {
+              "frame": 570,
+              "pts": 9.5,
+              "source_seconds": 37.5,
+              "path": ".local\\sun-research\\cue-audit\\despair-9.45-9.8-0.05\\002.jpg"
+            },
+            {
+              "frame": 573,
+              "pts": 9.55,
+              "source_seconds": 37.55,
+              "path": ".local\\sun-research\\cue-audit\\despair-9.45-9.8-0.05\\003.jpg"
+            }
+          ],
+          "interpretation": "Burnice에서 흰머리 캐릭터로 교대 연출 시작. 뒤의 붉은 횡베기들은 첫 후속 반응 묶음이며 entry9.7 해석은 기각.",
+          "physical_input_time": null
+        },
+        {
+          "event": "followup_2_visible_party_switch",
+          "observed_bracket_local_pts_seconds": [
+            11.7,
+            11.75
+          ],
+          "observed_midpoint_local_seconds": 11.725,
+          "source_bracket_seconds": [
+            39.7,
+            39.75
+          ],
+          "frames": [
+            {
+              "frame": 702,
+              "pts": 11.7,
+              "source_seconds": 39.7,
+              "path": ".local\\sun-research\\cue-audit\\despair-11.5-11.9-0.05\\005.jpg"
+            },
+            {
+              "frame": 705,
+              "pts": 11.75,
+              "source_seconds": 39.75,
+              "path": ".local\\sun-research\\cue-audit\\despair-11.5-11.9-0.05\\006.jpg"
+            }
+          ],
+          "interpretation": "활성 초상화 교대 표시와 내려찍기 시작. 이후 폭발/착지 연출은 이 반응에 속한다.",
+          "physical_input_time": null
+        },
+        {
+          "event": "followup_3_visible_party_switch",
+          "observed_bracket_local_pts_seconds": [
+            13.9,
+            13.95
+          ],
+          "observed_midpoint_local_seconds": 13.925,
+          "source_bracket_seconds": [
+            41.9,
+            41.95
+          ],
+          "frames": [
+            {
+              "frame": 834,
+              "pts": 13.9,
+              "source_seconds": 41.9,
+              "path": ".local\\sun-research\\cue-audit\\despair-13.9-14.3-0.05\\001.jpg"
+            },
+            {
+              "frame": 837,
+              "pts": 13.95,
+              "source_seconds": 41.95,
+              "path": ".local\\sun-research\\cue-audit\\despair-13.9-14.3-0.05\\002.jpg"
+            }
+          ],
+          "interpretation": "초상화 변경과 금색 교대 연출 시작. 뒤의 긴 팔 횡쓸기 충돌은 14.15 부근. 충돌 시각과 교대 시각을 구별한다.",
+          "physical_input_time": null
+        },
+        {
+          "event": "followup_4_visible_party_switch",
+          "observed_bracket_local_pts_seconds": [
+            15.6,
+            15.65
+          ],
+          "observed_midpoint_local_seconds": 15.625,
+          "source_bracket_seconds": [
+            43.6,
+            43.65
+          ],
+          "frames": [
+            {
+              "frame": 936,
+              "pts": 15.6,
+              "source_seconds": 43.6,
+              "path": ".local\\sun-research\\cue-audit\\despair-15.4-15.8-0.05\\005.jpg"
+            },
+            {
+              "frame": 939,
+              "pts": 15.65,
+              "source_seconds": 43.65,
+              "path": ".local\\sun-research\\cue-audit\\despair-15.4-15.8-0.05\\006.jpg"
+            }
+          ],
+          "interpretation": "금색 전조가 끝난 뒤 활성 초상화 교대와 출현 연출 시작. 15.75에서 보상 상승,16.0에서 완벽대응!! 문구 확인.",
+          "physical_input_time": null
+        },
+        {
+          "event": "completion_reward_onset",
+          "observed_bracket_local_pts_seconds": [
+            15.7,
+            15.75
+          ],
+          "observed_midpoint_local_seconds": 15.725,
+          "source_bracket_seconds": [
+            43.7,
+            43.75
+          ],
+          "frames": [
+            {
+              "frame": 942,
+              "pts": 15.7,
+              "source_seconds": 43.7,
+              "path": ".local\\sun-research\\cue-audit\\despair-15.4-15.8-0.05\\007.jpg"
+            },
+            {
+              "frame": 945,
+              "pts": 15.75,
+              "source_seconds": 43.75,
+              "path": ".local\\sun-research\\cue-audit\\despair-15.4-15.8-0.05\\008.jpg"
+            }
+          ],
+          "interpretation": "완벽 대응 점수 보상 등장. 16초 이후 전투/연출을 다섯 번째 후속으로 세면 안 된다.",
+          "physical_input_time": null
+        }
+      ],
+      "qte": {
+        "status": "not_established_by_completion_samples",
+        "note": "완벽 대응/점수 보상은 확인. 종료 표본에서 캐릭터 선택 QTE는 확정하지 않는다. 일반의 이전 1~2초 구간 선택 UI는 본 제어기보다 앞선 전투이므로 후속/완료로 세지 않는다."
+      }
+    }
+  ],
+  "rejected_interpretations": [
+    "general entry10.6~10.9, followups13.5/16.6/19.9: 실제 진입/후속/완료 뒤 전투 혼동",
+    "despair entry9.7: 이미 첫 후속 지원 교대 뒤",
+    "despair 16.7 추가 후속: 완벽 대응 완료 뒤 전투",
+    "despair geometry-corrected detector match7.4667 as notice origin: 늦은 검출은 첫 문구 원점 증거가 아님"
+  ],
+  "open_questions": [
+    "사용자 파티에서 성공 회피 진입 시 실제 감지 원점과 최초 타격 관계",
+    "절망 성공 회피 진입 뒤 네 후속 시각이 피격 외부 경로와 유지되는지",
+    "물리 입력 시점, 타이밍 성공폭, 사용자 파티 교대 경로, QTE 연계"
+  ]
+}

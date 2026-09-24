@@ -1,0 +1,141 @@
+{
+  "date": "2026-09-23",
+  "profiles": [
+    {
+      "id": "phaethon-execute-01",
+      "sourceSha256": "d864d4ce76cbb7078f385fdeb37b77657692ea63263f054cceea4b99ac77a87d",
+      "installedSha256": "49675fd690bf94722f451e5774281aa860d9c4b8b685de13a69e81cece0dd81d",
+      "baselineMs": [
+        3800,
+        6450,
+        8550,
+        9650
+      ],
+      "earlyLateOffsetMs": 200,
+      "valuesAreMeasuredSuccessWindows": false,
+      "calculation": "(observed midpoint - temporary visual zero)*1000 -150; nearest50, ties lower",
+      "visualZeroSeconds": 3.55,
+      "profileCheck": {
+        "profileId": "phaethon-execute-01",
+        "profileHash": "d864d4ce76cbb7078f385fdeb37b77657692ea63263f054cceea4b99ac77a87d",
+        "selected_profile_combinations_passed": 9,
+        "common_core_tests_run": false,
+        "native_input_calls": 0,
+        "passed": [
+          "selected profile schedules and editor snapshots"
+        ]
+      }
+    },
+    {
+      "id": "phaethon-integrated-execute-02",
+      "sourceSha256": "ab92255c5d7f40eece79bc990a6c19ce67ce809bcbc3d9e63fe6c538bb295736",
+      "installedSha256": "b6912b284d2095d4692b6d2f92fd15cf53a585df01965646785480bf76479022",
+      "baselineMs": [
+        2650,
+        5500,
+        7700,
+        9900,
+        11600
+      ],
+      "earlyLateOffsetMs": 200,
+      "valuesAreMeasuredSuccessWindows": false,
+      "calculation": "(observed midpoint - temporary visual zero)*1000 -150; nearest50, ties lower",
+      "visualZeroSeconds": 3.85,
+      "profileCheck": {
+        "profileId": "phaethon-integrated-execute-02",
+        "profileHash": "b6912b284d2095d4692b6d2f92fd15cf53a585df01965646785480bf76479022",
+        "selected_profile_combinations_passed": 9,
+        "common_core_tests_run": false,
+        "native_input_calls": 0,
+        "passed": [
+          "selected profile schedules and editor snapshots"
+        ]
+      }
+    }
+  ],
+  "installation": {
+    "existingProfilesAndTemplatesUnchanged": true,
+    "lastSelectionUnchanged": true,
+    "executableUnchanged": true,
+    "installedDirectory": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\profiles"
+  },
+  "ui": {
+    "profile": "phaethon-execute-01",
+    "testedUsingInstalledExecutableAndProfile": true,
+    "capture": ".local/sun-research/phaethon-ui.png",
+    "actualInputUnchecked": true,
+    "actionCount": 4
+  },
+  "notice": {
+    "date": "2026-09-23",
+    "role": "External replay localization; all earliest-notice validations failed",
+    "threshold": 0.68,
+    "productionDetectorChanged": false,
+    "temporaryVisualZeroSeconds": {
+      "despair": 3.85,
+      "general": 3.55
+    },
+    "sourceClipStartSeconds": {
+      "despair": 28,
+      "general": 4
+    },
+    "reports": [
+      {
+        "form": "general",
+        "report": ".local/sun-research/notice/general-scan.json",
+        "first": -1,
+        "confirmed": -1,
+        "matches": 0,
+        "maxScore": 0.24186822351959966,
+        "cliPassed": false,
+        "originValidationPassed": false,
+        "nativeInputCalls": 0
+      },
+      {
+        "form": "general",
+        "report": ".local/sun-research/notice/general-aligned-scan.json",
+        "first": -1,
+        "confirmed": -1,
+        "matches": 0,
+        "maxScore": 0.6618181818181819,
+        "cliPassed": false,
+        "originValidationPassed": false,
+        "nativeInputCalls": 0
+      },
+      {
+        "form": "despair",
+        "report": ".local/sun-research/notice/despair-scan.json",
+        "first": -1,
+        "confirmed": -1,
+        "matches": 0,
+        "maxScore": 0.432523051131601,
+        "cliPassed": false,
+        "originValidationPassed": false,
+        "nativeInputCalls": 0
+      },
+      {
+        "form": "despair",
+        "report": ".local/sun-research/notice/despair-aligned-scan.json",
+        "first": 448,
+        "confirmed": 451,
+        "matches": 72,
+        "maxScore": 0.7578194816800715,
+        "cliPassed": true,
+        "originValidationPassed": false,
+        "nativeInputCalls": 0
+      }
+    ],
+    "interpretation": "The aligned HC match at 7.4667s is about 3.77s after visual onset; broad CLI pass is not origin validation. First local user recording must establish actual first-match offset."
+  },
+  "webContentChanged": false,
+  "actualGameInputSent": false,
+  "gameSuccessVerified": false,
+  "nextUserObservation": "Record one normal baseline with the approved party; inspect earliest notice and entry before requesting HC.",
+  "review": "Independent scope review accepted candidate-only cells and staged first trial; independent video audit corrected reaction roles and exposed HC entry damage.",
+  "contentTests": {
+    "command": ".\\tools.ps1 test src/content/skills.test.ts",
+    "passed": 21,
+    "initialSandboxRuntimeAccessFailure": true,
+    "rerunWithExistingRuntimePassed": true
+  }
+}

@@ -37,12 +37,14 @@ namespace VesperLab
             Native.GetWindowThreadProcessId(current, out currentPid);
             return current == window && currentPid == pid;
         }
-        public bool AnyControlHeld(string ownedKey = null, bool includeLmb = false)
+        public bool AnyControlHeld(string ownedKey = null, bool includeLmb = false, bool includeE = false)
         {
-            foreach (int key in new[] { 0x20, 0x02, 0x01, 0x10, 0x11, 0x12, 0x5B, 0x5C })
+            foreach (int key in new[] { 0x20, 0x02, 0x01, 0x45, 0x10, 0x11, 0x12, 0x5B, 0x5C })
             {
                 if (key == 0x01 && !includeLmb) continue;
-                if ((ownedKey == "RMB" && key == 0x02) || (ownedKey == "Space" && key == 0x20) || (ownedKey == "LMB" && key == 0x01)) continue;
+                if (key == 0x45 && !includeE) continue;
+                if ((ownedKey == "RMB" && key == 0x02) || (ownedKey == "Space" && key == 0x20)
+                    || (ownedKey == "LMB" && key == 0x01) || (ownedKey == "E" && key == 0x45)) continue;
                 if ((Native.GetAsyncKeyState(key) & 0x8000) != 0) return true;
             }
             return false;
@@ -59,10 +61,10 @@ namespace VesperLab
         public int Send(string key, bool down, out int error)
         {
             var input = new Native.INPUT();
-            if (key == "Space" || key == "A" || key == "D")
+            if (key == "Space" || key == "A" || key == "D" || key == "E")
             {
                 input.type = 1;
-                input.data.keyboard.wScan = (ushort)(key == "Space" ? 0x39 : key == "A" ? 0x1e : 0x20);
+                input.data.keyboard.wScan = (ushort)(key == "Space" ? 0x39 : key == "A" ? 0x1e : key == "D" ? 0x20 : 0x12);
                 input.data.keyboard.dwFlags = 0x0008u | (down ? 0u : 0x0002u);
             }
             else if (key == "RMB" || key == "LMB")

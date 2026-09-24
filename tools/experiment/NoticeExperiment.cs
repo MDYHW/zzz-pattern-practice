@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -115,6 +115,7 @@ namespace VesperLab
             bool automaticAuxiliary = ProfileStore.Current.AuxiliaryInputs != null && ProfileStore.Current.AuxiliaryInputs.Any(a => a.Enabled);
             bool automaticSchedule = automaticPreparation || automaticAuxiliary;
             bool guardLmb = startAttack != null || (automaticAuxiliary && ProfileStore.Current.AuxiliaryInputs.Any(a => a.Enabled && a.Key == "LMB"));
+            bool guardE = startAttack != null && startAttack.Key == "E";
             bool allowManualMovement = ProfileStore.Current.AllowManualMovement;
             bool guardDirections = !allowManualMovement && (automaticPreparation || automaticAuxiliary || startAttack != null);
             double noticeOrigin = -1, preparationUntil = ProfileStore.Current.ManualPreparationRmbUntilMs;
@@ -127,7 +128,7 @@ namespace VesperLab
             Func<bool> waitGuard = () => {
                 if (stop()) return true;
                 if (startAttack != null) probe.CheckGeometry();
-                if (sink.AnyControlHeld(held ?? preparationKey(), guardLmb) || (!allowManualMovement && startAttack != null && sink.AnyDirectionHeld())) throw new InvalidOperationException("대기 중 허용되지 않은 수동 대응 입력을 감지했습니다.");
+                if (sink.AnyControlHeld(held ?? preparationKey(), guardLmb, guardE) || (!allowManualMovement && startAttack != null && sink.AnyDirectionHeld())) throw new InvalidOperationException("대기 중 허용되지 않은 수동 대응 입력을 감지했습니다.");
                 return false;
             };
             Action check = () => {
@@ -136,14 +137,14 @@ namespace VesperLab
             };
             Action detectionGuard = () => {
                 check();
-                if (sink.AnyControlHeld(startHeld && r.Mode != "observe" ? "LMB" : null, guardLmb)
+                if (sink.AnyControlHeld(startHeld && r.Mode != "observe" ? startAttack.Key : null, guardLmb, guardE)
                     || (guardDirections && sink.AnyDirectionHeld()))
                     throw new InvalidOperationException("감시 중 수동 대응·시작 공격·방향 입력을 감지하여 중단했습니다.");
             };
             try
             {
                 Validate(r);
-                check(); if (sink.AnyControlHeld(null, guardLmb) || (guardDirections && sink.AnyDirectionHeld())) throw new InvalidOperationException(allowManualMovement ? "자동 대응 키를 놓고 F8을 누르세요. WASD 이동은 허용됩니다." : "대응 키와 자동 시작 시 LMB·WASD를 놓고 F8을 누르세요.");
+                check(); if (sink.AnyControlHeld(null, guardLmb, guardE) || (guardDirections && sink.AnyDirectionHeld())) throw new InvalidOperationException(allowManualMovement ? "자동 대응 키를 놓고 F8을 누르세요. WASD 이동은 허용됩니다." : "대응 키와 자동 시작 키·WASD를 놓고 F8을 누르세요.");
                 save(r); if (progress != null) progress("감시 중 · 문구가 없는 상태에서 새 출현을 기다립니다.");
                 var edge = new NoticeEdge();
                 while (clock.ElapsedMs(origin) < r.TimeoutMs)
@@ -154,7 +155,7 @@ namespace VesperLab
                         double due = startHeld ? startRelease : startAttack.AtMs[startIndex];
                         if (clock.ElapsedMs(origin) >= due)
                         {
-                            if (clock.ElapsedMs(origin) - due > 50) throw new InvalidOperationException("시작 LMB 예약보다 50ms 이상 늦어 중단했습니다.");
+                            if (clock.ElapsedMs(origin) - due > 50) throw new InvalidOperationException("시작 입력 예약보다 50ms 이상 늦어 중단했습니다.");
                             if (startHeld)
                             {
                                 SubmitStartAttack(r, sink, clock, origin, startIndex, false, due);
@@ -167,7 +168,7 @@ namespace VesperLab
                                 SubmitStartAttack(r, sink, clock, origin, startIndex, true, due);
                                 startRelease = clock.ElapsedMs(origin) + startAttack.HoldMs;
                                 if (startIndex + 1 < startAttack.AtMs.Length && startRelease > startAttack.AtMs[startIndex + 1])
-                                    throw new InvalidOperationException("시작 LMB 전송 지연으로 다음 기본공격 유지 시간이 겹칩니다.");
+                                    throw new InvalidOperationException("시작 입력 전송 지연으로 다음 유지 시간이 겹칩니다.");
                             }
                             detectionGuard();
                         }
@@ -181,7 +182,8 @@ namespace VesperLab
                         r.PreviousAbsentIndex = edge.PreviousAbsent; r.FirstMatchIndex = edge.First; r.ConfirmedIndex = edge.Confirmed;
                         noticeOrigin = r.Samples[edge.First].CaptureEndMs;
                         if (startAttack != null && (startIndex < startAttack.AtMs.Length || noticeOrigin < lastStartReleaseEndMs))
-                            throw new InvalidOperationException("시작 LMB 다섯 번의 해제 완료 전에 문구가 감지되어 중단했습니다.");
+                            throw new InvalidOperationException("시작 " + startAttack.Key + " "
+                                + (startAttack.Key == "E" ? "한 번" : "다섯 번") + "의 해제 완료 전에 문구가 감지되어 중단했습니다.");
                         r.DueMs = r.DelaysMs.Select(delay => noticeOrigin + delay).ToArray();
                         r.Status = "detected"; save(r);
                         if (progress != null) progress((r.Mode == "observe" ? "문구 감지 · 가상 입력 시각까지 대기 중" : "문구 감지 · 입력 예약됨")
@@ -197,7 +199,7 @@ namespace VesperLab
                 }
                 if (r.DueMs == null) throw new TimeoutException("설정한 대기 시간 안에 새 문구를 감지하지 못했습니다. 문구 출현 전에 F8을 누르세요.");
                 if (automaticSchedule)
-                    RunAutomaticSchedule(r, clock, sink, origin, noticeOrigin, automaticHeld, check, guardLmb);
+                    RunAutomaticSchedule(r, clock, sink, origin, noticeOrigin, automaticHeld, check, guardLmb, guardE);
                 else
                 {
                 var schedule = r.DueMs.Select((due, i) => new ScheduledPress { Attack = i, Key = r.ActionKeys[i], AtMs = due });
@@ -207,11 +209,11 @@ namespace VesperLab
                     double due = press.AtMs.Value;
                     while (clock.ElapsedMs(origin) < due)
                     {
-                        check(); if (sink.AnyControlHeld(preparationKey(), guardLmb) || (!allowManualMovement && startAttack != null && sink.AnyDirectionHeld())) throw new InvalidOperationException("예약 대기 중 허용되지 않은 수동 대응 입력을 감지했습니다.");
+                        check(); if (sink.AnyControlHeld(preparationKey(), guardLmb, guardE) || (!allowManualMovement && startAttack != null && sink.AnyDirectionHeld())) throw new InvalidOperationException("예약 대기 중 허용되지 않은 수동 대응 입력을 감지했습니다.");
                         clock.WaitUntil(origin, Math.Min(due, clock.ElapsedMs(origin) + 100), waitGuard);
                     }
                     firstInputPending = false;
-                    check(); if (sink.AnyControlHeld(null, guardLmb) || (!allowManualMovement && startAttack != null && sink.AnyDirectionHeld())) throw new InvalidOperationException("입력 직전에 수동 입력이 감지됐습니다.");
+                    check(); if (sink.AnyControlHeld(null, guardLmb, guardE) || (!allowManualMovement && startAttack != null && sink.AnyDirectionHeld())) throw new InvalidOperationException("입력 직전에 수동 입력이 감지됐습니다.");
                     if (clock.ElapsedMs(origin) - due > 50) throw new InvalidOperationException("예약 시각보다 50ms 이상 늦어 입력을 취소했습니다.");
                     if (r.Mode == "observe")
                     {
@@ -239,7 +241,7 @@ namespace VesperLab
                 if (startHeld)
                 {
                     try { SubmitStartAttack(r, sink, clock, origin, startIndex, false, clock.ElapsedMs(origin)); }
-                    catch (Exception e) { r.Status = "release-failed"; r.Error += " / LMB 해제 실패: " + e.Message; }
+                    catch (Exception e) { r.Status = "release-failed"; r.Error += " / " + startAttack.Key + " 해제 실패: " + e.Message; }
                 }
                 // Each owned key gets its own release attempt even when another release fails.
                 foreach (var press in automaticHeld.Values.ToArray())
@@ -261,7 +263,7 @@ namespace VesperLab
         }
         private static bool IsControl(string key) { return key == "LMB" || key == "RMB" || key == "Space"; }
         private static void RunAutomaticSchedule(NoticeRecord r, ITrialClock clock, IInputSink sink, long origin,
-            double noticeOrigin, Dictionary<string, ScheduledEvent> owned, Action check, bool guardLmb)
+            double noticeOrigin, Dictionary<string, ScheduledEvent> owned, Action check, bool guardLmb, bool guardE)
         {
             var events = new List<ScheduledEvent>();
             var preparation = ProfileStore.Current.Preparation ?? new PreparationPress[0];
@@ -286,7 +288,7 @@ namespace VesperLab
                 check();
                 string control = r.Mode == "observe" ? null : owned.Keys.FirstOrDefault(IsControl);
                 string direction = r.Mode == "observe" ? null : owned.Keys.FirstOrDefault(k => k == "A" || k == "D");
-                if (sink.AnyControlHeld(control, guardLmb) || (!ProfileStore.Current.AllowManualMovement && sink.AnyDirectionHeld(direction)))
+                if (sink.AnyControlHeld(control, guardLmb, guardE) || (!ProfileStore.Current.AllowManualMovement && sink.AnyDirectionHeld(direction)))
                     throw new InvalidOperationException("자동 준비 중 수동 대응·방향 입력을 감지했습니다.");
             };
             // Down and preparation release deadlines share the notice origin. Main holds keep
@@ -319,10 +321,11 @@ namespace VesperLab
         }
         private static void SubmitStartAttack(NoticeRecord r, IInputSink sink, ITrialClock clock, long origin, int attack, bool down, double due)
         {
+            string key = ProfileStore.Current.StartAttack.Key;
             if (r.Mode == "observe")
-                r.StartAttackInputs.Add(new InputEvent { Action = down ? "virtual-down" : "virtual-up", Key = "LMB", Attack = attack,
+                r.StartAttackInputs.Add(new InputEvent { Action = down ? "virtual-down" : "virtual-up", Key = key, Attack = attack,
                     DueMs = due, BeginMs = clock.ElapsedMs(origin), EndMs = clock.ElapsedMs(origin) });
-            else SendTo(r.StartAttackInputs, sink, clock, origin, "LMB", attack, down, due);
+            else SendTo(r.StartAttackInputs, sink, clock, origin, key, attack, down, due);
         }
         private static void SubmitEvent(NoticeRecord r, IInputSink sink, ITrialClock clock, long origin, ScheduledEvent scheduled)
         {
