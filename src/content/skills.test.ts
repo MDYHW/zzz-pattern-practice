@@ -25,7 +25,8 @@ type ReviewedRecording = (typeof reviewedRecordings)[number];
 
 // The temporary web-only allowance must not rewrite measured windows or bundled experiment profiles.
 const serviceAllowanceMs = (contentId: string, index: number) =>
-  contentId === 'mirage-archer-unit-attack-09' && (index === 0 || index === 3) ? 25 : 0;
+  (contentId === 'mirage-archer-unit-attack-09' && (index === 0 || index === 3))
+  || (contentId === 'phaethon-integrated-execute-02' && index === 0) ? 25 : 0;
 
 function assertReviewedContent(content: PracticeContent, recordings: readonly ReviewedRecording[], profiles: BundledProfile[]) {
   const matches = recordings.filter(item => item.contentId === content.id);

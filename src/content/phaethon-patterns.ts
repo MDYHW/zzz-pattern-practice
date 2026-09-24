@@ -10,8 +10,10 @@ export const phaethonRecording = {
   preparationDodgeDownFrame: 295, preparationDodgeReleaseFrame: 301,
 } as const;
 
+// User-requested web-only 25ms entry allowance at each edge (2026-09-24).
+// Measured evidence and experiment profiles retain 2050–2250ms; gameplay validation is pending.
 export const phaethonIntegratedPattern = [
-  [2050, 2250, 2150], [5100, 5500, 5300], [7150, 7550, 7350],
+  [2025, 2275, 2150], [5100, 5500, 5300], [7150, 7550, 7350],
   [9350, 9750, 9550], [10950, 11400, 11150],
 ] as const;
 
