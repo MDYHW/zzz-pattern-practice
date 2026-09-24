@@ -1,8 +1,8 @@
 {
   "current": {
-    "date": "2026-09-22",
+    "date": "2026-09-24",
     "status": "completed",
-    "policy": "Retain current service originals/assets, one early-Space-to-RMB success original, their trial evidence, final research summaries and active tools/settings. Remove completed exploratory logs, redundant media, analysis frames, helpers and test outputs without archives.",
+    "policy": "Keep active service originals/assets, necessary final proof and summaries, active runtime/settings and common reusable tools. Sun keeps two representative sources and their trial evidence; removed completed exploration without archives.",
     "retainedOriginals": [
       {
         "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_06-23-16.mp4",
@@ -38,13 +38,23 @@
         "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-22_13-50-10.mp4",
         "sha256": "7bfe8f96de0c5ec1f58ae7bcd2fa4ed0c71eecaa586d69e0d6fa647d7f0b7aa1",
         "role": "early-Space-to-RMB-success-proof"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-24_13-51-59.mp4",
+        "sha256": "94c7b3b9f8d7b21cd1253f89389747738da85cbc09c609c6383c1a3705eaf522",
+        "role": "current-service-source"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-24_14-40-53.mp4",
+        "sha256": "218e29a93ad6a79da239915b8629fdddb2e2846dc7b28d06717c132acb20acbe",
+        "role": "current-service-source"
       }
     ],
-    "serviceAssets": "All twelve current public/media clip/poster assets, covering six representative clips; hashes and alignment in service-media-20260920.json.",
+    "serviceAssets": "Sixteen current public/media clip/poster assets for eight representative videos. Sun final hashes/alignment/audio in sun-service-media-20260924.json; existing boss evidence remains valid.",
     "retainedRuntimeAndTrial": [
       {
         "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\ControlExperiment.exe",
-        "sha256": "32fd5122aa0fd7722a284639eb64ab47f07d329612c73971cc530adb54288012"
+        "sha256": "d45ca6a8f75ddb0bb002beaf4226e2b0d15caa5b143b3194a55e100c482a661d"
       },
       {
         "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\profiles\\kusarikku-execute-01.json",
@@ -61,6 +71,36 @@
       {
         "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-6ced000c8efe45289fe7fef918cf0068.png",
         "sha256": "1e0c2fb69afb79889b814c9f3121476689673d79db2315e333afbcf6bec24362"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-8fe7452f0680488d8ff14be68318057c.json",
+        "sha256": "f138c12927ca06200e1d9a7973d86957e5a2792e1bff6c663f28c6f0628ba626",
+        "role": "representative-trial"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-8fe7452f0680488d8ff14be68318057c.json.result.json",
+        "sha256": "70b52b2b9b09545b6f6d5f3116ad13a149ca6a630ba67d2823469e8cf72dac1d",
+        "role": "representative-trial"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-8fe7452f0680488d8ff14be68318057c.png",
+        "sha256": "9a6ae06a7c24f9323bd9b7a58dae9089da3e45a95b8cc62e67ba2af975bcdf58",
+        "role": "representative-trial"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-b47ecc274bb34106850f382499d0de62.json",
+        "sha256": "cf87bfe46d48c40f154237e01c37c83716bbe77bdb9fc7f912b08366f4180905",
+        "role": "representative-trial"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-b47ecc274bb34106850f382499d0de62.json.result.json",
+        "sha256": "ee93b915278631e9e81b377995ef505f9513bb238bd3f2cfd2ca7f70323916f6",
+        "role": "representative-trial"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-b47ecc274bb34106850f382499d0de62.png",
+        "sha256": "565783c6364b17a5ed3358b7ddf40a8e8e924034f9cf6a33e5699c21a0560233",
+        "role": "representative-trial"
       }
     ],
     "kusarikkuClosure": {
@@ -214,6 +254,36 @@
       "recordStore": ".local/experiments/records.json contains only the three Mirage representatives; original logs/result sidecars are unchanged.",
       "priorKusarikkuRemainders": "Removed obsolete deployment backup, one-off helpers and completed checks still present in f873.",
       "autoReview": "Initial request rejected for possible required-store deletion. Narrowed request retained the reduced store and hash-protected docs/src/assets/runtime; approved and completed."
+    },
+    "sunClosure": {
+      "date": "2026-09-24",
+      "status": "completed",
+      "removedFiles": 751,
+      "removedBytes": 864370274,
+      "removedVideos": 23,
+      "removedTrials": 52,
+      "removedTrialFiles": 156,
+      "removedWorkOutputs": 569,
+      "removedIntermediateDocuments": 3,
+      "archiveCreated": false,
+      "manifestDigest": "e74c6426426d53bf87e289a9e0374b4301f7638d9f61a6e19e2c1f1d42cf79f2",
+      "digestMeaning": "Fingerprint of reviewed deletion list, not a retained or restorable archive.",
+      "retainedTrialIds": [
+        "eb31a4082f934d86964d1ad4783268c2",
+        "982d16a2ef284fabbdb7d08a9f6b4a4d"
+      ],
+      "recordsStore": "Five rows: three existing Mirage representatives plus two Sun representatives; deleted exploratory rows removed, unrelated rows unchanged.",
+      "retainedEvidence": [
+        "sun-service-media-20260924.json",
+        "sun-experiment-results-20260924.json",
+        "sun-internal-20260923.json"
+      ],
+      "validation": {
+        "exactPathsAndHashesCheckedBeforeDeletion": true,
+        "retainedAndProtectedHashesUnchanged": true,
+        "independentReadOnlyReview": "No preserved assets in deletion list; stale links corrected before deletion."
+      },
+      "pending": "User-requested integrated entry web allowance2025–2275ms remains gameplay-unverified; measured adoption/profiles2050–2250ms preserved. Not a blocker to closure."
     }
   },
   "initial_20260917": {

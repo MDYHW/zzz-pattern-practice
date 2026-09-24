@@ -10,8 +10,8 @@
       "No summon patterns or ordinary parry patterns",
       "No conversion from Animator state coordinates to milliseconds"
     ],
-    "workingArtifacts": ".local/sun-research/internal/",
-    "note": "The data catalog exact-path record for bundleIndex 761 names a missing Streaming block at offset 1504756. The installed Persistent replacement block and bundle start were reused from the already preserved current manager records. All four requested object names were found in that single bundle."
+    "note": "The data catalog exact-path record for bundleIndex 761 names a missing Streaming block at offset 1504756. The installed Persistent replacement block and bundle start were reused from the already preserved current manager records. All four requested object names were found in that single bundle.",
+    "artifactStatus": "Temporary extraction artifacts deleted on closure2026-09-24; retained source identifiers, hashes and interpreted internal coordinates below."
   },
   "sources": {
     "abilityBundle": {
@@ -86,7 +86,14 @@
       "entityName": "Monster_Mutant",
       "characterAssetHash": "15851930300413477989",
       "prefab": "Assets/NapResources/Char/Monster/Monster_Mutant/Monster_Mutant_LOD3.prefab",
-      "tags": ["Ether", "Large", "MainStoryBoss", "Miasma", "MutantBoss", ""],
+      "tags": [
+        "Ether",
+        "Large",
+        "MainStoryBoss",
+        "Miasma",
+        "MutantBoss",
+        ""
+      ],
       "initCondition": "Mutant_HC_Init DefaultModifier/OnAdded/0 HardCore condition failure",
       "controllerBool": false,
       "executeManager": "Mutant_Execute_Manager"
@@ -98,7 +105,14 @@
       "characterAssetHash": "15851930300413477989",
       "prefab": "Assets/NapResources/Char/Monster/Monster_Mutant/Monster_Mutant_LOD3.prefab",
       "icon": "Assets/NapResources/UI/Sprite/A1DynamicLoad/IconBossGeneral/UnPacker/IconMonster_HoloMutant.png",
-      "tags": ["Ether", "Large", "MainStoryBoss", "Miasma", "MutantBoss", "HardCore"],
+      "tags": [
+        "Ether",
+        "Large",
+        "MainStoryBoss",
+        "Miasma",
+        "MutantBoss",
+        "HardCore"
+      ],
       "initCondition": "Mutant_HC_Init DefaultModifier/OnAdded/0 HardCore condition success",
       "controllerBool": true,
       "executeManager": "Mutant_Execute_Manager_HC"
@@ -111,24 +125,76 @@
       "manager": "Mutant_Execute_Manager",
       "entry": {
         "state": "Attack_Execute_01_Pre",
-        "aidWindow": [154, 184],
+        "aidWindow": [
+          154,
+          184
+        ],
         "aidWidth": 30,
-        "roles": ["HeavyParry", "Evade", "Switch"],
-        "managerEvadeListener": [155, 190],
+        "roles": [
+          "HeavyParry",
+          "Evade",
+          "Switch"
+        ],
+        "managerEvadeListener": [
+          155,
+          190
+        ],
         "managerListenerWidth": 35
       },
       "followup": {
         "state": "Attack_Execute_01_Combo",
-        "aidWindows": [[64, 94], [167, 197], [220, 250]],
-        "aidWidths": [30, 30, 30],
-        "betweenAidWindows": [73, 23],
-        "roles": [
-          ["PowerStruggle", "LightParry", "ParryPriority+1", "Evade", "Switch"],
-          ["LightParry", "ParryPriority+1", "Evade", "Switch"],
-          ["HeavyParry", "ParryPriority+1", "Evade", "Switch"]
+        "aidWindows": [
+          [
+            64,
+            94
+          ],
+          [
+            167,
+            197
+          ],
+          [
+            220,
+            250
+          ]
         ],
-        "managerWitchSlowScope": [0, 258],
-        "managerFinalSuccessReceiver": [230, 260],
+        "aidWidths": [
+          30,
+          30,
+          30
+        ],
+        "betweenAidWindows": [
+          73,
+          23
+        ],
+        "roles": [
+          [
+            "PowerStruggle",
+            "LightParry",
+            "ParryPriority+1",
+            "Evade",
+            "Switch"
+          ],
+          [
+            "LightParry",
+            "ParryPriority+1",
+            "Evade",
+            "Switch"
+          ],
+          [
+            "HeavyParry",
+            "ParryPriority+1",
+            "Evade",
+            "Switch"
+          ]
+        ],
+        "managerWitchSlowScope": [
+          0,
+          258
+        ],
+        "managerFinalSuccessReceiver": [
+          230,
+          260
+        ],
         "managerFinalReceiverWidth": 30
       },
       "initialRoleCandidate": "Entry reaction followed by three support/parry cues. The manager receiver overlaps the third aid window but is a different mechanism and is not an additional input cue."
@@ -137,32 +203,99 @@
       "manager": "Mutant_Execute_Manager_HC",
       "entry": {
         "state": "Attack_Execute_02_Pre",
-        "aidWindow": [159, 189],
+        "aidWindow": [
+          159,
+          189
+        ],
         "aidWidth": 30,
-        "roles": ["HeavyParry", "Evade", "Switch"],
-        "managerEvadeListener": [120, 200],
+        "roles": [
+          "HeavyParry",
+          "Evade",
+          "Switch"
+        ],
+        "managerEvadeListener": [
+          120,
+          200
+        ],
         "managerListenerWidth": 80
       },
       "followup": {
         "state": "Attack_Execute_01_Combo_02",
-        "aidWindows": [[117, 147], [220, 250], [335, 365], [411, 441]],
-        "aidWidths": [30, 30, 30, 30],
-        "betweenAidWindows": [73, 85, 46],
-        "roles": [
-          ["PowerStruggle", "HeavyParry", "ParryPriority+1", "Evade", "Switch"],
-          ["HeavyParry", "ParryPriority+1", "Evade", "Switch"],
-          ["HeavyParry", "ParryPriority+1", "Evade", "Switch"],
-          ["HeavyParry", "ParryPriority+1", "Evade", "Switch"]
+        "aidWindows": [
+          [
+            117,
+            147
+          ],
+          [
+            220,
+            250
+          ],
+          [
+            335,
+            365
+          ],
+          [
+            411,
+            441
+          ]
         ],
-        "managerWitchSlowScope": [0, 443],
-        "managerFinalSuccessReceiver": [400, 445],
+        "aidWidths": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "betweenAidWindows": [
+          73,
+          85,
+          46
+        ],
+        "roles": [
+          [
+            "PowerStruggle",
+            "HeavyParry",
+            "ParryPriority+1",
+            "Evade",
+            "Switch"
+          ],
+          [
+            "HeavyParry",
+            "ParryPriority+1",
+            "Evade",
+            "Switch"
+          ],
+          [
+            "HeavyParry",
+            "ParryPriority+1",
+            "Evade",
+            "Switch"
+          ],
+          [
+            "HeavyParry",
+            "ParryPriority+1",
+            "Evade",
+            "Switch"
+          ]
+        ],
+        "managerWitchSlowScope": [
+          0,
+          443
+        ],
+        "managerFinalSuccessReceiver": [
+          400,
+          445
+        ],
         "managerFinalReceiverWidth": 45
       },
       "initialRoleCandidate": "Entry reaction followed by four support/parry cues. The manager receiver overlaps the fourth aid window but is a different mechanism and is not an additional input cue."
     }
   },
   "partyInterpretation": {
-    "approvedParty": ["RemielleOrigin", "Velina", "Aria"],
+    "approvedParty": [
+      "RemielleOrigin",
+      "Velina",
+      "Aria"
+    ],
     "startingCharacter": "Aria",
     "finding": "The two enemy forms expose different follow-up response tags even with the same party: normal starts PowerStruggle+Light and ends Heavy, while HC exposes PowerStruggle+Heavy and then Heavy throughout. This supports separate cue profiles. It does not determine character swap order, physical input timing, or support animation duration by itself.",
     "doNotInfer": [

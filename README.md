@@ -20,6 +20,8 @@
 
 ## 현재 상태
 
+태양의 잔불 확장과 종료 정리를 완료했습니다. 대표2회와 최종 구간·혼재 반례를 보존하고 역할이 끝난 초기 조사 자료를 현재 소스에서 제거했습니다. 삭제된 상세 원본은 재분석할 수 없으며, 융합 진입의 추가25ms 여유는 실제 게임 검증 대기입니다. [종료 상태](docs/experiments/sun-control-skill.md)를 따릅니다.
+
 6보스·7패턴을 [zzz-pattern-practice.github.io](https://zzz-pattern-practice.github.io/)에서 연습할 수 있습니다. [배포 저장소](https://github.com/zzz-pattern-practice/zzz-pattern-practice.github.io)에서 소스 커밋을 지정해 수동 배포합니다. 환영의 화살 유닛 진입 SPACE 추가 측정은 현재 공개 조건이 아닙니다.
 
 환영의 화살 유닛 진입·3타는 사용자 체감에 따라 웹 판정의 양 끝을25ms씩 임시 확대했습니다. 추가 구간의 실제 게임 검증은 아직 남아 있으며 [조정 근거와 검증 계획](docs/experiments/arrow-unit-control-skill.md#공개-후-임시-서비스-판정-조정--2026-09-22)을 따릅니다.
