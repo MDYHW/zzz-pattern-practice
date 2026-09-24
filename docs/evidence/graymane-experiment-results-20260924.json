@@ -2344,7 +2344,7 @@
     "experimentProfile": "Keeps50ms measured grid7250/8250/10600, baseline unchanged; no common-program25ms migration."
   },
   "implementation": {
-    "state": "locally-verified-awaiting-publication",
+    "state": "published-and-verified",
     "contentId": "graymane-execute-01",
     "mediaEvidence": "graymane-service-media-20260924.json",
     "localValidation": {
@@ -2358,6 +2358,19 @@
       "independentReadOnlyReview": "no blocking findings",
       "nativeGameInputCalls": 0
     },
-    "limitations": "Web-only three25ms additions remain unverified by real game play; viewport/touch automation is not physical mobile latency validation."
+    "limitations": "Web-only three25ms additions remain unverified by real game play; viewport/touch automation is not physical mobile latency validation.",
+    "sourceCommit": "9ce61ae50261d11d23f3750d83d766581391fe1c",
+    "pagesRun": 36000647437,
+    "url": "https://zzz-pattern-practice.github.io/",
+    "liveVerification": {
+      "browserTests": 3,
+      "desktopAndMobileSixOfSix": true,
+      "preparationExcluded": true,
+      "extraInputs": 0,
+      "bundle": "index-BOIs5EA2.js",
+      "mediaHttpAndHashesVerified": true,
+      "screenshotsReviewed": true
+    },
+    "verificationScope": "Browser production behavior and media integrity; not proof of real-game added25ms success or physical-device input latency."
   }
 }
