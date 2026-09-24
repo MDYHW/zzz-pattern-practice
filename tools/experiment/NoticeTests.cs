@@ -93,6 +93,8 @@ namespace VesperLab
                     var r = new NoticeRecord { Mode = ExperimentPlan.LiveMode, Pattern = pattern, Recording = "ON", DelaysMs = ExperimentPlan.Resolve(ExperimentPlan.Defaults(), pattern) };
                     var sink = new Sink(); double appears = ProfileStore.Current.Detector.AbsentMs + 100;
                     if (ProfileStore.Current.StartAttack != null) appears = Math.Max(appears, ProfileStore.Current.StartAttack.AtMs.Last() + ProfileStore.Current.StartAttack.HoldMs + 100);
+                    if (ProfileStore.Current.StartInputs != null && ProfileStore.Current.StartInputs.Length > 0)
+                        appears = Math.Max(appears, ProfileStore.Current.StartInputs.Max(a => a.AtMs + a.HoldMs) + 100);
                     Trial(r, sink:sink, probe:new Probe { Visible = t => t >= appears });
                     Expect(r.Status == "submitted-not-game-verified", "selected profile schedule cannot complete: " + r.Error);
                     Expect(r.Inputs.Where(e => e.Action == "down").Select(e => e.Key).SequenceEqual(ProfileStore.Current.Actions.Select(a => a.Key)), "selected profile key sequence differs");
@@ -113,6 +115,7 @@ namespace VesperLab
                 p.ManualPreparationRmbUntilMs = 0;
                 p.Preparation = null;
                 p.StartAttack = null;
+                p.StartInputs = null;
                 p.AuxiliaryInputs = null;
                 p.AllowManualMovement = false;
                 p.MinimumSpacingMs = 250; p.Detector.PollMs = 8; p.Detector.AbsentMs = 100; p.Detector.ConfirmationMs = 40; p.Detector.TimeoutMs = 60000;
@@ -138,6 +141,7 @@ namespace VesperLab
             AuxiliaryInputTests(test);
             ActionHoldTests(test);
             StartAttackTests(test);
+            StartInputTests(test);
             ManualMovementTests(test);
             test("edited profile saves party, entry key, count and a portable template", () => {
                 string source = ProfileStore.SourcePath, directory = Path.Combine(Path.GetTempPath(), "profile-edit-" + Guid.NewGuid().ToString("N"));
@@ -781,6 +785,88 @@ namespace VesperLab
                 }
                 finally { ProfileStore.Apply(original); }
             });
+        }
+        private static ExperimentProfile StartInputFixture()
+        {
+            var p = AutomaticProfile(); p.SchemaVersion = 3; p.StartAttack = null; p.AllowManualMovement = false;
+            p.StartInputs = new[] {
+                new StartInputPress { Id = "forward-first", Label = "첫 전진", Key = "W", AtMs = 500, HoldMs = 600 },
+                new StartInputPress { Id = "forward-dodge", Label = "회피 전진", Key = "W", AtMs = 1500, HoldMs = 500 },
+                new StartInputPress { Id = "dodge-with-w", Label = "전진 중 회피", Key = "RMB", AtMs = 1600, HoldMs = 100 },
+                new StartInputPress { Id = "dodge-after-w", Label = "전진 후 회피", Key = "RMB", AtMs = 2200, HoldMs = 100 }
+            };
+            return p;
+        }
+        private static void StartInputTests(Action<string, Action> test)
+        {
+            test("F8 start inputs require schema 3, distinct holds and no legacy start/manual movement", () => {
+                ProfileStore.Validate(StartInputFixture());
+                foreach (Action<ExperimentProfile> change in new Action<ExperimentProfile>[] {
+                    p => p.SchemaVersion = 2, p => p.StartAttack = new StartAttackProfile { Key = "E", AtMs = new[] { 500.0 }, HoldMs = 100 },
+                    p => p.AllowManualMovement = true, p => p.StartInputs[0].Key = "Space", p => p.StartInputs[0].AtMs = 50,
+                    p => p.StartInputs[0].HoldMs = 0, p => p.StartInputs[0].HoldMs = Double.NaN,
+                    p => p.StartInputs[1].AtMs = 1000, p => p.StartInputs[2].AtMs = 1625,
+                    p => p.StartInputs[3].Id = p.StartInputs[2].Id
+                })
+                {
+                    var invalid = StartInputFixture(); change(invalid); bool rejected = false;
+                    try { ProfileStore.Validate(invalid); } catch (ArgumentException) { rejected = true; }
+                    Expect(rejected, "invalid F8 start input accepted");
+                }
+            });
+            foreach (string mode in new[] { ExperimentPlan.LiveMode, "observe" })
+            {
+                string selected = mode;
+                test("F8 W/RMB start sequence and separate notice-relative results / " + mode, () => {
+                    var original = ProfileStore.Snapshot();
+                    try
+                    {
+                        ProfileStore.Apply(StartInputFixture()); var c = new Clock(); var sink = new Sink(); var held = new HashSet<string>();
+                        sink.OnSend = (key, down) => { if (down) Expect(held.Add(key), "duplicate start down"); else held.Remove(key); };
+                        sink.HeldExcept = ignored => held.Any(k => (k == "RMB" || k == "Space") && k != ignored);
+                        sink.DirectionExcept = ignored => held.Any(k => k == "W" && k != ignored);
+                        var r = Trial(StartAttackSettings(selected), c, sink, new Probe { Visible = t => t >= 2600 });
+                        Expect(r.Status == (selected == "observe" ? "observed-no-input" : "submitted-not-game-verified")
+                            && held.Count == 0 && r.StartInputs.Count == 8 && r.StartAttackInputs.Count == 0 && r.Inputs.Count == 10,
+                            "F8 start sequence failed: " + r.Error);
+                        var downs = r.StartInputs.Where(e => e.Action.EndsWith("down")).ToArray();
+                        Expect(downs.Select(e => e.Key).SequenceEqual(new[] { "W", "W", "RMB", "RMB" })
+                            && downs.Select(e => e.DueMs).SequenceEqual(new[] { 500.0, 1500, 1600, 2200 }), "start origin or press order changed");
+                        Expect(r.StartInputs.Where(e => e.Key == "W").Last().EndMs < r.StartInputs.Where(e => e.Key == "RMB").Last().BeginMs
+                            && r.DueMs[0] == r.Samples[r.FirstMatchIndex].CaptureEndMs + r.DelaysMs[0]
+                            && r.Samples[r.FirstMatchIndex].CaptureEndMs > r.StartInputs.Last().EndMs, "start/notice origins mixed");
+                        Expect(selected != "observe" || sink.Calls.Count == 0, "observe submitted native start input");
+                        var copy = new JavaScriptSerializer().Deserialize<NoticeRecord>(new JavaScriptSerializer().Serialize(r));
+                        Expect(copy.ProfileSnapshot.StartInputs.Length == 4 && copy.StartInputs.Count == 8
+                            && copy.StartTimingOrigin.StartsWith("F8"), "F8 start plan or events absent from raw record");
+                    }
+                    finally { ProfileStore.Apply(original); }
+                });
+            }
+            foreach (string reason in new[] { "early-notice", "F9", "focus", "timeout", "send-error", "preheld-W", "preheld-RMB" })
+            {
+                string selected = reason;
+                test("F8 start W/RMB cleanup / " + reason, () => {
+                    var original = ProfileStore.Snapshot();
+                    try
+                    {
+                        ProfileStore.Apply(StartInputFixture()); var c = new Clock(); var sink = new Sink(); var held = new HashSet<string>();
+                        sink.OnSend = (key, down) => { if (down) held.Add(key); else held.Remove(key); };
+                        sink.HeldExcept = ignored => held.Any(k => k == "RMB" && k != ignored) || (selected == "preheld-RMB" && c.Now == 0);
+                        sink.DirectionExcept = ignored => held.Any(k => k == "W" && k != ignored) || (selected == "preheld-W" && c.Now == 0);
+                        if (selected == "focus") sink.Foreground = () => c.Now < 1650;
+                        if (selected == "send-error") { sink.FailDown = true; sink.FailKey = "RMB"; }
+                        var probe = new Probe { Visible = t => t >= (selected == "early-notice" ? 1620 : selected == "timeout" ? 100000 : 2600) };
+                        var r = Trial(StartAttackSettings(), c, sink, probe, () => selected == "F9" && c.Now >= 1650);
+                        Expect(r.Status == (selected == "F9" || selected == "focus" ? "cancelled" : "failed")
+                            && held.Count == 0 && r.Inputs.Count == 0, "F8 start cleanup failed: " + r.Error);
+                        if (selected == "early-notice") Expect(r.Error.Contains("해제 완료 전에") && r.StartInputs.Count < 8,
+                            "early notice submitted pending start inputs");
+                        if (selected.StartsWith("preheld")) Expect(sink.Calls.Count == 0, "preheld key accepted");
+                    }
+                    finally { ProfileStore.Apply(original); }
+                });
+            }
         }
         private static void ActionHoldTests(Action<string, Action> test)
         {

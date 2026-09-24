@@ -4,9 +4,10 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { resolve } from 'node:path';
 import evidence from '../../docs/evidence/service-media-20260920.json';
 import sunEvidence from '../../docs/evidence/sun-service-media-20260924.json';
+import vesselEvidence from '../../docs/evidence/vessel-service-media-20260924.json';
 import girReview from '../../docs/evidence/girtablullu-off-20260920.json';
 import rmbEvidence from '../../docs/evidence/mirage-archer-unit-rmb-20260922.json';
-import { girtablulluExecute01, kusarikkuExecute01, mirageArcherUnitAttack09, phaethonExecute01, phaethonIntegratedExecute02, skills, vesperExecute01, vesperExecute02, withEntryKey, withMirageLastResponse } from './skills';
+import { girtablulluExecute01, kusarikkuExecute01, mirageArcherUnitAttack09, phaethonExecute01, phaethonIntegratedExecute02, vesselExecute01, skills, vesperExecute01, vesperExecute02, withEntryKey, withMirageLastResponse } from './skills';
 import { phaethonRecording } from './phaethon-patterns';
 import { cuesForRecording, vesperPatterns } from './vesper-patterns';
 import { createAttempt, press, validateCues } from '../practice/judge';
@@ -20,7 +21,7 @@ const profilesDirectory = resolve('tools/experiment/profiles');
 // Only shipped defaults participate here; editable .local profiles are independent.
 const bundledProfiles: BundledProfile[] = readdirSync(profilesDirectory).filter(name => name.endsWith('.json')).sort()
   .map(name => JSON.parse(readFileSync(resolve(profilesDirectory, name), 'utf8').replace(/^\uFEFF/, '')));
-const reviewedRecordings = [...evidence.recordings, ...sunEvidence.recordings];
+const reviewedRecordings = [...evidence.recordings, ...sunEvidence.recordings, ...vesselEvidence.recordings];
 type ReviewedRecording = (typeof reviewedRecordings)[number];
 
 // The temporary web-only allowance must not rewrite measured windows or bundled experiment profiles.
@@ -61,6 +62,22 @@ test('published IDs are unique', () => {
   expect(new Set(skills.map(content => content.id)).size).toBe(skills.length);
 });
 
+test('Vessel keeps two preparation dodges and W outside the five scored responses', () => {
+  const content = vesselExecute01;
+  const recording = vesselEvidence.recordings[0];
+  const toClip = (frame: number) => (frame - recording.firstSourceFrame) / recording.fps;
+  expect(content.cues.map(cue => cue.key)).toEqual(['MouseRight', 'Space', 'Space', 'Space', 'Space']);
+  expect(content.entryOptions?.map(option => option.key)).toEqual(['MouseRight']);
+  expect(() => withEntryKey(content, 'Space')).toThrow(/unavailable/);
+  expect(content.preparation!.end).toBe(toClip(573));
+  expect(content.preparation!.end).toBeLessThan(content.cues[0].start);
+  expect(content.preparation!.dodges.map(dodge => dodge.time)).toEqual([495, 564].map(toClip));
+  expect(content.preparation!.movements).toEqual([{ key: 'W', start: toClip(487), end: toClip(503) }]);
+  expect(bundledProfiles.find(profile => profile.Id === content.id)!.Actions.map(action => action.Timing.BaselineMs))
+    .toEqual([3300, 5400, 6300, 7500, 9100]);
+  expect(recording.recordingLink.trialId).toBeNull();
+});
+
 test('Kusarikku keeps preparation outside five scored windows and closes its RMB exemption before entry', () => {
   const content = kusarikkuExecute01;
   const recording = evidence.recordings.find(item => item.contentId === content.id)!;
@@ -96,8 +113,8 @@ test('Mirage Archer Unit exposes five scored cues with RMB-only entry, no prepar
 });
 
 test('Phaethon forms remain separate routes with RMB entry and four or five scored cues', () => {
-  expect(skills).toHaveLength(7);
-  expect(new Set(skills.map(content => content.bossId)).size).toBe(6);
+  expect(skills).toHaveLength(8);
+  expect(new Set(skills.map(content => content.bossId)).size).toBe(7);
   for (const [content, count] of [[phaethonExecute01, 4], [phaethonIntegratedExecute02, 5]] as const) {
     expect(content.cues).toHaveLength(count);
     expect(content.cues.map(cue => cue.key)).toEqual(['MouseRight', ...Array(count - 1).fill('Space')]);

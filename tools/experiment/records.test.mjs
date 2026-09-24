@@ -129,6 +129,71 @@ test('automatic starting attacks stay separate from preparation and five respons
   assert.equal(Object.hasOwn(summarize(store).trials[1], 'startAttack'), false);
   assert.equal(validateStore(store).valid, true);
 });
+test('F8 start inputs preserve their own origin, overlapping keys and five response outcomes', t => {
+  const { file, raw, store } = fixture(t);
+  const planned = [{ Id: 'w', Key: 'W', AtMs: 500, HoldMs: 900 },
+    { Id: 'dodge', Key: 'RMB', AtMs: 700, HoldMs: 100 }];
+  const inputs = [inputEvent(0, 'W', 'down', 500), inputEvent(1, 'RMB', 'down', 700),
+    inputEvent(1, 'RMB', 'up', 802), inputEvent(0, 'W', 'up', 1402)];
+  const path = file('start-inputs.json', raw({ TrialId: 'start-inputs', Status: 'submitted-not-game-verified',
+    ActionIds: ['entry', 'hit-1', 'hit-2', 'hit-3', 'hit-4'], DelaysMs: [3200, 5300, 6250, 7550, 9100],
+    DueMs: [13200, 15300, 16250, 17550, 19100],
+    ProfileSnapshot: { SchemaVersion: 3, StartInputs: planned }, StartInputs: inputs }));
+  const bytes = readFileSync(path);
+  file('start-inputs.json.result.json', resultHistory(path, 'start-inputs', '11111'));
+  importTrial(store, path);
+  const trial = summarize(store).trials[0];
+  assert.deepEqual(trial.startInputs, { planned, inputs, timeOrigin: 'f8-monitor-start', outcome: 'unconfirmed' });
+  assert.equal(trial.actions.length, 5);
+  assert.ok(trial.actions.every(action => action.outcome === 'success'));
+  assert.deepEqual(readFileSync(path), bytes);
+  assert.equal(validateStore(store).valid, true);
+});
+test('F8 start inputs retain interrupted releases and reject lost origin or incomplete completed events', t => {
+  const { file, raw, store } = fixture(t);
+  const planned = [{ Id: 'w', Key: 'W', AtMs: 500, HoldMs: 900 }];
+  const snapshot = { SchemaVersion: 3, StartInputs: planned };
+  const down = inputEvent(0, 'W', 'down', 500);
+  importTrial(store, file('interrupted.json', raw({ TrialId: 'interrupted', Status: 'cancelled',
+    ProfileSnapshot: snapshot, StartInputs: [down, inputEvent(0, 'W', 'up', 550)] })));
+  assert.equal(summarize(store).trials[0].startInputs.outcome, 'unconfirmed');
+  for (const [index, fields] of [
+    { ProfileSnapshot: { ...snapshot, SchemaVersion: 2 }, StartInputs: [down] },
+    { ProfileSnapshot: snapshot, StartInputs: [down] },
+    { ProfileSnapshot: snapshot, StartInputs: [inputEvent(0, 'W', 'down', 10500), inputEvent(0, 'W', 'up', 11400)] },
+    { StartInputs: [down] },
+  ].entries()) {
+    assert.throws(() => importTrial(store, file(`invalid-start-${index}.json`, raw({ TrialId: `invalid-start-${index}`, ...fields }))),
+      { code: 'INVALID_DATA' });
+  }
+});
+test('F8-only preparation accepts user issue notes through result import and later corrections', t => {
+  const { file, raw, store } = fixture(t);
+  const planned = [{ Id: 'w', Key: 'W', AtMs: 500, HoldMs: 900 }];
+  const path = file('start-note.json', raw({ TrialId: 'start-note', Status: 'submitted-not-game-verified', ActionIds: ['a', 'b', 'c'],
+    ProfileSnapshot: { SchemaVersion: 3, StartInputs: planned },
+    StartInputs: [inputEvent(0, 'W', 'down', 500), inputEvent(0, 'W', 'up', 1402)] }));
+  const bytes = readFileSync(path);
+  const history = resultHistory(path, 'start-note', '111');
+  Object.assign(history.revisions[0], { preparationNote: '준비 중 피격', preparationSource: user });
+  file('start-note.json.result.json', history);
+  importTrial(store, path);
+  assert.equal(summarize(store).trials[0].startInputs.note, '준비 중 피격');
+  annotateTrial(store, 'start-note', file('start-note-clear.json', {
+    reason: '정정', preparationNote: '', preparationSource: user }));
+  assert.equal(summarize(store).trials[0].startInputs.note, '');
+  assert.equal(summarize(store).trials[0].startInputs.outcome, 'unconfirmed');
+  assert.equal(validateStore(store).valid, true);
+  assert.deepEqual(readFileSync(path), bytes);
+});
+test('schema 3 keeps notice-relative auxiliary inputs separate from F8 start inputs', t => {
+  const { file, raw, store } = fixture(t);
+  const planned = [{ Id: 'space', Label: 'Extra', Key: 'Space', AtMs: 100, HoldMs: 100, Enabled: true }];
+  const inputs = [inputEvent(0, 'Space', 'down', 1100), inputEvent(0, 'Space', 'up', 1202)];
+  importTrial(store, file('v3-aux.json', raw({ TrialId: 'v3-aux', DueMs: [4150, 5450, 6950],
+    ProfileSnapshot: { SchemaVersion: 3, AuxiliaryInputs: planned }, AuxiliaryInputs: inputs })));
+  assert.deepEqual(summarize(store).trials[0].auxiliaryInputs.inputs, inputs);
+});
 test('automatic preparation remains separate from response results and does not imply preparation success', t => {
   const { file, raw, store } = fixture(t);
   const planned = [{ Id: 'move-a', Label: '준비 이동', Key: 'A', AtMs: 550, HoldMs: 650 },

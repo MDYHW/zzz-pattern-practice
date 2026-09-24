@@ -1,0 +1,136 @@
+{
+  "SchemaVersion": 3,
+  "Id": "vessel-execute-01",
+  "BossId": "vessel",
+  "BossLabel": "태초의 악몽·창조주",
+  "Skill": "Execute_01",
+  "Conditions": "9월24일 28회 측정 기반 실용 구간 / 강습전 일반·엽빛나 시작 / 같은 시작 위치·자동 W/RMB 준비 / 문구 감지 원점 / 4타9300 성공·실패 혼재, 모든 조건의 성공 보장 아님",
+  "Party": "엽빛나 → 다이아린 → 수나",
+  "StartCharacter": "엽빛나",
+  "AllowManualMovement": false,
+  "ManualPreparationRmbUntilMs": 0,
+  "MinimumSpacingMs": 250,
+  "Detector": {
+    "Id": "vessel-korean-shared-yellow-shape-v1",
+    "Template": "../notice-template-girtablullu.png",
+    "ReferenceWidth": 1280,
+    "ReferenceHeight": 720,
+    "X": 368,
+    "Y": 136,
+    "Width": 528,
+    "Height": 28,
+    "MinimumClientWidth": 1280,
+    "Threshold": 0.68,
+    "PollMs": 8,
+    "AbsentMs": 100,
+    "ConfirmationMs": 40,
+    "TimeoutMs": 60000
+  },
+  "Actions": [
+    {
+      "Id": "entry",
+      "Label": "진입 회피",
+      "Key": "RMB",
+      "Group": "A",
+      "HoldMs": 100,
+      "SelectedTiming": "baseline",
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 3150,
+        "BaselineMs": 3300,
+        "LateMs": 3450
+      }
+    },
+    {
+      "Id": "hit-1",
+      "Label": "1타",
+      "Key": "Space",
+      "Group": "B",
+      "HoldMs": 150,
+      "SelectedTiming": "baseline",
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 5200,
+        "BaselineMs": 5400,
+        "LateMs": 5600
+      }
+    },
+    {
+      "Id": "hit-2",
+      "Label": "2타",
+      "Key": "Space",
+      "Group": "A",
+      "HoldMs": 150,
+      "SelectedTiming": "baseline",
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 6100,
+        "BaselineMs": 6300,
+        "LateMs": 6500
+      }
+    },
+    {
+      "Id": "hit-3",
+      "Label": "3타",
+      "Key": "Space",
+      "Group": "B",
+      "HoldMs": 150,
+      "SelectedTiming": "baseline",
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 7350,
+        "BaselineMs": 7500,
+        "LateMs": 7650
+      }
+    },
+    {
+      "Id": "hit-4",
+      "Label": "4타",
+      "Key": "Space",
+      "Group": "A",
+      "HoldMs": 150,
+      "SelectedTiming": "baseline",
+      "MinimumMs": 100,
+      "MaximumMs": 20000,
+      "Timing": {
+        "EarlyMs": 8900,
+        "BaselineMs": 9100,
+        "LateMs": 9300
+      }
+    }
+  ],
+  "StartInputs": [
+    {
+      "Id": "approach",
+      "Label": "앞으로 이동",
+      "Key": "W",
+      "AtMs": 500,
+      "HoldMs": 900
+    },
+    {
+      "Id": "prepare-forward",
+      "Label": "전진 회피 방향",
+      "Key": "W",
+      "AtMs": 5550,
+      "HoldMs": 250
+    },
+    {
+      "Id": "prepare-dodge-1",
+      "Label": "전진 회피",
+      "Key": "RMB",
+      "AtMs": 5650,
+      "HoldMs": 100
+    },
+    {
+      "Id": "prepare-dodge-2",
+      "Label": "준비 회피",
+      "Key": "RMB",
+      "AtMs": 6800,
+      "HoldMs": 150
+    }
+  ]
+}

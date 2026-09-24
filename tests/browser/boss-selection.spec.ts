@@ -28,7 +28,7 @@ test('boss switching resets a paused attempt, preserves display choices and comp
   const boss = page.getByRole('combobox', { name: '보스', exact: true });
   const skill = page.getByRole('combobox', { name: '제어스킬', exact: true });
   await expect(boss).toHaveValue('vesper');
-  await expect(boss.locator('option')).toHaveCount(6);
+  await expect(boss.locator('option')).toHaveCount(7);
   await expect(skill.locator('option')).toHaveCount(2);
   await page.getByRole('button', { name: '연습 시작' }).click();
   await expect(surface(page)).toHaveAttribute('data-phase', 'running');

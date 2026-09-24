@@ -1,0 +1,124 @@
+{
+  "date": "2026-09-24",
+  "alignment": "One translation anchored to the first notice match; measured windows are practical, not guaranteed game boundaries.",
+  "experimentEvidence": "vessel-experiment-results-20260924.json",
+  "recordings": [
+    {
+      "contentId": "vessel-execute-01",
+      "bossId": "vessel",
+      "skill": "Execute_01",
+      "source": "ZZZ_2026-09-24_19-29-21.mp4",
+      "sourceSha256": "fbdb99a9ecf6784241d79747bff0e579d84572e442362561c2b481c778d7218f",
+      "fps": 60,
+      "firstSourceFrame": 430,
+      "endSourceFrameExclusive": 1425,
+      "patternOriginSourceFrame": 715,
+      "patternTimeZeroAtClipTime": 4.75,
+      "sourceOverlayDownFrames": [
+        914,
+        1039,
+        1093,
+        1165,
+        1261
+      ],
+      "windowsMs": [
+        [
+          3150,
+          3450
+        ],
+        [
+          5200,
+          5600
+        ],
+        [
+          6100,
+          6500
+        ],
+        [
+          7350,
+          7650
+        ],
+        [
+          8900,
+          9300
+        ]
+      ],
+      "referenceMs": [
+        3300,
+        5400,
+        6300,
+        7500,
+        9100
+      ],
+      "clip": "media/vessel-execute-01-lufs26.mp4",
+      "clipSha256": "c62cdc6be0b1f5e1028a1cc39febe5b56c7beee1bdde6bbf30e3e4341fd6443b",
+      "posterSha256": "c292fdfedd5767c33154324e035c0d2824ee80b78d717a50ca016e157431dfd6",
+      "preparation": {
+        "sourceDodgeDownFrames": [
+          495,
+          564
+        ],
+        "sourceLastDodgeReleaseFrame": 573,
+        "sourceMovements": [
+          {
+            "key": "W",
+            "startFrame": 487,
+            "endFrameExclusive": 503
+          }
+        ],
+        "basis": "Observed key-down spans are inclusive; movement end and final RMB release use the next frame. Earlier approach W185–238 is outside this clip."
+      },
+      "overlayResidualFrames": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decodedFrames": 995,
+      "encodedOverlayDownFrames": [
+        484,
+        609,
+        663,
+        735,
+        831
+      ],
+      "encodedPreparationDownFrames": [
+        65,
+        134
+      ],
+      "noticeReplay": {
+        "firstMatchFrame": 715,
+        "confirmationFrame": 718,
+        "passed": true,
+        "nativeInputCalls": 0
+      },
+      "referenceBasis": "Adopted experiment baseline. First recorded entry overlay is one frame later; reference3300ms is not shifted to hide that residual.",
+      "recordingLink": {
+        "trialId": null,
+        "basis": "Separate user-confirmed19:29 recording. Last19:28 raw used entry3100 and outcome01111; it is not this video. All28 raw observations were UNKNOWN classified OFF; raw fields unchanged."
+      },
+      "visualReview": "Analysis owner inspected sampled HP10906/12183/17416, entry and four assist transitions, score increments and finish. Release owner decoded995frames and confirmed preparation/main overlay onsets in final output. Yellow-background candidates1224/1283 are not additional inputs.",
+      "audio": {
+        "targetIntegratedLufs": -26,
+        "sourceTrimIntegratedLufs": -25.68,
+        "measuredIntegratedLufs": -26.14,
+        "measuredTruePeakDbtp": -14.42,
+        "normalization": "Two-pass loudnorm from source trim; no repeated fixed attenuation."
+      },
+      "encoding": {
+        "videoFilter": "trim=start_frame=430:end_frame=1425,setpts=N/(60*TB)",
+        "audioTrim": "atrim=start=7.166666666666667:end=23.75,asetpts=PTS-STARTPTS",
+        "codec": "libx264 preset medium crf20 yuv420p fps60 frames995; aac128k48000Hz; faststart",
+        "loudnormSecondPass": {
+          "input_i": "-25.68",
+          "input_tp": "-14.16",
+          "input_lra": "3.30",
+          "input_thresh": "-35.68",
+          "target_offset": "-0.37"
+        },
+        "poster": "first decoded service frame, JPEG q2"
+      }
+    }
+  ]
+}

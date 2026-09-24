@@ -28,6 +28,8 @@ namespace VesperLab
         private readonly CheckBox live = new CheckBox();
         private readonly DataGridView timing = new DataGridView(), recentTiming = new DataGridView();
         private readonly DataGridView preparation = new DataGridView(), recentPreparation = new DataGridView();
+        private readonly DataGridView startInputs = new DataGridView(), recentStartInputs = new DataGridView();
+        private readonly Label recentStartInputsTitle = new Label { AutoSize = true, Text = "당시 시작 입력 · F8 감시 시작 기준 · 결과 자리에는 포함하지 않습니다." };
         private readonly Label recentPreparationTitle = new Label { AutoSize = true, Text = "당시 준비 대응 · 아래 값은 저장된 회차의 설정입니다." };
         private readonly FlowLayoutPanel preparationNoteRow = new FlowLayoutPanel { AutoSize = true, WrapContents = false };
         private readonly TextBox preparationNote = new TextBox();
@@ -83,6 +85,7 @@ namespace VesperLab
             Field(team, "환경", conditions, 220);
             settingsPanel.Controls.Add(new Label { AutoSize = true, Text = "비채점 보조 입력 · 시작 입력 / 준비 대응 / 중간 보조 입력" });
             settingsPanel.Controls.Add(startAttackSummary);
+            ConfigurePreparationGrid(startInputs, false); startInputs.Columns["label"].HeaderText = "F8 기준 시작 입력"; settingsPanel.Controls.Add(startInputs);
             settingsPanel.Controls.Add(preparationSummary);
             ConfigurePreparationGrid(preparation, false); settingsPanel.Controls.Add(preparation);
             var auxiliaryTools = Row(settingsPanel);
@@ -150,6 +153,8 @@ namespace VesperLab
             page.Controls.Add(recentTiming);
             page.Controls.Add(recentPreparationTitle);
             ConfigurePreparationGrid(recentPreparation, true); page.Controls.Add(recentPreparation);
+            page.Controls.Add(recentStartInputsTitle);
+            ConfigurePreparationGrid(recentStartInputs, true); recentStartInputs.Columns["label"].HeaderText = "F8 기준 시작 입력"; page.Controls.Add(recentStartInputs);
             page.Controls.Add(recentAuxiliaryTitle);
             ConfigureAuxiliaryGrid(recentAuxiliary, true); page.Controls.Add(recentAuxiliary);
             LoadEditor(); ReloadProfiles(); initializing = false; RefreshSelection(); RefreshRecentTrial();
@@ -181,6 +186,9 @@ namespace VesperLab
             preparation.CellValueChanged += (s, e) => { RefreshPreparationPreview(); QueueSettingsSave(); };
             preparation.CellEndEdit += (s, e) => { RefreshPreparationPreview(); RefreshSelection(); QueueSettingsSave(); };
             preparation.DataError += (s, e) => { e.ThrowException = false; state.Text = "준비 시각·유지 시간은 50ms 단위 숫자로 입력하세요."; };
+            startInputs.CellValueChanged += (s, e) => { RefreshPreparationPreview(startInputs); QueueSettingsSave(); };
+            startInputs.CellEndEdit += (s, e) => { RefreshPreparationPreview(startInputs); RefreshSelection(); QueueSettingsSave(); };
+            startInputs.DataError += (s, e) => { e.ThrowException = false; state.Text = "F8 기준 시작 시각·유지 시간은 50ms 단위 숫자로 입력하세요."; };
             auxiliary.CellValueChanged += (s, e) => QueueSettingsSave();
             auxiliary.CellEndEdit += (s, e) => { RefreshSelection(); QueueSettingsSave(); };
             auxiliary.CurrentCellDirtyStateChanged += (s, e) => {
@@ -194,7 +202,7 @@ namespace VesperLab
             settingsTimer.Tick += (s, e) => {
                 settingsTimer.Stop();
                 if (running || initializing) return;
-                if ((timing.IsCurrentCellInEditMode && timing.IsCurrentCellDirty) || (preparation.IsCurrentCellInEditMode && preparation.IsCurrentCellDirty) || (auxiliary.IsCurrentCellInEditMode && auxiliary.IsCurrentCellDirty)) { settingsTimer.Start(); return; }
+                if ((timing.IsCurrentCellInEditMode && timing.IsCurrentCellDirty) || (preparation.IsCurrentCellInEditMode && preparation.IsCurrentCellDirty) || (startInputs.IsCurrentCellInEditMode && startInputs.IsCurrentCellDirty) || (auxiliary.IsCurrentCellInEditMode && auxiliary.IsCurrentCellDirty)) { settingsTimer.Start(); return; }
                 try { PersistEditor(); } catch (Exception error) { settingsState.Text = "설정 미저장 · " + error.Message; }
             };
             RefreshAdjustment();
@@ -279,13 +287,14 @@ namespace VesperLab
             grid.Height = Math.Min(220, grid.ColumnHeadersHeight + grid.Rows.Count * grid.RowTemplate.Height + 4);
             grid.Visible = grid.Rows.Count > 0; grid.ClearSelection();
         }
-        private void RefreshPreparationPreview()
+        private void RefreshPreparationPreview(DataGridView grid = null)
         {
             if (initializing || running) return;
+            if (grid == null) grid = preparation;
             bool previous = initializing; initializing = true;
             try
             {
-                foreach (DataGridViewRow row in preparation.Rows)
+                foreach (DataGridViewRow row in grid.Rows)
                 {
                     double at, hold;
                     row.Cells["end"].Value = Double.TryParse(Convert.ToString(row.Cells["at"].Value), out at)
@@ -338,13 +347,21 @@ namespace VesperLab
         private void LoadEditor()
         {
             initializing = true; edited = ProfileStore.Snapshot(); autoSavePath = null;
-            bool automaticStart = edited.StartAttack != null;
+            bool automaticStart = edited.StartAttack != null || (edited.StartInputs != null && edited.StartInputs.Length > 0);
             startAttackSummary.Visible = automaticStart;
-            startAttackSummary.Text = automaticStart
+            startAttackSummary.Text = edited.StartInputs != null && edited.StartInputs.Length > 0
+                ? "시작 입력 · F8 감시 시작 기준 · W/RMB 시간표 → 문구 감지 → 진입·후속 자동\n"
+                  + "아래 시작·유지 ms를 편집할 수 있습니다. W/RMB는 시작 전에 놓으세요. 시작 입력 전송은 게임 성공 판정이 아닙니다."
+                : automaticStart
                 ? "시작 입력 · F8 기준 · " + edited.StartAttack.Key + " " + edited.StartAttack.AtMs.Length + "회 자동 → 문구 감지 → 준비·진입·후속 자동\n"
                   + "시각 " + String.Join(" / ", edited.StartAttack.AtMs.Select(at => at.ToString("0")))
                   + "ms · 각 " + edited.StartAttack.HoldMs.ToString("0") + "ms 유지 · 시작 키를 직접 누르지 마세요."
                 : "";
+            startInputs.Rows.Clear();
+            foreach (var press in edited.StartInputs ?? new StartInputPress[0])
+                startInputs.Rows.Add(press.Label, press.Key, press.AtMs, press.HoldMs, (press.AtMs + press.HoldMs).ToString("0"));
+            startInputs.Height = Math.Min(220, startInputs.ColumnHeadersHeight + startInputs.Rows.Count * startInputs.RowTemplate.Height + 4);
+            startInputs.Visible = startInputs.Rows.Count > 0; startInputs.ClearSelection();
             bool automaticPreparation = edited.Preparation != null && edited.Preparation.Length > 0;
             preparationSummary.Visible = automaticPreparation;
             preparationSummary.Text = automaticPreparation
@@ -356,7 +373,10 @@ namespace VesperLab
             ShowAuxiliaryRows(auxiliary, edited.AuxiliaryInputs);
             string startControls = edited.StartAttack != null && edited.StartAttack.Key == "E" ? "LMB·RMB·Space·E" : "LMB·RMB·Space";
             instructionNote.Text = "시각은 문구 감지 기준 · 50ms 단위. F8: 문구 출현 전 게임에서 시작 / F9: 상시 중단\n"
-                + (automaticStart
+                + (edited.StartInputs != null && edited.StartInputs.Length > 0
+                    ? "시작 입력 행은 F8 감시 시작 기준입니다. F8 전에는 W·RMB·Space를 놓고, 시작 동작 동안 수동 입력을 추가하지 마세요.\n"
+                      + "모든 시작 키의 해제 전에 문구가 처음 일치하면 키를 해제하고 중단합니다. 결과는 문구 뒤 진입 이후만 기록합니다.\n" + edited.Conditions
+                    : automaticStart
                     ? (edited.AllowManualMovement
                         ? "WASD 직접 이동 가능 · " + startControls + "는 놓으세요. 시작 입력·회피·교대는 자동입니다.\n"
                         : "F8 전에 WASD·" + startControls + "를 놓으세요. 시작 입력부터 자동이며 결과는 진입 이후만 기록합니다.\n")
@@ -386,9 +406,10 @@ namespace VesperLab
         }
         private ExperimentProfile ReadEditor()
         {
-            if (!timing.EndEdit() || !preparation.EndEdit() || !auxiliary.EndEdit()) throw new ArgumentException("편집 중인 숫자나 키를 확인하세요.");
+            if (!timing.EndEdit() || !preparation.EndEdit() || !startInputs.EndEdit() || !auxiliary.EndEdit()) throw new ArgumentException("편집 중인 숫자나 키를 확인하세요.");
             if (timing.Rows.Count != edited.Actions.Length) throw new InvalidOperationException("프로필의 동작 수와 화면이 일치하지 않습니다. 프로필을 다시 선택하세요.");
             if (preparation.Rows.Count != (edited.Preparation == null ? 0 : edited.Preparation.Length)) throw new InvalidOperationException("프로필의 준비 대응 수와 화면이 일치하지 않습니다. 프로필을 다시 선택하세요.");
+            if (startInputs.Rows.Count != (edited.StartInputs == null ? 0 : edited.StartInputs.Length)) throw new InvalidOperationException("프로필의 F8 기준 시작 입력 수와 화면이 일치하지 않습니다. 프로필을 다시 선택하세요.");
             var p = new System.Web.Script.Serialization.JavaScriptSerializer().Deserialize<ExperimentProfile>(new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(edited));
             p.Id = profileId.Text.Trim(); p.BossId = bossId.Text.Trim(); p.BossLabel = boss.Text.Trim(); p.Skill = skill.Text.Trim(); p.Conditions = conditions.Text.Trim();
             p.Party = party.Text.Trim(); p.StartCharacter = start.Text.Trim();
@@ -402,13 +423,19 @@ namespace VesperLab
                     Id = edited.Preparation[i].Id, Label = edited.Preparation[i].Label, Key = edited.Preparation[i].Key,
                     AtMs = Number(row, 2), HoldMs = Number(row, 3)
                 }).ToArray();
+            if (edited.StartInputs != null)
+                p.StartInputs = startInputs.Rows.Cast<DataGridViewRow>().Select((row, i) => new StartInputPress {
+                    Id = edited.StartInputs[i].Id, Label = edited.StartInputs[i].Label, Key = edited.StartInputs[i].Key,
+                    AtMs = Number(row, 2), HoldMs = Number(row, 3)
+                }).ToArray();
             if (auxiliary.Rows.Count > 0 || edited.AuxiliaryInputs != null)
                 p.AuxiliaryInputs = auxiliary.Rows.Cast<DataGridViewRow>().Select(row => new AuxiliaryPress {
                     Id = Convert.ToString(row.Tag), Label = Convert.ToString(row.Cells["label"].Value),
                     Key = Convert.ToString(row.Cells["key"].Value), Enabled = Convert.ToBoolean(row.Cells["enabled"].Value),
                     AtMs = Number(row, 3), HoldMs = Number(row, 4)
                 }).ToArray();
-            if (p.AuxiliaryInputs != null && p.AuxiliaryInputs.Length > 0) p.SchemaVersion = 2;
+            if (p.StartInputs != null && p.StartInputs.Length > 0) p.SchemaVersion = 3;
+            else if (p.AuxiliaryInputs != null && p.AuxiliaryInputs.Length > 0 && p.SchemaVersion < 2) p.SchemaVersion = 2;
             ProfileStore.Validate(p); return p;
         }
         private static double Number(DataGridViewRow row, int column)
@@ -594,7 +621,8 @@ namespace VesperLab
         {
             var record = TrialResultStore.ReadTrial(path); string existing = TrialResultStore.ReadBits(path);
             resultPath = path; bits.Text = existing; bits.Enabled = saveBits.Enabled = true;
-            resultHasPreparation = record.ProfileSnapshot != null && record.ProfileSnapshot.Preparation != null && record.ProfileSnapshot.Preparation.Length > 0;
+            resultHasPreparation = record.ProfileSnapshot != null && ((record.ProfileSnapshot.Preparation != null && record.ProfileSnapshot.Preparation.Length > 0)
+                || (record.ProfileSnapshot.StartInputs != null && record.ProfileSnapshot.StartInputs.Length > 0));
             preparationNoteRow.Visible = resultHasPreparation; preparationNote.Enabled = resultHasPreparation;
             preparationNote.Text = resultHasPreparation ? TrialResultStore.ReadPreparationNote(path) : "";
             resultTarget.Text = (record.ProfileSnapshot == null ? record.BossId : record.ProfileSnapshot.BossLabel) + " / " + record.Skill + " · 시작 " + TrialResultStore.ReadStartCharacter(path) + " · 결과 " + record.ActionIds.Length + "자리 · " +
@@ -614,6 +642,7 @@ namespace VesperLab
         {
             recentTiming.Rows.Clear();
             ShowPreparationRows(recentPreparation, null); recentPreparationTitle.Visible = false;
+            ShowPreparationRows(recentStartInputs, null); recentStartInputsTitle.Visible = false;
             ShowAuxiliaryRows(recentAuxiliary, null); recentAuxiliary.Visible = recentAuxiliaryTitle.Visible = false;
             try
             {
@@ -629,11 +658,17 @@ namespace VesperLab
                     + "\n시작 " + TrialResultStore.ReadStartCharacter(path) + " · " + record.Party + " · 녹화 " + record.Recording
                     + (record.ProfileSnapshot != null && record.ProfileSnapshot.StartAttack != null
                         ? " · 시작 " + record.ProfileSnapshot.StartAttack.Key + record.ProfileSnapshot.StartAttack.AtMs.Length + " 자동" : "")
+                    + (record.ProfileSnapshot != null && record.ProfileSnapshot.StartInputs != null && record.ProfileSnapshot.StartInputs.Length > 0
+                        ? " · F8 기준 시작 입력 " + record.ProfileSnapshot.StartInputs.Length + "개" : "")
                     + (record.ProfileSnapshot != null && record.ProfileSnapshot.Preparation != null && record.ProfileSnapshot.Preparation.Length > 0 ? " · 자동 준비 포함 (결과는 진입 이후)" : "")
                     + " · 아래 값은 당시 기록입니다."
                     + (!String.IsNullOrEmpty(note) ? "\n준비 메모: " + note : "");
                 ShowPreparationRows(recentPreparation, record.ProfileSnapshot == null ? null : record.ProfileSnapshot.Preparation);
                 recentPreparationTitle.Visible = recentPreparation.Rows.Count > 0;
+                if (record.ProfileSnapshot != null && record.ProfileSnapshot.StartInputs != null)
+                    foreach (var press in record.ProfileSnapshot.StartInputs)
+                        recentStartInputs.Rows.Add(press.Label, press.Key, press.AtMs, press.HoldMs, (press.AtMs + press.HoldMs).ToString("0"));
+                recentStartInputs.Visible = recentStartInputsTitle.Visible = recentStartInputs.Rows.Count > 0;
                 ShowAuxiliaryRows(recentAuxiliary, record.ProfileSnapshot == null ? null : record.ProfileSnapshot.AuxiliaryInputs);
                 recentAuxiliary.Visible = recentAuxiliaryTitle.Visible = recentAuxiliary.Rows.Count > 0;
                 for (int i = 0; i < record.ActionIds.Length; i++)
@@ -647,7 +682,8 @@ namespace VesperLab
                 }
                 recentTiming.ClearSelection();
             }
-            catch (Exception e) { recentTiming.Rows.Clear(); ShowPreparationRows(recentPreparation, null); recentPreparationTitle.Visible = false; recentSummary.Text = "최근 보관 회차 · " + e.Message; }
+            catch (Exception e) { recentTiming.Rows.Clear(); ShowPreparationRows(recentPreparation, null); recentPreparationTitle.Visible = false;
+                ShowPreparationRows(recentStartInputs, null); recentStartInputsTitle.Visible = false; recentSummary.Text = "최근 보관 회차 · " + e.Message; }
         }
         private void ClearResult()
         {
@@ -687,15 +723,20 @@ namespace VesperLab
                     || CreateRecord().ProfileSnapshot.AllowManualMovement != snapshot.AllowManualMovement
                     || (snapshot.AllowManualMovement && !instructionNote.Text.Contains("WASD 직접 이동 가능")))
                     throw new Exception("Manual movement policy lost between editor, instructions and trial snapshot");
-                if (!String.IsNullOrEmpty(startAttackSummary.Text) != (snapshot.StartAttack != null)
+                if (!String.IsNullOrEmpty(startAttackSummary.Text) != (snapshot.StartAttack != null || (snapshot.StartInputs != null && snapshot.StartInputs.Length > 0))
                     || serializer.Serialize(ReadEditor().StartAttack) != serializer.Serialize(snapshot.StartAttack)
-                    || serializer.Serialize(CreateRecord().ProfileSnapshot.StartAttack) != serializer.Serialize(snapshot.StartAttack))
+                    || serializer.Serialize(CreateRecord().ProfileSnapshot.StartAttack) != serializer.Serialize(snapshot.StartAttack)
+                    || serializer.Serialize(ReadEditor().StartInputs) != serializer.Serialize(snapshot.StartInputs)
+                    || serializer.Serialize(CreateRecord().ProfileSnapshot.StartInputs) != serializer.Serialize(snapshot.StartInputs)
+                    || startInputs.Rows.Count != (snapshot.StartInputs == null ? 0 : snapshot.StartInputs.Length)
+                    || !startInputs.Columns["key"].ReadOnly || startInputs.Columns["at"].ReadOnly || startInputs.Columns["hold"].ReadOnly)
                     throw new Exception("Start attack display or editor/trial snapshot differs from profile");
                 if (serializer.Serialize(ReadEditor().Preparation) != serializer.Serialize(snapshot.Preparation)
                     || serializer.Serialize(CreateRecord().ProfileSnapshot.Preparation) != serializer.Serialize(snapshot.Preparation))
                     throw new Exception("Preparation changed during editor or trial snapshot roundtrip");
                 if (timing.Columns.Cast<DataGridViewColumn>().Concat(recentTiming.Columns.Cast<DataGridViewColumn>())
                     .Concat(preparation.Columns.Cast<DataGridViewColumn>()).Concat(recentPreparation.Columns.Cast<DataGridViewColumn>())
+                    .Concat(startInputs.Columns.Cast<DataGridViewColumn>()).Concat(recentStartInputs.Columns.Cast<DataGridViewColumn>())
                     .Any(c => c.SortMode != DataGridViewColumnSortMode.NotSortable)) throw new Exception("Action rows can be reordered");
                 for (int pass = 0; pass < 3; pass++)
                 {
@@ -735,7 +776,8 @@ namespace VesperLab
                 if (timing.AllowUserToAddRows || timing.AllowUserToDeleteRows) throw new Exception("Action count is user-editable");
                 foreach (int size in new[] { 1, 12, 1 })
                 {
-                    var fixture = ProfileStore.Snapshot(); fixture.MinimumSpacingMs = 250; fixture.ManualPreparationRmbUntilMs = 0; fixture.Preparation = null; fixture.AuxiliaryInputs = null;
+                    var fixture = ProfileStore.Snapshot(); fixture.MinimumSpacingMs = 250; fixture.ManualPreparationRmbUntilMs = 0;
+                    fixture.Preparation = null; fixture.AuxiliaryInputs = null; fixture.StartInputs = null;
                     fixture.Actions = Enumerable.Range(0, size).Select(i => new ActionProfile {
                         Id = "fixture-" + i, Label = "동작 " + i, Key = i == 0 ? "RMB" : "Space", Group = i % 2 == 0 ? "A" : "B",
                         MinimumMs = 100, MaximumMs = 120000, Timing = new TimingCandidate { EarlyMs = 1900 + i * 1000, BaselineMs = 2000 + i * 1000, LateMs = 2100 + i * 1000 }
@@ -747,7 +789,7 @@ namespace VesperLab
                         throw new Exception("Profile-driven action count or timings changed");
                 }
                 VerifyAuxiliaryEditor();
-                SetSettingsEnabled(false); if (count.Enabled || timing.Enabled || preparation.Enabled || auxiliary.Enabled || party.Enabled || profiles.Enabled) throw new Exception("Settings not locked");
+                SetSettingsEnabled(false); if (count.Enabled || timing.Enabled || preparation.Enabled || startInputs.Enabled || auxiliary.Enabled || party.Enabled || profiles.Enabled) throw new Exception("Settings not locked");
                 SetSettingsEnabled(true);
             }
             finally { ProfileStore.Load(original); ProfileStore.Apply(snapshot); LoadEditor(); RefreshSelection(); }
@@ -767,7 +809,7 @@ namespace VesperLab
                 row.Cells["at"].Value = 1000; row.Cells["key"].Value = "LMB"; row.Cells["enabled"].Value = true;
                 var record = CreateRecord();
                 var press = record.ProfileSnapshot.AuxiliaryInputs.Last();
-                if (record.ProfileSnapshot.SchemaVersion != 2 || press.Key != "LMB" || press.AtMs != 1000 || !press.Enabled
+                if (record.ProfileSnapshot.SchemaVersion != Math.Max(2, before.SchemaVersion) || press.Key != "LMB" || press.AtMs != 1000 || !press.Enabled
                     || record.ActionIds.Length != before.Actions.Length)
                     throw new Exception("Auxiliary editor lost plan or changed scored actions");
                 ProfileStore.Apply(record.ProfileSnapshot); LoadEditor();
@@ -775,7 +817,7 @@ namespace VesperLab
                 auxiliary.Rows[0].Cells["enabled"].Value = false;
                 if (CreateRecord().ProfileSnapshot.AuxiliaryInputs[0].Enabled) throw new Exception("Auxiliary disable lost from snapshot");
                 auxiliary.Rows.Clear();
-                if (ReadEditor().SchemaVersion != 2 || ReadEditor().AuxiliaryInputs.Length != 0) throw new Exception("Auxiliary deletion downgraded schema or retained row");
+                if (ReadEditor().SchemaVersion != Math.Max(2, before.SchemaVersion) || ReadEditor().AuxiliaryInputs.Length != 0) throw new Exception("Auxiliary deletion downgraded schema or retained row");
             }
             finally { ProfileStore.Apply(before); LoadEditor(); settingsState.Text = previousState; }
         }

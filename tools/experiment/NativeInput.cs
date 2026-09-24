@@ -53,7 +53,7 @@ namespace VesperLab
         {
             foreach (int key in new[] { 0x57, 0x41, 0x53, 0x44 })
             {
-                if ((ownedKey == "A" && key == 0x41) || (ownedKey == "D" && key == 0x44)) continue;
+                if ((ownedKey == "W" && key == 0x57) || (ownedKey == "A" && key == 0x41) || (ownedKey == "D" && key == 0x44)) continue;
                 if ((Native.GetAsyncKeyState(key) & 0x8000) != 0) return true;
             }
             return false;
@@ -61,10 +61,10 @@ namespace VesperLab
         public int Send(string key, bool down, out int error)
         {
             var input = new Native.INPUT();
-            if (key == "Space" || key == "A" || key == "D" || key == "E")
+            if (key == "Space" || key == "W" || key == "A" || key == "D" || key == "E")
             {
                 input.type = 1;
-                input.data.keyboard.wScan = (ushort)(key == "Space" ? 0x39 : key == "A" ? 0x1e : key == "D" ? 0x20 : 0x12);
+                input.data.keyboard.wScan = (ushort)(key == "Space" ? 0x39 : key == "W" ? 0x11 : key == "A" ? 0x1e : key == "D" ? 0x20 : 0x12);
                 input.data.keyboard.dwFlags = 0x0008u | (down ? 0u : 0x0002u);
             }
             else if (key == "RMB" || key == "LMB")

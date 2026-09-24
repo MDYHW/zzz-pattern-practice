@@ -118,6 +118,50 @@ function noticeOriginMs(raw) {
   }
   return null;
 }
+function startInputMetadata(raw) {
+  const planned = raw.ProfileSnapshot?.StartInputs ?? [];
+  const inputs = raw.StartInputs ?? [];
+  requireValue(Array.isArray(planned) && Array.isArray(inputs), 'StartInputs plan and events must be arrays');
+  if (!planned.length) {
+    requireValue(!inputs.length, 'StartInputs events require a plan');
+    return null;
+  }
+  requireValue(raw.ProfileSnapshot.SchemaVersion === 3 && raw.ProfileSnapshot.StartAttack == null,
+    'StartInputs require SchemaVersion 3 without StartAttack');
+  requireValue(planned.length <= 16 && new Set(planned.map(row => row?.Id)).size === planned.length,
+    'StartInputs require at most 16 unique rows');
+  for (const row of planned) {
+    requireValue(row && typeof row.Id === 'string' && row.Id.length && ['W', 'RMB'].includes(row.Key), 'Invalid StartInputs row');
+    requireValue(Number.isFinite(row.AtMs) && row.AtMs >= 100 && row.AtMs % 50 === 0
+      && Number.isFinite(row.HoldMs) && row.HoldMs >= 50 && row.HoldMs <= 2000 && row.HoldMs % 50 === 0,
+    'Invalid StartInputs timing');
+  }
+  const virtual = ['observe', 'observe-only'].includes(raw.Mode);
+  const completed = ['completed', 'submitted-not-game-verified', 'observed-no-input'].includes(raw.Status);
+  const byRow = new Map();
+  for (const event of inputs) {
+    requireValue(event && Number.isInteger(event.Attack) && event.Attack >= 0 && event.Attack < planned.length,
+      'Invalid StartInputs event row');
+    const row = planned[event.Attack];
+    requireValue(event.Key === row.Key && (virtual ? ['virtual-down', 'virtual-up'] : ['down', 'up']).includes(event.Action),
+      'StartInputs event key or action differs from plan');
+    requireValue([event.DueMs, event.BeginMs, event.EndMs].every(Number.isFinite)
+      && event.DueMs <= event.BeginMs && event.BeginMs <= event.EndMs, 'Invalid StartInputs event timing');
+    const prior = byRow.get(event.Attack) ?? [];
+    const down = event.Action.endsWith('down');
+    requireValue(down ? !prior.length && event.DueMs === row.AtMs
+      : prior.length > 0 && prior[0].Action.endsWith('down')
+        && (prior.length === 1 || (!completed && prior.at(-1).Inserted !== 1)),
+    'StartInputs must record one down followed by release attempts');
+    requireValue(down || event.DueMs >= (completed ? row.AtMs + row.HoldMs : prior.at(-1).EndMs),
+      'StartInputs release precedes its hold or interrupted event');
+    prior.push(event); byRow.set(event.Attack, prior);
+  }
+  if (completed) requireValue(planned.every((_, index) => byRow.get(index)?.length === 2),
+    'Completed StartInputs require down and up events for each row');
+  return { planned, inputs, timeOrigin: 'f8-monitor-start', outcome: 'unconfirmed' };
+}
+
 function auxiliaryInputMetadata(raw) {
   const planned = raw.ProfileSnapshot?.AuxiliaryInputs;
   const inputs = raw.AuxiliaryInputs ?? [];
@@ -131,7 +175,7 @@ function auxiliaryInputMetadata(raw) {
     requireValue(inputs.length === 0, 'AuxiliaryInputs events require a nonempty plan');
     return null;
   }
-  requireValue(raw.ProfileSnapshot.SchemaVersion === 2, 'AuxiliaryInputs require ProfileSnapshot SchemaVersion 2');
+  requireValue([2, 3].includes(raw.ProfileSnapshot.SchemaVersion), 'AuxiliaryInputs require ProfileSnapshot SchemaVersion 2 or 3');
   requireValue(planned.length <= 32, 'ProfileSnapshot.AuxiliaryInputs must contain at most 32 rows');
   const ids = new Set();
   for (const [index, row] of planned.entries()) {
@@ -198,6 +242,7 @@ function rawMetadata(raw, rawPath) {
   if (raw.ActionIds) requireValue(new Set(raw.ActionIds).size === raw.ActionIds.length, 'ActionIds must be unique');
   if (raw.TrialId !== undefined) nonempty(raw.TrialId, 'TrialId');
   const auxiliaryInputs = auxiliaryInputMetadata(raw);
+  const startInputs = startInputMetadata(raw);
   return {
     version: raw.Version, skill: raw.Skill, profileId: raw.ProfileId ?? null, bossId: raw.BossId ?? null,
     profileHash: raw.ProfileHash ?? null, startedUtc: raw.StartedUtc ?? null,
@@ -210,6 +255,7 @@ function rawMetadata(raw, rawPath) {
     ...(Array.isArray(raw.ProfileSnapshot?.Preparation) && raw.ProfileSnapshot.Preparation.length
       ? { preparation: { planned: raw.ProfileSnapshot.Preparation, inputs: raw.PreparationInputs ?? [], outcome: 'unconfirmed' } } : {}),
     ...(auxiliaryInputs ? { auxiliaryInputs } : {}),
+    ...(startInputs ? { startInputs } : {}),
     obsObservations: raw.ObsObservations ?? [], obsLedgerDirectory: raw.ObsLedgerDirectory ?? null,
     obsRecordings: obsRecordings(raw, rawPath),
     obsRecording: observedRecording(raw),
@@ -334,7 +380,7 @@ function preparationReport(input, trial) {
     return;
   }
   requireValue(typeof input.preparationNote === 'string' && input.preparationNote.length <= 500, 'Preparation note must be a string of at most 500 characters');
-  requireValue(input.preparationNote.length === 0 || trial.metadata.preparation, 'Preparation note requires recorded preparation');
+  requireValue(input.preparationNote.length === 0 || trial.metadata.preparation || trial.metadata.startInputs, 'Preparation note requires recorded preparation');
   source(input.preparationSource, 'preparationSource');
   requireValue(input.preparationSource.kind === 'user-report', 'Preparation note must cite user-report');
 }
@@ -448,6 +494,8 @@ function trialSummary(trial) {
   return { id: trial.id, ...trial.metadata, raw: trial.raw,
     ...(trial.metadata.preparation && latest?.preparationNote !== undefined
       ? { preparation: { ...trial.metadata.preparation, note: latest.preparationNote, source: latest.preparationSource } } : {}),
+    ...(trial.metadata.startInputs && latest?.preparationNote !== undefined
+      ? { startInputs: { ...trial.metadata.startInputs, note: latest.preparationNote, source: latest.preparationSource } } : {}),
     recordingActual: effectiveRecording.actual,
     recordingSource: effectiveRecording.source ?? null,
     recordingDiffers: ['ON', 'OFF'].includes(effectiveRecording.actual) ? effectiveRecording.actual !== trial.metadata.recordingLogged : null,

@@ -5,6 +5,7 @@ import { kusarikkuPattern, kusarikkuRecording } from './kusarikku-patterns';
 import { mirageArcherUnitPattern, mirageArcherUnitRecording, mirageLastRmbWindowMs, mirageRmbRecording } from './mirage-archer-unit-patterns';
 import { phaethonPattern, phaethonRecording, phaethonIntegratedPattern, phaethonIntegratedRecording } from './phaethon-patterns';
 import { cuesForRecording, vesperPatterns, vesperRecordings, vesperSpaceEntries } from './vesper-patterns';
+import { vesselPattern, vesselRecording } from './vessel-patterns';
 
 // Cover the full lower input-icon row in the 1280×720 recordings.
 // Start above the small Q key circle (below the large skill icon) and reach the frame edges.
@@ -118,6 +119,27 @@ export const phaethonIntegratedExecute02: PracticeContent = {
 };
 validateCues(phaethonIntegratedExecute02.cues, phaethonIntegratedExecute02.duration);
 
+const vesselClipTime = (frame: number) => (frame - vesselRecording.firstSourceFrame) / 60;
+const vesselCues = cuesForRecording(vesselPattern, vesselClipTime(vesselRecording.originSourceFrame));
+export const vesselExecute01: PracticeContent = {
+  id: 'vessel-execute-01', bossId: 'vessel', bossLabel: '태초의 악몽·창조주', title: 'Execute_01',
+  video: 'media/vessel-execute-01-lufs26.mp4', poster: 'media/vessel-execute-01.jpg',
+  duration: vesselClipTime(vesselRecording.endSourceFrameExclusive),
+  cues: vesselCues,
+  gameInputMasks,
+  entryOptions: [{ key: 'MouseRight', start: vesselCues[0].start, end: vesselCues[0].end, reference: vesselCues[0].reference }],
+  preparation: {
+    end: vesselClipTime(vesselRecording.preparationLastReleaseFrame),
+    dodges: vesselRecording.preparationDodgeDownFrames.map((frame, index) => ({
+      id: `prepare-rmb-${index + 1}`, label: `준비 회피${index + 1}`, time: vesselClipTime(frame),
+    })),
+    movements: [{ key: 'W', start: vesselClipTime(vesselRecording.preparationForwardStartFrame),
+      end: vesselClipTime(vesselRecording.preparationForwardEndFrameExclusive) }],
+  },
+  recordedInputMasks: [{ x: 0, y: 560 / 720 * 100, width: 315 / 1280 * 100, height: 160 / 720 * 100 }],
+};
+validateCues(vesselExecute01.cues, vesselExecute01.duration);
+
 /** B uses the RMB example throughout; its video is not a simulation of user input. */
 export function withMirageLastResponse(layout: 'selected' | 'overlap', key: PracticeKey): PracticeContent {
   const base = mirageArcherUnitAttack09;
@@ -139,7 +161,7 @@ export function withMirageLastResponse(layout: 'selected' | 'overlap', key: Prac
   return resolved;
 }
 export const skills = [vesperExecute01, vesperExecute02, girtablulluExecute01, kusarikkuExecute01,
-  mirageArcherUnitAttack09, phaethonExecute01, phaethonIntegratedExecute02];
+  mirageArcherUnitAttack09, phaethonExecute01, phaethonIntegratedExecute02, vesselExecute01];
 
 /** The returned cue list belongs to a single selected practice route. */
 export function withEntryKey(content: PracticeContent, key: PracticeKey): PracticeContent {

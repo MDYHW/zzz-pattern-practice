@@ -1,0 +1,1950 @@
+{
+  "date": "2026-09-24",
+  "status": "adopted-practical-service-windows; not exact engine boundaries or universal success guarantee",
+  "recordingCaveat": "All 28 trials have OBS UNKNOWN classified OFF under the established policy. This does not establish absence of recording. The last video is separately observed; no matching raw trial was found and none is inferred.",
+  "adopted": {
+    "profileId": "vessel-execute-01",
+    "party": "엽빛나 → 다이아린 → 수나",
+    "startCharacter": "엽빛나",
+    "windowsMs": [
+      [
+        3150,
+        3450
+      ],
+      [
+        5200,
+        5600
+      ],
+      [
+        6100,
+        6500
+      ],
+      [
+        7350,
+        7650
+      ],
+      [
+        8900,
+        9300
+      ]
+    ],
+    "baselineMs": [
+      3300,
+      5400,
+      6300,
+      7500,
+      9100
+    ],
+    "mixedEndpoint": {
+      "action": 4,
+      "timeMs": 9300,
+      "success": 5,
+      "failure": 1,
+      "sameSettingsFailure": "ca89413dc0034c7c9c3409db545fc305",
+      "sameSettingsSuccess": "50565e57decc45ad91ae98e75be4b5c9"
+    }
+  },
+  "review": {
+    "purpose": "Read-only derived count of 2026-09-24 vessel notices and user result bits; success counts are not independent boundary proofs.",
+    "sourceDirectory": "<PRIVATE_HOME>/.codex/worktrees/f815/zzz-pattern-practice/.local/experiment-build/notice-logs",
+    "trialCount": 28,
+    "latestSavedProfile": {
+      "id": "vessel-execute-01",
+      "party": "엽빛나 → 다이아린 → 수나",
+      "startCharacter": "엽빛나",
+      "actions": [
+        {
+          "id": "entry",
+          "key": "RMB",
+          "earlyMs": 3150,
+          "baselineMs": 3300,
+          "lateMs": 3450
+        },
+        {
+          "id": "hit-1",
+          "key": "Space",
+          "earlyMs": 5200,
+          "baselineMs": 5400,
+          "lateMs": 5600
+        },
+        {
+          "id": "hit-2",
+          "key": "Space",
+          "earlyMs": 6100,
+          "baselineMs": 6300,
+          "lateMs": 6500
+        },
+        {
+          "id": "hit-3",
+          "key": "Space",
+          "earlyMs": 7350,
+          "baselineMs": 7500,
+          "lateMs": 7650
+        },
+        {
+          "id": "hit-4",
+          "key": "Space",
+          "earlyMs": 8900,
+          "baselineMs": 9100,
+          "lateMs": 9300
+        }
+      ]
+    },
+    "trials": [
+      {
+        "id": "625761b886e34c5288c50015a67d29bf",
+        "bits": "11111",
+        "delaysMs": [
+          3200,
+          5300,
+          6250,
+          7550,
+          9100
+        ],
+        "selectedTimings": [
+          "baseline",
+          "baseline",
+          "baseline",
+          "baseline",
+          "baseline"
+        ],
+        "recording": "OFF",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "profileHash": "320bd6a62c848203affeba2e2a9fbc5354f795d66fec90395fe95b5924536ba4",
+        "resultRevisions": 1,
+        "firstMatchIndex": 437,
+        "precedingSuccess": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "id": "9612f3731af84c2cbe0718c536e5f062",
+        "bits": "11101",
+        "delaysMs": [
+          3200,
+          5450,
+          6100,
+          7750,
+          8900
+        ],
+        "selectedTimings": [
+          "baseline",
+          "late",
+          "early",
+          "late",
+          "early"
+        ],
+        "recording": "OFF",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "profileHash": "13c1111d3e90d997bdc5b10d06e2fca074a5307151e5dbe45af36e44ddfb281a",
+        "resultRevisions": 1,
+        "firstMatchIndex": 437,
+        "precedingSuccess": [
+          true,
+          true,
+          true,
+          true,
+          false
+        ]
+      },
+      {
+        "id": "0a98e4c070d64488af6d4c8b71025bec",
+        "bits": "11101",
+        "delaysMs": [
+          3200,
+          5450,
+          6100,
+          7700,
+          8900
+        ],
+        "selectedTimings": [
+          "baseline",
+          "late",
+          "early",
+          "late",
+          "early"
+        ],
+        "recording": "OFF",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "profileHash": "5485956e10eb849e8c4bb42c0b6459655fb694e5b23370ece0cfd3e45da26bec",
+        "resultRevisions": 1,
+        "firstMatchIndex": 434,
+        "precedingSuccess": [
+          true,
+          true,
+          true,
+          true,
+          false
+        ]
+      },
+      {
+        "id": "78da3c08f28547669e4b53ef572b8839",
+        "bits": "11111",
+        "delaysMs": [
+          3200,
+          5450,
+          6100,
+          7650,
+          8900
+        ],
+        "selectedTimings": [
+          "baseline",
+          "late",
+          "early",
+          "late",
+          "early"
+        ],
+        "recording": "OFF",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "profileHash": "ddb642155b1e199f2b7042269aa332f4e2ee39b76bf6e27d31a257d71ca6c276",
+        "resultRevisions": 1,
+        "firstMatchIndex": 428,
+        "precedingSuccess": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "id": "1bad88d2d8f749c3ae93176990dadaca",
+        "bits": "00100",
+        "delaysMs": [
+          3050,
+          5450,
+          6100,
+          7650,
+          8900
+        ],
+        "selectedTimings": [
+          "early",
+          "late",
+          "early",
+          "late",
+          "early"
+        ],
+        "recording": "OFF",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "profileHash": "ab95d4995cdf23e3700b84efec7e86cc3632f37679764e36eb399b27c6475f9a",
+        "resultRevisions": 1,
+        "firstMatchIndex": 453,
+        "precedingSuccess": [
+          true,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "id": "a2e5e4e0fab142d082ffbd267974ccee",
+        "bits": "00100",
+        "delaysMs": [
+          3100,
+          5450,
+          6100,
+          7650,
+          8900
+        ],
+        "selectedTimings": [
+          "early",
+          "late",
+          "early",
+          "late",
+          "early"
+        ],
+        "recording": "OFF",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "profileHash": "b1074721c0ae3fab887fa3534f458de690e73cd2d47fa85ac2cae03baad74f61",
+        "resultRevisions": 1,
+        "firstMatchIndex": 449,
+        "precedingSuccess": [
+          true,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "id": "55ad29f6b4644440899d6179c2a2ccdc",
+        "bits": "11111",
+        "delaysMs": [
+          3150,
+          5450,
+          6100,
+          7650,
+          8900
+        ],
+        "selectedTimings": [
+          "early",
+          "late",
+          "early",
+          "late",
+          "early"
+        ],
+        "recording": "OFF",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "profileHash": "a76b3e002eeeb4f2f1abf4b93b0c5db760ffbca276629ddeea4d2101796a4ea3",
+        "resultRevisions": 1,
+        "firstMatchIndex": 446,
+        "precedingSuccess": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "id": "0f718ab091de4ca8b9fd2ee7d8243891",
+        "bits": "11111",
+        "delaysMs": [
+          3200,
+          5200,
+          6450,
+          7350,
+          9300
+        ],
+        "selectedTimings": [
+          "baseline",
+          "early",
+          "late",
+          "early",
+          "late"
+        ],
+        "recording": "OFF",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "profileHash": "08bfd1431de4a9956397095e2801cbe616bdee9dacba767dbd4357b2d0ef9d19",
+        "resultRevisions": 1,
+        "firstMatchIndex": 455,
+        "precedingSuccess": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "id": "f1eb5c552c9345ed838ba19003e74bee",
+        "bits": "11111",
+        "delaysMs": [
+          3200,
+          5150,
+          6450,
+          7350,
+          9300
+        ],
+        "selectedTimings": [
+          "baseline",
+          "early",
+          "late",
+          "early",
+          "late"
+        ],
+        "recording": "OFF",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "profileHash": "e1cc6463e00063c2fbb813ccb9eca7ec6aa4809418b566eb0f9ee1223bfd4ada",
+        "resultRevisions": 1,
+        "firstMatchIndex": 441,
+        "precedingSuccess": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "id": "621293afa10f49ba8b21e839747aced9",
+        "bits": "10000",
+        "delaysMs": [
+          3200,
+          5100,
+          6450,
+          7350,
+          9300
+        ],
+        "selectedTimings": [
+          "baseline",
+          "early",
+          "late",
+          "early",
+          "late"
+        ],
+        "recording": "OFF",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "profileHash": "818583966623b31661c66a5d2de025d5625d882a27e68339f70f2357028752af",
+        "resultRevisions": 1,
+        "firstMatchIndex": 460,
+        "precedingSuccess": [
+          true,
+          true,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "id": "ca89413dc0034c7c9c3409db545fc305",
+        "bits": "11110",
+        "delaysMs": [
+          3200,
+          5150,
+          6500,
+          7350,
+          9300
+        ],
+        "selectedTimings": [
+          "baseline",
+          "early",
+          "late",
+          "early",
+          "late"
+        ],
+        "recording": "OFF",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "profileHash": "b72b562e84ced17c105885553e10b90817c93493356957fd3e3354ad882ca532",
+        "resultRevisions": 1,
+        "firstMatchIndex": 445,
+        "precedingSuccess": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "id": "50565e57decc45ad91ae98e75be4b5c9",
+        "bits": "11111",
+        "delaysMs": [
+          3200,
+          5150,
+          6500,
+          7350,
+          9300
+        ],
+        "selectedTimings": [
+          "baseline",
+          "early",
+          "late",
+          "early",
+          "late"
+        ],
+        "recording": "OFF",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "profileHash": "b72b562e84ced17c105885553e10b90817c93493356957fd3e3354ad882ca532",
+        "resultRevisions": 1,
+        "firstMatchIndex": 447,
+        "precedingSuccess": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "id": "ea515cec3c5f4ed4a7def1ccf066a346",
+        "bits": "10000",
+        "delaysMs": [
+          3400,
+          5150,
+          6500,
+          7350,
+          9300
+        ],
+        "selectedTimings": [
+          "late",
+          "early",
+          "late",
+          "early",
+          "late"
+        ],
+        "recording": "OFF",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "profileHash": "0f2b8b43d7a32dc83a046908dbdc791a92f227b23ee6cfa6e3cb0d807de0bc4d",
+        "resultRevisions": 1,
+        "firstMatchIndex": 456,
+        "precedingSuccess": [
+          true,
+          true,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "id": "4d1b6d006ad84bd6ba75769b2d009eee",
+        "bits": "11111",
+        "delaysMs": [
+          3400,
+          5200,
+          6500,
+          7350,
+          9300
+        ],
+        "selectedTimings": [
+          "late",
+          "early",
+          "late",
+          "early",
+          "late"
+        ],
+        "recording": "OFF",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "profileHash": "3d9517b09dab8bf8be25af0ec4e3d0a2b11e6a0cfb6866bf960f9e4da4b74885",
+        "resultRevisions": 1,
+        "firstMatchIndex": 415,
+        "precedingSuccess": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "id": "a160a1ee400a4bffaf5b86b000a59604",
+        "bits": "11111",
+        "delaysMs": [
+          3450,
+          5200,
+          6500,
+          7350,
+          9300
+        ],
+        "selectedTimings": [
+          "late",
+          "early",
+          "late",
+          "early",
+          "late"
+        ],
+        "recording": "OFF",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "profileHash": "7d83605afa5cc5827f925084a86dea3f47ab4d4923947b001d6cb4e82744591b",
+        "resultRevisions": 1,
+        "firstMatchIndex": 459,
+        "precedingSuccess": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "id": "9b5d0e4df3f145548963a32955768c59",
+        "bits": "01000",
+        "delaysMs": [
+          3500,
+          5200,
+          6500,
+          7350,
+          9300
+        ],
+        "selectedTimings": [
+          "late",
+          "early",
+          "late",
+          "early",
+          "late"
+        ],
+        "recording": "OFF",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "profileHash": "d2bb8dc1e48d61080524eeb95ee8cf8f8320568e4cc66c0d42d7fe7e3cf3397b",
+        "resultRevisions": 1,
+        "firstMatchIndex": 438,
+        "precedingSuccess": [
+          true,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "id": "539452dac2904e778dbddf6df099f1d5",
+        "bits": "11111",
+        "delaysMs": [
+          3300,
+          5500,
+          6100,
+          7650,
+          8900
+        ],
+        "selectedTimings": [
+          "baseline",
+          "late",
+          "early",
+          "late",
+          "early"
+        ],
+        "recording": "OFF",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "profileHash": "a9300ca7eb9cbda9f526e146de416b550b8aacc63c31ef8be4e3d9a763d0f3de",
+        "resultRevisions": 1,
+        "firstMatchIndex": 433,
+        "precedingSuccess": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "id": "2a55ec2f82d14e0ab89561b5138bddc8",
+        "bits": "11111",
+        "delaysMs": [
+          3300,
+          5550,
+          6100,
+          7650,
+          8900
+        ],
+        "selectedTimings": [
+          "baseline",
+          "late",
+          "early",
+          "late",
+          "early"
+        ],
+        "recording": "OFF",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "profileHash": "102ffabfc34df2d456a55c53da1e5efed8b524f102cde9c54ea15f47f51131d3",
+        "resultRevisions": 1,
+        "firstMatchIndex": 459,
+        "precedingSuccess": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "id": "ae24d12281b7495db62162d4f3d2dab9",
+        "bits": "11111",
+        "delaysMs": [
+          3300,
+          5600,
+          6100,
+          7650,
+          8900
+        ],
+        "selectedTimings": [
+          "baseline",
+          "late",
+          "early",
+          "late",
+          "early"
+        ],
+        "recording": "OFF",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "profileHash": "124dc985964fc02e98a5c9419c31396e55646cc08dada95031e7460af07e8f49",
+        "resultRevisions": 1,
+        "firstMatchIndex": 454,
+        "precedingSuccess": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "id": "c4b8af7b1f524d1c9d4b40cb0ae3147f",
+        "bits": "11111",
+        "delaysMs": [
+          3300,
+          5600,
+          6100,
+          7700,
+          8900
+        ],
+        "selectedTimings": [
+          "baseline",
+          "late",
+          "early",
+          "late",
+          "early"
+        ],
+        "recording": "OFF",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "profileHash": "c0488377c8b2e64dcdad5dd822bf565f716824a953d96bb8dd1910ba364b9916",
+        "resultRevisions": 1,
+        "firstMatchIndex": 450,
+        "precedingSuccess": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "id": "661ee40ae99841f6987bc772f0634071",
+        "bits": "11101",
+        "delaysMs": [
+          3300,
+          5600,
+          6100,
+          7750,
+          8900
+        ],
+        "selectedTimings": [
+          "baseline",
+          "late",
+          "early",
+          "late",
+          "early"
+        ],
+        "recording": "OFF",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "profileHash": "219b217d624c37b34c2b53ba023ac93def1da338268aca90fdc522f3f9fe947e",
+        "resultRevisions": 1,
+        "firstMatchIndex": 455,
+        "precedingSuccess": [
+          true,
+          true,
+          true,
+          true,
+          false
+        ]
+      },
+      {
+        "id": "572ef293c07643e5bc69a745179eb9f7",
+        "bits": "10101",
+        "delaysMs": [
+          3300,
+          5650,
+          6100,
+          7700,
+          8900
+        ],
+        "selectedTimings": [
+          "baseline",
+          "late",
+          "early",
+          "late",
+          "early"
+        ],
+        "recording": "OFF",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "profileHash": "f1eb44cb555fab5b65ff0653d0c6bb7e4231ec336e3ebdf4f43f41efd0d6b695",
+        "resultRevisions": 1,
+        "firstMatchIndex": 458,
+        "precedingSuccess": [
+          true,
+          true,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "id": "6a4edc008f6d4837ba395b43b09fd3ba",
+        "bits": "11101",
+        "delaysMs": [
+          3150,
+          5600,
+          6100,
+          7700,
+          8900
+        ],
+        "selectedTimings": [
+          "early",
+          "late",
+          "early",
+          "late",
+          "early"
+        ],
+        "recording": "OFF",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "profileHash": "a838dd0ac948be00f58b3c98ed7a1945e98c7263bee585c927fe78f3ff4d12eb",
+        "resultRevisions": 1,
+        "firstMatchIndex": 455,
+        "precedingSuccess": [
+          true,
+          true,
+          true,
+          true,
+          false
+        ]
+      },
+      {
+        "id": "e4159c24e9344017a344f2c3710c7dfa",
+        "bits": "11111",
+        "delaysMs": [
+          3200,
+          5600,
+          6100,
+          7700,
+          8900
+        ],
+        "selectedTimings": [
+          "early",
+          "late",
+          "early",
+          "late",
+          "early"
+        ],
+        "recording": "OFF",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "profileHash": "e5aec5569b7721795b640a5533b01b288c651f045b48619eec84d69a8815727d",
+        "resultRevisions": 1,
+        "firstMatchIndex": 455,
+        "precedingSuccess": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "id": "ba6b791d69b544f9aca828da2c1ccf95",
+        "bits": "11101",
+        "delaysMs": [
+          3150,
+          5600,
+          6250,
+          7700,
+          8900
+        ],
+        "selectedTimings": [
+          "early",
+          "late",
+          "baseline",
+          "late",
+          "early"
+        ],
+        "recording": "OFF",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "profileHash": "beb287ea97ed1260a4e96a7d56464b842295ba8f8e7b5b206ef5d739c1d72dfb",
+        "resultRevisions": 1,
+        "firstMatchIndex": 452,
+        "precedingSuccess": [
+          true,
+          true,
+          true,
+          true,
+          false
+        ]
+      },
+      {
+        "id": "ac9cfe3d15284e14bae80072932aebd9",
+        "bits": "11111",
+        "delaysMs": [
+          3150,
+          5600,
+          6100,
+          7650,
+          8900
+        ],
+        "selectedTimings": [
+          "early",
+          "late",
+          "early",
+          "late",
+          "early"
+        ],
+        "recording": "OFF",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "profileHash": "8a59c8436f8921f0dd331d631299a47419fc1cf8abc61c098b9a5d93910f0037",
+        "resultRevisions": 1,
+        "firstMatchIndex": 456,
+        "precedingSuccess": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "id": "93c73dd2eeab4f47af6226903ad27332",
+        "bits": "11111",
+        "delaysMs": [
+          3300,
+          5400,
+          6300,
+          7500,
+          9100
+        ],
+        "selectedTimings": [
+          "baseline",
+          "baseline",
+          "baseline",
+          "baseline",
+          "baseline"
+        ],
+        "recording": "OFF",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "profileHash": "4674df47e7a41a8784af9c25349d13dd7ce657324c89dbb91c9c65c87de2d64c",
+        "resultRevisions": 1,
+        "firstMatchIndex": 450,
+        "precedingSuccess": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "id": "acd85771e3804638b3490f972403bebf",
+        "bits": "01111",
+        "delaysMs": [
+          3100,
+          5400,
+          6300,
+          7500,
+          9100
+        ],
+        "selectedTimings": [
+          "early",
+          "baseline",
+          "baseline",
+          "baseline",
+          "baseline"
+        ],
+        "recording": "OFF",
+        "recordingBasis": "f8-snapshot-unknown-off",
+        "profileHash": "12ef3111ac87dbf4e3660649e9a77a2e7c90f15e697e21952959830ce1b60e9b",
+        "resultRevisions": 1,
+        "firstMatchIndex": 456,
+        "precedingSuccess": [
+          true,
+          false,
+          false,
+          false,
+          false
+        ]
+      }
+    ],
+    "perAction": [
+      {
+        "actionIndex": 0,
+        "ms": 3050,
+        "allCount": 1,
+        "allSuccess": 0,
+        "precedingSuccessCount": 1,
+        "successWithPrecedingSuccess": 0,
+        "trialIds": [
+          "1bad88d2d8f749c3ae93176990dadaca"
+        ]
+      },
+      {
+        "actionIndex": 0,
+        "ms": 3100,
+        "allCount": 2,
+        "allSuccess": 0,
+        "precedingSuccessCount": 2,
+        "successWithPrecedingSuccess": 0,
+        "trialIds": [
+          "a2e5e4e0fab142d082ffbd267974ccee",
+          "acd85771e3804638b3490f972403bebf"
+        ]
+      },
+      {
+        "actionIndex": 0,
+        "ms": 3150,
+        "allCount": 4,
+        "allSuccess": 4,
+        "precedingSuccessCount": 4,
+        "successWithPrecedingSuccess": 4,
+        "trialIds": [
+          "55ad29f6b4644440899d6179c2a2ccdc",
+          "6a4edc008f6d4837ba395b43b09fd3ba",
+          "ba6b791d69b544f9aca828da2c1ccf95",
+          "ac9cfe3d15284e14bae80072932aebd9"
+        ]
+      },
+      {
+        "actionIndex": 0,
+        "ms": 3200,
+        "allCount": 10,
+        "allSuccess": 10,
+        "precedingSuccessCount": 10,
+        "successWithPrecedingSuccess": 10,
+        "trialIds": [
+          "625761b886e34c5288c50015a67d29bf",
+          "9612f3731af84c2cbe0718c536e5f062",
+          "0a98e4c070d64488af6d4c8b71025bec",
+          "78da3c08f28547669e4b53ef572b8839",
+          "0f718ab091de4ca8b9fd2ee7d8243891",
+          "f1eb5c552c9345ed838ba19003e74bee",
+          "621293afa10f49ba8b21e839747aced9",
+          "ca89413dc0034c7c9c3409db545fc305",
+          "50565e57decc45ad91ae98e75be4b5c9",
+          "e4159c24e9344017a344f2c3710c7dfa"
+        ]
+      },
+      {
+        "actionIndex": 0,
+        "ms": 3300,
+        "allCount": 7,
+        "allSuccess": 7,
+        "precedingSuccessCount": 7,
+        "successWithPrecedingSuccess": 7,
+        "trialIds": [
+          "539452dac2904e778dbddf6df099f1d5",
+          "2a55ec2f82d14e0ab89561b5138bddc8",
+          "ae24d12281b7495db62162d4f3d2dab9",
+          "c4b8af7b1f524d1c9d4b40cb0ae3147f",
+          "661ee40ae99841f6987bc772f0634071",
+          "572ef293c07643e5bc69a745179eb9f7",
+          "93c73dd2eeab4f47af6226903ad27332"
+        ]
+      },
+      {
+        "actionIndex": 0,
+        "ms": 3400,
+        "allCount": 2,
+        "allSuccess": 2,
+        "precedingSuccessCount": 2,
+        "successWithPrecedingSuccess": 2,
+        "trialIds": [
+          "ea515cec3c5f4ed4a7def1ccf066a346",
+          "4d1b6d006ad84bd6ba75769b2d009eee"
+        ]
+      },
+      {
+        "actionIndex": 0,
+        "ms": 3450,
+        "allCount": 1,
+        "allSuccess": 1,
+        "precedingSuccessCount": 1,
+        "successWithPrecedingSuccess": 1,
+        "trialIds": [
+          "a160a1ee400a4bffaf5b86b000a59604"
+        ]
+      },
+      {
+        "actionIndex": 0,
+        "ms": 3500,
+        "allCount": 1,
+        "allSuccess": 0,
+        "precedingSuccessCount": 1,
+        "successWithPrecedingSuccess": 0,
+        "trialIds": [
+          "9b5d0e4df3f145548963a32955768c59"
+        ]
+      },
+      {
+        "actionIndex": 1,
+        "ms": 5100,
+        "allCount": 1,
+        "allSuccess": 0,
+        "precedingSuccessCount": 1,
+        "successWithPrecedingSuccess": 0,
+        "trialIds": [
+          "621293afa10f49ba8b21e839747aced9"
+        ]
+      },
+      {
+        "actionIndex": 1,
+        "ms": 5150,
+        "allCount": 4,
+        "allSuccess": 3,
+        "precedingSuccessCount": 4,
+        "successWithPrecedingSuccess": 3,
+        "trialIds": [
+          "f1eb5c552c9345ed838ba19003e74bee",
+          "ca89413dc0034c7c9c3409db545fc305",
+          "50565e57decc45ad91ae98e75be4b5c9",
+          "ea515cec3c5f4ed4a7def1ccf066a346"
+        ]
+      },
+      {
+        "actionIndex": 1,
+        "ms": 5200,
+        "allCount": 4,
+        "allSuccess": 4,
+        "precedingSuccessCount": 3,
+        "successWithPrecedingSuccess": 3,
+        "trialIds": [
+          "0f718ab091de4ca8b9fd2ee7d8243891",
+          "4d1b6d006ad84bd6ba75769b2d009eee",
+          "a160a1ee400a4bffaf5b86b000a59604",
+          "9b5d0e4df3f145548963a32955768c59"
+        ]
+      },
+      {
+        "actionIndex": 1,
+        "ms": 5300,
+        "allCount": 1,
+        "allSuccess": 1,
+        "precedingSuccessCount": 1,
+        "successWithPrecedingSuccess": 1,
+        "trialIds": [
+          "625761b886e34c5288c50015a67d29bf"
+        ]
+      },
+      {
+        "actionIndex": 1,
+        "ms": 5400,
+        "allCount": 2,
+        "allSuccess": 2,
+        "precedingSuccessCount": 1,
+        "successWithPrecedingSuccess": 1,
+        "trialIds": [
+          "93c73dd2eeab4f47af6226903ad27332",
+          "acd85771e3804638b3490f972403bebf"
+        ]
+      },
+      {
+        "actionIndex": 1,
+        "ms": 5450,
+        "allCount": 6,
+        "allSuccess": 4,
+        "precedingSuccessCount": 4,
+        "successWithPrecedingSuccess": 4,
+        "trialIds": [
+          "9612f3731af84c2cbe0718c536e5f062",
+          "0a98e4c070d64488af6d4c8b71025bec",
+          "78da3c08f28547669e4b53ef572b8839",
+          "1bad88d2d8f749c3ae93176990dadaca",
+          "a2e5e4e0fab142d082ffbd267974ccee",
+          "55ad29f6b4644440899d6179c2a2ccdc"
+        ]
+      },
+      {
+        "actionIndex": 1,
+        "ms": 5500,
+        "allCount": 1,
+        "allSuccess": 1,
+        "precedingSuccessCount": 1,
+        "successWithPrecedingSuccess": 1,
+        "trialIds": [
+          "539452dac2904e778dbddf6df099f1d5"
+        ]
+      },
+      {
+        "actionIndex": 1,
+        "ms": 5550,
+        "allCount": 1,
+        "allSuccess": 1,
+        "precedingSuccessCount": 1,
+        "successWithPrecedingSuccess": 1,
+        "trialIds": [
+          "2a55ec2f82d14e0ab89561b5138bddc8"
+        ]
+      },
+      {
+        "actionIndex": 1,
+        "ms": 5600,
+        "allCount": 7,
+        "allSuccess": 7,
+        "precedingSuccessCount": 7,
+        "successWithPrecedingSuccess": 7,
+        "trialIds": [
+          "ae24d12281b7495db62162d4f3d2dab9",
+          "c4b8af7b1f524d1c9d4b40cb0ae3147f",
+          "661ee40ae99841f6987bc772f0634071",
+          "6a4edc008f6d4837ba395b43b09fd3ba",
+          "e4159c24e9344017a344f2c3710c7dfa",
+          "ba6b791d69b544f9aca828da2c1ccf95",
+          "ac9cfe3d15284e14bae80072932aebd9"
+        ]
+      },
+      {
+        "actionIndex": 1,
+        "ms": 5650,
+        "allCount": 1,
+        "allSuccess": 0,
+        "precedingSuccessCount": 1,
+        "successWithPrecedingSuccess": 0,
+        "trialIds": [
+          "572ef293c07643e5bc69a745179eb9f7"
+        ]
+      },
+      {
+        "actionIndex": 2,
+        "ms": 6100,
+        "allCount": 15,
+        "allSuccess": 15,
+        "precedingSuccessCount": 12,
+        "successWithPrecedingSuccess": 12,
+        "trialIds": [
+          "9612f3731af84c2cbe0718c536e5f062",
+          "0a98e4c070d64488af6d4c8b71025bec",
+          "78da3c08f28547669e4b53ef572b8839",
+          "1bad88d2d8f749c3ae93176990dadaca",
+          "a2e5e4e0fab142d082ffbd267974ccee",
+          "55ad29f6b4644440899d6179c2a2ccdc",
+          "539452dac2904e778dbddf6df099f1d5",
+          "2a55ec2f82d14e0ab89561b5138bddc8",
+          "ae24d12281b7495db62162d4f3d2dab9",
+          "c4b8af7b1f524d1c9d4b40cb0ae3147f",
+          "661ee40ae99841f6987bc772f0634071",
+          "572ef293c07643e5bc69a745179eb9f7",
+          "6a4edc008f6d4837ba395b43b09fd3ba",
+          "e4159c24e9344017a344f2c3710c7dfa",
+          "ac9cfe3d15284e14bae80072932aebd9"
+        ]
+      },
+      {
+        "actionIndex": 2,
+        "ms": 6250,
+        "allCount": 2,
+        "allSuccess": 2,
+        "precedingSuccessCount": 2,
+        "successWithPrecedingSuccess": 2,
+        "trialIds": [
+          "625761b886e34c5288c50015a67d29bf",
+          "ba6b791d69b544f9aca828da2c1ccf95"
+        ]
+      },
+      {
+        "actionIndex": 2,
+        "ms": 6300,
+        "allCount": 2,
+        "allSuccess": 2,
+        "precedingSuccessCount": 1,
+        "successWithPrecedingSuccess": 1,
+        "trialIds": [
+          "93c73dd2eeab4f47af6226903ad27332",
+          "acd85771e3804638b3490f972403bebf"
+        ]
+      },
+      {
+        "actionIndex": 2,
+        "ms": 6450,
+        "allCount": 3,
+        "allSuccess": 2,
+        "precedingSuccessCount": 2,
+        "successWithPrecedingSuccess": 2,
+        "trialIds": [
+          "0f718ab091de4ca8b9fd2ee7d8243891",
+          "f1eb5c552c9345ed838ba19003e74bee",
+          "621293afa10f49ba8b21e839747aced9"
+        ]
+      },
+      {
+        "actionIndex": 2,
+        "ms": 6500,
+        "allCount": 6,
+        "allSuccess": 4,
+        "precedingSuccessCount": 4,
+        "successWithPrecedingSuccess": 4,
+        "trialIds": [
+          "ca89413dc0034c7c9c3409db545fc305",
+          "50565e57decc45ad91ae98e75be4b5c9",
+          "ea515cec3c5f4ed4a7def1ccf066a346",
+          "4d1b6d006ad84bd6ba75769b2d009eee",
+          "a160a1ee400a4bffaf5b86b000a59604",
+          "9b5d0e4df3f145548963a32955768c59"
+        ]
+      },
+      {
+        "actionIndex": 3,
+        "ms": 7350,
+        "allCount": 9,
+        "allSuccess": 6,
+        "precedingSuccessCount": 6,
+        "successWithPrecedingSuccess": 6,
+        "trialIds": [
+          "0f718ab091de4ca8b9fd2ee7d8243891",
+          "f1eb5c552c9345ed838ba19003e74bee",
+          "621293afa10f49ba8b21e839747aced9",
+          "ca89413dc0034c7c9c3409db545fc305",
+          "50565e57decc45ad91ae98e75be4b5c9",
+          "ea515cec3c5f4ed4a7def1ccf066a346",
+          "4d1b6d006ad84bd6ba75769b2d009eee",
+          "a160a1ee400a4bffaf5b86b000a59604",
+          "9b5d0e4df3f145548963a32955768c59"
+        ]
+      },
+      {
+        "actionIndex": 3,
+        "ms": 7500,
+        "allCount": 2,
+        "allSuccess": 2,
+        "precedingSuccessCount": 1,
+        "successWithPrecedingSuccess": 1,
+        "trialIds": [
+          "93c73dd2eeab4f47af6226903ad27332",
+          "acd85771e3804638b3490f972403bebf"
+        ]
+      },
+      {
+        "actionIndex": 3,
+        "ms": 7550,
+        "allCount": 1,
+        "allSuccess": 1,
+        "precedingSuccessCount": 1,
+        "successWithPrecedingSuccess": 1,
+        "trialIds": [
+          "625761b886e34c5288c50015a67d29bf"
+        ]
+      },
+      {
+        "actionIndex": 3,
+        "ms": 7650,
+        "allCount": 8,
+        "allSuccess": 6,
+        "precedingSuccessCount": 6,
+        "successWithPrecedingSuccess": 6,
+        "trialIds": [
+          "78da3c08f28547669e4b53ef572b8839",
+          "1bad88d2d8f749c3ae93176990dadaca",
+          "a2e5e4e0fab142d082ffbd267974ccee",
+          "55ad29f6b4644440899d6179c2a2ccdc",
+          "539452dac2904e778dbddf6df099f1d5",
+          "2a55ec2f82d14e0ab89561b5138bddc8",
+          "ae24d12281b7495db62162d4f3d2dab9",
+          "ac9cfe3d15284e14bae80072932aebd9"
+        ]
+      },
+      {
+        "actionIndex": 3,
+        "ms": 7700,
+        "allCount": 6,
+        "allSuccess": 2,
+        "precedingSuccessCount": 5,
+        "successWithPrecedingSuccess": 2,
+        "trialIds": [
+          "0a98e4c070d64488af6d4c8b71025bec",
+          "c4b8af7b1f524d1c9d4b40cb0ae3147f",
+          "572ef293c07643e5bc69a745179eb9f7",
+          "6a4edc008f6d4837ba395b43b09fd3ba",
+          "e4159c24e9344017a344f2c3710c7dfa",
+          "ba6b791d69b544f9aca828da2c1ccf95"
+        ]
+      },
+      {
+        "actionIndex": 3,
+        "ms": 7750,
+        "allCount": 2,
+        "allSuccess": 0,
+        "precedingSuccessCount": 2,
+        "successWithPrecedingSuccess": 0,
+        "trialIds": [
+          "9612f3731af84c2cbe0718c536e5f062",
+          "661ee40ae99841f6987bc772f0634071"
+        ]
+      },
+      {
+        "actionIndex": 4,
+        "ms": 8900,
+        "allCount": 16,
+        "allSuccess": 14,
+        "precedingSuccessCount": 8,
+        "successWithPrecedingSuccess": 8,
+        "trialIds": [
+          "9612f3731af84c2cbe0718c536e5f062",
+          "0a98e4c070d64488af6d4c8b71025bec",
+          "78da3c08f28547669e4b53ef572b8839",
+          "1bad88d2d8f749c3ae93176990dadaca",
+          "a2e5e4e0fab142d082ffbd267974ccee",
+          "55ad29f6b4644440899d6179c2a2ccdc",
+          "539452dac2904e778dbddf6df099f1d5",
+          "2a55ec2f82d14e0ab89561b5138bddc8",
+          "ae24d12281b7495db62162d4f3d2dab9",
+          "c4b8af7b1f524d1c9d4b40cb0ae3147f",
+          "661ee40ae99841f6987bc772f0634071",
+          "572ef293c07643e5bc69a745179eb9f7",
+          "6a4edc008f6d4837ba395b43b09fd3ba",
+          "e4159c24e9344017a344f2c3710c7dfa",
+          "ba6b791d69b544f9aca828da2c1ccf95",
+          "ac9cfe3d15284e14bae80072932aebd9"
+        ]
+      },
+      {
+        "actionIndex": 4,
+        "ms": 9100,
+        "allCount": 3,
+        "allSuccess": 3,
+        "precedingSuccessCount": 2,
+        "successWithPrecedingSuccess": 2,
+        "trialIds": [
+          "625761b886e34c5288c50015a67d29bf",
+          "93c73dd2eeab4f47af6226903ad27332",
+          "acd85771e3804638b3490f972403bebf"
+        ]
+      },
+      {
+        "actionIndex": 4,
+        "ms": 9300,
+        "allCount": 9,
+        "allSuccess": 5,
+        "precedingSuccessCount": 6,
+        "successWithPrecedingSuccess": 5,
+        "trialIds": [
+          "0f718ab091de4ca8b9fd2ee7d8243891",
+          "f1eb5c552c9345ed838ba19003e74bee",
+          "621293afa10f49ba8b21e839747aced9",
+          "ca89413dc0034c7c9c3409db545fc305",
+          "50565e57decc45ad91ae98e75be4b5c9",
+          "ea515cec3c5f4ed4a7def1ccf066a346",
+          "4d1b6d006ad84bd6ba75769b2d009eee",
+          "a160a1ee400a4bffaf5b86b000a59604",
+          "9b5d0e4df3f145548963a32955768c59"
+        ]
+      }
+    ]
+  },
+  "trials": [
+    {
+      "file": "trial-d41b2ccb2a4f41c6b80b60f08da78ac1.json",
+      "trialId": "625761b886e34c5288c50015a67d29bf",
+      "at": "2026-09-24T09:59:54.1540812Z",
+      "delays": [
+        3200,
+        5300,
+        6250,
+        7550,
+        9100
+      ],
+      "bits": "11111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "rawSha256": "70a646090f287d5ca46c6328ae3e6bce4d5f24a14697dbf91b074598d4239eb5",
+      "resultSha256": "5e330bba13126cdefce358ec981171cd2e8397ee80d1aed421ae4a9cc18192a5",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "file": "trial-f4ff6dd16e86424192932c618e78a747.json",
+      "trialId": "9612f3731af84c2cbe0718c536e5f062",
+      "at": "2026-09-24T10:00:52.9435891Z",
+      "delays": [
+        3200,
+        5450,
+        6100,
+        7750,
+        8900
+      ],
+      "bits": "11101",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "rawSha256": "cbbfea2fc889d8648a34a25844df9abed7c91e3a44812b30637ca9a9ab1fd500",
+      "resultSha256": "6317ad91088999e0a6dbdd5dea99e3192393da49a13290727b20f7a4dba6878c",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "file": "trial-5c154509eb3d4a5091c606bb3f6b0f9c.json",
+      "trialId": "0a98e4c070d64488af6d4c8b71025bec",
+      "at": "2026-09-24T10:01:51.2336263Z",
+      "delays": [
+        3200,
+        5450,
+        6100,
+        7700,
+        8900
+      ],
+      "bits": "11101",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "rawSha256": "0788ff0a6a6e6f5f34b3ab9f39cee6f2d64dfc220e33c179426fa4bfab62b9c7",
+      "resultSha256": "5effa771481fadfe943c9cbde8bec7ecae394efde3e90ff370afb495eb6d4366",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "file": "trial-794ebd6621964eed9de00f2a66073e9d.json",
+      "trialId": "78da3c08f28547669e4b53ef572b8839",
+      "at": "2026-09-24T10:04:11.3233047Z",
+      "delays": [
+        3200,
+        5450,
+        6100,
+        7650,
+        8900
+      ],
+      "bits": "11111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "rawSha256": "4fc5afe00dd305d91081d1bee4f771afe7e1b3d43111d3d0d24c10e5e29bab47",
+      "resultSha256": "1ff61b3e59dda137d2306af452cb697bf060026d5519a9edf7fcc129b5e8d8a4",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "file": "trial-45284c481bc9453cb389cedb8bb89b89.json",
+      "trialId": "1bad88d2d8f749c3ae93176990dadaca",
+      "at": "2026-09-24T10:05:00.8132128Z",
+      "delays": [
+        3050,
+        5450,
+        6100,
+        7650,
+        8900
+      ],
+      "bits": "00100",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "rawSha256": "80863ca2e070c7f72133410ffb2fdabec723aa7b1cc6cb50b53ed6d624e3ab7c",
+      "resultSha256": "3070dadb411bfd385ccde970b63e4dd680a454caf8460289be8596d7b3489f06",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "file": "trial-bb2fe9b0d362429fa765918c53077950.json",
+      "trialId": "a2e5e4e0fab142d082ffbd267974ccee",
+      "at": "2026-09-24T10:05:58.5529639Z",
+      "delays": [
+        3100,
+        5450,
+        6100,
+        7650,
+        8900
+      ],
+      "bits": "00100",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "rawSha256": "7843aac4cfeb663ec40ad9c9d13dd3dab2a26456ddc36b6386b83574d3bca0aa",
+      "resultSha256": "91d9d2ca7ffa8931bc5ebaf0f5b29228487cdad64a1106791ca2ef4c78748f6b",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "file": "trial-50dd80f61eac41f7ba102f3b2157460b.json",
+      "trialId": "55ad29f6b4644440899d6179c2a2ccdc",
+      "at": "2026-09-24T10:06:43.3225065Z",
+      "delays": [
+        3150,
+        5450,
+        6100,
+        7650,
+        8900
+      ],
+      "bits": "11111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "rawSha256": "aa0d05a971ea51f2ef92cc88546e1bc2719186702aff6a1076494e5708acb8fb",
+      "resultSha256": "259ecbade7254e3128e3d30b96e5eddd2fe885c871ccf64b874602c4247e0fb7",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "file": "trial-2e74c9653d3f4c30a637a897870b58a0.json",
+      "trialId": "0f718ab091de4ca8b9fd2ee7d8243891",
+      "at": "2026-09-24T10:07:32.5400585Z",
+      "delays": [
+        3200,
+        5200,
+        6450,
+        7350,
+        9300
+      ],
+      "bits": "11111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "rawSha256": "de629461eaf9473505ac6aaa491556507a60d5ced66641d75222b2512b8c2259",
+      "resultSha256": "c06ba26978daa712c91de224f1592903832ad065156e0220205713695126fd31",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "file": "trial-08bb4dc11ff14886be94436f385ee6c6.json",
+      "trialId": "f1eb5c552c9345ed838ba19003e74bee",
+      "at": "2026-09-24T10:08:41.8723141Z",
+      "delays": [
+        3200,
+        5150,
+        6450,
+        7350,
+        9300
+      ],
+      "bits": "11111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "rawSha256": "575acbf6eab4f1b3aab13e522f3eb500c837b3701e4964054582b380352d6362",
+      "resultSha256": "eeca7ab4603fb85311f8cf483de47544192536a185e141ca1b44f9e0db1ff548",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "file": "trial-680cc465c75a47c7bc9dd86fdd48bb1e.json",
+      "trialId": "621293afa10f49ba8b21e839747aced9",
+      "at": "2026-09-24T10:09:23.4851377Z",
+      "delays": [
+        3200,
+        5100,
+        6450,
+        7350,
+        9300
+      ],
+      "bits": "10000",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "rawSha256": "5e29925e350e5de96ac303c4e9416f97104714c45f13f992d7dea1a5826a2ab5",
+      "resultSha256": "2412b9f0b1ae0adbc9c474eb5edf0d83dd9fc2d030c436cfc73ed6712285680c",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "file": "trial-34df095008be43ec834e0bc4cae834bf.json",
+      "trialId": "ca89413dc0034c7c9c3409db545fc305",
+      "at": "2026-09-24T10:10:13.3478728Z",
+      "delays": [
+        3200,
+        5150,
+        6500,
+        7350,
+        9300
+      ],
+      "bits": "11110",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "rawSha256": "e30449ec5ec008ec0c3f8876726a1715f7b9fa2e86521244d0f4533652375d5e",
+      "resultSha256": "2a4cb71cb3de876bb23ec336ab6c3aba0ff2cd4e3c311de056e5e8db6b524bd0",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "file": "trial-e6903ba641ac421f8f6baabe1e00d4ab.json",
+      "trialId": "50565e57decc45ad91ae98e75be4b5c9",
+      "at": "2026-09-24T10:12:10.7519883Z",
+      "delays": [
+        3200,
+        5150,
+        6500,
+        7350,
+        9300
+      ],
+      "bits": "11111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "rawSha256": "e18894f9f804eec10d57080a1dc1a55430f2d9ae8d27ec4bd251c7e1565dc4b5",
+      "resultSha256": "044797056401e597e950e5cd0c7e4f51ccd6d72cda1a8491f4844fb4c01a8f7e",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "file": "trial-2a063093b48e4df0b8a72f21d5885b50.json",
+      "trialId": "ea515cec3c5f4ed4a7def1ccf066a346",
+      "at": "2026-09-24T10:13:04.8348030Z",
+      "delays": [
+        3400,
+        5150,
+        6500,
+        7350,
+        9300
+      ],
+      "bits": "10000",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "rawSha256": "fd9a48c61b5d279954d57a38eadedeb43f9794f4ad7f944f27d0a00b8d4caa79",
+      "resultSha256": "083cc1abe8794a30e230d9304475fb963f0a5c3e52ddfc55c247a60009685b12",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "file": "trial-796a9f4947b64dbc876f76111a31c6a4.json",
+      "trialId": "4d1b6d006ad84bd6ba75769b2d009eee",
+      "at": "2026-09-24T10:14:32.8370992Z",
+      "delays": [
+        3400,
+        5200,
+        6500,
+        7350,
+        9300
+      ],
+      "bits": "11111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "rawSha256": "7f6c53dfed875e81e4a547a09d575bc739de89be612d0a065e36a904d99ad0d5",
+      "resultSha256": "11dfcdbfffb07380b612fb88a37db14eb7de317eed1d719f5e568bc794edb1c4",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "file": "trial-b335e32fdb1542738be538280993da3a.json",
+      "trialId": "a160a1ee400a4bffaf5b86b000a59604",
+      "at": "2026-09-24T10:16:15.9009968Z",
+      "delays": [
+        3450,
+        5200,
+        6500,
+        7350,
+        9300
+      ],
+      "bits": "11111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "rawSha256": "a0b8e61672ca087f097a79db0138591455675bac717e1dc69bca32bbeccf86f0",
+      "resultSha256": "4b225acaaa75dfe95aa8c628834f94283435ba2e1d2727aa2643a290646aa7fb",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "file": "trial-2633da1d1b294a739642150cf32d6765.json",
+      "trialId": "9b5d0e4df3f145548963a32955768c59",
+      "at": "2026-09-24T10:17:16.5038688Z",
+      "delays": [
+        3500,
+        5200,
+        6500,
+        7350,
+        9300
+      ],
+      "bits": "01000",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "rawSha256": "dc7df47f970ff9bc1ce8da5506c96d3f8b154b1c4427102faa40669442347bf3",
+      "resultSha256": "23975623cbbb6d563f424582a4fc7e008e18f8e580711ee399b1a513003769bb",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "file": "trial-433af09f07714f57a556060a9e6bcf8f.json",
+      "trialId": "539452dac2904e778dbddf6df099f1d5",
+      "at": "2026-09-24T10:18:47.1044668Z",
+      "delays": [
+        3300,
+        5500,
+        6100,
+        7650,
+        8900
+      ],
+      "bits": "11111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "rawSha256": "4bbe7362f9b9ff9fcd72f50f01576172aedcbac6d98b0d2c58e93c084ad97bb7",
+      "resultSha256": "a46997d0fd01db03ec657802cfbd31fa61a48db0b3ed8aa42ab28f5ff9204291",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "file": "trial-f646ff74d36142f19f45195f5f77058b.json",
+      "trialId": "2a55ec2f82d14e0ab89561b5138bddc8",
+      "at": "2026-09-24T10:19:29.5506014Z",
+      "delays": [
+        3300,
+        5550,
+        6100,
+        7650,
+        8900
+      ],
+      "bits": "11111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "rawSha256": "2e67a395a32e48bde3b2803834bd5c8b26b2a4b59a1ccdd602e5150769c30110",
+      "resultSha256": "13ddec3c0ee11be89e426e20ea3a879862f91961345545df24c99fbf9911e34e",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "file": "trial-de1fa02e448344cda382109744a09566.json",
+      "trialId": "ae24d12281b7495db62162d4f3d2dab9",
+      "at": "2026-09-24T10:20:10.6305780Z",
+      "delays": [
+        3300,
+        5600,
+        6100,
+        7650,
+        8900
+      ],
+      "bits": "11111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "rawSha256": "674f526fc6164e79e773f2a291cbcdd81fcf7248b3112bf60f2e5a0d0afb0ea5",
+      "resultSha256": "b5cf319f8fe59c01330658f3b5008e56560ad744db27076e6d342217e801c837",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "file": "trial-34f47b6f01864eefa64b6127e78be029.json",
+      "trialId": "c4b8af7b1f524d1c9d4b40cb0ae3147f",
+      "at": "2026-09-24T10:20:52.2540018Z",
+      "delays": [
+        3300,
+        5600,
+        6100,
+        7700,
+        8900
+      ],
+      "bits": "11111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "rawSha256": "4a1e16afd833ec99b4e58fd1bea4bc3f837498ef47339cccba9cb9900f27a03c",
+      "resultSha256": "73bb7fa4ce410206640d7f7cf3c3e1f839807c1e6f1dc7670ef6560a7d018db0",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "file": "trial-7a281c5682d54621b219cf8200d9b968.json",
+      "trialId": "661ee40ae99841f6987bc772f0634071",
+      "at": "2026-09-24T10:21:37.7800335Z",
+      "delays": [
+        3300,
+        5600,
+        6100,
+        7750,
+        8900
+      ],
+      "bits": "11101",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "rawSha256": "d96e77150b878ff2984aab3a0c30502ed94bd6fdfe6ee59dad39186d59eb2831",
+      "resultSha256": "aab05c8b5cc7be2a9bfc046f87e9a5ec13368647af5abdd96aa378c1a4ba9a07",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "file": "trial-1d7ca346cddb48e5bd2bc2d393f396c8.json",
+      "trialId": "572ef293c07643e5bc69a745179eb9f7",
+      "at": "2026-09-24T10:22:19.6899314Z",
+      "delays": [
+        3300,
+        5650,
+        6100,
+        7700,
+        8900
+      ],
+      "bits": "10101",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "rawSha256": "c8f0c07ba4dc474d444c3166358472249ff7f29d08788f286d95f28cef86f19a",
+      "resultSha256": "5ca0b9f03dea981d992f4017ed02fd39ed52a69914b6a4d8a5f4904ddef529ba",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "file": "trial-f01ea31b9699448eabb2763b0ad8520e.json",
+      "trialId": "6a4edc008f6d4837ba395b43b09fd3ba",
+      "at": "2026-09-24T10:23:10.9398044Z",
+      "delays": [
+        3150,
+        5600,
+        6100,
+        7700,
+        8900
+      ],
+      "bits": "11101",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "rawSha256": "06c73aa7f5a3478364d78a20a6f00c14e33e0674c8b34b0d7d6dcbc464ac6754",
+      "resultSha256": "407d12dc1a09106c433bee55fd127b12b89f3c554b97c490d41f91c244737235",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "file": "trial-c262e77d41f443aa986d9e483ce7e167.json",
+      "trialId": "e4159c24e9344017a344f2c3710c7dfa",
+      "at": "2026-09-24T10:24:06.0194165Z",
+      "delays": [
+        3200,
+        5600,
+        6100,
+        7700,
+        8900
+      ],
+      "bits": "11111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "rawSha256": "033836774b425de56a55295afdc3aa1eedb011982a052c89efabefa4f3d58bf9",
+      "resultSha256": "704b80eb7ff3c7af35eeccbbf2b9d1839583fd35405d2e9ddb7ae72ebc93fa2d",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "file": "trial-646e81274d364c2492cbb7ee6870485d.json",
+      "trialId": "ba6b791d69b544f9aca828da2c1ccf95",
+      "at": "2026-09-24T10:24:56.0425198Z",
+      "delays": [
+        3150,
+        5600,
+        6250,
+        7700,
+        8900
+      ],
+      "bits": "11101",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "rawSha256": "bc7ff9c3dd0c39844c98c3f5ecf662e10e287241a21e02d2d4860093ccc86e98",
+      "resultSha256": "3ed94916ae661403660bda4dbe347f3b8c6c87a81d4bd4b5a6da331a3c8bd489",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "file": "trial-c865e5db47844afdb9dd9d7e93a498f3.json",
+      "trialId": "ac9cfe3d15284e14bae80072932aebd9",
+      "at": "2026-09-24T10:26:24.4709481Z",
+      "delays": [
+        3150,
+        5600,
+        6100,
+        7650,
+        8900
+      ],
+      "bits": "11111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "rawSha256": "7d7455f21d86b40e591a14a615ca5f3c73fb6d2084e8c57f7212108859c8f838",
+      "resultSha256": "eb31ce78b94a7d7983eea1760258489b0f8ea1b10dc4d8530c9ad8e58c98c372",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "file": "trial-edbf05f7822c43079cabfeb7a8c95b26.json",
+      "trialId": "93c73dd2eeab4f47af6226903ad27332",
+      "at": "2026-09-24T10:27:36.1759958Z",
+      "delays": [
+        3300,
+        5400,
+        6300,
+        7500,
+        9100
+      ],
+      "bits": "11111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "rawSha256": "5b2b631aaad50b0ee3bcf08c7f825c8db7776ba6aa88ef1eb8b0ad03e8402fe7",
+      "resultSha256": "627dee87ed9000f88d6f751dbc6e8e19dfbfa47249686ca8429a8b3610de74bc",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    },
+    {
+      "file": "trial-f7f0b6b468a6401ab143bc7a0e12431a.json",
+      "trialId": "acd85771e3804638b3490f972403bebf",
+      "at": "2026-09-24T10:28:18.1389296Z",
+      "delays": [
+        3100,
+        5400,
+        6300,
+        7500,
+        9100
+      ],
+      "bits": "01111",
+      "prep": "",
+      "status": "submitted-not-game-verified",
+      "rawSha256": "645badb4b88827babb0253c20fd769d37140d28b31f4f278a6690fcb46ed3a8a",
+      "resultSha256": "1db4a8a0d9bae3f4051e7785251a87fc473ca69360da3502e701a522ff013125",
+      "recordingBasis": "f8-snapshot-unknown-off"
+    }
+  ],
+  "representative": {
+    "source": "ZZZ_2026-09-24_19-29-21.mp4",
+    "sha256": "fbdb99a9ecf6784241d79747bff0e579d84572e442362561c2b481c778d7218f",
+    "fps": 60,
+    "frames": 1425,
+    "noticeFirstFrame": 715,
+    "noticeConfirmedFrame": 718,
+    "inputDownFrames": [
+      914,
+      1039,
+      1093,
+      1165,
+      1261
+    ],
+    "preparationRmbSpans": [
+      [
+        495,
+        500
+      ],
+      [
+        564,
+        572
+      ]
+    ],
+    "preparationWSpan": [
+      487,
+      502
+    ],
+    "preClipApproachWSpan": [
+      185,
+      238
+    ],
+    "proposedTrim": [
+      430,
+      1425
+    ],
+    "logTrialId": null,
+    "basis": "User confirms last recording; source overlay agrees with adopted baseline within one frame. Sampled HP10906/12183/17416 stays full through each active character response; four assist transitions and score increments observed. No raw game outcome fabricated.",
+    "noticeReplayPassed": true,
+    "nativeInputCalls": 0
+  },
+  "implementation": {
+    "webOwnerTask": "01a0c854-8093-7671-8bcc-f4caa1c60d99",
+    "state": "web implementation validated; publication tracked in README",
+    "serviceEvidence": "vessel-service-media-20260924.json"
+  }
+}

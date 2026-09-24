@@ -32,6 +32,11 @@ namespace VesperLab
         public double[] AtMs;
         public double HoldMs;
     }
+    public sealed class StartInputPress
+    {
+        public string Id, Label, Key;
+        public double AtMs, HoldMs;
+    }
     public sealed class DetectorProfile
     {
         public string Id { get; set; }
@@ -59,6 +64,7 @@ namespace VesperLab
         public PreparationPress[] Preparation;
         public AuxiliaryPress[] AuxiliaryInputs;
         public StartAttackProfile StartAttack;
+        public StartInputPress[] StartInputs;
         public bool AllowManualMovement;
         public DetectorProfile Detector;
         public ActionProfile[] Actions;
@@ -81,7 +87,7 @@ namespace VesperLab
         private static void Require(bool value, string message) { if (!value) throw new ArgumentException("프로필 오류: " + message); }
         public static void Validate(ExperimentProfile p)
         {
-            Require(p != null && (p.SchemaVersion == 1 || p.SchemaVersion == 2), "지원하는 SchemaVersion은 1 또는 2입니다.");
+            Require(p != null && (p.SchemaVersion == 1 || p.SchemaVersion == 2 || p.SchemaVersion == 3), "지원하는 SchemaVersion은 1, 2 또는 3입니다.");
             Require(!String.IsNullOrWhiteSpace(p.Id) && Regex.IsMatch(p.Id, @"^[a-z0-9][a-z0-9-]{0,79}$"), "명시적인 Id가 필요합니다.");
             Require(!String.IsNullOrWhiteSpace(p.BossId) && !String.IsNullOrWhiteSpace(p.BossLabel) && !String.IsNullOrWhiteSpace(p.Skill) && !String.IsNullOrWhiteSpace(p.Conditions), "보스·스킬·실험 조건이 필요합니다.");
             Require(Finite(p.ManualPreparationRmbUntilMs) && p.ManualPreparationRmbUntilMs >= 0, "수동 준비 RMB 종료 시각은 유한한 비음수여야 합니다.");
@@ -104,7 +110,7 @@ namespace VesperLab
                 }
             var auxiliary = p.AuxiliaryInputs ?? new AuxiliaryPress[0];
             Require(auxiliary.Length <= 32 && auxiliary.All(a => a != null), "비채점 보조 입력은 최대 32개이며 빈 항목은 허용하지 않습니다.");
-            Require(auxiliary.Length == 0 || p.SchemaVersion == 2, "비채점 보조 입력이 있는 프로필은 SchemaVersion 2여야 합니다.");
+            Require(auxiliary.Length == 0 || p.SchemaVersion >= 2, "비채점 보조 입력이 있는 프로필은 SchemaVersion 2 이상이어야 합니다.");
             Require(auxiliary.Select(a => a.Id).Distinct().Count() == auxiliary.Length, "비채점 보조 입력 Id는 중복할 수 없습니다.");
             foreach (var a in auxiliary)
             {
@@ -134,6 +140,25 @@ namespace VesperLab
                         && (i == 0 || start.AtMs[i] >= start.AtMs[i - 1] + start.HoldMs),
                         "시작 입력 시각은 100ms 이상·50ms 단위이며, 순서대로 유지가 겹치지 않고 감지 대기 종료 전에 끝나야 합니다.");
             }
+            var startInputs = p.StartInputs ?? new StartInputPress[0];
+            Require(startInputs.Length == 0 || p.SchemaVersion == 3, "F8 기준 시작 입력은 SchemaVersion 3이어야 합니다.");
+            Require(startInputs.Length == 0 || (p.StartAttack == null && !p.AllowManualMovement && p.ManualPreparationRmbUntilMs == 0),
+                "F8 기준 시작 입력은 기존 시작 공격·수동 이동·수동 준비 RMB와 함께 사용할 수 없습니다.");
+            Require(startInputs.Length <= 16 && startInputs.All(a => a != null), "F8 기준 시작 입력은 최대 16개이며 빈 항목은 허용하지 않습니다.");
+            Require(startInputs.Select(a => a.Id).Distinct().Count() == startInputs.Length, "F8 기준 시작 입력 Id는 중복할 수 없습니다.");
+            foreach (var a in startInputs)
+            {
+                Require(!String.IsNullOrWhiteSpace(a.Id) && !String.IsNullOrWhiteSpace(a.Label) && (a.Key == "W" || a.Key == "RMB"),
+                    "F8 기준 시작 입력 Id·이름·W/RMB 키를 확인하세요.");
+                Require(Finite(a.AtMs) && Finite(a.HoldMs) && a.AtMs >= 100 && a.HoldMs >= 50 && a.HoldMs <= 120000
+                    && a.AtMs % 50 == 0 && a.HoldMs % 50 == 0 && a.AtMs + a.HoldMs < d.TimeoutMs,
+                    "F8 기준 시작 입력은 감지 대기 종료 전 100ms 이상·50ms 단위로 눌렀다 해제해야 합니다.");
+            }
+            for (int i = 0; i < startInputs.Length; i++)
+                for (int j = i + 1; j < startInputs.Length; j++)
+                    Require(startInputs[i].Key != startInputs[j].Key || startInputs[i].AtMs + startInputs[i].HoldMs <= startInputs[j].AtMs
+                        || startInputs[j].AtMs + startInputs[j].HoldMs <= startInputs[i].AtMs,
+                        "같은 F8 기준 시작 키의 유지 시간이 겹칩니다.");
             Require(p.Actions != null && p.Actions.Length >= 1 && p.Actions.Length <= 12 && p.Actions.All(a => a != null), "대응 수는 1~12개입니다.");
             Require(p.Actions.Select(a => a.Id).Distinct().Count() == p.Actions.Length, "대응 Id는 중복할 수 없습니다.");
             foreach (var a in p.Actions)

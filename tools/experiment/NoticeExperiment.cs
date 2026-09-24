@@ -42,6 +42,8 @@ namespace VesperLab
         public List<InputEvent> PreparationInputs = new List<InputEvent>();
         public List<InputEvent> AuxiliaryInputs = new List<InputEvent>();
         public List<InputEvent> StartAttackInputs = new List<InputEvent>();
+        public List<InputEvent> StartInputs = new List<InputEvent>();
+        public string StartTimingOrigin = "F8 monitoring loop start; not physical F8 key-down";
         public double CaptureP50Ms, CaptureP95Ms, CaptureMaxMs, AnalysisP95Ms, PollGapMaxMs;
         public void FreezeRecordingAtF8(DateTime atUtc, ObsObservation observation)
         {
@@ -85,8 +87,8 @@ namespace VesperLab
         {
             public string Key;
             public int Attack;
-            public bool Preparation, Auxiliary, Down;
-            public double Due;
+            public bool Preparation, Auxiliary, StartAttack, StartInput, Down;
+            public double Due, HoldMs;
         }
         public const double HoldMs = ExperimentPlan.HoldMs;
         public static void Validate(NoticeRecord r)
@@ -110,14 +112,25 @@ namespace VesperLab
             string held = null; int heldAttack = 0; long origin = clock.Timestamp; r.StartedUtc = DateTime.UtcNow.ToString("o"); r.OriginQpc = origin; r.QpcFrequency = clock.Frequency;
             var automaticHeld = new Dictionary<string, ScheduledEvent>();
             var startAttack = ProfileStore.Current.StartAttack;
-            int startIndex = 0; bool startHeld = false; double startRelease = 0, lastStartReleaseEndMs = -1;
+            var startInputs = ProfileStore.Current.StartInputs ?? new StartInputPress[0];
+            var startEvents = new List<ScheduledEvent>();
+            if (startAttack != null)
+                for (int i = 0; i < startAttack.AtMs.Length; i++)
+                    startEvents.Add(new ScheduledEvent { Key = startAttack.Key, Attack = i, StartAttack = true, Down = true,
+                        Due = startAttack.AtMs[i], HoldMs = startAttack.HoldMs });
+            else
+                for (int i = 0; i < startInputs.Length; i++)
+                    startEvents.Add(new ScheduledEvent { Key = startInputs[i].Key, Attack = i, StartInput = true, Down = true,
+                        Due = startInputs[i].AtMs, HoldMs = startInputs[i].HoldMs });
+            var startHeld = new Dictionary<string, ScheduledEvent>();
+            double lastStartReleaseEndMs = -1;
             bool automaticPreparation = ProfileStore.Current.Preparation != null && ProfileStore.Current.Preparation.Length > 0;
             bool automaticAuxiliary = ProfileStore.Current.AuxiliaryInputs != null && ProfileStore.Current.AuxiliaryInputs.Any(a => a.Enabled);
             bool automaticSchedule = automaticPreparation || automaticAuxiliary;
             bool guardLmb = startAttack != null || (automaticAuxiliary && ProfileStore.Current.AuxiliaryInputs.Any(a => a.Enabled && a.Key == "LMB"));
             bool guardE = startAttack != null && startAttack.Key == "E";
             bool allowManualMovement = ProfileStore.Current.AllowManualMovement;
-            bool guardDirections = !allowManualMovement && (automaticPreparation || automaticAuxiliary || startAttack != null);
+            bool guardDirections = !allowManualMovement && (automaticPreparation || automaticAuxiliary || startAttack != null || startInputs.Length > 0);
             double noticeOrigin = -1, preparationUntil = ProfileStore.Current.ManualPreparationRmbUntilMs;
             bool firstInputPending = true;
             // Permission is checked at the current time, never latched across a wait.
@@ -127,8 +140,8 @@ namespace VesperLab
             Func<bool> stop = () => cancel() || !sink.IsTargetForeground();
             Func<bool> waitGuard = () => {
                 if (stop()) return true;
-                if (startAttack != null) probe.CheckGeometry();
-                if (sink.AnyControlHeld(held ?? preparationKey(), guardLmb, guardE) || (!allowManualMovement && startAttack != null && sink.AnyDirectionHeld())) throw new InvalidOperationException("대기 중 허용되지 않은 수동 대응 입력을 감지했습니다.");
+                if (startEvents.Count > 0) probe.CheckGeometry();
+                if (sink.AnyControlHeld(held ?? preparationKey(), guardLmb, guardE) || (!allowManualMovement && (startAttack != null || startInputs.Length > 0) && sink.AnyDirectionHeld())) throw new InvalidOperationException("대기 중 허용되지 않은 수동 대응 입력을 감지했습니다.");
                 return false;
             };
             Action check = () => {
@@ -137,8 +150,10 @@ namespace VesperLab
             };
             Action detectionGuard = () => {
                 check();
-                if (sink.AnyControlHeld(startHeld && r.Mode != "observe" ? startAttack.Key : null, guardLmb, guardE)
-                    || (guardDirections && sink.AnyDirectionHeld()))
+                string ownedControl = r.Mode == "observe" ? null : startHeld.Keys.FirstOrDefault(IsControl);
+                string ownedDirection = r.Mode == "observe" ? null : startHeld.Keys.FirstOrDefault(k => k == "W");
+                if (sink.AnyControlHeld(ownedControl, guardLmb, guardE)
+                    || (guardDirections && sink.AnyDirectionHeld(ownedDirection)))
                     throw new InvalidOperationException("감시 중 수동 대응·시작 공격·방향 입력을 감지하여 중단했습니다.");
             };
             try
@@ -150,26 +165,30 @@ namespace VesperLab
                 while (clock.ElapsedMs(origin) < r.TimeoutMs)
                 {
                     detectionGuard();
-                    if (startAttack != null && startIndex < startAttack.AtMs.Length)
+                    if (startEvents.Count > 0)
                     {
-                        double due = startHeld ? startRelease : startAttack.AtMs[startIndex];
-                        if (clock.ElapsedMs(origin) >= due)
+                        var nextStart = startEvents.OrderBy(e => e.Due).ThenBy(e => e.Down ? 1 : 0).First();
+                        if (clock.ElapsedMs(origin) >= nextStart.Due)
                         {
-                            if (clock.ElapsedMs(origin) - due > 50) throw new InvalidOperationException("시작 입력 예약보다 50ms 이상 늦어 중단했습니다.");
-                            if (startHeld)
+                            if (clock.ElapsedMs(origin) - nextStart.Due > 50) throw new InvalidOperationException("시작 입력 예약보다 50ms 이상 늦어 중단했습니다.");
+                            startEvents.Remove(nextStart);
+                            if (nextStart.Down)
                             {
-                                SubmitStartAttack(r, sink, clock, origin, startIndex, false, due);
-                                lastStartReleaseEndMs = clock.ElapsedMs(origin);
-                                startHeld = false; startIndex++;
+                                if (startHeld.ContainsKey(nextStart.Key)) throw new InvalidOperationException("시작 입력 유지 시간이 겹칩니다.");
+                                startHeld.Add(nextStart.Key, nextStart); // Own before Send, including a failed submission.
+                                SubmitStartEvent(r, sink, clock, origin, nextStart);
+                                startEvents.Add(new ScheduledEvent { Key = nextStart.Key, Attack = nextStart.Attack,
+                                    StartAttack = nextStart.StartAttack, StartInput = nextStart.StartInput, Down = false,
+                                    Due = clock.ElapsedMs(origin) + nextStart.HoldMs });
                             }
                             else
                             {
-                                startHeld = true; // Acquire before a submission that can throw.
-                                SubmitStartAttack(r, sink, clock, origin, startIndex, true, due);
-                                startRelease = clock.ElapsedMs(origin) + startAttack.HoldMs;
-                                if (startIndex + 1 < startAttack.AtMs.Length && startRelease > startAttack.AtMs[startIndex + 1])
-                                    throw new InvalidOperationException("시작 입력 전송 지연으로 다음 유지 시간이 겹칩니다.");
+                                SubmitStartEvent(r, sink, clock, origin, nextStart);
+                                lastStartReleaseEndMs = clock.ElapsedMs(origin);
+                                startHeld.Remove(nextStart.Key);
                             }
+                            if (startEvents.Any(e => e.Down && startHeld.ContainsKey(e.Key) && e.Due < startEvents.Where(x => !x.Down && x.Key == e.Key).Select(x => x.Due).DefaultIfEmpty(Double.PositiveInfinity).Min()))
+                                throw new InvalidOperationException("시작 입력 전송 지연으로 다음 유지 시간이 겹칩니다.");
                             detectionGuard();
                         }
                     }
@@ -177,13 +196,19 @@ namespace VesperLab
                     if (sample.AnalysisEndMs - sample.CaptureBeginMs > 100)
                         throw new InvalidOperationException("캡처·분석이 100ms를 초과했습니다. 기록을 확인하세요.");
                     if (clock.ElapsedMs(origin) >= r.TimeoutMs) break;
-                    if (edge.Push(sample, r.Samples.Count - 1, r.Samples))
+                    bool confirmed = edge.Push(sample, r.Samples.Count - 1, r.Samples);
+                    if (startInputs.Length > 0 && edge.First >= 0 && startEvents.Count > 0)
+                    {
+                        r.PreviousAbsentIndex = edge.PreviousAbsent; r.FirstMatchIndex = edge.First;
+                        throw new InvalidOperationException("시작 W/RMB 입력의 해제 완료 전에 문구가 처음 일치하여 중단했습니다.");
+                    }
+                    if (confirmed)
                     {
                         r.PreviousAbsentIndex = edge.PreviousAbsent; r.FirstMatchIndex = edge.First; r.ConfirmedIndex = edge.Confirmed;
                         noticeOrigin = r.Samples[edge.First].CaptureEndMs;
-                        if (startAttack != null && (startIndex < startAttack.AtMs.Length || noticeOrigin < lastStartReleaseEndMs))
-                            throw new InvalidOperationException("시작 " + startAttack.Key + " "
-                                + (startAttack.Key == "E" ? "한 번" : "다섯 번") + "의 해제 완료 전에 문구가 감지되어 중단했습니다.");
+                        if ((startAttack != null || startInputs.Length > 0) && (startEvents.Count > 0 || noticeOrigin < lastStartReleaseEndMs))
+                            throw new InvalidOperationException("시작 " + (startAttack != null ? startAttack.Key + " "
+                                + (startAttack.Key == "E" ? "한 번" : "다섯 번") : "W/RMB 입력") + "의 해제 완료 전에 문구가 감지되어 중단했습니다.");
                         r.DueMs = r.DelaysMs.Select(delay => noticeOrigin + delay).ToArray();
                         r.Status = "detected"; save(r);
                         if (progress != null) progress((r.Mode == "observe" ? "문구 감지 · 가상 입력 시각까지 대기 중" : "문구 감지 · 입력 예약됨")
@@ -193,9 +218,8 @@ namespace VesperLab
                     // Avoid busy-spinning for the entire detection phase.
                     System.Threading.Thread.Sleep(1);
                     double next = sample.CaptureBeginMs + r.PollMs;
-                    if (startAttack != null && startIndex < startAttack.AtMs.Length)
-                        next = Math.Min(next, startHeld ? startRelease : startAttack.AtMs[startIndex]);
-                    clock.WaitUntil(origin, next, startAttack == null ? stop : (Func<bool>)(() => { detectionGuard(); return false; }));
+                    if (startEvents.Count > 0) next = Math.Min(next, startEvents.Min(e => e.Due));
+                    clock.WaitUntil(origin, next, startAttack == null && startInputs.Length == 0 ? stop : (Func<bool>)(() => { detectionGuard(); return false; }));
                 }
                 if (r.DueMs == null) throw new TimeoutException("설정한 대기 시간 안에 새 문구를 감지하지 못했습니다. 문구 출현 전에 F8을 누르세요.");
                 if (automaticSchedule)
@@ -209,11 +233,11 @@ namespace VesperLab
                     double due = press.AtMs.Value;
                     while (clock.ElapsedMs(origin) < due)
                     {
-                        check(); if (sink.AnyControlHeld(preparationKey(), guardLmb, guardE) || (!allowManualMovement && startAttack != null && sink.AnyDirectionHeld())) throw new InvalidOperationException("예약 대기 중 허용되지 않은 수동 대응 입력을 감지했습니다.");
+                        check(); if (sink.AnyControlHeld(preparationKey(), guardLmb, guardE) || (!allowManualMovement && (startAttack != null || startInputs.Length > 0) && sink.AnyDirectionHeld())) throw new InvalidOperationException("예약 대기 중 허용되지 않은 수동 대응 입력을 감지했습니다.");
                         clock.WaitUntil(origin, Math.Min(due, clock.ElapsedMs(origin) + 100), waitGuard);
                     }
                     firstInputPending = false;
-                    check(); if (sink.AnyControlHeld(null, guardLmb, guardE) || (!allowManualMovement && startAttack != null && sink.AnyDirectionHeld())) throw new InvalidOperationException("입력 직전에 수동 입력이 감지됐습니다.");
+                    check(); if (sink.AnyControlHeld(null, guardLmb, guardE) || (!allowManualMovement && (startAttack != null || startInputs.Length > 0) && sink.AnyDirectionHeld())) throw new InvalidOperationException("입력 직전에 수동 입력이 감지됐습니다.");
                     if (clock.ElapsedMs(origin) - due > 50) throw new InvalidOperationException("예약 시각보다 50ms 이상 늦어 입력을 취소했습니다.");
                     if (r.Mode == "observe")
                     {
@@ -238,10 +262,11 @@ namespace VesperLab
             catch (Exception e) { r.Status = "failed"; r.Error = e.Message; }
             finally
             {
-                if (startHeld)
+                foreach (var press in startHeld.Values.ToArray())
                 {
-                    try { SubmitStartAttack(r, sink, clock, origin, startIndex, false, clock.ElapsedMs(origin)); }
-                    catch (Exception e) { r.Status = "release-failed"; r.Error += " / " + startAttack.Key + " 해제 실패: " + e.Message; }
+                    try { SubmitStartEvent(r, sink, clock, origin, new ScheduledEvent { Key = press.Key, Attack = press.Attack,
+                        StartAttack = press.StartAttack, StartInput = press.StartInput, Down = false, Due = clock.ElapsedMs(origin) }); }
+                    catch (Exception e) { r.Status = "release-failed"; r.Error += " / " + press.Key + " 해제 실패: " + e.Message; }
                 }
                 // Each owned key gets its own release attempt even when another release fails.
                 foreach (var press in automaticHeld.Values.ToArray())
@@ -319,13 +344,13 @@ namespace VesperLab
                 guard();
             }
         }
-        private static void SubmitStartAttack(NoticeRecord r, IInputSink sink, ITrialClock clock, long origin, int attack, bool down, double due)
+        private static void SubmitStartEvent(NoticeRecord r, IInputSink sink, ITrialClock clock, long origin, ScheduledEvent start)
         {
-            string key = ProfileStore.Current.StartAttack.Key;
+            var target = start.StartAttack ? r.StartAttackInputs : r.StartInputs;
             if (r.Mode == "observe")
-                r.StartAttackInputs.Add(new InputEvent { Action = down ? "virtual-down" : "virtual-up", Key = key, Attack = attack,
-                    DueMs = due, BeginMs = clock.ElapsedMs(origin), EndMs = clock.ElapsedMs(origin) });
-            else SendTo(r.StartAttackInputs, sink, clock, origin, key, attack, down, due);
+                target.Add(new InputEvent { Action = start.Down ? "virtual-down" : "virtual-up", Key = start.Key, Attack = start.Attack,
+                    DueMs = start.Due, BeginMs = clock.ElapsedMs(origin), EndMs = clock.ElapsedMs(origin) });
+            else SendTo(target, sink, clock, origin, start.Key, start.Attack, start.Down, start.Due);
         }
         private static void SubmitEvent(NoticeRecord r, IInputSink sink, ITrialClock clock, long origin, ScheduledEvent scheduled)
         {
