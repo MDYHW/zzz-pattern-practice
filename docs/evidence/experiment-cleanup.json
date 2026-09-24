@@ -2,7 +2,7 @@
   "current": {
     "date": "2026-09-24",
     "status": "completed",
-    "policy": "Keep active service originals/assets, necessary final proof and summaries, active runtime/settings and common reusable tools. Sun keeps two representative sources and their trial evidence; removed completed exploration without archives.",
+    "policy": "Keep current service originals/assets, final adopted evidence and representative crossed/baseline raw trials, active runtime/settings/profiles, and common reusable tools. Completed exploration and intermediates were removed without an archive.",
     "retainedOriginals": [
       {
         "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-20_06-23-16.mp4",
@@ -48,59 +48,37 @@
         "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-24_14-40-53.mp4",
         "sha256": "218e29a93ad6a79da239915b8629fdddb2e2846dc7b28d06717c132acb20acbe",
         "role": "current-service-source"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-24_19-29-21.mp4",
+        "sha256": "fbdb99a9ecf6784241d79747bff0e579d84572e442362561c2b481c778d7218f",
+        "role": "current-service-source"
+      },
+      {
+        "path": "<PRIVATE_HOME>\\Videos\\ZZZ_2026-09-24_21-18-26.mp4",
+        "sha256": "b28069a815123450367e0bb005799e7c92aa70d57ba1f27d127318a7c5cbbc71",
+        "role": "current-service-source"
       }
     ],
-    "serviceAssets": "Sixteen current public/media clip/poster assets for eight representative videos. Sun final hashes/alignment/audio in sun-service-media-20260924.json; existing boss evidence remains valid.",
+    "serviceAssets": "Twenty current public/media clip/poster assets for ten representative service videos. Final hashes, alignment and audio are in the per-boss service-media evidence.",
     "retainedRuntimeAndTrial": [
       {
         "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\ControlExperiment.exe",
-        "sha256": "d45ca6a8f75ddb0bb002beaf4226e2b0d15caa5b143b3194a55e100c482a661d"
+        "sha256": "98d67ce9b7ad9ec46f4df5497e3c8c5c50a0853f40e2c2d9fa3679d7a36cc5fd",
+        "role": "active-experiment-runtime"
       },
       {
-        "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\profiles\\kusarikku-execute-01.json",
-        "sha256": "7c33fb0f4fa7298de2f9c5137a0fba094ba2cb844698f6e8c6730a0a8e512d38"
+        "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\profiles",
+        "role": "active-user-profiles-directory"
       },
       {
-        "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-6ced000c8efe45289fe7fef918cf0068.json",
-        "sha256": "b9902b313f8e83033c0c0cdb6c6d9833d412b87ae0435b1d28e6abc44be8846a"
+        "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\settings.json",
+        "role": "active-user-settings; content omitted"
       },
       {
-        "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-6ced000c8efe45289fe7fef918cf0068.json.result.json",
-        "sha256": "ab034f00848ae7c292ff674ea6178aa014686f3f71870adeb3b48d6b92a999fe"
-      },
-      {
-        "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-6ced000c8efe45289fe7fef918cf0068.png",
-        "sha256": "1e0c2fb69afb79889b814c9f3121476689673d79db2315e333afbcf6bec24362"
-      },
-      {
-        "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-8fe7452f0680488d8ff14be68318057c.json",
-        "sha256": "f138c12927ca06200e1d9a7973d86957e5a2792e1bff6c663f28c6f0628ba626",
-        "role": "representative-trial"
-      },
-      {
-        "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-8fe7452f0680488d8ff14be68318057c.json.result.json",
-        "sha256": "70b52b2b9b09545b6f6d5f3116ad13a149ca6a630ba67d2823469e8cf72dac1d",
-        "role": "representative-trial"
-      },
-      {
-        "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-8fe7452f0680488d8ff14be68318057c.png",
-        "sha256": "9a6ae06a7c24f9323bd9b7a58dae9089da3e45a95b8cc62e67ba2af975bcdf58",
-        "role": "representative-trial"
-      },
-      {
-        "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-b47ecc274bb34106850f382499d0de62.json",
-        "sha256": "cf87bfe46d48c40f154237e01c37c83716bbe77bdb9fc7f912b08366f4180905",
-        "role": "representative-trial"
-      },
-      {
-        "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-b47ecc274bb34106850f382499d0de62.json.result.json",
-        "sha256": "ee93b915278631e9e81b377995ef505f9513bb238bd3f2cfd2ca7f70323916f6",
-        "role": "representative-trial"
-      },
-      {
-        "path": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-b47ecc274bb34106850f382499d0de62.png",
-        "sha256": "565783c6364b17a5ed3358b7ddf40a8e8e924034f9cf6a33e5699c21a0560233",
-        "role": "representative-trial"
+        "path": "<PRIVATE_HOME>\\.codex\\worktrees\\02fa\\zzz-pattern-practice\\.local\\experiments\\records.json",
+        "sha256": "5e74441b198d2da4d7264432c3d870f720051f128ab380d72f0f1bf8ce3a82c1",
+        "role": "11 representative trial rows"
       }
     ],
     "kusarikkuClosure": {
@@ -136,17 +114,22 @@
       "docs/evidence/mirage-archer-unit-rmb-20260922.json",
       "docs/evidence/mirage-archer-unit-service-20260922.json",
       "docs/evidence/mirage-recovery-distance-20260922.json",
-      "docs/experiments/arrow-unit-control-skill.md"
+      "docs/experiments/arrow-unit-control-skill.md",
+      "docs/experiments/vessel-control-skill.md",
+      "docs/evidence/vessel-experiment-results-20260924.json",
+      "docs/experiments/graymane-control-skill.md",
+      "docs/evidence/graymane-experiment-results-20260924.json"
     ],
     "verification": {
-      "protectedHashesUnchangedAtDeletion": 194,
+      "deletedVideoHashesMatchedSourceEvidence": true,
+      "retainedSourceHashesUnchanged": true,
       "removedPathsAbsent": true,
-      "recordStoreValidation": "passed with three retained representative trials",
+      "recordStoreValidation": "passed: 11 retained representative rows; raw/result/source links validated",
       "sourceOrRuntimeBehaviorChanged": false
     },
     "limitations": [
-      "Deleted historical originals/trials cannot be replayed.",
-      "Historical paths below describe earlier cleanup, not currently available files."
+      "Deleted historical originals/trials cannot be replayed; trial rows in final evidence are provenance and aggregate results.",
+      "Historical paths in earlier cleanup sections do not represent available files."
     ],
     "retainedMirageTrials": [
       {
@@ -284,6 +267,145 @@
         "independentReadOnlyReview": "No preserved assets in deletion list; stale links corrected before deletion."
       },
       "pending": "User-requested integrated entry web allowance2025–2275ms remains gameplay-unverified; measured adoption/profiles2050–2250ms preserved. Not a blocker to closure."
+    },
+    "retainedTrialIdsByProfile": {
+      "mirage-archer-unit-attack-09": [
+        "f458ddae93024a70974794805167e726",
+        "f0ef0f89899741b282aaf610046316be",
+        "53581e707ac6420a8f50491b5ace86e0"
+      ],
+      "phaethon-execute-01": [
+        "eb31a4082f934d86964d1ad4783268c2"
+      ],
+      "phaethon-integrated-execute-02": [
+        "982d16a2ef284fabbdb7d08a9f6b4a4d"
+      ],
+      "vessel-execute-01": [
+        "a160a1ee400a4bffaf5b86b000a59604",
+        "ac9cfe3d15284e14bae80072932aebd9",
+        "93c73dd2eeab4f47af6226903ad27332"
+      ],
+      "graymane-execute-01": [
+        "ff79ac210c3e4875847d3040fafd6d28",
+        "fd0586453e2142b0938b105453552371",
+        "5830a2f0d66740769541ac70a438e21c"
+      ]
+    },
+    "retainedRawTrialFiles": [
+      {
+        "trialId": "f458ddae93024a70974794805167e726",
+        "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-4b6458699eda4090a61239b5de060b2d.json",
+        "sha256": "3628145801dd23cf4cea755d976df5b0038352f23dcf05db1edcbba73aeec6d6"
+      },
+      {
+        "trialId": "f0ef0f89899741b282aaf610046316be",
+        "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-4aed7aff2d7d409ca0ab24ca2c67aff2.json",
+        "sha256": "51e2e5a1223f66af44a368471c3a62c9b893709f11f9e4918074ca51354b0680"
+      },
+      {
+        "trialId": "53581e707ac6420a8f50491b5ace86e0",
+        "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-c3965c1132d4480aa7325db1e06c8bd8.json",
+        "sha256": "31388b469ddec7a51a7a5c9df5c4e49c438a8ef995539f299da4a1278e539684"
+      },
+      {
+        "trialId": "eb31a4082f934d86964d1ad4783268c2",
+        "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-8fe7452f0680488d8ff14be68318057c.json",
+        "sha256": "f138c12927ca06200e1d9a7973d86957e5a2792e1bff6c663f28c6f0628ba626"
+      },
+      {
+        "trialId": "982d16a2ef284fabbdb7d08a9f6b4a4d",
+        "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-b47ecc274bb34106850f382499d0de62.json",
+        "sha256": "cf87bfe46d48c40f154237e01c37c83716bbe77bdb9fc7f912b08366f4180905"
+      },
+      {
+        "trialId": "a160a1ee400a4bffaf5b86b000a59604",
+        "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-b335e32fdb1542738be538280993da3a.json",
+        "sha256": "a0b8e61672ca087f097a79db0138591455675bac717e1dc69bca32bbeccf86f0"
+      },
+      {
+        "trialId": "ac9cfe3d15284e14bae80072932aebd9",
+        "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-c865e5db47844afdb9dd9d7e93a498f3.json",
+        "sha256": "7d7455f21d86b40e591a14a615ca5f3c73fb6d2084e8c57f7212108859c8f838"
+      },
+      {
+        "trialId": "93c73dd2eeab4f47af6226903ad27332",
+        "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-edbf05f7822c43079cabfeb7a8c95b26.json",
+        "sha256": "5b2b631aaad50b0ee3bcf08c7f825c8db7776ba6aa88ef1eb8b0ad03e8402fe7"
+      },
+      {
+        "trialId": "ff79ac210c3e4875847d3040fafd6d28",
+        "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-23c78edb98754391b6e9229cea75964c.json",
+        "sha256": "0143bf3c5f368a20d8c865ade6dd76629673390bc863b46afb73e04cfa6f8499"
+      },
+      {
+        "trialId": "fd0586453e2142b0938b105453552371",
+        "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-a6432bbded4d4cdfa6f7a6cf527da763.json",
+        "sha256": "3a07fce6fedfd2da5a325f86e75ae5bc9684bc56a96af362bd0b9be350be08a8"
+      },
+      {
+        "trialId": "5830a2f0d66740769541ac70a438e21c",
+        "rawPath": "<PRIVATE_HOME>\\.codex\\worktrees\\f815\\zzz-pattern-practice\\.local\\experiment-build\\notice-logs\\trial-dc9ce4141b8a4277a8b506a0303248df.json",
+        "sha256": "a42bd966aac7ad8f95915b03dc5e2b8ddba8e6d979e438f697d31c9efd2a0804"
+      }
+    ],
+    "controlPhaseClosure": {
+      "date": "2026-09-24",
+      "status": "completed",
+      "archiveCreated": false,
+      "removedVideos": 18,
+      "removedTrials": 52,
+      "removedRawResultDetectionFiles": 156,
+      "removedObsLedgers": 23,
+      "removedIntermediateEvidenceFiles": 2,
+      "removedCompletedCheckFiles": 3,
+      "removedDerivedDirs": 11,
+      "removedDerivedFiles": 225,
+      "removedFilesTotal": 427,
+      "removedBytesTotal": 1490163009,
+      "manifestDigest": "a97a85dd376bf4a38b4a546193eb185cc3c0e9127ce075f3cbcd621ca6ec397b",
+      "digestMeaning": "Fingerprint of the reviewed deletion list only; no restorable archive remains.",
+      "retainedCreatorAndSweeperTrials": 6,
+      "retainedOriginals": 2,
+      "retainedServiceAssetPairs": 2,
+      "evidence": [
+        "docs/experiments/vessel-control-skill.md",
+        "docs/evidence/vessel-experiment-results-20260924.json",
+        "docs/experiments/graymane-control-skill.md",
+        "docs/evidence/graymane-experiment-results-20260924.json"
+      ],
+      "caveat": "Creator final video is not assigned a raw trial ID; Sweeper web 25ms margins remain user-approved but game-unverified."
+    },
+    "relatedCheckoutClosure": {
+      "date": "2026-09-24",
+      "research5d99": {
+        "files": 4527,
+        "directories": 5,
+        "record": "<PRIVATE_HOME>/.codex/worktrees/5d99/zzz-pattern-practice/docs/evidence/experiment-cleanup.json#research_closure_5d99_20260924",
+        "retained": "Final historical research reports, source/transition summaries, three representative stills; no archives",
+        "bytes": 1148043496
+      },
+      "publication1b46": {
+        "files": 141,
+        "record": "<PRIVATE_HOME>/.codex/worktrees/1b46/zzz-pattern-practice/.local/cleanup-vessel-graymane-20260924.json",
+        "retained": "Current deployment evidence and shared publication tools; no service redeployment",
+        "bytes": 65563293
+      },
+      "controller5dc5": {
+        "files": 3,
+        "reason": "Superseded legacy media replaced by current LUFS26 service snapshot",
+        "verification": "Absent; old tracked blob sizes read from pre-transfer Git HEAD",
+        "bytes": 21335116,
+        "removed": [
+          "docs/evidence/vesper-service-preview-20260918.png",
+          "public/media/vesper-execute-01.mp4",
+          "public/media/vesper-execute-02.mp4"
+        ]
+      },
+      "allCheckoutsTotal": {
+        "files": 5098,
+        "bytes": 2725104914
+      },
+      "limits": "Counts cover approved control-phase data cleanup and three obsolete target files; they exclude transient scripts created and removed during this cleanup. Historical Git blobs are retained."
     }
   },
   "initial_20260917": {

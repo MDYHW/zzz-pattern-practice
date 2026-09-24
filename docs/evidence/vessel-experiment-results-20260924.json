@@ -1966,5 +1966,16 @@
       "sourceCommit": "dae0b8ae3445a2cbb852b3def20fb90161c10fde",
       "pagesRun": 35989433287
     }
+  },
+  "closure": {
+    "status": "completed",
+    "date": "2026-09-24",
+    "retainedRawTrialIds": [
+      "ac9cfe3d15284e14bae80072932aebd9",
+      "a160a1ee400a4bffaf5b86b000a59604",
+      "93c73dd2eeab4f47af6226903ad27332"
+    ],
+    "historicalTrialRows": "The per-trial rows and aggregate counts record the completed measurements. Other raw/result/detection files and superseded manual videos were deleted after source/hash review; their paths and hashes are historical references, not available files.",
+    "originalSource": "The selected representative service source is retained. The Creator final recording has no matching raw trial and must not be connected by inference."
   }
 }

@@ -2372,5 +2372,16 @@
       "screenshotsReviewed": true
     },
     "verificationScope": "Browser production behavior and media integrity; not proof of real-game added25ms success or physical-device input latency."
+  },
+  "closure": {
+    "status": "completed",
+    "date": "2026-09-24",
+    "retainedRawTrialIds": [
+      "5830a2f0d66740769541ac70a438e21c",
+      "fd0586453e2142b0938b105453552371",
+      "ff79ac210c3e4875847d3040fafd6d28"
+    ],
+    "historicalTrialRows": "The per-trial rows and aggregate counts record the completed measurements. Other raw/result/detection files and superseded manual videos were deleted after source/hash review; their paths and hashes are historical references, not available files.",
+    "originalSource": "The selected representative service source is retained. The Creator final recording has no matching raw trial and must not be connected by inference."
   }
 }
